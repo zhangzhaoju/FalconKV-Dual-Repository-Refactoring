@@ -1,6 +1,6 @@
 # 当前代码依据、迁移重点和验收标准
 
-调研日期：2026-09-17。本文区分本轮静态观察与未来执行验收。本轮只读取源码、配置和 Git 状态，未安装依赖、编译扩展、启动服务或运行 NPU 测试。
+源码调研日期：2026-09-17；网络与协作边界更新：2026-09-20。本文区分既有静态观察与未来执行验收。本次仅刷新设计文档，未安装依赖、编译扩展、启动服务、访问内网或运行 NPU 测试；下述源码基线仍是 2026-09-17 的记录。
 
 模型范围确认（2026-09-17）：用户明确仅保留 DeepSeek / GLM 原生文本生成及已有 MTP、DSA，删除多模态和基于 Qwen/Llama 的蒸馏模型。以下验收按此范围更新，代码裁剪尚未执行。
 
@@ -8,7 +8,7 @@
 
 首批验收环境确认（2026-09-17）：Ascend 910B3、CANN 8.5.1、torch 2.9.0、torch_npu 2.9.0。这里只记录用户指定目标，尚无该组合的本次构建或 NPU 测试结果；具体模型权重、量化、卡数/拓扑及其余环境信息仍待补齐。
 
-构建方式确认（2026-09-17）：构建在无互联网连接的局域网中执行，本机不构建；用户确认内网 torch 已安装 2.9.0。后续复用该环境，源码构建声明中的 2.10.0 需修改，但不要求重装 torch。本文构建、安装和 NPU 验收证据均应来自内网执行环境。
+构建与验证边界更正（2026-09-20）：环境在内部局域网，可通过 proxy 访问互联网，禁止直接接入外部大模型/AI 助手服务；此前“无互联网连接”的构建假设不再适用。内网部署目标 DeepSeek/GLM 并进行本地推理验收仍在范围内。本机不构建，内网 torch 已安装 2.9.0，后续复用该环境；源码构建声明中的 2.10.0 需修改，但不要求重装 torch。构建、安装和 NPU 验收由内网人员或 CI 执行，完整证据内网留存，必要结果经人工审核、脱敏后交接；完整断网重建仅作为可选补充检查。
 
 ## 1. 当前基线
 
@@ -57,7 +57,7 @@
 | torch 声明不一致 | [vllm/pyproject.toml](../vllm/pyproject.toml)、[LMCache/pyproject.toml](../LMCache/pyproject.toml)、[Ascend requirements](../vllm-ascend/requirements.txt) | 按用户指定 torch/torch_npu 2.9.0 统一构建和运行声明，验证 API/ABI |
 | CANN 8.5+ 默认选择 HIXL/hcomm one-sided 构建 | [LMCache-Ascend/setup.py](../LMCache-Ascend/setup.py)，`_is_cann_85_or_later` 和扩展构建流程 | 在无显式覆盖的 8.5.1 目标上核对 SDK/库及 910B3 实测结果，不把构建选择等同于能力验证 |
 | LMCache 默认依赖含 cufile/NIXL/nvtx/CuPy CUDA | [requirements/common.txt](../LMCache/requirements/common.txt) | 清理安装元数据，不能只删 Python 分支 |
-| 当前构建文件存在公网 wheel 获取和 CMake FetchContent | [vllm/setup.py](../vllm/setup.py)、[CMakeLists.txt](../vllm/CMakeLists.txt)、[external_projects](../vllm/cmake/external_projects) | 删除非目标依赖的下载路径；目标构建链所需材料必须离线齐备，pip 禁索引不能代替完整检查 |
+| 当前构建文件存在公网 wheel 获取和 CMake FetchContent | [vllm/setup.py](../vllm/setup.py)、[CMakeLists.txt](../vllm/CMakeLists.txt)、[external_projects](../vllm/cmake/external_projects) | 删除非目标依赖下载；目标材料可从内网源或经代理获取，锁定版本并校验，pip 禁索引不能代替完整下载路径与路由检查 |
 | vLLM 有 RLHF 协作路由和 weight transfer | [RLHF router](../vllm/vllm/entrypoints/serve/rlhf/api_router.py)、[weight_transfer](../vllm/vllm/distributed/weight_transfer) | 按训练协作用途裁剪，保留正常推理权重加载 |
 
 ## 3. 模块迁移清单
@@ -94,7 +94,7 @@
 | A01 | 仓库/包数量 | 两个活动 Git 仓、两个分发包，无嵌套 Ascend 仓库或独立插件安装要求 |
 | A02 | Python import 和动态注册闭包 | 白名单模块全部可导入，动态路径/entry point/包资源无悬空引用 |
 | A03 | 原生化 | 生产不依赖 `_ascend` 包、`sys.modules` 重定向、跨包猴子补丁、全局 CUDA API 模拟或安装后源码改写 |
-| A04 | 安装 | 内网无旧四包污染且复用既有基础环境的 sdist、wheel、editable install 可复现；不联网补依赖、不替换 torch，依赖检查通过，版本来源唯一 |
+| A04 | 安装 | 内网无旧四包污染且复用既有基础环境的 sdist、wheel、editable install 可复现；前置依赖可经内网源/代理按锁定清单准备，安装产物时关闭自动依赖安装，不替换 torch，依赖检查通过，版本来源唯一 |
 | A05 | 设备依赖 | 当前产品源码/构建产物无其他计算设备实现，部署依赖无非 Ascend 专用 runtime；不能将第三方基础库内部代码视为本项目必须重写的范围 |
 | A06 | 原生扩展 | pybind 导入名、共享库、RPATH、ABI 匹配；所有保留 op 注册存在 |
 | A07 | 初始化 | config/tokenizer/CLI 不意外初始化设备；spawn worker 的 rank/device、CANN 初始化顺序正确 |
@@ -103,10 +103,13 @@
 | A10 | 模型裁剪完整性 | 产品源码和构建产物不含多模态、Qwen/Llama 蒸馏及其他非目标模型的完整实现/注册；GLM/MTP 必要复用代码已抽为公共组件；离线、在线和 draft 加载均拒绝范围外模型 |
 | A11 | 文本输入边界 | 离线和在线入口对图像、音频、视频等输入明确报错，不静默丢弃；正常文本 chat、reasoning 和 tool call 通过 |
 | A12 | 首批环境一致性 | 910B3、CANN 8.5.1、torch/torch_npu 2.9.0 与内网设备、构建和运行记录一致；使用已安装 torch，默认非隔离构建，安装/CI/镜像不改用目标外版本 |
-| A13 | 无互联网构建 | 全新构建目录在无公网出口且无历史下载缓存时可生成两个产物；Python/backend、CMake、Git、系统包和镜像均无在线获取前提；离线材料版本与校验值完整 |
-| A14 | 离线运行与证据 | 模型/config/tokenizer/必要 remote code 和测试数据由内网材料提供；无模型 Hub 自动下载；报告能对应源码和产物版本，本机检查不冒充内网构建或 NPU 验收 |
+| A13 | 代理联网构建 | 全新构建目录仅使用已声明的内网资源、缓存或经代理获取的固定材料即可生成两个产物；覆盖 Python/backend、CMake、Git/LFS、系统包和镜像的下载路径，版本/校验值完整；代理异常且材料不齐时明确失败，不直连公网或换源升级；不要求完全断网 |
+| A14 | 本地推理与证据 | 模型/config/tokenizer/经审核的必要 remote code 和测试数据在准备阶段由内网源或代理获取后固定；运行验收无模型 Hub 临时下载和外部推理依赖；内网原始证据与审核后报告可对应配对源码/产物版本，本机检查不冒充内网构建或 NPU 验收 |
+| A15 | 大模型接入与反馈边界 | 配置、CI 和出站策略审查确认未接入外部大模型/AI 助手及自动诊断上传，不以实际调用被禁止服务来验证；本地推理客户端只指向指定内网目标，无公网默认地址/回退；诊断材料审核脱敏后由人员交接，无代理凭据和业务敏感样本泄露 |
 
 `torch.cuda`、`nvcc`、`vllm_ascend` 等扫描是候选定位工具，还需区分生产实现、文档、许可证和负向测试。不能用字符串零命中代替运行闭包验证，也不能仅用“当前没执行到”证明代码已经裁剪。
+
+A13/A15 的网络策略由内网维护者确认并留存证据；设置代理变量本身不等于已阻止直连或外部大模型访问。本地服务使用的兼容协议客户端不因 SDK 名称而删除，检查的是实际目标地址和回退行为。若加做完全断网复现，单列补充结果，不恢复为发布必选项。
 
 ### 4.2 目标模型和服务
 
@@ -164,7 +167,7 @@
 | checkpoint 与异常完成 | `LMCache-Ascend/tests/standalone/test_glm52_dispatch.py`、`test_local_checkpoint_restore.py`、`test_cold_abort_completion.py` |
 | 通信通道 | `LMCache-Ascend/tests/v1/transfer_channel/` 中 HCCL/HIXL/hcomm 测试 |
 
-实施 P0 时，在内网各仓已准备好的依赖环境中分别运行对应测试，不把四个仓库的全部 `tests/` 在一个 pytest 进程中混跑。下面直接使用已激活环境的解释器，不创建新环境或在线同步依赖；模型及数据需预先齐备。本机只运行已有工具可支持且不需要构建的 host 逻辑检查。例：
+实施 P0 时，在内网各仓已准备好的依赖环境中分别运行对应测试，不把四个仓库的全部 `tests/` 在一个 pytest 进程中混跑。依赖、模型和数据可在准备阶段按清单经内网源或代理补齐；下面的测试命令直接使用已激活环境的解释器，不在运行测试时创建新环境、在线同步依赖或调用外部模型服务。本机只运行已有工具可支持且不需要构建的 host 逻辑检查。例：
 
 ```bash
 # 在内网 vllm 仓库、已准备并激活的环境中执行；本轮未运行
@@ -204,7 +207,8 @@ python -m pytest tests/v1/test_glm52_group_cardinality.py tests/v1/test_sparse_m
 | GPU Runner 被删，继承行为丢失 | 提取依赖，逐模式验证 | async output、状态、capture 或销毁路径异常 |
 | 目标模型依赖被误删 | AST + 动态 registry + 实际加载闭包 | GLM/MTP 需要恢复完整非目标模型才能启动 |
 | 依赖版本/ABI 冲突 | 锁定统一 profile，干净构建安装 | 安装时替换 torch、加载扩展失败或隐含 CUDA runtime |
-| 离线构建隐含下载 | 完整离线材料与目标平台标签，检查 backend/CMake/Git/镜像，内网无缓存重建 | 需要公网、临时替换 torch、缺失源码/资源，或只能靠开发机缓存成功 |
+| 代理路由或下载不可复现 | 检查 backend/CMake/Git/LFS/镜像的代理与锁定清单，核对目标平台和缓存来源，全新目录重建 | 绕过代理直连公网、代理失败静默换源、浮动版本、替换 torch，或依赖未声明的开发机缓存 |
+| 外部大模型接入或诊断数据外发 | 内网人员/CI 执行，审查客户端目标地址、自动上传与出站策略，人工审核脱敏后交接 | 外部大模型/Agent 连接、未经审核的自动日志上传、凭据或业务敏感数据进入诊断包 |
 | GLM index/latent 组被同构化 | 独立层集合与映射测试 | 错搬运字节、producer 错配、缺失组仍被视为命中 |
 | 异步 store/callback 生命周期改变 | 事件/所有权测试与异常注入 | 早释放、重复完成、悬挂请求或错误回退 |
 | 稀疏路径被错误 FULL graph 化 | 保留 host retrieve split，检查 replay trace | 图内 Python 回调假设或 replay 错地址 |
@@ -223,7 +227,8 @@ python -m pytest tests/v1/test_glm52_group_cardinality.py tests/v1/test_sparse_m
 - [ ] GLM 结构化 indexer、不等 KV 组、store-before-free、checkpoint、RemoteFill 及失败恢复通过。
 - [ ] CPU KV 卸载、跨实例缓存和既有 P/D 分离保留，并按实际部署拓扑完成联合及故障回归。
 - [ ] 首批结果来自指定的 910B3 / CANN 8.5.1 / torch 2.9.0 / torch_npu 2.9.0，配套环境和构建 ABI 有可复现记录。
-- [ ] 构建与安装在无互联网的内网完成，已安装 torch 2.9.0 未被替换；离线材料完整，源码/产物校验值和回传日志可对应。
+- [ ] 构建、安装与验证在内网完成，公网材料仅经代理从允许的来源获取，依赖锁定和校验值完整；已安装 torch 2.9.0 未被替换，源码/产物与证据可对应，不以完全断网为前提。
+- [ ] 未在验证环境接入外部大模型/AI 助手或自动诊断上传链路；目标模型在内网推理，完整证据内网留存，交接内容均经人工审核脱敏。
 - [ ] 依赖/扩展/镜像干净可复现，无意外 GPU runtime，无旧包残留帮助运行。
 - [ ] 性能、内存、长稳达到固定门槛，未测或不支持的组合明确列出。
 - [ ] 新旧路径、配置和版本配对有记录；LICENSE/NOTICE/版权来源保留。
