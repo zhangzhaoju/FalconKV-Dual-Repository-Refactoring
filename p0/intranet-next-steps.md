@@ -1,12 +1,14 @@
 # P0 内网下一批执行手册：环境采集后的核对与回归
 
-日期：2026-09-20。依据：已提供的 `env-P0.json`、`env-P1.json`、`env-D0.json`、`env-D1.json`，以及随后确认的版本和运行服务信息。
+日期：2026-09-20。依据：已提供的 `env-P0.json`、`env-P1.json`、`env-D0.json`、`env-D1.json`，以及随后确认的版本、运行服务和“内网容器已完成 pytest 安装”的信息。
 
 本批目标是补齐依赖、源码来源、量化摘要和 host 回归证据，不是重建或替换正在运行的服务。P0 仍处于进行中，尚未通过出口，不进入 P1。
 
+本次修订已删除 pytest wheel 准备、哈希校验、隔离安装和专用 `PYTHONPATH` 注入步骤。直接复用容器内已安装的 pytest：第 3 节创建新批次，第 4 节刷新依赖证据，第 7 节完成现有测试工具预检后运行 host 回归；第 5–6 节尚未完成的模型和服务信息继续补齐。此前已核对且未发生变化的源码/模型证据可以引用原批次，但安装 pytest 后的包清单和依赖检查必须重新采集。
+
 ## 1. 已确认的基线与执行边界
 
-四份报告的 205 个 Python 包版本一致，已采集的模型元数据哈希一致。以下是候选基线，不代表完整兼容性验收通过。
+首次采集的四份报告中，205 个 Python 包版本一致，已采集的模型元数据哈希一致。pytest 安装后的包数量、版本及节点间一致性尚未重新验证，不能继续以旧报告证明当前环境完全一致。以下是已记录的候选基线，不代表完整兼容性验收通过。
 
 | 项目 | 已采集结果 | 本批处置 |
 | --- | --- | --- |
@@ -18,6 +20,7 @@
 | triton-ascend | `3.2.0.dev20260322` | 用户已确认保留，作为 P0 候选基线 |
 | C++ ABI | `cxx11_abi=true` | 后续扩展构建必须使用一致的 torch 路径和 ABI |
 | 编译工具 | CMake 4.3.1、GCC 11.4.0、Ninja 命令可用 | 仅确认工具存在；不据此宣称 SDK 构建兼容性已通过 |
+| pytest | 用户确认内网容器已安装；具体版本和安装路径待记录 | 复用现有安装，不重新安装、升级或降级；参与测试的容器分别预检 |
 | 模型 | `GlmMoeDsaForCausalLM`、`glm_moe_dsa`、78 层 | 与目标源码架构一致；不修改模型文件 |
 | 模型元数据 | config、tokenizer config、generation config、量化描述哈希一致 | 完整权重分片的 revision/校验清单仍待补充 |
 | 运行服务 | 用户确认卡上进程属于现有 GLM-5.2 / 2P2D 服务 | 作为待冻结的运行基线，不停止、不重启 |
@@ -28,7 +31,7 @@
 
 - 内网人员或 CI 执行，不接入外部大模型/Agent，不自动上传报告。
 - 不执行原始全量 requirements 安装，不升级或重装 torch、torch_npu、triton-ascend、OpenCV、numpy。
-- 唯一的安装步骤是后文将三个已审核的测试工具 wheel 放入本批次独立目录；不修改现有 `site-packages`。
+- 本批不包含任何安装或卸载命令，不修改现有 `site-packages`，不为 pytest 新建环境或追加测试专用 `PYTHONPATH`。
 - 四节点核查必须在与服务相同的容器、用户和 Python 环境中进行。文件名代表人工指定的节点角色，不能单凭文件名证明实际进程拓扑。
 - 本手册命令尚未在内网执行。逐节执行并检查结果，不要将全文一次性粘贴运行。
 
@@ -38,11 +41,11 @@
 
 1. 当前源码的 `torch-npu==2.9.0` 不匹配现有 post1，`triton-ascend==3.2.0` 不匹配现有 dev 版本。用户已确认保留安装；制品来源、哈希和后续兼容性核对完成后，再同步修正源码声明、P0 约束及检查。不要直接编辑历史采集报告，把 `needs_review` 改成通过。
 2. 当前 OpenCV 为 `4.11.0.86`，符合 Ascend 声明，但不符合 vLLM 的 `>=4.13.0`。本批先取得已安装包的实际依赖声明，不升级 OpenCV/numpy，也不仅删除一条 requirements 来掩盖问题。
-3. 包清单中未发现 pytest、iniconfig、pluggy。直接运行 host 检查会失败，先按第 7 节准备测试工具。
-4. 包清单中未发现 LMCache、LMCache-Ascend、mooncake-transfer-engine 的发行包记录。需要区分未安装、源码路径加载和其他传输实现，不能直接判定功能缺失。
-5. `build` 未安装；它影响 `python -m build`，不等于必须现在补装，也不能据此判定 `pip wheel` 不可用。
+3. 旧包清单未发现 pytest、iniconfig、pluggy；用户已确认随后在内网容器中安装 pytest。该缺失记录属于历史状态，本批以第 7 节的实际版本、依赖和导入预检为准，不推定所有节点已经安装了相同版本。
+4. 旧包清单未发现 LMCache、LMCache-Ascend、mooncake-transfer-engine 的发行包记录。需要用本批证据区分未安装、源码路径加载和其他传输实现，不能直接判定功能缺失。
+5. 旧包清单中 `build` 未安装；它影响 `python -m build`，不等于必须现在补装，也不能据此判定 `pip wheel` 不可用。
 
-报告中的代理环境变量均未设置，但不能据此排除 pip/Git 等工具级代理配置。本批提供的命令不需要联网；获取 wheel 等材料必须由内网维护者先确认批准来源、代理和企业 CA，不能默认访问公网或关闭 TLS 校验。
+原报告中的代理环境变量均未设置，但不能据此排除 pip/Git 等工具级代理配置。本批提供的命令不需要联网或获取新的测试工具；后续若确需补齐其他构建材料，必须由内网维护者先确认批准来源、代理和企业 CA，不能默认访问公网或关闭 TLS 校验。
 
 ### 2.2 带入内网的材料
 
@@ -50,7 +53,7 @@
 - 已交付的 [tools/run_host_checks.py](tools/run_host_checks.py)。它不会安装依赖、构建框架或启动模型。
 - 当前四仓源码及已核对的 P0 独立修复；四仓目录名保持为 `vllm`、`vllm-ascend`、`LMCache`、`LMCache-Ascend`。不要覆盖现有服务正在使用的源码。
 - 供人工核对的 [源码清单](baseline/source-manifest.json)、[修复清单](changes/change-manifest.json) 和 [子模块清单](review/submodule-materials.json)。
-- 第 7 节列出的三个已审核 wheel 及可信的 SHA-256 清单。
+- 与服务相同的 Python 环境，以及用户已安装的 pytest。无需另外带入 pytest、iniconfig、pluggy wheel；现有依赖是否齐全由第 7 节预检。
 
 仅复制本 Markdown 可以执行环境取证，但不能替代 host 检查所需的脚本和四仓测试源码。缺少材料时记录缺件，不自动 clone、pull、apply patch 或切换分支。
 
@@ -110,7 +113,12 @@ printf '节点角色：%s\n结果目录：%s\n' "$P0_ROLE" "$P0_NEXT_DIR"
 
 执行节点：四节点分别执行。性质：只读取证，不安装、不构建、不加载模型。
 
+使用新批次保存 pytest 安装后的包清单和依赖结果，不覆盖原始 `env-*.json`。比较 `pip-list.json`、`pip-inspect.json` 与首次报告，重点确认 torch、torch_npu、triton-ascend、numpy、OpenCV 等运行依赖没有被意外替换；若发现变化，先核对，不自动回退安装。
+
 ```bash
+p0_capture pip-list.json \
+    python -B -m pip --disable-pip-version-check list --format=json
+
 p0_capture pip-check.txt \
     python -B -m pip --disable-pip-version-check check
 
@@ -238,79 +246,90 @@ PY
 
 未发现 LMCache/Mooncake 发行包记录时，优先确认现有服务是否使用源码路径、不同容器或不同缓存实现。不能据包清单缺项直接安装原始 LMCache requirements 中的 CUDA 依赖。
 
-## 7. 第三批：隔离准备 pytest，运行 host 回归
+## 7. 第三批：复用已安装的 pytest，运行 host 回归
 
 执行节点：先在 P0 节点执行。若四节点源码、解释器或运行依赖不一致，按不同 profile 分别重跑；host 结果不能替代四节点 NPU/通信验收。
 
-### 7.1 准备并校验三个 wheel
+### 7.1 核对现有测试工具，不重新安装
 
-沿用前一次本机 host 基线的测试工具版本：
+用户已经完成 pytest 安装，本节只读取版本、检查 pytest 当前声明的必要依赖并确认导入和命令可用。使用 `python -m pytest`，避免 PATH 中的 `pytest` 命令属于另一套 Python 环境。
 
-| 包 | 版本 | 预期 wheel 文件名 |
-| --- | --- | --- |
-| pytest | 9.0.2 | `pytest-9.0.2-py3-none-any.whl` |
-| iniconfig | 2.3.0 | `iniconfig-2.3.0-py3-none-any.whl` |
-| pluggy | 1.6.0 | `pluggy-1.6.0-py3-none-any.whl` |
+前一次本机 host 检查使用 pytest 9.0.2，仅作为结果对照信息，不要求现有内网 pytest 必须为该版本。实际安装版本由以下报告记录，不因版本不同就升级或降级。
 
-当前 Python 3.11 环境已有 packaging 26.0、pygments 2.20.0，满足上述 pytest 的对应依赖；numpy 和 torch 也已安装。这里只准备这三个缺失的测试包，不补装整个项目的测试 requirements。
-
-由内网管理员从批准来源准备 wheel 和可信的 `SHA256SUMS`。清单中的文件名使用相对 wheel 目录的名称。自行计算哈希可以留痕，但不能代替对制品来源和期望哈希的审核。缺少材料时停止本节，不改走未批准的公网源。
-
-修改下面的占位路径后执行：
+当前预检会导入 pytest、numpy 和 packaging，不导入 torch/torch_npu，也不执行模型代码；torch 的安装身份通过 distribution 元数据读取。pytest 自身依赖按当前 Python 平台和非 extra 条件检查，不能用全环境 `pip check` 中尚待修复的框架声明冲突代替这一局部检查。
 
 ```bash
-P0_HOST_WHEELS="/实际已审核的host-test-wheel目录"
+p0_capture host-test-precheck.json \
+    env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTEST_ADDOPTS= PYTEST_PLUGINS= \
+    python -B - <<'PY'
+from importlib import metadata
+import json
+import sys
+import numpy
+import pytest
+from packaging.requirements import Requirement
 
-if [[ -d "$P0_HOST_WHEELS" && -f "$P0_HOST_WHEELS/SHA256SUMS" ]]; then
-    p0_capture host-wheel-checksums.txt \
-        bash -c 'cd "$1" && sha256sum --check --strict SHA256SUMS' \
-        p0-wheel-check "$P0_HOST_WHEELS"
-else
-    printf '停止：请先准备已审核的三个 wheel 和 SHA256SUMS\n' >&2
-fi
+dependencies = []
+for raw in metadata.requires("pytest") or []:
+    requirement = Requirement(raw)
+    if requirement.marker and not requirement.marker.evaluate({"extra": ""}):
+        continue
+    try:
+        actual = metadata.version(requirement.name)
+    except metadata.PackageNotFoundError:
+        actual = None
+    satisfied = actual is not None and requirement.specifier.contains(
+        actual, prereleases=True
+    )
+    dependencies.append({
+        "requirement": raw, "actual": actual, "satisfied": satisfied,
+    })
+
+result = {
+    "python_executable": sys.executable,
+    "python_version": sys.version,
+    "pytest": {
+        "distribution_version": metadata.version("pytest"),
+        "imported_version": pytest.__version__,
+        "module_file": pytest.__file__,
+    },
+    "numpy": {"version": numpy.__version__, "module_file": numpy.__file__},
+    "torch_distribution_version": metadata.version("torch"),
+    "pytest_dependencies": dependencies,
+}
+print(json.dumps(result, ensure_ascii=False, indent=2))
+versions_agree = result["pytest"]["distribution_version"] == pytest.__version__
+raise SystemExit(0 if versions_agree and all(x["satisfied"] for x in dependencies) else 1)
+PY
+
+p0_capture pytest-version.txt \
+    env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTEST_ADDOPTS= PYTEST_PLUGINS= \
+    python -B -m pytest --version
 ```
 
-继续前，确认校验输出包含上述三个 wheel 且全部为 `OK`，而不只是某个无关文件校验成功。
+继续条件：
 
-### 7.2 仅安装到本批次独立目录
+- `host-test-precheck.json.rc` 和 `pytest-version.txt.rc` 均为 0，pytest 的依赖检查全部满足。
+- Python、pytest、numpy 的实际来源符合预期；pytest 的 distribution 版本与实际导入版本一致。
+- 若曾按旧版手册手工设置测试专用 `PYTHONPATH`，先由内网人员核对，避免仍从旧测试目录加载 pytest；不要盲目清空服务/CANN 所需的环境变量。本版不再追加任何测试目录。
+- 若缺失 pytest、numpy、packaging、torch 元数据，或遇到导入错误、版本冲突，预检将非 0 退出；JSON 可能为空，查看对应 `.stderr` 后停止该节点 host 检查。不自动安装或回退，其他只读取证可以继续。
+- 全环境 `pip check` 的已知框架声明问题仍需单独闭环；局部预检通过不是正式构建放行。
 
-此步骤有文件写入，但只写入新建的 `host-test-deps` 目录，不修改原 Python 环境，不安装框架，不重新解析或安装 torch。不要设置全局 `PYTHONPATH`、不要修改服务启动配置。
+### 7.2 直接执行固定 host 子集
 
-```bash
-if p0_succeeded host-wheel-checksums.txt && \
-   [[ ! -e "$P0_NEXT_DIR/host-test-deps" ]]; then
-    p0_capture host-test-deps-install.txt \
-        python -B -m pip --disable-pip-version-check install \
-        --no-index \
-        --find-links "$P0_HOST_WHEELS" \
-        --only-binary=:all: \
-        --no-deps \
-        --no-cache-dir \
-        --no-compile \
-        --target "$P0_NEXT_DIR/host-test-deps" \
-        "pytest==9.0.2" \
-        "iniconfig==2.3.0" \
-        "pluggy==1.6.0"
-else
-    printf '停止：wheel 校验未通过，或测试依赖目录已存在；检查记录或使用新批次\n' >&2
-fi
-```
-
-`host-test-deps-install.txt.rc` 非 0 时，不继续运行 host 检查，不在原环境中重试全局安装。
-
-### 7.3 执行固定 host 子集
+复用上述同一 `python` 解释器及其已安装的 pytest，不调用全局 `pytest` 可执行文件，不修改 `PYTHONPATH`。输出目录仍使用本批次的新目录，拒绝覆盖旧结果。
 
 ```bash
-if p0_succeeded host-test-deps-install.txt && \
+if p0_succeeded host-test-precheck.json && \
+   p0_succeeded pytest-version.txt && \
    [[ -f "$P0_WORKSPACE/design/p0/tools/run_host_checks.py" && \
       ! -e "$P0_NEXT_DIR/host-baseline" ]]; then
     p0_capture host-run.txt \
-        env PYTHONPATH="$P0_NEXT_DIR/host-test-deps${PYTHONPATH:+:$PYTHONPATH}" \
         python -B "$P0_WORKSPACE/design/p0/tools/run_host_checks.py" \
         --workspace "$P0_WORKSPACE" \
         --output "$P0_NEXT_DIR/host-baseline"
 else
-    printf '停止：测试依赖未准备成功、检查脚本缺失或结果目录已存在\n' >&2
+    printf '停止：现有 pytest 预检未通过、检查脚本缺失或结果目录已存在\n' >&2
 fi
 ```
 
@@ -318,6 +337,7 @@ fi
 
 检查以下产物：
 
+- `host-test-precheck.json`、`pytest-version.txt` 及各自的 `.rc` / `.stderr`。
 - `host-run.txt.rc`、`host-run.txt`、`host-run.txt.stderr`。
 - `host-baseline/summary.json`。
 - `host-baseline/*.log`、`host-baseline/*.xml`。
@@ -342,13 +362,14 @@ fi
 
 先反馈以下经人工审核、允许外发的材料；路径、内部制品地址可用代号替换：
 
-- [ ] 四节点 `pip-check.txt` 的问题列表和退出码。
+- [ ] pytest 安装后四节点的包清单差异、`pip-check.txt` 问题列表和退出码。
 - [ ] 与问题相关的 `pip-inspect.json` 依赖条目及来源结论；不是未经审查的完整原件。
 - [ ] `python`/`python3` 是否一致，模块实际来源与服务配置是否对应。
 - [ ] 四仓 commit/tree、工作区差异说明、子模块状态。
 - [ ] 候选 torch_npu、triton-ascend 制品来源/哈希是否已核对。
 - [ ] `model-quant-summary.json` 和现有权重制品身份结论。
 - [ ] 第 6 节的服务配置摘要，特别是 LMCache/Mooncake/RemoteFill 是否实际启用。
+- [ ] 实际 pytest 版本、模块来源、`host-test-precheck.json` 和 `pytest-version.txt` 的结果；是否与前次测试工具版本不同。
 - [ ] host `summary.json`、退出码；如失败，附必要的最小错误片段。
 - [ ] 当前未完成项和停止原因，标明 `FAIL` 或 `PENDING`，不得记作通过。
 
@@ -362,4 +383,3 @@ fi
 - [P0 当前支持矩阵](support-matrix.json)。
 - [Python 版本匹配规范](https://packaging.python.org/en/latest/specifications/version-specifiers/#version-matching)。
 - [pip check 的检查范围](https://pip.pypa.io/en/stable/cli/pip_check/)。
-- [pytest 9.0.2 包元数据](https://pypi.org/pypi/pytest/9.0.2/json)。
