@@ -1,14 +1,14 @@
 # 当前代码依据、迁移重点和验收标准
 
-源码调研日期：2026-09-17；网络与协作边界更新：2026-09-20。本文区分既有静态观察与未来执行验收。本次仅刷新设计文档，未安装依赖、编译扩展、启动服务、访问内网或运行 NPU 测试；下述源码基线仍是 2026-09-17 的记录。
+初次源码调研：2026-09-17；2026-09-20 设计审核后已启动 P0，重新核对四仓原始 HEAD 未变化。P0 已开展备份恢复、静态分析、独立构建声明/测试路径修复及本机 host 检查，结果见 [P0](p0/README.md)；未安装依赖、编译扩展、启动服务、访问内网或运行 NPU 测试。下述代码事实对应原始 HEAD，不把工作区修复冒充已通过内网验收的基线。
 
-模型范围确认（2026-09-17）：用户明确仅保留 DeepSeek / GLM 原生文本生成及已有 MTP、DSA，删除多模态和基于 Qwen/Llama 的蒸馏模型。以下验收按此范围更新，代码裁剪尚未执行。
+模型范围最新确认（2026-09-20）：仅支持 GLM-5.2-w4a8c8，GLM-5.3 后续扩展；这取代 2026-09-17 的 DeepSeek/GLM 全系列保留范围。GLM-5.2 必需的 DeepSeek/MTP 共享组件保留，独立非目标模型不保留；代码裁剪尚未执行。部署为 4 节点 × 8 张 910B3、2P2D、TP8/DP2，实际 checkpoint/量化配置与通信 profile 待内网冻结。
 
 必保能力确认（2026-09-17）：保留当前分支目标模型相关能力，明确包括 DSA、CPU KV 卸载、跨实例缓存和 Prefill/Decode 分离；相关索引共享、分组、checkpoint、RemoteFill 及恢复路径进入回归验收。
 
-首批验收环境确认（2026-09-17）：Ascend 910B3、CANN 8.5.1、torch 2.9.0、torch_npu 2.9.0。这里只记录用户指定目标，尚无该组合的本次构建或 NPU 测试结果；具体模型权重、量化、卡数/拓扑及其余环境信息仍待补齐。
+首批软件环境保持：Ascend 910B3、CANN 8.5.1、torch 2.9.0、torch_npu 2.9.0。模型名、量化标签和 32 卡拓扑已确认；实际权重元数据、量化层规则、驱动/SDK、并行进程组等仍需核实，尚无该组合的本次构建或 NPU 测试结果。
 
-构建与验证边界更正（2026-09-20）：环境在内部局域网，可通过 proxy 访问互联网，禁止直接接入外部大模型/AI 助手服务；此前“无互联网连接”的构建假设不再适用。内网部署目标 DeepSeek/GLM 并进行本地推理验收仍在范围内。本机不构建，内网 torch 已安装 2.9.0，后续复用该环境；源码构建声明中的 2.10.0 需修改，但不要求重装 torch。构建、安装和 NPU 验收由内网人员或 CI 执行，完整证据内网留存，必要结果经人工审核、脱敏后交接；完整断网重建仅作为可选补充检查。
+构建与验证边界更正（2026-09-20）：环境在内部局域网，可通过 proxy 访问互联网，禁止直接接入外部大模型/AI 助手服务；此前“无互联网连接”的构建假设不再适用。内网部署目标 GLM-5.2 并进行本地推理验收仍在范围内。本机不构建，内网 torch 已安装 2.9.0，继续复用；构建声明已独立对齐，API/ABI 尚待验证，不要求重装 torch。构建、安装和 NPU 验收由内网人员或 CI 执行，完整证据内网留存，必要结果经人工审核、脱敏后交接；完整断网重建仅作为可选补充检查。
 
 ## 1. 当前基线
 
@@ -43,7 +43,7 @@
 | NPU 主 Runner 继承 GPU Runner，并替换 CUDA stream/event | [model_runner_v1.py](../vllm-ascend/vllm_ascend/worker/model_runner_v1.py)，`NPUModelRunner` / `_torch_cuda_wrapper` | 先提取继承的有效行为，再删除 GPU 实现 |
 | v2 Runner 同样继承 GPU Runner | [worker/v2/model_runner.py](../vllm-ascend/vllm_ascend/worker/v2/model_runner.py) | 不能通过切到 v2 自动解决原生化 |
 | 平台和 worker 初始化会导入多个非目标模型 patch | [平台 patch 入口](../vllm-ascend/vllm_ascend/patch/platform/__init__.py)、[worker patch 入口](../vllm-ascend/vllm_ascend/patch/worker/__init__.py) | 删除模型必须同步处理初始化链 |
-| GLM 依赖 Llama 完整模型与组件 | [glm.py](../vllm/vllm/model_executor/models/glm.py)、[glm4.py](../vllm/vllm/model_executor/models/glm4.py) | 先抽公共 decoder/MLP，保持权重映射 |
+| 旧版 Dense GLM 依赖 Llama 完整模型与组件 | [glm.py](../vllm/vllm/model_executor/models/glm.py)、[glm4.py](../vllm/vllm/model_executor/models/glm4.py) | 当前已收窄至 GLM-5.2，不再为保留这些模型而扩大提取范围；只按实际目标闭包决定共享组件 |
 | MTP 使用 Eagle proposer，后者导入 Llama Eagle3 | [spec_decode 入口](../vllm-ascend/vllm_ascend/spec_decode/__init__.py)、[eagle_proposer.py](../vllm-ascend/vllm_ascend/spec_decode/eagle_proposer.py) | 不能按 Eagle/Llama 名称直接删除 |
 | DeepSeek 与 GLM DSA 共用模型实现，包含结构化共享 indexer | [registry.py](../vllm/vllm/model_executor/models/registry.py)、[deepseek_v2.py](../vllm/vllm/model_executor/models/deepseek_v2.py) | 架构名与文件名非一一对应，保留 shared/full 和权重过滤语义 |
 | registry 存在通用 Transformers fallback | [registry.py](../vllm/vllm/model_executor/models/registry.py)，`_try_resolve_transformers` / `resolve_model_cls` | 只删注册项不足以限制模型支持 |
@@ -115,15 +115,15 @@ A13/A15 的网络策略由内网维护者确认并留存证据；设置代理变
 
 | 编号 | 场景 | 必测内容 |
 | --- | --- | --- |
-| B01 | 每个批准文本架构 | config/tokenizer/权重加载、参数映射、短/长 prompt、EOS/stop、logprobs、连续生成 |
-| B02 | Dense GLM / ChatGLM | 抽公共 decoder/MLP 后结果与基线对照，TP 分片和特殊 token 一致 |
-| B03 | DeepSeek/GLM MoE、MLA、DSA | expert routing、共享专家、indexer、top-k、mask、长上下文和 KV layout |
+| B01 | GLM-5.2 固定 checkpoint | config/tokenizer/权重加载、参数映射、短/长 prompt、EOS/stop、logprobs、连续生成 |
+| B02 | 目标权重身份及范围外拒绝 | GLM-5.2 的 revision/config/量化元数据匹配；DeepSeek、ChatGLM、其他 GLM 和未认证 GLM-5.3 不因共享架构绕过范围限制 |
+| B03 | GLM-5.2 MoE、MLA、DSA | expert routing、共享专家、indexer、top-k、mask、长上下文和 KV layout |
 | B04 | GLM 结构化共享 indexer | shared 层无自有 indexer 的构造/加载、producer/consumer 对应、组内层映射 |
-| B05 | 量化 | 对每个目标权重实际 dtype/量化 profile 验证加载与数值；不把 CUDA 专用 FP8/AWQ/GPTQ kernel 当作 NPU 已支持 |
+| B05 | W4A8C8 量化 | 核对提供方、逐层量化/回退和 MTP 权重；验证 C8 latent/index 数据与 scale 的布局、round trip 和传输，不能仅凭名称或源码存在声称已支持 |
 | B06 | 离线入口 | 单/多 prompt、`generate`/文本 `chat`、复用实例、销毁/重建、缓存开关 |
 | B07 | 在线入口 | models、completion、chat、流式拼接、非流式、并发、请求取消/断连、超长输入、错误响应、优雅退出 |
-| B08 | 模型交互 | DeepSeek/GLM chat template、reasoning、tool call、目标结构化输出；与纯文本采样结果区分验证 |
-| B09 | 调度与并行 | 批处理/混合 prefill+decode、prefix hit、抢占、TP/EP/PP/DP 中批准组合；空 rank 和进程退出 |
+| B08 | 模型交互 | GLM-5.2 chat template、reasoning、tool call、目标结构化输出；与纯文本采样结果区分验证 |
+| B09 | TP8/DP2、2P2D 调度与并行 | 两个 P 和两个 D 副本、每副本 TP8 的启动/路由、批处理、prefix hit、抢占、空 rank 和进程退出；EP/PP/CP 按实际 profile 核实 |
 | B10 | 图模式 | eager vs ACL capture/replay；实际 replay 计数/trace、bucket 边界、batch 重排和无效行，不只检查成功 capture |
 | B11 | MTP | 开关、候选宽度、全接收/部分接收/全拒绝、accepted frontier、KV 回退、MTP × 图 × DSA 关键组合 |
 
@@ -221,7 +221,7 @@ python -m pytest tests/v1/test_glm52_group_cardinality.py tests/v1/test_sparse_m
 - [ ] 只有两个活动仓库和两个构建/安装单元，原始四仓基线可恢复。
 - [ ] 原生 NPU 主路径完整，生产不再依赖 Ascend 插件、GPU Runner 或运行时补丁。
 - [ ] 模型、设备、任务、算子、量化、Connector 注册与批准范围一致；负向测试通过。
-- [ ] DeepSeek / GLM 原生文本 checkpoint 有逐项结果，已有 MTP、DSA 保留并验收；LoRA、首批之外的型号等其余决策有明确记录。
+- [ ] GLM-5.2-w4a8c8 固定 checkpoint、量化/C8 布局及 MTP、DSA 有逐项结果；GLM-5.3 未被提前认证，LoRA、首批之外的型号等其余决策有明确记录。
 - [ ] 多模态和基于 Qwen/Llama 的蒸馏模型实现及专用依赖已移除；范围外模型和非文本输入的拒绝用例通过。
 - [ ] 离线、在线、采样/解析、并行和缓存开关通过；启用的 DSA/MTP/图组合有实际执行证据。
 - [ ] GLM 结构化 indexer、不等 KV 组、store-before-free、checkpoint、RemoteFill 及失败恢复通过。

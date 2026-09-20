@@ -1,0 +1,5 @@
+# Existing intranet environment; constraints are NOT an installation request.
+# Use only during an explicit, reviewed dependency preparation step.
+# Do not install the original CUDA/XPU/ROCm/full-test requirement sets.
+torch==2.9.0
+torch-npu==2.9.0

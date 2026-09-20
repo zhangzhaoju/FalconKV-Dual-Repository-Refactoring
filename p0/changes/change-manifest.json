@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "phase": "P0",
+  "commits_created": false,
+  "patches": [
+    {
+      "repository": "vllm",
+      "base_commit": "764dea93053f7bfd24fdb78b6ca6996350cb9636",
+      "patch": "vllm.patch",
+      "patch_sha256": "b41fb70d522c72adccdc553187001e9413e138f6429109ecd9d9cf817b52cbf8",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "sha256_after": "315bf324ee27e06c325caaeccbd52139452abc6960969dbaf334dacd8578f73c"
+        },
+        {
+          "path": "requirements/build.txt",
+          "sha256_after": "782243a7bc031b16ebfdfaf02a89d0440180524114ee0623ad868ea27122f31c"
+        }
+      ],
+      "reverse_apply_check": "passed",
+      "intranet_build_verified": false
+    },
+    {
+      "repository": "vllm-ascend",
+      "base_commit": "326dd77b004a7fc1f393e80e39780adadc4b14cd",
+      "patch": "vllm-ascend.patch",
+      "patch_sha256": "8e065194b6a00bcfd23b19c9e380e6856ecb723762a21edcc86f7309ffaafc6c",
+      "changed_files": [
+        {
+          "path": "tests/standalone/test_connector_control_idle.py",
+          "sha256_after": "b424b23250fc3123e329093853d20055eb4d4f51028588045c573949af7c5846"
+        }
+      ],
+      "reverse_apply_check": "passed",
+      "intranet_build_verified": false
+    },
+    {
+      "repository": "LMCache",
+      "base_commit": "4353ac9bf0b47f48868e1099103c6417ae9a6b84",
+      "patch": "LMCache.patch",
+      "patch_sha256": "708d0e32b2cfedc1fe9eaab805633203bf7c75e7b57942c7dda7fe12e9fad917",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "sha256_after": "cb19f7df1aa8355106a8ecf05b35019492939f13867077d92e2729848d003f6a"
+        }
+      ],
+      "reverse_apply_check": "passed",
+      "intranet_build_verified": false
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "base_commit": "07ebf5c4f7bc622bfce9f3a06fb01c20682ca3aa",
+      "patch": "LMCache-Ascend.patch",
+      "patch_sha256": "97a18deef4525e193cea787e2f14d72f0e00801e03a9c8572f1ded108553aacf",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "sha256_after": "f2eeb7dc826e2be0e03e4f9048d236a7a2a6429ba705d8a295182a4b7358a7f9"
+        },
+        {
+          "path": "tests/standalone/test_checkpoint_dispatch.py",
+          "sha256_after": "57b629c150de7fef14dec6bce2d6d88ce033cd6b538e2e06fc450bd3cf93d652"
+        },
+        {
+          "path": "tests/standalone/test_checkpoint_initialization.py",
+          "sha256_after": "7e35668ed8546b2c1058e55ca14f19e4c9edbb667e913bb55a29aa0dfaa9d89a"
+        },
+        {
+          "path": "tests/standalone/test_checkpoint_miss_retry.py",
+          "sha256_after": "1e36b89bdc73bd50137de47fa82d3bb146c7f54522e0576bb71bff4458510e6b"
+        },
+        {
+          "path": "tests/standalone/test_checkpoint_page_keys.py",
+          "sha256_after": "01aad1cb668493ac60fad166464d9193522a6fb4115dfbb383142dcf11d388b1"
+        },
+        {
+          "path": "tests/standalone/test_checkpoint_prefix_agreement.py",
+          "sha256_after": "90f1114edb658c3b6a619f91d4f233dc6ec74cfcbfa6658ff8957f5b4b5294ca"
+        },
+        {
+          "path": "tests/standalone/test_cold_abort_completion.py",
+          "sha256_after": "3e9000e99d2a8854ae763c53b4b3d82c36a616484ac2c37507bb2116dfc63e95"
+        },
+        {
+          "path": "tests/standalone/test_dense_checkpoint_partial_pages.py",
+          "sha256_after": "60ef6c2064de733048bb466d3654e0f31a977672b4bc2fda6354285dc7b1184d"
+        },
+        {
+          "path": "tests/standalone/test_local_checkpoint_restore.py",
+          "sha256_after": "e6d66944ed648ba947f19861532479f06b2b05920e333cdb8a67b55368872e10"
+        },
+        {
+          "path": "tests/standalone/test_preemption_checkpoint.py",
+          "sha256_after": "905c3921d6990dd2f32ea5eeebd298ce50faf1f0a4cda0298f185b6f34845f53"
+        }
+      ],
+      "reverse_apply_check": "passed",
+      "intranet_build_verified": false
+    }
+  ],
+  "compatibility": "metadata_aligned_but_runtime_and_ABI_pending",
+  "host_results": [
+    {
+      "batch": "host-after-fixes",
+      "summary_sha256": "a4b079d42f9adb0d5252941b1310882081e125cf590399a4fc563d6563b02d49",
+      "summary": {
+        "scope": "local_host_ast_and_mock_only",
+        "is_npu_acceptance": false,
+        "collected_at_utc": "2026-09-20T01:50:46.294681+00:00",
+        "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+        "pytest": "9.0.2",
+        "cases": [
+          {
+            "repository": "vllm",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-after-fixes/vllm.xml",
+              "tests/standalone/test_kv_transfer_lifetime.py"
+            ],
+            "returncode": 0,
+            "counts": {
+              "tests": 16,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "83822c73fd9e7ba0671d9a66c24db635b4bda28a733fa419c5017cb7c4676bb3",
+            "elapsed_seconds": 0.527
+          },
+          {
+            "repository": "vllm-ascend",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-after-fixes/vllm-ascend.xml",
+              "tests/standalone/test_preemption_dispatch.py",
+              "tests/standalone/test_connector_control_idle.py",
+              "tests/standalone/test_checkpoint_graph_route.py"
+            ],
+            "returncode": 0,
+            "counts": {
+              "tests": 31,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "1f0cd8d14e2083699717654dedaad700de1157f76aa3fc53b8b5f331b21405f8",
+            "elapsed_seconds": 0.906
+          },
+          {
+            "repository": "LMCache",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-after-fixes/LMCache.xml",
+              "tests/standalone/test_checkpoint_adapter.py",
+              "tests/standalone/test_checkpoint_idle_path.py",
+              "tests/standalone/test_checkpoint_reclaim.py",
+              "tests/standalone/test_checkpoint_wrapper.py"
+            ],
+            "returncode": 0,
+            "counts": {
+              "tests": 39,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "aed7f0710387f4473f073c6b1d2440df6c771f3a37e54242fee540f64c8f5ebb",
+            "elapsed_seconds": 2.584
+          },
+          {
+            "repository": "LMCache-Ascend",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-after-fixes/LMCache-Ascend.xml",
+              "tests/standalone/test_checkpoint_dispatch.py",
+              "tests/standalone/test_checkpoint_initialization.py",
+              "tests/standalone/test_checkpoint_prefix_agreement.py",
+              "tests/standalone/test_cold_abort_completion.py"
+            ],
+            "returncode": 1,
+            "counts": {
+              "tests": 26,
+              "failures": 5,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "c197700c911cc656734c82c70c21eb8d420a27f4b0624b31f96d5a6579246c95",
+            "elapsed_seconds": 3.326
+          }
+        ]
+      }
+    },
+    {
+      "batch": "host-before-fixes",
+      "summary_sha256": "09052c9035c741a83e54b4003fd5fc86c2bdac05b64529c4d969d30806737a4c",
+      "summary": {
+        "scope": "local_host_ast_and_mock_only",
+        "is_npu_acceptance": false,
+        "collected_at_utc": "2026-09-20T01:47:50.062326+00:00",
+        "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+        "pytest": "9.0.2",
+        "cases": [
+          {
+            "repository": "vllm",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-before-fixes/vllm.xml",
+              "tests/standalone/test_kv_transfer_lifetime.py"
+            ],
+            "returncode": 0,
+            "counts": {
+              "tests": 16,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "36e978116dc7fde13bc2e270bbe784354295cf0a928f1a498b1b069b3aa6d980",
+            "elapsed_seconds": 0.63
+          },
+          {
+            "repository": "vllm-ascend",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-before-fixes/vllm-ascend.xml",
+              "tests/standalone/test_preemption_dispatch.py",
+              "tests/standalone/test_connector_control_idle.py",
+              "tests/standalone/test_checkpoint_graph_route.py"
+            ],
+            "returncode": 1,
+            "counts": {
+              "tests": 31,
+              "failures": 1,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "a4ba3be873ffda7e63857ba6a41f6d79025cbaabb128be53a5d25c459ae49497",
+            "elapsed_seconds": 1.016
+          },
+          {
+            "repository": "LMCache",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-before-fixes/LMCache.xml",
+              "tests/standalone/test_checkpoint_adapter.py",
+              "tests/standalone/test_checkpoint_idle_path.py",
+              "tests/standalone/test_checkpoint_reclaim.py",
+              "tests/standalone/test_checkpoint_wrapper.py"
+            ],
+            "returncode": 0,
+            "counts": {
+              "tests": 39,
+              "failures": 0,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "52bd08bb1b5560ee45851314c98f53e44ae61415bfdbf22a62b99d2b405a641d",
+            "elapsed_seconds": 2.613
+          },
+          {
+            "repository": "LMCache-Ascend",
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--tb=short",
+              "--noconftest",
+              "-c",
+              "/dev/null",
+              "-p",
+              "no:cacheprovider",
+              "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p0/results/host-before-fixes/LMCache-Ascend.xml",
+              "tests/standalone/test_checkpoint_dispatch.py",
+              "tests/standalone/test_checkpoint_initialization.py",
+              "tests/standalone/test_checkpoint_prefix_agreement.py",
+              "tests/standalone/test_cold_abort_completion.py"
+            ],
+            "returncode": 1,
+            "counts": {
+              "tests": 26,
+              "failures": 26,
+              "errors": 0,
+              "skipped": 0
+            },
+            "log_sha256": "e051435225d520ee05ca4dd3d8cbbfad10af72e7d7374522b4b0d8da90e799e2",
+            "elapsed_seconds": 0.641
+          }
+        ]
+      }
+    }
+  ]
+}

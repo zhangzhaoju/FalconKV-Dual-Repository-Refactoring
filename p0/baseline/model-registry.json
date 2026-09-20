@@ -1,0 +1,2625 @@
+{
+  "entries": [
+    {
+      "architecture": "AfmoeForCausalLM",
+      "module": "afmoe",
+      "class": "AfmoeForCausalLM",
+      "line": 72,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ApertusForCausalLM",
+      "module": "apertus",
+      "class": "ApertusForCausalLM",
+      "line": 73,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AquilaModel",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 74,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AquilaForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 75,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ArceeForCausalLM",
+      "module": "arcee",
+      "class": "ArceeForCausalLM",
+      "line": 76,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ArcticForCausalLM",
+      "module": "arctic",
+      "class": "ArcticForCausalLM",
+      "line": 77,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AXK1ForCausalLM",
+      "module": "AXK1",
+      "class": "AXK1ForCausalLM",
+      "line": 78,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BaiChuanForCausalLM",
+      "module": "baichuan",
+      "class": "BaiChuanForCausalLM",
+      "line": 80,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BaichuanForCausalLM",
+      "module": "baichuan",
+      "class": "BaichuanForCausalLM",
+      "line": 82,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BailingMoeForCausalLM",
+      "module": "bailing_moe",
+      "class": "BailingMoeForCausalLM",
+      "line": 83,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BailingMoeV2ForCausalLM",
+      "module": "bailing_moe",
+      "class": "BailingMoeV2ForCausalLM",
+      "line": 84,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BailingMoeV2_5ForCausalLM",
+      "module": "bailing_moe_linear",
+      "class": "BailingMoeV25ForCausalLM",
+      "line": 85,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BambaForCausalLM",
+      "module": "bamba",
+      "class": "BambaForCausalLM",
+      "line": 86,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BloomForCausalLM",
+      "module": "bloom",
+      "class": "BloomForCausalLM",
+      "line": 87,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ChatGLMModel",
+      "module": "chatglm",
+      "class": "ChatGLMForCausalLM",
+      "line": 88,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ChatGLMForConditionalGeneration",
+      "module": "chatglm",
+      "class": "ChatGLMForCausalLM",
+      "line": 89,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "CohereForCausalLM",
+      "module": "commandr",
+      "class": "CohereForCausalLM",
+      "line": 90,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Cohere2ForCausalLM",
+      "module": "commandr",
+      "class": "CohereForCausalLM",
+      "line": 91,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "CwmForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 92,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DbrxForCausalLM",
+      "module": "dbrx",
+      "class": "DbrxForCausalLM",
+      "line": 93,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeciLMForCausalLM",
+      "module": "nemotron_nas",
+      "class": "DeciLMForCausalLM",
+      "line": 94,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekForCausalLM",
+      "module": "deepseek_v2",
+      "class": "DeepseekForCausalLM",
+      "line": 95,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekV2ForCausalLM",
+      "module": "deepseek_v2",
+      "class": "DeepseekV2ForCausalLM",
+      "line": 96,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekV3ForCausalLM",
+      "module": "deepseek_v2",
+      "class": "DeepseekV3ForCausalLM",
+      "line": 97,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekV32ForCausalLM",
+      "module": "deepseek_v2",
+      "class": "DeepseekV3ForCausalLM",
+      "line": 98,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Dots1ForCausalLM",
+      "module": "dots1",
+      "class": "Dots1ForCausalLM",
+      "line": 99,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ernie4_5ForCausalLM",
+      "module": "ernie45",
+      "class": "Ernie4_5ForCausalLM",
+      "line": 100,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ernie4_5_MoeForCausalLM",
+      "module": "ernie45_moe",
+      "class": "Ernie4_5_MoeForCausalLM",
+      "line": 101,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ExaoneForCausalLM",
+      "module": "exaone",
+      "class": "ExaoneForCausalLM",
+      "line": 102,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Exaone4ForCausalLM",
+      "module": "exaone4",
+      "class": "Exaone4ForCausalLM",
+      "line": 103,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ExaoneMoEForCausalLM",
+      "module": "exaone_moe",
+      "class": "ExaoneMoeForCausalLM",
+      "line": 104,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Fairseq2LlamaForCausalLM",
+      "module": "fairseq2_llama",
+      "class": "Fairseq2LlamaForCausalLM",
+      "line": 105,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FalconForCausalLM",
+      "module": "falcon",
+      "class": "FalconForCausalLM",
+      "line": 106,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FalconMambaForCausalLM",
+      "module": "mamba",
+      "class": "MambaForCausalLM",
+      "line": 107,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FalconH1ForCausalLM",
+      "module": "falcon_h1",
+      "class": "FalconH1ForCausalLM",
+      "line": 108,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FlexOlmoForCausalLM",
+      "module": "flex_olmo",
+      "class": "FlexOlmoForCausalLM",
+      "line": 109,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GemmaForCausalLM",
+      "module": "gemma",
+      "class": "GemmaForCausalLM",
+      "line": 110,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma2ForCausalLM",
+      "module": "gemma2",
+      "class": "Gemma2ForCausalLM",
+      "line": 111,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma3ForCausalLM",
+      "module": "gemma3",
+      "class": "Gemma3ForCausalLM",
+      "line": 112,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma3nForCausalLM",
+      "module": "gemma3n",
+      "class": "Gemma3nForCausalLM",
+      "line": 113,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3NextForCausalLM",
+      "module": "qwen3_next",
+      "class": "Qwen3NextForCausalLM",
+      "line": 114,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmForCausalLM",
+      "module": "glm",
+      "class": "GlmForCausalLM",
+      "line": 115,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4ForCausalLM",
+      "module": "glm4",
+      "class": "Glm4ForCausalLM",
+      "line": 116,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4MoeForCausalLM",
+      "module": "glm4_moe",
+      "class": "Glm4MoeForCausalLM",
+      "line": 117,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4MoeLiteForCausalLM",
+      "module": "glm4_moe_lite",
+      "class": "Glm4MoeLiteForCausalLM",
+      "line": 118,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmMoeDsaForCausalLM",
+      "module": "deepseek_v2",
+      "class": "GlmMoeDsaForCausalLM",
+      "line": 119,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GptOssForCausalLM",
+      "module": "gpt_oss",
+      "class": "GptOssForCausalLM",
+      "line": 120,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GPT2LMHeadModel",
+      "module": "gpt2",
+      "class": "GPT2LMHeadModel",
+      "line": 121,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GPTBigCodeForCausalLM",
+      "module": "gpt_bigcode",
+      "class": "GPTBigCodeForCausalLM",
+      "line": 122,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GPTJForCausalLM",
+      "module": "gpt_j",
+      "class": "GPTJForCausalLM",
+      "line": 123,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GPTNeoXForCausalLM",
+      "module": "gpt_neox",
+      "class": "GPTNeoXForCausalLM",
+      "line": 124,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GraniteForCausalLM",
+      "module": "granite",
+      "class": "GraniteForCausalLM",
+      "line": 125,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GraniteMoeForCausalLM",
+      "module": "granitemoe",
+      "class": "GraniteMoeForCausalLM",
+      "line": 126,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GraniteMoeHybridForCausalLM",
+      "module": "granitemoehybrid",
+      "class": "GraniteMoeHybridForCausalLM",
+      "line": 127,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GraniteMoeSharedForCausalLM",
+      "module": "granitemoeshared",
+      "class": "GraniteMoeSharedForCausalLM",
+      "line": 128,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GritLM",
+      "module": "gritlm",
+      "class": "GritLM",
+      "line": 129,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Grok1ModelForCausalLM",
+      "module": "grok1",
+      "class": "GrokForCausalLM",
+      "line": 130,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Grok1ForCausalLM",
+      "module": "grok1",
+      "class": "GrokForCausalLM",
+      "line": 131,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HunYuanMoEV1ForCausalLM",
+      "module": "hunyuan_v1",
+      "class": "HunYuanMoEV1ForCausalLM",
+      "line": 132,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HunYuanDenseV1ForCausalLM",
+      "module": "hunyuan_v1",
+      "class": "HunYuanDenseV1ForCausalLM",
+      "line": 133,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HCXVisionForCausalLM",
+      "module": "hyperclovax_vision",
+      "class": "HCXVisionForCausalLM",
+      "line": 134,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HCXVisionV2ForCausalLM",
+      "module": "hyperclovax_vision_v2",
+      "class": "HCXVisionV2ForCausalLM",
+      "line": 135,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HyperCLOVAXForCausalLM",
+      "module": "hyperclovax",
+      "class": "HyperCLOVAXForCausalLM",
+      "line": 136,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternLMForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 137,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternLM2ForCausalLM",
+      "module": "internlm2",
+      "class": "InternLM2ForCausalLM",
+      "line": 138,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternLM2VEForCausalLM",
+      "module": "internlm2_ve",
+      "class": "InternLM2VEForCausalLM",
+      "line": 139,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternLM3ForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 140,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "IQuestCoderForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 141,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "IQuestLoopCoderForCausalLM",
+      "module": "iquest_loopcoder",
+      "class": "IQuestLoopCoderForCausalLM",
+      "line": 142,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "JAISLMHeadModel",
+      "module": "jais",
+      "class": "JAISLMHeadModel",
+      "line": 143,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Jais2ForCausalLM",
+      "module": "jais2",
+      "class": "Jais2ForCausalLM",
+      "line": 144,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "JambaForCausalLM",
+      "module": "jamba",
+      "class": "JambaForCausalLM",
+      "line": 145,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KimiLinearForCausalLM",
+      "module": "kimi_linear",
+      "class": "KimiLinearForCausalLM",
+      "line": 146,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Lfm2ForCausalLM",
+      "module": "lfm2",
+      "class": "Lfm2ForCausalLM",
+      "line": 147,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Lfm2MoeForCausalLM",
+      "module": "lfm2_moe",
+      "class": "Lfm2MoeForCausalLM",
+      "line": 148,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 149,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Llama4ForCausalLM",
+      "module": "llama4",
+      "class": "Llama4ForCausalLM",
+      "line": 150,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LLaMAForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 152,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LongcatFlashForCausalLM",
+      "module": "longcat_flash",
+      "class": "LongcatFlashForCausalLM",
+      "line": 153,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MambaForCausalLM",
+      "module": "mamba",
+      "class": "MambaForCausalLM",
+      "line": 154,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Mamba2ForCausalLM",
+      "module": "mamba2",
+      "class": "Mamba2ForCausalLM",
+      "line": 155,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniCPMForCausalLM",
+      "module": "minicpm",
+      "class": "MiniCPMForCausalLM",
+      "line": 156,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniCPM3ForCausalLM",
+      "module": "minicpm3",
+      "class": "MiniCPM3ForCausalLM",
+      "line": 157,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniMaxForCausalLM",
+      "module": "minimax_text_01",
+      "class": "MiniMaxText01ForCausalLM",
+      "line": 158,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniMaxText01ForCausalLM",
+      "module": "minimax_text_01",
+      "class": "MiniMaxText01ForCausalLM",
+      "line": 159,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniMaxM1ForCausalLM",
+      "module": "minimax_text_01",
+      "class": "MiniMaxText01ForCausalLM",
+      "line": 160,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniMaxM2ForCausalLM",
+      "module": "minimax_m2",
+      "class": "MiniMaxM2ForCausalLM",
+      "line": 161,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MistralForCausalLM",
+      "module": "mistral",
+      "class": "MistralForCausalLM",
+      "line": 162,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MistralLarge3ForCausalLM",
+      "module": "mistral_large_3",
+      "class": "MistralLarge3ForCausalLM",
+      "line": 163,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MixtralForCausalLM",
+      "module": "mixtral",
+      "class": "MixtralForCausalLM",
+      "line": 164,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MptForCausalLM",
+      "module": "mpt",
+      "class": "MPTForCausalLM",
+      "line": 166,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MPTForCausalLM",
+      "module": "mpt",
+      "class": "MPTForCausalLM",
+      "line": 167,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiMoForCausalLM",
+      "module": "mimo",
+      "class": "MiMoForCausalLM",
+      "line": 168,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiMoV2FlashForCausalLM",
+      "module": "mimo_v2_flash",
+      "class": "MiMoV2FlashForCausalLM",
+      "line": 169,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronForCausalLM",
+      "module": "nemotron",
+      "class": "NemotronForCausalLM",
+      "line": 170,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronHForCausalLM",
+      "module": "nemotron_h",
+      "class": "NemotronHForCausalLM",
+      "line": 171,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronHPuzzleForCausalLM",
+      "module": "nemotron_h",
+      "class": "NemotronHForCausalLM",
+      "line": 172,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OlmoForCausalLM",
+      "module": "olmo",
+      "class": "OlmoForCausalLM",
+      "line": 173,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Olmo2ForCausalLM",
+      "module": "olmo2",
+      "class": "Olmo2ForCausalLM",
+      "line": 174,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Olmo3ForCausalLM",
+      "module": "olmo2",
+      "class": "Olmo2ForCausalLM",
+      "line": 175,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OlmoHybridForCausalLM",
+      "module": "olmo_hybrid",
+      "class": "OlmoHybridForCausalLM",
+      "line": 176,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OlmoeForCausalLM",
+      "module": "olmoe",
+      "class": "OlmoeForCausalLM",
+      "line": 177,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OPTForCausalLM",
+      "module": "opt",
+      "class": "OPTForCausalLM",
+      "line": 178,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OrionForCausalLM",
+      "module": "orion",
+      "class": "OrionForCausalLM",
+      "line": 179,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OuroForCausalLM",
+      "module": "ouro",
+      "class": "OuroForCausalLM",
+      "line": 180,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PanguEmbeddedForCausalLM",
+      "module": "openpangu",
+      "class": "PanguEmbeddedForCausalLM",
+      "line": 181,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PanguProMoEV2ForCausalLM",
+      "module": "openpangu",
+      "class": "PanguProMoEV2ForCausalLM",
+      "line": 182,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PanguUltraMoEForCausalLM",
+      "module": "openpangu",
+      "class": "PanguUltraMoEForCausalLM",
+      "line": 183,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PersimmonForCausalLM",
+      "module": "persimmon",
+      "class": "PersimmonForCausalLM",
+      "line": 184,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PhiForCausalLM",
+      "module": "phi",
+      "class": "PhiForCausalLM",
+      "line": 185,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Phi3ForCausalLM",
+      "module": "phi3",
+      "class": "Phi3ForCausalLM",
+      "line": 186,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PhiMoEForCausalLM",
+      "module": "phimoe",
+      "class": "PhiMoEForCausalLM",
+      "line": 187,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Plamo2ForCausalLM",
+      "module": "plamo2",
+      "class": "Plamo2ForCausalLM",
+      "line": 188,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Plamo3ForCausalLM",
+      "module": "plamo3",
+      "class": "Plamo3ForCausalLM",
+      "line": 189,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "QWenLMHeadModel",
+      "module": "qwen",
+      "class": "QWenLMHeadModel",
+      "line": 190,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2ForCausalLM",
+      "module": "qwen2",
+      "class": "Qwen2ForCausalLM",
+      "line": 191,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2MoeForCausalLM",
+      "module": "qwen2_moe",
+      "class": "Qwen2MoeForCausalLM",
+      "line": 192,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3ForCausalLM",
+      "module": "qwen3",
+      "class": "Qwen3ForCausalLM",
+      "line": 193,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3MoeForCausalLM",
+      "module": "qwen3_moe",
+      "class": "Qwen3MoeForCausalLM",
+      "line": 194,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "RWForCausalLM",
+      "module": "falcon",
+      "class": "FalconForCausalLM",
+      "line": 195,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SarvamMoEForCausalLM",
+      "module": "sarvam",
+      "class": "SarvamMoEForCausalLM",
+      "line": 196,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SarvamMLAForCausalLM",
+      "module": "sarvam",
+      "class": "SarvamMLAForCausalLM",
+      "line": 197,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SeedOssForCausalLM",
+      "module": "seed_oss",
+      "class": "SeedOssForCausalLM",
+      "line": 198,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Step1ForCausalLM",
+      "module": "step1",
+      "class": "Step1ForCausalLM",
+      "line": 199,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Step3TextForCausalLM",
+      "module": "step3_text",
+      "class": "Step3TextForCausalLM",
+      "line": 200,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Step3p5ForCausalLM",
+      "module": "step3p5",
+      "class": "Step3p5ForCausalLM",
+      "line": 201,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "StableLMEpochForCausalLM",
+      "module": "stablelm",
+      "class": "StablelmForCausalLM",
+      "line": 202,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "StableLmForCausalLM",
+      "module": "stablelm",
+      "class": "StablelmForCausalLM",
+      "line": 203,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Starcoder2ForCausalLM",
+      "module": "starcoder2",
+      "class": "Starcoder2ForCausalLM",
+      "line": 204,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SolarForCausalLM",
+      "module": "solar",
+      "class": "SolarForCausalLM",
+      "line": 205,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TeleChatForCausalLM",
+      "module": "telechat2",
+      "class": "TeleChat2ForCausalLM",
+      "line": 206,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TeleChat2ForCausalLM",
+      "module": "telechat2",
+      "class": "TeleChat2ForCausalLM",
+      "line": 207,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TeleFLMForCausalLM",
+      "module": "teleflm",
+      "class": "TeleFLMForCausalLM",
+      "line": 208,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "XverseForCausalLM",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 209,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Zamba2ForCausalLM",
+      "module": "zamba2",
+      "class": "Zamba2ForCausalLM",
+      "line": 210,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BertModel",
+      "module": "bert",
+      "class": "BertEmbeddingModel",
+      "line": 215,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BertSpladeSparseEmbeddingModel",
+      "module": "bert",
+      "class": "BertSpladeSparseEmbeddingModel",
+      "line": 216,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ErnieModel",
+      "module": "ernie",
+      "class": "ErnieEmbeddingModel",
+      "line": 217,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BgeM3EmbeddingModel",
+      "module": "roberta",
+      "class": "BgeM3EmbeddingModel",
+      "line": 218,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeciLMForCausalLM",
+      "module": "nemotron_nas",
+      "class": "DeciLMForCausalLM",
+      "line": 219,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma2Model",
+      "module": "gemma2",
+      "class": "Gemma2ForCausalLM",
+      "line": 220,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma3TextModel",
+      "module": "gemma3",
+      "class": "Gemma3Model",
+      "line": 221,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmForCausalLM",
+      "module": "glm",
+      "class": "GlmForCausalLM",
+      "line": 222,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GritLM",
+      "module": "gritlm",
+      "class": "GritLM",
+      "line": 223,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GteModel",
+      "module": "bert_with_rope",
+      "class": "SnowflakeGteNewModel",
+      "line": 224,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GteNewModel",
+      "module": "bert_with_rope",
+      "class": "GteNewModel",
+      "line": 225,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaBidirectionalModel",
+      "module": "llama",
+      "class": "LlamaBidirectionalModel",
+      "line": 226,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaModel",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 227,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MistralModel",
+      "module": "llama",
+      "class": "LlamaForCausalLM",
+      "line": 234,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ModernBertModel",
+      "module": "modernbert",
+      "class": "ModernBertModel",
+      "line": 235,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NomicBertModel",
+      "module": "bert_with_rope",
+      "class": "NomicBertModel",
+      "line": 236,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Phi3ForCausalLM",
+      "module": "phi3",
+      "class": "Phi3ForCausalLM",
+      "line": 237,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2Model",
+      "module": "qwen2",
+      "class": "Qwen2ForCausalLM",
+      "line": 238,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2ForCausalLM",
+      "module": "qwen2",
+      "class": "Qwen2ForCausalLM",
+      "line": 239,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "RobertaForMaskedLM",
+      "module": "roberta",
+      "class": "RobertaEmbeddingModel",
+      "line": 240,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "RobertaModel",
+      "module": "roberta",
+      "class": "RobertaEmbeddingModel",
+      "line": 241,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TeleChatForCausalLM",
+      "module": "telechat2",
+      "class": "TeleChat2ForCausalLM",
+      "line": 242,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TeleChat2ForCausalLM",
+      "module": "telechat2",
+      "class": "TeleChat2ForCausalLM",
+      "line": 243,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "VoyageQwen3BidirectionalEmbedModel",
+      "module": "voyage",
+      "class": "VoyageQwen3BidirectionalEmbedModel",
+      "line": 244,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "XLMRobertaModel",
+      "module": "roberta",
+      "class": "RobertaEmbeddingModel",
+      "line": 248,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "CLIPModel",
+      "module": "clip",
+      "class": "CLIPEmbeddingModel",
+      "line": 250,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ColPaliForRetrieval",
+      "module": "colpali",
+      "class": "ColPaliModel",
+      "line": 251,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlavaNextForConditionalGeneration",
+      "module": "llava_next",
+      "class": "LlavaNextForConditionalGeneration",
+      "line": 252,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Phi3VForCausalLM",
+      "module": "phi3v",
+      "class": "Phi3VForCausalLM",
+      "line": 256,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2VLForConditionalGeneration",
+      "module": "qwen2_vl",
+      "class": "Qwen2VLForConditionalGeneration",
+      "line": 257,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SiglipModel",
+      "module": "siglip",
+      "class": "SiglipEmbeddingModel",
+      "line": 258,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaNemotronVLModel",
+      "module": "nemotron_vl",
+      "class": "LlamaNemotronVLForEmbedding",
+      "line": 259,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PrithviGeoSpatialMAE",
+      "module": "terratorch",
+      "class": "Terratorch",
+      "line": 266,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Terratorch",
+      "module": "terratorch",
+      "class": "Terratorch",
+      "line": 267,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HF_ColBERT",
+      "module": "colbert",
+      "class": "ColBERTModel",
+      "line": 272,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ColBERTModernBertModel",
+      "module": "colbert",
+      "class": "ColBERTModernBertModel",
+      "line": 273,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ColBERTJinaRobertaModel",
+      "module": "colbert",
+      "class": "ColBERTJinaRobertaModel",
+      "line": 274,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ColModernVBertForRetrieval",
+      "module": "colmodernvbert",
+      "class": "ColModernVBertForRetrieval",
+      "line": 276,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ColQwen3",
+      "module": "colqwen3",
+      "class": "ColQwen3Model",
+      "line": 277,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OpsColQwen3Model",
+      "module": "colqwen3",
+      "class": "ColQwen3Model",
+      "line": 278,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3VLNemotronEmbedModel",
+      "module": "colqwen3",
+      "class": "ColQwen3Model",
+      "line": 279,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternLM2ForRewardModel",
+      "module": "internlm2",
+      "class": "InternLM2ForRewardModel",
+      "line": 283,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2ForRewardModel",
+      "module": "qwen2_rm",
+      "class": "Qwen2ForRewardModel",
+      "line": 284,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2ForProcessRewardModel",
+      "module": "qwen2_rm",
+      "class": "Qwen2ForProcessRewardModel",
+      "line": 285,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BertForTokenClassification",
+      "module": "bert",
+      "class": "BertForTokenClassification",
+      "line": 289,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ErnieForTokenClassification",
+      "module": "ernie",
+      "class": "ErnieForTokenClassification",
+      "line": 290,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ModernBertForTokenClassification",
+      "module": "modernbert",
+      "class": "ModernBertForTokenClassification",
+      "line": 291,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BertForSequenceClassification",
+      "module": "bert",
+      "class": "BertForSequenceClassification",
+      "line": 298,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GPT2ForSequenceClassification",
+      "module": "gpt2",
+      "class": "GPT2ForSequenceClassification",
+      "line": 299,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ErnieForSequenceClassification",
+      "module": "ernie",
+      "class": "ErnieForSequenceClassification",
+      "line": 300,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GteNewForSequenceClassification",
+      "module": "bert_with_rope",
+      "class": "GteNewForSequenceClassification",
+      "line": 301,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "JambaForSequenceClassification",
+      "module": "jamba",
+      "class": "JambaForSequenceClassification",
+      "line": 305,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaBidirectionalForSequenceClassification",
+      "module": "llama",
+      "class": "LlamaBidirectionalForSequenceClassification",
+      "line": 306,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ModernBertForSequenceClassification",
+      "module": "modernbert",
+      "class": "ModernBertForSequenceClassification",
+      "line": 310,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "RobertaForSequenceClassification",
+      "module": "roberta",
+      "class": "RobertaForSequenceClassification",
+      "line": 314,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "XLMRobertaForSequenceClassification",
+      "module": "roberta",
+      "class": "RobertaForSequenceClassification",
+      "line": 315,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "JinaVLForRanking",
+      "module": "jina_vl",
+      "class": "JinaVLForSequenceClassification",
+      "line": 320,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaNemotronVLForSequenceClassification",
+      "module": "nemotron_vl",
+      "class": "LlamaNemotronVLForSequenceClassification",
+      "line": 321,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AriaForConditionalGeneration",
+      "module": "aria",
+      "class": "AriaForConditionalGeneration",
+      "line": 329,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AudioFlamingo3ForConditionalGeneration",
+      "module": "audioflamingo3",
+      "class": "AudioFlamingo3ForConditionalGeneration",
+      "line": 330,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MusicFlamingoForConditionalGeneration",
+      "module": "musicflamingo",
+      "class": "MusicFlamingoForConditionalGeneration",
+      "line": 334,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "AyaVisionForConditionalGeneration",
+      "module": "aya_vision",
+      "class": "AyaVisionForConditionalGeneration",
+      "line": 338,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BagelForConditionalGeneration",
+      "module": "bagel",
+      "class": "BagelForConditionalGeneration",
+      "line": 342,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "BeeForConditionalGeneration",
+      "module": "bee",
+      "class": "BeeForConditionalGeneration",
+      "line": 343,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Blip2ForConditionalGeneration",
+      "module": "blip2",
+      "class": "Blip2ForConditionalGeneration",
+      "line": 344,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ChameleonForConditionalGeneration",
+      "module": "chameleon",
+      "class": "ChameleonForConditionalGeneration",
+      "line": 345,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Cohere2VisionForConditionalGeneration",
+      "module": "cohere2_vision",
+      "class": "Cohere2VisionForConditionalGeneration",
+      "line": 349,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekVLV2ForCausalLM",
+      "module": "deepseek_vl2",
+      "class": "DeepseekVLV2ForCausalLM",
+      "line": 353,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekOCRForCausalLM",
+      "module": "deepseek_ocr",
+      "class": "DeepseekOCRForCausalLM",
+      "line": 354,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepseekOCR2ForCausalLM",
+      "module": "deepseek_ocr2",
+      "class": "DeepseekOCR2ForCausalLM",
+      "line": 355,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DotsOCRForCausalLM",
+      "module": "dots_ocr",
+      "class": "DotsOCRForCausalLM",
+      "line": 356,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle2_5_VLForConditionalGeneration",
+      "module": "eagle2_5_vl",
+      "class": "Eagle2_5_VLForConditionalGeneration",
+      "line": 357,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ernie4_5_VLMoeForConditionalGeneration",
+      "module": "ernie45_vl",
+      "class": "Ernie4_5_VLMoeForConditionalGeneration",
+      "line": 361,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FireRedASR2ForConditionalGeneration",
+      "module": "fireredasr2",
+      "class": "FireRedASR2ForConditionalGeneration",
+      "line": 365,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FunASRForConditionalGeneration",
+      "module": "funasr",
+      "class": "FunASRForConditionalGeneration",
+      "line": 369,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FunAudioChatForConditionalGeneration",
+      "module": "funaudiochat",
+      "class": "FunAudioChatForConditionalGeneration",
+      "line": 370,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "FuyuForCausalLM",
+      "module": "fuyu",
+      "class": "FuyuForCausalLM",
+      "line": 374,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma3ForConditionalGeneration",
+      "module": "gemma3_mm",
+      "class": "Gemma3ForConditionalGeneration",
+      "line": 375,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Gemma3nForConditionalGeneration",
+      "module": "gemma3n_mm",
+      "class": "Gemma3nForConditionalGeneration",
+      "line": 376,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmAsrForConditionalGeneration",
+      "module": "glmasr",
+      "class": "GlmAsrForConditionalGeneration",
+      "line": 380,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GLM4VForCausalLM",
+      "module": "glm4v",
+      "class": "GLM4VForCausalLM",
+      "line": 381,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4vForConditionalGeneration",
+      "module": "glm4_1v",
+      "class": "Glm4vForConditionalGeneration",
+      "line": 382,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4vMoeForConditionalGeneration",
+      "module": "glm4_1v",
+      "class": "Glm4vMoeForConditionalGeneration",
+      "line": 383,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmOcrForConditionalGeneration",
+      "module": "glm_ocr",
+      "class": "GlmOcrForConditionalGeneration",
+      "line": 384,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GraniteSpeechForConditionalGeneration",
+      "module": "granite_speech",
+      "class": "GraniteSpeechForConditionalGeneration",
+      "line": 385,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "H2OVLChatModel",
+      "module": "h2ovl",
+      "class": "H2OVLChatModel",
+      "line": 389,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "HunYuanVLForConditionalGeneration",
+      "module": "hunyuan_vision",
+      "class": "HunYuanVLForConditionalGeneration",
+      "line": 390,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "StepVLForConditionalGeneration",
+      "module": "step_vl",
+      "class": "StepVLForConditionalGeneration",
+      "line": 394,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternVLChatModel",
+      "module": "internvl",
+      "class": "InternVLChatModel",
+      "line": 395,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronH_Nano_VL_V2",
+      "module": "nano_nemotron_vl",
+      "class": "NemotronH_Nano_VL_V2",
+      "line": 396,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OpenCUAForConditionalGeneration",
+      "module": "opencua",
+      "class": "OpenCUAForConditionalGeneration",
+      "line": 397,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternS1ForConditionalGeneration",
+      "module": "interns1",
+      "class": "InternS1ForConditionalGeneration",
+      "line": 401,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternVLForConditionalGeneration",
+      "module": "interns1",
+      "class": "InternS1ForConditionalGeneration",
+      "line": 405,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "InternS1ProForConditionalGeneration",
+      "module": "interns1_pro",
+      "class": "InternS1ProForConditionalGeneration",
+      "line": 409,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Idefics3ForConditionalGeneration",
+      "module": "idefics3",
+      "class": "Idefics3ForConditionalGeneration",
+      "line": 413,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "IsaacForConditionalGeneration",
+      "module": "isaac",
+      "class": "IsaacForConditionalGeneration",
+      "line": 417,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SmolVLMForConditionalGeneration",
+      "module": "smolvlm",
+      "class": "SmolVLMForConditionalGeneration",
+      "line": 418,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KananaVForConditionalGeneration",
+      "module": "kanana_v",
+      "class": "KananaVForConditionalGeneration",
+      "line": 419,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KeyeForConditionalGeneration",
+      "module": "keye",
+      "class": "KeyeForConditionalGeneration",
+      "line": 420,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KeyeVL1_5ForConditionalGeneration",
+      "module": "keye_vl1_5",
+      "class": "KeyeVL1_5ForConditionalGeneration",
+      "line": 421,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "RForConditionalGeneration",
+      "module": "rvl",
+      "class": "RForConditionalGeneration",
+      "line": 425,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KimiVLForConditionalGeneration",
+      "module": "kimi_vl",
+      "class": "KimiVLForConditionalGeneration",
+      "line": 426,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "KimiK25ForConditionalGeneration",
+      "module": "kimi_k25",
+      "class": "KimiK25ForConditionalGeneration",
+      "line": 427,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MoonshotKimiaForCausalLM",
+      "module": "kimi_audio",
+      "class": "KimiAudioForConditionalGeneration",
+      "line": 428,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LightOnOCRForConditionalGeneration",
+      "module": "lightonocr",
+      "class": "LightOnOCRForConditionalGeneration",
+      "line": 429,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Lfm2VlForConditionalGeneration",
+      "module": "lfm2_vl",
+      "class": "Lfm2VLForConditionalGeneration",
+      "line": 433,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Llama_Nemotron_Nano_VL",
+      "module": "nemotron_vl",
+      "class": "LlamaNemotronVLChatModel",
+      "line": 434,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Llama4ForConditionalGeneration",
+      "module": "mllama4",
+      "class": "Llama4ForConditionalGeneration",
+      "line": 435,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlavaForConditionalGeneration",
+      "module": "llava",
+      "class": "LlavaForConditionalGeneration",
+      "line": 436,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlavaNextForConditionalGeneration",
+      "module": "llava_next",
+      "class": "LlavaNextForConditionalGeneration",
+      "line": 437,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlavaNextVideoForConditionalGeneration",
+      "module": "llava_next_video",
+      "class": "LlavaNextVideoForConditionalGeneration",
+      "line": 441,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlavaOnevisionForConditionalGeneration",
+      "module": "llava_onevision",
+      "class": "LlavaOnevisionForConditionalGeneration",
+      "line": 445,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MantisForConditionalGeneration",
+      "module": "llava",
+      "class": "MantisForConditionalGeneration",
+      "line": 449,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiDashengLMModel",
+      "module": "midashenglm",
+      "class": "MiDashengLMModel",
+      "line": 450,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniMaxVL01ForConditionalGeneration",
+      "module": "minimax_vl_01",
+      "class": "MiniMaxVL01ForConditionalGeneration",
+      "line": 451,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniCPMO",
+      "module": "minicpmo",
+      "class": "MiniCPMO",
+      "line": 455,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiniCPMV",
+      "module": "minicpmv",
+      "class": "MiniCPMV",
+      "line": 456,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Mistral3ForConditionalGeneration",
+      "module": "mistral3",
+      "class": "Mistral3ForConditionalGeneration",
+      "line": 457,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MolmoForCausalLM",
+      "module": "molmo",
+      "class": "MolmoForCausalLM",
+      "line": 461,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Molmo2ForConditionalGeneration",
+      "module": "molmo2",
+      "class": "Molmo2ForConditionalGeneration",
+      "line": 462,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NVLM_D",
+      "module": "nvlm_d",
+      "class": "NVLM_D_Model",
+      "line": 463,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OpenPanguVLForConditionalGeneration",
+      "module": "openpangu_vl",
+      "class": "OpenPanguVLForConditionalGeneration",
+      "line": 464,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ovis",
+      "module": "ovis",
+      "class": "Ovis",
+      "line": 468,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ovis2_5",
+      "module": "ovis2_5",
+      "class": "Ovis2_5",
+      "line": 469,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ovis2_6ForCausalLM",
+      "module": "ovis2_5",
+      "class": "Ovis2_5",
+      "line": 470,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Ovis2_6_MoeForCausalLM",
+      "module": "ovis2_5",
+      "class": "Ovis2_5",
+      "line": 471,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PaddleOCRVLForConditionalGeneration",
+      "module": "paddleocr_vl",
+      "class": "PaddleOCRVLForConditionalGeneration",
+      "line": 472,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PaliGemmaForConditionalGeneration",
+      "module": "paligemma",
+      "class": "PaliGemmaForConditionalGeneration",
+      "line": 476,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Phi3VForCausalLM",
+      "module": "phi3v",
+      "class": "Phi3VForCausalLM",
+      "line": 480,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Phi4MMForCausalLM",
+      "module": "phi4mm",
+      "class": "Phi4MMForCausalLM",
+      "line": 481,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "PixtralForConditionalGeneration",
+      "module": "pixtral",
+      "class": "PixtralForConditionalGeneration",
+      "line": 482,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "QwenVLForConditionalGeneration",
+      "module": "qwen_vl",
+      "class": "QwenVLForConditionalGeneration",
+      "line": 483,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2VLForConditionalGeneration",
+      "module": "qwen2_vl",
+      "class": "Qwen2VLForConditionalGeneration",
+      "line": 484,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2_5_VLForConditionalGeneration",
+      "module": "qwen2_5_vl",
+      "class": "Qwen2_5_VLForConditionalGeneration",
+      "line": 485,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2AudioForConditionalGeneration",
+      "module": "qwen2_audio",
+      "class": "Qwen2AudioForConditionalGeneration",
+      "line": 489,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2_5OmniModel",
+      "module": "qwen2_5_omni_thinker",
+      "class": "Qwen2_5OmniThinkerForConditionalGeneration",
+      "line": 493,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen2_5OmniForConditionalGeneration",
+      "module": "qwen2_5_omni_thinker",
+      "class": "Qwen2_5OmniThinkerForConditionalGeneration",
+      "line": 497,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3OmniMoeForConditionalGeneration",
+      "module": "qwen3_omni_moe_thinker",
+      "class": "Qwen3OmniMoeThinkerForConditionalGeneration",
+      "line": 501,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3ASRForConditionalGeneration",
+      "module": "qwen3_asr",
+      "class": "Qwen3ASRForConditionalGeneration",
+      "line": 505,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3ASRRealtimeGeneration",
+      "module": "qwen3_asr_realtime",
+      "class": "Qwen3ASRRealtimeGeneration",
+      "line": 509,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3VLForConditionalGeneration",
+      "module": "qwen3_vl",
+      "class": "Qwen3VLForConditionalGeneration",
+      "line": 513,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3VLMoeForConditionalGeneration",
+      "module": "qwen3_vl_moe",
+      "class": "Qwen3VLMoeForConditionalGeneration",
+      "line": 514,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3_5ForConditionalGeneration",
+      "module": "qwen3_5",
+      "class": "Qwen3_5ForConditionalGeneration",
+      "line": 518,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3_5MoeForConditionalGeneration",
+      "module": "qwen3_5",
+      "class": "Qwen3_5MoeForConditionalGeneration",
+      "line": 522,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SkyworkR1VChatModel",
+      "module": "skyworkr1v",
+      "class": "SkyworkR1VChatModel",
+      "line": 526,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Step3VLForConditionalGeneration",
+      "module": "step3_vl",
+      "class": "Step3VLForConditionalGeneration",
+      "line": 527,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TarsierForConditionalGeneration",
+      "module": "tarsier",
+      "class": "TarsierForConditionalGeneration",
+      "line": 528,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Tarsier2ForConditionalGeneration",
+      "module": "qwen2_vl",
+      "class": "Tarsier2ForConditionalGeneration",
+      "line": 529,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "UltravoxModel",
+      "module": "ultravox",
+      "class": "UltravoxModel",
+      "line": 533,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "VoxtralForConditionalGeneration",
+      "module": "voxtral",
+      "class": "VoxtralForConditionalGeneration",
+      "line": 534,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "VoxtralRealtimeGeneration",
+      "module": "voxtral_realtime",
+      "class": "VoxtralRealtimeGeneration",
+      "line": 535,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronParseForConditionalGeneration",
+      "module": "nemotron_parse",
+      "class": "NemotronParseForConditionalGeneration",
+      "line": 537,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "WhisperForConditionalGeneration",
+      "module": "whisper",
+      "class": "WhisperForConditionalGeneration",
+      "line": 541,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ExtractHiddenStatesModel",
+      "module": "extract_hidden_states",
+      "class": "ExtractHiddenStatesModel",
+      "line": 545,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MiMoMTPModel",
+      "module": "mimo_mtp",
+      "class": "MiMoMTP",
+      "line": 546,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "EagleLlamaForCausalLM",
+      "module": "llama_eagle",
+      "class": "EagleLlamaForCausalLM",
+      "line": 547,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "EagleLlama4ForCausalLM",
+      "module": "llama4_eagle",
+      "class": "EagleLlama4ForCausalLM",
+      "line": 548,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "EagleMiniCPMForCausalLM",
+      "module": "minicpm_eagle",
+      "class": "EagleMiniCPMForCausalLM",
+      "line": 549,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle3LlamaForCausalLM",
+      "module": "llama_eagle3",
+      "class": "Eagle3LlamaForCausalLM",
+      "line": 550,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LlamaForCausalLMEagle3",
+      "module": "llama_eagle3",
+      "class": "Eagle3LlamaForCausalLM",
+      "line": 551,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle3Qwen2_5vlForCausalLM",
+      "module": "llama_eagle3",
+      "class": "Eagle3LlamaForCausalLM",
+      "line": 552,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle3Qwen3vlForCausalLM",
+      "module": "llama_eagle3",
+      "class": "Eagle3LlamaForCausalLM",
+      "line": 553,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "EagleMistralLarge3ForCausalLM",
+      "module": "mistral_large_3_eagle",
+      "class": "EagleMistralLarge3ForCausalLM",
+      "line": 554,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle3DeepseekV2ForCausalLM",
+      "module": "deepseek_eagle3",
+      "class": "Eagle3DeepseekV2ForCausalLM",
+      "line": 558,
+      "disposition": "target_draft_pending_profile",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Eagle3DeepseekV3ForCausalLM",
+      "module": "deepseek_eagle3",
+      "class": "Eagle3DeepseekV2ForCausalLM",
+      "line": 559,
+      "disposition": "target_draft_pending_profile",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "EagleDeepSeekMTPModel",
+      "module": "deepseek_eagle",
+      "class": "EagleDeepseekV3ForCausalLM",
+      "line": 560,
+      "disposition": "target_draft_pending_profile",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "DeepSeekMTPModel",
+      "module": "deepseek_mtp",
+      "class": "DeepSeekMTP",
+      "line": 561,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ErnieMTPModel",
+      "module": "ernie_mtp",
+      "class": "ErnieMTP",
+      "line": 562,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "ExaoneMoeMTP",
+      "module": "exaone_moe_mtp",
+      "class": "ExaoneMoeMTP",
+      "line": 563,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "NemotronHMTPModel",
+      "module": "nemotron_h_mtp",
+      "class": "NemotronHMTP",
+      "line": 564,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "LongCatFlashMTPModel",
+      "module": "longcat_flash_mtp",
+      "class": "LongCatFlashMTP",
+      "line": 565,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4MoeMTPModel",
+      "module": "glm4_moe_mtp",
+      "class": "Glm4MoeMTP",
+      "line": 566,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Glm4MoeLiteMTPModel",
+      "module": "glm4_moe_lite_mtp",
+      "class": "Glm4MoeLiteMTP",
+      "line": 567,
+      "disposition": "retain_text_or_mtp",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "GlmOcrMTPModel",
+      "module": "glm_ocr_mtp",
+      "class": "GlmOcrMTP",
+      "line": 568,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "MedusaModel",
+      "module": "medusa",
+      "class": "Medusa",
+      "line": 569,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "OpenPanguMTPModel",
+      "module": "openpangu_mtp",
+      "class": "OpenPanguMTP",
+      "line": 570,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3NextMTP",
+      "module": "qwen3_next_mtp",
+      "class": "Qwen3NextMTP",
+      "line": 571,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Step3p5MTP",
+      "module": "step3p5_mtp",
+      "class": "Step3p5MTP",
+      "line": 572,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3_5MTP",
+      "module": "qwen3_5_mtp",
+      "class": "Qwen3_5MTP",
+      "line": 573,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Qwen3_5MoeMTP",
+      "module": "qwen3_5_mtp",
+      "class": "Qwen3_5MoeMTP",
+      "line": 574,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "SmolLM3ForCausalLM",
+      "module": "transformers",
+      "class": "TransformersForCausalLM",
+      "line": 582,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "Emu3ForConditionalGeneration",
+      "module": "transformers",
+      "class": "TransformersMultiModalForCausalLM",
+      "line": 584,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersForCausalLM",
+      "module": "transformers",
+      "class": "TransformersForCausalLM",
+      "line": 592,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMoEForCausalLM",
+      "module": "transformers",
+      "class": "TransformersMoEForCausalLM",
+      "line": 593,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMultiModalForCausalLM",
+      "module": "transformers",
+      "class": "TransformersMultiModalForCausalLM",
+      "line": 595,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMultiModalMoEForCausalLM",
+      "module": "transformers",
+      "class": "TransformersMultiModalMoEForCausalLM",
+      "line": 599,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersEmbeddingModel",
+      "module": "transformers",
+      "class": "TransformersEmbeddingModel",
+      "line": 604,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMoEEmbeddingModel",
+      "module": "transformers",
+      "class": "TransformersMoEEmbeddingModel",
+      "line": 605,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMultiModalEmbeddingModel",
+      "module": "transformers",
+      "class": "TransformersMultiModalEmbeddingModel",
+      "line": 606,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersForSequenceClassification",
+      "module": "transformers",
+      "class": "TransformersForSequenceClassification",
+      "line": 611,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMoEForSequenceClassification",
+      "module": "transformers",
+      "class": "TransformersMoEForSequenceClassification",
+      "line": 615,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    },
+    {
+      "architecture": "TransformersMultiModalForSequenceClassification",
+      "module": "transformers",
+      "class": "TransformersMultiModalForSequenceClassification",
+      "line": 619,
+      "disposition": "remove_after_dependency_extraction",
+      "runtime_verified": false
+    }
+  ],
+  "dispositions": {
+    "remove_after_dependency_extraction": 309,
+    "retain_text_or_mtp": 15,
+    "target_draft_pending_profile": 3
+  }
+}

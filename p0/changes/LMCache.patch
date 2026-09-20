@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index da883339..8d6c858a 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -12,7 +12,7 @@ requires = [
+     "packaging>=24.2",
+     "setuptools>=77.0.3,<81.0.0",
+     "setuptools_scm>=8",
+-    "torch==2.10.0",
++    "torch==2.9.0",
+     "wheel",
+ ]
+ build-backend = "setuptools.build_meta"

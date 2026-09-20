@@ -1,0 +1,15 @@
+{
+  "repositories": 4,
+  "tracked_files": 7296,
+  "python_files_parsed": 4203,
+  "parse_errors": [],
+  "patch_files_and_call_sites": 97,
+  "patch_candidates": 784,
+  "registry_entries": 327,
+  "dependency_findings": 2762,
+  "limitations": [
+    "AST does not prove runtime activation, complete dynamic imports or MRO",
+    "Assignments in patch files may be ordinary instance updates",
+    "No package imports, build, install, network or NPU tests performed"
+  ]
+}

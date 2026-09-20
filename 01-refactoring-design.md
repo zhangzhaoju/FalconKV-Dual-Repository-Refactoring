@@ -1,6 +1,6 @@
 # Ascend 原生双仓重构设计
 
-状态：总体设计待审核，尚未启动执行；模型范围、首批验收环境及必保能力沿用 2026-09-17 的确认，网络与协作边界按用户 2026-09-20 的更正更新。本文描述目标实现；现状依据和验证要求见 [03](03-baseline-and-validation.md)。
+状态：设计已审核，2026-09-20 启动 P0，尚未启动合仓/裁剪。当前模型仅 GLM-5.2-w4a8c8；GLM-5.3 为后续扩展。目标环境为 910B3、4 节点每节点 8 卡、2P2D、TP8/DP2，软件及网络约束不变。本文描述目标实现；执行证据见 [P0](p0/README.md)，验收要求见 [03](03-baseline-and-validation.md)。
 
 ## 1. 目标与边界
 
@@ -14,7 +14,7 @@
 | --- | --- |
 | 离线推理 | 保留 `LLM`、`SamplingParams`、批量 `generate`、文本 `chat`、tokenizer、采样及必要的 logprobs |
 | 在线推理 | 保留 `vllm serve`、异步引擎、`/v1/models`、`/v1/completions`、`/v1/chat/completions`、SSE、健康检查、指标、取消和优雅退出 |
-| 模型配套 | 保留 DeepSeek / GLM 的 tokenizer、chat template、reasoning parser、tool parser、对应结构化输出能力 |
+| 模型配套 | 保留 GLM-5.2 的 tokenizer、chat template、reasoning parser、tool parser、对应结构化输出能力 |
 | 执行 | 保留 V1 引擎、连续批处理、chunked prefill、prefix caching、分页 KV、抢占/恢复；只保留 Ascend 算子和执行后端 |
 | 并行 | 保留目标模型使用的 TP、EP、PP、DP 及必要的 CP/EPLB 路径；按已经具备的组合分别验收，不承诺所有组合均可用 |
 | 图与推测解码 | 保留当前目标模型的 Eager、ACL 图、MTP，以及确有目标模型用途的推测解码公共组件；模式支持按矩阵确认 |
@@ -24,7 +24,7 @@
 
 LoRA 加载已训练好的 adapter、MoE 路由、MTP 验证、采样和 prefix caching 都是推理功能，不能以“删除训练”为由直接移除。为缩小首版范围，建议另行审核是否裁剪 LoRA 推理及动态 adapter 管理；审核前保留相关依赖边界，不把它当作已授权的必删项。
 
-用户已确认模型范围：仅保留 DeepSeek / GLM 原生文本生成模型及已有 MTP、DSA；删除多模态模型和基于 Qwen/Llama 的蒸馏模型。视觉、OCR、语音模型即使属于 DeepSeek / GLM 系列，也不进入保留集。本次范围确认不代表整体设计已通过审核或已授权启动代码重构。
+用户在启动 P0 时进一步收窄模型范围：当前仅保留 GLM-5.2-w4a8c8 原生文本模型及其已有 MTP、DSA，GLM-5.3 在后续版本扩展。此前 DeepSeek/GLM 全系列白名单被此项取代；删除其他完整模型的对外实现和注册，但 GLM-5.2 使用的 DeepSeek/Llama/Eagle 等公共组件必须先按实际依赖提取。多模态及 Qwen/Llama 蒸馏仍在删除范围内。
 
 用户同时确认保留当前分支目标模型相关能力，包括 DSA、CPU KV 卸载、跨实例缓存和 Prefill/Decode 分离，全部纳入回归验收。GLM 索引共享、不等 KV 分组、checkpoint、RemoteFill 和相关恢复机制作为现有链路组成部分保留；精简不能将这些能力降为可删项。保留的是当前已有能力和组合，不代表扩展原来不支持的组合。
 
@@ -48,7 +48,7 @@ vllm/
     v1/worker/npu_worker.py
     v1/attention/backends/ascend/   # Dense / MLA / SFA
     compilation/                   # Ascend compiler、ACL 图和公共图逻辑
-    model_executor/models/         # DeepSeek、GLM、必要的 common 组件
+    model_executor/models/         # GLM-5.2、内部 MTP、必要的 common 组件
     model_executor/layers/         # 公共语义与 NPU 实现
     distributed/                   # HCCL、并行、Connector 接口
     distributed/kv_transfer/       # 推理侧 KV 生命周期与 sparse offload
@@ -81,7 +81,7 @@ flowchart TB
     subgraph V[vLLM 仓]
       API[LLM / vllm serve] --> E[引擎与调度器]
       E --> W[NPU Worker / Runner]
-      W --> M[DeepSeek / GLM]
+      W --> M[GLM-5.2 / 内部 MTP]
       M --> N[Ascend Attention / MoE / 量化 / ACL 图]
       E --> K[KVConnector 契约与薄适配层]
       W --> K
@@ -147,24 +147,16 @@ DSA layerwise 检索包含主机回调，不能未经验证并入一个连续 FU
 
 ### 5.1 文本模型架构白名单
 
-以下按已确认的原生文本模型范围，从当前本地 registry 整理保留架构；“有注册”不等于“所有权重、精度、硬件组合已验证”。实际支持表还需逐项绑定 checkpoint、revision/config hash、tokenizer、dtype、量化和硬件测试结果。
+当前仅保留 GLM-5.2-w4a8c8。下表是从源码推导的预期入口，必须用内网实际 `config.json` 和量化元数据核实后冻结；文件名、模型目录名和 registry 均不能代替具体权重/精度/硬件验证。
 
 | 架构 | 当前实现 | 处理 |
 | --- | --- | --- |
-| `DeepseekForCausalLM` | `deepseek_v2.py` | 保留 |
-| `DeepseekV2ForCausalLM` | `deepseek_v2.py` | 保留 |
-| `DeepseekV3ForCausalLM` | `deepseek_v2.py` | 保留，按 checkpoint 区分 V3/R1 等用途 |
-| `DeepseekV32ForCausalLM` | `deepseek_v2.DeepseekV3ForCausalLM` | 保留当前别名与 DSA 配置解析 |
-| `GlmMoeDsaForCausalLM` | `deepseek_v2.py` | 保留，特别覆盖当前 GLM 5.1/5.2 分支行为 |
-| `ChatGLMModel` / `ChatGLMForConditionalGeneration` | `chatglm.ChatGLMForCausalLM` | 保留已有文本实现，按实际 checkpoint 确认覆盖 |
-| `GlmForCausalLM` | `glm.py` | 保留，先解除 Llama 完整模型继承 |
-| `Glm4ForCausalLM` | `glm4.py` | 保留，抽取所需公共 decoder/MLP |
-| `Glm4MoeForCausalLM` | `glm4_moe.py` | 保留 |
-| `Glm4MoeLiteForCausalLM` | `glm4_moe_lite.py` | 保留 |
-| `DeepSeekMTPModel` | `deepseek_mtp.py` | 作为对应目标模型的内部 draft 架构保留 |
-| `Glm4MoeMTPModel` / `Glm4MoeLiteMTPModel` | 对应 `*_mtp.py` | 保留并分别验收 |
+| `GlmMoeDsaForCausalLM` | `deepseek_v2.py` | GLM-5.2 主模型候选入口，绑定具体 config/hash；不是 GLM-5.1 或其他同架构权重的通用认证 |
+| `DeepSeekMTPModel` | `deepseek_mtp.py` | `glm_moe_dsa` 经现有 speculative 配置映射出的内部 draft；只用于目标 GLM-5.2 MTP，不开放独立 DeepSeek 服务 |
 
-DeepSeek 专用 Eagle/Eagle3 draft 若在实际目标配置中启用，保留其实现与依赖；否则列为可选裁剪项。不得借此保留任意其他模型的通用 draft 注册入口。
+其他 DeepSeek、ChatGLM、GLM-4/其他 GLM 版本和 Eagle 专用模型入口均不在当前对外支持范围。MTP 所需 proposer 和共享组件继续保留，但不借此开放额外 draft 模型。GLM-5.3 后续通过新增明确 profile、模型元数据与回归用例扩展；本轮不预置未经验证的 GLM-5.3 别名或 fallback。
+
+W4A8C8 不能仅依据名称设为一个统一 dtype。P0 需核实量化提供方、逐层量化/回退规则、MTP 权重格式，以及 latent/index 的 C8 数据、scale、布局和跨实例传输语义。当前源码中存在 W4A8_DYNAMIC、KV C8 和 sparse C8 路径，并不证明它们组合在该 checkpoint 与 910B3 上已经可用。
 
 白名单同时作用于 CLI、离线构造、模型加载器、registry、`model_impl` fallback 和 draft model 检查。关闭可绕过范围约束的通用 Transformers/TerraTorch 执行 fallback 与外部模型注册入口；保留 Transformers 的 config/tokenizer/权重辅助功能。若目标 checkpoint 的 config/tokenizer 必须使用 remote code，按固定版本和明确用途处理，不能顺带启用任意远程模型实现。
 
@@ -172,17 +164,17 @@ DeepSeek 专用 Eagle/Eagle3 draft 若在实际目标配置中启用，保留其
 
 ### 5.2 必须先拆的共享依赖
 
-- `glm.py` 继承 `LlamaForCausalLM`；将它依赖的执行骨架改为公共 decoder 基类/组件或 GLM 自身实现，最终移除 Llama 对外模型实现和注册。
-- `glm4.py` 使用 `LlamaMLP`、`LlamaModel`；抽取实际使用的结构和权重加载逻辑，保持参数名和 checkpoint 映射。
+- GLM-5.2 使用 `deepseek_v2.py` 内的 DSA/MoE 实现；保留 shared/full indexer、权重过滤和分组行为，最终移除不再支持的 DeepSeek 对外入口而不是整文件删除。
+- `glm.py`、`glm4.py` 不再是本轮保留模型，不能继续为它们扩大公共 decoder 的提取范围；只有 GLM-5.2 实际闭包使用的 Llama 等组件才需提取。
 - MTP 依赖名称含 Eagle 的通用执行组件；按调用关系提取，不按文件名整目录删除。
-- `glm4_moe_lite.py` 复用 DeepSeek 和 GLM MoE；这些是目标范围内共享，继续保留。
+- MTP 经过 `glm_moe_dsa -> deepseek_mtp -> DeepSeekMTPModel` 的配置映射；量化权重、draft 初始化、采样/回退和 KV 游标共同验证。
 - `models/utils.py`、`interfaces.py`、model loader、quantization utils、parser 基类中的其他模型引用也要纳入闭包分析。
 
 抽取时保留权重键名、QKV 排列、RoPE 参数、特殊 token、EOS/stop 和 chat template 语义。纯改模块路径也可能影响缓存指纹、序列化及动态 import 字符串，需一并迁移。
 
 ### 5.3 已确认的模型删除范围
 
-DeepSeek-R1 蒸馏版有基于 Qwen 和 Llama 的模型，见 [DeepSeek 官方模型表](https://github.com/deepseek-ai/DeepSeek-R1#deepseek-r1-distill-models)。这些蒸馏模型已确认不在支持范围；删除其模型实现、注册和专用配套代码，不能因名称带有 DeepSeek 而保留。原生文本 DeepSeek-R1 仍按上述目标架构和具体 checkpoint 验收。
+DeepSeek-R1 蒸馏版有基于 Qwen 和 Llama 的模型，见 [DeepSeek 官方模型表](https://github.com/deepseek-ai/DeepSeek-R1#deepseek-r1-distill-models)。这些蒸馏模型及独立原生 DeepSeek-R1 服务均不在当前 GLM-5.2-only 范围；删除非目标完整模型、注册和专用配套代码，不能因名称带有 DeepSeek 或 GLM 而保留。共享内部组件按 5.2 节处理。
 
 删除多模态模型、视觉/语音 encoder、processor、media、encoder cache、多模态处理协议分支、测试和 torchvision/torchaudio 等仅因此存在的依赖。若任何文本公共工具仍引用这些模块，先拆依赖，再删除。离线和在线入口保留明确的文本输入校验，收到图像、音频、视频等不支持的输入时返回错误，不静默丢弃后继续生成。
 
@@ -256,7 +248,7 @@ DSA/MTP/RemoteFill 已有的 capability、layerwise callbacks、worker metadata 
 
 首批验收固定为用户指定的 Ascend 910B3、CANN 8.5.1、torch 2.9.0、torch_npu 2.9.0。用户已确认内网构建环境的 torch 为 2.9.0，直接复用；本轮未在该环境实测。Python、Ascend kernels、transformers、compressed-tensors 和 triton-ascend 等配套版本在内网 P0 核对并冻结。[torch_npu 官方版本说明](https://github.com/Ascend/pytorch#supported-pytorch-versions) 仅作准备阶段的参考资料，不是构建时需要访问的网站。
 
-当前 vLLM/LMCache 的 build-system 声明 torch 2.10.0，vllm-ascend requirements 声明 torch/torch_npu 2.9.0。这是源码构建声明与现有内网环境的差异，整改对象是 packaging、构建脚本、CI/镜像配置和必要源码适配，不要求重装现有 torch。核对仅在 2.10 中存在的 API、编译接口或 ABI；必要适配独立提交，不能只替换版本字符串或通过自动升级改变验收目标。
+原始 vLLM/LMCache build-system 声明 torch 2.10.0，vllm-ascend requirements 声明 torch/torch_npu 2.9.0。P0 已独立对齐工作区构建声明，见 [修复记录](p0/changes/change-manifest.json)；运行兼容性尚未通过。整改对象仍包括 packaging、构建脚本、CI/镜像配置和必要源码适配，不要求重装现有 torch。核对仅在 2.10 中存在的 API、编译接口或 ABI；不能只替换版本字符串或通过自动升级改变验收目标。
 
 当前 `LMCache-Ascend/setup.py` 的 `_is_cann_85_or_later` 在无显式覆盖且正确识别 CANN 8.5.1 时，会选择 HIXL/hcomm one-sided 构建路径。P0 需核对实际 SDK/库、符号和 910B3 上的行为，再冻结通道配置；该构建分支选择本身不证明硬件可用性，也不代表推理集合通信不再使用 HCCL。
 
@@ -271,7 +263,7 @@ DSA/MTP/RemoteFill 已有的 capability、layerwise callbacks、worker metadata 
 | 内网制品库、共享存储、源码及模型材料 | 可使用；记录版本、来源和校验值 |
 | 公网依赖源、源码站点、官方文档、镜像及模型文件 | 按内网策略经 proxy 访问允许的来源；下载模型文件不等于调用外部模型推理服务 |
 | 外部大模型 API、在线 AI 助手、云端 Agent 及其自动日志上传 | 禁止在验证环境接入；通过 proxy、中转或远程控制也不作为绕过方式 |
-| 内网部署的目标 DeepSeek/GLM 推理服务 | 按原需求保留并验收；本地客户端只指向指定内网服务 |
+| 内网部署的目标 GLM-5.2 推理服务 | 按当前范围保留并验收；本地客户端只指向指定内网服务 |
 | 内网 P/D、跨实例缓存、HCCL/HIXL/hcomm 及存储通信 | 保留直接内网通信，不经公网代理转发 |
 
 本地推理测试可使用兼容协议客户端，但须显式指定内网目标地址，禁用公网默认端点及失败回退；不能因 SDK 名称含大模型服务商名称就删除本地服务测试所需依赖。内网 CI 的制品收集、日志汇聚和监控可保留，以下交接限制针对向外部环境或大模型服务传送数据。

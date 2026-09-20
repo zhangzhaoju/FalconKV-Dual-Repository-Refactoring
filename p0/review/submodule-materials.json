@@ -1,0 +1,24 @@
+{
+  "submodules": [
+    {
+      "repository": "vllm-ascend",
+      "path": "csrc/third_party/catlass",
+      "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641",
+      "url": "https://gitcode.com/cann/catlass.git",
+      "initialized": false,
+      "payload_backed_up": false,
+      "required_action": "Obtain exact gitlink commit through allowed proxy/internal source, verify then archive payload before build",
+      "branch_head_is_not_acceptable_substitute": true
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "path": "third_party/kvcache-ops",
+      "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5",
+      "url": "https://gitcode.com/gcw_LBsQh0mD/kvcache-ops.git",
+      "initialized": false,
+      "payload_backed_up": false,
+      "required_action": "Obtain exact gitlink commit through allowed proxy/internal source, verify then archive payload before build",
+      "branch_head_is_not_acceptable_substitute": true
+    }
+  ]
+}

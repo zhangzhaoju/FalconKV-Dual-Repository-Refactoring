@@ -1,0 +1,186 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index b94fb31..408a595 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -2,8 +2,8 @@
+ requires = [
+     "setuptools>=61.0",
+     "setuptools_scm[toml]>=6.2",
+-    "torch",
+-    "torch-npu",
++    "torch==2.9.0",
++    "torch-npu==2.9.0",
+     "wheel"
+ ]
+ build-backend = "setuptools.build_meta"
+diff --git a/tests/standalone/test_checkpoint_dispatch.py b/tests/standalone/test_checkpoint_dispatch.py
+index 16f490a..b6d56de 100644
+--- a/tests/standalone/test_checkpoint_dispatch.py
++++ b/tests/standalone/test_checkpoint_dispatch.py
+@@ -9,7 +9,7 @@ from types import SimpleNamespace as NS
+ import pytest
+ 
+ ROOT = Path(__file__).resolve().parents[2]
+-LN = ROOT.parent / "LMCache-NPU"
++LN = ROOT.parent / "LMCache"
+ VA = ROOT.parent / "vllm-ascend"
+ 
+ 
+diff --git a/tests/standalone/test_checkpoint_initialization.py b/tests/standalone/test_checkpoint_initialization.py
+index e6e0e82..25cfe35 100644
+--- a/tests/standalone/test_checkpoint_initialization.py
++++ b/tests/standalone/test_checkpoint_initialization.py
+@@ -25,7 +25,7 @@ class Config(NS):
+ 
+ 
+ def init_api(config):
+-    base_path = ROOT.parent / "LMCache-NPU/lmcache/integration/vllm/vllm_v1_adapter.py"
++    base_path = ROOT.parent / "LMCache/lmcache/integration/vllm/vllm_v1_adapter.py"
+     ascend_path = ROOT / "lmcache_ascend/integration/vllm/vllm_v1_adapter.py"
+     base_tree, ascend_tree = [
+         ast.parse(p.read_text(encoding="utf-8")) for p in (base_path, ascend_path)
+@@ -68,7 +68,7 @@ def init_api(config):
+         KVConnectorRole=Role,
+         logger=NS(info=lambda *a, **kw: None),
+         validate_two_group_layer_counts=runpy.run_path(
+-            str(ROOT.parent / "LMCache-NPU/lmcache/v1/kv_layer_groups.py")
++            str(ROOT.parent / "LMCache/lmcache/v1/kv_layer_groups.py")
+         )["validate_two_group_layer_counts"],
+     )
+     prefix = ast.ImportFrom(
+diff --git a/tests/standalone/test_checkpoint_miss_retry.py b/tests/standalone/test_checkpoint_miss_retry.py
+index 332a0c2..437b59c 100644
+--- a/tests/standalone/test_checkpoint_miss_retry.py
++++ b/tests/standalone/test_checkpoint_miss_retry.py
+@@ -19,7 +19,7 @@ def scheduler_adapter(api):
+     control, _ = api
+     calls = []
+     cls = implementation(
+-        "../LMCache-NPU/lmcache/integration/vllm/vllm_v1_adapter.py",
++        "../LMCache/lmcache/integration/vllm/vllm_v1_adapter.py",
+         "LMCacheConnectorV1Impl",
+         {
+             "accept_preemption_result",
+@@ -225,7 +225,7 @@ def test_only_expected_pretransfer_miss_avoids_invalid_blocks_and_stack(api, kin
+         exception=lambda *a: calls.append("exception"),
+     )
+     base = implementation(
+-        "../LMCache-NPU/lmcache/integration/vllm/vllm_v1_adapter.py",
++        "../LMCache/lmcache/integration/vllm/vllm_v1_adapter.py",
+         "LMCacheConnectorV1Impl",
+         {"_fail_completed_cold_load", "_record_checkpoint_restore_miss"},
+         object,
+@@ -277,7 +277,7 @@ def test_only_expected_pretransfer_miss_avoids_invalid_blocks_and_stack(api, kin
+ 
+ def test_all_tp_ranks_receive_the_same_typed_pretransfer_miss(api):
+     control = api[0]
+-    ln = ROOT.parent / "LMCache-NPU"
++    ln = ROOT.parent / "LMCache"
+     nodes = []
+     for file, names in [
+         (ln / "lmcache/v1/shared_cpu_cache.py", {"SharedHandleEnvelope"}),
+diff --git a/tests/standalone/test_checkpoint_page_keys.py b/tests/standalone/test_checkpoint_page_keys.py
+index f495309..4a4d0ea 100644
+--- a/tests/standalone/test_checkpoint_page_keys.py
++++ b/tests/standalone/test_checkpoint_page_keys.py
+@@ -25,7 +25,7 @@ api = checkpoint_api
+ 
+ @pytest.fixture
+ def key_types():
+-    source = ROOT.parent / "LMCache-NPU/lmcache/utils.py"
++    source = ROOT.parent / "LMCache/lmcache/utils.py"
+     tree = ast.parse(source.read_text(encoding="utf-8"))
+     nodes = [
+         node
+@@ -177,7 +177,7 @@ def test_page_source_selection_and_failure_cleanup(
+     cls = implementation(
+         "lmcache_ascend/v1/cache_engine.py"
+         if backend == "ascend"
+-        else "../LMCache-NPU/lmcache/v1/cache_engine.py",
++        else "../LMCache/lmcache/v1/cache_engine.py",
+         "AscendLMCacheEngine" if backend == "ascend" else "LMCacheEngine",
+         {"_resolve_shared_rank0_layer_pages"},
+         object,
+diff --git a/tests/standalone/test_checkpoint_prefix_agreement.py b/tests/standalone/test_checkpoint_prefix_agreement.py
+index 873105b..68711c1 100644
+--- a/tests/standalone/test_checkpoint_prefix_agreement.py
++++ b/tests/standalone/test_checkpoint_prefix_agreement.py
+@@ -28,7 +28,7 @@ def classes():
+         serving_perf_enabled=lambda: False,
+         logger=NS(debug=lambda *a, **kw: None),
+     )
+-    ln = ROOT.parent / "LMCache-NPU"
++    ln = ROOT.parent / "LMCache"
+     names = {
+         "_shared_envelope_identity",
+         "_shared_envelope_mailbox",
+diff --git a/tests/standalone/test_cold_abort_completion.py b/tests/standalone/test_cold_abort_completion.py
+index 0788810..c7b3a88 100644
+--- a/tests/standalone/test_cold_abort_completion.py
++++ b/tests/standalone/test_cold_abort_completion.py
+@@ -11,7 +11,7 @@ from weakref import WeakMethod
+ import pytest
+ 
+ ROOT = Path(__file__).resolve().parents[2]
+-LN = ROOT.parent / "LMCache-NPU"
++LN = ROOT.parent / "LMCache"
+ 
+ 
+ def definitions(path, names, namespace):
+diff --git a/tests/standalone/test_dense_checkpoint_partial_pages.py b/tests/standalone/test_dense_checkpoint_partial_pages.py
+index 95ddc60..a7e4af7 100644
+--- a/tests/standalone/test_dense_checkpoint_partial_pages.py
++++ b/tests/standalone/test_dense_checkpoint_partial_pages.py
+@@ -41,7 +41,7 @@ def test_dense_loader_plans_full_and_partial_local_pages(
+     engine.backend.hot_cache = engine.backend.pages
+     base_key, layer_key = key_types
+     cls = implementation(
+-        "../LMCache-NPU/lmcache/v1/cache_engine.py",
++        "../LMCache/lmcache/v1/cache_engine.py",
+         "LMCacheEngine",
+         {"retrieve_layer", "_shared_page_first_location_plan"},
+         object,
+diff --git a/tests/standalone/test_local_checkpoint_restore.py b/tests/standalone/test_local_checkpoint_restore.py
+index f6abff3..8a86ecd 100644
+--- a/tests/standalone/test_local_checkpoint_restore.py
++++ b/tests/standalone/test_local_checkpoint_restore.py
+@@ -275,7 +275,7 @@ def test_checkpoint_control_acknowledgement_passes_real_shared_envelope_validati
+ ):
+     from dataclasses import dataclass
+ 
+-    ln = ROOT.parent / "LMCache-NPU"
++    ln = ROOT.parent / "LMCache"
+     nodes = []
+     for file, names in [
+         (ln / "lmcache/v1/shared_cpu_cache.py", {"SharedHandleEnvelope"}),
+@@ -354,7 +354,7 @@ def test_checkpoint_control_acknowledgement_passes_real_shared_envelope_validati
+ def test_index_tail_ownership_retires_only_at_the_completed_resume_branch(
+     resumed, ready
+ ):
+-    file = ROOT.parent / "LMCache-NPU/lmcache/integration/vllm/vllm_v1_adapter.py"
++    file = ROOT.parent / "LMCache/lmcache/integration/vllm/vllm_v1_adapter.py"
+     tree = ast.parse(file.read_text(encoding="utf-8"))
+     branch = next(
+         n
+@@ -451,7 +451,7 @@ def test_normalization_protects_the_existing_compatible_canonical_page(
+     resident = Page(2, 4, (2, 1))
+     fill(resident, 4, 0)
+     engine.backend.pages[canonical] = resident
+-    source = ROOT.parent / "LMCache-NPU/lmcache/v1/storage_backend/local_cpu_backend.py"
++    source = ROOT.parent / "LMCache/lmcache/v1/storage_backend/local_cpu_backend.py"
+     node = next(
+         n
+         for n in ast.walk(ast.parse(source.read_text(encoding="utf-8")))
+diff --git a/tests/standalone/test_preemption_checkpoint.py b/tests/standalone/test_preemption_checkpoint.py
+index eb0441a..a35bfad 100644
+--- a/tests/standalone/test_preemption_checkpoint.py
++++ b/tests/standalone/test_preemption_checkpoint.py
+@@ -47,7 +47,7 @@ def api(monkeypatch):
+ 
+     control = load(
+         "lmcache.integration.vllm.preemption_checkpoint",
+-        ROOT.parent / "LMCache-NPU/lmcache/integration/vllm/preemption_checkpoint.py",
++        ROOT.parent / "LMCache/lmcache/integration/vllm/preemption_checkpoint.py",
+     )
+     load(
+         "lmcache_ascend.v1.local_checkpoint",

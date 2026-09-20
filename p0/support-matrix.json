@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scope_revision": "2026-09-20-glm52-only",
+  "authority": "User approved design and P0; subsequently narrowed current model scope to GLM-5.2-w4a8c8",
+  "phase": "P0_in_progress",
+  "p0_exit_passed": false,
+  "model": {
+    "artifact_label": "GLM-5.2-w4a8c8",
+    "source_candidate_architecture": "GlmMoeDsaForCausalLM",
+    "source_candidate_model_type": "glm_moe_dsa",
+    "actual_checkpoint_architecture_confirmed": false,
+    "revision": null,
+    "config_sha256": null,
+    "quantization_metadata_sha256": null,
+    "weight_manifest_sha256": null,
+    "tokenizer_revision": null,
+    "quantization_label": "W4A8C8",
+    "quantization_provider_and_layer_schema": null,
+    "c8_latent_index_scale_layout": null,
+    "mtp_internal_architecture": "DeepSeekMTPModel",
+    "mtp_weight_and_quantization_profile_verified": false,
+    "source_present": true,
+    "baseline_runtime_status": "pending_intranet",
+    "this_refactor_acceptance": "not_run"
+  },
+  "excluded_public_models": ["DeepSeek", "ChatGLM", "GLM-4", "other_GLM_versions", "multimodal", "Qwen_Llama_distill"],
+  "future_extension": {"model": "GLM-5.3", "implemented_or_certified": false},
+  "shared_code_policy": "Retain components required by GLM-5.2, including deepseek_v2, deepseek_mtp and proposer dependencies; file names do not grant public model support",
+  "environment": {
+    "device": "Ascend 910B3", "cann": "8.5.1", "torch": "2.9.0", "torch_npu": "2.9.0",
+    "torch_already_installed": true, "build_on_local_machine": false,
+    "network": "intranet_with_proxy", "external_llm_or_agent_access": "forbidden",
+    "python": null, "os_arch": null, "driver": null, "firmware": null,
+    "sdk_abi": "pending_intranet_verification"
+  },
+  "deployment": {
+    "node_count": 4, "cards_per_node": 8, "total_cards": 32,
+    "layout": "2P2D", "tensor_parallel_size": 8, "data_parallel_size": 2,
+    "interpretation": "Two TP8 replicas in each of the P and D roles; DP2 is per role, not one extra multiplier across all four nodes",
+    "roles": [{"alias": "P0", "role": "prefill", "cards": 8}, {"alias": "P1", "role": "prefill", "cards": 8}, {"alias": "D0", "role": "decode", "cards": 8}, {"alias": "D1", "role": "decode", "cards": 8}],
+    "dp_group_and_router_startup_config": null,
+    "expert_parallel": null, "pipeline_parallel": null,
+    "prefill_context_parallel": null, "decode_context_parallel": null,
+    "transport_channel": null, "transport_sdk": null,
+    "hccl_collectives": "must_validate_separately_from_cache_transport"
+  },
+  "required_scenarios": [
+    {"id": "P0-M01", "name": "GLM52_W4A8C8_load_and_numerics", "acceptance": ["B01", "B03", "B04", "B05"], "status": "pending_intranet"},
+    {"id": "P0-M02", "name": "offline_generation_no_cache", "acceptance": ["B06"], "status": "pending_intranet"},
+    {"id": "P0-M03", "name": "online_streaming_and_cancellation", "acceptance": ["B07", "B08"], "status": "pending_intranet"},
+    {"id": "P0-M04", "name": "MTP_accept_reject_frontier_and_quantized_weights", "acceptance": ["B11", "C06"], "status": "pending_intranet"},
+    {"id": "P0-M05", "name": "DSA_shared_indexer_and_unequal_groups_C8_data_plus_scales", "acceptance": ["C02", "C03", "C05"], "status": "pending_intranet"},
+    {"id": "P0-M06", "name": "CPU_offload_cold_hot_shared_cache", "acceptance": ["C01", "C04", "C06"], "status": "pending_intranet"},
+    {"id": "P0-M07", "name": "TP8_DP2_2P2D_cross_instance_RemoteFill", "acceptance": ["B09", "C08", "C13"], "status": "pending_intranet"},
+    {"id": "P0-M08", "name": "checkpoint_preemption_cancellation_and_paired_restart", "acceptance": ["C07", "C09", "C12"], "status": "pending_intranet"},
+    {"id": "P0-M09", "name": "eager_ACL_graph_MTP_DSA_callbacks", "acceptance": ["B10", "B11", "C10"], "status": "pending_intranet"},
+    {"id": "P0-M10", "name": "legacy_PD_P2P_non_layerwise_and_rejection_contract", "acceptance": ["C11"], "status": "pending_profile_selection_not_waived"},
+    {"id": "P0-M11", "name": "performance_and_soak_baseline", "acceptance": ["section_6"], "status": "pending_intranet"}
+  ],
+  "source_presence_is_not_runtime_support": true,
+  "scope_overrides_pre_narrowing_registry_dispositions": true
+}
