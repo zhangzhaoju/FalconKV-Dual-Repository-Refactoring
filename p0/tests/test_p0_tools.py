@@ -4,6 +4,7 @@
 import argparse
 import ast
 import hashlib
+import io
 import json
 from pathlib import Path
 import sys
@@ -19,7 +20,12 @@ sys.path.insert(0, str(P0 / "tools"))
 
 # This is an unpackaged audit toolkit, loaded only after adding its local path.
 from build_review import class_contracts, disposition  # noqa: E402
-from collect_intranet_env import collect, evaluate_versions, model_metadata  # noqa: E402
+from collect_intranet_env import (  # noqa: E402
+    MAX_CONFIG_BYTES,
+    collect,
+    evaluate_versions,
+    model_metadata,
+)
 from run_host_checks import junit_counts  # noqa: E402
 from source_inventory import PythonInventory, model_registry, write_json  # noqa: E402
 
@@ -132,6 +138,85 @@ class EnvironmentTests(unittest.TestCase):
     def test_model_alias_requires_local_directory(self) -> None:
         with self.assertRaises(ValueError):
             model_metadata("glm52=https://example.invalid/model")
+
+    def test_large_quantization_and_index_metadata_are_hashed_without_parsing(
+        self,
+    ) -> None:
+        # Match the 17,224,106-byte quantization description reported in the intranet.
+        data = b"{}" + b" " * (17_224_106 - 2)
+        expected_hash = hashlib.sha256(data).hexdigest()
+        config = b'{"architectures": ["GlmMoeDsaForCausalLM"]}'
+        for name in ("quant_model_description.json", "model.safetensors.index.json"):
+            with (
+                self.subTest(name=name),
+                tempfile.TemporaryDirectory(prefix="p0-large-metadata-") as directory,
+            ):
+                root = Path(directory)
+                (root / "config.json").write_bytes(config)
+                (root / name).write_bytes(data)
+                with (
+                    patch.object(
+                        Path,
+                        "read_bytes",
+                        side_effect=AssertionError("Metadata must be streamed"),
+                    ),
+                    patch("collect_intranet_env.json.loads", wraps=json.loads) as loads,
+                ):
+                    result = model_metadata("glm52=" + directory)
+                loads.assert_called_once_with(config)
+                self.assertEqual(result["architectures"], ["GlmMoeDsaForCausalLM"])
+                self.assertEqual(
+                    result["metadata_files"][1],
+                    {"file": name, "size_bytes": len(data), "sha256": expected_hash},
+                )
+                self.assertFalse(result["runtime_verified"])
+
+    def test_metadata_reads_are_bounded_and_include_final_partial_chunk(self) -> None:
+        data = b'{"synthetic": 42}'
+        read_sizes = []
+        test = self
+
+        class BoundedReader(io.BytesIO):
+            def read(self, size: int = -1) -> bytes:
+                test.assertGreater(size, 0)
+                test.assertLessEqual(size, 8)
+                read_sizes.append(size)
+                return super().read(size)
+
+        with tempfile.TemporaryDirectory(prefix="p0-chunked-metadata-") as directory:
+            (Path(directory) / "quant_model_description.json").touch()
+            with (
+                patch("collect_intranet_env.HASH_CHUNK_BYTES", 8),
+                patch.object(Path, "open", return_value=BoundedReader(data)),
+            ):
+                result = model_metadata("glm52=" + directory)
+        self.assertGreater(len(read_sizes), 2)
+        self.assertEqual(result["metadata_files"][0]["size_bytes"], len(data))
+        self.assertEqual(
+            result["metadata_files"][0]["sha256"], hashlib.sha256(data).hexdigest()
+        )
+
+    def test_config_json_parsing_limit_is_still_enforced(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="p0-large-config-") as directory:
+            with (Path(directory) / "config.json").open("wb") as stream:
+                stream.truncate(MAX_CONFIG_BYTES + 1)
+            with patch("collect_intranet_env.json.loads") as loads:
+                with self.assertRaisesRegex(
+                    ValueError, r"Unexpectedly large config file: glm52/config\.json"
+                ):
+                    model_metadata("glm52=" + directory)
+            loads.assert_not_called()
+
+    def test_config_json_at_parsing_limit_is_accepted(self) -> None:
+        data = b"{}      "
+        with tempfile.TemporaryDirectory(prefix="p0-config-limit-") as directory:
+            (Path(directory) / "config.json").write_bytes(data)
+            with patch("collect_intranet_env.MAX_CONFIG_BYTES", len(data)):
+                result = model_metadata("glm52=" + directory)
+        self.assertEqual(result["metadata_files"][0]["size_bytes"], len(data))
+        self.assertEqual(
+            result["metadata_files"][0]["sha256"], hashlib.sha256(data).hexdigest()
+        )
 
 
 class ScopeAndBuildTests(unittest.TestCase):

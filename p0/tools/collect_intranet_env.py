@@ -23,6 +23,8 @@ import sysconfig
 
 
 EXPECTED = {"torch": "2.9.0", "torch-npu": "2.9.0"}
+HASH_CHUNK_BYTES = 1024 * 1024
+MAX_CONFIG_BYTES = 16 * 1024 * 1024
 PROXY_KEYS = (
     "HTTP_PROXY",
     "HTTPS_PROXY",
@@ -134,7 +136,7 @@ def toolkit_inventory(root: Path) -> dict:
 
 
 def model_metadata(spec: str) -> dict:
-    """Hash local small model metadata; never load weights, tokenizers or remote code."""
+    """Stream metadata hashes and parse only bounded config.json, never model code."""
     alias, separator, raw_path = spec.partition("=")
     if not separator or not alias or not raw_path:
         raise ValueError("--model must be alias=/local/model/path")
@@ -154,18 +156,30 @@ def model_metadata(spec: str) -> dict:
         path = root / name
         if not path.is_file():
             continue
-        if path.stat().st_size > 16 * 1024 * 1024:
-            raise ValueError(f"Unexpectedly large metadata file: {alias}/{name}")
-        data = path.read_bytes()
+        is_config = name == "config.json"
+        digest = hashlib.sha256()
+        size_bytes = 0
+        config_data = bytearray()
+        with path.open("rb") as stream:
+            while chunk := stream.read(HASH_CHUNK_BYTES):
+                size_bytes += len(chunk)
+                if is_config:
+                    if size_bytes > MAX_CONFIG_BYTES:
+                        raise ValueError(
+                            f"Unexpectedly large config file: {alias}/{name} "
+                            f"(JSON parsing limit: {MAX_CONFIG_BYTES} bytes)"
+                        )
+                    config_data.extend(chunk)
+                digest.update(chunk)
         files.append(
             {
                 "file": name,
-                "size_bytes": len(data),
-                "sha256": hashlib.sha256(data).hexdigest(),
+                "size_bytes": size_bytes,
+                "sha256": digest.hexdigest(),
             }
         )
-        if name == "config.json":
-            config = json.loads(data)
+        if is_config:
+            config = json.loads(config_data)
     return {
         "alias": alias,
         "local_path": str(root),

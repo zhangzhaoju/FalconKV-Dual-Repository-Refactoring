@@ -25,6 +25,8 @@ python -B design/p0/tools/collect_intranet_env.py \
 
 四个节点分别采集，输出名称改为 `env-P0.json`、`env-P1.json`、`env-D0.json`、`env-D1.json`，并记录节点角色。该命令不联网、不安装、不构建、不加载权重、不执行 remote code；显式的两个 probe 开关会导入已安装 torch/torch_npu、查询设备可用性并运行 `npu-smi info`。不带 probe 时只读包元数据，不能视为运行时验证。
 
+模型元数据按 1 MiB 分块计算 SHA-256，报告仅保存文件名、实际读取字节数和哈希；`quant_model_description.json`、`model.safetensors.index.json` 等仅计算哈希的文件不设 16 MiB 上限，也不解析或保存其内容。只有需要提取字段的 `config.json` 保留 16 MiB 的 JSON 解析上限。旧版脚本因大型量化描述报 `Unexpectedly large metadata file` 时，单独更新采集脚本后重跑原命令即可，不需要修改模型文件；该异常发生在报告创建之前。
+
 报告默认权限为 0600、拒绝覆盖同名文件；代理只记录是否配置，不记录地址/凭据。报告仍可能含本地路径、设备信息和工具输出，属于内网原件，不能未经审核直接外发。软件元数据匹配不等于 CANN/驱动/扩展 ABI 通过。
 
 另请内网补充这些字段（允许使用代号）：
