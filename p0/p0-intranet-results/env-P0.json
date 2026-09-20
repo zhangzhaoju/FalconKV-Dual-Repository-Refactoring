@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-09-20T07:06:55.757769+00:00",
+  "evidence_scope": "intranet_local_original_requires_manual_review_before_export",
+  "network_calls": 0,
+  "builds_or_installs": 0,
+  "python": {
+    "version": "3.11.14",
+    "executable": "/usr/local/python3.11.14/bin/python",
+    "soabi": "cpython-311-aarch64-linux-gnu"
+  },
+  "host": {
+    "os": "Linux",
+    "machine": "aarch64",
+    "kernel": "5.10.0-136.12.0.86.r1526_92.hce2.aarch64",
+    "libc": [
+      "glibc",
+      "2.35"
+    ]
+  },
+  "packages": {
+    "aiofiles": [
+      "25.1.0"
+    ],
+    "aiohappyeyeballs": [
+      "2.6.1"
+    ],
+    "aiohttp": [
+      "3.13.5"
+    ],
+    "aiosignal": [
+      "1.4.0"
+    ],
+    "annotated-doc": [
+      "0.0.4"
+    ],
+    "annotated-types": [
+      "0.7.0"
+    ],
+    "anthropic": [
+      "0.88.0"
+    ],
+    "anyio": [
+      "4.13.0"
+    ],
+    "arctic-inference": [
+      "0.1.1"
+    ],
+    "asc-op-compile-base": [
+      "0.1.0"
+    ],
+    "asc-opc-tool": [
+      "0.1.0"
+    ],
+    "astor": [
+      "0.8.1"
+    ],
+    "attrs": [
+      "26.1.0"
+    ],
+    "audioread": [
+      "3.1.0"
+    ],
+    "auto-tune": [
+      "0.1.0"
+    ],
+    "av": [
+      "17.0.0"
+    ],
+    "blake3": [
+      "1.0.8"
+    ],
+    "blinker": [
+      "1.9.0"
+    ],
+    "cachetools": [
+      "7.0.5"
+    ],
+    "cbor2": [
+      "5.9.0"
+    ],
+    "certifi": [
+      "2026.2.25"
+    ],
+    "cffi": [
+      "2.0.0"
+    ],
+    "charset-normalizer": [
+      "3.4.6"
+    ],
+    "click": [
+      "8.3.1"
+    ],
+    "cloudpickle": [
+      "3.1.2"
+    ],
+    "cmake": [
+      "4.3.1"
+    ],
+    "compressed-tensors": [
+      "0.13.0"
+    ],
+    "cryptography": [
+      "46.0.6"
+    ],
+    "dataflow": [
+      "0.0.1"
+    ],
+    "decorator": [
+      "5.2.1"
+    ],
+    "depyf": [
+      "0.20.0"
+    ],
+    "dill": [
+      "0.4.1"
+    ],
+    "diskcache": [
+      "5.6.3"
+    ],
+    "distro": [
+      "1.9.0"
+    ],
+    "dnspython": [
+      "2.8.0"
+    ],
+    "docstring-parser": [
+      "0.17.0"
+    ],
+    "einops": [
+      "0.8.2"
+    ],
+    "email-validator": [
+      "2.3.0"
+    ],
+    "es-math": [
+      "1.0.0"
+    ],
+    "fastapi": [
+      "0.123.10"
+    ],
+    "fastapi-cli": [
+      "0.0.24"
+    ],
+    "fastapi-cloud-cli": [
+      "0.15.1"
+    ],
+    "fastar": [
+      "0.9.0"
+    ],
+    "filelock": [
+      "3.25.2"
+    ],
+    "flask": [
+      "3.1.3"
+    ],
+    "frozenlist": [
+      "1.8.0"
+    ],
+    "fsspec": [
+      "2026.3.0"
+    ],
+    "ge-py": [
+      "0.0.1"
+    ],
+    "gguf": [
+      "0.18.0"
+    ],
+    "googleapis-common-protos": [
+      "1.73.1"
+    ],
+    "grpcio": [
+      "1.80.0"
+    ],
+    "h11": [
+      "0.16.0"
+    ],
+    "h2": [
+      "4.3.0"
+    ],
+    "hccl": [
+      "0.1.0"
+    ],
+    "hf-xet": [
+      "1.4.3"
+    ],
+    "hpack": [
+      "4.1.0"
+    ],
+    "httpcore": [
+      "1.0.9"
+    ],
+    "httptools": [
+      "0.7.1"
+    ],
+    "httpx": [
+      "0.28.1"
+    ],
+    "httpx-sse": [
+      "0.4.3"
+    ],
+    "huggingface-hub": [
+      "0.36.2"
+    ],
+    "hypercorn": [
+      "0.18.0"
+    ],
+    "hyperframe": [
+      "6.1.0"
+    ],
+    "idna": [
+      "3.11"
+    ],
+    "ijson": [
+      "3.5.0"
+    ],
+    "importlib-metadata": [
+      "8.7.1"
+    ],
+    "interegular": [
+      "0.3.3"
+    ],
+    "itsdangerous": [
+      "2.2.0"
+    ],
+    "jinja2": [
+      "3.1.6"
+    ],
+    "jiter": [
+      "0.13.0"
+    ],
+    "jmespath": [
+      "1.1.0"
+    ],
+    "joblib": [
+      "1.5.3"
+    ],
+    "jsonschema": [
+      "4.26.0"
+    ],
+    "jsonschema-specifications": [
+      "2025.9.1"
+    ],
+    "lark": [
+      "1.2.2"
+    ],
+    "lazy-loader": [
+      "0.5"
+    ],
+    "librosa": [
+      "0.11.0"
+    ],
+    "llguidance": [
+      "1.3.0"
+    ],
+    "llm-datadist": [
+      "0.0.1"
+    ],
+    "llm-datadist-v1": [
+      "0.0.1"
+    ],
+    "llvmlite": [
+      "0.47.0"
+    ],
+    "lm-format-enforcer": [
+      "0.11.3"
+    ],
+    "loguru": [
+      "0.7.3"
+    ],
+    "markdown-it-py": [
+      "4.0.0"
+    ],
+    "markupsafe": [
+      "3.0.3"
+    ],
+    "mcp": [
+      "1.26.0"
+    ],
+    "mdurl": [
+      "0.1.2"
+    ],
+    "mistral-common": [
+      "1.11.0"
+    ],
+    "model-hosting-container-standards": [
+      "0.1.14"
+    ],
+    "modelscope": [
+      "1.35.3"
+    ],
+    "mpmath": [
+      "1.3.0"
+    ],
+    "msgpack": [
+      "1.1.2"
+    ],
+    "msgspec": [
+      "0.20.0"
+    ],
+    "msobjdump": [
+      "0.1.0"
+    ],
+    "mspti": [
+      "0.0.1"
+    ],
+    "multidict": [
+      "6.7.1"
+    ],
+    "networkx": [
+      "3.6.1"
+    ],
+    "ninja": [
+      "1.13.0"
+    ],
+    "numba": [
+      "0.65.0"
+    ],
+    "numpy": [
+      "1.26.4"
+    ],
+    "op-compile-tool": [
+      "0.1.0"
+    ],
+    "op-gen": [
+      "0.1"
+    ],
+    "op-test-frame": [
+      "0.1"
+    ],
+    "opc-tool": [
+      "0.1.0"
+    ],
+    "openai": [
+      "2.24.0"
+    ],
+    "openai-harmony": [
+      "0.0.8"
+    ],
+    "opencv-python-headless": [
+      "4.11.0.86"
+    ],
+    "opentelemetry-api": [
+      "1.40.0"
+    ],
+    "opentelemetry-exporter-otlp": [
+      "1.40.0"
+    ],
+    "opentelemetry-exporter-otlp-proto-common": [
+      "1.40.0"
+    ],
+    "opentelemetry-exporter-otlp-proto-grpc": [
+      "1.40.0"
+    ],
+    "opentelemetry-exporter-otlp-proto-http": [
+      "1.40.0"
+    ],
+    "opentelemetry-proto": [
+      "1.40.0"
+    ],
+    "opentelemetry-sdk": [
+      "1.40.0"
+    ],
+    "opentelemetry-semantic-conventions": [
+      "0.61b0"
+    ],
+    "opentelemetry-semantic-conventions-ai": [
+      "0.5.1"
+    ],
+    "outlines-core": [
+      "0.2.11"
+    ],
+    "packaging": [
+      "26.0"
+    ],
+    "pandas": [
+      "3.0.2"
+    ],
+    "pandas-stubs": [
+      "3.0.0.260204"
+    ],
+    "partial-json-parser": [
+      "0.2.1.1.post7"
+    ],
+    "pillow": [
+      "12.2.0"
+    ],
+    "pip": [
+      "26.0.1"
+    ],
+    "platformdirs": [
+      "4.9.4"
+    ],
+    "pooch": [
+      "1.9.0"
+    ],
+    "priority": [
+      "2.0.0"
+    ],
+    "prometheus-client": [
+      "0.24.1"
+    ],
+    "prometheus-fastapi-instrumentator": [
+      "7.1.0"
+    ],
+    "propcache": [
+      "0.4.1"
+    ],
+    "protobuf": [
+      "6.33.6"
+    ],
+    "psutil": [
+      "7.2.2"
+    ],
+    "py-cpuinfo": [
+      "9.0.0"
+    ],
+    "pybase64": [
+      "1.4.3"
+    ],
+    "pybind11": [
+      "3.0.3"
+    ],
+    "pycountry": [
+      "26.2.16"
+    ],
+    "pycparser": [
+      "3.0"
+    ],
+    "pydantic": [
+      "2.12.5"
+    ],
+    "pydantic-core": [
+      "2.41.5"
+    ],
+    "pydantic-extra-types": [
+      "2.11.1"
+    ],
+    "pydantic-settings": [
+      "2.13.1"
+    ],
+    "pygments": [
+      "2.20.0"
+    ],
+    "pyjwt": [
+      "2.12.1"
+    ],
+    "python-dateutil": [
+      "2.9.0.post0"
+    ],
+    "python-dotenv": [
+      "1.2.2"
+    ],
+    "python-json-logger": [
+      "4.1.0"
+    ],
+    "python-multipart": [
+      "0.0.22"
+    ],
+    "pyyaml": [
+      "6.0.3"
+    ],
+    "pyzmq": [
+      "27.1.0"
+    ],
+    "quart": [
+      "0.20.0"
+    ],
+    "ray": [
+      "2.48.0"
+    ],
+    "referencing": [
+      "0.37.0"
+    ],
+    "regex": [
+      "2026.3.32"
+    ],
+    "requests": [
+      "2.33.1"
+    ],
+    "rich": [
+      "14.3.3"
+    ],
+    "rich-toolkit": [
+      "0.19.7"
+    ],
+    "rignore": [
+      "0.7.6"
+    ],
+    "rpds-py": [
+      "0.30.0"
+    ],
+    "safetensors": [
+      "0.7.0"
+    ],
+    "schedule-search": [
+      "0.0.1"
+    ],
+    "scikit-learn": [
+      "1.8.0"
+    ],
+    "scipy": [
+      "1.17.1"
+    ],
+    "sentencepiece": [
+      "0.2.1"
+    ],
+    "sentry-sdk": [
+      "2.57.0"
+    ],
+    "setproctitle": [
+      "1.3.7"
+    ],
+    "setuptools": [
+      "79.0.1"
+    ],
+    "setuptools-scm": [
+      "10.0.5"
+    ],
+    "shellingham": [
+      "1.5.4"
+    ],
+    "show-kernel-debug-data": [
+      "0.1.0"
+    ],
+    "six": [
+      "1.17.0"
+    ],
+    "sniffio": [
+      "1.3.1"
+    ],
+    "soundfile": [
+      "0.13.1"
+    ],
+    "soxr": [
+      "1.0.0"
+    ],
+    "sse-starlette": [
+      "3.3.4"
+    ],
+    "starlette": [
+      "0.50.0"
+    ],
+    "superkernel": [
+      "0.1.0"
+    ],
+    "supervisor": [
+      "4.3.0"
+    ],
+    "sympy": [
+      "1.14.0"
+    ],
+    "te": [
+      "0.4.0"
+    ],
+    "threadpoolctl": [
+      "3.6.0"
+    ],
+    "tiktoken": [
+      "0.12.0"
+    ],
+    "tokenizers": [
+      "0.22.2"
+    ],
+    "torch": [
+      "2.9.0+cpu"
+    ],
+    "torch-npu": [
+      "2.9.0.post1+gitee7ba04"
+    ],
+    "torchaudio": [
+      "2.9.0"
+    ],
+    "torchvision": [
+      "0.24.0"
+    ],
+    "tqdm": [
+      "4.67.3"
+    ],
+    "transformers": [
+      "4.57.6"
+    ],
+    "triton-ascend": [
+      "3.2.0.dev20260322"
+    ],
+    "typer": [
+      "0.24.1"
+    ],
+    "typing-extensions": [
+      "4.15.0"
+    ],
+    "typing-inspection": [
+      "0.4.2"
+    ],
+    "urllib3": [
+      "2.6.3"
+    ],
+    "uvicorn": [
+      "0.42.0"
+    ],
+    "uvloop": [
+      "0.22.1"
+    ],
+    "vcs-versioning": [
+      "1.1.1"
+    ],
+    "vllm": [
+      "0.18.0+empty"
+    ],
+    "vllm-ascend": [
+      "0.18.0rc1"
+    ],
+    "watchfiles": [
+      "1.1.1"
+    ],
+    "websockets": [
+      "16.0"
+    ],
+    "werkzeug": [
+      "3.1.7"
+    ],
+    "wheel": [
+      "0.46.3"
+    ],
+    "wsproto": [
+      "1.3.2"
+    ],
+    "xgrammar": [
+      "0.1.33"
+    ],
+    "yarl": [
+      "1.23.0"
+    ],
+    "zipp": [
+      "3.23.0"
+    ]
+  },
+  "version_checks": [
+    {
+      "package": "torch",
+      "expected": "2.9.0",
+      "actual": [
+        "2.9.0+cpu"
+      ],
+      "status": "metadata_matches",
+      "runtime_abi_verified": false
+    },
+    {
+      "package": "torch-npu",
+      "expected": "2.9.0",
+      "actual": [
+        "2.9.0.post1+gitee7ba04"
+      ],
+      "status": "needs_review",
+      "runtime_abi_verified": false
+    }
+  ],
+  "proxy_configuration_presence_only": {
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false,
+    "ALL_PROXY": false,
+    "NO_PROXY": false,
+    "http_proxy": false,
+    "https_proxy": false,
+    "all_proxy": false,
+    "no_proxy": false
+  },
+  "ca_configuration_presence_only": {
+    "REQUESTS_CA_BUNDLE": false,
+    "SSL_CERT_FILE": false,
+    "CURL_CA_BUNDLE": false
+  },
+  "network_policy": {
+    "proxy_routing_verified": false,
+    "external_llm_access_verified_disabled": false,
+    "note": "Operator must review clients, CI, egress policy and NO_PROXY; no connection probes performed"
+  },
+  "cann": {
+    "requested_version": "8.5.1",
+    "root": "/usr/local/Ascend/cann-8.5.1",
+    "metadata": [
+      {
+        "path": "/usr/local/Ascend/cann-8.5.1/aarch64-linux/ascend_toolkit_install.info",
+        "version_fields": [
+          "version=8.5.1"
+        ],
+        "sha256": "c43a7a2e011fdfedaa05dce3e8a194abf47df6133fe83e3656c9a257bda192e2"
+      }
+    ],
+    "hixl_hcomm_hccl_sdk_abi_status": "requires_intranet_verification",
+    "driver_firmware_status": "requires_operator_record"
+  },
+  "tools": {
+    "cmake": {
+      "argv": [
+        "cmake",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "cmake version 4.3.1\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "stderr": ""
+    },
+    "ninja": {
+      "argv": [
+        "ninja",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "1.13.0.git.kitware.jobserver-pipe-1\n",
+      "stderr": ""
+    },
+    "c++": {
+      "argv": [
+        "c++",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    "git": {
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "git version 2.34.1\n",
+      "stderr": ""
+    }
+  },
+  "runtime_probe": {
+    "argv": [
+      "/usr/local/python3.11.14/bin/python",
+      "-B",
+      "-c",
+      "\nimport json\nimport torch\nimport torch_npu\nprint(json.dumps({\n    'torch_version': str(torch.__version__),\n    'torch_file': torch.__file__,\n    'torch_npu_version': str(torch_npu.__version__),\n    'torch_npu_file': torch_npu.__file__,\n    'cxx11_abi': bool(torch._C._GLIBCXX_USE_CXX11_ABI),\n    'npu_available': bool(torch.npu.is_available()),\n    'npu_count': int(torch.npu.device_count()),\n}))\n"
+    ],
+    "returncode": 0,
+    "stdout": "{\"torch_version\": \"2.9.0+cpu\", \"torch_file\": \"/usr/local/python3.11.14/lib/python3.11/site-packages/torch/__init__.py\", \"torch_npu_version\": \"2.9.0.post1+gitee7ba04\", \"torch_npu_file\": \"/usr/local/python3.11.14/lib/python3.11/site-packages/torch_npu/__init__.py\", \"cxx11_abi\": true, \"npu_available\": true, \"npu_count\": 8}\n",
+    "stderr": "",
+    "parsed": {
+      "torch_version": "2.9.0+cpu",
+      "torch_file": "/usr/local/python3.11.14/lib/python3.11/site-packages/torch/__init__.py",
+      "torch_npu_version": "2.9.0.post1+gitee7ba04",
+      "torch_npu_file": "/usr/local/python3.11.14/lib/python3.11/site-packages/torch_npu/__init__.py",
+      "cxx11_abi": true,
+      "npu_available": true,
+      "npu_count": 8
+    }
+  },
+  "npu_smi": {
+    "argv": [
+      "npu-smi",
+      "info"
+    ],
+    "returncode": 0,
+    "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 93.2        39                0    / 0             |\n| 0                         | 0000:C1:00.0  | 0           0    / 0          56283/ 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 95.3        41                0    / 0             |\n| 0                         | 0000:01:00.0  | 0           0    / 0          56278/ 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 90.8        39                0    / 0             |\n| 0                         | 0000:C2:00.0  | 0           0    / 0          56280/ 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 89.8        41                0    / 0             |\n| 0                         | 0000:02:00.0  | 0           0    / 0          56283/ 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 97.9        40                0    / 0             |\n| 0                         | 0000:81:00.0  | 0           0    / 0          56322/ 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 92.0        41                0    / 0             |\n| 0                         | 0000:41:00.0  | 0           0    / 0          56322/ 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 93.2        39                0    / 0             |\n| 0                         | 0000:82:00.0  | 0           0    / 0          56319/ 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 88.9        40                0    / 0             |\n| 0                         | 0000:42:00.0  | 0           0    / 0          56316/ 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| 0       0                 | 2427882       |                          | 52962                   |\n+===========================+===============+====================================================+\n| 1       0                 | 2428113       |                          | 52962                   |\n+===========================+===============+====================================================+\n| 2       0                 | 2428416       |                          | 52962                   |\n+===========================+===============+====================================================+\n| 3       0                 | 2428729       |                          | 52966                   |\n+===========================+===============+====================================================+\n| 4       0                 | 2427881       |                          | 53002                   |\n+===========================+===============+====================================================+\n| 5       0                 | 2428110       |                          | 53006                   |\n+===========================+===============+====================================================+\n| 6       0                 | 2428413       |                          | 53002                   |\n+===========================+===============+====================================================+\n| 7       0                 | 2428717       |                          | 53002                   |\n+===========================+===============+====================================================+\n",
+    "stderr": ""
+  },
+  "models": [
+    {
+      "alias": "glm52",
+      "local_path": "/workspace/models/GLM-5.2-w4a8c8-0723",
+      "metadata_files": [
+        {
+          "file": "config.json",
+          "size_bytes": 3699,
+          "sha256": "817f5fb39ca5d4c4b5648de89ca00deaea7537d8c2f130172a459252a05c1073"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size_bytes": 761,
+          "sha256": "98b1271574f41abf89427ae2dda030d94dc9478f0edc5a8bd240db213c6fd5fc"
+        },
+        {
+          "file": "generation_config.json",
+          "size_bytes": 194,
+          "sha256": "ac76b43d8683d3b930126870fc8be73d8679308fe752fa1f381096d8354f6a55"
+        },
+        {
+          "file": "quant_model_description.json",
+          "size_bytes": 17224106,
+          "sha256": "a8242dd24f993b914ce567d6850ac86f044651d098a0b463a83ce63623c51985"
+        }
+      ],
+      "architectures": [
+        "GlmMoeDsaForCausalLM"
+      ],
+      "model_type": "glm_moe_dsa",
+      "dtype": "bfloat16",
+      "quantization_config_present": false,
+      "num_hidden_layers": 78,
+      "indexer_types_present": true,
+      "weight_revision_and_hashes": "must_be_filled_from_approved_artifact_manifest",
+      "runtime_verified": false
+    }
+  ],
+  "operator_fields_pending": [
+    "node_count",
+    "cards_per_node",
+    "parallelism",
+    "driver",
+    "firmware",
+    "communication_libraries",
+    "container_digest",
+    "approved_dependency_sources",
+    "network_policy_review",
+    "checkpoint_revision",
+    "quantization_profile"
+  ],
+  "p0_gate": "pending_intranet_review_and_baseline_tests"
+}
