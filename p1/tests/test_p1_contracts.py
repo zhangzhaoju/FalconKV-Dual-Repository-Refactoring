@@ -17,7 +17,7 @@ from unittest.mock import patch
 import tomllib
 
 P1 = Path(__file__).resolve().parents[1]
-WORKSPACE = Path(os.environ.get("P1_SOURCE_WORKSPACE", P1.parents[1] / "p1-worktrees"))
+WORKSPACE = Path(os.environ.get("P1_SOURCE_WORKSPACE", P1.parents[1] / "p1-repos"))
 
 
 def load(path: Path, name: str):

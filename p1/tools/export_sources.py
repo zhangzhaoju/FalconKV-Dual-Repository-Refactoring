@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 """Export ordinary source tarballs, NOT sdist/wheels; never invoke a backend.
 
-Copies the current P1 worktree including uncommitted changes, excluding Git and
+Copies the current P1 source tree including uncommitted changes, excluding Git and
 generated outputs. Intranet materialization is required before compilation.
 """
 
@@ -56,7 +56,7 @@ def export(workspace: Path, output: Path) -> dict:
     for name in ("vllm", "LMCache"):
         root = workspace / name
         if not (root / "p1_build.py").is_file():
-            raise ValueError(f"Not a P1 worktree: {root}")
+            raise ValueError(f"Not a P1 source tree: {root}")
         archive = output / f"{name}-p1-source.tar.gz"
         records = []
         with tarfile.open(archive, "w:gz") as stream:

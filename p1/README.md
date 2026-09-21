@@ -17,12 +17,12 @@
 
 ## 2. 已实施的源码变更
 
-两个独立 P1 worktree 位于工作区根目录的 `p1-worktrees/`，各使用 `p1/ascend-unified` 分支。原始四个 checkout 保留；未在其上切分支、改文件、停止服务或执行安装。
+当前 P1 活动源码位于工作区根目录的 `p1-repos/`：两个仓各有独立 `.git`，使用 `main` 分支，`origin` 分别指向新的 `vllm-dual` / `LMCache-dual` 仓库。初始导入使用的 `p1-worktrees/` 已在核对提交、文件树和额外文件后移除，不再作为开发入口。原始四个 checkout、原重构分支和备份继续保留；没有切换原仓分支、修改其源码或远端、停止服务或执行安装。详见 [工作区迁移记录](workspace-migration.md)。
 
 | P1 仓库 | 唯一 distribution | 暂时保留的 Python namespace |
 | --- | --- | --- |
-| [vllm](../../p1-worktrees/vllm/) | vllm 0.18.0+ascend.p1 | vllm、vllm_ascend |
-| [LMCache](../../p1-worktrees/LMCache/) | lmcache 0.4.3+ascend.p1 | lmcache、lmcache_ascend |
+| [vllm](../../p1-repos/vllm/) | vllm 0.18.0+ascend.p1 | vllm、vllm_ascend |
+| [LMCache](../../p1-repos/LMCache/) | lmcache 0.4.3+ascend.p1 | lmcache、lmcache_ascend |
 
 版本号是 P1 内部交付标识，不表示升级到了另一个上游分支；源码仍来自下表固定提交。Ascend namespace 源码位于各仓 `ascend/` 下，通过唯一根构建入口映射到 wheel 顶层。不需要再安装两个 Ascend distribution。
 
@@ -45,11 +45,22 @@
 | LMCache | `802e4167afa75c1601b9f9d8619672a686b416bd` |
 | LMCache-Ascend | `d959c7a9640681e414dc9dbca644627af67a51e8` |
 
-上述提交包含 P0 独立修复，与最初设计调研 HEAD 不同。四个 bundle 保存在 `baseline/*.bundle`（Git 忽略的大文件），已执行 bundle verify；其 commit/tree/SHA-256 及来源映射记录在清单中。本轮没有创建 P1 提交；源码交接以配对归档 SHA-256 固定，不将基线 HEAD 当作改造后版本。
+上述提交包含 P0 独立修复，与最初设计调研 HEAD 不同。四个 bundle 保存在 `baseline/*.bundle`（Git 忽略的大文件），已执行 bundle verify；其 commit/tree/SHA-256 及来源映射记录在清单中。`source-01` 归档制作时尚未创建 P1 提交；其后 P1 改动已提交，并于 2026-09-21 推送到下面两个新仓。不能将原四仓输入 HEAD 当作改造后的交付版本。
+
+| 新仓（`main`） | 本批已发布的 P1 提交 |
+| --- | --- |
+| [vllm-dual](https://github.com/zhangzhaoju/vllm-dual) | `b2025e53890eb9b65db3cfacba8e0237bea9654d` |
+| [LMCache-dual](https://github.com/zhangzhaoju/LMCache-dual) | `5b09009c5264cb61d204b7660ae400b4392db46a` |
+
+两个新仓当前为公开仓，GitHub Actions 按用户选择保持开启；GitHub 工作流结果不替代内网验收。`design` 文档及内网报告没有随两个代码仓推送。
+
+Git 快照未包含被 `.claude/` 忽略规则排除的 `vllm/ascend/.claude/README.md`（非运行时说明）。删除旧 worktree 前已将其逐字保留到 `p1-repos`，与原 donor 文件哈希一致；它仍未进入 Git。内网首次 Git clone 后须按 [内网步骤](intranet-next-steps.md) 从固定 donor 提交恢复，再做严格源码审计；不得忽略缺失项或修改历史来源清单来绕过检查。`source-01` 普通归档已包含该文件。
 
 本机缺 CATLASS 和 kvcache-ops 载荷，只有固定 gitlink。内网旧仓已有相应提交，可使用 [materialize_submodules.py](tools/materialize_submodules.py) 复制已核实的源码；不得声称本机普通归档已经包含完整构建材料。
 
 ## 4. 检查结果及局限
+
+下表及 `results/validation-summary.json` 记录初始 `source-01` 批次，保留当时的 worktree 路径和“尚未创建提交”状态，不能当作当前工作区定位。目录移除后的复核单列在 [迁移记录](workspace-migration.md)，不改写旧 host/交付报告。
 
 | 检查 | 本轮结果 |
 | --- | --- |
@@ -64,6 +75,8 @@
 证据：[源码审计](results/source-audit-01.json)、[约束测试](results/contracts-01.log)、[迁移后 host](results/host-local-01/summary.json)、[原仓对照](results/host-original-control-01/summary.json)。普通交付包解包后也通过 [源码审计](results/export-audit-01.json) 和 [17 项约束测试](results/export-contracts-01.log)；这不是 sdist/wheel 构建测试。
 
 已生成 [source-01 交付目录](deliveries/source-01/)，其中两份普通源码归档约 36 MiB / 4.3 MiB，SHA256SUMS 核对通过；仍需内网补齐固定子模块。汇总见 [检查记录](results/validation-summary.json)。后续批次保留新目录，不覆盖本批或 P0 报告。
+
+当前约束测试默认读取 `p1-repos/`；内网或临时解包目录使用 `P1_SOURCE_WORKSPACE` 覆盖。审计、普通源码导出和 host 检查均显式传入 `--workspace p1-repos`。`tools/prepare_worktrees.py` 仅保留作初始导入与来源清单的历史实现，不是日常恢复/准备命令。
 
 ## 5. 下一步与出口
 

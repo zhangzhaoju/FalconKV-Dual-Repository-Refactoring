@@ -14,7 +14,7 @@
 
 实施输入包括：批准的功能范围、实际模型/权重清单、硬件和依赖 profile、可运行的离线/在线/缓存启动配置、验收负载以及接受的性能波动门槛。没有 NPU 和模型时可以推进代码整理及静态检查，但不能宣告运行等价或完成生产交付。
 
-建议在两个主体仓的重构分支/隔离 worktree 上实施，保留四个原始快照作为对照。最终只交付两个活动仓库；阶段中的原始 checkout 和离线备份不构成新增产品仓。
+当前在 `p1-repos/vllm` 和 `p1-repos/LMCache` 两个独立 Git 仓库中实施，分别只配置新的 `vllm-dual` / `LMCache-dual` 远端，不与原仓共享 `.git`。后续改动在这两个仓的 `main` 或由其创建的工作分支完成。初始导入使用的 `p1-worktrees/` 已移除，不能再作为开发、测试或打包入口；核对与恢复说明见 [工作区迁移记录](p1/workspace-migration.md)。保留四个原始快照作为对照，阶段中的原始 checkout 和离线备份不构成新增产品仓。
 
 ### 1.1 本机与内网协作
 
@@ -102,7 +102,7 @@ python -m pip --disable-pip-version-check wheel --no-index --no-deps --no-build-
 
 ## 4. P1：先合仓和构建
 
-1. 以当前 `vllm`、`LMCache` 各自分支建重构分支。
+1. 初始阶段以 `vllm`、`LMCache` 当前分支创建重构分支；该导入已完成并发布到两个新仓，后续从 `p1-repos/` 继续，不重新执行初始 worktree 创建脚本。
 2. 将两个 Ascend 当前源码树导入相应主体仓，保留版权来源；临时允许一个 wheel 中包含主体和 `_ascend` 两个命名空间。
 3. 每仓合并为唯一 packaging/build 入口，统一版本、requirements、CMake 目标和包资源。迁入自定义 op 的配置、头文件、动态库和安装路径。
 4. 建立复用内网 torch 2.9.0 的 NPU 构建 profile，停止默认安装 GPU 专用依赖；允许目标依赖按锁定清单从内网源或经代理获取，不能依靠下载 CUDA wheel 解决缺失符号。

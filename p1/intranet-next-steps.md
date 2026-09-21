@@ -2,34 +2,79 @@
 
 适用：已授权的 P1 首批双仓源码，不适用于原四仓的旧安装命令。所有编译、sdist/wheel、安装和 NPU 验证都在内网完成；本机仅提供源码和审计工具。当前服务继续保留，基线由其他开发人员验证后归档。
 
-## 1. 交付及解包
+## 1. 交付与源码目录
 
-交付以下材料：`vllm-p1-source.tar.gz`、`LMCache-p1-source.tar.gz`、`SHA256SUMS`、`delivery-manifest.json`，以及整个 `design/p1`（可排除 bundle、大型 deliveries 目录）。不要直接复制 worktree 的 .git 文件，它指向本机原仓。
+本机开发入口已改为 `p1-repos/vllm` 和 `p1-repos/LMCache` 两个独立仓，旧 `p1-worktrees/` 已移除。内网可选择 **Git 拉取**或**普通源码归档**，两条路线不要混用同一目标目录。不重新执行 `prepare_worktrees.py`，不修改或覆盖原四仓。
 
-本批普通源码包已经生成在 `design/p1/deliveries/source-01/`，可直接上传，无需重跑。以下记录生成方式；后续源码有变更时改用新的输出批次名，工具拒绝覆盖已有目录。这不是调用 backend 的 sdist：
+两条路线都需要单独同步本次更新后的整个 `design/p1`（包含 `tools/`、`tests/`、`profile.json`、`baseline/source-manifest.json`；可排除 bundle、大型 deliveries 目录）。这些工具不在两个新代码仓中，不要假设 Git clone 后自然存在。内网报告原件仍留在内网，不因代码仓公开而公开上传。
 
-```bash
-python3 -B design/p1/tools/export_sources.py \
-  --workspace p1-worktrees --output design/p1/deliveries/source-01
-```
-
-内网将材料放在专门的交付目录，以其为当前目录执行：
+先在内网建立新的验证目录；使用归档路线时，以已上传归档所在目录为当前目录：
 
 ```bash
 set -euo pipefail
-sha256sum --check SHA256SUMS
 P1_RUN=$(mktemp -d /workspace/p1-validation.XXXXXXXX)
 export P1_RUN
 mkdir "$P1_RUN/source"
-tar -xzf vllm-p1-source.tar.gz -C "$P1_RUN/source"
-tar -xzf LMCache-p1-source.tar.gz -C "$P1_RUN/source"
 export P1_SOURCE_WORKSPACE="$P1_RUN/source"
 export P1_TOOLS=/workspace/zzj/design/p1/tools
 ```
 
 将 P1_TOOLS 改成实际上传路径；后续命令使用同一个 shell。原仓路径仍按 `/workspace/zzj/{vllm,vllm-ascend,LMCache,LMCache-Ascend}` 举例，不在其下安装或覆盖文件。P1_RUN 是全新目录。
 
+### 1.1 Git 拉取（推荐，经允许的 proxy）
+
+以下固定到本批已发布的两个 P1 提交，不把未来变化的 `main` 直接当作本批基线。仅对新建验证副本使用 detached HEAD；本机日常开发仍在 `p1-repos` 的 `main` 或工作分支。
+
+```bash
+git clone --single-branch --branch main --no-tags --no-recurse-submodules \
+  https://github.com/zhangzhaoju/vllm-dual.git "$P1_SOURCE_WORKSPACE/vllm"
+git clone --single-branch --branch main --no-tags --no-recurse-submodules \
+  https://github.com/zhangzhaoju/LMCache-dual.git "$P1_SOURCE_WORKSPACE/LMCache"
+git -C "$P1_SOURCE_WORKSPACE/vllm" switch --detach \
+  b2025e53890eb9b65db3cfacba8e0237bea9654d
+git -C "$P1_SOURCE_WORKSPACE/LMCache" switch --detach \
+  5b09009c5264cb61d204b7660ae400b4392db46a
+test "$(git -C "$P1_SOURCE_WORKSPACE/vllm" rev-parse HEAD)" = \
+  b2025e53890eb9b65db3cfacba8e0237bea9654d
+test "$(git -C "$P1_SOURCE_WORKSPACE/LMCache" rev-parse HEAD)" = \
+  5b09009c5264cb61d204b7660ae400b4392db46a
+```
+
+不要加 `--recurse-submodules`，也不要先运行 `git submodule update`：第 2 节复用内网原仓的固定材料，填充工具拒绝覆盖非空子模块目录。按内网策略预先配置代理与 CA；代理失败时停止，不回退公网直连。
+
+### 1.2 普通源码归档（可选，不执行 1.1）
+
+原 `design/p1/deliveries/source-01/` 仍可作为已冻结的初始交付，不覆盖它。后续需要新包时，在本机工作区根目录核对 `p1-repos` 的改动与源码审计后，使用全新批次名，例如：
+
+```bash
+python3 -B design/p1/tools/export_sources.py \
+  --workspace p1-repos --output design/p1/deliveries/source-02
+```
+
+导出工具包含当前工作目录中未提交的源码，不等同于 `git archive HEAD`；打包前检查待交付内容。该命令只是普通源码打包，不调用 build backend，不能称为 sdist/wheel。若 `source-02` 已存在，改用下一批次，不覆盖旧包。
+
+上传两份源码包及 `SHA256SUMS`、`delivery-manifest.json`；内网在该批交付目录中执行：
+
+```bash
+sha256sum --check SHA256SUMS
+tar -xzf vllm-p1-source.tar.gz -C "$P1_RUN/source"
+tar -xzf LMCache-p1-source.tar.gz -C "$P1_RUN/source"
+```
+
 ## 2. 复用固定子模块并检查源码
+
+Git 交付有一项非运行时说明文件需补齐：原 `ascend/.claude/README.md` 被忽略规则排除，未进入 `vllm-dual` 的提交，但历史来源清单要求保留。下面仅在文件不存在时从原 `vllm-ascend` 固定提交提取这一文件，并核对 SHA-256；已有文件不覆盖，内容不符立即停止。普通归档通常已包含该文件，仍执行哈希检查。此步骤不启动或调用任何 AI 服务。
+
+```bash
+P1_DONOR_NOTE="$P1_SOURCE_WORKSPACE/vllm/ascend/.claude/README.md"
+if [ ! -e "$P1_DONOR_NOTE" ]; then
+  git -C /workspace/zzj/vllm-ascend archive \
+    d22f0b7cffde1b6ddb87cb44368e46193e811cc9 .claude/README.md |
+    tar -xf - -C "$P1_SOURCE_WORKSPACE/vllm/ascend"
+fi
+printf '91098ed23a7967cf5942b00d92e51b0a6b515f5f7ed416457afd0c7396b126b0  %s\n' \
+  "$P1_DONOR_NOTE" | sha256sum --check -
+```
 
 该步骤只读取原始内网子模块，向新交付目录写入快照及材料清单，不联网。工具要求原子模块 HEAD 精确匹配且工作区干净；不符合时先由材料负责人核实，不能 reset/checkout 掩盖已有改动。
 

@@ -74,7 +74,7 @@ def audit(workspace: Path, manifest_path: Path) -> dict:
             for path in directory.rglob("*.py"):
                 ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
                 parsed += 1
-        # Worktree audit only. Ordinary delivery archives have no Git dependency.
+        # Git checkout audit only. Ordinary delivery archives have no Git dependency.
         base_changes = None
         if (root / ".git").exists():
             base_changes = subprocess.check_output(

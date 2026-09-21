@@ -1,5 +1,9 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Import the approved Ascend snapshots into isolated P1 worktrees.
+"""Historical one-shot importer for the initial P1 worktrees, not daily setup.
+
+Active development now uses the independent repositories in p1-repos. This
+script is retained to document the initial import and source-manifest format;
+do not rerun it to resume P1 work or recreate the retired linked worktrees.
 
 Mechanical source import only: no framework imports, builds, downloads or
 installs. Original checkouts are never changed. Refuse dirty inputs and existing
