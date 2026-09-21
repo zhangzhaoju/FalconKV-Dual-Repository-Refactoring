@@ -1,0 +1,39 @@
+{
+  "vllm": {
+    "origin": null,
+    "search_locations": [
+      "/workspace/zzj/vllm",
+      "/workspace/zzj/vllm"
+    ]
+  },
+  "vllm_ascend": {
+    "origin": "/workspace/zzj/vllm-ascend/vllm_ascend/__init__.py",
+    "search_locations": [
+      "/workspace/zzj/vllm-ascend/vllm_ascend"
+    ]
+  },
+  "lmcache": {
+    "origin": "/workspace/zzj/LMCache/lmcache/__init__.py",
+    "search_locations": [
+      "/workspace/zzj/LMCache/lmcache"
+    ]
+  },
+  "lmcache_ascend": {
+    "origin": "/workspace/zzj/LMCache-Ascend/lmcache_ascend/__init__.py",
+    "search_locations": [
+      "/workspace/zzj/LMCache-Ascend/lmcache_ascend"
+    ]
+  },
+  "mooncake": {
+    "origin": "/usr/local/Ascend/cann-8.5.1/python/site-packages/mooncake/__init__.py",
+    "search_locations": [
+      "/usr/local/Ascend/cann-8.5.1/python/site-packages/mooncake"
+    ]
+  },
+  "triton": {
+    "origin": "/usr/local/python3.11.14/lib/python3.11/site-packages/triton/__init__.py",
+    "search_locations": [
+      "/usr/local/python3.11.14/lib/python3.11/site-packages/triton"
+    ]
+  }
+}

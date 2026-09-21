@@ -1,0 +1,39 @@
+{
+  "scope": "local_host_ast_and_mock_only",
+  "is_npu_acceptance": false,
+  "collected_at_utc": "2026-09-20T13:04:55.997664+00:00",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "pytest": "9.0.2",
+  "cases": [
+    {
+      "repository": "LMCache-Ascend",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/host-original-control-01/LMCache-Ascend.xml",
+        "tests/standalone/test_checkpoint_dispatch.py",
+        "tests/standalone/test_checkpoint_initialization.py",
+        "tests/standalone/test_checkpoint_prefix_agreement.py",
+        "tests/standalone/test_cold_abort_completion.py"
+      ],
+      "returncode": 1,
+      "counts": {
+        "tests": 26,
+        "failures": 5,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "6435f7ecf8582c597a322f4f993d5da4dd04be39cb6057b1e469a136e8fb3cf3",
+      "elapsed_seconds": 3.222
+    }
+  ]
+}

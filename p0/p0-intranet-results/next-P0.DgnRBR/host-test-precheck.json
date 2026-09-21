@@ -1,0 +1,36 @@
+{
+  "python_executable": "/usr/local/python3.11.14/bin/python",
+  "python_version": "3.11.14 (main, Feb 26 2026, 04:49:14) [GCC 11.4.0]",
+  "pytest": {
+    "distribution_version": "9.1.1",
+    "imported_version": "9.1.1",
+    "module_file": "/usr/local/python3.11.14/lib/python3.11/site-packages/pytest/__init__.py"
+  },
+  "numpy": {
+    "version": "1.26.4",
+    "module_file": "/usr/local/python3.11.14/lib/python3.11/site-packages/numpy/__init__.py"
+  },
+  "torch_distribution_version": "2.9.0+cpu",
+  "pytest_dependencies": [
+    {
+      "requirement": "iniconfig>=1.0.1",
+      "actual": "2.3.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "packaging>=22",
+      "actual": "26.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "pluggy<2,>=1.5",
+      "actual": "1.6.0",
+      "satisfied": true
+    },
+    {
+      "requirement": "pygments>=2.7.2",
+      "actual": "2.20.0",
+      "satisfied": true
+    }
+  ]
+}

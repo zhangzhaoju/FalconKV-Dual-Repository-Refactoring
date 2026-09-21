@@ -1,0 +1,18 @@
+op-compile-tool 0.1.0 requires getopt, which is not installed.
+op-compile-tool 0.1.0 requires inspect, which is not installed.
+op-compile-tool 0.1.0 requires multiprocessing, which is not installed.
+schedule-search 0.0.1 requires absl-py, which is not installed.
+te 0.4.0 requires ml-dtypes, which is not installed.
+te 0.4.0 requires tornado, which is not installed.
+lmcache 20260910.dev15 requires aiofile, which is not installed.
+lmcache 20260910.dev15 requires awscrt, which is not installed.
+lmcache 20260910.dev15 requires cufile-python, which is not installed.
+lmcache 20260910.dev15 requires cupy-cuda12x, which is not installed.
+lmcache 20260910.dev15 requires nixl, which is not installed.
+lmcache 20260910.dev15 requires nvtx, which is not installed.
+lmcache 20260910.dev15 requires opentelemetry-exporter-prometheus, which is not installed.
+lmcache 20260910.dev15 requires redis, which is not installed.
+lmcache 20260910.dev15 requires sortedcontainers, which is not installed.
+vllm-ascend 20260910.dev14+g326dd77b0 has requirement torch-npu==2.9.0, but you have torch-npu 2.9.0.post1+gitee7ba04.
+vllm-ascend 20260910.dev14+g326dd77b0 has requirement triton-ascend==3.2.0, but you have triton-ascend 3.2.0.dev20260322.
+vllm 20260910.dev5+g764dea930.empty has requirement opencv-python-headless>=4.13.0, but you have opencv-python-headless 4.11.0.86.

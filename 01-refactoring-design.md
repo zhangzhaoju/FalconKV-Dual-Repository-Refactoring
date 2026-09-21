@@ -1,6 +1,6 @@
 # Ascend 原生双仓重构设计
 
-状态：设计已审核，2026-09-20 启动 P0，尚未启动合仓/裁剪。当前模型仅 GLM-5.2-w4a8c8；GLM-5.3 为后续扩展。目标环境为 910B3、4 节点每节点 8 卡、2P2D、TP8/DP2，软件及网络约束不变。本文描述目标实现；执行证据见 [P0](p0/README.md)，验收要求见 [03](03-baseline-and-validation.md)。
+状态：设计已审核，用户已授权 P1 合仓与统一构建，尚未大规模裁剪。当前仅 GLM-5.2，GLM-5.3 后续扩展；DSA 双组/MTP 开启、C8 关闭。910B3、4×8 卡、2P2D，覆盖 TP8/DP2 与 TP4/DP4。基线由其他开发人员验证、后续归档，运行验收未宣告通过。本文描述目标实现，实际进展及候选软件版本见 [P1](p1/README.md)，历史见 [P0](p0/README.md)，验收见 [03](03-baseline-and-validation.md)。
 
 ## 1. 目标与边界
 
@@ -156,7 +156,7 @@ DSA layerwise 检索包含主机回调，不能未经验证并入一个连续 FU
 
 其他 DeepSeek、ChatGLM、GLM-4/其他 GLM 版本和 Eagle 专用模型入口均不在当前对外支持范围。MTP 所需 proposer 和共享组件继续保留，但不借此开放额外 draft 模型。GLM-5.3 后续通过新增明确 profile、模型元数据与回归用例扩展；本轮不预置未经验证的 GLM-5.3 别名或 fallback。
 
-W4A8C8 不能仅依据名称设为一个统一 dtype。P0 需核实量化提供方、逐层量化/回退规则、MTP 权重格式，以及 latent/index 的 C8 数据、scale、布局和跨实例传输语义。当前源码中存在 W4A8_DYNAMIC、KV C8 和 sparse C8 路径，并不证明它们组合在该 checkpoint 与 910B3 上已经可用。
+W4A8C8 是现有权重标签，不能据此决定运行时 cache dtype。最新配置明确 C8 关闭，继续核实权重量化提供方、逐层回退、MTP 权重，以及实际非 C8 latent/index 的 dtype、布局和传输语义。权重和 C8 实现在 P1 不改写；C8-on 不再是本轮验收前提，后续是否删除其不可达代码由 P4 依赖闭包决定。
 
 白名单同时作用于 CLI、离线构造、模型加载器、registry、`model_impl` fallback 和 draft model 检查。关闭可绕过范围约束的通用 Transformers/TerraTorch 执行 fallback 与外部模型注册入口；保留 Transformers 的 config/tokenizer/权重辅助功能。若目标 checkpoint 的 config/tokenizer 必须使用 remote code，按固定版本和明确用途处理，不能顺带启用任意远程模型实现。
 

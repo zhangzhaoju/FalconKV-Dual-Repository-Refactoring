@@ -1,0 +1,55 @@
+{
+  "scope": "source_only_not_build_or_runtime",
+  "repositories": [
+    {
+      "repository": "vllm",
+      "donor_commit": "d22f0b7cffde1b6ddb87cb44368e46193e811cc9",
+      "unchanged_donor_files": 1521,
+      "intentional_adaptations": [
+        "ascend/csrc/build_aclnn.sh",
+        "ascend/tests/standalone/test_connector_control_idle.py",
+        "ascend/tests/standalone/test_mc2_recovery.py"
+      ],
+      "missing_donor_files": [],
+      "base_production_changes": null,
+      "parsed_runtime_python_files": 1778,
+      "submodules": [
+        {
+          "path": "ascend/csrc/third_party/catlass",
+          "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641",
+          "payload_present": false
+        }
+      ],
+      "distribution_version": "0.18.0+ascend.p1"
+    },
+    {
+      "repository": "LMCache",
+      "donor_commit": "d959c7a9640681e414dc9dbca644627af67a51e8",
+      "unchanged_donor_files": 284,
+      "intentional_adaptations": [
+        "ascend/CMakeLists.txt",
+        "ascend/tests/standalone/test_checkpoint_dispatch.py",
+        "ascend/tests/standalone/test_checkpoint_initialization.py",
+        "ascend/tests/standalone/test_checkpoint_miss_retry.py",
+        "ascend/tests/standalone/test_checkpoint_page_keys.py",
+        "ascend/tests/standalone/test_checkpoint_prefix_agreement.py",
+        "ascend/tests/standalone/test_cold_abort_completion.py",
+        "ascend/tests/standalone/test_dense_checkpoint_partial_pages.py",
+        "ascend/tests/standalone/test_local_checkpoint_restore.py",
+        "ascend/tests/standalone/test_preemption_checkpoint.py"
+      ],
+      "missing_donor_files": [],
+      "base_production_changes": null,
+      "parsed_runtime_python_files": 461,
+      "submodules": [
+        {
+          "path": "ascend/third_party/kvcache-ops",
+          "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5",
+          "payload_present": false
+        }
+      ],
+      "distribution_version": "0.4.3+ascend.p1"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,133 @@
+{
+  "scope": "local_host_ast_and_mock_only",
+  "is_npu_acceptance": false,
+  "collected_at_utc": "2026-09-20T13:02:40.924008+00:00",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "pytest": "9.0.2",
+  "cases": [
+    {
+      "repository": "vllm",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-worktrees/vllm",
+      "expected_tests": 16,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/host-local-01/vllm.xml",
+        "tests/standalone/test_kv_transfer_lifetime.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "36e978116dc7fde13bc2e270bbe784354295cf0a928f1a498b1b069b3aa6d980",
+      "elapsed_seconds": 0.567
+    },
+    {
+      "repository": "vllm-ascend",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-worktrees/vllm/ascend",
+      "expected_tests": 31,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/host-local-01/vllm-ascend.xml",
+        "tests/standalone/test_preemption_dispatch.py",
+        "tests/standalone/test_connector_control_idle.py",
+        "tests/standalone/test_checkpoint_graph_route.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 31,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "923f750f3f8179fdd14d3ae1791b1f5fcc4566b3b28ef64cc07c718578f3c175",
+      "elapsed_seconds": 1.003
+    },
+    {
+      "repository": "LMCache",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-worktrees/LMCache",
+      "expected_tests": 39,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/host-local-01/LMCache.xml",
+        "tests/standalone/test_checkpoint_adapter.py",
+        "tests/standalone/test_checkpoint_idle_path.py",
+        "tests/standalone/test_checkpoint_reclaim.py",
+        "tests/standalone/test_checkpoint_wrapper.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "5dd5fe9f103378aa23e77941f5c6119abb663c288a119966d8b5817bad4ac1f3",
+      "elapsed_seconds": 2.925
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-worktrees/LMCache/ascend",
+      "expected_tests": 26,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/host-local-01/LMCache-Ascend.xml",
+        "tests/standalone/test_checkpoint_dispatch.py",
+        "tests/standalone/test_checkpoint_initialization.py",
+        "tests/standalone/test_checkpoint_prefix_agreement.py",
+        "tests/standalone/test_cold_abort_completion.py"
+      ],
+      "returncode": 1,
+      "counts": {
+        "tests": 26,
+        "failures": 5,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "f80e6d6e0dd433e08f5c34536e1a86553def6cc395eb3bba86d3dea30420af52",
+      "elapsed_seconds": 3.306
+    }
+  ]
+}

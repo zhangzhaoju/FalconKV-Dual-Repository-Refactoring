@@ -1,0 +1,59 @@
+{
+  "phase": "P1",
+  "source_batch": "source-01",
+  "source_worktrees": ["p1-worktrees/vllm", "p1-worktrees/LMCache"],
+  "branch": "p1/ascend-unified",
+  "p1_commits_created": false,
+  "original_four_worktrees_unchanged": true,
+  "source_audit": {
+    "passed": true,
+    "runtime_python_parsed": 2239,
+    "production_python_modified": 0,
+    "donor_files_missing": 0,
+    "evidence": "source-audit-01.json"
+  },
+  "contract_tests": {
+    "tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "evidence": "contracts-01.log"
+  },
+  "host_tests": {
+    "tests": 112,
+    "passed": 107,
+    "failed": 5,
+    "skipped": 0,
+    "failure_cause": "Local environment has no torch; same five failures in original LMCache-Ascend control",
+    "evidence": "host-local-01/summary.json",
+    "original_control_evidence": "host-original-control-01/summary.json",
+    "acceptance_passed": false
+  },
+  "delivery": {
+    "kind": "ordinary_source_archives_not_sdist",
+    "vllm_sha256": "67c0c737963082354ba059f78beb4ba24abb556e0ab769c6b61a8cc44c52139b",
+    "lmcache_sha256": "8a87b2273d13f0f8e428e7fb1653d324324b87386da5ea9f23179f4ad14fdb0c",
+    "sha256sum_check": "passed",
+    "unpacked_source_audit": "passed",
+    "unpacked_contract_tests": "17/17 passed",
+    "submodule_payloads": "pending_intranet_materialization",
+    "evidence": ["export-audit-01.json", "export-contracts-01.log"]
+  },
+  "static_checks": {
+    "ruff_E4_E7_E9_F_I": "passed for new build helpers, setup entries, tools and tests",
+    "bash_syntax": "passed for adapted build_aclnn.sh",
+    "git_diff_check": "passed for both P1 worktrees and design"
+  },
+  "not_performed_locally": ["package_install", "sdist_build", "wheel_build",
+                            "native_compile", "framework_runtime_import", "NPU_test",
+                            "intranet_connection", "service_replacement"],
+  "runtime_profile": {
+    "dsa_two_groups": true,
+    "mtp": true,
+    "c8": false,
+    "parallel": ["TP8/DP2", "TP4/DP4"],
+    "baseline_owner": "other_intranet_developers",
+    "baseline_data": "pending_archive"
+  },
+  "p0_exit": "not_marked_passed",
+  "p1_exit": "pending_intranet_build_and_runtime_acceptance"
+}

@@ -1,0 +1,12 @@
+..........................                                               [100%]
+=============================== warnings summary ===============================
+::test_invalid_checkpoint_config_is_rejected_before_services_start
+::test_scheduler_does_not_import_native_ops
+::test_missing_native_binding_is_not_swallowed_by_manager
+::test_connector_without_checkpoint_delegation_is_rejected
+::test_scheduler_without_retry_support_is_rejected_before_services_start
+  /usr/local/python3.11.14/lib/python3.11/site-packages/opentelemetry/sdk/_logs/_internal/__init__.py:531: DeprecationWarning: `LoggingHandler` in `opentelemetry-sdk` is deprecated. Use the handler from `opentelemetry-instrumentation-logging` instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+26 passed, 5 warnings in 22.85s

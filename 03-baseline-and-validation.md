@@ -1,16 +1,16 @@
 # 当前代码依据、迁移重点和验收标准
 
-初次源码调研：2026-09-17；2026-09-20 设计审核后已启动 P0，重新核对四仓原始 HEAD 未变化。P0 已开展备份恢复、静态分析、独立构建声明/测试路径修复及本机 host 检查，结果见 [P0](p0/README.md)；未安装依赖、编译扩展、启动服务、访问内网或运行 NPU 测试。下述代码事实对应原始 HEAD，不把工作区修复冒充已通过内网验收的基线。
+初次源码调研：2026-09-17。用户已授权 P1，最新四仓输入提交（含 P0 修复）及检查结果见 [P1](p1/README.md)。第 1 节及原始源码调研保留为历史基线，不冒充当前 HEAD。已收到原四仓内网 112/112 host 结果；本机未构建、安装或运行 NPU，P1 运行验收待内网。
 
-模型范围最新确认（2026-09-20）：仅支持 GLM-5.2-w4a8c8，GLM-5.3 后续扩展；这取代 2026-09-17 的 DeepSeek/GLM 全系列保留范围。GLM-5.2 必需的 DeepSeek/MTP 共享组件保留，独立非目标模型不保留；代码裁剪尚未执行。部署为 4 节点 × 8 张 910B3、2P2D、TP8/DP2，实际 checkpoint/量化配置与通信 profile 待内网冻结。
+模型范围最新确认：仅 GLM-5.2-w4a8c8，GLM-5.3 后续扩展；替代最初 DeepSeek/GLM 全系列范围。保留目标所需共享组件，裁剪尚未执行。4×8 张 910B3、2P2D，覆盖 TP8/DP2 与 TP4/DP4；DSA 双组/MTP 开启、C8 关闭。基线由其他开发人员验证后归档，尚未收到的报告不视作通过证据。
 
 必保能力确认（2026-09-17）：保留当前分支目标模型相关能力，明确包括 DSA、CPU KV 卸载、跨实例缓存和 Prefill/Decode 分离；相关索引共享、分组、checkpoint、RemoteFill 及恢复路径进入回归验收。
 
-首批软件环境保持：Ascend 910B3、CANN 8.5.1、torch 2.9.0、torch_npu 2.9.0。模型名、量化标签和 32 卡拓扑已确认；实际权重元数据、量化层规则、驱动/SDK、并行进程组等仍需核实，尚无该组合的本次构建或 NPU 测试结果。
+首批软件候选：CANN 8.5.1、torch 2.9.0+cpu、torch_npu 2.9.0.post1+gitee7ba04、triton-ascend 3.2.0.dev20260322。已采集模型元数据和环境，完整制品来源、有效配置和 NPU 结果仍待核对/归档；安装版本和 host 通过不等于兼容认证。
 
 构建与验证边界更正（2026-09-20）：环境在内部局域网，可通过 proxy 访问互联网，禁止直接接入外部大模型/AI 助手服务；此前“无互联网连接”的构建假设不再适用。内网部署目标 GLM-5.2 并进行本地推理验收仍在范围内。本机不构建，内网 torch 已安装 2.9.0，继续复用；构建声明已独立对齐，API/ABI 尚待验证，不要求重装 torch。构建、安装和 NPU 验收由内网人员或 CI 执行，完整证据内网留存，必要结果经人工审核、脱敏后交接；完整断网重建仅作为可选补充检查。
 
-## 1. 当前基线
+## 1. 初始调研基线（历史）
 
 | 仓库 | 当前分支 | HEAD |
 | --- | --- | --- |
@@ -119,11 +119,11 @@ A13/A15 的网络策略由内网维护者确认并留存证据；设置代理变
 | B02 | 目标权重身份及范围外拒绝 | GLM-5.2 的 revision/config/量化元数据匹配；DeepSeek、ChatGLM、其他 GLM 和未认证 GLM-5.3 不因共享架构绕过范围限制 |
 | B03 | GLM-5.2 MoE、MLA、DSA | expert routing、共享专家、indexer、top-k、mask、长上下文和 KV layout |
 | B04 | GLM 结构化共享 indexer | shared 层无自有 indexer 的构造/加载、producer/consumer 对应、组内层映射 |
-| B05 | W4A8C8 量化 | 核对提供方、逐层量化/回退和 MTP 权重；验证 C8 latent/index 数据与 scale 的布局、round trip 和传输，不能仅凭名称或源码存在声称已支持 |
+| B05 | W4A8 权重与 C8-off | 权重名称/文件不变，核对逐层量化和 MTP；验证实际 KV/index dtype、非 C8 布局、round trip 及传输，检查未隐式启用 C8，不仅检查一个开关 |
 | B06 | 离线入口 | 单/多 prompt、`generate`/文本 `chat`、复用实例、销毁/重建、缓存开关 |
 | B07 | 在线入口 | models、completion、chat、流式拼接、非流式、并发、请求取消/断连、超长输入、错误响应、优雅退出 |
 | B08 | 模型交互 | GLM-5.2 chat template、reasoning、tool call、目标结构化输出；与纯文本采样结果区分验证 |
-| B09 | TP8/DP2、2P2D 调度与并行 | 两个 P 和两个 D 副本、每副本 TP8 的启动/路由、批处理、prefix hit、抢占、空 rank 和进程退出；EP/PP/CP 按实际 profile 核实 |
+| B09 | TP8/DP2 与 TP4/DP4、2P2D | TP8 每节点一实例、TP4 每节点两实例；分别验证 rank/卡组、启动/路由、批处理、prefix hit、抢占、空 rank 和退出；两组基线分开比较 |
 | B10 | 图模式 | eager vs ACL capture/replay；实际 replay 计数/trace、bucket 边界、batch 重排和无效行，不只检查成功 capture |
 | B11 | MTP | 开关、候选宽度、全接收/部分接收/全拒绝、accepted frontier、KV 回退、MTP × 图 × DSA 关键组合 |
 
@@ -221,7 +221,7 @@ python -m pytest tests/v1/test_glm52_group_cardinality.py tests/v1/test_sparse_m
 - [ ] 只有两个活动仓库和两个构建/安装单元，原始四仓基线可恢复。
 - [ ] 原生 NPU 主路径完整，生产不再依赖 Ascend 插件、GPU Runner 或运行时补丁。
 - [ ] 模型、设备、任务、算子、量化、Connector 注册与批准范围一致；负向测试通过。
-- [ ] GLM-5.2-w4a8c8 固定 checkpoint、量化/C8 布局及 MTP、DSA 有逐项结果；GLM-5.3 未被提前认证，LoRA、首批之外的型号等其余决策有明确记录。
+- [ ] GLM-5.2 固定 checkpoint、权重量化、C8-off 布局、MTP、DSA 双组与两种 TP/DP 有逐项结果；GLM-5.3 未提前认证，其他范围决策有记录。
 - [ ] 多模态和基于 Qwen/Llama 的蒸馏模型实现及专用依赖已移除；范围外模型和非文本输入的拒绝用例通过。
 - [ ] 离线、在线、采样/解析、并行和缓存开关通过；启用的 DSA/MTP/图组合有实际执行证据。
 - [ ] GLM 结构化 indexer、不等 KV 组、store-before-free、checkpoint、RemoteFill 及失败恢复通过。

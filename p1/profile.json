@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "phase": "P1",
+  "source_status": "first_source_batch_ready_for_intranet",
+  "build_status": "pending_intranet",
+  "runtime_acceptance": "pending_external_developer_archive",
+  "authorization": {
+    "source": "user_explicit_P1_start_after_profile_update",
+    "p0_exit_is_not_assumed_passed": true,
+    "baseline_owner": "other_intranet_developers",
+    "allowed_now": ["snapshot_import", "unified_packaging", "host_checks", "handoff"],
+    "not_in_this_batch": ["runtime_algorithm_rewrite", "bulk_pruning", "service_replacement"]
+  },
+  "model": {
+    "current": "GLM-5.2-w4a8c8",
+    "architecture": "GlmMoeDsaForCausalLM",
+    "model_type": "glm_moe_dsa",
+    "future": ["GLM-5.3"],
+    "native_text_generation_only": true,
+    "checkpoint_label_is_not_runtime_cache_dtype": true
+  },
+  "runtime": {
+    "dsa_unbundle": true,
+    "dsa_two_groups": true,
+    "mtp": true,
+    "num_speculative_tokens_candidate": 1,
+    "c8": false,
+    "enable_sparse_c8": false,
+    "weight_quantization": "existing_W4A8_mixed_layer_metadata_unchanged",
+    "cache_dtype": "non_C8_actual_dtype_to_be_archived",
+    "preserve": ["offline", "online", "cpu_kv_offload", "cross_instance_cache",
+                 "prefill_decode", "checkpoint", "RemoteFill", "recovery"]
+  },
+  "hardware": {
+    "soc": "Ascend910B3",
+    "nodes": 4,
+    "npu_per_node": 8,
+    "physical_roles": "2P2D"
+  },
+  "parallel_profiles": [
+    {"name": "TP8_DP2", "tp": 8, "dp_per_role": 2, "instances_per_node": 1},
+    {"name": "TP4_DP4", "tp": 4, "dp_per_role": 4, "instances_per_node": 2}
+  ],
+  "software_candidate": {
+    "python": "3.11.14",
+    "architecture": "aarch64",
+    "cann": "8.5.1",
+    "torch": "2.9.0+cpu",
+    "torch_npu": "2.9.0.post1+gitee7ba04",
+    "triton_ascend": "3.2.0.dev20260322"
+  },
+  "validation_boundary": {
+    "local_build_or_install": false,
+    "intranet_proxy_allowed": true,
+    "external_llm_or_agent_access": false,
+    "existing_services_must_be_preserved": true,
+    "missing_evidence": [
+      "paired_TP8_DP2_and_TP4_DP4_baseline_results",
+      "effective_DSA_MTP_non_C8_runtime_configuration",
+      "exact_artifact_provenance_and_dependency_closure",
+      "paired_P1_wheels_sdist_rebuild_and_ABI_results",
+      "P1_vs_baseline_function_and_performance_comparison"
+    ]
+  }
+}

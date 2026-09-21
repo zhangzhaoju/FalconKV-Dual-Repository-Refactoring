@@ -1,0 +1,4 @@
+{"repository": "vllm", "returncode": 0, "counts": {"tests": 16, "failures": 0, "errors": 0, "skipped": 0}}
+{"repository": "vllm-ascend", "returncode": 0, "counts": {"tests": 31, "failures": 0, "errors": 0, "skipped": 0}}
+{"repository": "LMCache", "returncode": 0, "counts": {"tests": 39, "failures": 0, "errors": 0, "skipped": 0}}
+{"repository": "LMCache-Ascend", "returncode": 0, "counts": {"tests": 26, "failures": 0, "errors": 0, "skipped": 0}}

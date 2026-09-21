@@ -1,0 +1,22 @@
+test_ascend_entry_point_is_owned_by_vllm (test_p1_contracts.P1Contracts.test_ascend_entry_point_is_owned_by_vllm) ... ok
+test_build_requirements_match_declared_profile (test_p1_contracts.P1Contracts.test_build_requirements_match_declared_profile) ... ok
+test_export_keeps_source_directories_named_build_but_not_git (test_p1_contracts.P1Contracts.test_export_keeps_source_directories_named_build_but_not_git) ... ok
+test_export_refuses_output_inside_workspace (test_p1_contracts.P1Contracts.test_export_refuses_output_inside_workspace) ... ok
+test_host_suite_count_is_112_no_missing_reports_pass (test_p1_contracts.P1Contracts.test_host_suite_count_is_112_no_missing_reports_pass) ... ok
+test_independent_build_helpers_are_identical (test_p1_contracts.P1Contracts.test_independent_build_helpers_are_identical) ... ok
+test_material_hashes_reject_changes_additions_and_wrong_commit (test_p1_contracts.P1Contracts.test_material_hashes_reject_changes_additions_and_wrong_commit) ... ok
+test_material_requires_provenance (test_p1_contracts.P1Contracts.test_material_requires_provenance) ... ok
+test_metadata_uses_one_version_and_valid_cann_tuple (test_p1_contracts.P1Contracts.test_metadata_uses_one_version_and_valid_cann_tuple) ... ok
+test_non_ascend_build_switches_fail_before_subprocess (test_p1_contracts.P1Contracts.test_non_ascend_build_switches_fail_before_subprocess) ... ok
+test_packaging_owns_both_namespaces_without_test_packages (test_p1_contracts.P1Contracts.test_packaging_owns_both_namespaces_without_test_packages) ... ok
+test_runtime_profile_includes_both_32_card_layouts (test_p1_contracts.P1Contracts.test_runtime_profile_includes_both_32_card_layouts) ... ok
+test_setup_does_not_probe_devices_or_import_frameworks (test_p1_contracts.P1Contracts.test_setup_does_not_probe_devices_or_import_frameworks) ... ok
+test_wheel_inspection_accepts_complete_synthetic_zip_not_abi (test_p1_contracts.P1Contracts.test_wheel_inspection_accepts_complete_synthetic_zip_not_abi) ... ok
+test_wheel_inspection_rejects_gpu_dependencies (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_gpu_dependencies) ... ok
+test_wheel_inspection_rejects_missing_resources (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_missing_resources) ... ok
+test_wheel_inspection_rejects_wrong_architecture (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_wrong_architecture) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.066s
+
+OK

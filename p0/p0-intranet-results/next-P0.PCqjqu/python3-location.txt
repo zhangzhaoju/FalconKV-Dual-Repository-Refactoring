@@ -1,0 +1,2 @@
+/usr/local/python3.11.14/bin/python3
+/usr/local/python3.11.14/lib/python3.11/site-packages
