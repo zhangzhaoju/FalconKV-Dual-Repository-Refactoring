@@ -80,13 +80,15 @@ python -B "$P1_REPOS/LMCache/p1_dev.py" materials \
 ```bash
 python -B "$P1_REPOS/vllm/p1_dev.py" doctor --output "$P1_DEV_RUN/vllm-doctor.json"
 python -B "$P1_REPOS/LMCache/p1_dev.py" doctor --output "$P1_DEV_RUN/lmcache-doctor.json"
+python -B "$P1_ROOT/design/p1/tools/check_pip_dependencies.py" \
+  --output "$P1_DEV_RUN/pip-check-before"
 
 python -B "$P1_REPOS/vllm/tests/standalone/test_p1_development.py" -v
 python -B "$P1_REPOS/LMCache/tests/standalone/test_p1_development.py" -v
 python -B "$P1_REPOS/vllm/ascend/tests/standalone/test_p1_resources.py" -v
 ```
 
-doctor 检查依赖/材料并在元数据通过后用 torch 子进程读取构建路径与 C++ ABI；不分配 NPU、不编译。必须 `passed=true` 才继续。新增轻量测试为 21+21+2 项，native 命令使用模拟文件，不代表 CANN 编译成功；还须执行主流程的 31 项约束/预检、55 项 SFA 轻量回归和 112 项 host。
+doctor 检查依赖/材料并在元数据通过后用 torch 子进程读取构建路径与 C++ ABI；不分配 NPU、不编译。必须 `passed=true` 才继续。pip 检查只豁免用户明确批准的 `op-compile-tool 0.1.0` 对 getopt/inspect/multiprocessing 的三条误声明，其他错误仍然停止，原始输出和退出码保留。须同步最新版 design 工具，详见主流程第 3.2 节。新增轻量测试为 21+21+2 项，native 命令使用模拟文件，不代表 CANN 编译成功；还须执行主流程的 41 项约束/预检、55 项 SFA 轻量回归和 112 项 host。
 
 ## 5A. wheel 构建与安装
 
@@ -131,7 +133,14 @@ python -m pip install --no-index --no-deps --no-build-isolation \
 
 `--isolated-env` 是操作人员对环境用途的明确确认，不是自动创建隔离容器。脚本还会拒绝旧四包/冲突版本，但无法判断某个进程是否正在使用同版本 P1；安装/重装前应结束当前专用调测进程，不能热替换正在使用的算子。
 
-`verify` 只检查 distribution、导入路径、构建元数据和 native 文件是否齐全，不加载 .so、不证明 ABI 或 NPU 正确。安装后仍须按主流程执行 pip check、实际扩展加载、预约卡上的事件回放和模型测试。
+`verify` 只检查 distribution、导入路径、构建元数据和 native 文件是否齐全，不加载 .so、不证明 ABI 或 NPU 正确。完成 5A 或 5B 的两仓安装后，再以相同规则核对实际安装依赖：
+
+```bash
+python -B "$P1_ROOT/design/p1/tools/check_pip_dependencies.py" \
+  --output "$P1_DEV_RUN/pip-check-after"
+```
+
+不能复用安装前报告或将未知错误视为标准库豁免。之后仍须按主流程执行实际扩展加载、预约卡上的事件回放和模型测试。
 
 ## 6. 重试、日志与验收边界
 

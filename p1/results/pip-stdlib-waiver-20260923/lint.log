@@ -1,0 +1,7 @@
+$ ruff check --no-cache --select E4,E7,E9,F,B design/p1/tools/check_pip_dependencies.py design/p1/tests/test_pip_dependencies.py
+ruff format --check design/p1/tools/check_pip_dependencies.py design/p1/tests/test_pip_dependencies.py
+
+All checks passed!
+2 files already formatted
+
+Exit code: 0

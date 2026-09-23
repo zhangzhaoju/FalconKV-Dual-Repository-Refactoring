@@ -4,6 +4,10 @@
 
 本轮允许在其他开发人员验证基线、后续归档数据期间推进 P1 源码工作。这是明确的阶段启动授权，不代表 P0/NPU 验收已经通过，也不授权替换现有服务。
 
+2026-09-23 pip 检查补充：按用户明确授权，只豁免 `op-compile-tool 0.1.0` 对 getopt、inspect、multiprocessing 的三条标准库误声明。[只读 pip 检查工具](tools/check_pip_dependencies.py) 保留完整原始输出/退出码，并单列豁免后的判断；其他缺依赖、版本冲突和未知诊断仍会停止。已接入安装前后及构建前检查，命令见[内网指导第 3.2 节](intranet-next-steps.md#32-已批准的-pip-标准库误声明豁免)。本次仅修改 design/p1，不改两仓源码和提交。
+
+本次 41 项约束测试（含新增 10 项精确豁免回归）通过，记录见[pip 豁免验证](results/pip-stdlib-waiver-20260923/README.md)。
+
 2026-09-23 候选更新：按用户最新内网预检反馈，统一接受 `torch-npu==2.9.0.post2`、`transformers==5.2.0`；torch 本体仍为 2.9.0，其他候选不变。同步修改两仓运行/构建声明、原生构建校验与 profile，preflight 继续按选定源码声明严格核验，不跳过不匹配。当前配对提交及重试方法见[内网指导](intranet-next-steps.md)，累计清单改用 `baseline/p1-intranet-candidates-20260923.json`。历史记录保留，不能把元数据通过视作 Transformers 5/ABI 兼容性证明。
 
 本次候选调整的 75 项轻量测试与源码审计已通过，原生/内网验证待执行；证据见[候选同步记录](results/intranet-candidates-20260923/README.md)。

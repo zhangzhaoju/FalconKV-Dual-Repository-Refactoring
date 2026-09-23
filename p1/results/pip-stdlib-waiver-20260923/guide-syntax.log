@@ -1,0 +1,18 @@
+$ python3 -B - <<'PY'
+import re, subprocess
+from pathlib import Path
+for name in ('intranet-next-steps.md', 'development-build-install.md'):
+    path = Path('design/p1') / name
+    blocks = re.findall(r'```bash\n(.*?)\n```', path.read_text(), re.S)
+    for index, block in enumerate(blocks, 1):
+        result = subprocess.run(['bash', '-n'], input=block, text=True, capture_output=True)
+        assert result.returncode == 0, (name, index, result.stderr)
+    print(f'{name}: {len(blocks)} Bash blocks parse; commands NOT executed')
+print('No builds, installs, or service changes performed')
+PY
+
+intranet-next-steps.md: 13 Bash blocks parse; commands NOT executed
+development-build-install.md: 8 Bash blocks parse; commands NOT executed
+No builds, installs, or service changes performed
+
+Exit code: 0

@@ -1,0 +1,50 @@
+$ python3 -B -m unittest discover -s design/p1/tests -v
+
+test_ascend_entry_point_is_owned_by_vllm (test_p1_contracts.P1Contracts.test_ascend_entry_point_is_owned_by_vllm) ... ok
+test_build_requirements_match_declared_profile (test_p1_contracts.P1Contracts.test_build_requirements_match_declared_profile) ... ok
+test_export_keeps_source_directories_named_build_but_not_git (test_p1_contracts.P1Contracts.test_export_keeps_source_directories_named_build_but_not_git) ... ok
+test_export_refuses_output_inside_workspace (test_p1_contracts.P1Contracts.test_export_refuses_output_inside_workspace) ... ok
+test_host_suite_count_is_112_no_missing_reports_pass (test_p1_contracts.P1Contracts.test_host_suite_count_is_112_no_missing_reports_pass) ... ok
+test_independent_build_helpers_are_identical (test_p1_contracts.P1Contracts.test_independent_build_helpers_are_identical) ... ok
+test_material_hashes_reject_changes_additions_and_wrong_commit (test_p1_contracts.P1Contracts.test_material_hashes_reject_changes_additions_and_wrong_commit) ... ok
+test_material_requires_provenance (test_p1_contracts.P1Contracts.test_material_requires_provenance) ... ok
+test_metadata_uses_one_version_and_valid_cann_tuple (test_p1_contracts.P1Contracts.test_metadata_uses_one_version_and_valid_cann_tuple) ... ok
+test_non_ascend_build_switches_fail_before_subprocess (test_p1_contracts.P1Contracts.test_non_ascend_build_switches_fail_before_subprocess) ... ok
+test_packaging_owns_both_namespaces_without_test_packages (test_p1_contracts.P1Contracts.test_packaging_owns_both_namespaces_without_test_packages) ... ok
+test_runtime_profile_includes_both_32_card_layouts (test_p1_contracts.P1Contracts.test_runtime_profile_includes_both_32_card_layouts) ... ok
+test_setup_does_not_probe_devices_or_import_frameworks (test_p1_contracts.P1Contracts.test_setup_does_not_probe_devices_or_import_frameworks) ... ok
+test_wheel_inspection_accepts_complete_synthetic_zip_not_abi (test_p1_contracts.P1Contracts.test_wheel_inspection_accepts_complete_synthetic_zip_not_abi) ... ok
+test_wheel_inspection_rejects_gpu_dependencies (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_gpu_dependencies) ... ok
+test_wheel_inspection_rejects_missing_resources (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_missing_resources) ... ok
+test_wheel_inspection_rejects_wrong_architecture (test_p1_contracts.P1Contracts.test_wheel_inspection_rejects_wrong_architecture) ... ok
+test_clean_pip_check_passes_without_waivers (test_pip_dependencies.PipDependencyWaivers.test_clean_pip_check_passes_without_waivers) ... ok
+test_exact_three_messages_pass_with_original_failure_code (test_pip_dependencies.PipDependencyWaivers.test_exact_three_messages_pass_with_original_failure_code) ... ok
+test_existing_results_are_not_overwritten_or_rechecked (test_pip_dependencies.PipDependencyWaivers.test_existing_results_are_not_overwritten_or_rechecked) ... ok
+test_missing_actual_stdlib_module_is_not_waived (test_pip_dependencies.PipDependencyWaivers.test_missing_actual_stdlib_module_is_not_waived) ... ok
+test_other_package_version_or_message_is_not_approved (test_pip_dependencies.PipDependencyWaivers.test_other_package_version_or_message_is_not_approved) ... ok
+test_real_dependencies_and_version_conflicts_remain_blocking (test_pip_dependencies.PipDependencyWaivers.test_real_dependencies_and_version_conflicts_remain_blocking) ... ok
+test_runner_preserves_raw_output_and_separate_gate_verdict (test_pip_dependencies.PipDependencyWaivers.test_runner_preserves_raw_output_and_separate_gate_verdict) ... ok
+test_spawn_failure_and_timeout_keep_failure_evidence (test_pip_dependencies.PipDependencyWaivers.test_spawn_failure_and_timeout_keep_failure_evidence) ... ok
+test_subset_and_line_order_do_not_require_all_three_errors (test_pip_dependencies.PipDependencyWaivers.test_subset_and_line_order_do_not_require_all_three_errors) ... ok
+test_unexpected_status_or_empty_output_is_never_success (test_pip_dependencies.PipDependencyWaivers.test_unexpected_status_or_empty_output_is_never_success) ... ok
+test_missing_build_tool_still_fails (test_preflight.PreflightCandidates.test_missing_build_tool_still_fails) ... ok
+test_missing_dependency_is_not_skipped (test_preflight.PreflightCandidates.test_missing_dependency_is_not_skipped) ... ok
+test_previous_candidates_are_not_silently_accepted (test_preflight.PreflightCandidates.test_previous_candidates_are_not_silently_accepted) ... ok
+test_python_architecture_and_cann_checks_remain_enforced (test_preflight.PreflightCandidates.test_python_architecture_and_cann_checks_remain_enforced) ... ok
+test_reported_intranet_candidates_pass_metadata_gate (test_preflight.PreflightCandidates.test_reported_intranet_candidates_pass_metadata_gate) ... ok
+test_stale_source_snapshot_is_not_overridden_by_tool (test_preflight.PreflightCandidates.test_stale_source_snapshot_is_not_overridden_by_tool) ... ok
+test_unapproved_future_versions_still_fail (test_preflight.PreflightCandidates.test_unapproved_future_versions_still_fail) ... ok
+test_approval_does_not_whitelist_unlisted_runtime_changes (test_source_updates.SourceUpdates.test_approval_does_not_whitelist_unlisted_runtime_changes) ... ok
+test_changed_recorded_file_fails_even_for_standalone_tests (test_source_updates.SourceUpdates.test_changed_recorded_file_fails_even_for_standalone_tests) ... ok
+test_exact_recorded_changes_and_additions_pass (test_source_updates.SourceUpdates.test_exact_recorded_changes_and_additions_pass) ... ok
+test_invalid_manifest_records_fail_closed (test_source_updates.SourceUpdates.test_invalid_manifest_records_fail_closed) ... ok
+test_missing_added_file_fails (test_source_updates.SourceUpdates.test_missing_added_file_fails) ... ok
+test_unregistered_production_change_still_fails (test_source_updates.SourceUpdates.test_unregistered_production_change_still_fails) ... ok
+test_wrong_base_manifest_fails (test_source_updates.SourceUpdates.test_wrong_base_manifest_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.094s
+
+OK
+
+Exit code: 0
