@@ -1,0 +1,39 @@
+$ python3 -B - <<'PY'
+import json, re, subprocess, textwrap
+from pathlib import Path
+reports = []
+for filename in ('design/p1/intranet-next-steps.md', 'design/p1/development-build-install.md', 'p1-repos/vllm/docs/getting_started/installation/ascend_p1.md', 'p1-repos/LMCache/docs/source/getting_started/ascend_p1.rst'):
+    source = Path(filename).read_text()
+    blocks = re.findall(r'```bash\n(.*?)\n```', source, re.S) if filename.endswith('.md') else [textwrap.dedent(x) for x in re.findall(r'\.\. code-block:: bash\n\n((?:   [^\n]*\n|\n)+)', source)]
+    assert blocks, filename
+    for index, block in enumerate(blocks, 1):
+        result = subprocess.run(['bash', '-n'], input=block, text=True, capture_output=True)
+        assert result.returncode == 0, (filename, index, result.stderr)
+    reports.append({'file': filename, 'bash_blocks_checked': len(blocks), 'executed': False})
+print(json.dumps(reports, indent=2))
+PY
+
+[
+  {
+    "file": "design/p1/intranet-next-steps.md",
+    "bash_blocks_checked": 11,
+    "executed": false
+  },
+  {
+    "file": "design/p1/development-build-install.md",
+    "bash_blocks_checked": 7,
+    "executed": false
+  },
+  {
+    "file": "p1-repos/vllm/docs/getting_started/installation/ascend_p1.md",
+    "bash_blocks_checked": 2,
+    "executed": false
+  },
+  {
+    "file": "p1-repos/LMCache/docs/source/getting_started/ascend_p1.rst",
+    "bash_blocks_checked": 2,
+    "executed": false
+  }
+]
+
+Exit code: 0

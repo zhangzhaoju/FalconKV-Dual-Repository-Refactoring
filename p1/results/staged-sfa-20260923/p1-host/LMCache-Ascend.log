@@ -1,0 +1,84 @@
+...FFFFF..................                                               [100%]
+=================================== FAILURES ===================================
+_______ test_invalid_checkpoint_config_is_rejected_before_services_start _______
+tests/standalone/test_checkpoint_initialization.py:134: in test_invalid_checkpoint_config_is_rejected_before_services_start
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+<frozen runpy>:286: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in <module>
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+__________________ test_scheduler_does_not_import_native_ops ___________________
+tests/standalone/test_checkpoint_initialization.py:142: in test_scheduler_does_not_import_native_ops
+    cls, calls, started = init_api(config)
+                          ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+<frozen runpy>:286: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in <module>
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+___________ test_missing_native_binding_is_not_swallowed_by_manager ____________
+tests/standalone/test_checkpoint_initialization.py:153: in test_missing_native_binding_is_not_swallowed_by_manager
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+<frozen runpy>:286: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in <module>
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+___________ test_connector_without_checkpoint_delegation_is_rejected ___________
+tests/standalone/test_checkpoint_initialization.py:161: in test_connector_without_checkpoint_delegation_is_rejected
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+<frozen runpy>:286: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in <module>
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+____ test_scheduler_without_retry_support_is_rejected_before_services_start ____
+tests/standalone/test_checkpoint_initialization.py:170: in test_scheduler_without_retry_support_is_rejected_before_services_start
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+<frozen runpy>:286: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in <module>
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+=========================== short test summary info ============================
+FAILED ../../../../../../../../dev::test_invalid_checkpoint_config_is_rejected_before_services_start
+FAILED ../../../../../../../../dev::test_scheduler_does_not_import_native_ops
+FAILED ../../../../../../../../dev::test_missing_native_binding_is_not_swallowed_by_manager
+FAILED ../../../../../../../../dev::test_connector_without_checkpoint_delegation_is_rejected
+FAILED ../../../../../../../../dev::test_scheduler_without_retry_support_is_rejected_before_services_start
+5 failed, 21 passed in 3.40s

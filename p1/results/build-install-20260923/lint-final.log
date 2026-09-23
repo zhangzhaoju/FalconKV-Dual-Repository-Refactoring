@@ -1,0 +1,5 @@
+$ ruff check --no-cache p1_build.py p1_dev.py tests/standalone/test_p1_development.py
+
+All checks passed!
+
+Exit code: 0

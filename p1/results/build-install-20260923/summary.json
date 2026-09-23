@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "scope": "source_tooling_and_host_mock_validation_only",
+  "p1_commits": {
+    "vllm": "ba361feb8d13d2377698ec758cdf644fc00063be",
+    "LMCache": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3"
+  },
+  "remote_push_performed": false,
+  "original_four_repositories_modified": false,
+  "local_environment": {
+    "python": "3.12.3",
+    "setuptools": "68.1.2",
+    "pytest": "9.0.2",
+    "torch_present": false
+  },
+  "tests": {
+    "development_vllm": {
+      "tests": 21,
+      "passed": 21
+    },
+    "development_lmcache": {
+      "tests": 21,
+      "passed": 21
+    },
+    "resources": {
+      "tests": 2,
+      "passed": 2
+    },
+    "contracts": {
+      "tests": 24,
+      "passed": 24
+    },
+    "cmake_entry": {
+      "tests": 5,
+      "passed": 5
+    },
+    "sfa_light": {
+      "tests": 55,
+      "passed": 55
+    },
+    "host": {
+      "tests": 112,
+      "passed": 107,
+      "failed": 5,
+      "skipped": 0,
+      "reason": "All 5 failures are missing local torch"
+    }
+  },
+  "source_audit": {
+    "passed": true,
+    "exact_updated_files": 41,
+    "runtime_python_AST_files": 2240,
+    "submodule_payloads_present": false
+  },
+  "documentation": {
+    "new_page_sphinx_passed": true,
+    "full_sphinx_passed": false,
+    "full_sphinx_blocker": "Missing sphinxawesome_theme",
+    "shell_blocks_syntax_checked": 22,
+    "shell_blocks_executed": false
+  },
+  "native_compilation_performed": false,
+  "package_installation_performed": false,
+  "abi_or_npu_acceptance_performed": false,
+  "p1_exit_passed": false
+}

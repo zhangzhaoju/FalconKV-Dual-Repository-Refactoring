@@ -1,0 +1,14 @@
+$ python3 -B p1-repos/vllm/tests/standalone/test_p1_cmake.py -v
+
+test_parser_rejects_an_unmatched_endif (__main__.P1CMakeTests.test_parser_rejects_an_unmatched_endif) ... ok
+test_root_entry_has_no_gpu_build_tail (__main__.P1CMakeTests.test_root_entry_has_no_gpu_build_tail) ... ok
+test_root_entry_parses_and_preserves_torch_abi_one (__main__.P1CMakeTests.test_root_entry_parses_and_preserves_torch_abi_one) ... ok
+test_root_entry_parses_and_preserves_torch_abi_zero (__main__.P1CMakeTests.test_root_entry_parses_and_preserves_torch_abi_zero) ... ok
+test_root_entry_rejects_missing_torch_abi (__main__.P1CMakeTests.test_root_entry_rejects_missing_torch_abi) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.044s
+
+OK
+
+Exit code: 0

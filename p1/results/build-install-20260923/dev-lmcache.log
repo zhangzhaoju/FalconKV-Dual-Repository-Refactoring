@@ -1,0 +1,30 @@
+$ python3 -B p1-repos/LMCache/tests/standalone/test_p1_development.py -v
+
+test_build_names_are_unique_without_creating_directories (__main__.DevelopmentContracts.test_build_names_are_unique_without_creating_directories) ... ok
+test_command_failure_preserves_log_and_exit_status (__main__.DevelopmentContracts.test_command_failure_preserves_log_and_exit_status) ... ok
+test_dry_run_does_not_check_environment_or_create_outputs (__main__.DevelopmentContracts.test_dry_run_does_not_check_environment_or_create_outputs) ... ok
+test_editable_enforces_strict_mode (__main__.DevelopmentContracts.test_editable_enforces_strict_mode) ... ok
+test_editable_maps_all_resources_outside_pip_temporary_tree (__main__.DevelopmentContracts.test_editable_maps_all_resources_outside_pip_temporary_tree) ... ok
+test_editable_only_maps_python_without_environment_probe (__main__.DevelopmentContracts.test_editable_only_maps_python_without_environment_probe) ... ok
+test_existing_baseline_plugin_or_wrong_version_is_rejected (__main__.DevelopmentContracts.test_existing_baseline_plugin_or_wrong_version_is_rejected) ... ok
+test_external_artifact_symlink_is_rejected (__main__.DevelopmentContracts.test_external_artifact_symlink_is_rejected) ... ok
+test_install_path_verification_rejects_source_shadowing (__main__.DevelopmentContracts.test_install_path_verification_rejects_source_shadowing) ... ok
+test_invalid_job_count_fails_before_native_commands (__main__.DevelopmentContracts.test_invalid_job_count_fails_before_native_commands) ... ok
+test_material_inventory_ignores_git_control_but_not_extra_payload (__main__.DevelopmentContracts.test_material_inventory_ignores_git_control_but_not_extra_payload) ... ok
+test_material_snapshot_registers_only_pinned_archive (__main__.DevelopmentContracts.test_material_snapshot_registers_only_pinned_archive) ... ok
+test_metadata_failure_does_not_import_torch_or_run_compilers (__main__.DevelopmentContracts.test_metadata_failure_does_not_import_torch_or_run_compilers) ... ok
+test_missing_wheel_resource_and_editable_snapshot_are_rejected (__main__.DevelopmentContracts.test_missing_wheel_resource_and_editable_snapshot_are_rejected) ... ok
+test_mocked_native_rebuild_uses_fresh_work_and_install_directories (__main__.DevelopmentContracts.test_mocked_native_rebuild_uses_fresh_work_and_install_directories) ... ok
+test_mutating_install_requires_dedicated_environment_confirmation (__main__.DevelopmentContracts.test_mutating_install_requires_dedicated_environment_confirmation) ... ok
+test_native_failure_does_not_publish_or_reuse_old_payload (__main__.DevelopmentContracts.test_native_failure_does_not_publish_or_reuse_old_payload) ... ok
+test_pip_plans_never_fetch_or_resolve_dependencies (__main__.DevelopmentContracts.test_pip_plans_never_fetch_or_resolve_dependencies) ... ok
+test_verify_accepts_strict_link_tree_and_rejects_wrong_mode (__main__.DevelopmentContracts.test_verify_accepts_strict_link_tree_and_rejects_wrong_mode) ... ok
+test_wheel_copies_every_native_resource (__main__.DevelopmentContracts.test_wheel_copies_every_native_resource) ... ok
+test_wheel_identity_and_resources_are_checked_without_loading (__main__.DevelopmentContracts.test_wheel_identity_and_resources_are_checked_without_loading) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.482s
+
+OK
+
+Exit code: 0

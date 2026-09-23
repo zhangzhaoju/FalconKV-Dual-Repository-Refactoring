@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="26" time="3.069" timestamp="2026-09-23T15:11:05.718028+08:00" hostname="zhangzhaoju"><testcase classname="" name="test_actual_ascend_dynamic_mro_enters_capture_and_restores_idle_dispatch" time="0.014" /><testcase classname="" name="test_checkpoint_results_survive_both_tp_aggregation_orders" time="0.014" /><testcase classname="" name="test_release_only_control_frame_retires_restore_owners_and_restores_idle_methods" time="0.014" /><testcase classname="" name="test_invalid_checkpoint_config_is_rejected_before_services_start" time="0.064"><failure message="ModuleNotFoundError: No module named 'torch'">tests/standalone/test_checkpoint_initialization.py:134: in test_invalid_checkpoint_config_is_rejected_before_services_start
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+&lt;frozen runpy&gt;:286: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in &lt;module&gt;
+    import torch
+E   ModuleNotFoundError: No module named 'torch'</failure></testcase><testcase classname="" name="test_scheduler_does_not_import_native_ops" time="0.077"><failure message="ModuleNotFoundError: No module named 'torch'">tests/standalone/test_checkpoint_initialization.py:142: in test_scheduler_does_not_import_native_ops
+    cls, calls, started = init_api(config)
+                          ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+&lt;frozen runpy&gt;:286: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in &lt;module&gt;
+    import torch
+E   ModuleNotFoundError: No module named 'torch'</failure></testcase><testcase classname="" name="test_missing_native_binding_is_not_swallowed_by_manager" time="0.059"><failure message="ModuleNotFoundError: No module named 'torch'">tests/standalone/test_checkpoint_initialization.py:153: in test_missing_native_binding_is_not_swallowed_by_manager
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+&lt;frozen runpy&gt;:286: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in &lt;module&gt;
+    import torch
+E   ModuleNotFoundError: No module named 'torch'</failure></testcase><testcase classname="" name="test_connector_without_checkpoint_delegation_is_rejected" time="0.059"><failure message="ModuleNotFoundError: No module named 'torch'">tests/standalone/test_checkpoint_initialization.py:161: in test_connector_without_checkpoint_delegation_is_rejected
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+&lt;frozen runpy&gt;:286: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in &lt;module&gt;
+    import torch
+E   ModuleNotFoundError: No module named 'torch'</failure></testcase><testcase classname="" name="test_scheduler_without_retry_support_is_rejected_before_services_start" time="0.091"><failure message="ModuleNotFoundError: No module named 'torch'">tests/standalone/test_checkpoint_initialization.py:170: in test_scheduler_without_retry_support_is_rejected_before_services_start
+    cls, calls, _ = init_api(config)
+                    ^^^^^^^^^^^^^^^^
+tests/standalone/test_checkpoint_initialization.py:71: in init_api
+    validate_two_group_layer_counts=runpy.run_path(
+&lt;frozen runpy&gt;:286: in run_path
+    ???
+&lt;frozen runpy&gt;:98: in _run_module_code
+    ???
+&lt;frozen runpy&gt;:88: in _run_code
+    ???
+../lmcache/v1/kv_layer_groups.py:8: in &lt;module&gt;
+    import torch
+E   ModuleNotFoundError: No module named 'torch'</failure></testcase><testcase classname="" name="test_marker_cannot_be_overtaken_by_an_unrelated_broadcast[True]" time="0.103" /><testcase classname="" name="test_marker_cannot_be_overtaken_by_an_unrelated_broadcast[False]" time="0.106" /><testcase classname="" name="test_unrelated_envelope_does_not_call_consensus" time="0.106" /><testcase classname="" name="test_armed_transport_does_not_create_an_engine_cycle_with_gc_disabled" time="0.124" /><testcase classname="" name="test_remote_fill_and_checkpoint_reductions_follow_leader_order" time="0.104" /><testcase classname="" name="test_agreement_does_not_expire_before_the_existing_native_read_deadline" time="0.130" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-True-True-False-False]" time="0.159" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-True-True-False-True]" time="0.155" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-True-True-True-False]" time="0.162" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-True-True-True-True]" time="0.166" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_consumer-True-False-False-False]" time="0.161" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_consumer-True-False-False-True]" time="0.163" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_consumer-True-False-True-False]" time="0.157" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_consumer-True-False-True-True]" time="0.154" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-False-False-False-False]" time="0.159" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-False-False-False-True]" time="0.159" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-False-False-True-False]" time="0.161" /><testcase classname="" name="test_aborted_cold_load_eventually_acknowledges_send_after_all_owners_retire[kv_both-False-False-True-True]" time="0.159" /></testsuite></testsuites>

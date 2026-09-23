@@ -1,0 +1,5 @@
+$ ruff check --no-cache --select E4,E7,E9,F p1-repos/vllm/p1_build.py p1-repos/LMCache/p1_build.py p1-repos/vllm/p1_dev.py p1-repos/LMCache/p1_dev.py p1-repos/vllm/tests/standalone/test_p1_development.py p1-repos/LMCache/tests/standalone/test_p1_development.py p1-repos/vllm/ascend/tests/standalone/test_p1_resources.py
+
+All checks passed!
+
+Exit code: 0

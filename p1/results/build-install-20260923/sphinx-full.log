@@ -1,0 +1,18 @@
+$ P1_DOC_CHECK=$(mktemp -d /tmp/p1-lmcache-docs.XXXXXXXX)
+python3 -B -m sphinx -W --keep-going -b html -D intersphinx_mapping="{}" p1-repos/LMCache/docs/source "$P1_DOC_CHECK/html"
+
+Running Sphinx v7.2.6
+
+Configuration error:
+There is a programmable error in your configuration file:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/sphinx/config.py", line 358, in eval_config_file
+    exec(code, namespace)  # NoQA: S102
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/docs/source/conf.py", line 18, in <module>
+    from sphinxawesome_theme import ThemeOptions
+ModuleNotFoundError: No module named 'sphinxawesome_theme'
+
+
+Exit code: 2

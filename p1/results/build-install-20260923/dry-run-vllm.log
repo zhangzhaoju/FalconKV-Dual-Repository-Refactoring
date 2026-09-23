@@ -1,0 +1,26 @@
+$ python3 -B p1-repos/vllm/p1_dev.py editable --output /tmp/p1-command-preview-vllm --dry-run
+
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "pip",
+    "--disable-pip-version-check",
+    "--no-cache-dir",
+    "install",
+    "--verbose",
+    "--no-index",
+    "--no-deps",
+    "--no-build-isolation",
+    "--force-reinstall",
+    "--config-settings",
+    "editable_mode=strict",
+    "--editable",
+    "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm"
+  ],
+  "output": "/tmp/p1-command-preview-vllm",
+  "executed": false
+}
+
+Exit code: 0

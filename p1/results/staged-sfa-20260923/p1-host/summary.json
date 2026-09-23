@@ -1,0 +1,133 @@
+{
+  "scope": "local_host_ast_and_mock_only",
+  "is_npu_acceptance": false,
+  "collected_at_utc": "2026-09-23T03:41:17.465582+00:00",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "pytest": "9.0.2",
+  "cases": [
+    {
+      "repository": "vllm",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm",
+      "expected_tests": 16,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/staged-sfa-20260923/p1-host/vllm.xml",
+        "tests/standalone/test_kv_transfer_lifetime.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "ca9a5ac8f1210c48923918c30321befdc229e5b3f7d00340a16e5cfd4014d7ee",
+      "elapsed_seconds": 0.546
+    },
+    {
+      "repository": "vllm-ascend",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend",
+      "expected_tests": 31,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/staged-sfa-20260923/p1-host/vllm-ascend.xml",
+        "tests/standalone/test_preemption_dispatch.py",
+        "tests/standalone/test_connector_control_idle.py",
+        "tests/standalone/test_checkpoint_graph_route.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 31,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "6300f1e0f23e036bd527662237d326ce030302308e97b8ad2e1a496dece256f5",
+      "elapsed_seconds": 0.946
+    },
+    {
+      "repository": "LMCache",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache",
+      "expected_tests": 39,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/staged-sfa-20260923/p1-host/LMCache.xml",
+        "tests/standalone/test_checkpoint_adapter.py",
+        "tests/standalone/test_checkpoint_idle_path.py",
+        "tests/standalone/test_checkpoint_reclaim.py",
+        "tests/standalone/test_checkpoint_wrapper.py"
+      ],
+      "returncode": 0,
+      "counts": {
+        "tests": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "18a4fbdbb0fc97591258f57277ce15418cf5fc103ae8ec3b4a76e6136e29afaf",
+      "elapsed_seconds": 2.857
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "source_directory": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/ascend",
+      "expected_tests": 26,
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "--noconftest",
+        "-c",
+        "/dev/null",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p1/results/staged-sfa-20260923/p1-host/LMCache-Ascend.xml",
+        "tests/standalone/test_checkpoint_dispatch.py",
+        "tests/standalone/test_checkpoint_initialization.py",
+        "tests/standalone/test_checkpoint_prefix_agreement.py",
+        "tests/standalone/test_cold_abort_completion.py"
+      ],
+      "returncode": 1,
+      "counts": {
+        "tests": 26,
+        "failures": 5,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log_sha256": "c63c959ffd3fdcc5227bfeac006d4d9df6ba3d79d8152a1ea1e86bc99ff07f10",
+      "elapsed_seconds": 3.538
+    }
+  ]
+}

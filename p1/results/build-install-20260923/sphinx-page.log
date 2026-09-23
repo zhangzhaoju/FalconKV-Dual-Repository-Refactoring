@@ -1,0 +1,29 @@
+Scope: new page only with built-in theme, NOT full repository Sphinx build.
+
+Page-only HTML output: /tmp/p1-lmcache-page.h7n0yCkm/html
+Running Sphinx v7.2.6
+making output directory... done
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [html]: targets for 1 source files that are out of date
+updating environment: [new config] 1 added, 0 changed, 0 removed
+[2Kreading sources... [100%] ascend_p1
+looking for now-outdated files... /home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/docs/source/getting_started/ascend_p1.rst:2: WARNING: Title underline too short.
+
+P1 Ascend build and development install
+======================================
+none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... copying static files... done
+copying extra files... done
+done
+[2Kwriting output... [100%] ascend_p1
+generating indices... genindex done
+writing additional pages... search done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+build finished with problems, 1 warning.
+
+Exit code: 1

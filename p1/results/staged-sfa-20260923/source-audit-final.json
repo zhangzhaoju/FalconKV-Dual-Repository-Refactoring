@@ -1,0 +1,123 @@
+{
+  "scope": "source_only_not_build_or_runtime",
+  "repositories": [
+    {
+      "repository": "vllm",
+      "donor_commit": "d22f0b7cffde1b6ddb87cb44368e46193e811cc9",
+      "unchanged_donor_files": 1514,
+      "intentional_adaptations": [
+        "ascend/csrc/build_aclnn.sh",
+        "ascend/tests/standalone/test_connector_control_idle.py",
+        "ascend/tests/standalone/test_glm52_topk_ownership.py",
+        "ascend/tests/standalone/test_mc2_recovery.py",
+        "ascend/tests/ut/attention/test_sfa_v1.py",
+        "ascend/vllm_ascend/attention/sfa_v1.py",
+        "ascend/vllm_ascend/attention/utils.py",
+        "ascend/vllm_ascend/core/recompute_scheduler.py",
+        "ascend/vllm_ascend/utils.py",
+        "ascend/vllm_ascend/worker/model_runner_v1.py"
+      ],
+      "missing_donor_files": [],
+      "base_production_changes": [],
+      "verified_source_updates": [
+        "ascend/tests/e2e/singlecard/test_sfa_event_handoff.py",
+        "ascend/tests/standalone/test_cold_resume_native_metadata.py",
+        "ascend/tests/standalone/test_glm52_topk_ownership.py",
+        "ascend/tests/standalone/test_mc2_recovery.py",
+        "ascend/tests/standalone/test_sparse_recovery_budget.py",
+        "ascend/tests/standalone/test_staged_dummy_capacity.py",
+        "ascend/tests/ut/attention/test_sfa_v1.py",
+        "ascend/tests/ut/compilation/test_sfa_event_handoff.py",
+        "ascend/tests/ut/ops/test_gate_linear.py",
+        "ascend/vllm_ascend/attention/sfa_v1.py",
+        "ascend/vllm_ascend/attention/utils.py",
+        "ascend/vllm_ascend/core/recompute_scheduler.py",
+        "ascend/vllm_ascend/ops/fused_moe/gate_linear.py",
+        "ascend/vllm_ascend/utils.py",
+        "ascend/vllm_ascend/worker/model_runner_v1.py",
+        "tests/v1/core/test_scheduler_bootstrap_state.py",
+        "vllm/v1/core/sched/scheduler.py"
+      ],
+      "parsed_runtime_python_files": 1779,
+      "submodules": [
+        {
+          "path": "ascend/csrc/third_party/catlass",
+          "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641",
+          "payload_present": false
+        }
+      ],
+      "distribution_version": "0.18.0+ascend.p1"
+    },
+    {
+      "repository": "LMCache",
+      "donor_commit": "d959c7a9640681e414dc9dbca644627af67a51e8",
+      "unchanged_donor_files": 283,
+      "intentional_adaptations": [
+        "ascend/CMakeLists.txt",
+        "ascend/lmcache_ascend/v1/cache_engine.py",
+        "ascend/tests/standalone/test_checkpoint_dispatch.py",
+        "ascend/tests/standalone/test_checkpoint_initialization.py",
+        "ascend/tests/standalone/test_checkpoint_miss_retry.py",
+        "ascend/tests/standalone/test_checkpoint_page_keys.py",
+        "ascend/tests/standalone/test_checkpoint_prefix_agreement.py",
+        "ascend/tests/standalone/test_cold_abort_completion.py",
+        "ascend/tests/standalone/test_dense_checkpoint_partial_pages.py",
+        "ascend/tests/standalone/test_local_checkpoint_restore.py",
+        "ascend/tests/standalone/test_preemption_checkpoint.py"
+      ],
+      "missing_donor_files": [],
+      "base_production_changes": [],
+      "verified_source_updates": [
+        "ascend/lmcache_ascend/v1/cache_engine.py",
+        "ascend/tests/v1/test_cache_engine_close_cpu.py",
+        "ascend/tests/v1/test_flat_store_tokens_cpu.py",
+        "ascend/tests/v1/test_sparse_chunk_plan.py",
+        "lmcache/integration/vllm/vllm_v1_adapter.py",
+        "lmcache/v1/shared_cpu_cache.py",
+        "tests/v1/test_shared_layer_page_handles.py",
+        "tests/v1/test_sparse_source_frontier.py"
+      ],
+      "parsed_runtime_python_files": 461,
+      "submodules": [
+        {
+          "path": "ascend/third_party/kvcache-ops",
+          "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5",
+          "payload_present": false
+        }
+      ],
+      "distribution_version": "0.4.3+ascend.p1"
+    }
+  ],
+  "errors": [],
+  "source_updates": {
+    "manifest": "/home/zhangzhaoju/Learn/code/falconkv/design/p1/baseline/staged-sfa-event-handoff-20260923.json",
+    "verified_files": [
+      "vllm/tests/v1/core/test_scheduler_bootstrap_state.py",
+      "vllm/vllm/v1/core/sched/scheduler.py",
+      "vllm/ascend/tests/e2e/singlecard/test_sfa_event_handoff.py",
+      "vllm/ascend/tests/standalone/test_cold_resume_native_metadata.py",
+      "vllm/ascend/tests/standalone/test_glm52_topk_ownership.py",
+      "vllm/ascend/tests/standalone/test_mc2_recovery.py",
+      "vllm/ascend/tests/standalone/test_sparse_recovery_budget.py",
+      "vllm/ascend/tests/standalone/test_staged_dummy_capacity.py",
+      "vllm/ascend/tests/ut/attention/test_sfa_v1.py",
+      "vllm/ascend/tests/ut/compilation/test_sfa_event_handoff.py",
+      "vllm/ascend/tests/ut/ops/test_gate_linear.py",
+      "vllm/ascend/vllm_ascend/attention/sfa_v1.py",
+      "vllm/ascend/vllm_ascend/attention/utils.py",
+      "vllm/ascend/vllm_ascend/core/recompute_scheduler.py",
+      "vllm/ascend/vllm_ascend/ops/fused_moe/gate_linear.py",
+      "vllm/ascend/vllm_ascend/utils.py",
+      "vllm/ascend/vllm_ascend/worker/model_runner_v1.py",
+      "LMCache/lmcache/integration/vllm/vllm_v1_adapter.py",
+      "LMCache/lmcache/v1/shared_cpu_cache.py",
+      "LMCache/tests/v1/test_shared_layer_page_handles.py",
+      "LMCache/tests/v1/test_sparse_source_frontier.py",
+      "LMCache/ascend/lmcache_ascend/v1/cache_engine.py",
+      "LMCache/ascend/tests/v1/test_cache_engine_close_cpu.py",
+      "LMCache/ascend/tests/v1/test_flat_store_tokens_cpu.py",
+      "LMCache/ascend/tests/v1/test_sparse_chunk_plan.py"
+    ],
+    "errors": []
+  }
+}

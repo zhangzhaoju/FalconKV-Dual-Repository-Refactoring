@@ -1,0 +1,6 @@
+$ env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 python3 -B -m pytest -q --tb=short --noconftest --import-mode=importlib -c /dev/null -p no:cacheprovider -o 'markers=cpu_test: dependency-light CPU tests' --junitxml=design/p1/results/build-install-20260923/sfa-light.xml p1-repos/vllm/tests/v1/core/test_scheduler_bootstrap_state.py p1-repos/vllm/ascend/tests/standalone/test_sparse_recovery_budget.py p1-repos/vllm/ascend/tests/standalone/test_staged_dummy_capacity.py p1-repos/LMCache/ascend/tests/v1/test_cache_engine_close_cpu.py
+
+.......................................................                  [100%]
+55 passed in 1.50s
+
+Exit code: 0

@@ -1,0 +1,9 @@
+............F..                                                          [100%]
+=================================== FAILURES ===================================
+__________ test_production_draft_expansion_can_exceed_target_capacity __________
+vllm-ascend/tests/standalone/test_mc2_recovery.py:131: in test_production_draft_expansion_can_exceed_target_capacity
+    import torch
+E   ModuleNotFoundError: No module named 'torch'
+=========================== short test summary info ============================
+FAILED ../../../../../dev::test_production_draft_expansion_can_exceed_target_capacity
+1 failed, 14 passed in 0.11s

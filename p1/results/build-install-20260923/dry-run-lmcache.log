@@ -1,0 +1,24 @@
+$ python3 -B p1-repos/LMCache/p1_dev.py build --output /tmp/p1-command-preview-lmcache --dry-run
+
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "pip",
+    "--disable-pip-version-check",
+    "--no-cache-dir",
+    "wheel",
+    "--verbose",
+    "--no-index",
+    "--no-deps",
+    "--no-build-isolation",
+    "--wheel-dir",
+    "/tmp/p1-command-preview-lmcache/wheels",
+    "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache"
+  ],
+  "output": "/tmp/p1-command-preview-lmcache",
+  "executed": false
+}
+
+Exit code: 0

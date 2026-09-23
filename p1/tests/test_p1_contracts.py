@@ -159,7 +159,7 @@ class P1Contracts(unittest.TestCase):
             tempfile.TemporaryDirectory() as directory,
             patch.object(builder, "ROOT", Path(directory)),
         ):
-            with self.assertRaisesRegex(RuntimeError, "materialize_submodules"):
+            with self.assertRaisesRegex(RuntimeError, "p1_dev.py materials"):
                 builder.verify_materials("vllm")
 
     def test_material_hashes_reject_changes_additions_and_wrong_commit(self):

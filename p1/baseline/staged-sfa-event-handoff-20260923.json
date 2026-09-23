@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "update_id": "staged-sfa-event-handoff-20260923",
+  "date": "2026-09-23",
+  "source_branch": "fix/staged-sfa-event-handoff",
+  "scope": "Merge current fix-branch deltas only; no device/model pruning or build/runtime acceptance.",
+  "base_manifest": "source-manifest.json",
+  "base_manifest_sha256": "4d627352b90cc7cc71ebea16c5ef009231498ca007eb7bedef3fc757ce6d2d61",
+  "backup_branch": "backup/pre-staged-sfa-event-handoff-20260923",
+  "sources": [
+    {
+      "repository": "vllm",
+      "previous_baseline_commit": "ded5ce2a5388e1abb799d9b099849f3bd4a72360",
+      "fix_branch_commit": "b9b18239ebea064e61e2622c78da1c43746ea63e",
+      "merge_commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de",
+      "baseline_commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de"
+    },
+    {
+      "repository": "vllm-ascend",
+      "previous_baseline_commit": "d22f0b7cffde1b6ddb87cb44368e46193e811cc9",
+      "fix_branch_commit": "6fc30da651cd018f843753254114cc2321f47e89",
+      "merge_commit": "c458c17ecfe2c618be7616b01fab5ab7a81180b2",
+      "baseline_commit": "2e48d7a61d9fab3d40babbacaecf95a76cfb0e06"
+    },
+    {
+      "repository": "LMCache",
+      "previous_baseline_commit": "802e4167afa75c1601b9f9d8619672a686b416bd",
+      "fix_branch_commit": "22747f0256f32c4b377ea7d970d505681c0bccde",
+      "merge_commit": "d24029eddf358bb139b66023ab21364ef4d438b4",
+      "baseline_commit": "d24029eddf358bb139b66023ab21364ef4d438b4"
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "previous_baseline_commit": "d959c7a9640681e414dc9dbca644627af67a51e8",
+      "fix_branch_commit": "e18b939e8f8c2d20ba0a9ecd1692a6f3e5bb1dab",
+      "merge_commit": "3452df44e66ce8a217c4badfe32d73783e66bd2d",
+      "baseline_commit": "3452df44e66ce8a217c4badfe32d73783e66bd2d"
+    }
+  ],
+  "p1_parent_commits": {
+    "vllm": "89a40e2a3e53465907763cfd8fa692723b45b2b0",
+    "LMCache": "5b09009c5264cb61d204b7660ae400b4392db46a"
+  },
+  "p1_integration_commits": {
+    "vllm": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+    "LMCache": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb"
+  },
+  "files": [
+    {
+      "source_repository": "vllm",
+      "source": "tests/v1/core/test_scheduler_bootstrap_state.py",
+      "repository": "vllm",
+      "destination": "tests/v1/core/test_scheduler_bootstrap_state.py",
+      "kind": "added",
+      "source_sha256": "5a2d5d1869efae90d85cce594a6d26f907a13821cfa49708df0dfe785acb8984",
+      "sha256_after_integration": "5a2d5d1869efae90d85cce594a6d26f907a13821cfa49708df0dfe785acb8984",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm",
+      "source": "vllm/v1/core/sched/scheduler.py",
+      "repository": "vllm",
+      "destination": "vllm/v1/core/sched/scheduler.py",
+      "kind": "modified",
+      "source_sha256": "d813630f091ff0c4587a903e226155068b414666cd97957e7bee55703a902200",
+      "sha256_after_integration": "d813630f091ff0c4587a903e226155068b414666cd97957e7bee55703a902200",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/e2e/singlecard/test_sfa_event_handoff.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/e2e/singlecard/test_sfa_event_handoff.py",
+      "kind": "added",
+      "source_sha256": "74ecbbc2270084d0ae9c13324de734c81774a752e27c5526fca80d5efe705ada",
+      "sha256_after_integration": "74ecbbc2270084d0ae9c13324de734c81774a752e27c5526fca80d5efe705ada",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_cold_resume_native_metadata.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_cold_resume_native_metadata.py",
+      "kind": "added",
+      "source_sha256": "4c892c9c61bb1825b047b1e6a12056b4e564c555b69894a913e1c34ede384216",
+      "sha256_after_integration": "1a6b3304cbdf1275a89f9d0169381e590d9c03e34715516b2e0ae68ed74738ba",
+      "adaptation": "Use p1-repos/LMCache instead of the original LMCache-NPU sibling; assertions unchanged."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_glm52_topk_ownership.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_glm52_topk_ownership.py",
+      "kind": "modified",
+      "source_sha256": "a608a36b3f7df0e2303f52739e71a2205332ee0e70afedf369068043dbbaffe9",
+      "sha256_after_integration": "a608a36b3f7df0e2303f52739e71a2205332ee0e70afedf369068043dbbaffe9",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_mc2_recovery.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_mc2_recovery.py",
+      "kind": "modified",
+      "source_sha256": "75be50cde6dc3aba446cb75dce02000f07443820cf190968a2cee32e598d75ea",
+      "sha256_after_integration": "e95d20711dcc37ff57853f4be0bf0d64b0575e8684ab20a52f417cf4ed1f8c6a",
+      "adaptation": "Retain existing P1 WORKSPACE mapping for nested ascend/; merge the new regression assertions."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_sparse_recovery_budget.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_sparse_recovery_budget.py",
+      "kind": "added",
+      "source_sha256": "5258dcf3b7f8af3b0c1ca96f9244d5c16cdb6a0eb18515a6a3365f5d6838d278",
+      "sha256_after_integration": "c3a9972c2bc1e9f68371cc3f038029b1cd98b8acf72ec6454df1104374f8e61d",
+      "adaptation": "Remove duplicate vllm path component under nested ascend/; assertions unchanged."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_staged_dummy_capacity.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_staged_dummy_capacity.py",
+      "kind": "added",
+      "source_sha256": "e29c36cc81f1a570490e75478ef7122b1ef717b789aa01f58472f9fe2fac5861",
+      "sha256_after_integration": "e29c36cc81f1a570490e75478ef7122b1ef717b789aa01f58472f9fe2fac5861",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/attention/test_sfa_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/attention/test_sfa_v1.py",
+      "kind": "modified",
+      "source_sha256": "f6feab43e1d6970628b1ff5a3a40f098f094b33de21745e1fcc146df14729946",
+      "sha256_after_integration": "f6feab43e1d6970628b1ff5a3a40f098f094b33de21745e1fcc146df14729946",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/compilation/test_sfa_event_handoff.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/compilation/test_sfa_event_handoff.py",
+      "kind": "added",
+      "source_sha256": "edeb22b0d62c216eaf925329d789871e89fb699b31dbcccedba0a4d1bd47488f",
+      "sha256_after_integration": "edeb22b0d62c216eaf925329d789871e89fb699b31dbcccedba0a4d1bd47488f",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/ops/test_gate_linear.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/ops/test_gate_linear.py",
+      "kind": "added",
+      "source_sha256": "3bb4041463d63779579e5d94b04410731556b1e481489903bd1396571af803e6",
+      "sha256_after_integration": "3bb4041463d63779579e5d94b04410731556b1e481489903bd1396571af803e6",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/attention/sfa_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/attention/sfa_v1.py",
+      "kind": "modified",
+      "source_sha256": "de6bb209514b4f4bc8ed2ebf2e68d462def90dffddeb8548a23e5a8fb8b20110",
+      "sha256_after_integration": "de6bb209514b4f4bc8ed2ebf2e68d462def90dffddeb8548a23e5a8fb8b20110",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/attention/utils.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/attention/utils.py",
+      "kind": "modified",
+      "source_sha256": "59bf52bb8e71753588ac687d0a8cee872c1d84d1c76696ec03626c036ee98d12",
+      "sha256_after_integration": "59bf52bb8e71753588ac687d0a8cee872c1d84d1c76696ec03626c036ee98d12",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/core/recompute_scheduler.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/core/recompute_scheduler.py",
+      "kind": "modified",
+      "source_sha256": "1d5cddb0dbbdda56b88aa9b05d273c6b9314185f00f860d88c30720d7a4b9f8e",
+      "sha256_after_integration": "1d5cddb0dbbdda56b88aa9b05d273c6b9314185f00f860d88c30720d7a4b9f8e",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/ops/fused_moe/gate_linear.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/ops/fused_moe/gate_linear.py",
+      "kind": "added",
+      "source_sha256": "c165fd0e3724da80ecddca60cdb8a3af88c172304fb1893e44c0b1558ae2a1f6",
+      "sha256_after_integration": "c165fd0e3724da80ecddca60cdb8a3af88c172304fb1893e44c0b1558ae2a1f6",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/utils.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/utils.py",
+      "kind": "modified",
+      "source_sha256": "d4d1ff3e13a4d13741c93ed02a373701226bde6d632b5e34bcd121563012cc83",
+      "sha256_after_integration": "d4d1ff3e13a4d13741c93ed02a373701226bde6d632b5e34bcd121563012cc83",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/worker/model_runner_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/worker/model_runner_v1.py",
+      "kind": "modified",
+      "source_sha256": "cb128975cb9954f20b73861e61436caf5cb23447393f088c30568936966babfc",
+      "sha256_after_integration": "cb128975cb9954f20b73861e61436caf5cb23447393f088c30568936966babfc",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "repository": "LMCache",
+      "destination": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "kind": "modified",
+      "source_sha256": "3bf97039bc198f3a2f2c16d3d59610e900d888505fe4500c7f1766a262df5dc4",
+      "sha256_after_integration": "3bf97039bc198f3a2f2c16d3d59610e900d888505fe4500c7f1766a262df5dc4",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "lmcache/v1/shared_cpu_cache.py",
+      "repository": "LMCache",
+      "destination": "lmcache/v1/shared_cpu_cache.py",
+      "kind": "modified",
+      "source_sha256": "9e4860ae4ff0917f1619f55711b097dbe1d6b2ddd7d88a684886b80e0a3acdb8",
+      "sha256_after_integration": "9e4860ae4ff0917f1619f55711b097dbe1d6b2ddd7d88a684886b80e0a3acdb8",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "tests/v1/test_shared_layer_page_handles.py",
+      "repository": "LMCache",
+      "destination": "tests/v1/test_shared_layer_page_handles.py",
+      "kind": "added",
+      "source_sha256": "33d32e3d1c03869a5c7dba6d5e2cb13c66fbea97d94583054e72d171a4702407",
+      "sha256_after_integration": "33d32e3d1c03869a5c7dba6d5e2cb13c66fbea97d94583054e72d171a4702407",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "tests/v1/test_sparse_source_frontier.py",
+      "repository": "LMCache",
+      "destination": "tests/v1/test_sparse_source_frontier.py",
+      "kind": "added",
+      "source_sha256": "e2baf057c5d551ac210ae3343bb08431ceea6e2cc0254966dba49f7f6d2036f2",
+      "sha256_after_integration": "e2baf057c5d551ac210ae3343bb08431ceea6e2cc0254966dba49f7f6d2036f2",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "lmcache_ascend/v1/cache_engine.py",
+      "repository": "LMCache",
+      "destination": "ascend/lmcache_ascend/v1/cache_engine.py",
+      "kind": "modified",
+      "source_sha256": "61e0389ecec7930389d8961a2d0242736c2aec2ae20f96635561e8a6fec572ba",
+      "sha256_after_integration": "61e0389ecec7930389d8961a2d0242736c2aec2ae20f96635561e8a6fec572ba",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_cache_engine_close_cpu.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_cache_engine_close_cpu.py",
+      "kind": "added",
+      "source_sha256": "d0eacf33a9bd7947175de1e949c0b020253a5142bd29f0cc112456e157604ac9",
+      "sha256_after_integration": "d0eacf33a9bd7947175de1e949c0b020253a5142bd29f0cc112456e157604ac9",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_flat_store_tokens_cpu.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_flat_store_tokens_cpu.py",
+      "kind": "added",
+      "source_sha256": "93f242435bda5de4fa0bd3ad1f46e3e496396f3b466223b67e65e45bc8a62677",
+      "sha256_after_integration": "73832c7f76534627862b6cfba7de092b346f11fc492bb95a3141dc742025be7e",
+      "adaptation": "Use combined LMCache repository root for imports instead of a sibling checkout; assertions unchanged."
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_sparse_chunk_plan.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_sparse_chunk_plan.py",
+      "kind": "added",
+      "source_sha256": "e7db1eb24b488986c0f5fb85ca277bff85d3648607f1f112fa979d9828d0e921",
+      "sha256_after_integration": "e7db1eb24b488986c0f5fb85ca277bff85d3648607f1f112fa979d9828d0e921",
+      "adaptation": "none"
+    }
+  ]
+}

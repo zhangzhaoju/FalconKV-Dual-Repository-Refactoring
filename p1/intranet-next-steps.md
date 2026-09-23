@@ -1,98 +1,186 @@
-# P1 内网执行步骤
+# P1 内网执行步骤（固定 p1-repos 布局）
 
-适用：已授权的 P1 首批双仓源码，不适用于原四仓的旧安装命令。所有编译、sdist/wheel、安装和 NPU 验证都在内网完成；本机仅提供源码和审计工具。当前服务继续保留，基线由其他开发人员验证后归档。
+适用：已授权的 P1 双仓源码及本批修复，不适用于原四仓的旧安装命令。所有编译、sdist/wheel、安装和 NPU 验证都在内网完成；本机仅提供源码和审计工具。当前服务继续保留，基线由其他开发人员验证后归档。
 
-## 1. 交付与源码目录
+2026-09-23 更新：在 `fix/staged-sfa-event-handoff` 修复之上，两仓补齐独立 `p1_dev.py` 材料核验、wheel 构建/安装、strict editable 开发安装与路径验证入口；每次原生编译使用新目录。**本批仅在本地提交，尚未推送 GitHub；内网开始前须先经授权发布或交接，直接 git pull 目前不会取得本批代码。** 固定提交以下文为准，不用旧 main 或 source-01 搭配新清单。
 
-本机开发入口已改为 `p1-repos/vllm` 和 `p1-repos/LMCache` 两个独立仓，旧 `p1-worktrees/` 已移除。内网可选择 **Git 拉取**或**普通源码归档**，两条路线不要混用同一目标目录。不重新执行 `prepare_worktrees.py`，不修改或覆盖原四仓。
+**正式 P1 验收按本文执行；日常编译、安装与修改 Python 调测按[开发调测指南](development-build-install.md)执行。** editable 不是 P1 出口，首次仍完整编译；不得在现有 GLM 服务容器安装。本批累积清单为 `baseline/p1-build-install-20260923.json`，保留上一批[修复合入记录](staged-sfa-event-handoff-integration.md)及 25 个修复文件的来源证据。
 
-两条路线都需要单独同步本次更新后的整个 `design/p1`（包含 `tools/`、`tests/`、`profile.json`、`baseline/source-manifest.json`；可排除 bundle、大型 deliveries 目录）。这些工具不在两个新代码仓中，不要假设 Git clone 后自然存在。内网报告原件仍留在内网，不因代码仓公开而公开上传。
+2026-09-21 更新：用户确认内网与本机布局相同，都是在工作区根目录创建 `p1-repos`，再从 Git 下载两个新仓。下文据此使用已有克隆，不要求移动仓库或反复联网克隆；旧 `p1-worktrees` 不再使用。
 
-先在内网建立新的验证目录；使用归档路线时，以已上传归档所在目录为当前目录：
+## 1. 固定源码位置与本次验证批次
+
+内网工作区根目录按 `/workspace/zzj` 举例；如果实际位置不同，只修改 `P1_ROOT`。目录职责如下：
+
+| 路径 | 用途 |
+| --- | --- |
+| `/workspace/zzj/p1-repos/vllm` | 长期保留的 vllm-dual Git 克隆 |
+| `/workspace/zzj/p1-repos/LMCache` | 长期保留的 LMCache-dual Git 克隆，注意大小写 |
+| `/workspace/zzj/design/p1` | 单独同步的检查工具、测试、profile 和来源清单 |
+| `/workspace/zzj/p1-repos/p1-check` | 已有报告保留；新运行使用其中新的 `run.XXXXXXXX` 子目录 |
+| `p1-check/run.XXXXXXXX/source/{vllm,LMCache}` | 从固定 Git 提交导出的本批构建副本，不是新增 Git 仓库 |
+| `p1-check/run.XXXXXXXX/{wheels,sdist,rebuilt-wheels}` | 仅本批产物，不混用旧产物 |
+
+旧版的 `stale ACLNN artifacts` 与本机/内网路径相同无关。新版 backend 每次都在实际源码目录下新建 `build/p1-native/run-*`，不复用旧 ACLNN 源码副本或 LMCache 已链接的设备对象；保留失败现场，不要求手动 mkdir 或删除 build。本正式验收流程仍每批导出固定提交，以明确产物来源；开发路线允许在长期源码目录反复编译。
+
+先单独同步本次更新后的 `design/p1`，至少包含 `tools/`、`tests/`、`profile.json`、本文、开发指南、`baseline/source-manifest.json` 和 `baseline/p1-build-install-20260923.json`。两仓携带自己的 `p1_dev.py` 与轻量测试，但不包含外层正式验收工具；不重新执行 `prepare_worktrees.py`。原 `source-01` 归档继续保留，不与本次 Git 路线混装。
+
+### 1.1 初始化变量和失败即停的日志入口
+
+以下第 1～4 节在同一个专用 Bash 会话、同一个内网隔离构建容器执行。不要放在承载现有 GLM 服务的容器中安装依赖。新开会话重试时，从本节重新执行，产生新的批次；不要手动将 `P1_RUN` 指回已有批次。
 
 ```bash
 set -euo pipefail
-P1_RUN=$(mktemp -d /workspace/p1-validation.XXXXXXXX)
+export P1_ROOT=/workspace/zzj
+export P1_SOURCE_WORKSPACE="$P1_ROOT/p1-repos"
+export P1_TOOLS="$P1_ROOT/design/p1/tools"
+P1_VLLM_COMMIT=ba361feb8d13d2377698ec758cdf644fc00063be
+P1_LMCACHE_COMMIT=11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3
+test -f "$P1_TOOLS/audit_sources.py"
+test -f "$P1_TOOLS/materialize_submodules.py"
+test -f "$P1_TOOLS/../baseline/source-manifest.json"
+test -f "$P1_TOOLS/../baseline/p1-build-install-20260923.json"
+mkdir -p "$P1_SOURCE_WORKSPACE/p1-check"
+P1_RUN=$(mktemp -d "$P1_SOURCE_WORKSPACE/p1-check/run.XXXXXXXX")
 export P1_RUN
-mkdir "$P1_RUN/source"
-export P1_SOURCE_WORKSPACE="$P1_RUN/source"
-export P1_TOOLS=/workspace/zzj/design/p1/tools
+export P1_BUILD_WORKSPACE="$P1_RUN/source"
+mkdir "$P1_BUILD_WORKSPACE"
+printf '本次报告目录：%s\n' "$P1_RUN"
+
+p1_step() {
+  local p1_name=$1
+  shift
+  local p1_log="$P1_RUN/$p1_name.log"
+  local p1_rc
+  if [ -e "$p1_log" ] || [ -e "$P1_RUN/$p1_name.exitcode" ]; then
+    printf 'STOP: 不覆盖已有步骤，请新建批次：%s\n' "$p1_name" >&2
+    exit 1
+  fi
+  if "$@" > "$p1_log" 2>&1; then
+    printf '0\n' > "$P1_RUN/$p1_name.exitcode"
+    printf 'PASS: %s\n' "$p1_name"
+  else
+    p1_rc=$?
+    printf '%s\n' "$p1_rc" > "$P1_RUN/$p1_name.exitcode"
+    tail -n 60 "$p1_log" >&2
+    printf 'STOP: %s；完整日志：%s\n' "$p1_name" "$p1_log" >&2
+    exit "$p1_rc"
+  fi
+}
 ```
 
-将 P1_TOOLS 改成实际上传路径；后续命令使用同一个 shell。原仓路径仍按 `/workspace/zzj/{vllm,vllm-ascend,LMCache,LMCache-Ascend}` 举例，不在其下安装或覆盖文件。P1_RUN 是全新目录。
+`P1_SOURCE_WORKSPACE` 始终指向已克隆的 `p1-repos`；`P1_BUILD_WORKSPACE` 指向本批副本。本文后面的审计、host、构建均针对后者。不要把二者改成同一路径；长期源码调测另走开发指南，不能把其结果混作本批 wheel 验收。
 
-### 1.1 Git 拉取（推荐，经允许的 proxy）
+### 1.2 核对已有 Git 克隆和配对版本
 
-以下固定到本批已发布的两个 P1 提交，不把未来变化的 `main` 直接当作本批基线。仅对新建验证副本使用 detached HEAD；本机日常开发仍在 `p1-repos` 的 `main` 或工作分支。
+已经克隆的目录不会再次 clone。下面的条件分支只用于尚无代码的全新环境；网络只用于批准的 proxy/Git 来源，不自动配置代理或回退直连。
 
 ```bash
-git clone --single-branch --branch main --no-tags --no-recurse-submodules \
-  https://github.com/zhangzhaoju/vllm-dual.git "$P1_SOURCE_WORKSPACE/vllm"
-git clone --single-branch --branch main --no-tags --no-recurse-submodules \
-  https://github.com/zhangzhaoju/LMCache-dual.git "$P1_SOURCE_WORKSPACE/LMCache"
-git -C "$P1_SOURCE_WORKSPACE/vllm" switch --detach \
-  b2025e53890eb9b65db3cfacba8e0237bea9654d
-git -C "$P1_SOURCE_WORKSPACE/LMCache" switch --detach \
-  5b09009c5264cb61d204b7660ae400b4392db46a
-test "$(git -C "$P1_SOURCE_WORKSPACE/vllm" rev-parse HEAD)" = \
-  b2025e53890eb9b65db3cfacba8e0237bea9654d
-test "$(git -C "$P1_SOURCE_WORKSPACE/LMCache" rev-parse HEAD)" = \
-  5b09009c5264cb61d204b7660ae400b4392db46a
+if [ ! -e "$P1_SOURCE_WORKSPACE/vllm" ]; then
+  p1_step clone-vllm git clone --single-branch --branch main --no-tags \
+    --no-recurse-submodules https://github.com/zhangzhaoju/vllm-dual.git \
+    "$P1_SOURCE_WORKSPACE/vllm"
+fi
+if [ ! -e "$P1_SOURCE_WORKSPACE/LMCache" ]; then
+  p1_step clone-lmcache git clone --single-branch --branch main --no-tags \
+    --no-recurse-submodules https://github.com/zhangzhaoju/LMCache-dual.git \
+    "$P1_SOURCE_WORKSPACE/LMCache"
+fi
+for p1_repo in vllm LMCache; do
+  test -d "$P1_SOURCE_WORKSPACE/$p1_repo/.git"
+  p1_step "source-status-$p1_repo" git -C "$P1_SOURCE_WORKSPACE/$p1_repo" \
+    status --short --branch --untracked-files=normal
+  p1_step "source-clean-$p1_repo" git -C "$P1_SOURCE_WORKSPACE/$p1_repo" \
+    diff --exit-code --ignore-submodules=all HEAD --
+done
+test "$(git -C "$P1_SOURCE_WORKSPACE/vllm" rev-parse HEAD)" = "$P1_VLLM_COMMIT" || {
+  printf 'STOP: vllm HEAD 与本批配对版本不符，请先核对，不能强制覆盖。\n' >&2
+  exit 1
+}
+test "$(git -C "$P1_SOURCE_WORKSPACE/LMCache" rev-parse HEAD)" = "$P1_LMCACHE_COMMIT" || {
+  printf 'STOP: LMCache HEAD 与本批配对版本不符，请先核对，不能强制覆盖。\n' >&2
+  exit 1
+}
+printf 'vllm %s\nLMCache %s\n' "$P1_VLLM_COMMIT" "$P1_LMCACHE_COMMIT" \
+  > "$P1_RUN/source-commits.txt"
 ```
 
-不要加 `--recurse-submodules`，也不要先运行 `git submodule update`：第 2 节复用内网原仓的固定材料，填充工具拒绝覆盖非空子模块目录。按内网策略预先配置代理与 CA；代理失败时停止，不回退公网直连。
+本批固定为 2026-09-23 修复的两个本地新提交，须先完成批准的发布/交接再在内网使用；不要把 SHA 改回旧发布版本以绕过检查，也不能直接追随浮动 `main`。发现未提交源码改动时先由负责人保存并审核，不使用 `reset --hard`、`git clean` 或强制切分支。已有未跟踪材料、构建结果与子模块工作目录不参与下面的 Git 快照导出；它们不会被删除，固定材料在第 2 节重新核验。
 
-### 1.2 普通源码归档（可选，不执行 1.1）
-
-原 `design/p1/deliveries/source-01/` 仍可作为已冻结的初始交付，不覆盖它。后续需要新包时，在本机工作区根目录核对 `p1-repos` 的改动与源码审计后，使用全新批次名，例如：
+### 1.3 从已有 Git 提交导出干净的构建副本
 
 ```bash
-python3 -B design/p1/tools/export_sources.py \
-  --workspace p1-repos --output design/p1/deliveries/source-02
+mkdir "$P1_BUILD_WORKSPACE/vllm" "$P1_BUILD_WORKSPACE/LMCache"
+p1_step snapshot-vllm git -C "$P1_SOURCE_WORKSPACE/vllm" archive \
+  --format=tar --output="$P1_RUN/vllm-source.tar" "$P1_VLLM_COMMIT"
+p1_step snapshot-lmcache git -C "$P1_SOURCE_WORKSPACE/LMCache" archive \
+  --format=tar --output="$P1_RUN/LMCache-source.tar" "$P1_LMCACHE_COMMIT"
+p1_step unpack-vllm tar -xf "$P1_RUN/vllm-source.tar" -C "$P1_BUILD_WORKSPACE/vllm"
+p1_step unpack-lmcache tar -xf "$P1_RUN/LMCache-source.tar" -C "$P1_BUILD_WORKSPACE/LMCache"
+sha256sum "$P1_RUN/vllm-source.tar" "$P1_RUN/LMCache-source.tar" \
+  > "$P1_RUN/source-tars.sha256"
+test ! -e "$P1_BUILD_WORKSPACE/vllm/build"
+test ! -e "$P1_BUILD_WORKSPACE/LMCache/build"
 ```
 
-导出工具包含当前工作目录中未提交的源码，不等同于 `git archive HEAD`；打包前检查待交付内容。该命令只是普通源码打包，不调用 build backend，不能称为 sdist/wheel。若 `source-02` 已存在，改用下一批次，不覆盖旧包。
-
-上传两份源码包及 `SHA256SUMS`、`delivery-manifest.json`；内网在该批交付目录中执行：
-
-```bash
-sha256sum --check SHA256SUMS
-tar -xzf vllm-p1-source.tar.gz -C "$P1_RUN/source"
-tar -xzf LMCache-p1-source.tar.gz -C "$P1_RUN/source"
-```
+这是普通 Git 源码快照，不是调用 backend 的 sdist；它只包含已提交内容，不复制长期 Git 克隆中残留的 `build/`、忽略文件、材料清单或子模块载荷。不对整个 `p1-repos` 执行递归拷贝，以免把已有 `p1-check` 一并带进新批次。
 
 ## 2. 复用固定子模块并检查源码
 
-Git 交付有一项非运行时说明文件需补齐：原 `ascend/.claude/README.md` 被忽略规则排除，未进入 `vllm-dual` 的提交，但历史来源清单要求保留。下面仅在文件不存在时从原 `vllm-ascend` 固定提交提取这一文件，并核对 SHA-256；已有文件不覆盖，内容不符立即停止。普通归档通常已包含该文件，仍执行哈希检查。此步骤不启动或调用任何 AI 服务。
+Git 交付有一项非运行时说明文件需补齐：原 `ascend/.claude/README.md` 被忽略规则排除，未进入 `vllm-dual` 的提交，但历史来源清单要求保留。仅向本批副本补齐；下面从原 `vllm-ascend` 固定提交提取这一文件并核对 SHA-256，已有文件不覆盖，内容不符立即停止。即使长期 Git 克隆中已补过，该忽略文件也不会自动进入新的 Git 快照。此步骤不启动或调用任何 AI 服务。
 
 ```bash
-P1_DONOR_NOTE="$P1_SOURCE_WORKSPACE/vllm/ascend/.claude/README.md"
+P1_DONOR_NOTE="$P1_BUILD_WORKSPACE/vllm/ascend/.claude/README.md"
 if [ ! -e "$P1_DONOR_NOTE" ]; then
-  git -C /workspace/zzj/vllm-ascend archive \
-    d22f0b7cffde1b6ddb87cb44368e46193e811cc9 .claude/README.md |
-    tar -xf - -C "$P1_SOURCE_WORKSPACE/vllm/ascend"
+  p1_step donor-note-export git -C "$P1_ROOT/vllm-ascend" archive \
+    --format=tar --output="$P1_RUN/donor-note.tar" \
+    d22f0b7cffde1b6ddb87cb44368e46193e811cc9 .claude/README.md
+  p1_step donor-note-unpack tar -xf "$P1_RUN/donor-note.tar" \
+    -C "$P1_BUILD_WORKSPACE/vllm/ascend"
 fi
 printf '91098ed23a7967cf5942b00d92e51b0a6b515f5f7ed416457afd0c7396b126b0  %s\n' \
-  "$P1_DONOR_NOTE" | sha256sum --check -
+  "$P1_DONOR_NOTE" | sha256sum --check - || exit 1
 ```
 
-该步骤只读取原始内网子模块，向新交付目录写入快照及材料清单，不联网。工具要求原子模块 HEAD 精确匹配且工作区干净；不符合时先由材料负责人核实，不能 reset/checkout 掩盖已有改动。
+以下步骤只读取内网保留的原 `vllm-ascend/csrc/third_party/catlass` 和 `LMCache-Ascend/third_party/kvcache-ops` 子模块，向本批副本写入快照及材料清单，不联网。工具要求原子模块 HEAD 精确匹配且工作区干净。若环境只有两个新仓、没有这些原始材料，先由材料负责人补齐，不能把新仓中的空 gitlink 当作完整源码。不要对本批副本执行 `git submodule update`，也不要对已填充目标重复运行材料脚本。
 
 ```bash
-python -B "$P1_TOOLS/materialize_submodules.py" \
-  --sources /workspace/zzj --destination "$P1_SOURCE_WORKSPACE"
-python -B "$P1_TOOLS/audit_sources.py" \
-  --workspace "$P1_SOURCE_WORKSPACE" \
+p1_step materialize python -B "$P1_TOOLS/materialize_submodules.py" \
+  --sources "$P1_ROOT" --destination "$P1_BUILD_WORKSPACE"
+p1_step source-audit python -B "$P1_TOOLS/audit_sources.py" \
+  --workspace "$P1_BUILD_WORKSPACE" \
   --manifest "$P1_TOOLS/../baseline/source-manifest.json" \
+  --updates "$P1_TOOLS/../baseline/p1-build-install-20260923.json" \
   --output "$P1_RUN/source-audit.json"
-python -B -m unittest discover -s "$P1_TOOLS/../tests" -v
-python -B "$P1_TOOLS/run_host_checks.py" \
-  --workspace "$P1_SOURCE_WORKSPACE" --output "$P1_RUN/host"
+p1_step contracts env P1_SOURCE_WORKSPACE="$P1_BUILD_WORKSPACE" \
+  python -B -m unittest discover -s "$P1_TOOLS/../tests" -v
+p1_step cmake-entry python -B \
+  "$P1_BUILD_WORKSPACE/vllm/tests/standalone/test_p1_cmake.py" -v
+p1_step dev-vllm python -B \
+  "$P1_BUILD_WORKSPACE/vllm/tests/standalone/test_p1_development.py" -v
+p1_step dev-lmcache python -B \
+  "$P1_BUILD_WORKSPACE/LMCache/tests/standalone/test_p1_development.py" -v
+p1_step dev-resources python -B \
+  "$P1_BUILD_WORKSPACE/vllm/ascend/tests/standalone/test_p1_resources.py" -v
+p1_step sfa-light env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 \
+  python -B -m pytest -q --tb=short --noconftest --import-mode=importlib \
+  -c /dev/null -p no:cacheprovider \
+  -o 'markers=cpu_test: dependency-light CPU tests' \
+  --junitxml="$P1_RUN/sfa-light.xml" \
+  "$P1_BUILD_WORKSPACE/vllm/tests/v1/core/test_scheduler_bootstrap_state.py" \
+  "$P1_BUILD_WORKSPACE/vllm/ascend/tests/standalone/test_sparse_recovery_budget.py" \
+  "$P1_BUILD_WORKSPACE/vllm/ascend/tests/standalone/test_staged_dummy_capacity.py" \
+  "$P1_BUILD_WORKSPACE/LMCache/ascend/tests/v1/test_cache_engine_close_cpu.py"
+p1_step host env PYTHONPATH="$P1_BUILD_WORKSPACE/LMCache" \
+  python -B "$P1_TOOLS/run_host_checks.py" \
+  --workspace "$P1_BUILD_WORKSPACE" --output "$P1_RUN/host"
 ```
 
-固定提交：CATLASS `716fd7baa7fb7f6cac0488bb628fd1dd0e875641`；kvcache-ops `9f18d2339bc58a43429f7d5bdaef1628c820eff5`。构建 helper 重新校验清单内全部文件，校验失败就停止。重复执行请重新解包到新目录，不覆盖已经填充的子模块。
+固定提交：CATLASS `716fd7baa7fb7f6cac0488bb628fd1dd0e875641`；kvcache-ops `9f18d2339bc58a43429f7d5bdaef1628c820eff5`。构建 helper 重新校验清单内全部文件。任何缺文件、非预期改动或失败退出都必须处理，不能修改清单或跳过失败来继续构建。
 
-host 门槛仍为 16+31+39+26=112 项通过，0 fail/error/skip。pytest 已安装，不需要再次安装。这个子集不初始化 NPU，但部分用例需要已有 torch；不能跳过失败来凑通过数。
+本批来源审计同时读取不可改写的历史清单与累积更新清单：既检查上一批 25 个修复文件，也检查本批构建/安装、路径适配、测试及仓内文档的精确哈希。约束测试 24 项、CMake 解析 5 项、新开发安装测试 21+21+2 项、SFA 轻量回归 55 项，均须通过且无 skip。native 命令在轻量测试中使用模拟文件，不触发原生构建，不替代真实 NPU 事件回放及完整 torch/框架测试；待补项见[合入记录第 6 节](staged-sfa-event-handoff-integration.md#6-内网剩余验证)。
+
+host 门槛仍为 16+31+39+26=112 项通过，0 fail/error/skip。pytest 已安装，不需要再次安装，部分用例仍需已有 torch。本批旧报告的 5 项错误是 `No module named 'lmcache'`：测试从 `LMCache/ascend` 启动，但需要导入父级源码包。上面的 `env PYTHONPATH=...` 只给 host 检查及其子进程添加**本批 LMCache 源码**，不安装旧插件、不跳过断言，也不改变当前 shell 的 PYTHONPATH；不要将该设置 export 到后续 wheel 安装或运行验收。路径修正是否消除全部失败，以新 112 项报告为准。
 
 ## 3. 在隔离构建容器核对依赖
 
@@ -114,74 +202,117 @@ export VLLM_USE_PRECOMPILED=0
 export USE_HIXL=1
 export BUILD_MOONCAKE=0
 export MAX_JOBS=8
-python -B "$P1_TOOLS/preflight.py" \
-  --workspace "$P1_SOURCE_WORKSPACE" --output "$P1_RUN/preflight-01.json"
+p1_step preflight python -B "$P1_TOOLS/preflight.py" \
+  --workspace "$P1_BUILD_WORKSPACE" --output "$P1_RUN/preflight-01.json"
 ```
 
-预检不导入 torch/NPU，不安装任何包；非零退出先处理报告。本轮以 `USE_HIXL=1` 构建 CANN 8.5.1 对应的 HIXL/hcomm 模块，运行时通道仍需按服务实际配置验证，不能据此认定全部传输能力通过。
+预检不导入 torch/NPU，不安装任何包；必须退出 0 且报告 `passed=true`，否则会停止本批流程。先在隔离构建容器补齐缺失项，再从第 1 节建立新批次复测，不能沿用旧失败报告。本轮以 `USE_HIXL=1` 构建 CANN 8.5.1 对应的 HIXL/hcomm 模块，运行时通道仍需按服务实际配置验证，不能据此认定全部传输能力通过。
+
+上一批 `p1-repos/p1-check/preflight-01.json` 明确缺少 `aiofile`、`awscrt`、`build>=1.2`、`opentelemetry-exporter-prometheus>=0.50b0`、`redis`、`sortedcontainers`。由内网材料负责人选定兼容版本、制品哈希并补齐其依赖；这里不自动联网安装或调整既有 torch。`pytest` 与 `build` 是不同的包，pytest 已安装不代表 `python -m build` 可用。
 
 注意：
 
 - 依赖入口仅为两仓 `requirements/ascend.txt` 与 `requirements/build.txt`。缺失项由内网制品库或允许的 proxy 单独准备、固定版本/哈希；不执行原始全量 requirements 安装，不自动升级 torch/numpy/OpenCV。
-- 预检包含 sdist 前端 `build>=1.2`。它可能尚未安装；与 pytest 已安装是不同事项。按内网制品策略准备，构建步骤不自动获取。
-- 最新 P0 pip check 有 18 条问题。本轮声明去除了 CUDA 专用依赖并对齐候选版本；aiofile、awscrt、redis、sortedcontainers、Prometheus exporter 和 CANN 的实际缺失依赖仍需解决。合并声明还会检查 quart 等原 Ascend 需求，以预检实际输出为准。
+- 上一批两仓 sdist 均因 `No module named build` 未生成，随后重建的 `FileNotFoundError` 是连带错误。本次先通过预检，再生成 sdist，源码包不存在时不进入重建。
+- 最新提供的 `installed-pip-check.txt` 还包含 CANN 工具的 `absl-py`、`ml-dtypes`、`tornado` 缺失，以及以下三项标准库元数据问题。直接依赖预检通过不能替代传递依赖检查；以新报告为准，不复用旧 P0 问题数量。
 - getopt、inspect、multiprocessing 属于标准库，不能从 PyPI 安装同名包补数。其 CANN 错误分发声明应形成 SDK 元数据问题记录；只有经批准的明确豁免可例外，其他缺依赖/冲突必须处理。
 - 非 C8 权重兼容性仍由基线负责人验证；不要修改 quant_model_description.json 或把 GLM 权重量化改成另一种格式。
 - 如实际缓存配置使用 native Mooncake L2，不能保持 BUILD_MOONCAKE=0：先提供匹配的 include/lib 和 ABI 材料，再设为 1。RemoteFill 所需 CANN Python Mooncake/服务也要独立核对，不把这个开关视作 RemoteFill 开关。
 - 代理只用于批准的材料源；不接入外部大模型/Agent，不自动上传日志或模型元数据。
+- 构建容器可保留 CANN SDK 所需的 Python 路径，但不得混入旧框架源码或服务环境的 editable 路径。不要为清除 host 临时路径而无差别删除 CANN 的环境设置；第 2 节的 `env` 已限制其作用域。
 
 ## 4. 构建两个候选 wheel，并从 sdist 重建
 
-仅当上述材料和预检通过，在同一已准备环境执行。每次失败修复后重新解包到新 P1_RUN；脚本拒绝复用已有 ACLNN 生成目录。不要执行旧的 `VLLM_TARGET_DEVICE=empty` 或 `NO_CUDA_EXT=1` 路径，不使用 editable 安装。
+仅当前述材料、源码审计、24 项约束、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host 和依赖预检全部通过，在同一环境执行。下面复核本批步骤退出码。不要执行旧的 `VLLM_TARGET_DEVICE=empty` 或 `NO_CUDA_EXT=1` 路径。本节是正式验收路线，只使用普通 wheel；editable 调测另按开发指南。
+
+先从尚未编译的副本生成 sdist，再分别构建源码 wheel 和 sdist 重建 wheel。所有 native 构建都发生在内网；`--no-cache-dir` 避免把缓存命中的旧 wheel 当作本轮重建证据。
 
 ```bash
-mkdir "$P1_RUN/wheels" "$P1_RUN/sdist" "$P1_RUN/rebuilt-wheels"
-python -m pip --disable-pip-version-check wheel --no-index --no-deps \
-  --no-build-isolation --wheel-dir "$P1_RUN/wheels" "$P1_SOURCE_WORKSPACE/vllm" \
-  > "$P1_RUN/build-vllm.log" 2>&1
-python -m pip --disable-pip-version-check wheel --no-index --no-deps \
-  --no-build-isolation --wheel-dir "$P1_RUN/wheels" "$P1_SOURCE_WORKSPACE/LMCache" \
-  > "$P1_RUN/build-lmcache.log" 2>&1
-python -m build --sdist --no-isolation --outdir "$P1_RUN/sdist" \
-  "$P1_SOURCE_WORKSPACE/vllm" > "$P1_RUN/sdist-vllm.log" 2>&1
-python -m build --sdist --no-isolation --outdir "$P1_RUN/sdist" \
-  "$P1_SOURCE_WORKSPACE/LMCache" > "$P1_RUN/sdist-lmcache.log" 2>&1
+for p1_gate in materialize source-audit contracts cmake-entry dev-vllm dev-lmcache dev-resources sfa-light host preflight; do
+  if [ ! -f "$P1_RUN/$p1_gate.exitcode" ] || \
+     [ "$(< "$P1_RUN/$p1_gate.exitcode")" != 0 ]; then
+    printf 'STOP: 本批前置步骤未通过：%s\n' "$p1_gate" >&2
+    exit 1
+  fi
+done
+test ! -e "$P1_BUILD_WORKSPACE/vllm/build"
+test ! -e "$P1_BUILD_WORKSPACE/LMCache/build"
+mkdir "$P1_RUN/wheels" "$P1_RUN/sdist" "$P1_RUN/rebuilt-wheels" "$P1_RUN/pip-tmp"
+export TMPDIR="$P1_RUN/pip-tmp"
 
-python -m pip --disable-pip-version-check wheel --no-index --no-deps \
-  --no-build-isolation --wheel-dir "$P1_RUN/rebuilt-wheels" \
-  "$P1_RUN/sdist/vllm-0.18.0+ascend.p1.tar.gz" \
-  > "$P1_RUN/rebuild-vllm.log" 2>&1
-python -m pip --disable-pip-version-check wheel --no-index --no-deps \
-  --no-build-isolation --wheel-dir "$P1_RUN/rebuilt-wheels" \
-  "$P1_RUN/sdist/lmcache-0.4.3+ascend.p1.tar.gz" \
-  > "$P1_RUN/rebuild-lmcache.log" 2>&1
+p1_step sdist-vllm python -m build --sdist --no-isolation \
+  --outdir "$P1_RUN/sdist" "$P1_BUILD_WORKSPACE/vllm"
+p1_step sdist-lmcache python -m build --sdist --no-isolation \
+  --outdir "$P1_RUN/sdist" "$P1_BUILD_WORKSPACE/LMCache"
+test -s "$P1_RUN/sdist/vllm-0.18.0+ascend.p1.tar.gz"
+test -s "$P1_RUN/sdist/lmcache-0.4.3+ascend.p1.tar.gz"
+
+p1_step build-vllm python -m pip --disable-pip-version-check --no-cache-dir \
+  wheel --verbose --no-index --no-deps --no-build-isolation \
+  --wheel-dir "$P1_RUN/wheels" "$P1_BUILD_WORKSPACE/vllm"
+p1_step build-lmcache python -m pip --disable-pip-version-check --no-cache-dir \
+  wheel --verbose --no-index --no-deps --no-build-isolation \
+  --wheel-dir "$P1_RUN/wheels" "$P1_BUILD_WORKSPACE/LMCache"
+
+p1_step rebuild-vllm python -m pip --disable-pip-version-check --no-cache-dir \
+  wheel --verbose --no-index --no-deps --no-build-isolation --no-clean \
+  --wheel-dir "$P1_RUN/rebuilt-wheels" "$P1_RUN/sdist/vllm-0.18.0+ascend.p1.tar.gz"
+p1_step rebuild-lmcache python -m pip --disable-pip-version-check --no-cache-dir \
+  wheel --verbose --no-index --no-deps --no-build-isolation --no-clean \
+  --wheel-dir "$P1_RUN/rebuilt-wheels" "$P1_RUN/sdist/lmcache-0.4.3+ascend.p1.tar.gz"
 ```
 
-上面任一步非零退出就停止，保留日志，不继续安装。最终 wheel 为 CPython 3.11 / aarch64 本地候选产物；尚未审计 manylinux 通用兼容性。
+上面任一步非零退出就停止。若仍出现编译错误，保留**本批首次失败**的完整 `.log`、`.exitcode`、`source/` 及日志标出的 native run 目录；sdist 重建通过本批 `TMPDIR` 和 `--no-clean` 留下解包/编译现场。正式验收修复后从第 1 节新建批次。开发调测可对同一源码重新运行，backend 自动隔离每次编译，旧现场不删除。目录隔离不能证明后续算子编译或 ABI 已通过。最终 wheel 为 CPython 3.11 / aarch64 内网候选产物；尚未审计 manylinux 通用兼容性。
 
 核对内容（每个目录应恰好一对 wheel；如文件名不同先核实，不随意选择旧产物）：
 
 ```bash
-python -B "$P1_TOOLS/inspect_wheels.py" \
+p1_step wheel-contents python -B "$P1_TOOLS/inspect_wheels.py" \
   --vllm-wheel "$P1_RUN/wheels/vllm-0.18.0+ascend.p1-cp311-cp311-linux_aarch64.whl" \
   --lmcache-wheel "$P1_RUN/wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl" \
   --output "$P1_RUN/wheel-contents.json"
-python -B "$P1_TOOLS/inspect_wheels.py" \
+p1_step rebuilt-wheel-contents python -B "$P1_TOOLS/inspect_wheels.py" \
   --vllm-wheel "$P1_RUN/rebuilt-wheels/vllm-0.18.0+ascend.p1-cp311-cp311-linux_aarch64.whl" \
   --lmcache-wheel "$P1_RUN/rebuilt-wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl" \
   --output "$P1_RUN/rebuilt-wheel-contents.json"
 ```
 
-检查只证明归档结构/元数据存在，不证明 ELF 依赖、ABI、资源装载或推理通过。记录两条构建链产物哈希；暂不要求含构建路径/时间的二进制逐字节相同，但版本、模块集合和行为必须一致。
+检查只证明归档结构/元数据存在，不证明 ELF 依赖、ABI、资源装载或推理通过。记录本批两条构建链产物哈希；暂不要求含构建路径/时间的二进制逐字节相同，但版本、模块集合和行为必须一致：
+
+```bash
+(
+  cd "$P1_RUN"
+  sha256sum \
+    sdist/vllm-0.18.0+ascend.p1.tar.gz \
+    sdist/lmcache-0.4.3+ascend.p1.tar.gz \
+    wheels/vllm-0.18.0+ascend.p1-cp311-cp311-linux_aarch64.whl \
+    wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl \
+    rebuilt-wheels/vllm-0.18.0+ascend.p1-cp311-cp311-linux_aarch64.whl \
+    rebuilt-wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl \
+    > artifacts.sha256
+)
+```
 
 ## 5. 仅在干净的验证容器安装
 
 由内网负责人准备**没有旧四包、旧 editable/.pth 和工作区 PYTHONPATH**的独立验证容器，基础 torch/NPU/CANN 与候选一致。直接建 system-site-packages venv 不保证隔离旧包。不要卸载或覆盖现有 GLM 服务容器中的包。
 
-在该新容器设置对应的 P1_RUN/P1_TOOLS，离开源码目录后先检查：
+在该新容器设置 `P1_RUN` 为**第 1 节实际生成并已完成构建的批次绝对路径**（如 `/workspace/zzj/p1-repos/p1-check/run.…`），不要重新 `mktemp`，也不要使用旧的 `p1-check/wheels`。同步该批目录或将其以相同路径挂载，检查 `PYTHONPATH` / `.pth` 没有旧框架或 host 源码路径；保留必要且经核对的 CANN SDK 设置。离开源码目录后先检查：
 
 ```bash
+set -euo pipefail
+: "${P1_RUN:?请先设置已构建完成的实际批次路径}"
+test "$(< "$P1_RUN/wheel-contents.exitcode")" = 0
+test "$(< "$P1_RUN/rebuilt-wheel-contents.exitcode")" = 0
 cd "$P1_RUN"
+sha256sum --check artifacts.sha256
+for p1_record in install.log install.exitcode installed-packages.json \
+                 installed-pip-check.txt installed-pip-check.exitcode; do
+  if [ -e "$P1_RUN/$p1_record" ]; then
+    printf 'STOP: 已有安装验收记录，不覆盖：%s\n' "$p1_record" >&2
+    exit 1
+  fi
+done
 python -B - <<'PY'
 from importlib import metadata
 for name in ("vllm", "vllm-ascend", "lmcache", "lmcache-ascend"):
@@ -192,14 +323,33 @@ for name in ("vllm", "vllm-ascend", "lmcache", "lmcache-ascend"):
     raise SystemExit(f"STOP: validation container already contains {name}: {dist.locate_file('')}")
 print("No old framework distributions found; also review .pth and PYTHONPATH.")
 PY
-python -m pip --disable-pip-version-check install --no-index --no-deps \
+if python -m pip --disable-pip-version-check install --no-index --no-deps \
   "$P1_RUN/wheels/vllm-0.18.0+ascend.p1-cp311-cp311-linux_aarch64.whl" \
-  "$P1_RUN/wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl"
+  "$P1_RUN/wheels/lmcache-0.4.3+ascend.p1-cp311-cp311-linux_aarch64.whl" \
+  > "$P1_RUN/install.log" 2>&1; then
+  printf '0\n' > "$P1_RUN/install.exitcode"
+else
+  p1_install_rc=$?
+  printf '%s\n' "$p1_install_rc" > "$P1_RUN/install.exitcode"
+  tail -n 60 "$P1_RUN/install.log" >&2
+  exit "$p1_install_rc"
+fi
 python -m pip list --format=json > "$P1_RUN/installed-packages.json"
-python -m pip check > "$P1_RUN/installed-pip-check.txt" 2>&1
+python -B "$P1_RUN/source/vllm/p1_dev.py" verify --mode wheel \
+  --output "$P1_RUN/vllm-install-paths.json"
+python -B "$P1_RUN/source/LMCache/p1_dev.py" verify --mode wheel \
+  --output "$P1_RUN/lmcache-install-paths.json"
+if python -m pip check > "$P1_RUN/installed-pip-check.txt" 2>&1; then
+  printf '0\n' > "$P1_RUN/installed-pip-check.exitcode"
+else
+  p1_check_rc=$?
+  printf '%s\n' "$p1_check_rc" > "$P1_RUN/installed-pip-check.exitcode"
+  printf 'STOP: 查看本批 installed-pip-check.txt，不继续运行验收。\n' >&2
+  exit "$p1_check_rc"
+fi
 ```
 
-pip check 的任何非零退出都需要解释；不能用 `|| true` 把它变成通过。若仅剩已确认 CANN 标准库元数据错误，必须连同具体三条错误、原因和负责人豁免归档，仍保留真实退出码。
+`p1_dev.py verify` 不导入框架或分配 NPU，只检查安装模式、导入位置及 native 文件，不能当作扩展加载验收。pip check 的任何非零退出都需要解释；不能用 `|| true` 把它变成通过。若仅剩已确认 CANN 标准库元数据错误，必须连同具体三条错误、原因和负责人豁免归档，仍保留真实退出码。
 
 在预约的验证资源上进行模块/ELF 与入口检查，记录 `vllm/lmcache/vllm_ascend/lmcache_ascend` 的实际导入路径和 distribution 归属，确认它们来自这两个 wheel。检查全部 .so 的依赖解析、torch C++ ABI、CANN/HIXL/hcomm、host 扩展加载，以及 custom-op 的 op_api/lib 与 kernel 资源；不得从旧源码或旧插件补 .so 来“修复”结果。
 
@@ -225,6 +375,8 @@ TP8/DP2 每节点一实例；TP4/DP4 每节点两实例、卡组不重叠。分�
 
 ## 7. 归档及停止条件
 
-保存 source/delivery/submodule 清单、preflight、17 项约束测试、112 项 host XML/日志、全部构建日志、sdist/wheel 哈希、安装路径/依赖/ABI、两组配置与基线/P1 对照报告。完整原件留内网，仅人工审核脱敏后的必要结果交接；不上传凭据、业务输入、敏感地址或模型权重。
+保存本批 `source-commits.txt`、`source-tars.sha256`、两份 `source/*/ascend/submodule-materials.json`、历史及累积更新清单、源码审计、preflight、24 项约束、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host XML/日志、完整 torch/NPU 修复回归、全部步骤 `.log`/`.exitcode`、`artifacts.sha256`、安装路径/依赖/ABI、两组配置与基线/P1 对照报告。开发路线另存 `p1_dev.py` 的 preflight/command/result/artifact JSON 和源码 diff，不混用两条路线的报告。
+
+当前已有的 `p1-repos/p1-check/build-vllm.log` 等首批报告保持原样。后续按 `p1-repos/p1-check/run.XXXXXXXX/` 分批归档，不覆盖顶层旧报告，不合并不同批次的成功和失败结果。需要反馈时，提供实际批次名和经审核脱敏的报告/日志；`source/`、源码 tar、wheel 等大型材料通常只留内网，另有需要时再单独提供。完整原件留内网，不自动上传，不包含凭据、业务输入、敏感地址或模型权重。
 
 以下任一情况保持未通过：基线未归档；源码/材料校验不符；缺失真实依赖；sdist 无法独立重建；旧插件或旧路径帮助导入；native/ABI 错误；任一必保场景或性能门槛失败。缺少基线数据不阻止本轮静态工作，但不能通过 P1 出口或直接推进大规模裁剪。

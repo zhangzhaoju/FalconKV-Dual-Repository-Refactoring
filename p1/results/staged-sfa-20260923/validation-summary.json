@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "scope": "local_source_integration_only",
+  "baseline_commits": {
+    "vllm": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de",
+    "vllm-ascend": "2e48d7a61d9fab3d40babbacaecf95a76cfb0e06",
+    "LMCache": "d24029eddf358bb139b66023ab21364ef4d438b4",
+    "LMCache-Ascend": "3452df44e66ce8a217c4badfe32d73783e66bd2d"
+  },
+  "p1_commits": {
+    "vllm": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+    "LMCache": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb"
+  },
+  "backup_branch": "backup/pre-staged-sfa-event-handoff-20260923",
+  "pushed": false,
+  "native_built": false,
+  "installed": false,
+  "npu_tested": false,
+  "existing_services_changed": false,
+  "validation": {
+    "recorded_fix_files": 25,
+    "identical_production_files": 10,
+    "runtime_python_ast_files": 2240,
+    "contracts": {
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "p1_cmake_parser": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "native_configure_or_compile": false
+    },
+    "baseline_handoff_light": {
+      "tests": 55,
+      "passed": 55,
+      "failed": 0,
+      "skipped": 0,
+      "report": "baseline-handoff-light.xml"
+    },
+    "p1_handoff_light": {
+      "tests": 55,
+      "passed": 55,
+      "failed": 0,
+      "skipped": 0,
+      "report": "p1-handoff-light.xml"
+    },
+    "baseline_mc2": {
+      "tests": 15,
+      "passed": 14,
+      "failed": 1,
+      "skipped": 0,
+      "reason": "ModuleNotFoundError: No module named 'torch'",
+      "report": "baseline-mc2.xml"
+    },
+    "p1_mc2": {
+      "tests": 15,
+      "passed": 14,
+      "failed": 1,
+      "skipped": 0,
+      "reason": "ModuleNotFoundError: No module named 'torch'",
+      "report": "p1-mc2.xml"
+    },
+    "baseline_host": {
+      "tests": 112,
+      "passed": 107,
+      "failed": 5,
+      "skipped": 0,
+      "reason": "ModuleNotFoundError: No module named 'torch'",
+      "report": "baseline-host/summary.json"
+    },
+    "p1_host": {
+      "tests": 112,
+      "passed": 107,
+      "failed": 5,
+      "skipped": 0,
+      "reason": "ModuleNotFoundError: No module named 'torch'",
+      "report": "p1-host/summary.json"
+    }
+  },
+  "limitations": [
+    "Local Python 3.12 does not validate the target Python 3.11/aarch64 ABI.",
+    "No torch/torch_npu installed locally. Full tensor/framework regressions and real NPU replay are pending.",
+    "CATLASS and kvcache-ops source payloads are absent locally; fixed gitlinks were preserved.",
+    "User reports the baseline event failure fixed, but the supplied benchmark summary has 448 successful and 73 failed requests.",
+    "This integration does not establish P0/P1 exit or performance acceptance."
+  ]
+}

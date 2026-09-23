@@ -4,6 +4,10 @@
 
 本轮允许在其他开发人员验证基线、后续归档数据期间推进 P1 源码工作。这是明确的阶段启动授权，不代表 P0/NPU 验收已经通过，也不授权替换现有服务。
 
+2026-09-23 开发安装补充：两个 P1 仓现各自携带 `p1_dev.py`，支持材料核验、依赖检查、wheel 构建/安装、strict editable 调测和安装路径检查。每次原生编译使用新的保留目录，不复用旧 ACLNN 或已链接的设备对象。具体命令见[开发调测指南](development-build-install.md)，正式验收见[内网主流程](intranet-next-steps.md)。新代码只在本地提交，**尚未推送**；本机未编译/安装，不代表已可在 NPU 运行。最新配对 SHA 以主流程为准，审计使用累积清单 `baseline/p1-build-install-20260923.json`。
+
+此前同日修复批次：四仓 `fix/staged-sfa-event-handoff` 已合入本地基线，并移植到 P1 的 vllm `3827b16205a3b748629e38ad739dfc55c6b04d49`、LMCache `b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb`；当前开发安装改动叠加在这两个提交之上，未改动原四仓。详见[修复合入记录](staged-sfa-event-handoff-integration.md)。历史清单、该批 25 项修复清单及 source-01 报告均保留，不改写为新批次结果。
+
 ## 1. 当前生效范围
 
 以 [profile.json](profile.json) 为本轮机器可读配置：
@@ -17,14 +21,14 @@
 
 ## 2. 已实施的源码变更
 
-当前 P1 活动源码位于工作区根目录的 `p1-repos/`：两个仓各有独立 `.git`，使用 `main` 分支，`origin` 分别指向新的 `vllm-dual` / `LMCache-dual` 仓库。初始导入使用的 `p1-worktrees/` 已在核对提交、文件树和额外文件后移除，不再作为开发入口。原始四个 checkout、原重构分支和备份继续保留；没有切换原仓分支、修改其源码或远端、停止服务或执行安装。详见 [工作区迁移记录](workspace-migration.md)。
+当前 P1 活动源码位于工作区根目录的 `p1-repos/`：两个仓各有独立 `.git`，使用 `main` 分支，`origin` 分别指向新的 `vllm-dual` / `LMCache-dual` 仓库。初始导入使用的 `p1-worktrees/` 已在核对提交、文件树和额外文件后移除，不再作为开发入口。原始四个 checkout、原重构分支和备份继续保留；初始迁移未修改原仓源码，2026-09-23 已按授权在原分支合入修复。仍未修改远端、停止服务或执行安装。历史迁移见 [工作区迁移记录](workspace-migration.md)。
 
 | P1 仓库 | 唯一 distribution | 暂时保留的 Python namespace |
 | --- | --- | --- |
 | [vllm](../../p1-repos/vllm/) | vllm 0.18.0+ascend.p1 | vllm、vllm_ascend |
 | [LMCache](../../p1-repos/LMCache/) | lmcache 0.4.3+ascend.p1 | lmcache、lmcache_ascend |
 
-版本号是 P1 内部交付标识，不表示升级到了另一个上游分支；源码仍来自下表固定提交。Ascend namespace 源码位于各仓 `ascend/` 下，通过唯一根构建入口映射到 wheel 顶层。不需要再安装两个 Ascend distribution。
+版本号是 P1 内部交付标识，不表示升级到了另一个上游主分支；初始来源见下表，当前版本还叠加本批记录的修复。Ascend namespace 源码位于各仓 `ascend/` 下，通过唯一根构建入口映射到 wheel 顶层。不需要再安装两个 Ascend distribution。
 
 1. 导入当前 Ascend 快照、测试、原生源码及许可证；逐文件路径映射见 [source-manifest.json](baseline/source-manifest.json)。插件旧 setup/pyproject 改名归档到 `ascend/upstream-build/`，不再是活动入口。
 2. 每仓只有一个根 setup/pyproject/CMake 入口；保留 Ascend 算子、包资源、版本信息和 vLLM 的 Ascend entry points。P1 仍有临时插件发现和运行时 patch，原生化在 P2/P3 完成。
@@ -33,12 +37,13 @@
 5. 原生构建仅接受明确的 910B3、Python 3.11/aarch64 和 CANN 8.5.1。自定义算子在新建的私有源码副本中生成，缺子模块直接失败，不修改 Git 全局配置、不在构建阶段自动下载。
 6. 校验并复用内网已初始化的固定子模块，生成逐文件材料哈希；从普通源码包或 sdist 重建不依赖 .git。
 7. 迁移 host 测试相对路径，保留原断言；建立新构建/交付约束测试及 wheel 内容检查。
+8. 提供两个独立的开发安装入口；strict editable 映射两个 namespace、全部 native 文件和 CANN 资源到保留的构建目录。vLLM custom-op 定位改为保留链接目录，避免返回原始源码树丢失资源；普通 wheel 路径行为保持。新增 44 项轻量测试覆盖材料、安装保护、干净编译、产物映射、日志及资源路径。
 
-尚未执行：生产 Python 算法重写、删除其他模型/设备源码、去除临时 namespace、安装后替换现有服务。多模态及其他模型的传递依赖暂时保留，须在 P4 拆解导入闭包后裁剪；当前不能宣称已是最终极简框架。
+2026-09-23 追加事件交接、GLM router、调度/恢复和缓存修复，共 10 个生产文件和 15 个测试文件；生产代码与合入后的原仓逐文件一致，不属于新一轮算法重写。尚未执行：删除其他模型/设备源码、去除临时 namespace、安装后替换现有服务。多模态及其他模型的传递依赖暂时保留，须在 P4 拆解导入闭包后裁剪；当前不能宣称已是最终极简框架。
 
 ## 3. 输入与备份
 
-| 原仓 | P1 输入 HEAD |
+| 原仓 | 初始 source-01 输入 HEAD（非本批修复后 HEAD） |
 | --- | --- |
 | vllm | `ded5ce2a5388e1abb799d9b099849f3bd4a72360` |
 | vllm-ascend | `d22f0b7cffde1b6ddb87cb44368e46193e811cc9` |
@@ -47,7 +52,7 @@
 
 上述提交包含 P0 独立修复，与最初设计调研 HEAD 不同。四个 bundle 保存在 `baseline/*.bundle`（Git 忽略的大文件），已执行 bundle verify；其 commit/tree/SHA-256 及来源映射记录在清单中。`source-01` 归档制作时尚未创建 P1 提交；其后 P1 改动已提交，并于 2026-09-21 推送到下面两个新仓。不能将原四仓输入 HEAD 当作改造后的交付版本。
 
-| 新仓（`main`） | 本批已发布的 P1 提交 |
+| 新仓（`main`） | 初次发布的 P1 提交（非当前本地 HEAD） |
 | --- | --- |
 | [vllm-dual](https://github.com/zhangzhaoju/vllm-dual) | `b2025e53890eb9b65db3cfacba8e0237bea9654d` |
 | [LMCache-dual](https://github.com/zhangzhaoju/LMCache-dual) | `5b09009c5264cb61d204b7660ae400b4392db46a` |
@@ -59,6 +64,10 @@ Git 快照未包含被 `.claude/` 忽略规则排除的 `vllm/ascend/.claude/REA
 本机缺 CATLASS 和 kvcache-ops 载荷，只有固定 gitlink。内网旧仓已有相应提交，可使用 [materialize_submodules.py](tools/materialize_submodules.py) 复制已核实的源码；不得声称本机普通归档已经包含完整构建材料。
 
 ## 4. 检查结果及局限
+
+开发安装批次的本机检查：44 项新增测试、24 项交付约束、5 项 CMake 入口、55 项 SFA 回归通过，共 128 项；native 命令均为模拟，不包含真实编译或 pip 安装。完整记录及限定见 [build-install-20260923](results/build-install-20260923/README.md)。本机 setuptools 为 68.1.2，不是目标 77.0.3～80.x；目标环境仍须执行 PEP 660、sdist/wheel、ABI/NPU 实测。新 RST 页独立 Sphinx 检查通过，全站因缺 `sphinxawesome_theme` 未完成。
+
+本批另行复测 host 子集为 107/112，通过数不计入上述 128 项；5 个失败均为本机缺少 torch，0 skip。仍要求内网 112/112，详见[新 host 报告](results/build-install-20260923/host/summary.json)。
 
 下表及 `results/validation-summary.json` 记录初始 `source-01` 批次，保留当时的 worktree 路径和“尚未创建提交”状态，不能当作当前工作区定位。目录移除后的复核单列在 [迁移记录](workspace-migration.md)，不改写旧 host/交付报告。
 
@@ -80,7 +89,7 @@ Git 快照未包含被 `.claude/` 忽略规则排除的 `vllm/ascend/.claude/REA
 
 ## 5. 下一步与出口
 
-执行顺序及可复制命令见 [内网接力说明](intranet-next-steps.md)。首轮可先做源码审计、材料校验、依赖预检和 112 项 host 复测；不需要停止现有 GLM 服务。实际编译、安装及 NPU 测试使用隔离环境和预约资源。
+执行顺序及可复制命令见 [内网接力说明](intranet-next-steps.md)；日常调测另见 [编译安装指南](development-build-install.md)。先同步最新配对提交与 design 工具，再做源码审计、材料校验、依赖预检及回归；无需停止现有 GLM 服务。实际编译、安装及 NPU 测试使用隔离环境和预约资源。editable 的首次编译和安装成功不等于 P1 验收通过。
 
 P1 出口仍须逐项取得：
 
