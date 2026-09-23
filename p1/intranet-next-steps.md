@@ -2,9 +2,11 @@
 
 适用：已授权的 P1 双仓源码及本批修复，不适用于原四仓的旧安装命令。所有编译、sdist/wheel、安装和 NPU 验证都在内网完成；本机仅提供源码和审计工具。当前服务继续保留，基线由其他开发人员验证后归档。
 
-2026-09-23 更新：在 `fix/staged-sfa-event-handoff` 修复之上，两仓补齐独立 `p1_dev.py` 材料核验、wheel 构建/安装、strict editable 开发安装与路径验证入口；每次原生编译使用新目录。**本批仅在本地提交，尚未推送 GitHub；内网开始前须先经授权发布或交接，直接 git pull 目前不会取得本批代码。** 固定提交以下文为准，不用旧 main 或 source-01 搭配新清单。
+2026-09-23 最新候选更新：按内网实际安装信息，将两仓及构建校验统一为 `torch-npu==2.9.0.post2`、`transformers==5.2.0`；torch 仍为 2.9.0，不安装、升级或降级任何包。**本次候选调整仅在本地提交，尚未推送 GitHub；内网开始前须先发布或交接，直接 git pull 目前不会取得本次更新。** 固定提交以下文为准，不能继续使用前一批导出的 source 副本。
 
-**正式 P1 验收按本文执行；日常编译、安装与修改 Python 调测按[开发调测指南](development-build-install.md)执行。** editable 不是 P1 出口，首次仍完整编译；不得在现有 GLM 服务容器安装。本批累积清单为 `baseline/p1-build-install-20260923.json`，保留上一批[修复合入记录](staged-sfa-event-handoff-integration.md)及 25 个修复文件的来源证据。
+此前已补齐的 `p1_dev.py` 材料核验、wheel 构建/安装、strict editable 调测与路径验证保留，每次原生编译仍使用新目录。
+
+**正式 P1 验收按本文执行；日常编译、安装与修改 Python 调测按[开发调测指南](development-build-install.md)执行。** editable 不是 P1 出口，首次仍完整编译；不得在现有 GLM 服务容器安装。本批累积清单为 `baseline/p1-intranet-candidates-20260923.json`，保留此前修复与开发安装批次的来源证据。
 
 2026-09-21 更新：用户确认内网与本机布局相同，都是在工作区根目录创建 `p1-repos`，再从 Git 下载两个新仓。下文据此使用已有克隆，不要求移动仓库或反复联网克隆；旧 `p1-worktrees` 不再使用。
 
@@ -23,7 +25,7 @@
 
 旧版的 `stale ACLNN artifacts` 与本机/内网路径相同无关。新版 backend 每次都在实际源码目录下新建 `build/p1-native/run-*`，不复用旧 ACLNN 源码副本或 LMCache 已链接的设备对象；保留失败现场，不要求手动 mkdir 或删除 build。本正式验收流程仍每批导出固定提交，以明确产物来源；开发路线允许在长期源码目录反复编译。
 
-先单独同步本次更新后的 `design/p1`，至少包含 `tools/`、`tests/`、`profile.json`、本文、开发指南、`baseline/source-manifest.json` 和 `baseline/p1-build-install-20260923.json`。两仓携带自己的 `p1_dev.py` 与轻量测试，但不包含外层正式验收工具；不重新执行 `prepare_worktrees.py`。原 `source-01` 归档继续保留，不与本次 Git 路线混装。
+先单独同步本次更新后的 `design/p1`，至少包含 `tools/`、`tests/`、`profile.json`、本文、开发指南、`baseline/source-manifest.json` 和 `baseline/p1-intranet-candidates-20260923.json`。两仓携带自己的 `p1_dev.py` 与轻量测试，但不包含外层正式验收工具；不重新执行 `prepare_worktrees.py`。原 `source-01` 归档继续保留，不与本次 Git 路线混装。
 
 ### 1.1 初始化变量和失败即停的日志入口
 
@@ -34,12 +36,12 @@ set -euo pipefail
 export P1_ROOT=/workspace/zzj
 export P1_SOURCE_WORKSPACE="$P1_ROOT/p1-repos"
 export P1_TOOLS="$P1_ROOT/design/p1/tools"
-P1_VLLM_COMMIT=ba361feb8d13d2377698ec758cdf644fc00063be
-P1_LMCACHE_COMMIT=11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3
+P1_VLLM_COMMIT=230fbc0218e656cb90f8a8c2261150345a1d8ee5
+P1_LMCACHE_COMMIT=547ae7c10b0e510b864c8d0f5233d6f54f279359
 test -f "$P1_TOOLS/audit_sources.py"
 test -f "$P1_TOOLS/materialize_submodules.py"
 test -f "$P1_TOOLS/../baseline/source-manifest.json"
-test -f "$P1_TOOLS/../baseline/p1-build-install-20260923.json"
+test -f "$P1_TOOLS/../baseline/p1-intranet-candidates-20260923.json"
 mkdir -p "$P1_SOURCE_WORKSPACE/p1-check"
 P1_RUN=$(mktemp -d "$P1_SOURCE_WORKSPACE/p1-check/run.XXXXXXXX")
 export P1_RUN
@@ -150,7 +152,7 @@ p1_step materialize python -B "$P1_TOOLS/materialize_submodules.py" \
 p1_step source-audit python -B "$P1_TOOLS/audit_sources.py" \
   --workspace "$P1_BUILD_WORKSPACE" \
   --manifest "$P1_TOOLS/../baseline/source-manifest.json" \
-  --updates "$P1_TOOLS/../baseline/p1-build-install-20260923.json" \
+  --updates "$P1_TOOLS/../baseline/p1-intranet-candidates-20260923.json" \
   --output "$P1_RUN/source-audit.json"
 p1_step contracts env P1_SOURCE_WORKSPACE="$P1_BUILD_WORKSPACE" \
   python -B -m unittest discover -s "$P1_TOOLS/../tests" -v
@@ -178,7 +180,7 @@ p1_step host env PYTHONPATH="$P1_BUILD_WORKSPACE/LMCache" \
 
 固定提交：CATLASS `716fd7baa7fb7f6cac0488bb628fd1dd0e875641`；kvcache-ops `9f18d2339bc58a43429f7d5bdaef1628c820eff5`。构建 helper 重新校验清单内全部文件。任何缺文件、非预期改动或失败退出都必须处理，不能修改清单或跳过失败来继续构建。
 
-本批来源审计同时读取不可改写的历史清单与累积更新清单：既检查上一批 25 个修复文件，也检查本批构建/安装、路径适配、测试及仓内文档的精确哈希。约束测试 24 项、CMake 解析 5 项、新开发安装测试 21+21+2 项、SFA 轻量回归 55 项，均须通过且无 skip。native 命令在轻量测试中使用模拟文件，不触发原生构建，不替代真实 NPU 事件回放及完整 torch/框架测试；待补项见[合入记录第 6 节](staged-sfa-event-handoff-integration.md#6-内网剩余验证)。
+本批来源审计同时读取不可改写的历史清单与累积更新清单：既检查此前修复/开发安装，也检查本次候选声明的精确哈希。约束与预检测试 31 项（新增 7 项候选版本回归）、CMake 解析 5 项、开发安装测试 21+21+2 项、SFA 轻量回归 55 项，均须通过且无 skip。native 命令在轻量测试中使用模拟文件，不触发原生构建，不替代真实 NPU 事件回放及完整 torch/框架测试；待补项见[合入记录第 6 节](staged-sfa-event-handoff-integration.md#6-内网剩余验证)。
 
 host 门槛仍为 16+31+39+26=112 项通过，0 fail/error/skip。pytest 已安装，不需要再次安装，部分用例仍需已有 torch。本批旧报告的 5 项错误是 `No module named 'lmcache'`：测试从 `LMCache/ascend` 启动，但需要导入父级源码包。上面的 `env PYTHONPATH=...` 只给 host 检查及其子进程添加**本批 LMCache 源码**，不安装旧插件、不跳过断言，也不改变当前 shell 的 PYTHONPATH；不要将该设置 export 到后续 wheel 安装或运行验收。路径修正是否消除全部失败，以新 112 项报告为准。
 
@@ -221,9 +223,31 @@ p1_step preflight python -B "$P1_TOOLS/preflight.py" \
 - 代理只用于批准的材料源；不接入外部大模型/Agent，不自动上传日志或模型元数据。
 - 构建容器可保留 CANN SDK 所需的 Python 路径，但不得混入旧框架源码或服务环境的 editable 路径。不要为清除 host 临时路径而无差别删除 CANN 的环境设置；第 2 节的 `env` 已限制其作用域。
 
+### 3.1 本次候选版本不匹配的重试方法
+
+用户最新报告的实际版本为 `torch-npu 2.9.0.post2`、`transformers 5.2.0`。本次以这两个精确版本作为候选，不要求降级至旧 post1/4.x；torch 本体仍检查 `2.9.0`（接受此前的 `2.9.0+cpu`）。其他依赖、CANN/架构及构建工具门槛不变。
+
+preflight 从 `--workspace` 指定的两仓 `pyproject.toml` 和 `requirements/ascend.txt` 读取声明；`p1_dev.py doctor` 和 native 构建也使用两仓声明/常量。必须同步两仓代码与本批 design，不能只换 preflight 脚本。旧 `p1-check/run.*/source` 是冻结快照，不会随 Git 更新；正式验收从第 1 节重新导出新批次，不修改或覆盖旧报告。若旧 wheel 已构建，也要重新构建，不能继续使用带旧 Requires-Dist 的产物。
+
+如需先对已更新的长期 Git 克隆做一次只读依赖预检，在已有 CANN 环境的 Bash 会话执行：
+
+```bash
+set -euo pipefail
+P1_ROOT=/workspace/zzj
+mkdir -p "$P1_ROOT/p1-repos/p1-check"
+P1_PREFLIGHT_RUN=$(mktemp -d "$P1_ROOT/p1-repos/p1-check/preflight-candidates.XXXXXXXX")
+python -B "$P1_ROOT/design/p1/tools/preflight.py" \
+  --workspace "$P1_ROOT/p1-repos" \
+  --output "$P1_PREFLIGHT_RUN/preflight.json"
+```
+
+这次只读检查不安装包、不编译、不导入 torch/Transformers、不分配 NPU；报告新增 `workspace` 字段，便于确认实际核对的源码目录。若仍出现旧版本字符串，优先核对报告目录及该目录内依赖文件是否更新。该独立报告不替代正式批次的 preflight 门槛。
+
+`passed=true` 仅表示直接依赖元数据匹配。Transformers 从 4.x 切换到 5.2.0 后，仍须完成 `pip check`、tokenizer/config 加载、GLM-5.2 离线/在线及 DSA/MTP 回归；torch_npu post2 的制品来源、ABI/NPU 运行结果同样待归档。本次不重写模型适配、不豁免运行验收。
+
 ## 4. 构建两个候选 wheel，并从 sdist 重建
 
-仅当前述材料、源码审计、24 项约束、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host 和依赖预检全部通过，在同一环境执行。下面复核本批步骤退出码。不要执行旧的 `VLLM_TARGET_DEVICE=empty` 或 `NO_CUDA_EXT=1` 路径。本节是正式验收路线，只使用普通 wheel；editable 调测另按开发指南。
+仅当前述材料、源码审计、31 项约束/预检、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host 和依赖预检全部通过，在同一环境执行。下面复核本批步骤退出码。不要执行旧的 `VLLM_TARGET_DEVICE=empty` 或 `NO_CUDA_EXT=1` 路径。本节是正式验收路线，只使用普通 wheel；editable 调测另按开发指南。
 
 先从尚未编译的副本生成 sdist，再分别构建源码 wheel 和 sdist 重建 wheel。所有 native 构建都发生在内网；`--no-cache-dir` 避免把缓存命中的旧 wheel 当作本轮重建证据。
 
@@ -375,7 +399,7 @@ TP8/DP2 每节点一实例；TP4/DP4 每节点两实例、卡组不重叠。分�
 
 ## 7. 归档及停止条件
 
-保存本批 `source-commits.txt`、`source-tars.sha256`、两份 `source/*/ascend/submodule-materials.json`、历史及累积更新清单、源码审计、preflight、24 项约束、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host XML/日志、完整 torch/NPU 修复回归、全部步骤 `.log`/`.exitcode`、`artifacts.sha256`、安装路径/依赖/ABI、两组配置与基线/P1 对照报告。开发路线另存 `p1_dev.py` 的 preflight/command/result/artifact JSON 和源码 diff，不混用两条路线的报告。
+保存本批 `source-commits.txt`、`source-tars.sha256`、两份 `source/*/ascend/submodule-materials.json`、历史及累积更新清单、源码审计、preflight、31 项约束/预检、5 项 CMake、44 项开发安装测试、55 项 SFA、112 项 host XML/日志、完整 torch/NPU 修复回归、全部步骤 `.log`/`.exitcode`、`artifacts.sha256`、安装路径/依赖/ABI、两组配置与基线/P1 对照报告。开发路线另存 `p1_dev.py` 的 preflight/command/result/artifact JSON 和源码 diff，不混用两条路线的报告。
 
 当前已有的 `p1-repos/p1-check/build-vllm.log` 等首批报告保持原样。后续按 `p1-repos/p1-check/run.XXXXXXXX/` 分批归档，不覆盖顶层旧报告，不合并不同批次的成功和失败结果。需要反馈时，提供实际批次名和经审核脱敏的报告/日志；`source/`、源码 tar、wheel 等大型材料通常只留内网，另有需要时再单独提供。完整原件留内网，不自动上传，不包含凭据、业务输入、敏感地址或模型权重。
 

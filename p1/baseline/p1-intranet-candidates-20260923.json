@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "update_id": "p1-intranet-candidates-20260923",
+  "date": "2026-09-23",
+  "scope": "Cumulative exact-hash overlay: prior staged-SFA and build/install work plus user-reported intranet dependency candidates. Metadata acceptance only, no ABI or runtime certification.",
+  "base_manifest": "source-manifest.json",
+  "base_manifest_sha256": "4d627352b90cc7cc71ebea16c5ef009231498ca007eb7bedef3fc757ce6d2d61",
+  "previous_updates_manifest": "p1-build-install-20260923.json",
+  "previous_updates_manifest_sha256": "b2f2f5dfcbd95b1a9f5cac4bceadfdc3d7d0b64fbaf744ebcc886427c69fb9f1",
+  "sources": [
+    {
+      "repository": "vllm",
+      "previous_baseline_commit": "ded5ce2a5388e1abb799d9b099849f3bd4a72360",
+      "fix_branch_commit": "b9b18239ebea064e61e2622c78da1c43746ea63e",
+      "merge_commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de",
+      "baseline_commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de"
+    },
+    {
+      "repository": "vllm-ascend",
+      "previous_baseline_commit": "d22f0b7cffde1b6ddb87cb44368e46193e811cc9",
+      "fix_branch_commit": "6fc30da651cd018f843753254114cc2321f47e89",
+      "merge_commit": "c458c17ecfe2c618be7616b01fab5ab7a81180b2",
+      "baseline_commit": "2e48d7a61d9fab3d40babbacaecf95a76cfb0e06"
+    },
+    {
+      "repository": "LMCache",
+      "previous_baseline_commit": "802e4167afa75c1601b9f9d8619672a686b416bd",
+      "fix_branch_commit": "22747f0256f32c4b377ea7d970d505681c0bccde",
+      "merge_commit": "d24029eddf358bb139b66023ab21364ef4d438b4",
+      "baseline_commit": "d24029eddf358bb139b66023ab21364ef4d438b4"
+    },
+    {
+      "repository": "LMCache-Ascend",
+      "previous_baseline_commit": "d959c7a9640681e414dc9dbca644627af67a51e8",
+      "fix_branch_commit": "e18b939e8f8c2d20ba0a9ecd1692a6f3e5bb1dab",
+      "merge_commit": "3452df44e66ce8a217c4badfe32d73783e66bd2d",
+      "baseline_commit": "3452df44e66ce8a217c4badfe32d73783e66bd2d"
+    }
+  ],
+  "backup_branch": "backup/pre-intranet-candidates-20260923",
+  "p1_parent_commits": {
+    "vllm": "ba361feb8d13d2377698ec758cdf644fc00063be",
+    "LMCache": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3"
+  },
+  "p1_integration_commits": {
+    "vllm": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+    "LMCache": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+  },
+  "software_candidate": {
+    "python": "3.11.14",
+    "architecture": "aarch64",
+    "cann": "8.5.1",
+    "torch": "2.9.0+cpu",
+    "torch_npu": "2.9.0.post2",
+    "transformers": "5.2.0",
+    "triton_ascend": "3.2.0.dev20260322"
+  },
+  "remote_push_performed": false,
+  "files": [
+    {
+      "source_repository": "vllm",
+      "source": "tests/v1/core/test_scheduler_bootstrap_state.py",
+      "repository": "vllm",
+      "destination": "tests/v1/core/test_scheduler_bootstrap_state.py",
+      "kind": "added",
+      "source_sha256": "5a2d5d1869efae90d85cce594a6d26f907a13821cfa49708df0dfe785acb8984",
+      "sha256_after_integration": "5a2d5d1869efae90d85cce594a6d26f907a13821cfa49708df0dfe785acb8984",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm",
+      "source": "vllm/v1/core/sched/scheduler.py",
+      "repository": "vllm",
+      "destination": "vllm/v1/core/sched/scheduler.py",
+      "kind": "modified",
+      "source_sha256": "d813630f091ff0c4587a903e226155068b414666cd97957e7bee55703a902200",
+      "sha256_after_integration": "d813630f091ff0c4587a903e226155068b414666cd97957e7bee55703a902200",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/e2e/singlecard/test_sfa_event_handoff.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/e2e/singlecard/test_sfa_event_handoff.py",
+      "kind": "added",
+      "source_sha256": "74ecbbc2270084d0ae9c13324de734c81774a752e27c5526fca80d5efe705ada",
+      "sha256_after_integration": "74ecbbc2270084d0ae9c13324de734c81774a752e27c5526fca80d5efe705ada",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_cold_resume_native_metadata.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_cold_resume_native_metadata.py",
+      "kind": "added",
+      "source_sha256": "4c892c9c61bb1825b047b1e6a12056b4e564c555b69894a913e1c34ede384216",
+      "sha256_after_integration": "1a6b3304cbdf1275a89f9d0169381e590d9c03e34715516b2e0ae68ed74738ba",
+      "adaptation": "Use p1-repos/LMCache instead of the original LMCache-NPU sibling; assertions unchanged."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_glm52_topk_ownership.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_glm52_topk_ownership.py",
+      "kind": "modified",
+      "source_sha256": "a608a36b3f7df0e2303f52739e71a2205332ee0e70afedf369068043dbbaffe9",
+      "sha256_after_integration": "a608a36b3f7df0e2303f52739e71a2205332ee0e70afedf369068043dbbaffe9",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_mc2_recovery.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_mc2_recovery.py",
+      "kind": "modified",
+      "source_sha256": "75be50cde6dc3aba446cb75dce02000f07443820cf190968a2cee32e598d75ea",
+      "sha256_after_integration": "e95d20711dcc37ff57853f4be0bf0d64b0575e8684ab20a52f417cf4ed1f8c6a",
+      "adaptation": "Retain existing P1 WORKSPACE mapping for nested ascend/; merge the new regression assertions."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_sparse_recovery_budget.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_sparse_recovery_budget.py",
+      "kind": "added",
+      "source_sha256": "5258dcf3b7f8af3b0c1ca96f9244d5c16cdb6a0eb18515a6a3365f5d6838d278",
+      "sha256_after_integration": "c3a9972c2bc1e9f68371cc3f038029b1cd98b8acf72ec6454df1104374f8e61d",
+      "adaptation": "Remove duplicate vllm path component under nested ascend/; assertions unchanged."
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/standalone/test_staged_dummy_capacity.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_staged_dummy_capacity.py",
+      "kind": "added",
+      "source_sha256": "e29c36cc81f1a570490e75478ef7122b1ef717b789aa01f58472f9fe2fac5861",
+      "sha256_after_integration": "e29c36cc81f1a570490e75478ef7122b1ef717b789aa01f58472f9fe2fac5861",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/attention/test_sfa_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/attention/test_sfa_v1.py",
+      "kind": "modified",
+      "source_sha256": "f6feab43e1d6970628b1ff5a3a40f098f094b33de21745e1fcc146df14729946",
+      "sha256_after_integration": "f6feab43e1d6970628b1ff5a3a40f098f094b33de21745e1fcc146df14729946",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/compilation/test_sfa_event_handoff.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/compilation/test_sfa_event_handoff.py",
+      "kind": "added",
+      "source_sha256": "edeb22b0d62c216eaf925329d789871e89fb699b31dbcccedba0a4d1bd47488f",
+      "sha256_after_integration": "edeb22b0d62c216eaf925329d789871e89fb699b31dbcccedba0a4d1bd47488f",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "tests/ut/ops/test_gate_linear.py",
+      "repository": "vllm",
+      "destination": "ascend/tests/ut/ops/test_gate_linear.py",
+      "kind": "added",
+      "source_sha256": "3bb4041463d63779579e5d94b04410731556b1e481489903bd1396571af803e6",
+      "sha256_after_integration": "3bb4041463d63779579e5d94b04410731556b1e481489903bd1396571af803e6",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/attention/sfa_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/attention/sfa_v1.py",
+      "kind": "modified",
+      "source_sha256": "de6bb209514b4f4bc8ed2ebf2e68d462def90dffddeb8548a23e5a8fb8b20110",
+      "sha256_after_integration": "de6bb209514b4f4bc8ed2ebf2e68d462def90dffddeb8548a23e5a8fb8b20110",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/attention/utils.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/attention/utils.py",
+      "kind": "modified",
+      "source_sha256": "59bf52bb8e71753588ac687d0a8cee872c1d84d1c76696ec03626c036ee98d12",
+      "sha256_after_integration": "59bf52bb8e71753588ac687d0a8cee872c1d84d1c76696ec03626c036ee98d12",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/core/recompute_scheduler.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/core/recompute_scheduler.py",
+      "kind": "modified",
+      "source_sha256": "1d5cddb0dbbdda56b88aa9b05d273c6b9314185f00f860d88c30720d7a4b9f8e",
+      "sha256_after_integration": "1d5cddb0dbbdda56b88aa9b05d273c6b9314185f00f860d88c30720d7a4b9f8e",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/ops/fused_moe/gate_linear.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/ops/fused_moe/gate_linear.py",
+      "kind": "added",
+      "source_sha256": "c165fd0e3724da80ecddca60cdb8a3af88c172304fb1893e44c0b1558ae2a1f6",
+      "sha256_after_integration": "c165fd0e3724da80ecddca60cdb8a3af88c172304fb1893e44c0b1558ae2a1f6",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/utils.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/utils.py",
+      "kind": "modified",
+      "source_sha256": "d4d1ff3e13a4d13741c93ed02a373701226bde6d632b5e34bcd121563012cc83",
+      "sha256_after_integration": "d4d1ff3e13a4d13741c93ed02a373701226bde6d632b5e34bcd121563012cc83",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "vllm-ascend",
+      "source": "vllm_ascend/worker/model_runner_v1.py",
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/worker/model_runner_v1.py",
+      "kind": "modified",
+      "source_sha256": "cb128975cb9954f20b73861e61436caf5cb23447393f088c30568936966babfc",
+      "sha256_after_integration": "cb128975cb9954f20b73861e61436caf5cb23447393f088c30568936966babfc",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "repository": "LMCache",
+      "destination": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "kind": "modified",
+      "source_sha256": "3bf97039bc198f3a2f2c16d3d59610e900d888505fe4500c7f1766a262df5dc4",
+      "sha256_after_integration": "3bf97039bc198f3a2f2c16d3d59610e900d888505fe4500c7f1766a262df5dc4",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "lmcache/v1/shared_cpu_cache.py",
+      "repository": "LMCache",
+      "destination": "lmcache/v1/shared_cpu_cache.py",
+      "kind": "modified",
+      "source_sha256": "9e4860ae4ff0917f1619f55711b097dbe1d6b2ddd7d88a684886b80e0a3acdb8",
+      "sha256_after_integration": "9e4860ae4ff0917f1619f55711b097dbe1d6b2ddd7d88a684886b80e0a3acdb8",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "tests/v1/test_shared_layer_page_handles.py",
+      "repository": "LMCache",
+      "destination": "tests/v1/test_shared_layer_page_handles.py",
+      "kind": "added",
+      "source_sha256": "33d32e3d1c03869a5c7dba6d5e2cb13c66fbea97d94583054e72d171a4702407",
+      "sha256_after_integration": "33d32e3d1c03869a5c7dba6d5e2cb13c66fbea97d94583054e72d171a4702407",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache",
+      "source": "tests/v1/test_sparse_source_frontier.py",
+      "repository": "LMCache",
+      "destination": "tests/v1/test_sparse_source_frontier.py",
+      "kind": "added",
+      "source_sha256": "e2baf057c5d551ac210ae3343bb08431ceea6e2cc0254966dba49f7f6d2036f2",
+      "sha256_after_integration": "e2baf057c5d551ac210ae3343bb08431ceea6e2cc0254966dba49f7f6d2036f2",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "lmcache_ascend/v1/cache_engine.py",
+      "repository": "LMCache",
+      "destination": "ascend/lmcache_ascend/v1/cache_engine.py",
+      "kind": "modified",
+      "source_sha256": "61e0389ecec7930389d8961a2d0242736c2aec2ae20f96635561e8a6fec572ba",
+      "sha256_after_integration": "61e0389ecec7930389d8961a2d0242736c2aec2ae20f96635561e8a6fec572ba",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_cache_engine_close_cpu.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_cache_engine_close_cpu.py",
+      "kind": "added",
+      "source_sha256": "d0eacf33a9bd7947175de1e949c0b020253a5142bd29f0cc112456e157604ac9",
+      "sha256_after_integration": "d0eacf33a9bd7947175de1e949c0b020253a5142bd29f0cc112456e157604ac9",
+      "adaptation": "none"
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_flat_store_tokens_cpu.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_flat_store_tokens_cpu.py",
+      "kind": "added",
+      "source_sha256": "93f242435bda5de4fa0bd3ad1f46e3e496396f3b466223b67e65e45bc8a62677",
+      "sha256_after_integration": "73832c7f76534627862b6cfba7de092b346f11fc492bb95a3141dc742025be7e",
+      "adaptation": "Use combined LMCache repository root for imports instead of a sibling checkout; assertions unchanged."
+    },
+    {
+      "source_repository": "LMCache-Ascend",
+      "source": "tests/v1/test_sparse_chunk_plan.py",
+      "repository": "LMCache",
+      "destination": "ascend/tests/v1/test_sparse_chunk_plan.py",
+      "kind": "added",
+      "source_sha256": "e7db1eb24b488986c0f5fb85ca277bff85d3648607f1f112fa979d9828d0e921",
+      "sha256_after_integration": "e7db1eb24b488986c0f5fb85ca277bff85d3648607f1f112fa979d9828d0e921",
+      "adaptation": "none"
+    },
+    {
+      "repository": "vllm",
+      "destination": "MANIFEST.in",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": "b5821ec22f73d41d9dc64752c5b2c2c08c7700956b59a0d1ce23b528dcf568e6",
+      "sha256_after_integration": "c0db28be52ab50afb863536f0cf29f807cfe75f1ea783b8593c890fe1d3646f9",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "vllm",
+      "destination": "README.md",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": "075420934b367e45ed3fcade1f1a4e4cdd906ad37916bb0704ba3b6378f4b2b6",
+      "sha256_after_integration": "a1f816bdaf63bbeaaaac378943bcfcba2f8ac238c35698224b930e41e4d58b5c",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "vllm",
+      "destination": "ascend/tests/standalone/test_p1_resources.py",
+      "kind": "added",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": null,
+      "sha256_after_integration": "f1a3bc3181123ce3cb99790d66cf166d7fccdef1268b4fddcc6faf0661eeffb3",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "vllm",
+      "destination": "ascend/vllm_ascend/platform.py",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": "558ccb9e3d020b39230a539c445d2b63df2ed7b02017eefcbd260f646bf0db13",
+      "sha256_after_integration": "c9f6a353a2c1d1370d793eb6656bb20296e3c59a69135b056893b307ce88f09d",
+      "adaptation": "Preserve linked custom-op resource directory for strict editable; normal wheel layout unchanged."
+    },
+    {
+      "repository": "vllm",
+      "destination": "docs/getting_started/installation/ascend_p1.md",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "ba361feb8d13d2377698ec758cdf644fc00063be",
+      "sha256_before_adaptation": "f5e9ecc329f56fa6feb73dcee42ac467a1bd3e68a1755cacabde0c0f1c18a3e7",
+      "sha256_after_integration": "99b1b10752fda5ae1b78cd3f90b7eb0268eecd9d1d988d48528192fcbf25190c",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0.",
+      "supersedes_sha256": "f5e9ecc329f56fa6feb73dcee42ac467a1bd3e68a1755cacabde0c0f1c18a3e7"
+    },
+    {
+      "repository": "vllm",
+      "destination": "p1_build.py",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "ba361feb8d13d2377698ec758cdf644fc00063be",
+      "sha256_before_adaptation": "8b4fd3c45c550db5af700caf5d375413d81f923891c20b3754b938bb6d56f064",
+      "sha256_after_integration": "2d79415e19b52e0f716f00146a7ed8e4cfc0ae063228c80b08aa3468a05efa10",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0.",
+      "supersedes_sha256": "8b4fd3c45c550db5af700caf5d375413d81f923891c20b3754b938bb6d56f064"
+    },
+    {
+      "repository": "vllm",
+      "destination": "p1_dev.py",
+      "kind": "added",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": null,
+      "sha256_after_integration": "76804cbf2703885c4298126570d373006e1717d5596d246f19e79a9af0982f9a",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "vllm",
+      "destination": "tests/standalone/test_p1_development.py",
+      "kind": "added",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+      "sha256_before_adaptation": null,
+      "sha256_after_integration": "7dbffb07c4f4a0ab9ebe0b36fadb15f33b0e7693443ee1799dcac8307c492a0e",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "MANIFEST.in",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+      "sha256_before_adaptation": "e9872dcc8f23d49662ce39f5dcdcae6506dfff943f7949ead2667d7821314a3d",
+      "sha256_after_integration": "55a88db266955b52a1082d2cbdd21645dedc211015d44bacc2648b7990de94ac",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "README.md",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+      "sha256_before_adaptation": "aebee656fa46dd74f8e59f3831891861cba3c354933b4e952546abe52fffca98",
+      "sha256_after_integration": "ad43a1a39ed9da18d68deaeb9d29b65b3959e7dd95af0ccac826f6fb80fdb4d3",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "docs/source/getting_started/ascend_p1.rst",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+      "sha256_before_adaptation": "671f0d6031cb347094ffcde15c8b9fe8b7327a7cc4ce555706324aca6efb6c31",
+      "sha256_after_integration": "4a6cd173e07b963fc3db4a6e7299c552370686d7dc7ccf2ccc0d9ff9c0096651",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0.",
+      "supersedes_sha256": "671f0d6031cb347094ffcde15c8b9fe8b7327a7cc4ce555706324aca6efb6c31"
+    },
+    {
+      "repository": "LMCache",
+      "destination": "docs/source/index.rst",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+      "sha256_before_adaptation": "ab05811ef6d02eda8814354a8be7d23c1ae1ae4d7e98621e82ddf7cbc8a43dc9",
+      "sha256_after_integration": "30745e2e2d430ed9e1bc9663f858949cf1b3876f9c66b97508456380207562fd",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "p1_build.py",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+      "sha256_before_adaptation": "8b4fd3c45c550db5af700caf5d375413d81f923891c20b3754b938bb6d56f064",
+      "sha256_after_integration": "2d79415e19b52e0f716f00146a7ed8e4cfc0ae063228c80b08aa3468a05efa10",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0.",
+      "supersedes_sha256": "8b4fd3c45c550db5af700caf5d375413d81f923891c20b3754b938bb6d56f064"
+    },
+    {
+      "repository": "LMCache",
+      "destination": "p1_dev.py",
+      "kind": "added",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+      "sha256_before_adaptation": null,
+      "sha256_after_integration": "76804cbf2703885c4298126570d373006e1717d5596d246f19e79a9af0982f9a",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "pyproject.toml",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+      "sha256_before_adaptation": "1f01368eab689eb5bb57b4516122a0b5703ce0294a56c9222030b2493ef692f2",
+      "sha256_after_integration": "9a593956b8526fb67c0e33baecc986154e2452a052b3c7d6d566cf2fcc331192",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0.",
+      "supersedes_sha256": "1f01368eab689eb5bb57b4516122a0b5703ce0294a56c9222030b2493ef692f2"
+    },
+    {
+      "repository": "LMCache",
+      "destination": "tests/standalone/test_p1_development.py",
+      "kind": "added",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+      "sha256_before_adaptation": null,
+      "sha256_after_integration": "7dbffb07c4f4a0ab9ebe0b36fadb15f33b0e7693443ee1799dcac8307c492a0e",
+      "adaptation": "P1 isolated build/install tooling, tests and operator documentation."
+    },
+    {
+      "repository": "vllm",
+      "destination": "pyproject.toml",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "ba361feb8d13d2377698ec758cdf644fc00063be",
+      "sha256_before_adaptation": "3cfad611aae6b85111df7b5f8fd1aea12f9f1f9237e0b03fe6c0528237868ea9",
+      "sha256_after_integration": "f876f150bd83c92465ec38f5beb7e1db5a7fa384c18e7e3e0258c180fe065a6d",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0."
+    },
+    {
+      "repository": "vllm",
+      "destination": "requirements/ascend.txt",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "ba361feb8d13d2377698ec758cdf644fc00063be",
+      "sha256_before_adaptation": "776473fec751da822d06cf5f02a3fa38817b112af07f8a8cf70f06ea0b9a2424",
+      "sha256_after_integration": "fd144ebfedce3a145ef79fd7789e7fe161ea4dc4bcbe2af22ca3bee6a3a4d615",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0."
+    },
+    {
+      "repository": "vllm",
+      "destination": "requirements/build.txt",
+      "kind": "modified",
+      "source_repository": "P1/vllm",
+      "source_parent_commit": "ba361feb8d13d2377698ec758cdf644fc00063be",
+      "sha256_before_adaptation": "5455e1a2304d2b1e3488b9ef9bcfde1a4093e4c455a207387465f08219f3e00b",
+      "sha256_after_integration": "3ee7e846345ae1cdb97edb307729597a7f34650b0ce3e2a46cf0cb5af93065d7",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "requirements/ascend.txt",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+      "sha256_before_adaptation": "1501a48215fc41d4d48851f987dbe09791f50736f251562a11d4e09f04a9f0cc",
+      "sha256_after_integration": "c706648cfe3480b905739f5d7e23b65458a23f2ac253d7a86b0ce91c98735212",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0."
+    },
+    {
+      "repository": "LMCache",
+      "destination": "requirements/build.txt",
+      "kind": "modified",
+      "source_repository": "P1/LMCache",
+      "source_parent_commit": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+      "sha256_before_adaptation": "5455e1a2304d2b1e3488b9ef9bcfde1a4093e4c455a207387465f08219f3e00b",
+      "sha256_after_integration": "3ee7e846345ae1cdb97edb307729597a7f34650b0ce3e2a46cf0cb5af93065d7",
+      "adaptation": "Align torch-npu 2.9.0.post2 and Transformers 5.2.0 candidates across runtime/build declarations, native gate and operator docs; torch remains 2.9.0."
+    }
+  ]
+}

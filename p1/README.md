@@ -4,7 +4,11 @@
 
 本轮允许在其他开发人员验证基线、后续归档数据期间推进 P1 源码工作。这是明确的阶段启动授权，不代表 P0/NPU 验收已经通过，也不授权替换现有服务。
 
-2026-09-23 开发安装补充：两个 P1 仓现各自携带 `p1_dev.py`，支持材料核验、依赖检查、wheel 构建/安装、strict editable 调测和安装路径检查。每次原生编译使用新的保留目录，不复用旧 ACLNN 或已链接的设备对象。具体命令见[开发调测指南](development-build-install.md)，正式验收见[内网主流程](intranet-next-steps.md)。新代码只在本地提交，**尚未推送**；本机未编译/安装，不代表已可在 NPU 运行。最新配对 SHA 以主流程为准，审计使用累积清单 `baseline/p1-build-install-20260923.json`。
+2026-09-23 候选更新：按用户最新内网预检反馈，统一接受 `torch-npu==2.9.0.post2`、`transformers==5.2.0`；torch 本体仍为 2.9.0，其他候选不变。同步修改两仓运行/构建声明、原生构建校验与 profile，preflight 继续按选定源码声明严格核验，不跳过不匹配。当前配对提交及重试方法见[内网指导](intranet-next-steps.md)，累计清单改用 `baseline/p1-intranet-candidates-20260923.json`。历史记录保留，不能把元数据通过视作 Transformers 5/ABI 兼容性证明。
+
+本次候选调整的 75 项轻量测试与源码审计已通过，原生/内网验证待执行；证据见[候选同步记录](results/intranet-candidates-20260923/README.md)。
+
+此前同日开发安装批次：两个 P1 仓已各自携带 `p1_dev.py`，支持材料核验、依赖检查、wheel 构建/安装、strict editable 调测和安装路径检查。每次原生编译使用新的保留目录，不复用旧 ACLNN 或已链接的设备对象。具体命令见[开发调测指南](development-build-install.md)，正式验收见[内网主流程](intranet-next-steps.md)。本机未编译/安装，不代表已可在 NPU 运行。该批历史清单为 `baseline/p1-build-install-20260923.json`；当前配对 SHA 和清单以上文最新候选更新及主流程为准。
 
 此前同日修复批次：四仓 `fix/staged-sfa-event-handoff` 已合入本地基线，并移植到 P1 的 vllm `3827b16205a3b748629e38ad739dfc55c6b04d49`、LMCache `b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb`；当前开发安装改动叠加在这两个提交之上，未改动原四仓。详见[修复合入记录](staged-sfa-event-handoff-integration.md)。历史清单、该批 25 项修复清单及 source-01 报告均保留，不改写为新批次结果。
 
@@ -17,7 +21,7 @@
 - C8 关闭。权重目录仍叫 GLM-5.2-w4a8c8，不修改权重或量化元数据；目录标签、W4A8 权重量化、运行时 KV/index cache dtype 分别核实。
 - 同时验收 TP8/DP2 和 TP4/DP4，均为 4 节点 × 8 张 910B3、物理 2P2D。前者每节点一个 TP8 实例，P/D 各 DP2；后者每节点两个 TP4 实例，P/D 各 DP4，不重复计算卡数。
 - 保留离线、在线、CPU KV 卸载、跨实例缓存、P/D、checkpoint、RemoteFill 及恢复能力。
-- 复用 CANN 8.5.1、torch 2.9.0+cpu、torch_npu 2.9.0.post1+gitee7ba04、triton-ascend 3.2.0.dev20260322，候选版本不等于 ABI/功能认证。
+- 复用 CANN 8.5.1、torch 2.9.0+cpu、torch_npu 2.9.0.post2、Transformers 5.2.0、triton-ascend 3.2.0.dev20260322，候选版本不等于 ABI/功能认证。
 
 ## 2. 已实施的源码变更
 

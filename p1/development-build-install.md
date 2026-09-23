@@ -17,7 +17,7 @@
 
 以下命令只在**专用隔离容器**执行，不在当前 GLM 基线服务容器执行。不创建共享旧 site-packages 的伪隔离环境，不自动卸载基线包。由内网负责人准备无旧 vllm/vllm-ascend/LMCache/LMCache-Ascend 安装及旧源码路径污染的环境；工具会拒绝覆盖检测到的旧 distribution。
 
-沿用 910B3、aarch64/Python 3.11、CANN 8.5.1、torch 2.9.0、torch_npu `2.9.0.post1+gitee7ba04`、triton-ascend `3.2.0.dev20260322`。不升级 torch。构建依赖仍为两仓的 `requirements/build.txt` 和 `requirements/ascend.txt`，缺失项经内网制品库/批准的 proxy 准备；工具不下载或安装依赖。
+沿用 910B3、aarch64/Python 3.11、CANN 8.5.1、torch 2.9.0、triton-ascend `3.2.0.dev20260322`；按用户最新内网安装信息，将候选固定为 torch_npu `2.9.0.post2`、Transformers `5.2.0`。不升级或降级现有包。构建依赖仍为两仓的 `requirements/build.txt` 和 `requirements/ascend.txt`，缺失项经内网制品库/批准的 proxy 准备；工具不下载或安装依赖。元数据匹配不代表 Transformers 5 接口或 NPU ABI 已验收。
 
 先取得本批两个代码提交和更新后的 `design/p1`。本轮代码只在本地提交，尚未推送；内网不能用旧 main 代替。具体固定 SHA 以[主流程](intranet-next-steps.md)为准。
 
@@ -86,7 +86,7 @@ python -B "$P1_REPOS/LMCache/tests/standalone/test_p1_development.py" -v
 python -B "$P1_REPOS/vllm/ascend/tests/standalone/test_p1_resources.py" -v
 ```
 
-doctor 检查依赖/材料并在元数据通过后用 torch 子进程读取构建路径与 C++ ABI；不分配 NPU、不编译。必须 `passed=true` 才继续。新增轻量测试为 21+21+2 项，native 命令使用模拟文件，不代表 CANN 编译成功；还须执行主流程的 24 项约束、55 项 SFA 轻量回归和 112 项 host。
+doctor 检查依赖/材料并在元数据通过后用 torch 子进程读取构建路径与 C++ ABI；不分配 NPU、不编译。必须 `passed=true` 才继续。新增轻量测试为 21+21+2 项，native 命令使用模拟文件，不代表 CANN 编译成功；还须执行主流程的 31 项约束/预检、55 项 SFA 轻量回归和 112 项 host。
 
 ## 5A. wheel 构建与安装
 

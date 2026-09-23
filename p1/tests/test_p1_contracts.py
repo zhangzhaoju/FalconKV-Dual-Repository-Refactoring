@@ -64,6 +64,7 @@ class P1Contracts(unittest.TestCase):
             self.assertEqual(len(arguments["ext_modules"]), 1)
 
     def test_build_requirements_match_declared_profile(self):
+        candidate = json.loads((P1 / "profile.json").read_text())["software_candidate"]
         for repo, module in self.builders.items():
             root = WORKSPACE / repo
             config = tomllib.loads((root / "pyproject.toml").read_text())
@@ -79,7 +80,10 @@ class P1Contracts(unittest.TestCase):
             self.assertFalse((root / "ascend/pyproject.toml").exists())
             runtime = module.runtime_requirements()
             self.assertIn("torch==2.9.0", runtime)
-            self.assertIn("torch-npu==2.9.0.post1+gitee7ba04", runtime)
+            self.assertIn(f"torch-npu=={candidate['torch_npu']}", runtime)
+            self.assertIn(f"torch-npu=={candidate['torch_npu']}", requirements)
+            self.assertEqual(module.TORCH_NPU_VERSION, candidate["torch_npu"])
+            self.assertIn(f"transformers=={candidate['transformers']}", runtime)
             self.assertFalse(
                 any(
                     n.startswith(("cupy", "cufile", "nvtx", "nixl", "nvidia-"))

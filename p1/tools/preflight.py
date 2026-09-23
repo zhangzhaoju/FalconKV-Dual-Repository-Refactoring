@@ -3,6 +3,8 @@
 
 Checks direct requirements; pip check after installation still checks transitive
 metadata. Missing packages are reported, never installed or silently skipped.
+Candidate versions come from the selected workspace's active packaging files,
+not from a version override that could bypass the subsequent build/install.
 """
 
 from __future__ import annotations
@@ -60,6 +62,7 @@ def collect(workspace: Path) -> dict:
         errors.append("ASCEND_HOME_PATH does not identify the approved CANN 8.5.1")
     return {
         "scope": "direct_metadata_only_not_ABI_or_runtime",
+        "workspace": str(workspace.resolve()),
         "python": sys.version,
         "machine": platform.machine(),
         "requirements": checks,
