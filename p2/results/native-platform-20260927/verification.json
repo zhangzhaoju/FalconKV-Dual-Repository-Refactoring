@@ -1,0 +1,3085 @@
+{
+  "date_utc": "2026-09-27T06:50:31.759908+00:00",
+  "scope": "host_only_not_full_framework_import_or_NPU_ABI_acceptance",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "repositories": {
+    "vllm": {
+      "retained_p1_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "retained_p1_tree": "e3d2102824653c969fcb1e5b6c462a640d1e13af",
+      "p1_and_main_preserved": true,
+      "branch": "p2",
+      "head_at_check": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "paired_installer_versions": {
+        "vllm": "0.18.0+ascend.p2",
+        "lmcache": "0.4.3+ascend.p1"
+      },
+      "changed_file_sha256": {
+        "AGENTS.md": "a445b44cee43d7b28ef08abf2f31d140f6ea4a71029d70e1f2103a29011c2bb5",
+        "ascend/AGENTS.md": "3f5a215ed5266edd68e951171a63d2232b5c2d6a8861cc55d8b6bcebbb62068a",
+        "ascend/tests/standalone/test_p1_resources.py": "131db31aa55b00ad606ba1dca17135c3ac5b4edf755c07217e0f0f4e5118a31d",
+        "ascend/tests/ut/test_platform.py": "3f6715d0ecb0a24245d117892a36c9744f668e0f3c3ff4f583e4a7e580d2feda",
+        "ascend/vllm_ascend/__init__.py": "1d341a04acaac56df75bc1c63448a3ec676340dd4cfa2ef7c5f8c017a578f187",
+        "ascend/vllm_ascend/attention/attention_mask.py": "ee707705ab4b6b7fdf836d16afce27e49f18e84916e86a345dca7a16e3756e85",
+        "ascend/vllm_ascend/ops/rotary_embedding.py": "09b6cffb70b138eb96772e7f53366ff16fc2f7fd4741c34210e840d9106bada7",
+        "ascend/vllm_ascend/patch/__init__.py": "44e3ea5dd79ccc5604bbea06bbe9cc65dafd69923f45b36e2dc6e8ece37bf252",
+        "ascend/vllm_ascend/platform.py": "dd1e0dfecb93ef3d9aeac325edbcf816c157c9bdabe5b3b2babbde5091bf911d",
+        "docs/design/ascend_p2.md": "58f0c233f098b768ecf9e6474c516431326cf479584d597b23839f3f46507b33",
+        "p1_dev.py": "5d507d9243ff1445ffa096d929e1439897dab65be47aa27e3f43d28a9cba978c",
+        "pyproject.toml": "d7d6d5b21e30cc634d519659b6b8077c022bbca3b94789f47cf813bef02fdbde",
+        "tests/standalone/test_p1_development.py": "bd9e55d5b84ffaedaa7f52ed07cc54d9be3c3cc36a29bb449d61ae182c0e24cc",
+        "tests/standalone/test_p2_platform.py": "d445b9114450aefdca7c65278d998000444e08a9f3a79beabe7ef954b4dcabfa",
+        "vllm/distributed/parallel_state.py": "ed4ea64b329d087070c26536acadfac5b85525547de285b6a74be6cd0984c254",
+        "vllm/distributed/stateless_coordinator.py": "1c9409b535eabeead2fb313af7b746bcb794b34e1dff79d3c1ff812fcd8f2f2c",
+        "vllm/model_executor/custom_op.py": "b47a1ac6b2692142a23607ba5fc95c2fd8d234e7a414459595f77175773187b1",
+        "vllm/model_executor/layers/fused_moe/oracle/unquantized.py": "599026a9cbff7e22407d496b989ec55b7f229e73c66cd48925b506b756078006",
+        "vllm/platforms/__init__.py": "9019b5b4cb31219ebcf4a9786665b59314d77bb45a61c43834d51b3f1dd3b29c",
+        "vllm/platforms/interface.py": "e0076f1a3036f75bf08ba54d182d113b62854f73249d748ace4a601f349b468c",
+        "vllm/platforms/npu.py": "5aead47c56ef5ddc7e407183d35fa52c4374ca5df1ce57ddc6279b4aaf462217",
+        "vllm/plugins/__init__.py": "fc7a7875f21eb7376be2e14c645ea89b3a7f99a3639d61cda4e659f0537a998c"
+      },
+      "ruff": {
+        "ascend/tests/standalone/test_p1_resources.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "ascend/tests/ut/test_platform.py": {
+          "p1_rule_counts": {
+            "I001": 1,
+            "E501": 22
+          },
+          "p2_rule_counts": {
+            "E501": 22
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 58
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 58
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 58,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 118,
+                "row": 60
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 60
+              },
+              "message": "Line too long (117 > 88)",
+              "noqa_row": 60,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 158
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 158
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 158,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 96,
+                "row": 160
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 160
+              },
+              "message": "Line too long (95 > 88)",
+              "noqa_row": 160,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 170
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 170
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 170,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 230
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 230
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 230,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 105,
+                "row": 246
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 246
+              },
+              "message": "Line too long (104 > 88)",
+              "noqa_row": 246,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 117,
+                "row": 259
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 259
+              },
+              "message": "Line too long (116 > 88)",
+              "noqa_row": 259,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 107,
+                "row": 261
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 261
+              },
+              "message": "Line too long (106 > 88)",
+              "noqa_row": 261,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 138,
+                "row": 301
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 301
+              },
+              "message": "Line too long (137 > 88)",
+              "noqa_row": 301,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 93,
+                "row": 320
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 320
+              },
+              "message": "Line too long (92 > 88)",
+              "noqa_row": 320,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 370
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 370
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 370,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 125,
+                "row": 374
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 374
+              },
+              "message": "Line too long (124 > 88)",
+              "noqa_row": 374,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 106,
+                "row": 385
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 385
+              },
+              "message": "Line too long (105 > 88)",
+              "noqa_row": 385,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 479
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 479
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 479,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 138,
+                "row": 481
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 481
+              },
+              "message": "Line too long (137 > 88)",
+              "noqa_row": 481,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 520
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 520
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 520,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 101,
+                "row": 529
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 529
+              },
+              "message": "Line too long (100 > 88)",
+              "noqa_row": 529,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 541
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 541
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 541,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 551
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 551
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 551,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 553
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 553
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 553,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 564
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/tests/ut/test_platform.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 564
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 564,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            }
+          ]
+        },
+        "ascend/vllm_ascend/__init__.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "ascend/vllm_ascend/attention/attention_mask.py": {
+          "p1_rule_counts": {
+            "I001": 1,
+            "E501": 6,
+            "SIM108": 1,
+            "SIM102": 1
+          },
+          "p2_rule_counts": {
+            "E501": 6,
+            "SIM108": 1,
+            "SIM102": 1
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 30
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 30
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 30,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 93,
+                "row": 49
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 49
+              },
+              "message": "Line too long (92 > 88)",
+              "noqa_row": 49,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 112,
+                "row": 52
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 52
+              },
+              "message": "Line too long (111 > 88)",
+              "noqa_row": 52,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 57
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 57
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 57,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM108",
+              "end_location": {
+                "column": 31,
+                "row": 66
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": {
+                "applicability": "unsafe",
+                "edits": [
+                  {
+                    "content": "mask_value = torch.finfo(torch.float32).min if dtype == torch.float16 else 1",
+                    "end_location": {
+                      "column": 31,
+                      "row": 66
+                    },
+                    "location": {
+                      "column": 13,
+                      "row": 63
+                    }
+                  }
+                ],
+                "message": "Replace `if`-`else`-block with `mask_value = torch.finfo(torch.float32).min if dtype == torch.float16 else 1`"
+              },
+              "location": {
+                "column": 13,
+                "row": 63
+              },
+              "message": "Use ternary operator `mask_value = torch.finfo(torch.float32).min if dtype == torch.float16 else 1` instead of `if`-`else`-block",
+              "noqa_row": 63,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 96,
+                "row": 67
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 67
+              },
+              "message": "Line too long (95 > 88)",
+              "noqa_row": 67,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 101,
+                "row": 73
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 73
+              },
+              "message": "Line too long (100 > 88)",
+              "noqa_row": 73,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 43,
+                "row": 78
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/attention/attention_mask.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 77
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 77,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            }
+          ]
+        },
+        "ascend/vllm_ascend/ops/rotary_embedding.py": {
+          "p1_rule_counts": {
+            "I001": 2,
+            "E501": 40
+          },
+          "p2_rule_counts": {
+            "E501": 40
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 93,
+                "row": 67
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 67
+              },
+              "message": "Line too long (92 > 88)",
+              "noqa_row": 67,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 98,
+                "row": 75
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 75
+              },
+              "message": "Line too long (97 > 88)",
+              "noqa_row": 75,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 76
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 76
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 76,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 84
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 84
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 84,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 95,
+                "row": 85
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 85
+              },
+              "message": "Line too long (94 > 88)",
+              "noqa_row": 85,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 123
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 123
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 123,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 139
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 139
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 139,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 142
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 142
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 142,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 164
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 164
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 164,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 113,
+                "row": 226
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 226
+              },
+              "message": "Line too long (112 > 88)",
+              "noqa_row": 226,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 105,
+                "row": 228
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 228
+              },
+              "message": "Line too long (104 > 88)",
+              "noqa_row": 228,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 102,
+                "row": 246
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 246
+              },
+              "message": "Line too long (101 > 88)",
+              "noqa_row": 246,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 102,
+                "row": 248
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 248
+              },
+              "message": "Line too long (101 > 88)",
+              "noqa_row": 248,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 115,
+                "row": 276
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 88,
+                "row": 276
+              },
+              "message": "Line too long (115 > 88)",
+              "noqa_row": 276,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 119,
+                "row": 280
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 280
+              },
+              "message": "Line too long (118 > 88)",
+              "noqa_row": 280,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 111,
+                "row": 292
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 292
+              },
+              "message": "Line too long (110 > 88)",
+              "noqa_row": 292,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 314
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 314
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 314,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 95,
+                "row": 333
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 333
+              },
+              "message": "Line too long (94 > 88)",
+              "noqa_row": 333,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 101,
+                "row": 350
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 350
+              },
+              "message": "Line too long (100 > 88)",
+              "noqa_row": 350,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 355
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 355
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 355,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 109,
+                "row": 357
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 357
+              },
+              "message": "Line too long (108 > 88)",
+              "noqa_row": 357,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 109,
+                "row": 362
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 362
+              },
+              "message": "Line too long (108 > 88)",
+              "noqa_row": 362,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 364
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 364
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 364,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 104,
+                "row": 365
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 365
+              },
+              "message": "Line too long (103 > 88)",
+              "noqa_row": 365,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 120,
+                "row": 378
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 378
+              },
+              "message": "Line too long (119 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 116,
+                "row": 381
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 381
+              },
+              "message": "Line too long (115 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 118,
+                "row": 382
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 382
+              },
+              "message": "Line too long (117 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 114,
+                "row": 383
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 383
+              },
+              "message": "Line too long (113 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 117,
+                "row": 384
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 384
+              },
+              "message": "Line too long (116 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 113,
+                "row": 385
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 385
+              },
+              "message": "Line too long (112 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 108,
+                "row": 386
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 386
+              },
+              "message": "Line too long (107 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 119,
+                "row": 388
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 388
+              },
+              "message": "Line too long (118 > 88)",
+              "noqa_row": 389,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 419
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 419
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 419,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 115,
+                "row": 421
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 421
+              },
+              "message": "Line too long (114 > 88)",
+              "noqa_row": 421,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 118,
+                "row": 431
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 431
+              },
+              "message": "Line too long (117 > 88)",
+              "noqa_row": 431,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 442
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 442
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 442,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 115,
+                "row": 450
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 450
+              },
+              "message": "Line too long (114 > 88)",
+              "noqa_row": 450,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 96,
+                "row": 454
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 454
+              },
+              "message": "Line too long (95 > 88)",
+              "noqa_row": 454,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 102,
+                "row": 464
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 464
+              },
+              "message": "Line too long (101 > 88)",
+              "noqa_row": 464,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 116,
+                "row": 498
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/ops/rotary_embedding.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 498
+              },
+              "message": "Line too long (115 > 88)",
+              "noqa_row": 498,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            }
+          ]
+        },
+        "ascend/vllm_ascend/patch/__init__.py": {
+          "p1_rule_counts": {
+            "E501": 39
+          },
+          "p2_rule_counts": {
+            "E501": 39
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 101,
+                "row": 26
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 26
+              },
+              "message": "Line too long (100 > 88)",
+              "noqa_row": 26,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 47
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 47
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 47,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 61
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 61
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 61,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 107,
+                "row": 87
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 87
+              },
+              "message": "Line too long (106 > 88)",
+              "noqa_row": 87,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 88
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 88
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 88,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 116,
+                "row": 273
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 273
+              },
+              "message": "Line too long (115 > 88)",
+              "noqa_row": 273,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 286
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 286
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 286,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 98,
+                "row": 305
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 305
+              },
+              "message": "Line too long (97 > 88)",
+              "noqa_row": 305,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 318
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 318
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 318,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 319
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 319
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 319,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 370
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 370
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 370,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 106,
+                "row": 378
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 378
+              },
+              "message": "Line too long (105 > 88)",
+              "noqa_row": 378,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 390
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 390
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 390,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 98,
+                "row": 402
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 402
+              },
+              "message": "Line too long (97 > 88)",
+              "noqa_row": 402,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 422
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 422
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 422,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 109,
+                "row": 434
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 434
+              },
+              "message": "Line too long (108 > 88)",
+              "noqa_row": 434,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 454
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 454
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 454,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 104,
+                "row": 465
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 465
+              },
+              "message": "Line too long (103 > 88)",
+              "noqa_row": 465,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 470
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 470
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 470,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 555
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 555
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 555,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 584
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 584
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 584,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 585
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 585
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 585,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 108,
+                "row": 587
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 587
+              },
+              "message": "Line too long (107 > 88)",
+              "noqa_row": 587,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 589
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 589
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 589,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 593
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 593
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 593,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 96,
+                "row": 610
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 610
+              },
+              "message": "Line too long (95 > 88)",
+              "noqa_row": 610,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 613
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 613
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 613,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 617
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 617
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 617,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 620
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 620
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 620,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 96,
+                "row": 622
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 622
+              },
+              "message": "Line too long (95 > 88)",
+              "noqa_row": 622,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 626
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 626
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 626,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 631
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 631
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 631,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 635
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 635
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 635,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 94,
+                "row": 640
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 640
+              },
+              "message": "Line too long (93 > 88)",
+              "noqa_row": 640,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 651
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 651
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 651,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 92,
+                "row": 670
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 670
+              },
+              "message": "Line too long (91 > 88)",
+              "noqa_row": 670,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 676
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 676
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 676,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 99,
+                "row": 706
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 706
+              },
+              "message": "Line too long (98 > 88)",
+              "noqa_row": 706,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 709
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/ascend/vllm_ascend/patch/__init__.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 709
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 709,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            }
+          ]
+        },
+        "ascend/vllm_ascend/platform.py": {
+          "p1_rule_counts": {
+            "I001": 1,
+            "E501": 73,
+            "SIM102": 7
+          },
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "p1_dev.py": {
+          "p1_rule_counts": {
+            "I001": 1,
+            "SIM117": 1
+          },
+          "p2_rule_counts": {
+            "I001": 1,
+            "SIM117": 1
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "I001",
+              "end_location": {
+                "column": 27,
+                "row": 34
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/p1_dev.py",
+              "fix": {
+                "applicability": "safe",
+                "edits": [
+                  {
+                    "content": "from __future__ import annotations\n\n# Standard\nimport argparse\nimport fnmatch\nimport hashlib\nimport io\nimport json\nimport platform\nimport shutil\nimport subprocess\nimport sys\nimport tarfile\nimport tempfile\nimport tomllib\nimport zipfile\nfrom email.parser import BytesParser\nfrom importlib import metadata\nfrom importlib.machinery import PathFinder\nfrom pathlib import Path\n\n# Third Party\nfrom packaging.requirements import Requirement\n\n# Local\nimport p1_build as builder\n\n",
+                    "end_location": {
+                      "column": 1,
+                      "row": 36
+                    },
+                    "location": {
+                      "column": 1,
+                      "row": 8
+                    }
+                  }
+                ],
+                "message": "Organize imports"
+              },
+              "location": {
+                "column": 1,
+                "row": 8
+              },
+              "message": "Import block is un-sorted or un-formatted",
+              "noqa_row": 8,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+            },
+            {
+              "cell": null,
+              "code": "SIM117",
+              "end_location": {
+                "column": 22,
+                "row": 299
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/p1_dev.py",
+              "fix": null,
+              "location": {
+                "column": 5,
+                "row": 292
+              },
+              "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+              "noqa_row": 292,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+            }
+          ]
+        },
+        "tests/standalone/test_p1_development.py": {
+          "p1_rule_counts": {
+            "SIM117": 4
+          },
+          "p2_rule_counts": {
+            "SIM117": 4
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "SIM117",
+              "end_location": {
+                "column": 78,
+                "row": 199
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/tests/standalone/test_p1_development.py",
+              "fix": null,
+              "location": {
+                "column": 13,
+                "row": 198
+              },
+              "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+              "noqa_row": 198,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+            },
+            {
+              "cell": null,
+              "code": "SIM117",
+              "end_location": {
+                "column": 67,
+                "row": 373
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/tests/standalone/test_p1_development.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 368
+              },
+              "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+              "noqa_row": 368,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+            },
+            {
+              "cell": null,
+              "code": "SIM117",
+              "end_location": {
+                "column": 67,
+                "row": 412
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/tests/standalone/test_p1_development.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 395
+              },
+              "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+              "noqa_row": 395,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+            },
+            {
+              "cell": null,
+              "code": "SIM117",
+              "end_location": {
+                "column": 67,
+                "row": 503
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/tests/standalone/test_p1_development.py",
+              "fix": {
+                "applicability": "safe",
+                "edits": [
+                  {
+                    "content": "        with (\n            patch.object(DEV, \"check_install_target\"),\n            patch.object(DEV.metadata, \"distribution\", return_value=distribution),\n            patch.object(\n                DEV.PathFinder,\n                \"find_spec\",\n                return_value=SimpleNamespace(\n                    origin=str(self.root / self.primary / \"__init__.py\")\n                ),\n            ),self.assertRaisesRegex(RuntimeError, \"shadowed\")\n        ):\n            DEV.verify(\"wheel\")",
+                    "end_location": {
+                      "column": 36,
+                      "row": 504
+                    },
+                    "location": {
+                      "column": 1,
+                      "row": 492
+                    }
+                  }
+                ],
+                "message": "Combine `with` statements"
+              },
+              "location": {
+                "column": 9,
+                "row": 492
+              },
+              "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+              "noqa_row": 492,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+            }
+          ]
+        },
+        "tests/standalone/test_p2_platform.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/distributed/parallel_state.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/distributed/stateless_coordinator.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/model_executor/custom_op.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/model_executor/layers/fused_moe/oracle/unquantized.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/platforms/__init__.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/platforms/interface.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "vllm/platforms/npu.py": {
+          "p1_rule_counts": {
+            "I001": 1,
+            "E501": 73,
+            "SIM102": 7
+          },
+          "p2_rule_counts": {
+            "E501": 29,
+            "SIM102": 7
+          },
+          "increased_counts": {},
+          "p2_findings": [
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 139
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 139
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 142,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 106,
+                "row": 141
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 141
+              },
+              "message": "Line too long (105 > 88)",
+              "noqa_row": 142,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 75,
+                "row": 182
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": {
+                "applicability": "unsafe",
+                "edits": [
+                  {
+                    "content": "            if (\n                quant_action\n                and hasattr(quant_action, \"choices\")\n                and quant_action.choices\n            ) and ASCEND_QUANTIZATION_METHOD not in quant_action.choices:\n                quant_action.choices.append(ASCEND_QUANTIZATION_METHOD)",
+                    "end_location": {
+                      "column": 76,
+                      "row": 183
+                    },
+                    "location": {
+                      "column": 1,
+                      "row": 177
+                    }
+                  }
+                ],
+                "message": "Combine `if` statements using `and`"
+              },
+              "location": {
+                "column": 13,
+                "row": 177
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 177,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 97,
+                "row": 240
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 240
+              },
+              "message": "Line too long (96 > 88)",
+              "noqa_row": 240,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 93,
+                "row": 351
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 351
+              },
+              "message": "Line too long (92 > 88)",
+              "noqa_row": 351,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 384
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 384
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 384,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 394
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 394
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 394,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 91,
+                "row": 412
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 412
+              },
+              "message": "Line too long (90 > 88)",
+              "noqa_row": 412,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 102,
+                "row": 418
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 418
+              },
+              "message": "Line too long (101 > 88)",
+              "noqa_row": 418,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 101,
+                "row": 426
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 426
+              },
+              "message": "Line too long (100 > 88)",
+              "noqa_row": 426,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 111,
+                "row": 438
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 438
+              },
+              "message": "Line too long (110 > 88)",
+              "noqa_row": 438,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 441
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 441
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 441,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 115,
+                "row": 442
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 442
+              },
+              "message": "Line too long (114 > 88)",
+              "noqa_row": 442,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 118,
+                "row": 473
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 473
+              },
+              "message": "Line too long (117 > 88)",
+              "noqa_row": 473,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 480
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 480
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 488,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 483
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 483
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 488,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 95,
+                "row": 565
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 565
+              },
+              "message": "Line too long (94 > 88)",
+              "noqa_row": 565,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 100,
+                "row": 567
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 567
+              },
+              "message": "Line too long (99 > 88)",
+              "noqa_row": 567,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 110,
+                "row": 600
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 600
+              },
+              "message": "Line too long (109 > 88)",
+              "noqa_row": 600,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 602
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 602
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 602,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 119,
+                "row": 693
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 693
+              },
+              "message": "Line too long (118 > 88)",
+              "noqa_row": 693,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 95,
+                "row": 716
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 716
+              },
+              "message": "Line too long (94 > 88)",
+              "noqa_row": 716,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 93,
+                "row": 747
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 747
+              },
+              "message": "Line too long (92 > 88)",
+              "noqa_row": 747,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 886
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 886
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 889,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 69,
+                "row": 894
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 892
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 892,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 115,
+                "row": 896
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 896
+              },
+              "message": "Line too long (114 > 88)",
+              "noqa_row": 896,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 84,
+                "row": 903
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 901
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 901,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 112,
+                "row": 905
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 905
+              },
+              "message": "Line too long (111 > 88)",
+              "noqa_row": 905,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 88,
+                "row": 915
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 913
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 913,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 15,
+                "row": 927
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 923
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 923,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 15,
+                "row": 940
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 935
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 935,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 121,
+                "row": 942
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 942
+              },
+              "message": "Line too long (120 > 88)",
+              "noqa_row": 942,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "SIM102",
+              "end_location": {
+                "column": 15,
+                "row": 952
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 9,
+                "row": 947
+              },
+              "message": "Use a single `if` statement instead of nested `if` statements",
+              "noqa_row": 947,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 103,
+                "row": 968
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 968
+              },
+              "message": "Line too long (102 > 88)",
+              "noqa_row": 968,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 120,
+                "row": 1008
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 1008
+              },
+              "message": "Line too long (119 > 88)",
+              "noqa_row": 1008,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            },
+            {
+              "cell": null,
+              "code": "E501",
+              "end_location": {
+                "column": 90,
+                "row": 1016
+              },
+              "filename": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm/vllm/platforms/npu.py",
+              "fix": null,
+              "location": {
+                "column": 89,
+                "row": 1016
+              },
+              "message": "Line too long (89 > 88)",
+              "noqa_row": 1016,
+              "severity": "error",
+              "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+            }
+          ]
+        },
+        "vllm/plugins/__init__.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        }
+      },
+      "full_ruff_passed": false,
+      "platform_method_ast": {
+        "p1_count": 28,
+        "p2_count": 29,
+        "identical_count": 27,
+        "changed": [
+          "import_kernels"
+        ],
+        "added": [
+          "register_builtin_components"
+        ],
+        "removed": []
+      }
+    },
+    "LMCache": {
+      "retained_p1_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "retained_p1_tree": "ea0a3deda6f0a9a8a37037638098978c0b5676e6",
+      "p1_and_main_preserved": true,
+      "branch": "p2",
+      "head_at_check": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "paired_installer_versions": {
+        "vllm": "0.18.0+ascend.p2",
+        "lmcache": "0.4.3+ascend.p1"
+      },
+      "changed_file_sha256": {
+        "AGENTS.md": "7e331df66232860364319eb906969e1364ff27f08dba6e753fc74fd50fbb24ec",
+        "p1_dev.py": "5d507d9243ff1445ffa096d929e1439897dab65be47aa27e3f43d28a9cba978c",
+        "tests/standalone/test_p1_development.py": "bd9e55d5b84ffaedaa7f52ed07cc54d9be3c3cc36a29bb449d61ae182c0e24cc"
+      },
+      "ruff": {
+        "p1_dev.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        },
+        "tests/standalone/test_p1_development.py": {
+          "p1_rule_counts": {},
+          "p2_rule_counts": {},
+          "increased_counts": {},
+          "p2_findings": []
+        }
+      },
+      "full_ruff_passed": true
+    }
+  },
+  "tests": [
+    {
+      "repository": "vllm",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tests/standalone/test_p2_platform.py",
+        "-v"
+      ],
+      "log": "vllm-test_p2_platform.log",
+      "returncode": 0,
+      "count": 15,
+      "passed": true
+    },
+    {
+      "repository": "vllm",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "ascend/tests/standalone/test_p1_resources.py",
+        "-v"
+      ],
+      "log": "vllm-test_p1_resources.log",
+      "returncode": 0,
+      "count": 2,
+      "passed": true
+    },
+    {
+      "repository": "vllm",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tests/standalone/test_p1_development.py",
+        "-v"
+      ],
+      "log": "vllm-test_p1_development.log",
+      "returncode": 0,
+      "count": 22,
+      "passed": true
+    },
+    {
+      "repository": "LMCache",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tests/standalone/test_p1_development.py",
+        "-v"
+      ],
+      "log": "LMCache-test_p1_development.log",
+      "returncode": 0,
+      "count": 22,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

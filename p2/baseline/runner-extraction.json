@@ -1,0 +1,338 @@
+[
+  {
+    "source": "vllm/v1/worker/gpu_model_runner.py",
+    "destination": "vllm/v1/worker/npu_runner_state.py",
+    "source_sha256": "19d8015f3782914bcda48241b57d528d0739e8d4b22de1b0db972e89b6c8d0a3",
+    "methods": [
+      "__init__",
+      "update_max_model_len",
+      "reset_mm_cache",
+      "reset_encoder_cache",
+      "init_fp8_kv_scales",
+      "_get_positions",
+      "_make_buffer",
+      "_get_mamba_copy_bufs",
+      "_init_model_kwargs",
+      "_may_reorder_batch",
+      "_init_kv_zero_meta",
+      "_zero_block_ids",
+      "_update_states",
+      "_update_states_after_model_execute",
+      "_update_streaming_request",
+      "_init_mrope_positions",
+      "_init_xdrope_positions",
+      "_extract_mm_kwargs",
+      "_dummy_mm_kwargs",
+      "_get_cumsum_and_arange",
+      "_prepare_input_ids",
+      "_get_encoder_seq_lens",
+      "_compute_cascade_attn_prefix_lens",
+      "_compute_cascade_attn_prefix_len",
+      "_calc_mrope_positions",
+      "_calc_xdrope_positions",
+      "_prepare_kv_sharing_fast_prefill",
+      "_batch_mm_inputs_from_scheduler",
+      "_execute_mm_encoder",
+      "_gather_mm_embeddings",
+      "get_supported_generation_tasks",
+      "get_supported_pooling_tasks",
+      "get_supported_tasks",
+      "sync_and_slice_intermediate_tensors",
+      "eplb_step",
+      "setup_eplb_from_mapping",
+      "_pool",
+      "_prepare_mm_inputs",
+      "_preprocess",
+      "synchronize_input_prep",
+      "_is_uniform_decode",
+      "_register_layerwise_nvtx_hooks",
+      "_get_slot_mappings",
+      "_pp_broadcast_prev_sampled_token_ids",
+      "_pp_receive_prev_sampled_token_ids_to_input_batch",
+      "take_draft_token_ids",
+      "_copy_draft_token_ids_to_cpu",
+      "_get_draft_token_ids_cpu",
+      "_copy_valid_sampled_token_count",
+      "_get_valid_sampled_token_count",
+      "update_config",
+      "_get_eagle3_aux_layers_from_config",
+      "reload_weights",
+      "_get_prompt_logprobs_dict",
+      "_get_nans_in_logits",
+      "maybe_randomize_inputs",
+      "_get_mm_dummy_batch",
+      "_dummy_pooler_run_task",
+      "_dummy_pooler_run",
+      "profile_run",
+      "_init_minimal_kv_cache_for_profiling",
+      "_freeze_gc",
+      "_cleanup_profiling_kv_cache",
+      "profile_cudagraph_memory",
+      "capture_model",
+      "_warmup_and_capture",
+      "_capture_cudagraphs",
+      "initialize_metadata_builders",
+      "_check_and_update_cudagraph_mode",
+      "_attn_group_iterator",
+      "_kv_cache_spec_attn_group_iterator",
+      "_update_hybrid_attention_mamba_layout",
+      "maybe_add_kv_sharing_layers_to_kv_cache_groups",
+      "_get_attention_kv_cache_gid",
+      "init_routed_experts_capturer",
+      "_bind_routed_experts_capturer",
+      "may_add_encoder_only_layers_to_kv_cache_config",
+      "_to_list",
+      "get_encoder_timing_stats",
+      "timed_encoder_operation"
+    ],
+    "explicit_parent_calls": [
+      "__init__",
+      "_check_and_update_cudagraph_mode",
+      "_update_states",
+      "capture_model",
+      "profile_cudagraph_memory",
+      "profile_run"
+    ]
+  },
+  {
+    "source": "vllm/v1/worker/gpu/model_runner.py",
+    "destination": "vllm/v1/worker/npu/v2/runner_state.py",
+    "source_sha256": "8c90b9430f55619207714dcef079356cb5fbd1d55c9f7fd5314c69c52f7f38fc",
+    "methods": [
+      "__init__",
+      "update_max_model_len",
+      "get_supported_tasks",
+      "load_model",
+      "get_model",
+      "main_stream",
+      "get_kv_cache_spec",
+      "initialize_kv_cache",
+      "_dummy_run",
+      "_dummy_sampler_run",
+      "_dummy_pooler_run",
+      "profile_run",
+      "reset_mm_cache",
+      "reset_encoder_cache",
+      "_get_num_input_tokens",
+      "profile_cudagraph_memory",
+      "capture_model",
+      "finish_requests",
+      "free_states",
+      "add_requests",
+      "update_requests",
+      "prepare_attn",
+      "prepare_dummy_attn",
+      "sample",
+      "postprocess",
+      "execute_model",
+      "sample_tokens",
+      "take_draft_token_ids",
+      "pool",
+      "postprocess_pool"
+    ],
+    "explicit_parent_calls": [
+      "__init__",
+      "postprocess"
+    ]
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/sampler.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/sampler.py",
+    "source_sha256": "0ff12e9f419ad6da15b9b10c4f9fda6305c44e507ce3419ef019b9a6c6458492"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/input_batch.py",
+    "destination": "vllm/v1/worker/npu/v2/common/input_batch.py",
+    "source_sha256": "5e50b7a5d008a4933fccb6a4e4b56025e7fb7271eb4ffe08a0ec27107206e85d"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/metrics/logits.py",
+    "destination": "vllm/v1/worker/npu/v2/common/metrics/logits.py",
+    "source_sha256": "ea058d7510a077a55f8ac7e4c3d596508346244e908cb372865d7159f62edc89"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/bad_words.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/bad_words.py",
+    "source_sha256": "e9959cae335293f0d9e62a2c4438eb0524630b7c3f540722b3aaf7499ac9e794"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/gumbel.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/gumbel.py",
+    "source_sha256": "cb7b1366a5973dec721b9763c04aa8d9c562cdbfe9564d453fbcafa64a87adf3"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/logit_bias.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/logit_bias.py",
+    "source_sha256": "05b92a0d1a4be291a262d707fa14482b9eb8a7b4154d7e503d187503c2ede046"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/logprob.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/logprob.py",
+    "source_sha256": "9a143140df1a2b39c777884e4ed05cc0d63c74879ab1092992c760829d695fef"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/output.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/output.py",
+    "source_sha256": "30f2e0dc7ab40d26f570429368893bc24a5e6f2ebc0046321098fec974adeb0f"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/penalties.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/penalties.py",
+    "source_sha256": "ec75015e63be08748b5692299fe3941be0fae1122a5bc5d445917f82b0a3a09b"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/states.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/states.py",
+    "source_sha256": "396fb79c7acf5c1dcab1afc7fd4300d9b2407befc874d1e88aec67c2d4d0e6a9"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/states.py",
+    "destination": "vllm/v1/worker/npu/v2/common/states.py",
+    "source_sha256": "98e486fbb15ca38869075e8b9328681410ec793cf608164df64c1d86f7554aad"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/buffer_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/buffer_utils.py",
+    "source_sha256": "bdfea8d7a38afad0ca7e50f89a32c67a51d11e094b323145197c661fb4f3ed5d"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/min_p.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/min_p.py",
+    "source_sha256": "88470a328d2d73d67b50fda2fc9fad7f9f6d9833f2a39a93cdba4fa7d636223d"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/eagle/speculator.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/eagle/speculator.py",
+    "source_sha256": "a742cf39740e84288a9264dff3391748151edccd15d74a8ea6c1383b7fe5842c"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/attn_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/attn_utils.py",
+    "source_sha256": "4c4351ab95d5f5a7ff79a297b5827d3034f5e2960314810341ce16eae1524e0e"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/block_table.py",
+    "destination": "vllm/v1/worker/npu/v2/common/block_table.py",
+    "source_sha256": "0488a301b1f9cac7f3b4eeba6e85cfd25aa44038545fd30620b057e182af6333"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/dp_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/dp_utils.py",
+    "source_sha256": "050dc6eae1b7c4b04a141370243477d3c22c6e507446b5a162cbd2600657ed3f"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/model_states/interface.py",
+    "destination": "vllm/v1/worker/npu/v2/common/model_states/interface.py",
+    "source_sha256": "97aad1e15d8deb227f8a23ade3f5ccbf345d6b1bc17bfaa4123e181fe695b304"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/eagle/cudagraph.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/eagle/cudagraph.py",
+    "source_sha256": "a4c3c66dbf191852a3d18a7a25b7343e78a2ac127be8c41d45481f5f941e617a"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/eagle/utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/eagle/utils.py",
+    "source_sha256": "d6098078a7544d78609c47f5352df718468dc88b81c7f2904c42996cf03c3f95"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/cudagraph_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/cudagraph_utils.py",
+    "source_sha256": "c720d3fdc87b3912f0d8d6f888f64c0f0c0eea0db3f1b710ec6161f5fa881639"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/cp_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/cp_utils.py",
+    "source_sha256": "7df6bea3f523c363390f871eb9306a481785b8b0f495b0c70ea8404b1bee27b1"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/mm/encoder_cache.py",
+    "destination": "vllm/v1/worker/npu/v2/common/mm/encoder_cache.py",
+    "source_sha256": "0799df34d8e0a2c5903cabd66c95dc69c06ce18c60f1918bf1f74a968ae10889"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/model_states/default.py",
+    "destination": "vllm/v1/worker/npu/v2/common/model_states/default.py",
+    "source_sha256": "93a5bafa526ff94718dbf6df0e8509be220b083f5052c4bed2faf93792c9eeea"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/mm/encoder_runner.py",
+    "destination": "vllm/v1/worker/npu/v2/common/mm/encoder_runner.py",
+    "source_sha256": "7b0fbad4c54a6c75765ee7c389585b70288fe02449fa903ed3532e3ed0e61b7e"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/mm/rope.py",
+    "destination": "vllm/v1/worker/npu/v2/common/mm/rope.py",
+    "source_sha256": "12ffa3f19f7df10bccddef12a8331820af4b14a61736b2bea4acbc934cdd2b20"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/async_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/async_utils.py",
+    "source_sha256": "14bbc6fe607219a7ac6fa345b212632cf7b36a75cf61a148fd3c9b3c0ea84757"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/kv_connector.py",
+    "destination": "vllm/v1/worker/npu/v2/common/kv_connector.py",
+    "source_sha256": "5dffcafa0352f1c17b332448533422e74c0523cb208d1c64fe7fcf22b11257a7"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/lora_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/lora_utils.py",
+    "source_sha256": "5c5f363f124d140e0047a054936932aa680a1dd7c5f68ead90b89b1042db30cd"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/model_states/__init__.py",
+    "destination": "vllm/v1/worker/npu/v2/common/model_states/__init__.py",
+    "source_sha256": "890b4483f5dc5c630522291cc9e10f270cbb635ab64855ec37ef948faa9fb02d"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/pool/pooling_runner.py",
+    "destination": "vllm/v1/worker/npu/v2/common/pool/pooling_runner.py",
+    "source_sha256": "491c94363aabfd1569329d0e255af03474e3e9f57a654f1f33a89e3771af198c"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/pp_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/pp_utils.py",
+    "source_sha256": "e220c9ae48a04f133721cca81009d9cc7953e74c01546290c0aa87bbbbe104ff"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/sample/prompt_logprob.py",
+    "destination": "vllm/v1/worker/npu/v2/common/sample/prompt_logprob.py",
+    "source_sha256": "6c0756141ba6375acfc506d48bfb5c61908a54dfb797a74a32d766c3364dc26b"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/__init__.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/__init__.py",
+    "source_sha256": "33015322b89525966a5615566dab3a733656fde5d6e53c12a02835468f844ea4"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/eagle/eagle3_utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/eagle/eagle3_utils.py",
+    "source_sha256": "d602aa918810b8b1c709d8713c6e6468139060c7c67fa5c4694ea777bd0f4cc9"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/rejection_sampler.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/rejection_sampler.py",
+    "source_sha256": "56ce3abc17c228855aa820a04be423fd748272021a2e819f7f9d8261b4de1b44"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/spec_decode/utils.py",
+    "destination": "vllm/v1/worker/npu/v2/common/spec_decode/utils.py",
+    "source_sha256": "c3cd99da46c29abd3912364720f31a0d68703066d237da8b164c34be7b55a4e0"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/structured_outputs.py",
+    "destination": "vllm/v1/worker/npu/v2/common/structured_outputs.py",
+    "source_sha256": "ab2919f98f4f145936718f09660cf597d46183fcd74f95c72ac1b2c70e5c21c8"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/model_states/whisper.py",
+    "destination": "vllm/v1/worker/npu/v2/common/model_states/whisper.py",
+    "source_sha256": "405fe295fee017d1b959189d371ef88e076aa82287a632288fe3979301e5ca12"
+  },
+  {
+    "source": "vllm/v1/worker/gpu/pool/late_interaction_runner.py",
+    "destination": "vllm/v1/worker/npu/v2/common/pool/late_interaction_runner.py",
+    "source_sha256": "e45c92414fc6803cc9aa4da2c2bef6c525ca35441dca705c75d45e8dfd9b4c47"
+  }
+]

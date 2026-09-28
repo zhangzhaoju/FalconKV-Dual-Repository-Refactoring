@@ -1,0 +1,2 @@
+$ /usr/bin/python3 -m ruff check --select E4,E7,E9,F,I --ignore E731 ascend/lmcache_ascend/integration/vllm/vllm_v1_adapter.py ascend/lmcache_ascend/v1/content_diagnostics.py lmcache/v1/storage_backend/connector/mooncakestore_connector.py p1_dev.py
+All checks passed!

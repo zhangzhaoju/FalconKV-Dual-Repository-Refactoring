@@ -1,0 +1,3485 @@
+{
+  "scope": "P2 source ownership; runtime equivalence pending intranet",
+  "counts": {
+    "native": 305,
+    "archived": 49,
+    "removed_cuda_wrapper": 1
+  },
+  "patch_counts": {
+    "retired_loader": 6,
+    "integrated": 27,
+    "inactive_non_target": 16
+  },
+  "files": [
+    {
+      "source": "ascend/vllm_ascend/_310p/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/attention/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/attention/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/attention/attention_mask.py",
+      "destination": "vllm/platforms/ascend_310p/attention/attention_mask.py",
+      "source_sha256": "dca78f7ed0f3fb0e3557378f07a92cd458c2cf635f4fbaac7de0b47b7da691ab",
+      "disposition": "native",
+      "destination_sha256": "bb8746e4bc9ff5b7d52b2c7a7aa8b59b4a6666a2af588127f6e12267fc801987",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/attention/attention_v1.py",
+      "destination": "vllm/platforms/ascend_310p/attention/attention_v1.py",
+      "source_sha256": "c573d9f6ea3362a9dd2231eb0ecdf83067cbe9e887556c5e99aa132110c53b56",
+      "disposition": "native",
+      "destination_sha256": "e2273dae0417262eb95c9cfa7c22dc14a2b0aa789e42a7175a80da47c1a62320",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/attention/metadata_builder.py",
+      "destination": "vllm/platforms/ascend_310p/attention/metadata_builder.py",
+      "source_sha256": "862173c8ee355ebc61e3e21590cb55fe830351fb49e913ed4927a61b2b5119cf",
+      "disposition": "native",
+      "destination_sha256": "1967ccbd6f6b63bcb45a7c10dd220c817be75d661ccd58c011fa83acd7ab4040",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/experts_selector.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/experts_selector.py",
+      "source_sha256": "7a6da895a0d6c7d0365bcd902d454b37baff6d803689f3459e0743af20f6c7dd",
+      "disposition": "native",
+      "destination_sha256": "41374ff955b85bb5a7d13d6abcc596bd266f553bd43a0589da596f01850a7bb3",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/fused_moe.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/fused_moe.py",
+      "source_sha256": "f060013a66d9c3358a14a79ea8810ad966c83cc4702041f761247480ea7a20f2",
+      "disposition": "native",
+      "destination_sha256": "c61c63ddbfc9ae1696001a820f022f892f0d4ba142572dc60185ff9afdce84eb",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/moe_comm_method.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/moe_comm_method.py",
+      "source_sha256": "77130a2e1884241b7982d420ac9a29b92643501fce84e5654ab2c331d1ab8ef9",
+      "disposition": "native",
+      "destination_sha256": "4d52bbae78ab40b8b07a369893c81e318f335cdb18b5ac9d9e909041cba25215",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/moe_mlp.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/moe_mlp.py",
+      "source_sha256": "bbf690da61ea9be4cb60fd34598f337ca0cebbe613679e3796ca19ce8e557563",
+      "disposition": "native",
+      "destination_sha256": "4a8e6ce3d112b19eb8220fa08cfc160f27e2d8ac1c2921c5c751e18cc2fe9f1c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/fused_moe/token_dispatcher.py",
+      "destination": "vllm/platforms/ascend_310p/fused_moe/token_dispatcher.py",
+      "source_sha256": "90e6c18f8bed7e8bba9b7d5e38030c58da9452272c6250a469270fe12b02affc",
+      "disposition": "native",
+      "destination_sha256": "5bb629ffd983069f1dafdef5af10646c459b917c920ff204346e02712484cf4d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/model_runner_310p.py",
+      "destination": "vllm/platforms/ascend_310p/model_runner_310p.py",
+      "source_sha256": "373d5389088a1a325c06228f10dd93e1b04d7b8f0849fc6dbecf86af0dc3dd48",
+      "disposition": "native",
+      "destination_sha256": "591d3f9ccb65884ea2b0cdfd82f4158a23f15ab267ebbc09cd4a24e1444d9a36",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/ops/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/activation.py",
+      "destination": "vllm/platforms/ascend_310p/ops/activation.py",
+      "source_sha256": "f70185327941a9a6e8d8b2b87f995ff594df878bd7a96b1ffdafd1f2c46242fe",
+      "disposition": "native",
+      "destination_sha256": "221e5c3c6cb4e6c0ac139a9d683594928427ca326e08c4ad13e44b24d48d631c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/fla/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/ops/fla/__init__.py",
+      "source_sha256": "01150b4f71e580cf04cb1cf71b99801741f0aef58280936502bd03c9d0d6111c",
+      "disposition": "native",
+      "destination_sha256": "9f0fc3f48e296c9b820175ae38754bcd507e8dd3594bf3f0b1f8cbd56487b020",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/fla/chunk_gated_delta_rule.py",
+      "destination": "vllm/platforms/ascend_310p/ops/fla/chunk_gated_delta_rule.py",
+      "source_sha256": "84656c82f7ab81b5709596427bf49c93d3033423f6cd48a95b35e82bd887bcc0",
+      "disposition": "native",
+      "destination_sha256": "e88a703829f3b3233061eb324906ea33cbe4992b9f00f8d788eb1527f3358520",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/fla/fused_gdn_gating.py",
+      "destination": "vllm/platforms/ascend_310p/ops/fla/fused_gdn_gating.py",
+      "source_sha256": "613071395d7b0743505048bf561e775040dc28976a141310b8047aae56a0da3c",
+      "disposition": "native",
+      "destination_sha256": "613071395d7b0743505048bf561e775040dc28976a141310b8047aae56a0da3c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/fla/fused_recurrent_gated_delta_rule.py",
+      "destination": "vllm/platforms/ascend_310p/ops/fla/fused_recurrent_gated_delta_rule.py",
+      "source_sha256": "d971f23c9d7553f3f50796034130b6703d29ba7da39c90e3e24373e344c9f14b",
+      "disposition": "native",
+      "destination_sha256": "b370c960ad6ace890af937a56037fb15b23a182884a234b87ce942c989fa51de",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/layernorm.py",
+      "destination": "vllm/platforms/ascend_310p/ops/layernorm.py",
+      "source_sha256": "03823b88f63759d01d9b91dc09a4904a3fd97e4dcd3157fb83cc8516a99370fb",
+      "disposition": "native",
+      "destination_sha256": "df4268671103a382e673e30cdcac70e148cd2325f7dbb9c0d5ec397b4871bc67",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/mm_encoder_attention.py",
+      "destination": "vllm/platforms/ascend_310p/ops/mm_encoder_attention.py",
+      "source_sha256": "f66db784ca67ce4c761e5ca2ce4e6c57fcfe81c3c814dc69b11ce2097bda4c48",
+      "disposition": "native",
+      "destination_sha256": "212720c3d5097196e44c217e58d11938d278b7998dd797c1604ae7c98b3d2457",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/rotary_embedding.py",
+      "destination": "vllm/platforms/ascend_310p/ops/rotary_embedding.py",
+      "source_sha256": "181d52011a30a67d7f2b17e9ac5afecd5b3e7aa88800556f06f404f8feebb2a0",
+      "disposition": "native",
+      "destination_sha256": "d8fb3b1c65eb83e7dbe7ccba512ac5a6421a999df2962e6f7e3aec4782e32fed",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/ops/vocab_parallel_embedding.py",
+      "destination": "vllm/platforms/ascend_310p/ops/vocab_parallel_embedding.py",
+      "source_sha256": "0453d44b1ddbd117e1e6f5f597f6ab1cdc04b1ee254991ad19fe84b38a569723",
+      "disposition": "native",
+      "destination_sha256": "bd19703c8c0a3da4a01a3b31c202992cb137a4e8c0a0d131b898b702cb7fb006",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/__init__.py",
+      "source_sha256": "0becbd66bdb5cc694fb3b59e14f5fd9b19cb501691ef700592adb97e6886832e",
+      "disposition": "native",
+      "destination_sha256": "35f1663630d2c3b7aa6fbe12a91a5540dd2e1d0a7e84709e3360cd29e4fed9bc",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/__init__.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/__init__.py",
+      "source_sha256": "08ae3c19b7a35d78aefd9cab2a9b6b4e9cbee3f5f6cbfa98d63591a032df4058",
+      "disposition": "native",
+      "destination_sha256": "b65e4af7f2702fb1463922baccc8903af6ffe5f6716d5d13456709550715b6c7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/registry.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/registry.py",
+      "source_sha256": "f7d2f55f40b7616fc27c0b3a3fd00dc3ce78b960cdc2e282ab84ec999f8d505a",
+      "disposition": "native",
+      "destination_sha256": "f7d2f55f40b7616fc27c0b3a3fd00dc3ce78b960cdc2e282ab84ec999f8d505a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/w8a8_dynamic.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/w8a8_dynamic.py",
+      "source_sha256": "1887e43457a105ab3d704b44939e66126ee4ec0410a60d43dc22dc82da1962b0",
+      "disposition": "native",
+      "destination_sha256": "8ee1d36ab1d27f381b05e9d06866956cd39dae6a5fb338095189ae7835390c47",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/w8a8_static.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/w8a8_static.py",
+      "source_sha256": "332e12502f44569981565874097574e66d64e1d132a6e6f8edcec8a8abf1c831",
+      "disposition": "native",
+      "destination_sha256": "3a50ee93819a0d9506bc5f623b2fef713c5e7c7630b6d39fb4d830b077e9fd02",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/w8a8s.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/w8a8s.py",
+      "source_sha256": "7be4af56ed5a0b3c5c80c37d7a84e01df737d3d34653249f5f8c1b078168ad10",
+      "disposition": "native",
+      "destination_sha256": "e84b70f6fd4997d91d6e9072b701d687920ff35cec12c5772b25f0f6cc079788",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/methods/w8a8sc.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/methods/w8a8sc.py",
+      "source_sha256": "3b59b753fabacf25f5651fea27ae863dc7e549ae65de4d8aeb49b4b49d6adb11",
+      "disposition": "native",
+      "destination_sha256": "ea01c54a801616ea0af313d519add739c4d45ef8e55c1940de5d1f8128722071",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/quantization/modelslim_config.py",
+      "destination": "vllm/platforms/ascend_310p/quantization/modelslim_config.py",
+      "source_sha256": "9606e82e7be9984661f5bc30466baed2222cb522bb8673370c591da61d01a009",
+      "disposition": "native",
+      "destination_sha256": "9f9217c036c5d98f0e737cf5db25ee1b0d9116e322b2121ccfca666880b7540d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/sharded_state_loader_310p.py",
+      "destination": "vllm/platforms/ascend_310p/sharded_state_loader_310p.py",
+      "source_sha256": "b4c3230565356cc9fdee4fe1024898f72ee3a24a3a878a7a0bfe800f1a7bfa9c",
+      "disposition": "native",
+      "destination_sha256": "ef15e2dcfa0d84a326331f3a9e406ed4499f120a41e128f0262d23090b90cd49",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/_310p/worker_310p.py",
+      "destination": "vllm/platforms/ascend_310p/worker_310p.py",
+      "source_sha256": "dff236654698f2431ca3e6f60d006822624d4558df3fe239d7a80ebe24bd59b6",
+      "disposition": "native",
+      "destination_sha256": "080731c78cec3c9e3a70b636f26d1c19196f7f816b17ff60b888dd6226fe2d4a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/__init__.py",
+      "destination": "ascend/legacy_plugin/__init__.py",
+      "source_sha256": "1d341a04acaac56df75bc1c63448a3ec676340dd4cfa2ef7c5f8c017a578f187",
+      "disposition": "archived",
+      "destination_sha256": "1d341a04acaac56df75bc1c63448a3ec676340dd4cfa2ef7c5f8c017a578f187",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/_cann_ops_custom/.gitkeep",
+      "destination": "vllm/_cann_ops_custom/.gitkeep",
+      "source_sha256": "b1535783dff910362e08d43eec28421d69dc6ffe19cfe6de403168f8b7345491",
+      "disposition": "native",
+      "destination_sha256": "b1535783dff910362e08d43eec28421d69dc6ffe19cfe6de403168f8b7345491",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ascend_config.py",
+      "destination": "vllm/config/ascend.py",
+      "source_sha256": "758d7bb6ec4f30a97eaf601df54fbbd8b4a8fbd0c15c84465be4c3f5ba0631a3",
+      "disposition": "native",
+      "destination_sha256": "7c4914b157017885f59b7907c278c63a7b6b18e1b0a3f8a340cdd0749cb723c2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ascend_forward_context.py",
+      "destination": "vllm/ascend_forward_context.py",
+      "source_sha256": "fc50c91c7e9405dd89bfb2a1bede8b78ed8735b1b9169a46f3bc080335f9c009",
+      "disposition": "native",
+      "destination_sha256": "951562b96c9b212885a3426937d96d0503d27cab14a142cc70c596a3d16e2f27",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/__init__.py",
+      "destination": "vllm/v1/attention/backends/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/attention_mask.py",
+      "destination": "vllm/v1/attention/backends/ascend/attention_mask.py",
+      "source_sha256": "ee707705ab4b6b7fdf836d16afce27e49f18e84916e86a345dca7a16e3756e85",
+      "disposition": "native",
+      "destination_sha256": "9d63448e66332b39d9aa1f5ce68d0632525d25bca235924098065d5ac28972ba",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/attention_v1.py",
+      "destination": "vllm/v1/attention/backends/ascend/attention_v1.py",
+      "source_sha256": "774628245209a6ef7fcbe4b307e0eba08bbd418cfb5bdf7dd4981ba346eda572",
+      "disposition": "native",
+      "destination_sha256": "aca86e73c8c8ce677dd61a5477e6bbcd8e7859105281b188cc19b9c5068b9268",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/context_parallel/__init__.py",
+      "destination": "vllm/v1/attention/backends/ascend/context_parallel/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/context_parallel/attention_cp.py",
+      "destination": "vllm/v1/attention/backends/ascend/context_parallel/attention_cp.py",
+      "source_sha256": "5e074773cc83dd1dd483e85a6c31c8e9960e3f8068885a0e04d9413dffe62ed5",
+      "disposition": "native",
+      "destination_sha256": "c2f317a171cfcc50dc117081f04f22d7db802c3962d323231cde9759f8e4ce55",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/context_parallel/common_cp.py",
+      "destination": "vllm/v1/attention/backends/ascend/context_parallel/common_cp.py",
+      "source_sha256": "4688b116cc9ac98d24eb6a9bce7421f4aed6a5f5383e1ee398456c49cad3da10",
+      "disposition": "native",
+      "destination_sha256": "ba2e66cd5f7d6f91fcaf2874dee74166b45e82143fde02174be47b8d3e3fc0c0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/context_parallel/mla_cp.py",
+      "destination": "vllm/v1/attention/backends/ascend/context_parallel/mla_cp.py",
+      "source_sha256": "7be6abca60c256d7c525441ee742cf401d225b4e7eb0a7545df02155897b9fc6",
+      "disposition": "native",
+      "destination_sha256": "d8c5c9c2ae37ef22b5f577be9aeb40739e1dfbe95d8579e1d733dd50c319daf1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/context_parallel/sfa_cp.py",
+      "destination": "vllm/v1/attention/backends/ascend/context_parallel/sfa_cp.py",
+      "source_sha256": "ffd20e5aaf5bc9606d8831fc710c4c7da4a9f3814edb9b768fef79239909fc54",
+      "disposition": "native",
+      "destination_sha256": "47889c7f370fbd6bd61352367a697ce5ae368da0c3a46064f6078b723c629d8c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/mla_v1.py",
+      "destination": "vllm/v1/attention/backends/ascend/mla_v1.py",
+      "source_sha256": "1f9a9c6912de0c313d3f440f7387a451f60a871574659887195d1cb177607fa6",
+      "disposition": "native",
+      "destination_sha256": "e34bfa1e4d19005dc4c367bd5cda28db0fc5efd8440a59f45e8f6558efd0370f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/mtp_dw_diag.py",
+      "destination": "vllm/v1/attention/backends/ascend/mtp_dw_diag.py",
+      "source_sha256": "c8fcb3149da3c2539e568be4752e4fb637116b1da66f6a65b22b7ef840eba2da",
+      "disposition": "native",
+      "destination_sha256": "11a2648d9bf1d4caeada7653c34cd8f0b6f98af2fba68c6741b00febf11bd2d6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/sfa_v1.py",
+      "destination": "vllm/v1/attention/backends/ascend/sfa_v1.py",
+      "source_sha256": "de6bb209514b4f4bc8ed2ebf2e68d462def90dffddeb8548a23e5a8fb8b20110",
+      "disposition": "native",
+      "destination_sha256": "0014bfdb2738772914c1b4279ba6f57e345f5035dbc2bbdf693bab192370ea52",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/target_sfa_diagnostics.py",
+      "destination": "vllm/v1/attention/backends/ascend/target_sfa_diagnostics.py",
+      "source_sha256": "5b35376b4cce381d8dba7a8986e43356ecbbfa708cc6921ffb2793434d7cb779",
+      "disposition": "native",
+      "destination_sha256": "9c1ebdcf3eab67ab7e62f3215f3ad333c6992787d75315e5032f90fbf68388ed",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/attention/utils.py",
+      "destination": "vllm/v1/attention/backends/ascend/utils.py",
+      "source_sha256": "59bf52bb8e71753588ac687d0a8cee872c1d84d1c76696ec03626c036ee98d12",
+      "disposition": "native",
+      "destination_sha256": "6f1f4e06598abdff75177544e5b46465080bc8e5d9b0f1d84d066ad084d47698",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/batch_invariant.py",
+      "destination": "vllm/model_executor/layers/ascend_batch_invariant.py",
+      "source_sha256": "6b5d70361e71afa10bebde7080429e292a76980e1de31c20417ed4495f3dde08",
+      "disposition": "native",
+      "destination_sha256": "1ac67a4bb123cea235379238889e02a47f213c7aa68a148d6a54ed8998a678e7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/__init__.py",
+      "destination": "vllm/compilation/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/acl_graph.py",
+      "destination": "vllm/compilation/ascend/acl_graph.py",
+      "source_sha256": "d23571bfe37d376f6d3cb04698d8ded3e11cdc70b0fbf5d2dd2dd7a96baabf4b",
+      "disposition": "native",
+      "destination_sha256": "b3716e2f3664be606982766a13bf9c4e0b57dcbae0d638bf3610b591b4075b0a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/compiler_interface.py",
+      "destination": "vllm/compilation/ascend/compiler_interface.py",
+      "source_sha256": "ef9540813def03ef51691d43ec553570c88bbe517d54409cf010e35051be4226",
+      "disposition": "native",
+      "destination_sha256": "e8ec7c337d063006518ec6bfa19961f362024248b4e4b63189778463d75b71e4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/graph_fusion_pass_manager.py",
+      "destination": "vllm/compilation/ascend/graph_fusion_pass_manager.py",
+      "source_sha256": "54177fc10187a47ac348624f7e933283838084f7c04ac0339d90bc4a7098a900",
+      "disposition": "native",
+      "destination_sha256": "7abf6b7353477e67a0d6076221955928ef097864665f61f75ffa55e778b6d350",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/__init__.py",
+      "destination": "vllm/compilation/ascend/passes/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/allgather_chunk_noop_pass.py",
+      "destination": "vllm/compilation/ascend/passes/allgather_chunk_noop_pass.py",
+      "source_sha256": "1c2f69358a21f86899361d758372a6934dce383423fd7a551faf10551e0d1475",
+      "disposition": "native",
+      "destination_sha256": "b788f081efbb8da06f33a85d4887cfca1b992d5757ebe328f90061588ac9279a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/allreduce_rmsnorm_fusion_pass.py",
+      "destination": "vllm/compilation/ascend/passes/allreduce_rmsnorm_fusion_pass.py",
+      "source_sha256": "5175c9e648f2da3bf84d614f433dda0018ab0e28a5796691239201115a7b6b44",
+      "disposition": "native",
+      "destination_sha256": "a2cc9f46bfc8c3161e4ab19ce8d607e7fabd913f94c9864afeb92d6559b8204f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/base_pattern.py",
+      "destination": "vllm/compilation/ascend/passes/base_pattern.py",
+      "source_sha256": "fa3f99d59b0f0501c90e613dbc39c0ffdf25852c880886fc5a34b0e60d081076",
+      "disposition": "native",
+      "destination_sha256": "4825c205a0852adc8aad38c175d33ed524c78b30b2b243b1016f4cb657a23d8b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/muls_add_pass.py",
+      "destination": "vllm/compilation/ascend/passes/muls_add_pass.py",
+      "source_sha256": "b3137b21fba4759c64137a7cf9e0ca620f9758aab887e2032dde6c322a9d18ba",
+      "disposition": "native",
+      "destination_sha256": "90115f1570b658266c7be8630915fa5624f9de78aa5980c46acc32d239a27b96",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/noop_elimination.py",
+      "destination": "vllm/compilation/ascend/passes/noop_elimination.py",
+      "source_sha256": "e5ce9e89b6c9760f01b5437e4089f1a54ebbf15cef1973c80bbfb2037671b5aa",
+      "disposition": "native",
+      "destination_sha256": "3b59616ea590302fabb24c060d1a819c0166ab4f09a1cb802ae3f14bf36d7c24",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/norm_quant_fusion_pass.py",
+      "destination": "vllm/compilation/ascend/passes/norm_quant_fusion_pass.py",
+      "source_sha256": "500dabadc0a3aabb29017c012cbe6180be9c4f6832df5ffd3fc920fe05bef7a8",
+      "disposition": "native",
+      "destination_sha256": "70c4ad026abe52efd86130fe9160639f14096b4234adcb76e22f11686bcffe39",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/qknorm_rope_fusion_pass.py",
+      "destination": "vllm/compilation/ascend/passes/qknorm_rope_fusion_pass.py",
+      "source_sha256": "7e3ec0613003522963916c63a3812191aa223b1bd56c78c365ab11fefa16d12f",
+      "disposition": "native",
+      "destination_sha256": "350182ade40b2b648541c333d99e5e782ebb03bcb55a8447aec44daa68eb3ca1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/sequence_parallelism.py",
+      "destination": "vllm/compilation/ascend/passes/sequence_parallelism.py",
+      "source_sha256": "176cac1b24fc2e4295841f2213cd85c17de925711812d7080451c28269477827",
+      "disposition": "native",
+      "destination_sha256": "6bda9929c6854b01c392d870284aa3d41cad0695c5271fe98ca349103455763c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/sequence_parallelism_moe.py",
+      "destination": "vllm/compilation/ascend/passes/sequence_parallelism_moe.py",
+      "source_sha256": "ec456c878d0ee8d00fa76f839b1da25e340f9584dc2c469d7d6774ce5a0bdde4",
+      "disposition": "native",
+      "destination_sha256": "a09de8b461210e79d6bf209c07213344bee0230bde3ec45f9bab673ff93ae614",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/utils/__init__.py",
+      "destination": "vllm/compilation/ascend/passes/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/compilation/passes/utils/npugraph_ex_utils_check.py",
+      "destination": "vllm/compilation/ascend/passes/utils/npugraph_ex_utils_check.py",
+      "source_sha256": "5d8460ed531ef0a866f5bc81be0e6d14ade27a400ab23e16f4a0a98df0fdab31",
+      "disposition": "native",
+      "destination_sha256": "c5e5a705cdc0deb7653ea1fa220da992a95ad44d073e6607f40d2e1a85d0fec0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/core/__init__.py",
+      "destination": "vllm/v1/core/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/core/mc2_recovery.py",
+      "destination": "vllm/v1/core/mc2_recovery.py",
+      "source_sha256": "86a2f8d9e1da565a5e7449d55221fae983e477901510a0bb69d10580fa7a174c",
+      "disposition": "native",
+      "destination_sha256": "37dc55a1b62ebdb7fd5eb41ca9ea363891773f07559a0df3405e0bd289973422",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/core/recompute_scheduler.py",
+      "destination": "vllm/v1/core/sched/recompute_scheduler.py",
+      "source_sha256": "1d5cddb0dbbdda56b88aa9b05d273c6b9314185f00f860d88c30720d7a4b9f8e",
+      "disposition": "native",
+      "destination_sha256": "69d5b3033327cd2f977acb9790020f7a51bfc1be2d20df64e7975b22c195f56e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/core/scheduler_dynamic_batch.py",
+      "destination": "vllm/v1/core/sched/dynamic_batch_scheduler.py",
+      "source_sha256": "fd17fe4a6d5dd1c45e8e7c4008930d29e35ee06584a3ea8f8e8800a80fbba135",
+      "disposition": "native",
+      "destination_sha256": "0afa94e618b591c1e339c731fd0c96a79a0a5b90164c5f31d19a8216aecb4b21",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/cpu_binding.py",
+      "destination": "vllm/utils/npu_cpu_binding.py",
+      "source_sha256": "c3b43eb06b3e2e13232a73c14a9b2d8f21f33bb0e60bc74df6ca00f361f82faf",
+      "disposition": "native",
+      "destination_sha256": "338dcb833e41f5d8c9c6d5b3acd07d437b9c9056c3b2becaa5a8ab31c18ed758",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/device/__init__.py",
+      "destination": "vllm/platforms/ascend_device/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/device/device_op.py",
+      "destination": "vllm/platforms/ascend_device/device_op.py",
+      "source_sha256": "fe5262b76b3c4841d735b6c06c0fe02035aeecc8562f81e78b07d0e691c6cd17",
+      "disposition": "native",
+      "destination_sha256": "60515b69edaae3054b25b5e4184210e2230653e331db61c0f2790eff3f6adcde",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/device/mxfp_compat.py",
+      "destination": "vllm/platforms/ascend_device/mxfp_compat.py",
+      "source_sha256": "4d734eca41c2cfc86d87eb53d256a786d049424892e847e8f147dd1b38ca2301",
+      "disposition": "native",
+      "destination_sha256": "d7629b238387ecf6443cdbe9421f7ae8b105e4fff0aa87b71e11525ffe5f9434",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/device_allocator/__init__.py",
+      "destination": "vllm/device_allocator/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/device_allocator/camem.py",
+      "destination": "vllm/device_allocator/ascend/camem.py",
+      "source_sha256": "be270a762924f8bde16882fee8cfb1e86c6d95ce7b22c72a7e52d94d6120e51c",
+      "disposition": "native",
+      "destination_sha256": "be25bcb8299fb4125bbe6af80a897368b29e7d6b9a21bda336bd44105051dcec",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/diagnostic_utils.py",
+      "destination": "vllm/utils/diagnostic_utils.py",
+      "source_sha256": "4c7f3758b0dd5a07cb4e69f5753638af75af2af87843fb245e35d12bff3d31fd",
+      "disposition": "native",
+      "destination_sha256": "5de2cf126bb4de4d362fb63e2de9b20a8c1e78a753916666fee9c2c3b8c09675",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/__init__.py",
+      "destination": "vllm/distributed/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/device_communicators/__init__.py",
+      "destination": "vllm/distributed/device_communicators/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/device_communicators/npu_communicator.py",
+      "destination": "vllm/distributed/device_communicators/npu_communicator.py",
+      "source_sha256": "fa06af0b01fc526190917053d1f3ef31191fa1f2299c876edf48d7c0424dad89",
+      "disposition": "native",
+      "destination_sha256": "0036167b77369d6b8a1d8296982a14999b4fd09ff0e0b985b9a9c95a6a5ddc52",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/device_communicators/pyhccl.py",
+      "destination": "vllm/distributed/device_communicators/ascend/pyhccl.py",
+      "source_sha256": "b49d9baef782d90c82a9160ecf4bb9d8b463317747b6a3644fef9eef3268e795",
+      "disposition": "native",
+      "destination_sha256": "601e4ca666bc73a0b7bfc0313bf3093980e779b2743b09e37e068406d485a172",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/device_communicators/pyhccl_wrapper.py",
+      "destination": "vllm/distributed/device_communicators/ascend/pyhccl_wrapper.py",
+      "source_sha256": "e7bb456052179d7016d9d5dccea989f9e3c5fb2e3d672c1fbde656c6c038c2bb",
+      "disposition": "native",
+      "destination_sha256": "e37019ca5dcedd03b5d56ac005e9ce58ed26119649cded2c4cf61ec4e90ad429",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/__init__.py",
+      "source_sha256": "3970c32ef459221982e3dd31e51b02c0b16993b90817ed9b71f2c48a8fb658ab",
+      "disposition": "native",
+      "destination_sha256": "6e82a6379083afdeac8c33661bdd3451df6791c92e65603cdf7a188d04770af7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/ascend_multi_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/ascend_multi_connector.py",
+      "source_sha256": "bb1b13a8220e0e4ab913ecb85eb11bd9e47ae148bc706f3cd4f14a914d1d3a70",
+      "disposition": "native",
+      "destination_sha256": "2462b8080d418fdd26474148191129c9b90e430d26cdd465aaf2ed5a4091bf8e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/live_split_plan.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/live_split_plan.py",
+      "source_sha256": "be75557e42d2ed7d72d2bbd9569f7c848d828261c49e94d6c5d1472885aa1b35",
+      "disposition": "native",
+      "destination_sha256": "b37b9877a845204ac8fe4d353c24e3065d96c3f9b886422bfe6ba2d1f5a5f5fc",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/live_split_protocol.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/live_split_protocol.py",
+      "source_sha256": "205388110c42df0aec15dd94ce3feda60d9b5b263c05127d1930ab1bddf8a60d",
+      "disposition": "native",
+      "destination_sha256": "734da519863f2a8bef5c7ea2e2b9ab74849cd4bf73606cad54b232b4466e1c74",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/mooncake_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/mooncake_connector.py",
+      "source_sha256": "6b371a782ce4322acbae9b6a86fa711d5f62fba96d2965ccfe941d933378bcc0",
+      "disposition": "native",
+      "destination_sha256": "7e5ed92930fe7a0d2615dbf2f04a406d03b5819fff6c1cea25b60bf174b1e0e2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/mooncake_dsa_index_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/mooncake_dsa_index_connector.py",
+      "source_sha256": "7eb1bc27c1610fce09114705c591b3a24b626a453235b1f8e71a575e71abeb91",
+      "disposition": "native",
+      "destination_sha256": "74deed48763f384255ab3aeac482675bea79a0a1aea3c61e115ec6d76637595d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_p2p/mooncake_layerwise_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_p2p/mooncake_layerwise_connector.py",
+      "source_sha256": "21352e2153a340f799dca35f408a03ec1ceacea737c19ee9d3ee398313a49055",
+      "disposition": "native",
+      "destination_sha256": "61df2013201e2cea14a3792e219da68a1d4150402891e1325115607cf2a6dcb8",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/ascend_store_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/ascend_store_connector.py",
+      "source_sha256": "6780debbfe28e3e21b5c25f123b62a33cd08abe706c562bb41148ba2186552ee",
+      "disposition": "native",
+      "destination_sha256": "f79074fb6cf870a235e5512aae4d609940533a43c783f91571b1b0c2887029d1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/backend/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/backend/__init__.py",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "disposition": "native",
+      "destination_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/backend/backend.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/backend/backend.py",
+      "source_sha256": "660fae9e00ade10652fd0f49836023bd14dfd32b9ae13f0a562e8bff81473bf9",
+      "disposition": "native",
+      "destination_sha256": "660fae9e00ade10652fd0f49836023bd14dfd32b9ae13f0a562e8bff81473bf9",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/backend/memcache_backend.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/backend/memcache_backend.py",
+      "source_sha256": "12d1b9f9304494528f6777f87098b53257c581dd69e01d0f2d116d01607fd07a",
+      "disposition": "native",
+      "destination_sha256": "b94717bb543f1f721779c57334c3bb4470c93f577c7ca843ec8d08e31447b0ef",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/backend/mooncake_backend.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/backend/mooncake_backend.py",
+      "source_sha256": "e5e677cba55a4a1d2ef4fe1509a14f15e112f913623cc40087a91c685cdb32de",
+      "disposition": "native",
+      "destination_sha256": "8bf903f75d685e658de1572725649ced09f766448073df281518acd1eec6a2d6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/config_data.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/config_data.py",
+      "source_sha256": "560ee4b100a598d74a4229202fe0a9c825cd9a660e23ef9c49ea9676c2a0aeb1",
+      "disposition": "native",
+      "destination_sha256": "31095a7a8db55c4cc30693eca84c4c2581ff03f1fc9179192629bdf95b307d33",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/kv_transfer.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/kv_transfer.py",
+      "source_sha256": "7e9c1b3109b6f89eb80da42b40c61d53fe3a0f0cbcec96fe2506b7b852d4a9ee",
+      "disposition": "native",
+      "destination_sha256": "e0ccd6d5c5a8a3e0d824f6849594039fa7982cf687b93c28569ace21ff71898b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/pool_scheduler.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/pool_scheduler.py",
+      "source_sha256": "12197d472be06f6ab943e4cbc0b5ea831e714e1c50701de2a0b559879ef8db5c",
+      "disposition": "native",
+      "destination_sha256": "15a4e8e0e8e293713c7c096088abf895832fcaa99a7011532553a74c3ebec85a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ascend_store/pool_worker.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ascend_store/pool_worker.py",
+      "source_sha256": "ebeef3a052ebaadf8ed1706476c2ed13565b19042f918c70502d00480a5821d8",
+      "disposition": "native",
+      "destination_sha256": "cbcfe73231745a6df191e823c7ef11b5e1250d08000c42b3bb857a1e82ae62ab",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/cpu_offload/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/cpu_offload/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/cpu_offload/cpu_kv_cache_manager.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/cpu_offload/cpu_kv_cache_manager.py",
+      "source_sha256": "02218050802e9a1209d36e6bb4cc1b29bbb1315423e1fc75c9243f781335e952",
+      "disposition": "native",
+      "destination_sha256": "59882b3415cdd4d25248a64da015192bc53d6c297166c3ea1836cfb7e36ed13f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/cpu_offload/cpu_offload_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/cpu_offload/cpu_offload_connector.py",
+      "source_sha256": "2bad6b26fe6ca11265a87451c0cf07a59008ffe9289155a9728d311781aeba2c",
+      "disposition": "native",
+      "destination_sha256": "a5f50a37b0571fa7317679a790ea32c3457d421f4a12c7d129893780d8903442",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/cpu_offload/metadata.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/cpu_offload/metadata.py",
+      "source_sha256": "c1f512fac9d7b53587bc0003b718aa883e8c059fff438f36d49e18d529ed2c48",
+      "disposition": "native",
+      "destination_sha256": "49abc86455d1347749cb46bb3b1d910027307249756e6769bfc8d8dd04a8d646",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/lmcache_ascend_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/lmcache_ascend_connector.py",
+      "source_sha256": "c87cb68a5b848511960eb4d85bac002e81623ddb4c73c1e1122cca62816b82c1",
+      "disposition": "native",
+      "destination_sha256": "b108a012bfb25bcdfdb555dc7a1c4dca0b5dab0427616043759192e08f1e9d54",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/kv_pool/ucm_connector.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/kv_pool/ucm_connector.py",
+      "source_sha256": "e8604c25240aee5fb9e7507c7a9c93bc70ac8e7cf90415070d39d93b83be3202",
+      "disposition": "native",
+      "destination_sha256": "ce84937d77306e08804c9861a51710df37e64304359b7ccd1f97fb1045a8dfb1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/remote_fill_restart.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/remote_fill_restart.py",
+      "source_sha256": "aec8f673ecf8044c2f62693d045aaa06afbe2825dc985a75c18a7b841aa8a352",
+      "disposition": "native",
+      "destination_sha256": "5ba197c33a5628ef0e14ab7b03109c4ee9af0209bd4477dbcfe59a4d458cf98b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/DESIGN.md",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/DESIGN.md",
+      "source_sha256": "0bd71dcdcdbf42ce841fc5dac2375b949b0a4c6552ebe2439b74cc01d9ad863b",
+      "disposition": "native",
+      "destination_sha256": "0bd71dcdcdbf42ce841fc5dac2375b949b0a4c6552ebe2439b74cc01d9ad863b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/INDEXER.md",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/INDEXER.md",
+      "source_sha256": "6d21546ce57d197642ff93dca8e44d0ee44372cc0faab530fe359211835dea20",
+      "disposition": "native",
+      "destination_sha256": "6d21546ce57d197642ff93dca8e44d0ee44372cc0faab530fe359211835dea20",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/INTEGRATION.md",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/INTEGRATION.md",
+      "source_sha256": "e4ce6266c320825e70c6959a857569a2e918b1e33c010915070062140f4b009e",
+      "disposition": "native",
+      "destination_sha256": "e4ce6266c320825e70c6959a857569a2e918b1e33c010915070062140f4b009e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/RUNBOOK.md",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/RUNBOOK.md",
+      "source_sha256": "bbd4322fde2f1c3ac35687e66aa875e2da23abb6ea76f2b2013b69eb97106201",
+      "disposition": "native",
+      "destination_sha256": "bbd4322fde2f1c3ac35687e66aa875e2da23abb6ea76f2b2013b69eb97106201",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/STAGED_SFA_GRAPH_PRODUCTION.md",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/STAGED_SFA_GRAPH_PRODUCTION.md",
+      "source_sha256": "020737436b5667dcccb2eb74c56ea4ce2b68eca820481ecf2d2041da7d337a33",
+      "disposition": "native",
+      "destination_sha256": "020737436b5667dcccb2eb74c56ea4ce2b68eca820481ecf2d2041da7d337a33",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/__init__.py",
+      "source_sha256": "e9e64038b256869208f6145bf22a6bb225da361cd85348e4a9195c877b247050",
+      "disposition": "native",
+      "destination_sha256": "e7325dd161f1c21ca4eb5959cb3d7dbacfeaf6d2c0be2a2409f23a73d6091ff6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/_prof.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/_prof.py",
+      "source_sha256": "08d6d35dea53bde7eb71b67c36dfc2f54e3c02ee7e0017dfbb3f7a202253c54c",
+      "disposition": "native",
+      "destination_sha256": "08d6d35dea53bde7eb71b67c36dfc2f54e3c02ee7e0017dfbb3f7a202253c54c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/adapter_cache.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/adapter_cache.py",
+      "source_sha256": "99d783091b5eab7297332f4c6a1a56440ad2f5082d54c40379fa04b3266c5895",
+      "disposition": "native",
+      "destination_sha256": "03d24b9e11d95d99459114376dc8e5aa7f9dd0608338300e595b202d8cd266fa",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/decode_latent_pool.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/decode_latent_pool.py",
+      "source_sha256": "734875bd2b144d0b2b42baa42fb173f8099ef1f983f98636aaaede4cfbe47ba8",
+      "disposition": "native",
+      "destination_sha256": "b19ca21bd4554a4d01a01ebdfffc237c01010e11fa3bacd5d1146ac581e847c4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/offload_backend.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/offload_backend.py",
+      "source_sha256": "8f77f732ac6099b27f8d148aec917aa5cfbc67051eebea79f22001f6c106d79f",
+      "disposition": "native",
+      "destination_sha256": "8f77f732ac6099b27f8d148aec917aa5cfbc67051eebea79f22001f6c106d79f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/offload_manager.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/offload_manager.py",
+      "source_sha256": "1f3c2c11ac476ee3cd27165c77102264de19b8efa13c96ad925f4fd8d9e2ebcb",
+      "disposition": "native",
+      "destination_sha256": "fbcd13857c3018e366f23748a7593b8f0e5f6ab3449a24aeb854bbf8892d98d6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/paged_latent_pool.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/paged_latent_pool.py",
+      "source_sha256": "ba52de1a440f701f9f5208f910c904efc36fa652838ec3ceaa1d350a1c9317c5",
+      "disposition": "native",
+      "destination_sha256": "53a7f03a533e0884cb10406b00c704eb89c95538efcd849e6ae818fb562923ca",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/prepare_sparse_indices.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/prepare_sparse_indices.py",
+      "source_sha256": "d5c92f94f277aa63b60816c3c63b76ac9f2a50628be301e444a89a8670490449",
+      "disposition": "native",
+      "destination_sha256": "aaa1dcf8eab315cc1e77382e8d32d3dbeddcecbf3dcbcc826d8036b9e2d2d143",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/resident_sorted_cache.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/resident_sorted_cache.py",
+      "source_sha256": "ea2964609ff13ed3bf3afb0f38f9920487db48c592c1aeec3437ca5c5901ce0b",
+      "disposition": "native",
+      "destination_sha256": "67500dd38d59d62273d0ee6cdcd5e5db404c44b2a76dc63a03a0badbceea6324",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/resident_sparse_cache.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/resident_sparse_cache.py",
+      "source_sha256": "21b07dac5804b11eea3b84c662e9647490f36951d592d5a639b01747c826b831",
+      "disposition": "native",
+      "destination_sha256": "066b096e28bf116bf3d4ab4b49d7d2e393fb709e5ef3ee6811fe9ddf72ec2109",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/runner_integration.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/runner_integration.py",
+      "source_sha256": "bac01281249f60dbe6653e74a17be5ccbae02b820d3ff6f4dcd017beff44a3d6",
+      "disposition": "native",
+      "destination_sha256": "da20132100edfd006403b44bb0fa4d5f61389d3233b50f94a774919baee483e2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/sfa_hooks.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/sfa_hooks.py",
+      "source_sha256": "b005087a60e1c9525e76c402d556d795aaf8e0b28a2d8384bcf076d16015e134",
+      "disposition": "native",
+      "destination_sha256": "2b3edfe0c5bb91095e9d13c26c642a753a5c9ed65a839e5afde9cb192df13a0c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/sparse_offload/test_adapter_cache.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/sparse_offload/test_adapter_cache.py",
+      "source_sha256": "beb12dbd05d169d7495a6e5a8240e5294c0d27537702625d5933017be3ab39f8",
+      "disposition": "native",
+      "destination_sha256": "3f402513cc9d9df9d1baabf725572c164cd6ce7b5333398e72877cafce1fd905",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/utils/__init__.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/utils/mooncake_transfer_engine.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/utils/mooncake_transfer_engine.py",
+      "source_sha256": "37b623fab2e5be602e085c5a98f19c0b209c67578f0ac7d49a3b56ca8f6614b2",
+      "disposition": "native",
+      "destination_sha256": "3d64e426991dac0e61e30c61dda648ad1c27a5166776361fa4e1406dddf4c47c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/kv_transfer/utils/utils.py",
+      "destination": "vllm/distributed/kv_transfer/ascend/utils/utils.py",
+      "source_sha256": "87bee483b9fb4c00b1b6b61ed9f3215fc2dacb27726f55bdd5b76e0885f9620b",
+      "disposition": "native",
+      "destination_sha256": "5a1e8ccd1df866c477fc19721df16d1b01dc135f0e1e6c2518c8886a20b52534",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/parallel_state.py",
+      "destination": "vllm/distributed/ascend/parallel_state.py",
+      "source_sha256": "d20d0bd62a0223d72c98596d64ac407c96e00f5d262e632e4daa451b4cbb42ff",
+      "disposition": "native",
+      "destination_sha256": "8355abd4fcff35a019469b386f542ee36f82fb8bf6d842862d8d525319c5663d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/distributed/utils.py",
+      "destination": "vllm/distributed/ascend/utils.py",
+      "source_sha256": "2574848b0154a929c8ef2eec8af5d9add90ef9bf1d86a84336b872e5d1ac03dc",
+      "disposition": "native",
+      "destination_sha256": "82d050b993fef6bbc5b7567110683188660661cdf2a2f201c62987259a508afb",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/envs.py",
+      "destination": "vllm/envs_ascend.py",
+      "source_sha256": "cad0daa6d888167cd11f5eef214590e0e1bdd5c0554603b80813dcfe523480e9",
+      "disposition": "native",
+      "destination_sha256": "05c9492dac51e577261f89397b98120a1a3fe862c933ef26febf3170d1bdd7be",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/__init__.py",
+      "destination": "vllm/distributed/eplb/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/adaptor/__init__.py",
+      "destination": "vllm/distributed/eplb/ascend/adaptor/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/adaptor/vllm_adaptor.py",
+      "destination": "vllm/distributed/eplb/ascend/adaptor/vllm_adaptor.py",
+      "source_sha256": "9502718c26f01b47861df2b7bebe2bca14a56aa6a562573d137517c435965fb6",
+      "disposition": "native",
+      "destination_sha256": "f28ac2507c0d5b2435ccbb760f5c87d1985986f1559351fd8bc792afb017730d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/__init__.py",
+      "destination": "vllm/distributed/eplb/ascend/core/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/eplb_device_transfer_loader.py",
+      "destination": "vllm/distributed/eplb/ascend/core/eplb_device_transfer_loader.py",
+      "source_sha256": "05a2f47be4890e02e9be2ead75071609a113929ae9861ae313168f7cf923e03b",
+      "disposition": "native",
+      "destination_sha256": "49f5f2396fdbab61b853d6d9421f25046f7b1e4a15a76ba01466e857cba71c0c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/eplb_utils.py",
+      "destination": "vllm/distributed/eplb/ascend/core/eplb_utils.py",
+      "source_sha256": "a36e759de1a9d84aab675d41900a817feb734727aeaa0a60fc003ec9b0a4ee9a",
+      "disposition": "native",
+      "destination_sha256": "3d4c6d263011ecb5228ac49fa801abc85fc5d7c661469f000f489796f263376a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/eplb_worker.py",
+      "destination": "vllm/distributed/eplb/ascend/core/eplb_worker.py",
+      "source_sha256": "50d47ac290dc1b42a873c25c5171113bd764c77d41652867b043650fda66a407",
+      "disposition": "native",
+      "destination_sha256": "eb7c4c54873b0f5f2ecfd03a70ecadc9ad258808f6e5dcdd8a61e0f9609183f9",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/__init__.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_abstract.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_abstract.py",
+      "source_sha256": "87f92bf39289e4fd4127a46b142884c498671f03471d193e6e31b371cd60b922",
+      "disposition": "native",
+      "destination_sha256": "c196bc17b557a9f7fa6eaa18b1b6b16057f9cc059e2f8dc35a3e99f14c91fff3",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_default_eplb.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_default_eplb.py",
+      "source_sha256": "9c8d97bf88ab639c66725bd44d48884270caee28adc39a7c009798257baea0e7",
+      "disposition": "native",
+      "destination_sha256": "caa2d32abe37c77f9b0729f9761bcd5208d623b145f52ef61977fb03a58a915a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_factory.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_factory.py",
+      "source_sha256": "1f4b35fbe1d69d0dbbdc98dce99c3c6ef5ede5798f59024c22f90d4e10920a02",
+      "disposition": "native",
+      "destination_sha256": "f0402bbafa880dc04b22d11f142dd8c4869eb8470f3410da49127b2ac6f3fd6f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_flashlb.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_flashlb.py",
+      "source_sha256": "a17e7d8e5d66ee93bda4112e0015cae05fb3289e73744b86991dea76d28f1b30",
+      "disposition": "native",
+      "destination_sha256": "b2eb0509ac09618699d8c1e410b331e59ed7bea34860dc17e18e2c86e7465cbd",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_random.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_random.py",
+      "source_sha256": "dc40435e4e9dd41d0d856721867eae475dbfaa49c61e156232ce91d814f0211b",
+      "disposition": "native",
+      "destination_sha256": "390f1aa85c844e090fd821a8bb705388d74220bc457f9f3f15c92d9115095e0b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/core/policy/policy_swift_balancer.py",
+      "destination": "vllm/distributed/eplb/ascend/core/policy/policy_swift_balancer.py",
+      "source_sha256": "d82d38405b29dea5100c7aac56679c4fd4cb408936ade8b11ee9c7a5397de920",
+      "disposition": "native",
+      "destination_sha256": "cc0b99931a99904b9ccb85c250676dbc94d61c9ac8efae7b104562c577f961f8",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/eplb_updator.py",
+      "destination": "vllm/distributed/eplb/ascend/eplb_updator.py",
+      "source_sha256": "195b9e073715332a8a720af4700501c20cba57fb902fd5aa4ca58288e21d998e",
+      "disposition": "native",
+      "destination_sha256": "4294e10ce2c53ce95f811de61fcfa4a961a7c242472431b9d5787d1004e407d0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/eplb/utils.py",
+      "destination": "vllm/distributed/eplb/ascend/utils.py",
+      "source_sha256": "cd6cd11be68d396feaf77fafd7523fe45fe19dbf7ee1d33b60f1824629a45860",
+      "disposition": "native",
+      "destination_sha256": "db522c6d7515eda4719ecc8388d5caee07ab06fea89036506515fd350319d3ef",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/flash_common3_context.py",
+      "destination": "vllm/compilation/flash_common3_context.py",
+      "source_sha256": "ecd91885315148092aeb3811d0a9441960f9b9d7c8634e4bbea84062a69ec261",
+      "disposition": "native",
+      "destination_sha256": "aac4f0f440c8db1da54feee9485c1d7cbbfde4ef2e9631bfdd7edc472bf57a06",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/kv_offload/__init__.py",
+      "destination": "vllm/v1/kv_offload/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/kv_offload/cpu_npu.py",
+      "destination": "vllm/v1/kv_offload/ascend/cpu_npu.py",
+      "source_sha256": "1e473688d1c6cef07de84da7b7df47a3b816c61726f775bf3f93b8421485d431",
+      "disposition": "native",
+      "destination_sha256": "dd352a65af8f71c0c43ac774495153addf811c17cdb09fb2212c6d4b2d89cc68",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/kv_offload/npu.py",
+      "destination": "vllm/v1/kv_offload/ascend/npu.py",
+      "source_sha256": "178aa43ce8c73f3b6c93b716b7094d751a5ebbeaac17cbd3f8bfcb8e4095bc92",
+      "disposition": "native",
+      "destination_sha256": "aad708b2641feeb304bc8b352a5a98c68eabec2134fecd5174dcaee6a736049f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/live_source_handoff.py",
+      "destination": "vllm/distributed/kv_transfer/live_source_handoff.py",
+      "source_sha256": "861d483247e69a0f668f0d17e85af1575ee8558574d9d17a566b81d2d263e65d",
+      "disposition": "native",
+      "destination_sha256": "861d483247e69a0f668f0d17e85af1575ee8558574d9d17a566b81d2d263e65d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/lmcache_diagnostics.py",
+      "destination": "vllm/distributed/kv_transfer/lmcache_diagnostics.py",
+      "source_sha256": "49ca32e2f6dbf0cd0fa43c8e7241dd840436e4705274eff4e7da7698896de958",
+      "disposition": "native",
+      "destination_sha256": "49ca32e2f6dbf0cd0fa43c8e7241dd840436e4705274eff4e7da7698896de958",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/lora/__init__.py",
+      "destination": "vllm/lora/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/lora/lora_ops.py",
+      "destination": "vllm/lora/ascend/lora_ops.py",
+      "source_sha256": "1f063cc8b6556e8ee14d47d2aafdb75facf55ce35477c344b1d40ebcfb2cf276",
+      "disposition": "native",
+      "destination_sha256": "eac7cabb8b295fccaa3f0574e5ee5044caf17b7f5dc6704aa6c274448778c0d2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/lora/punica_npu.py",
+      "destination": "vllm/lora/ascend/punica_npu.py",
+      "source_sha256": "97050a6bc69f250ec4b81505b8c00f67604870a7e861ab7eb59cc7b2065151e7",
+      "disposition": "native",
+      "destination_sha256": "44856b2bf1cbcd5fb495f0d27aebcd1104bd44fe1732e1e642ea564e5b0562f0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/lora/utils.py",
+      "destination": "vllm/lora/ascend/utils.py",
+      "source_sha256": "03f5660f3ac17850b1652bd2e0e10a08e7d6622476005cd1a5fecd9bce63700b",
+      "disposition": "native",
+      "destination_sha256": "c58efe0064bc1a4592282cf9ef4e94e1f1f736bea9a70fed962d860344668cbc",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/meta_registration.py",
+      "destination": "vllm/model_executor/layers/ascend/meta_registration.py",
+      "source_sha256": "e1d7d1414560d4f046a2055c4982499ea2e04b35fed7f3085e371592e1e4ce3c",
+      "disposition": "native",
+      "destination_sha256": "8acd6a5b7baaf43245c4332f8273c0ba7248a7e51cf14507dc973387d014b835",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/__init__.py",
+      "destination": "vllm/model_executor/model_loader/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/__init__.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/__init__.py",
+      "source_sha256": "9b5b459ca46990f8f758388442b2eeabd74e2a8b8b36d71068e45ecca14a3306",
+      "disposition": "native",
+      "destination_sha256": "bbcdb6ed61900e101a89c197b35b61dccd749c450ad8cab1a0aa5ddf807df623",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/executor/__init__.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/executor/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/executor/elastic_load.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/executor/elastic_load.py",
+      "source_sha256": "6a46b2d771ed60c0829f9695a789deb6648c7f99918c3987274835f76dc2ac04",
+      "disposition": "native",
+      "destination_sha256": "b900bd892d0912aff334197e5068b9800637472084836760a2c68be89d97adac",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/executor/netloader_pg.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/executor/netloader_pg.py",
+      "source_sha256": "36cd74c7c411aeb8472b460aa58c461f9a78da7444e46781d3d9ed64e18ba8fd",
+      "disposition": "native",
+      "destination_sha256": "b1a29d836f8b93b3389a5735e5a09d61c32efdfe4414adc369aa28e2b97d11d4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/interaction/__init__.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/interaction/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/interaction/elastic.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/interaction/elastic.py",
+      "source_sha256": "8124b5ad93ec5e8982124266cfc33369e0c3d95396a90d5cb7f97f84697d08c7",
+      "disposition": "native",
+      "destination_sha256": "0f5dd109296c4d027cfa26a6c4e23256a776180f1adb35d2790daf3e5940b6ce",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/load.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/load.py",
+      "source_sha256": "aaf9b7690f99cfd4096420c3c03055b2e5fad34644a8efb5e2bf71ec6f58d921",
+      "disposition": "native",
+      "destination_sha256": "7c36c0497564b61e0ae65197539bee898855fd773ee97b89514a489a1dca258c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/netloader.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/netloader.py",
+      "source_sha256": "08d7a4a20defb395174dccea73f4e5601a7a9d4ed1e490b1536f3a4e973974f4",
+      "disposition": "native",
+      "destination_sha256": "7cbc63302a0e736cc91a2ca38324bf131c9d75158b7e97e93720391076edea0e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/netloader/utils.py",
+      "destination": "vllm/model_executor/model_loader/ascend/netloader/utils.py",
+      "source_sha256": "1982f0e6d17022f352dd7256d785f019ef7b07e7cc6640af8a557244a59c4b66",
+      "disposition": "native",
+      "destination_sha256": "1116f27058622a73310f4e9c1a80193cd01f3b5753360d841dc55021d89ab77f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/__init__.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/__init__.py",
+      "source_sha256": "9c81d6f676ec418cab38d0966c9b87041ecfb99ce47e00c4d4d544ad5031bd9d",
+      "disposition": "native",
+      "destination_sha256": "fe670a7e79040b878a881632db421b59d65a94db406d825c2ba063fdac7c384c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/rfork_loader.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/rfork_loader.py",
+      "source_sha256": "b4e414cde1750d4e13d0f3b017328422c5115a8a49b11b6398ed5bcb29c26977",
+      "disposition": "native",
+      "destination_sha256": "56c4c0d31e3fd927912ed46eefc8c48fd4c7814105515adf4039f02aa298f655",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/rfork_worker.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/rfork_worker.py",
+      "source_sha256": "37b9c944e3bc2877b3d0fdb4acb91a74c854840af59f87ef319e72eb7a04118c",
+      "disposition": "native",
+      "destination_sha256": "3a2713dd8afde767b657b6cc2f9cdb85a280506b68f2fa6de2048a18719be560",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/seed_protocol.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/seed_protocol.py",
+      "source_sha256": "eaa094690bbb4c3791f3afd297e99f9e487a0855e13e9d8b7e74f6e5dfd05df0",
+      "disposition": "native",
+      "destination_sha256": "50f4129caac108ca4b008e39e19b77562447114f85c9660e617eb8d804cbd9e2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/seed_server.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/seed_server.py",
+      "source_sha256": "1c15f6c56300afe71841e74b98504dcbcb0137e8bc70f6c05a3d892b2f17b69e",
+      "disposition": "native",
+      "destination_sha256": "5ab64fc8b07b5f9ef2a580a4132e62502bc0c8629ac7d0b559f777aa7ce3cde7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/model_loader/rfork/transfer_backend.py",
+      "destination": "vllm/model_executor/model_loader/ascend/rfork/transfer_backend.py",
+      "source_sha256": "db5e5f1fa7be5cbb443c5a41b4a82905d05c65f2faf59b0b5f48f2d5a4e13d84",
+      "disposition": "native",
+      "destination_sha256": "042345a60cc2a965eb9d832fd691c1b16027b6c17906a8844b76e1c4c1b34e79",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/__init__.py",
+      "source_sha256": "e9debf1c9d9fe881586a3f53ba56a3428ba913fa0dc3604055958999b379d97c",
+      "disposition": "native",
+      "destination_sha256": "965dd7be32ea94f41909f4744f58fbcca3718788280cc8a606d634966de53b02",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/activation.py",
+      "destination": "vllm/model_executor/layers/ascend/activation.py",
+      "source_sha256": "b0025670953d0170686e1a14b45e589930636867826992477d3c494bb95be016",
+      "disposition": "native",
+      "destination_sha256": "a4fe448ea059306880f3e5f3af4c21628f47d6489537f5bcc17a4c465df2cda6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/conv.py",
+      "destination": "vllm/model_executor/layers/ascend/conv.py",
+      "source_sha256": "cc288c542410ea50bf9f112d25db2493f54a2c522f27bdba3f9afc137740e295",
+      "disposition": "native",
+      "destination_sha256": "8e16c0dfba250b294d1d52b4b2f8e357ed2a858320e78c28c7775eade1956073",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/flashcomm2_oshard_manager.py",
+      "destination": "vllm/model_executor/layers/ascend/flashcomm2_oshard_manager.py",
+      "source_sha256": "5ef4df112fb12c9f9d1cfa89b79d8f537a8d9f4250b3ddfe5fd988925477a149",
+      "disposition": "native",
+      "destination_sha256": "4410dd3f4ea9c2bdff1099fdc4fa0884bebb266bfee96222cef5455b5280f1fe",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/comm_utils.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/comm_utils.py",
+      "source_sha256": "ab23fa062e11e4965028d4f0526660f152a41a8dc3d57a6536538df9a834680d",
+      "disposition": "native",
+      "destination_sha256": "ac5170aa2ad135598459731bac4e5cb5df64b8d383d78371834f54d36bfa21fe",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/experts_selector.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/experts_selector.py",
+      "source_sha256": "92bebd721ecc86a7033065e37e73fe57facabc01cbd754939c014be8ebb810a8",
+      "disposition": "native",
+      "destination_sha256": "fb276f727af185c7f6357aee31ae9f04d78b5efc9568256edd37e7555e0f018d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/fused_moe.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/fused_moe.py",
+      "source_sha256": "bc170911dea7ff5c154ac966c9a046771f3afa79f0edd5e5d871525e911f25c0",
+      "disposition": "native",
+      "destination_sha256": "a0aecb8ad97d0193fb855838225ad3ba033111e7c16c8610bc7b5a48410644c2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/gate_linear.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/gate_linear.py",
+      "source_sha256": "c165fd0e3724da80ecddca60cdb8a3af88c172304fb1893e44c0b1558ae2a1f6",
+      "disposition": "native",
+      "destination_sha256": "2d0859c4ffcd06b6106443a94df757aca9d8cad1bc8faf53b0d6a0bc85987223",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/moe_comm_method.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/moe_comm_method.py",
+      "source_sha256": "a23d681549fa24d69c597f6c1c7d22df84da62efea808f2415a260c4267a8c4f",
+      "disposition": "native",
+      "destination_sha256": "f32c7fc81e259e21c322fc55250cb0c62ec5249cdf90384b47ddd4d7b9ac7f9a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/moe_mlp.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/moe_mlp.py",
+      "source_sha256": "1a65440a1357af84641a87fda630cf84efcbc8b34fa66ceedd2c403893fd840d",
+      "disposition": "native",
+      "destination_sha256": "c2872783c7e571ddf2483486ac05798fa8fb5ffdf905b9490de4019fcad5b781",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/moe_runtime_args.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/moe_runtime_args.py",
+      "source_sha256": "41bb24c3fe464e5fc99792ad86afdd2d44ad71a5992d106ee4209cf982bde3f5",
+      "disposition": "native",
+      "destination_sha256": "9a7bad17049d76acf0f47d783356abb54aa427f589df4aa49cea64bed5965a3d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/moe_stage_contracts.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/moe_stage_contracts.py",
+      "source_sha256": "b8ef0672b11320537feda19443a4589156d26838a173e0cd661c3b01b8ee4d46",
+      "disposition": "native",
+      "destination_sha256": "b2605e102b1a1e2f10c59afd1e2b1895bba8a8745a4d7f5199483a59f698094f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/moe_stage_params.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/moe_stage_params.py",
+      "source_sha256": "77faab96fc89478528b18c12ba18b044d16c2d2e5bd16b0ecf0946373fcf2555",
+      "disposition": "native",
+      "destination_sha256": "d8db8f36f3b9f6613e8e14b6f56d4e4e4194cb4078dd0cf540e5aab8bdff0cab",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/prepare_finalize.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/prepare_finalize.py",
+      "source_sha256": "f46b378b2ba197fafd744c409735aa9a011d93e073507c1f87cf1a60ef2ecae4",
+      "disposition": "native",
+      "destination_sha256": "531d091b33a1bbcadf807b0223d147cd7a27958f99ad5337de92a546a067446e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py",
+      "destination": "vllm/model_executor/layers/ascend/fused_moe/token_dispatcher.py",
+      "source_sha256": "b87778bc35bed0a182b8fab85a8fbb6abe449961f8f88cdd1c70535efa89d9ae",
+      "disposition": "native",
+      "destination_sha256": "88d3708ee495a9ed427ada656249bc07dfb4a6da76ccc3ffc80cb3a408ad80d4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/layer_shard_linear.py",
+      "destination": "vllm/model_executor/layers/ascend/layer_shard_linear.py",
+      "source_sha256": "1a0ce639beed15956ad993dc4901ca7563d4c7dc64aa0364533951863b72a497",
+      "disposition": "native",
+      "destination_sha256": "8f1496f62bb66db59c765730bc604e0cc1a4ee820d409ccfb3a39528ac6deda0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/layernorm.py",
+      "destination": "vllm/model_executor/layers/ascend/layernorm.py",
+      "source_sha256": "af53359759567ad86caf985fba6d95cd4b12dd688e7a47bb593fc7fcf0a9c256",
+      "disposition": "native",
+      "destination_sha256": "03bf1103346e756c897e8154756fd5bd384815e6558148e63c6c712f7b8c6a13",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/linear.py",
+      "destination": "vllm/model_executor/layers/ascend/linear.py",
+      "source_sha256": "fcf2520f8818cb02e6b27a7b9a926745c5c36f1af08a01d9be0627ce2c87316e",
+      "disposition": "native",
+      "destination_sha256": "41a0355a5a990030a4f20115374fe6578652dadbfebfffec6177e3951e23c8c6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/linear_op.py",
+      "destination": "vllm/model_executor/layers/ascend/linear_op.py",
+      "source_sha256": "d6ffb22c30243caf7d5476084e78501fbefe0289f94f67cbf91f15290fdd4da1",
+      "disposition": "native",
+      "destination_sha256": "811e3ba35fe5013021e1fa86a541e73c3d7b4b79bebade0c67740f69dc6142e2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/mla.py",
+      "destination": "vllm/model_executor/layers/ascend/mla.py",
+      "source_sha256": "c14e603c182aff7708c18be5f8a79c1e544007412424296c586c7b0579915cfe",
+      "disposition": "native",
+      "destination_sha256": "ba8a9b190743e93e94f8d53efb94875b8084b3431688b98e22ece2d931ec1dd0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/mm_encoder_attention.py",
+      "destination": "vllm/model_executor/layers/ascend/mm_encoder_attention.py",
+      "source_sha256": "07c8523c4c427660a565d336259dbdfe1852a112c4b0c3b40ca3a34ba34dc679",
+      "disposition": "native",
+      "destination_sha256": "fa825aee80ed2dd7929eed26302951f5f503b0aa5df074c77d7ba7bc9f84d016",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/register_custom_ops.py",
+      "destination": "vllm/model_executor/layers/ascend/register_custom_ops.py",
+      "source_sha256": "ecee7fd78ea10107794cea5cf7a71711045fe1e81d68da2767f18c9ef84bacb9",
+      "disposition": "native",
+      "destination_sha256": "84b6582b549d237c8fe251522acfde969fa84f60a1fdabacc9529f9ec967c16d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/rel_pos_attention.py",
+      "destination": "vllm/model_executor/layers/ascend/rel_pos_attention.py",
+      "source_sha256": "df3559f1c55b54cb831593641a716053c777a8745b6e7a76b0bf68ba5d3ddf89",
+      "disposition": "native",
+      "destination_sha256": "ec1aef182f9bfb98b1d98bc3ed0ee0c4c119b94581ebf81ba051e6bc3dc28481",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/rotary_embedding.py",
+      "destination": "vllm/model_executor/layers/ascend/rotary_embedding.py",
+      "source_sha256": "09b6cffb70b138eb96772e7f53366ff16fc2f7fd4741c34210e840d9106bada7",
+      "disposition": "native",
+      "destination_sha256": "cea554d1b7d31a692987480bfe718e34045f236f9938caf032ef908333a4e937",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/activation/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/activation/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/activation/swiglu_quant.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/activation/swiglu_quant.py",
+      "source_sha256": "80ae02a6c4748d46a8fbd045c06eaa2f2b04e1f1c9245a122168b3d2e8332485",
+      "disposition": "native",
+      "destination_sha256": "f35f1b917d97438417b81dd6ca54af5d25e8c1a255c4e50bd575a2707b65d29a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_invariant/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_invariant/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_invariant/matmul.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_invariant/matmul.py",
+      "source_sha256": "300061bbeac747240e0979f9bc201425d8d52a29684ba113824be320bda06d83",
+      "disposition": "native",
+      "destination_sha256": "c09d0034dd131a2ec52d51510e87da6bcd85d7931d693be93b7421c13cbbfb87",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_invariant/mean.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_invariant/mean.py",
+      "source_sha256": "3b47014519d7efc0de7c1c8865ec0c70fd57dc487b47f0695ff7fd06082d8bf2",
+      "disposition": "native",
+      "destination_sha256": "e097bd2bc5cb9bf9e844600c7de365cb599ae455f190ac4da5ce28cac61eb02f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_invariant/rmsnorm.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_invariant/rmsnorm.py",
+      "source_sha256": "d71da6c952b76bfde5f29f9ede956b0b3921b64174fd0e25872fff68e85798b9",
+      "disposition": "native",
+      "destination_sha256": "1a666ecf66e2b3ec052d09478dbebc98fef17277aaf9ba993c628c6c2043f338",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_invariant/softmax.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_invariant/softmax.py",
+      "source_sha256": "e8efd7801427278733e07b272862c245e4bb27b027454cd9544794fb437248a1",
+      "disposition": "native",
+      "destination_sha256": "e8efd7801427278733e07b272862c245e4bb27b027454cd9544794fb437248a1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/batch_memcpy.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/batch_memcpy.py",
+      "source_sha256": "c434b023102d1804eec0eb63b6d62b0f9343cb831e6ef82f6151efcdf96c5965",
+      "disposition": "native",
+      "destination_sha256": "c434b023102d1804eec0eb63b6d62b0f9343cb831e6ef82f6151efcdf96c5965",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/bincount.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/bincount.py",
+      "source_sha256": "cb68968b105a29453bc6177ab019a242fcf0439600357e571c1082153216cf37",
+      "disposition": "native",
+      "destination_sha256": "53cfb3684bb748080b0fc4e9d5b5e54191ed184a5c8783ac1d4c298e0175bd01",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk.py",
+      "source_sha256": "e6d570f893056398093db30130811106dec94de999fd4e77ce0e0e12c405e57e",
+      "disposition": "native",
+      "destination_sha256": "7fe0581c320ed4c4693acbfa5967c9c71b315627535ac5245cc819f20af73115",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk_delta_h.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk_delta_h.py",
+      "source_sha256": "8093eb89e75e3d29c56469e4874eb5bef593074e29b8953720a575ea9b552ef2",
+      "disposition": "native",
+      "destination_sha256": "f3bb25b8c103c87e7126078ce6ad0a57dcc0ebd934b446352152570dc458082f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk_delta_hupdate.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk_delta_hupdate.py",
+      "source_sha256": "0e9fdfda427c3e5b71801d12fd92d7f028fd92cc2788cc2f4580a077c9da9f9f",
+      "disposition": "native",
+      "destination_sha256": "087d0185e5ed61ef62fcecd8237174306a47e0aa9cdab91a90fbf02eb7452efb",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk_o.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk_o.py",
+      "source_sha256": "5bb9d79ba9ce815b51aaff3cba576b97871c43b0177be7e24dbe08aaeecf143e",
+      "disposition": "native",
+      "destination_sha256": "8367572573d155b418225442c36fefb1823aa241c4a5a29f53ec80d4626e2dca",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk_o_update.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk_o_update.py",
+      "source_sha256": "61a6f58ca7718f5ecec072c51e1e61f26fc500534104474270ca1e5bb4fd4147",
+      "disposition": "native",
+      "destination_sha256": "cca0879f12245a4ccf47d8a0898d23a1963f045efd9d2752e8792d13f216192e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/chunk_scaled_dot_kkt.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/chunk_scaled_dot_kkt.py",
+      "source_sha256": "45a54f2272233dda5470df1e12ba938ac4a7a25fa973831a22ba6c76cbed138a",
+      "disposition": "native",
+      "destination_sha256": "6194a3130fdec220d8d12993d416fbc143b768229d2d89c3a910a82e58581261",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/cumsum.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/cumsum.py",
+      "source_sha256": "1593b27925aeb7e8f8b2ff517280aad1724de840c6c48755dbc098796fa591b1",
+      "disposition": "native",
+      "destination_sha256": "1d80c3a7cd3dc0d7bd40fc854f054bab9de9023c1d05290233dca8638abc3f96",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/fused_qkvzba_split_reshape.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/fused_qkvzba_split_reshape.py",
+      "source_sha256": "3b51906217f16ba69e711a5694cdd9012b7fd2fcc0730761bf1373607de3c389",
+      "disposition": "native",
+      "destination_sha256": "249561937df72962e0a6f32e5bae5f849053b463d126eac6ce34c720a62fefb4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/l2norm.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/l2norm.py",
+      "source_sha256": "66853d9bb7c7d5c816ef66f8c35a6f09710e95d008a4c692b94d528e78807a3c",
+      "disposition": "native",
+      "destination_sha256": "9d303fd5a1e8bbcd70e12808bc988982530161c8eacc51a7b677661b498915ff",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/layernorm_guard.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/layernorm_guard.py",
+      "source_sha256": "f0bab2c73fdb373aa08d07cfd5f9dc5b1edf826c431a2b68bf45ceb255062915",
+      "disposition": "native",
+      "destination_sha256": "e3dd0966a547a0c267a3a4a27e0ab8aa1e127d1e46a375debfa8ab66a9bb7172",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/sigmoid_gating.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/sigmoid_gating.py",
+      "source_sha256": "bbaf19a295a23e9d69bd0405b5668d3703c752c5cc49eee32ec4be9295a698d8",
+      "disposition": "native",
+      "destination_sha256": "7b56ce9e65af9b0f9195e5571d4fb8faf16fd666ee3872e3d4cda2f7173070ee",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/solve_tril.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/solve_tril.py",
+      "source_sha256": "351b4a762beb6f35b611656d46852467d886c0457da4094fa03998f134271c87",
+      "disposition": "native",
+      "destination_sha256": "1aa381fffd2c6408ea07fb1216ddb0a6e02d86c724e6ea3fcc92234685343c6f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/utils.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/utils.py",
+      "source_sha256": "391ed824d43cd394b426364b7e4484ac8bcc60118eb1ea77b9c20c74351a5684",
+      "disposition": "native",
+      "destination_sha256": "dfad8852c2df4df1352218e9bae63378efab599ff63dabc7797dbbc3eca4591a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fla/wy_fast.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fla/wy_fast.py",
+      "source_sha256": "51e23f0876d91ae09b32ae70aa03318b2440b7bd3ba029c0d9838869359597ef",
+      "disposition": "native",
+      "destination_sha256": "4548e031e9898ef8ce936110972daf3094c864b817275a1d6cb94abcb69db4ec",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/fused_gdn_gating.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/fused_gdn_gating.py",
+      "source_sha256": "5587bf3440e64eda125899f5de2d1ab609061e2b5336f847af101ada51d81058",
+      "disposition": "native",
+      "destination_sha256": "f85605c385a807e4d63b8b8f15c71130255b899bec314b81b9961e42bc29ffaf",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/layernorm_gated.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/layernorm_gated.py",
+      "source_sha256": "3018da6bbca33fdbe861bd4b5ab86097d5e682920d2083e4a6cb4df261f075d7",
+      "disposition": "native",
+      "destination_sha256": "efa327d71b18267e9c33fa40cb58168aaa37abaed49c6780c9b19779d5977780",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/linearnorm/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/linearnorm/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/linearnorm/split_qkv_rmsnorm_mrope.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/linearnorm/split_qkv_rmsnorm_mrope.py",
+      "source_sha256": "5ffd4c2ea107ba5e5cd78bc5d8ed24bee2d296d155a5f4378b1cf8ad4145486c",
+      "disposition": "native",
+      "destination_sha256": "a921fbd369cdb4d602b4e45128aca82d40b736508a93c64db059684e5a1f1619",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/linearnorm/split_qkv_rmsnorm_rope.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/linearnorm/split_qkv_rmsnorm_rope.py",
+      "source_sha256": "ca226aac8c5559904646765e3f358dcdd394c8d8af58f5102338676844312ae1",
+      "disposition": "native",
+      "destination_sha256": "b18d9f708298ed9557644b9c8d2df94399cbd4cf0ff162d5bfd4211ba40a29f7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/linearnorm/split_qkv_tp_rmsnorm_rope.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/linearnorm/split_qkv_tp_rmsnorm_rope.py",
+      "source_sha256": "945e41ac7210549acdcd8161700e048dbcac8ed1c1eb0bcb79a3d5b81c540897",
+      "disposition": "native",
+      "destination_sha256": "8d009e904b23f25b641f8d9ff0ae4726d538086c5c964719fc87a3dbc90692cf",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/mamba/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/mamba/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/mamba/causal_conv1d.py",
+      "source_sha256": "e84d0ba34a72f9536f76dbc3162550ee669fc18734585baf15a243ac71999d7b",
+      "disposition": "native",
+      "destination_sha256": "f677ce8fd06dd8be215b8eda5857addd1e31c6784a2e28c172c2008e00701901",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/muls_add.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/muls_add.py",
+      "source_sha256": "cd1845442d11fecd7f9de1ee1020e457a40483348bb511150039e51bb7791c20",
+      "disposition": "native",
+      "destination_sha256": "dbc618727545efbe664da8c3949adf03f2c067dbe84a20b024aa295f0dde20a1",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/penalty.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/penalty.py",
+      "source_sha256": "f966640ea500a20dac79731e159eb3fef8c4775dfc4fb3b4fa2c8bcd0b656080",
+      "disposition": "native",
+      "destination_sha256": "a171fcdf2d46c951bcea7ffb392f5af8e493814bfc84906aa073c3e2a93943ce",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/reject_sample.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/reject_sample.py",
+      "source_sha256": "b375c32f67538d76463116934c0b796b7e323ea67f6fe78554e5603d5e99eaad",
+      "disposition": "native",
+      "destination_sha256": "4adb649f5b55afa97345dbc5224a046174cab27e6496c88a13d5234e3c1c92c0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/rope.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/rope.py",
+      "source_sha256": "4c579d5d22b08d7657f1406fe072c2d17f6fa0a87b0421a520b61e6e1177f7f9",
+      "disposition": "native",
+      "destination_sha256": "ac80a965dffdeb45b28fcd2bfe341358e0a3a15032b0ddecca6bcbf3823937eb",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/spec_decode/__init__.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/spec_decode/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/spec_decode/utils.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/spec_decode/utils.py",
+      "source_sha256": "a6784e6818248b5e572ec5aa18d363d01307e1f477c7fba8dc9392fc679083cf",
+      "disposition": "native",
+      "destination_sha256": "b451e64d416a19d5a6cae0f485abd98df4c6fac3726ad2dd1d08be2637f97b47",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/triton/triton_utils.py",
+      "destination": "vllm/model_executor/layers/ascend/triton/triton_utils.py",
+      "source_sha256": "f94d81f163f0076e8243990dd687f7ec8d42ce1ed30d67eea3155bf1c3a073a4",
+      "disposition": "native",
+      "destination_sha256": "d26ad0a0695faf72ee0cd6f563866c04a8e5f3e192677406e6a7853dc75ceda3",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/vocab_parallel_embedding.py",
+      "destination": "vllm/model_executor/layers/ascend/vocab_parallel_embedding.py",
+      "source_sha256": "27d9c4f38c11d051b22dadc903ed0009269a303199639287ba937d882442f094",
+      "disposition": "native",
+      "destination_sha256": "0cf5daca5bde08333673830f6f9d734af0698298227f1adb5b86fb4cf977c84d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/ops/weight_prefetch.py",
+      "destination": "vllm/model_executor/layers/ascend/weight_prefetch.py",
+      "source_sha256": "a11d8a2bd5c6fd16bc69ae8ddab10861b9cbf79794017a91a50dd413e0664340",
+      "disposition": "native",
+      "destination_sha256": "325677f6d147da54f4b60be2b9c71d17189382f398300885bf0cccebb4da742a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/__init__.py",
+      "destination": "ascend/legacy_patches/__init__.py",
+      "source_sha256": "44e3ea5dd79ccc5604bbea06bbe9cc65dafd69923f45b36e2dc6e8ece37bf252",
+      "disposition": "archived",
+      "destination_sha256": "44e3ea5dd79ccc5604bbea06bbe9cc65dafd69923f45b36e2dc6e8ece37bf252",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/__init__.py",
+      "destination": "ascend/legacy_patches/platform/__init__.py",
+      "source_sha256": "1bd951646e73c52868951947394e592a432f504ef5d7219c5411f29bc161b795",
+      "disposition": "archived",
+      "destination_sha256": "1bd951646e73c52868951947394e592a432f504ef5d7219c5411f29bc161b795",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_balance_schedule.py",
+      "destination": "ascend/legacy_patches/platform/patch_balance_schedule.py",
+      "source_sha256": "3bfacbc23b4d5de721ddfde5e0041238a7ccbd6d77d57843e7adb0711fb4b53f",
+      "disposition": "archived",
+      "destination_sha256": "3bfacbc23b4d5de721ddfde5e0041238a7ccbd6d77d57843e7adb0711fb4b53f",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_distributed.py",
+      "destination": "ascend/legacy_patches/platform/patch_distributed.py",
+      "source_sha256": "a37863ccf18652313a7defacc066202b2df6bcf3b1a2009f75dde2efc80e7815",
+      "disposition": "archived",
+      "destination_sha256": "a37863ccf18652313a7defacc066202b2df6bcf3b1a2009f75dde2efc80e7815",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_fusion_matcher_compat_ops.py",
+      "destination": "ascend/legacy_patches/platform/patch_fusion_matcher_compat_ops.py",
+      "source_sha256": "719bda82fb5997ddca9ce2369275eaefac79649994d01a74eeb404223407f66f",
+      "disposition": "archived",
+      "destination_sha256": "719bda82fb5997ddca9ce2369275eaefac79649994d01a74eeb404223407f66f",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_glm_tool_call_parser.py",
+      "destination": "ascend/legacy_patches/platform/patch_glm_tool_call_parser.py",
+      "source_sha256": "23b4fb22160b246261741826c094bb499ed32229c4ec6b90c7333007f974b3ae",
+      "disposition": "archived",
+      "destination_sha256": "23b4fb22160b246261741826c094bb499ed32229c4ec6b90c7333007f974b3ae",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_kv_cache_interface.py",
+      "destination": "ascend/legacy_patches/platform/patch_kv_cache_interface.py",
+      "source_sha256": "66c32ab0bf893e368c3763c3157d2379527c45564087e9a332faf061375b08e2",
+      "disposition": "archived",
+      "destination_sha256": "66c32ab0bf893e368c3763c3157d2379527c45564087e9a332faf061375b08e2",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_kv_connector_worker_metadata.py",
+      "destination": "ascend/legacy_patches/platform/patch_kv_connector_worker_metadata.py",
+      "source_sha256": "e4e9d96a648490fc448ada9d7380230cdbe7c48a6addb96956a36352bfce9d82",
+      "disposition": "archived",
+      "destination_sha256": "e4e9d96a648490fc448ada9d7380230cdbe7c48a6addb96956a36352bfce9d82",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_mamba_config.py",
+      "destination": "ascend/legacy_patches/platform/patch_mamba_config.py",
+      "source_sha256": "6c704a9007f88424b851c6426694b060589e4fc642a4e8428979fa706a978127",
+      "disposition": "archived",
+      "destination_sha256": "6c704a9007f88424b851c6426694b060589e4fc642a4e8428979fa706a978127",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_mamba_config_310.py",
+      "destination": "ascend/legacy_patches/platform/patch_mamba_config_310.py",
+      "source_sha256": "91a9c7d2d50567de8c5089e62b888b82cda66c00a6f2bd50ca5b3c0ceac10ee2",
+      "disposition": "archived",
+      "destination_sha256": "91a9c7d2d50567de8c5089e62b888b82cda66c00a6f2bd50ca5b3c0ceac10ee2",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_minimax_m2_config.py",
+      "destination": "ascend/legacy_patches/platform/patch_minimax_m2_config.py",
+      "source_sha256": "eccf14a4d6d8ca468389ff5b0572d7fa31bf8566c1a4ad46ba7a8a2100fc1f89",
+      "disposition": "archived",
+      "destination_sha256": "eccf14a4d6d8ca468389ff5b0572d7fa31bf8566c1a4ad46ba7a8a2100fc1f89",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_minimax_usage_accounting.py",
+      "destination": "ascend/legacy_patches/platform/patch_minimax_usage_accounting.py",
+      "source_sha256": "4ae1bca8d1be260b2aff3e1c872698708fe4a306a43358252a69823733c1a6f5",
+      "disposition": "archived",
+      "destination_sha256": "4ae1bca8d1be260b2aff3e1c872698708fe4a306a43358252a69823733c1a6f5",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_multiproc_executor.py",
+      "destination": "ascend/legacy_patches/platform/patch_multiproc_executor.py",
+      "source_sha256": "4d8743869f9d07c6b83d0cf6fba1be074e126e74659dbe6b2a170689c6407230",
+      "disposition": "archived",
+      "destination_sha256": "4d8743869f9d07c6b83d0cf6fba1be074e126e74659dbe6b2a170689c6407230",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_sched_yield.py",
+      "destination": "ascend/legacy_patches/platform/patch_sched_yield.py",
+      "source_sha256": "df13593575d77330707b0be48edd8c12f82a56a9777fbff9467bb48027ca2a5a",
+      "disposition": "archived",
+      "destination_sha256": "df13593575d77330707b0be48edd8c12f82a56a9777fbff9467bb48027ca2a5a",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_torch_accelerator.py",
+      "destination": "ascend/legacy_patches/platform/patch_torch_accelerator.py",
+      "source_sha256": "76ca48d51c8af6552828076797ad20b7eed044a8e53be918bd12719152fdc026",
+      "disposition": "archived",
+      "destination_sha256": "76ca48d51c8af6552828076797ad20b7eed044a8e53be918bd12719152fdc026",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/__init__.py",
+      "destination": "ascend/legacy_patches/worker/__init__.py",
+      "source_sha256": "8d459208ef34d396d20f3185d0bc03ec5263a71182522c23411979348736f915",
+      "disposition": "archived",
+      "destination_sha256": "8d459208ef34d396d20f3185d0bc03ec5263a71182522c23411979348736f915",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_bert.py",
+      "destination": "ascend/legacy_patches/worker/patch_bert.py",
+      "source_sha256": "1459a37c020be3789610eada720dd5b2a91ea2f2c928da847f7073ca7255d9ee",
+      "disposition": "archived",
+      "destination_sha256": "1459a37c020be3789610eada720dd5b2a91ea2f2c928da847f7073ca7255d9ee",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_cudagraph.py",
+      "destination": "ascend/legacy_patches/worker/patch_cudagraph.py",
+      "source_sha256": "c8140662d0411f5c9b292420efe8a3d072b6d0c20c6a5c6500a170d9eb097ad7",
+      "disposition": "archived",
+      "destination_sha256": "c8140662d0411f5c9b292420efe8a3d072b6d0c20c6a5c6500a170d9eb097ad7",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_deepencoder2.py",
+      "destination": "ascend/legacy_patches/worker/patch_deepencoder2.py",
+      "source_sha256": "eff9f34f57db723ee83a7260ac29453c98bc9742622366de94a6903f406978c3",
+      "disposition": "archived",
+      "destination_sha256": "eff9f34f57db723ee83a7260ac29453c98bc9742622366de94a6903f406978c3",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_deepseek_mtp.py",
+      "destination": "ascend/legacy_patches/worker/patch_deepseek_mtp.py",
+      "source_sha256": "c6eec85b4a9966830f2fc9255a7687eb2398aeab4053e82e0ce0f3a355d83164",
+      "disposition": "archived",
+      "destination_sha256": "c6eec85b4a9966830f2fc9255a7687eb2398aeab4053e82e0ce0f3a355d83164",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_distributed.py",
+      "destination": "ascend/legacy_patches/worker/patch_distributed.py",
+      "source_sha256": "e4ed6ab08ea45e63fdb80c3813276e072794e3e2971eb3fbc36d32ff213ad380",
+      "disposition": "archived",
+      "destination_sha256": "e4ed6ab08ea45e63fdb80c3813276e072794e3e2971eb3fbc36d32ff213ad380",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_draft_quarot.py",
+      "destination": "ascend/legacy_patches/worker/patch_draft_quarot.py",
+      "source_sha256": "7715f0a48483635e2ee5f206173e746c6b4dae58528d565ce9d67afec5278785",
+      "disposition": "archived",
+      "destination_sha256": "7715f0a48483635e2ee5f206173e746c6b4dae58528d565ce9d67afec5278785",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_gdn_attn.py",
+      "destination": "ascend/legacy_patches/worker/patch_gdn_attn.py",
+      "source_sha256": "51697d71ef092ef0e150b00cede972155fc2077dc5f29c8962d848d8664a4e35",
+      "disposition": "archived",
+      "destination_sha256": "51697d71ef092ef0e150b00cede972155fc2077dc5f29c8962d848d8664a4e35",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_huanyuan_vl.py",
+      "destination": "ascend/legacy_patches/worker/patch_huanyuan_vl.py",
+      "source_sha256": "99885b28572f578854a7a8dac8fe8e7c685858f8ebf0725509d70a1b0c526f25",
+      "disposition": "archived",
+      "destination_sha256": "99885b28572f578854a7a8dac8fe8e7c685858f8ebf0725509d70a1b0c526f25",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_kimi_k25.py",
+      "destination": "ascend/legacy_patches/worker/patch_kimi_k25.py",
+      "source_sha256": "1ca1beaa7f3478874e7ef935a238d8b3e7c49095b0f382fdcc0f728d7dde7034",
+      "disposition": "archived",
+      "destination_sha256": "1ca1beaa7f3478874e7ef935a238d8b3e7c49095b0f382fdcc0f728d7dde7034",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_logprobs.py",
+      "destination": "ascend/legacy_patches/worker/patch_logprobs.py",
+      "source_sha256": "4dc344bcf92eb6369e1886572b54113d38bb6ebca2fa089f4d396280c177384b",
+      "disposition": "archived",
+      "destination_sha256": "4dc344bcf92eb6369e1886572b54113d38bb6ebca2fa089f4d396280c177384b",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_mamba_utils.py",
+      "destination": "ascend/legacy_patches/worker/patch_mamba_utils.py",
+      "source_sha256": "4cb3e8cbebfe6ba2b5169a70eb8f6a47a625e81e6f37ac9be0a79b0cbcdfdff9",
+      "disposition": "archived",
+      "destination_sha256": "4cb3e8cbebfe6ba2b5169a70eb8f6a47a625e81e6f37ac9be0a79b0cbcdfdff9",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_minimax_m2.py",
+      "destination": "ascend/legacy_patches/worker/patch_minimax_m2.py",
+      "source_sha256": "e194f73b1af5a64bcca3a5b6d894f714a7d244a54560d3a81c3abcf244719ee8",
+      "disposition": "archived",
+      "destination_sha256": "e194f73b1af5a64bcca3a5b6d894f714a7d244a54560d3a81c3abcf244719ee8",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_minimax_m2_linear_attn.py",
+      "destination": "ascend/legacy_patches/worker/patch_minimax_m2_linear_attn.py",
+      "source_sha256": "7c3029f4eb9a10e1b85a8be845235acd5feca51d6b3902c87568fe0d94e9bdfb",
+      "disposition": "archived",
+      "destination_sha256": "7c3029f4eb9a10e1b85a8be845235acd5feca51d6b3902c87568fe0d94e9bdfb",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_module.py",
+      "destination": "ascend/legacy_patches/worker/patch_module.py",
+      "source_sha256": "b0507f1f1f114aee6db3e3b7248bab727573f379af8f13a9155ff7b6d293e64f",
+      "disposition": "archived",
+      "destination_sha256": "b0507f1f1f114aee6db3e3b7248bab727573f379af8f13a9155ff7b6d293e64f",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_multimodal_merge.py",
+      "destination": "ascend/legacy_patches/worker/patch_multimodal_merge.py",
+      "source_sha256": "aeaac8796115f2aff1d7b2633227b28f04d00828a6b00839395beef29c4cf244",
+      "disposition": "archived",
+      "destination_sha256": "aeaac8796115f2aff1d7b2633227b28f04d00828a6b00839395beef29c4cf244",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_npugraph_ex_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_npugraph_ex_triton.py",
+      "source_sha256": "f78dedaac448635f9322b07617e83ad177d243616fe222e6b8d885e569dc0905",
+      "disposition": "archived",
+      "destination_sha256": "f78dedaac448635f9322b07617e83ad177d243616fe222e6b8d885e569dc0905",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_5.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_5.py",
+      "source_sha256": "9e01a44bda3ef878d311dcee53f2a25eaace2936909ce079c8d816c15f000818",
+      "disposition": "archived",
+      "destination_sha256": "9e01a44bda3ef878d311dcee53f2a25eaace2936909ce079c8d816c15f000818",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_next.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_next.py",
+      "source_sha256": "bc4ddfbf5813f62d365f8ce96a3bea3ec71d54b77f89ff38bcb55aa000e6b9c0",
+      "disposition": "archived",
+      "destination_sha256": "bc4ddfbf5813f62d365f8ce96a3bea3ec71d54b77f89ff38bcb55aa000e6b9c0",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_next_mtp.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_next_mtp.py",
+      "source_sha256": "f2fe2a48e957a3ebdb02e146dd4ee35c5a5364729b645bb10bf3b7134560ef44",
+      "disposition": "archived",
+      "destination_sha256": "f2fe2a48e957a3ebdb02e146dd4ee35c5a5364729b645bb10bf3b7134560ef44",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_rejection_sampler.py",
+      "destination": "ascend/legacy_patches/worker/patch_rejection_sampler.py",
+      "source_sha256": "f037f710e0b7f80e73b94d9b93ce87aacddf58af2b3e6f5df53426717d95e7a3",
+      "disposition": "archived",
+      "destination_sha256": "f037f710e0b7f80e73b94d9b93ce87aacddf58af2b3e6f5df53426717d95e7a3",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_routed_experts_capturer.py",
+      "destination": "ascend/legacy_patches/worker/patch_routed_experts_capturer.py",
+      "source_sha256": "45d76757addcd062a87bb53bcf9463551f13b3a91229b927ccf3488990b5245f",
+      "disposition": "archived",
+      "destination_sha256": "45d76757addcd062a87bb53bcf9463551f13b3a91229b927ccf3488990b5245f",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_triton.py",
+      "source_sha256": "917048652725006c5115edf65591f19d0b3e2a87e7bd6112f6d93b9f08ccee3e",
+      "disposition": "archived",
+      "destination_sha256": "917048652725006c5115edf65591f19d0b3e2a87e7bd6112f6d93b9f08ccee3e",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_unquantized_gemm.py",
+      "destination": "ascend/legacy_patches/worker/patch_unquantized_gemm.py",
+      "source_sha256": "0317441758008fa74133b2ee7d3e3b2588d632d6522acfb6a8c98ee21554e5bf",
+      "disposition": "archived",
+      "destination_sha256": "0317441758008fa74133b2ee7d3e3b2588d632d6522acfb6a8c98ee21554e5bf",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/__init__.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "archived",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_block_table.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_block_table.py",
+      "source_sha256": "460373de2cc5c32368e0ef8033c486e0a01a6308b0e208119b5736e00e2e3230",
+      "disposition": "archived",
+      "destination_sha256": "460373de2cc5c32368e0ef8033c486e0a01a6308b0e208119b5736e00e2e3230",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_eagle.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_eagle.py",
+      "source_sha256": "3b6bebb1230fa88040ddb4680d95d1ab824438187bdd147c922c7b1f9a796251",
+      "disposition": "archived",
+      "destination_sha256": "3b6bebb1230fa88040ddb4680d95d1ab824438187bdd147c922c7b1f9a796251",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_input_batch.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_input_batch.py",
+      "source_sha256": "592dd58eae84a1b284b35f27b9f1324b360d4d4e80c10815c0120a296917dad6",
+      "disposition": "archived",
+      "destination_sha256": "592dd58eae84a1b284b35f27b9f1324b360d4d4e80c10815c0120a296917dad6",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_model_state.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_model_state.py",
+      "source_sha256": "b2859f34a4e1ca09fe2cf4fd4db7953206e5a7e4a0a04850e018772cb3567ba2",
+      "disposition": "archived",
+      "destination_sha256": "b2859f34a4e1ca09fe2cf4fd4db7953206e5a7e4a0a04850e018772cb3567ba2",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_triton.py",
+      "source_sha256": "ecdca7076d45d59cc8c676a112e4f5aa4b5a7294dca29114d92f55bc5a3b56a2",
+      "disposition": "archived",
+      "destination_sha256": "ecdca7076d45d59cc8c676a112e4f5aa4b5a7294dca29114d92f55bc5a3b56a2",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_uva.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_uva.py",
+      "source_sha256": "52f95e4ec83a8f81282a1d8a2f5d42437b67cddacf3683af5276b1d1b4e5f6f5",
+      "disposition": "archived",
+      "destination_sha256": "52f95e4ec83a8f81282a1d8a2f5d42437b67cddacf3683af5276b1d1b4e5f6f5",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_weight_utils.py",
+      "destination": "ascend/legacy_patches/worker/patch_weight_utils.py",
+      "source_sha256": "615e840c47d072629689cba6e7ce965dbf80065b1cd1ba0ce9408c90eef7796a",
+      "disposition": "archived",
+      "destination_sha256": "615e840c47d072629689cba6e7ce965dbf80065b1cd1ba0ce9408c90eef7796a",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/platform.py",
+      "destination": "ascend/legacy_plugin/platform.py",
+      "source_sha256": "dd1e0dfecb93ef3d9aeac325edbcf816c157c9bdabe5b3b2babbde5091bf911d",
+      "disposition": "archived",
+      "destination_sha256": "dd1e0dfecb93ef3d9aeac325edbcf816c157c9bdabe5b3b2babbde5091bf911d",
+      "final_disposition": "archived"
+    },
+    {
+      "source": "ascend/vllm_ascend/profiling_config.py",
+      "destination": "vllm/utils/ascend_profiling_config.py",
+      "source_sha256": "31f9b6245c8f5a5f31185dfe20c5fd0e5b3a16b3d52201ffb7fd60770763f977",
+      "disposition": "native",
+      "destination_sha256": "7f7862853631f5efd9572f8067fb07806cea61d999e536b5b99690ef7a789b57",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/__init__.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/__init__.py",
+      "source_sha256": "8c6dd6e184414805de87bfea6339f09c24f4baff6e5182f644e8754faa36aca2",
+      "disposition": "native",
+      "destination_sha256": "e4638ddbb57e38558a8ad07ddf4cdf607b7334f6bde9147b44da5d86e341a5ca",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/compressed_tensors_config.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/compressed_tensors_config.py",
+      "source_sha256": "a9050ddea3aa8123a4822182f59ca83d142ffb4474f534d6cfba25ac7fe6e8ed",
+      "disposition": "native",
+      "destination_sha256": "514d1e877c20acb416d295ba77a2f94117dbe93ed42b00e43119287f74d84c6c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/method_adapters.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/method_adapters.py",
+      "source_sha256": "af15ada5b09e99cd2bb59ce07dd02459db1f3e1cb9dedf646531de469d8db932",
+      "disposition": "native",
+      "destination_sha256": "2ba189779dc0cfb7e0b27215b426a9ed69ca913030270b048f09efe226718ef7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/__init__.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/__init__.py",
+      "source_sha256": "d59c3804e48f966f6fd76d23c6886f1c24ab79335a18fb92215905ba7dfbdf2b",
+      "disposition": "native",
+      "destination_sha256": "655c2b728d82c671a8c598eb6a68b8383b4177e4c778c9a046e0931773798510",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/base.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/base.py",
+      "source_sha256": "0342801baf05d10d42e76419e018ce12484ae64267078989097c620c56b336e5",
+      "disposition": "native",
+      "destination_sha256": "4981813cd02c169d12f2694d9bd82bba1db5409419c9fd382c04474db7f43dbc",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/kv_c8.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/kv_c8.py",
+      "source_sha256": "cae0906495208cf2618dcff660d7672ef6533e788494a2676ab1494ccb50fd25",
+      "disposition": "native",
+      "destination_sha256": "dc518ef4f25da3b9360b551cc6255b046be57af85ea7e0bcf592b01c694fffb3",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/registry.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/registry.py",
+      "source_sha256": "65b5cc268362c87d6b0e5cda5cf37ca5d54264ad54c3f2896dda35c8d9410be5",
+      "disposition": "native",
+      "destination_sha256": "65b5cc268362c87d6b0e5cda5cf37ca5d54264ad54c3f2896dda35c8d9410be5",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w4a16.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w4a16.py",
+      "source_sha256": "1ca7fe0415aa8e2409f271f6c06d25eaecd3d8aafd3e0d1838dabba8e72987f9",
+      "disposition": "native",
+      "destination_sha256": "cd812f4178ca266291de62ecc5b0eeee09d487d0c4374b0848a8592ae8146c45",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w4a4_flatquant.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w4a4_flatquant.py",
+      "source_sha256": "72274b750bcbfa3527c7e5a65bdfc15abd39ff5b383465fd557f3a783c63e0e9",
+      "disposition": "native",
+      "destination_sha256": "01857f5d1ead4c91d6a3bf22160078d9240411894fe17e46b918b95a6f45da82",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w4a4_laos_dynamic.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w4a4_laos_dynamic.py",
+      "source_sha256": "4243b3df066514ec9b51cfae19281aab5de01f6ff86c4225ddb1b7a02cb55aeb",
+      "disposition": "native",
+      "destination_sha256": "d72e661ae7f36a94caac81a4224a67b265ceca1be305464f8554c6dbfde4f56e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w4a8.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w4a8.py",
+      "source_sha256": "c04cffca738c6056f7d72a4638eb6b60fdb63f6262ecbc751034d222d61abb24",
+      "disposition": "native",
+      "destination_sha256": "69e52f9e2eac63a3cc175a7c2b09682ea83c7c9e9ea971048553f670c27069ad",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w8a16.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w8a16.py",
+      "source_sha256": "17d9f837c61e13edad60437ca63524431bb811f8729131d8c2e4c9b92a470423",
+      "disposition": "native",
+      "destination_sha256": "644e67c643fd4607daccd1bd35a49c2345cbac55f2f58de5f365fdc5db4d4935",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w8a8_dynamic.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w8a8_dynamic.py",
+      "source_sha256": "07b8ef64840d4bd29b19351945132e80cc4c1c7e46729b1a96413bb6e2b252b8",
+      "disposition": "native",
+      "destination_sha256": "74258f315a6faf9f189f0fe2aac7f778748a66908abaa4db235bcdcf007ddc8b",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w8a8_mxfp8.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w8a8_mxfp8.py",
+      "source_sha256": "f1c7472307fb3635ef1f8885d263917e8ac3fba1e8257333ec96d0d5fb0c263b",
+      "disposition": "native",
+      "destination_sha256": "85b83b51349caac99e30c4b3b81ae4aae37b945c74a30a5d08c743dde1b45e78",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w8a8_pdmix.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w8a8_pdmix.py",
+      "source_sha256": "85376b322b1e4f79b0de1615b77acc9b69715befd495279ed4423ac7b804174a",
+      "disposition": "native",
+      "destination_sha256": "a4ff759167e8337620a9626d91a575057c60e79fce76527df852abda6da00ebe",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/methods/w8a8_static.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/methods/w8a8_static.py",
+      "source_sha256": "dd3dff8c9c7b1fd5d48920417cda55561102aa285e03afce4834783cecb35459",
+      "disposition": "native",
+      "destination_sha256": "190230efb8586211421880ca3467a5a0d6716de7529b2439d279100cc89e401e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/modelslim_config.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/modelslim_config.py",
+      "source_sha256": "524e5a32ca8b5479f7ff03987cdb6cafc88ec851c0cc007675f9299dda83de30",
+      "disposition": "native",
+      "destination_sha256": "c6566ac776272c06b8c36a7daa381aebd78a12ac3e6e3bad5e8d5649bf258d02",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/quant_parser.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/quant_parser.py",
+      "source_sha256": "8f0f433e9a849e9c54091e3be011950a6e88726831f88ec6969157cedbc596fc",
+      "disposition": "native",
+      "destination_sha256": "4ecd32553a5cb78821429beadeac952687eb4507ed860f0cef71ca07f57c3ca3",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/quant_type.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/quant_type.py",
+      "source_sha256": "d1e71baa57e6f5e75da6ff2e2cd7a93d54f06d8f5b27bdc45c0cb975a97ad83f",
+      "disposition": "native",
+      "destination_sha256": "d1e71baa57e6f5e75da6ff2e2cd7a93d54f06d8f5b27bdc45c0cb975a97ad83f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/quantization/utils.py",
+      "destination": "vllm/model_executor/layers/quantization/ascend/utils.py",
+      "source_sha256": "04235df42815fd19c3d42e543e38481d271c216e094a3f160a2270b812229eea",
+      "disposition": "native",
+      "destination_sha256": "f8fccb810708ebda73bf155af46effc912c02b90e4c67feff259d2d436e6808d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/sample/__init__.py",
+      "destination": "vllm/v1/sample/ascend/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/sample/penalties.py",
+      "destination": "vllm/v1/sample/ascend/penalties.py",
+      "source_sha256": "5a3f715461607ace2593af5d09d2266ef25054804037f6d90d8326c66d95f0c6",
+      "disposition": "native",
+      "destination_sha256": "a74f6b9a5c065f70f2caba8a61c94e55f0a3a9754dd06b1e807fdf3069497543",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/sample/rejection_diagnostics.py",
+      "destination": "vllm/v1/sample/ascend/rejection_diagnostics.py",
+      "source_sha256": "63785ed8b0ff02354e3e93e13340b23b8977b733decc100d2662010c7fcbdb5b",
+      "disposition": "native",
+      "destination_sha256": "458a308a5da9ff6f0d4b45a96421caef48564f32f3bcfbbf5f79371a9b8bdeaf",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/sample/rejection_sampler.py",
+      "destination": "vllm/v1/sample/ascend/rejection_sampler.py",
+      "source_sha256": "e0ef02e1856ec284901b93581a3242380346931603ab8bac7b820ca76954544c",
+      "disposition": "native",
+      "destination_sha256": "104ef7247476a37601ce8d62303d8015b0a589b538bf95396f700bc73639acbc",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/sample/sampler.py",
+      "destination": "vllm/v1/sample/ascend/sampler.py",
+      "source_sha256": "3cdbf8bf456d9a269ba1cf3382d4848a03b0f62ef7a506d336f37914da77a03e",
+      "disposition": "native",
+      "destination_sha256": "73e3ed7046c21d8b336312811265de1997e5243c91ce7a39ea52ef85332368b2",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/serving_perf.py",
+      "destination": "vllm/utils/serving_perf.py",
+      "source_sha256": "a7c99c6e17203e69de665ef614fcf005591f8b116eb181977e7e5a465d1e8f8e",
+      "disposition": "native",
+      "destination_sha256": "5ebb2d2273325041ec06f0d242a9bfee076b8f8f573e5bb5f0fb072021a6b97a",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/__init__.py",
+      "destination": "vllm/v1/spec_decode/ascend/__init__.py",
+      "source_sha256": "6b93defc576338f93b67f0fd879fb00627aafafd4ff665235fe4effcd8b5f9c8",
+      "disposition": "native",
+      "destination_sha256": "63a5b5c2e01eb9b1bf1c70c461eb2fd2d8d4614f5478dd216eee6260bbc44f1d",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/draft_proposer.py",
+      "destination": "vllm/v1/spec_decode/ascend/draft_proposer.py",
+      "source_sha256": "b9fa47ba43cc38d237c3e760253544adf6d58c040ff753db60fe5a8108ba3bcb",
+      "disposition": "native",
+      "destination_sha256": "9f038b84cada8dbbec319134b8fd566c9a32b81cfbc8d4b4168051e4577da918",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/eagle_proposer.py",
+      "destination": "vllm/v1/spec_decode/ascend/eagle_proposer.py",
+      "source_sha256": "94272ea655ff82a7be1741d8f8dc9db3ffbc32a5bce1d69b8130b2c86265496c",
+      "disposition": "native",
+      "destination_sha256": "03af038a8760163bded8b2bdcb287eb0ba3d3f2d9b50221d2631461b422736fb",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/medusa_proposer.py",
+      "destination": "vllm/v1/spec_decode/ascend/medusa_proposer.py",
+      "source_sha256": "1aef5e3729311a538ed033b5c6e8a70b9cd7f0ed3887c439e97de387869d15d5",
+      "disposition": "native",
+      "destination_sha256": "fda795afeb1ffe4cfb6d9709e857abc59cfb924bfdd29d77335078b12c4b2e22",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/mtp_draft_diagnostics.py",
+      "destination": "vllm/v1/spec_decode/ascend/mtp_draft_diagnostics.py",
+      "source_sha256": "a6dfd72c9b56d60315fa511e66272525168051cce776d39fd295a4cbe6ebe63a",
+      "disposition": "native",
+      "destination_sha256": "54fe3763b9fcb134d044afc965c853be7343d8e6b07eab3142c474b28d6a35bd",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/ngram_proposer.py",
+      "destination": "vllm/v1/spec_decode/ascend/ngram_proposer.py",
+      "source_sha256": "b62e0cc40678a115cce44a2650297550cbc0abf423df3ef660c3a8942fb6216a",
+      "disposition": "native",
+      "destination_sha256": "1345619838f7fab0c098524356f327dbcc70b9c89663bf352123d2d5b49e7bed",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/spec_decode/suffix_proposer.py",
+      "destination": "vllm/v1/spec_decode/ascend/suffix_proposer.py",
+      "source_sha256": "3b3cd502903b9110516f1808d0f77ce31ee338bf1547ca4b2fd28328723e117c",
+      "disposition": "native",
+      "destination_sha256": "3b3cd502903b9110516f1808d0f77ce31ee338bf1547ca4b2fd28328723e117c",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/utils.py",
+      "destination": "vllm/utils/ascend.py",
+      "source_sha256": "d4d1ff3e13a4d13741c93ed02a373701226bde6d632b5e34bcd121563012cc83",
+      "disposition": "native",
+      "destination_sha256": "8c0da70ff2d7fe43beeea0df5ea4b58de1830a198d3b16121e8863c39321c1c7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/__init__.py",
+      "destination": "vllm/v1/worker/npu/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/block_table.py",
+      "destination": "vllm/v1/worker/npu_block_table.py",
+      "source_sha256": "604249a60fdb1510ea21435d0a634ecfd24dac641d711c0ebb0feb912c3c4400",
+      "disposition": "native",
+      "destination_sha256": "94c540aa16da73703054af4184082fc62e4d90f9869c8d547eda9cd738b6564f",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/dsa_shared_pool.py",
+      "destination": "vllm/v1/worker/dsa_shared_pool.py",
+      "source_sha256": "8bd8d52c6ca3013dbe4010310cd7b2c15793b5f41524d9a2a36708014b38a389",
+      "disposition": "native",
+      "destination_sha256": "27a87140ee1a286b08c8f0cb8612e3bc7df7c46b6d6a03b1a3eb81725eb7a137",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/model_runner_v1.py",
+      "destination": "vllm/v1/worker/npu_model_runner.py",
+      "source_sha256": "cb128975cb9954f20b73861e61436caf5cb23447393f088c30568936966babfc",
+      "disposition": "native",
+      "destination_sha256": "ac2acf1bd05bbbb467972c844f7873b64ccc4f0f6b537bc84b9c896499acf74e",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/npu_input_batch.py",
+      "destination": "vllm/v1/worker/npu_input_batch.py",
+      "source_sha256": "124a4a08d926b3ccf98d137f80b459c6170853bc33d43c6aad97f699a0725449",
+      "disposition": "native",
+      "destination_sha256": "d526b8e80fe95af206aebcd5799d4961cb3039e39d2b53d7f53b41222e6293d6",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/pcp_utils.py",
+      "destination": "vllm/v1/worker/npu_pcp_utils.py",
+      "source_sha256": "828e5525ffdb6519cf860194124a03b74cacb8dacf73eb63cc5c2ed824e6a92a",
+      "disposition": "native",
+      "destination_sha256": "3177dfbcb347fd102f82abbce3d7a29cb2acd59187da02a5aa0c09b76cec9354",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/serving_perf.py",
+      "destination": "vllm/v1/worker/npu_serving_perf.py",
+      "source_sha256": "402cc7ef3988523492e02a9d961d196b67da31cb130e70c1f652d50e3f8a28b9",
+      "disposition": "native",
+      "destination_sha256": "21e4eb427a10aed7330f9094a7994082afd366c7f10e74c5c50d57b6503b1802",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/README.md",
+      "destination": "vllm/v1/worker/npu/v2/README.md",
+      "source_sha256": "ca404972a33c34506d27aa4e382aa0931a5b2bc5ffe05df0e3f1c4b28b48f9f4",
+      "disposition": "native",
+      "destination_sha256": "ca404972a33c34506d27aa4e382aa0931a5b2bc5ffe05df0e3f1c4b28b48f9f4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/__init__.py",
+      "destination": "vllm/v1/worker/npu/v2/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/aclgraph_utils.py",
+      "destination": "vllm/v1/worker/npu/v2/aclgraph_utils.py",
+      "source_sha256": "9ba01834693317db87d5f047a3a72a99111011e3f981e70cb78d27517ec34c10",
+      "disposition": "native",
+      "destination_sha256": "b45b75f4dfbf307ba1cf28e0e42bd95a247ac335f013766a5a9d1d5bbe9624b0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/attn_utils.py",
+      "destination": "vllm/v1/worker/npu/v2/attn_utils.py",
+      "source_sha256": "e3962586d0393fc5864efe6a754e288c948f51dc9e784a0b643273fd0771356d",
+      "disposition": "native",
+      "destination_sha256": "518fd920d465624e5858cc0e32c1b5465efbe57e3431ca1a38f5dc8150e9b3ba",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/block_table.py",
+      "destination": "vllm/v1/worker/npu/v2/block_table.py",
+      "source_sha256": "16c95d6e2fc0e700e1708bc5d0e244455e10aa0bfcffd2c06788f168c5bc76ec",
+      "disposition": "native",
+      "destination_sha256": "8f48423893b912c22853b4edcacd6639c43055daaf6f852782a735ad1491de02",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/input_batch.py",
+      "destination": "vllm/v1/worker/npu/v2/input_batch.py",
+      "source_sha256": "55c6628997f98ad001e408055d997307eb752e5c9cd13a17fcedc7c1dc6efaef",
+      "disposition": "native",
+      "destination_sha256": "7cb1e3f5e07ad1fb9a7c8005f18de4c84c11e9bdcf0d61fac53387fa3ede1fa0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/model_runner.py",
+      "destination": "vllm/v1/worker/npu/v2/model_runner.py",
+      "source_sha256": "728371c4e36aa2b6fe43c14138ab97a004013b0f2d445854de0c0a7e0c1a150b",
+      "disposition": "native",
+      "destination_sha256": "d429c1293843f096e74a26da1000e9724cd91000e184ecca4d1665d051c08d15",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/model_states/__init__.py",
+      "destination": "vllm/v1/worker/npu/v2/model_states/__init__.py",
+      "source_sha256": "7f2f018e637d60394b885c01d83f8fdd6b46ef18a7b5dd70184a49a6d14b4197",
+      "disposition": "native",
+      "destination_sha256": "6c9272a31de95259aed6796620bec8873781bfc9917bca1d9d5721792f6ea0f5",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/model_states/default.py",
+      "destination": "vllm/v1/worker/npu/v2/model_states/default.py",
+      "source_sha256": "50387e2a847a26bd1b5e8dedfbd4a9f060a4a70d1fb771f70e97acc0d380b0a8",
+      "disposition": "native",
+      "destination_sha256": "62a4e972190fc3f60225b8170f8e723db3edaea1b55dd44a1b750f4616e70283",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/sample/__init__.py",
+      "destination": "vllm/v1/worker/npu/v2/sample/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/sample/gumbel.py",
+      "destination": "vllm/v1/worker/npu/v2/sample/gumbel.py",
+      "source_sha256": "d8da5e5208457264386d67d766684b9883dd8d60fb6eab0a290fdd50ee2d9d98",
+      "disposition": "native",
+      "destination_sha256": "5c331648204e24d7467fd645fe95510355637d770a67ffdf11fc6f21068a7db8",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/sample/logprob.py",
+      "destination": "vllm/v1/worker/npu/v2/sample/logprob.py",
+      "source_sha256": "add664110f236ecc90c7ce77df3a55bbdf27243bae1950f17a46168cae0b6a65",
+      "disposition": "native",
+      "destination_sha256": "72740c3d07179de81f05d6df0b410d0ab2597d4b0d102ea2819fdef8de645918",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/sample/penalties.py",
+      "destination": "vllm/v1/worker/npu/v2/sample/penalties.py",
+      "source_sha256": "8d351d10d90705a6aeb4916b814eb13986bf5e972e61e23eb700c4818b3fa164",
+      "disposition": "native",
+      "destination_sha256": "785ed7e2aa33f338eaa0960c356eb58bb81f2ebb014153c59c9d3c8df18e4403",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/sample/sampler.py",
+      "destination": "vllm/v1/worker/npu/v2/sample/sampler.py",
+      "source_sha256": "99a3bf0c464d7370684071c712d41780948398f308df792eb70a481057ef9eef",
+      "disposition": "native",
+      "destination_sha256": "f762543b0fcb18874ab694dad0aaef70164dba5b27a4d209db7969a15f1c54e7",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/spec_decode/__init__.py",
+      "destination": "vllm/v1/worker/npu/v2/spec_decode/__init__.py",
+      "source_sha256": "6be20d712f07e93d9323fb0f7055702b6259df6ba8c137537a3a11de39d57e7c",
+      "disposition": "native",
+      "destination_sha256": "85691e7e81a5c9f186a15a172abec04400138e53f0ca749aa31470026c22ecc4",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/spec_decode/eagle.py",
+      "destination": "vllm/v1/worker/npu/v2/spec_decode/eagle.py",
+      "source_sha256": "71ee20be0aa569ff720c4d5c26dd656186e586128a72b0a31e91566460982190",
+      "disposition": "native",
+      "destination_sha256": "4f73d9fa95ed85b56626dc076d0437416a642dde8967707740c02afbc94a3c17",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/states.py",
+      "destination": "vllm/v1/worker/npu/v2/states.py",
+      "source_sha256": "7a6035cf6bdcb442cc6300e57e6d624df2a63378c44e2d1ad584640abfdadb31",
+      "disposition": "native",
+      "destination_sha256": "69e364cd337c2b1fb956c94e18cae9ccbbd3ae8831d1224eb83738f3157c9eee",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/v2/utils.py",
+      "destination": "vllm/v1/worker/npu/v2/utils.py",
+      "source_sha256": "5987b3ac04e29af31f9c006a5e2d0a001a7a837e9f946cef87086d0f723309c2",
+      "disposition": "native",
+      "final_disposition": "removed_cuda_wrapper",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/runner_state.py",
+        "vllm/v1/worker/npu/v2/common"
+      ]
+    },
+    {
+      "source": "ascend/vllm_ascend/worker/worker.py",
+      "destination": "vllm/v1/worker/npu_worker.py",
+      "source_sha256": "661a4b00ae00b34668e31126c7b21675af5914386226f421959226edd818d146",
+      "disposition": "native",
+      "destination_sha256": "dd36c3d50870099c0eddee65dfc016462622af14a0994667f83a87effd0bf5ba",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/xlite/__init__.py",
+      "destination": "vllm/compilation/xlite/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "native",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/xlite/xlite.py",
+      "destination": "vllm/compilation/xlite/xlite.py",
+      "source_sha256": "2fcba1f59eca2cc085d553575300698abdbfc527f303a5c358217f1118478901",
+      "disposition": "native",
+      "destination_sha256": "ca5524c6971698b8e30eafb97a10e90f020399cabc5b2ecc63e1c52db0b217d0",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/xlite/xlite_model_runner.py",
+      "destination": "vllm/compilation/xlite/xlite_model_runner.py",
+      "source_sha256": "1e74e17a4e7df200065404000460c8fdd9db2d9203c835d2dbc610828fd44f68",
+      "disposition": "native",
+      "destination_sha256": "31e3e28fe77bc13892c9756463b2254cf9a7a7c2cbf34bb41b6dce7ef77d2242",
+      "final_disposition": "native"
+    },
+    {
+      "source": "ascend/vllm_ascend/xlite/xlite_worker.py",
+      "destination": "vllm/compilation/xlite/xlite_worker.py",
+      "source_sha256": "38d74ccafcb7e1087a38e3b89dae10ecf860033234034190973f8a36b7ee7fb0",
+      "disposition": "native",
+      "destination_sha256": "727b4ddea77ebed7b7451ebbb50e9dc843ce11f13bc877ff5134d8ecf08ca2e6",
+      "final_disposition": "native"
+    }
+  ],
+  "patches": [
+    {
+      "source": "ascend/vllm_ascend/__init__.py",
+      "destination": "ascend/legacy_plugin/__init__.py",
+      "source_sha256": "1d341a04acaac56df75bc1c63448a3ec676340dd4cfa2ef7c5f8c017a578f187",
+      "disposition": "archived",
+      "destination_sha256": "1d341a04acaac56df75bc1c63448a3ec676340dd4cfa2ef7c5f8c017a578f187",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/__init__.py",
+      "destination": "ascend/legacy_patches/__init__.py",
+      "source_sha256": "44e3ea5dd79ccc5604bbea06bbe9cc65dafd69923f45b36e2dc6e8ece37bf252",
+      "disposition": "archived",
+      "destination_sha256": "44e3ea5dd79ccc5604bbea06bbe9cc65dafd69923f45b36e2dc6e8ece37bf252",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/__init__.py",
+      "destination": "ascend/legacy_patches/platform/__init__.py",
+      "source_sha256": "1bd951646e73c52868951947394e592a432f504ef5d7219c5411f29bc161b795",
+      "disposition": "archived",
+      "destination_sha256": "1bd951646e73c52868951947394e592a432f504ef5d7219c5411f29bc161b795",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_balance_schedule.py",
+      "destination": "ascend/legacy_patches/platform/patch_balance_schedule.py",
+      "source_sha256": "3bfacbc23b4d5de721ddfde5e0041238a7ccbd6d77d57843e7adb0711fb4b53f",
+      "disposition": "archived",
+      "destination_sha256": "3bfacbc23b4d5de721ddfde5e0041238a7ccbd6d77d57843e7adb0711fb4b53f",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/core/sched/balance_scheduler.py",
+        "vllm/v1/engine/balance_core.py",
+        "vllm/config/scheduler.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_distributed.py",
+      "destination": "ascend/legacy_patches/platform/patch_distributed.py",
+      "source_sha256": "a37863ccf18652313a7defacc066202b2df6bcf3b1a2009f75dde2efc80e7815",
+      "disposition": "archived",
+      "destination_sha256": "a37863ccf18652313a7defacc066202b2df6bcf3b1a2009f75dde2efc80e7815",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/distributed/ascend/collectives.py"
+      ],
+      "note": "310P 特化通过显式调用，不改 torch.distributed；910B3 直接调用 torch。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_fusion_matcher_compat_ops.py",
+      "destination": "ascend/legacy_patches/platform/patch_fusion_matcher_compat_ops.py",
+      "source_sha256": "719bda82fb5997ddca9ce2369275eaefac79649994d01a74eeb404223407f66f",
+      "disposition": "archived",
+      "destination_sha256": "719bda82fb5997ddca9ce2369275eaefac79649994d01a74eeb404223407f66f",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/compilation/passes/fusion/matcher_utils.py"
+      ],
+      "note": "NPU 不构造 GPU matcher，移除伪造的 torch.ops 属性；真实算子由原生模块注册。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_glm_tool_call_parser.py",
+      "destination": "ascend/legacy_patches/platform/patch_glm_tool_call_parser.py",
+      "source_sha256": "23b4fb22160b246261741826c094bb499ed32229c4ec6b90c7333007f974b3ae",
+      "disposition": "archived",
+      "destination_sha256": "23b4fb22160b246261741826c094bb499ed32229c4ec6b90c7333007f974b3ae",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/tool_parsers/glm4_moe_tool_parser.py",
+        "vllm/entrypoints/openai/chat_completion/serving.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_kv_cache_interface.py",
+      "destination": "ascend/legacy_patches/platform/patch_kv_cache_interface.py",
+      "source_sha256": "66c32ab0bf893e368c3763c3157d2379527c45564087e9a332faf061375b08e2",
+      "disposition": "archived",
+      "destination_sha256": "66c32ab0bf893e368c3763c3157d2379527c45564087e9a332faf061375b08e2",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/kv_cache_interface.py",
+        "vllm/v1/attention/backends/mla/indexer.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_kv_connector_worker_metadata.py",
+      "destination": "ascend/legacy_patches/platform/patch_kv_connector_worker_metadata.py",
+      "source_sha256": "e4e9d96a648490fc448ada9d7380230cdbe7c48a6addb96956a36352bfce9d82",
+      "disposition": "archived",
+      "destination_sha256": "e4e9d96a648490fc448ada9d7380230cdbe7c48a6addb96956a36352bfce9d82",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/core/sched/scheduler.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_mamba_config.py",
+      "destination": "ascend/legacy_patches/platform/patch_mamba_config.py",
+      "source_sha256": "6c704a9007f88424b851c6426694b060589e4fc642a4e8428979fa706a978127",
+      "disposition": "archived",
+      "destination_sha256": "6c704a9007f88424b851c6426694b060589e4fc642a4e8428979fa706a978127",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_mamba_config_310.py",
+      "destination": "ascend/legacy_patches/platform/patch_mamba_config_310.py",
+      "source_sha256": "91a9c7d2d50567de8c5089e62b888b82cda66c00a6f2bd50ca5b3c0ceac10ee2",
+      "disposition": "archived",
+      "destination_sha256": "91a9c7d2d50567de8c5089e62b888b82cda66c00a6f2bd50ca5b3c0ceac10ee2",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_minimax_m2_config.py",
+      "destination": "ascend/legacy_patches/platform/patch_minimax_m2_config.py",
+      "source_sha256": "eccf14a4d6d8ca468389ff5b0572d7fa31bf8566c1a4ad46ba7a8a2100fc1f89",
+      "disposition": "archived",
+      "destination_sha256": "eccf14a4d6d8ca468389ff5b0572d7fa31bf8566c1a4ad46ba7a8a2100fc1f89",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_minimax_usage_accounting.py",
+      "destination": "ascend/legacy_patches/platform/patch_minimax_usage_accounting.py",
+      "source_sha256": "4ae1bca8d1be260b2aff3e1c872698708fe4a306a43358252a69823733c1a6f5",
+      "disposition": "archived",
+      "destination_sha256": "4ae1bca8d1be260b2aff3e1c872698708fe4a306a43358252a69823733c1a6f5",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/entrypoints/openai/chat_completion/serving.py",
+        "vllm/entrypoints/openai/engine/protocol.py"
+      ],
+      "note": "公共 usage/full/stream 行为合入服务层；非目标 MiniMax reasoning parser 不激活，归 P4。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_multiproc_executor.py",
+      "destination": "ascend/legacy_patches/platform/patch_multiproc_executor.py",
+      "source_sha256": "4d8743869f9d07c6b83d0cf6fba1be074e126e74659dbe6b2a170689c6407230",
+      "disposition": "archived",
+      "destination_sha256": "4d8743869f9d07c6b83d0cf6fba1be074e126e74659dbe6b2a170689c6407230",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/executor/multiproc_executor.py",
+        "vllm/v1/executor/ascend_multiproc_executor.py",
+        "vllm/v1/executor/abstract.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_sched_yield.py",
+      "destination": "ascend/legacy_patches/platform/patch_sched_yield.py",
+      "source_sha256": "df13593575d77330707b0be48edd8c12f82a56a9777fbff9467bb48027ca2a5a",
+      "disposition": "archived",
+      "destination_sha256": "df13593575d77330707b0be48edd8c12f82a56a9777fbff9467bb48027ca2a5a",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/distributed/utils.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/platform/patch_torch_accelerator.py",
+      "destination": "ascend/legacy_patches/platform/patch_torch_accelerator.py",
+      "source_sha256": "76ca48d51c8af6552828076797ad20b7eed044a8e53be918bd12719152fdc026",
+      "disposition": "archived",
+      "destination_sha256": "76ca48d51c8af6552828076797ad20b7eed044a8e53be918bd12719152fdc026",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/utils/mem_utils.py",
+        "vllm/v1/worker/npu_worker.py",
+        "vllm/v1/worker/npu_runner_state.py"
+      ],
+      "note": "各使用方显式选 NPU memory API，不改 torch.accelerator。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/__init__.py",
+      "destination": "ascend/legacy_patches/worker/__init__.py",
+      "source_sha256": "8d459208ef34d396d20f3185d0bc03ec5263a71182522c23411979348736f915",
+      "disposition": "archived",
+      "destination_sha256": "8d459208ef34d396d20f3185d0bc03ec5263a71182522c23411979348736f915",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_bert.py",
+      "destination": "ascend/legacy_patches/worker/patch_bert.py",
+      "source_sha256": "1459a37c020be3789610eada720dd5b2a91ea2f2c928da847f7073ca7255d9ee",
+      "disposition": "archived",
+      "destination_sha256": "1459a37c020be3789610eada720dd5b2a91ea2f2c928da847f7073ca7255d9ee",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_cudagraph.py",
+      "destination": "ascend/legacy_patches/worker/patch_cudagraph.py",
+      "source_sha256": "c8140662d0411f5c9b292420efe8a3d072b6d0c20c6a5c6500a170d9eb097ad7",
+      "disposition": "archived",
+      "destination_sha256": "c8140662d0411f5c9b292420efe8a3d072b6d0c20c6a5c6500a170d9eb097ad7",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/cudagraph_dispatcher.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_deepencoder2.py",
+      "destination": "ascend/legacy_patches/worker/patch_deepencoder2.py",
+      "source_sha256": "eff9f34f57db723ee83a7260ac29453c98bc9742622366de94a6903f406978c3",
+      "disposition": "archived",
+      "destination_sha256": "eff9f34f57db723ee83a7260ac29453c98bc9742622366de94a6903f406978c3",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_deepseek_mtp.py",
+      "destination": "ascend/legacy_patches/worker/patch_deepseek_mtp.py",
+      "source_sha256": "c6eec85b4a9966830f2fc9255a7687eb2398aeab4053e82e0ce0f3a355d83164",
+      "disposition": "archived",
+      "destination_sha256": "c6eec85b4a9966830f2fc9255a7687eb2398aeab4053e82e0ce0f3a355d83164",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/model_executor/models/deepseek_mtp.py",
+        "vllm/model_executor/models/deepseek_v2.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_distributed.py",
+      "destination": "ascend/legacy_patches/worker/patch_distributed.py",
+      "source_sha256": "e4ed6ab08ea45e63fdb80c3813276e072794e3e2971eb3fbc36d32ff213ad380",
+      "disposition": "archived",
+      "destination_sha256": "e4ed6ab08ea45e63fdb80c3813276e072794e3e2971eb3fbc36d32ff213ad380",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/distributed/parallel_state.py",
+        "vllm/distributed/device_communicators/npu_communicator.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_draft_quarot.py",
+      "destination": "ascend/legacy_patches/worker/patch_draft_quarot.py",
+      "source_sha256": "7715f0a48483635e2ee5f206173e746c6b4dae58528d565ce9d67afec5278785",
+      "disposition": "archived",
+      "destination_sha256": "7715f0a48483635e2ee5f206173e746c6b4dae58528d565ce9d67afec5278785",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/model_executor/model_loader/ascend/quarot.py",
+        "vllm/model_executor/models/llama_eagle3.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_gdn_attn.py",
+      "destination": "ascend/legacy_patches/worker/patch_gdn_attn.py",
+      "source_sha256": "51697d71ef092ef0e150b00cede972155fc2077dc5f29c8962d848d8664a4e35",
+      "disposition": "archived",
+      "destination_sha256": "51697d71ef092ef0e150b00cede972155fc2077dc5f29c8962d848d8664a4e35",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_huanyuan_vl.py",
+      "destination": "ascend/legacy_patches/worker/patch_huanyuan_vl.py",
+      "source_sha256": "99885b28572f578854a7a8dac8fe8e7c685858f8ebf0725509d70a1b0c526f25",
+      "disposition": "archived",
+      "destination_sha256": "99885b28572f578854a7a8dac8fe8e7c685858f8ebf0725509d70a1b0c526f25",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_kimi_k25.py",
+      "destination": "ascend/legacy_patches/worker/patch_kimi_k25.py",
+      "source_sha256": "1ca1beaa7f3478874e7ef935a238d8b3e7c49095b0f382fdcc0f728d7dde7034",
+      "disposition": "archived",
+      "destination_sha256": "1ca1beaa7f3478874e7ef935a238d8b3e7c49095b0f382fdcc0f728d7dde7034",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_logprobs.py",
+      "destination": "ascend/legacy_patches/worker/patch_logprobs.py",
+      "source_sha256": "4dc344bcf92eb6369e1886572b54113d38bb6ebca2fa089f4d396280c177384b",
+      "disposition": "archived",
+      "destination_sha256": "4dc344bcf92eb6369e1886572b54113d38bb6ebca2fa089f4d396280c177384b",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/sample/ops/logprobs.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_mamba_utils.py",
+      "destination": "ascend/legacy_patches/worker/patch_mamba_utils.py",
+      "source_sha256": "4cb3e8cbebfe6ba2b5169a70eb8f6a47a625e81e6f37ac9be0a79b0cbcdfdff9",
+      "disposition": "archived",
+      "destination_sha256": "4cb3e8cbebfe6ba2b5169a70eb8f6a47a625e81e6f37ac9be0a79b0cbcdfdff9",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_minimax_m2.py",
+      "destination": "ascend/legacy_patches/worker/patch_minimax_m2.py",
+      "source_sha256": "e194f73b1af5a64bcca3a5b6d894f714a7d244a54560d3a81c3abcf244719ee8",
+      "disposition": "archived",
+      "destination_sha256": "e194f73b1af5a64bcca3a5b6d894f714a7d244a54560d3a81c3abcf244719ee8",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_minimax_m2_linear_attn.py",
+      "destination": "ascend/legacy_patches/worker/patch_minimax_m2_linear_attn.py",
+      "source_sha256": "7c3029f4eb9a10e1b85a8be845235acd5feca51d6b3902c87568fe0d94e9bdfb",
+      "disposition": "archived",
+      "destination_sha256": "7c3029f4eb9a10e1b85a8be845235acd5feca51d6b3902c87568fe0d94e9bdfb",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_module.py",
+      "destination": "ascend/legacy_patches/worker/patch_module.py",
+      "source_sha256": "b0507f1f1f114aee6db3e3b7248bab727573f379af8f13a9155ff7b6d293e64f",
+      "disposition": "archived",
+      "destination_sha256": "b0507f1f1f114aee6db3e3b7248bab727573f379af8f13a9155ff7b6d293e64f",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/attention/backends/gdn_attn.py"
+      ],
+      "note": "GDN 布尔排序直接转换 dtype，删除 torch wrapper。GDN 模型入口不增加到认证范围。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_multimodal_merge.py",
+      "destination": "ascend/legacy_patches/worker/patch_multimodal_merge.py",
+      "source_sha256": "aeaac8796115f2aff1d7b2633227b28f04d00828a6b00839395beef29c4cf244",
+      "disposition": "archived",
+      "destination_sha256": "aeaac8796115f2aff1d7b2633227b28f04d00828a6b00839395beef29c4cf244",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_npugraph_ex_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_npugraph_ex_triton.py",
+      "source_sha256": "f78dedaac448635f9322b07617e83ad177d243616fe222e6b8d885e569dc0905",
+      "disposition": "archived",
+      "destination_sha256": "f78dedaac448635f9322b07617e83ad177d243616fe222e6b8d885e569dc0905",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/compilation/ascend/torchair_backend.py",
+        "vllm/compilation/ascend/compiler_interface.py"
+      ],
+      "note": "单个 compiler 的私有函数依赖绑定，不改已安装 TorchAir 模块/类；内网核验私有 API、字典元数据及图执行。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_5.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_5.py",
+      "source_sha256": "9e01a44bda3ef878d311dcee53f2a25eaace2936909ce079c8d816c15f000818",
+      "disposition": "archived",
+      "destination_sha256": "9e01a44bda3ef878d311dcee53f2a25eaace2936909ce079c8d816c15f000818",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_next.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_next.py",
+      "source_sha256": "bc4ddfbf5813f62d365f8ce96a3bea3ec71d54b77f89ff38bcb55aa000e6b9c0",
+      "disposition": "archived",
+      "destination_sha256": "bc4ddfbf5813f62d365f8ce96a3bea3ec71d54b77f89ff38bcb55aa000e6b9c0",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_qwen3_next_mtp.py",
+      "destination": "ascend/legacy_patches/worker/patch_qwen3_next_mtp.py",
+      "source_sha256": "f2fe2a48e957a3ebdb02e146dd4ee35c5a5364729b645bb10bf3b7134560ef44",
+      "disposition": "archived",
+      "destination_sha256": "f2fe2a48e957a3ebdb02e146dd4ee35c5a5364729b645bb10bf3b7134560ef44",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_rejection_sampler.py",
+      "destination": "ascend/legacy_patches/worker/patch_rejection_sampler.py",
+      "source_sha256": "f037f710e0b7f80e73b94d9b93ce87aacddf58af2b3e6f5df53426717d95e7a3",
+      "disposition": "archived",
+      "destination_sha256": "f037f710e0b7f80e73b94d9b93ce87aacddf58af2b3e6f5df53426717d95e7a3",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/sample/rejection_sampler.py",
+        "vllm/v1/sample/ascend/rejection_sampler.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_routed_experts_capturer.py",
+      "destination": "ascend/legacy_patches/worker/patch_routed_experts_capturer.py",
+      "source_sha256": "45d76757addcd062a87bb53bcf9463551f13b3a91229b927ccf3488990b5245f",
+      "disposition": "archived",
+      "destination_sha256": "45d76757addcd062a87bb53bcf9463551f13b3a91229b927ccf3488990b5245f",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/model_executor/layers/fused_moe/routed_experts_capturer.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_triton.py",
+      "source_sha256": "917048652725006c5115edf65591f19d0b3e2a87e7bd6112f6d93b9f08ccee3e",
+      "disposition": "archived",
+      "destination_sha256": "917048652725006c5115edf65591f19d0b3e2a87e7bd6112f6d93b9f08ccee3e",
+      "final_disposition": "archived",
+      "patch_disposition": "inactive_non_target",
+      "native_owners": [],
+      "note": "非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_unquantized_gemm.py",
+      "destination": "ascend/legacy_patches/worker/patch_unquantized_gemm.py",
+      "source_sha256": "0317441758008fa74133b2ee7d3e3b2588d632d6522acfb6a8c98ee21554e5bf",
+      "disposition": "archived",
+      "destination_sha256": "0317441758008fa74133b2ee7d3e3b2588d632d6522acfb6a8c98ee21554e5bf",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/model_executor/layers/utils.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/__init__.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "archived",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_block_table.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_block_table.py",
+      "source_sha256": "460373de2cc5c32368e0ef8033c486e0a01a6308b0e208119b5736e00e2e3230",
+      "disposition": "archived",
+      "destination_sha256": "460373de2cc5c32368e0ef8033c486e0a01a6308b0e208119b5736e00e2e3230",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/block_table.py",
+        "vllm/v1/worker/npu/v2/runner_state.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_eagle.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_eagle.py",
+      "source_sha256": "3b6bebb1230fa88040ddb4680d95d1ab824438187bdd147c922c7b1f9a796251",
+      "disposition": "archived",
+      "destination_sha256": "3b6bebb1230fa88040ddb4680d95d1ab824438187bdd147c922c7b1f9a796251",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/common/spec_decode/eagle/speculator.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_input_batch.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_input_batch.py",
+      "source_sha256": "592dd58eae84a1b284b35f27b9f1324b360d4d4e80c10815c0120a296917dad6",
+      "disposition": "archived",
+      "destination_sha256": "592dd58eae84a1b284b35f27b9f1324b360d4d4e80c10815c0120a296917dad6",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/input_batch.py",
+        "vllm/v1/worker/npu/v2/runner_state.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_model_state.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_model_state.py",
+      "source_sha256": "b2859f34a4e1ca09fe2cf4fd4db7953206e5a7e4a0a04850e018772cb3567ba2",
+      "disposition": "archived",
+      "destination_sha256": "b2859f34a4e1ca09fe2cf4fd4db7953206e5a7e4a0a04850e018772cb3567ba2",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/model_states/__init__.py",
+        "vllm/v1/worker/npu/v2/runner_state.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_triton.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_triton.py",
+      "source_sha256": "ecdca7076d45d59cc8c676a112e4f5aa4b5a7294dca29114d92f55bc5a3b56a2",
+      "disposition": "archived",
+      "destination_sha256": "ecdca7076d45d59cc8c676a112e4f5aa4b5a7294dca29114d92f55bc5a3b56a2",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/common/sample/gumbel.py",
+        "vllm/v1/worker/npu/v2/common/sample/logprob.py",
+        "vllm/v1/worker/npu/v2/common/sample/penalties.py",
+        "vllm/v1/worker/npu/v2/common/input_batch.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_v2/patch_uva.py",
+      "destination": "ascend/legacy_patches/worker/patch_v2/patch_uva.py",
+      "source_sha256": "52f95e4ec83a8f81282a1d8a2f5d42437b67cddacf3683af5276b1d1b4e5f6f5",
+      "disposition": "archived",
+      "destination_sha256": "52f95e4ec83a8f81282a1d8a2f5d42437b67cddacf3683af5276b1d1b4e5f6f5",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/v1/worker/npu/v2/common/buffer_utils.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/patch/worker/patch_weight_utils.py",
+      "destination": "ascend/legacy_patches/worker/patch_weight_utils.py",
+      "source_sha256": "615e840c47d072629689cba6e7ce965dbf80065b1cd1ba0ce9408c90eef7796a",
+      "disposition": "archived",
+      "destination_sha256": "615e840c47d072629689cba6e7ce965dbf80065b1cd1ba0ce9408c90eef7796a",
+      "final_disposition": "archived",
+      "patch_disposition": "integrated",
+      "native_owners": [
+        "vllm/model_executor/model_loader/weight_utils.py"
+      ],
+      "note": "行为合入正式定义或显式 NPU 分发，不再执行导入时替换。"
+    },
+    {
+      "source": "ascend/vllm_ascend/platform.py",
+      "destination": "ascend/legacy_plugin/platform.py",
+      "source_sha256": "dd1e0dfecb93ef3d9aeac325edbcf816c157c9bdabe5b3b2babbde5091bf911d",
+      "disposition": "archived",
+      "destination_sha256": "dd1e0dfecb93ef3d9aeac325edbcf816c157c9bdabe5b3b2babbde5091bf911d",
+      "final_disposition": "archived",
+      "patch_disposition": "retired_loader",
+      "native_owners": [
+        "vllm/platforms/npu.py"
+      ],
+      "note": "原插件/patch 聚合加载器退出活动路径；不提供旧 namespace 壳。"
+    }
+  ]
+}

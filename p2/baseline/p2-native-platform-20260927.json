@@ -1,0 +1,62 @@
+{
+  "recorded_at_utc": "2026-09-27T06:53:56.260550+00:00",
+  "phase": "P2",
+  "batch": "native_platform_entry_and_required_components",
+  "p1_acceptance": "not_passed",
+  "p2_status": "first_source_batch_committed_NPU_validation_pending",
+  "p1_baseline_retests_and_known_repairs": "deferred_by_user",
+  "remote_push": false,
+  "native_build_or_install": false,
+  "verification": "../results/native-platform-20260927/verification.json",
+  "repositories": {
+    "vllm": {
+      "p1_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p1_tree": "e3d2102824653c969fcb1e5b6c462a640d1e13af",
+      "p1_branch": "p1",
+      "p2_commit": "3d0c660c25e9c40c232dbeb5f031471d892a2b78",
+      "p2_tree": "44c02a58455f1a5d15dddb5a60f6fd192ce7a590",
+      "p2_branch": "p2",
+      "working_tree_clean": true,
+      "changed_files": [
+        "AGENTS.md",
+        "ascend/AGENTS.md",
+        "ascend/tests/standalone/test_p1_resources.py",
+        "ascend/tests/ut/test_platform.py",
+        "ascend/vllm_ascend/__init__.py",
+        "ascend/vllm_ascend/attention/attention_mask.py",
+        "ascend/vllm_ascend/ops/rotary_embedding.py",
+        "ascend/vllm_ascend/patch/__init__.py",
+        "ascend/vllm_ascend/platform.py",
+        "docs/design/ascend_p2.md",
+        "p1_dev.py",
+        "pyproject.toml",
+        "tests/standalone/test_p1_development.py",
+        "tests/standalone/test_p2_platform.py",
+        "vllm/distributed/parallel_state.py",
+        "vllm/distributed/stateless_coordinator.py",
+        "vllm/model_executor/custom_op.py",
+        "vllm/model_executor/layers/fused_moe/oracle/unquantized.py",
+        "vllm/platforms/__init__.py",
+        "vllm/platforms/interface.py",
+        "vllm/platforms/npu.py",
+        "vllm/plugins/__init__.py"
+      ],
+      "tested_files_match_committed_worktree": true
+    },
+    "LMCache": {
+      "p1_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p1_tree": "ea0a3deda6f0a9a8a37037638098978c0b5676e6",
+      "p1_branch": "p1",
+      "p2_commit": "96c4d6f70d703006fba9a4c0109438f6107b9e10",
+      "p2_tree": "9f4b4575b627a59e211452d82a24bcdf2723fcd8",
+      "p2_branch": "p2",
+      "working_tree_clean": true,
+      "changed_files": [
+        "AGENTS.md",
+        "p1_dev.py",
+        "tests/standalone/test_p1_development.py"
+      ],
+      "tested_files_match_committed_worktree": true
+    }
+  }
+}

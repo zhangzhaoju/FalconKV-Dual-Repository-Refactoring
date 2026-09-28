@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-27",
+  "authorization": "User explicitly requested preserving P1 and starting P2; P1/baseline retests and known-issue repairs are deferred.",
+  "p1_acceptance": "not_passed",
+  "repositories": {
+    "vllm": {
+      "p1_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p1_tree": "e3d2102824653c969fcb1e5b6c462a640d1e13af",
+      "previous_branch": "main",
+      "p1_branch": "p1",
+      "p2_branch": "p2"
+    },
+    "LMCache": {
+      "p1_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p1_tree": "ea0a3deda6f0a9a8a37037638098978c0b5676e6",
+      "previous_branch": "main",
+      "p1_branch": "p1",
+      "p2_branch": "p2"
+    }
+  }
+}

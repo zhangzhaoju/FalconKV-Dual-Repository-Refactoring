@@ -1,0 +1,2 @@
+$ /usr/bin/python3 ascend/tools/check_python_src_init.py
+All Python packages have __init__.py files.

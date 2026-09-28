@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-09-27T09:07:48.557674+00:00",
+  "phase": "P2",
+  "batch": "native_integration_source_complete",
+  "p1_acceptance": "not_passed",
+  "p2_source_status": "complete_host_verified",
+  "p2_runtime_acceptance": "pending_user_intranet_validation",
+  "p1_baseline_retests_and_known_repairs": "deferred_by_user",
+  "remote_push": false,
+  "native_build_or_install": false,
+  "verification": "../results/native-integration-20260927/verification.json",
+  "migration": "native-integration-migration.json",
+  "profile": "../profile.json",
+  "repositories": {
+    "vllm": {
+      "p1_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p1_tree": "e3d2102824653c969fcb1e5b6c462a640d1e13af",
+      "p1_branch": "p1",
+      "main_preserved": true,
+      "p2_commit": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "p2_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "p2_branch": "p2",
+      "working_tree_clean": true,
+      "package_version": "0.18.0+ascend.p2",
+      "tested_runtime_files_match_committed_worktree": true,
+      "post_test_documentation_changes": [],
+      "changed_file_count": 676
+    },
+    "LMCache": {
+      "p1_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p1_tree": "ea0a3deda6f0a9a8a37037638098978c0b5676e6",
+      "p1_branch": "p1",
+      "main_preserved": true,
+      "p2_commit": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "p2_tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "p2_branch": "p2",
+      "working_tree_clean": true,
+      "package_version": "0.4.3+ascend.p1",
+      "tested_runtime_files_match_committed_worktree": true,
+      "post_test_documentation_changes": [
+        {
+          "file": "docs/source/getting_started/ascend_p2.rst",
+          "before_sha256": "507f40ac55aeb01673d778bb1a961dbfc74d8eec53de1f76750788d0985d29cd",
+          "after_sha256": "7d11ef353ea5c928621c0ac237e688423da6ae4cd5edacdde19b6726f294a6bb",
+          "reason": "RST heading underline correction; docutils parse passes"
+        }
+      ],
+      "changed_file_count": 8
+    }
+  },
+  "delivery": "../deliveries/native-integration-20260927/README.md"
+}

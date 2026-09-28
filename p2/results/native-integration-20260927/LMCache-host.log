@@ -1,0 +1,27 @@
+$ /usr/bin/python3 -m pytest --noconftest tests/standalone/test_p1_development.py --junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p2/results/native-integration-20260927/LMCache-host.xml -q
+
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_build_names_are_unique_without_creating_directories PASSED [  4%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_command_failure_preserves_log_and_exit_status PASSED [  9%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_dry_run_does_not_check_environment_or_create_outputs PASSED [ 13%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_editable_enforces_strict_mode PASSED [ 18%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_editable_maps_all_resources_outside_pip_temporary_tree PASSED [ 22%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_editable_only_maps_python_without_environment_probe PASSED [ 27%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_existing_baseline_plugin_or_wrong_version_is_rejected PASSED [ 31%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_external_artifact_symlink_is_rejected PASSED [ 36%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_install_accepts_p2_pair_and_rejects_retained_p1_vllm PASSED [ 40%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_install_path_verification_rejects_source_shadowing PASSED [ 45%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_invalid_job_count_fails_before_native_commands PASSED [ 50%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_material_inventory_ignores_git_control_but_not_extra_payload PASSED [ 54%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_material_snapshot_registers_only_pinned_archive PASSED [ 59%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_metadata_failure_does_not_import_torch_or_run_compilers PASSED [ 63%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_missing_wheel_resource_and_editable_snapshot_are_rejected PASSED [ 68%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_mocked_native_rebuild_uses_fresh_work_and_install_directories PASSED [ 72%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_mutating_install_requires_dedicated_environment_confirmation PASSED [ 77%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_native_failure_does_not_publish_or_reuse_old_payload PASSED [ 81%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_pip_plans_never_fetch_or_resolve_dependencies PASSED [ 86%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_verify_accepts_strict_link_tree_and_rejects_wrong_mode PASSED [ 90%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_wheel_copies_every_native_resource PASSED [ 95%]
+tests/standalone/test_p1_development.py::DevelopmentContracts::test_wheel_identity_and_resources_are_checked_without_loading PASSED [100%]
+
+- generated xml file: /home/zhangzhaoju/Learn/code/falconkv/design/p2/results/native-integration-20260927/LMCache-host.xml -
+============================== 22 passed in 0.50s ==============================
