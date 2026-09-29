@@ -1,0 +1,5 @@
+$ git diff --check p2
+lmcache/v1/storage_backend/__init__.py:43: trailing whitespace.
++NOTE (gingfung): Patching the CreateStorageBackends function 
+lmcache/v1/storage_backend/__init__.py:44: trailing whitespace.
++to replace with AscendP2PBackend when p2p is enabled on Ascend. 

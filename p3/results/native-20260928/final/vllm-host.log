@@ -1,0 +1,5 @@
+$ /tmp/falconkv-p3-host.yIFSSF/bin/python -B -m pytest --noconftest -p no:cacheprovider ascend/tests/standalone tests/standalone ascend/tests/ut/core/test_kv_connector_worker_metadata_patch.py --ignore=ascend/tests/standalone/test_cold_resume_native_metadata.py --ignore=ascend/tests/standalone/test_glm52_topk_ownership.py -k not production_draft_expansion_can_exceed_target_capacity -q --junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p3/results/native-20260928/final/vllm-host.xml
+........................................................................ [ 40%]
+................................................................................................ [ 95%]
+........                                                                 [100%]
+176 passed, 1 deselected, 48 subtests passed in 3.06s

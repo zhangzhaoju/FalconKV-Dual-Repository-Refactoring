@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "phase": "P3",
+  "batch": "P3-01-through-P3-05-native-source",
+  "source_status": "native_source_complete_pending_intranet_acceptance",
+  "build_status": "pending_intranet",
+  "runtime_acceptance": "pending_P2_P3_unified_validation",
+  "authorization": {
+    "source": "user_explicit_start_P3_including_P2_20260928",
+    "preserve_p2": true,
+    "preserve_p1_and_main": true,
+    "p1_retests_and_known_bugfixes": "deferred",
+    "bulk_pruning": "P4"
+  },
+  "model": {
+    "current": "GLM-5.2-w4a8c8",
+    "architecture": "GlmMoeDsaForCausalLM",
+    "native_text_generation_only": true,
+    "future_not_certified": ["GLM-5.3"]
+  },
+  "runtime": {
+    "dsa_unbundle": true,
+    "dsa_two_groups": true,
+    "mtp": true,
+    "c8": false,
+    "enable_sparse_c8": false,
+    "checkpoint_label_is_not_runtime_cache_dtype": true,
+    "preserve": ["offline", "online", "cpu_kv_offload", "cross_instance_cache", "prefill_decode", "checkpoint", "RemoteFill", "recovery"]
+  },
+  "hardware": {"soc": "Ascend910B3", "nodes": 4, "npu_per_node": 8, "physical_roles": "2P2D"},
+  "parallel_profiles": [
+    {"name": "TP8_DP2", "tp": 8, "dp_per_role": 2, "instances_per_node": 1},
+    {"name": "TP4_DP4", "tp": 4, "dp_per_role": 4, "instances_per_node": 2}
+  ],
+  "software_candidate": {
+    "python": "3.11.14",
+    "architecture": "aarch64",
+    "cann": "8.5.1",
+    "torch": "2.9.0+cpu",
+    "torch_npu": "2.9.0.post2",
+    "transformers": "5.2.0",
+    "triton_ascend": "3.2.0.dev20260322"
+  },
+  "paired_packages": {"vllm": "0.18.0+ascend.p3", "lmcache": "0.4.3+ascend.p3"},
+  "paired_commits": "baseline/p3-native-20260928.json",
+  "validation_boundary": {
+    "local_native_build_or_install": false,
+    "intranet_proxy_allowed": true,
+    "external_llm_or_agent_access": false,
+    "existing_services_must_be_preserved": true,
+    "P3_full_native_source_ready": true,
+    "remaining_legacy_package": null,
+    "historical_off_profile_code_pruning": "P4",
+    "ordinary_wheel_and_sdist_acceptance_required": true,
+    "editable_is_development_only": true
+  }
+}

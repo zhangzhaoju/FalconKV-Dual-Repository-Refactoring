@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "phase": "P3",
+  "batch": "P3-01-native-config",
+  "source_status": "initial_batch_complete_host_verified",
+  "P3_full_native_source_complete": false,
+  "P2_runtime_acceptance": "pending_user_intranet_validation",
+  "P3_runtime_acceptance": "pending_remaining_batches_and_user_unified_validation",
+  "preserved_input": "p2-before-p3-20260928.json",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "p3",
+      "commit": "744eb71f1ac6b7ab405b91666a99ae5f01fc9b08",
+      "tree": "4781a442d91dc55ae549148a83ab1c58355b1ab1",
+      "version": "0.18.0+ascend.p3",
+      "parent_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "contains_P2": true,
+      "worktree_clean_at_handoff": true,
+      "runtime_code_changed_in_batch": false
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p3",
+      "commit": "470fd4dc6c566bc7b878ba425bc181a155e945ec",
+      "tree": "9992cd692b494d070a2863d593233d9d7c0ceefd",
+      "version": "0.4.3+ascend.p3",
+      "parent_P2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "contains_P2": true,
+      "worktree_clean_at_handoff": true,
+      "runtime_scope": "canonical_config_schema_and_pre_validation_normalization_only"
+    }
+  },
+  "checks": {
+    "report": "../results/config-20260928/final/verification.json",
+    "host_tests_passed": 210,
+    "vllm_host_tests": 167,
+    "lmcache_host_tests": 43,
+    "configuration_fields_type_default_converter_equal_to_P2": 23,
+    "retained_P2_refs_and_trees_unchanged": true,
+    "retained_P1_and_main_refs_unchanged": true,
+    "python311_syntax": "passed",
+    "selected_ruff_rules": "passed",
+    "sphinx_new_page": "passed_warning_free",
+    "sphinx_full_site": "blocked_missing_existing_sphinxawesome_theme_dependency"
+  },
+  "remaining_batches": ["P3-02", "P3-03", "P3-04", "P3-05"],
+  "remaining_legacy_namespace": "lmcache_ascend",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false,
+  "P4_pruning_started": false
+}

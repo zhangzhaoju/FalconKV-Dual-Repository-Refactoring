@@ -1,0 +1,198 @@
+{
+  "created_utc": "2026-09-28T11:58:14.720967+00:00",
+  "phase": "P3",
+  "batch": "P3-01-native-config",
+  "scope": "source_and_host_not_native_build_ABI_or_NPU_acceptance",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "repositories": {
+    "vllm": {
+      "p1": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "HEAD": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "branch": "p3",
+      "p2_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "head_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "worktree_clean": false,
+      "contains_P2": true,
+      "changed_file_sha256": {
+        "AGENTS.md": "21445826e84607940904b82c863e82ca134e67d37ef1146ff9c858ac1a593a80",
+        "docs/design/ascend_p2.md": "cea1f43be5cc6e010125b53e9b6610f682fcf2892c8063ac57d2ec86b0246e3b",
+        "docs/design/ascend_p3.md": "e7e87b591a7342aa98cbb9b576a7b274e8a46b2e6ecb513450c41021ca581c29",
+        "p1_dev.py": "8d97c15fd9c257f007fbab8fd3c23b4db34959860c9e0526a9a392cee872566f",
+        "pyproject.toml": "5998fac82c05df7b6c7485cba2b2a253231aecbe2a0ae627c38ae1c80d2683af",
+        "tests/standalone/test_p1_development.py": "83cbd9bb0847751f136f5bc9e9980fd9c8a041bd8297d09c20c65855c86c8975",
+        "tests/standalone/test_p2_platform.py": "cadcf8cfb9509fec4bc25314778960047b64e352e33da763483556ae7361c3cf"
+      }
+    },
+    "LMCache": {
+      "p1": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "main": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "HEAD": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "branch": "p3",
+      "p2_tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "head_tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "worktree_clean": false,
+      "contains_P2": true,
+      "changed_file_sha256": {
+        "AGENTS.md": "589c43331bffddb681c36d5834cb7f2230f61c353720da94cb53d8d232d44261",
+        "ascend/lmcache_ascend/__init__.py": "d0e58b9f9e5e3d7946a8d8945394a4802c4babceb57c8a2399468613ff25c2f2",
+        "ascend/tests/v1/test_remote_fill_config.py": "bef31faf20d53889e72974e3ae7db0e7cea4044fcfadffcbd591f68b42ebcd1e",
+        "docs/source/getting_started/ascend_p2.rst": "43480c219ad6e38ba013653cb42e6923273867e8f5c162782576b37669665473",
+        "docs/source/getting_started/ascend_p3.rst": "0a951395d4fb34167e67b654cb33a7651c6a82dcad373110c6e6dd3d15fe9c31",
+        "docs/source/index.rst": "c860aa640824f2ebabf6bdbafb2fb73f30b354cf691f4dbbbcc4ea96f0ccf791",
+        "lmcache/v1/config.py": "1e11643531a0602b97852c9fdce8facf9855b7325db1049f21bbbdb578a12e40",
+        "p1_dev.py": "bc2fdde698363cba194c2eb6e8d2f1ac4d9bbfc35774425b2b7cfe0a0bfd76cd",
+        "pyproject.toml": "a5d5323eecb372c43eefb67b2b47c46271cef10d8caa5308e7cd43e74ca2b4a4",
+        "tests/standalone/test_p1_development.py": "fdb8d5db8ff5104fc62e58e1c24767959582187eabfc3526864c4a7f8717baea",
+        "tests/standalone/test_p3_config.py": "16764d08d84c290f0c0f77eaa4f6128ae12170d1339e0ee99c675ad7000b1e53"
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "vllm-python311-syntax",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "name": "vllm-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "p2"
+      ],
+      "cwd": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm",
+      "log": "vllm-diff-check.log",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "LMCache-python311-syntax",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "name": "LMCache-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "p2"
+      ],
+      "cwd": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache",
+      "log": "LMCache-diff-check.log",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "P2-injected-config-schema-equivalence",
+      "fields": [
+        "enable_shared_cpu_cache",
+        "p2p_delay_pull",
+        "p2p_npu_buffer_size",
+        "p2p_pull_mode",
+        "p2p_pull_pending_ttl",
+        "p2p_use_npu",
+        "pd_alloc_fail_backoff_ttl",
+        "pd_cpu_buffer_size",
+        "pd_delay_pull",
+        "pd_pull_backpressure_reserve_pct",
+        "pd_pull_done_port",
+        "pd_pull_mode",
+        "pd_pull_pending_ttl",
+        "pd_use_cpu_offload",
+        "shared_cpu_cache_name",
+        "shared_cpu_cache_numa_nodes",
+        "shared_cpu_cache_numa_policy",
+        "shared_cpu_cache_passive_writable",
+        "shared_cpu_cache_size_gb",
+        "shared_cpu_cache_strict",
+        "shared_cpu_materialize_index_on_decode_cold",
+        "store_async",
+        "store_async_max_queue_size"
+      ],
+      "field_count": 23,
+      "compared": [
+        "type",
+        "default",
+        "env_converter"
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "name": "vllm-native-source",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/check_npu_native.py"
+      ],
+      "cwd": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm",
+      "log": "vllm-native-source.log",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "vllm-host",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-p",
+        "no:cacheprovider",
+        "ascend/tests/standalone",
+        "tests/standalone",
+        "ascend/tests/ut/core/test_kv_connector_worker_metadata_patch.py",
+        "--ignore=ascend/tests/standalone/test_cold_resume_native_metadata.py",
+        "--ignore=ascend/tests/standalone/test_glm52_topk_ownership.py",
+        "-k",
+        "not production_draft_expansion_can_exceed_target_capacity",
+        "-q",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p3/results/config-20260928/precommit/vllm-host.xml"
+      ],
+      "cwd": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/vllm",
+      "log": "vllm-host.log",
+      "returncode": 0,
+      "passed": true,
+      "passed_count": 167,
+      "expected_count": 167
+    },
+    {
+      "name": "lmcache-host",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-p",
+        "no:cacheprovider",
+        "tests/standalone/test_p1_development.py",
+        "tests/standalone/test_p3_config.py",
+        "ascend/tests/v1/test_remote_fill_config.py",
+        "-q",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p3/results/config-20260928/precommit/lmcache-host.xml"
+      ],
+      "cwd": "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache",
+      "log": "lmcache-host.log",
+      "returncode": 0,
+      "passed": true,
+      "passed_count": 43,
+      "expected_count": 43
+    }
+  ],
+  "errors": [],
+  "not_executed": [
+    "wheel/sdist/editable native builds or installs",
+    "full LMCache runtime import order and remaining native migration",
+    "torch-dependent tests, native extension/TorchAir ABI, kernels and HCCL",
+    "GLM52 DSA/MTP, CPU KV, 2P2D, RemoteFill/checkpoint/recovery, performance"
+  ],
+  "host_passed_count": 210,
+  "passed": true
+}

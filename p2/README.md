@@ -1,5 +1,7 @@
 # P2：vLLM 原生 Ascend 源码交付
 
+2026-09-28：已从本次完整 P2 配对提交创建 `p3`，`p2` 分支、输入清单及本目录既有结果保持不变。后续见 [P3 执行记录](../p3/README.md)；用户将统一进行 P2/P3 内网验证，不代表本阶段运行验收已通过。
+
 2026-09-27：已按用户要求完成 P2 阶段源码改造、可在本机执行的检查及内网验证交接。两仓工作分支均为 `p2`，原 `p1` 和 `main` 保留不动。**源码工作完成；构建、NPU/ABI、模型正确性和性能验收待用户在内网统一执行。** P1/基线复测及已知问题修复继续后置，P1 出口没有改为通过。
 
 优先阅读 [内网执行指南](intranet-validation.md)。配对提交见 [交付清单](baseline/p2-native-integration-20260927.json)，本机结果见 [验证记录](results/native-integration-20260927/README.md)，可转入内网的增量 Git 包、源码快照与校验值见 [源码交付包](deliveries/native-integration-20260927/README.md)。

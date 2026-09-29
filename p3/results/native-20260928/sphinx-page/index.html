@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>P3 native Ascend integration &#8212; Python  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="p3-native-ascend-integration">
+<h1>P3 native Ascend integration<a class="headerlink" href="#p3-native-ascend-integration" title="Link to this heading">¶</a></h1>
+<p>The P3 source implementation includes the complete retained P2 input
+<code class="docutils literal notranslate"><span class="pre">cfe8a1754db743d41c8bb63f8d02ad7c3051948c</span></code>. Configuration, engine, adapter,
+NPU connector, memory, IPC and transport now have canonical LMCache owners.
+Source delivery is not native-build or inference acceptance.</p>
+<section id="native-ownership">
+<h2>Native ownership<a class="headerlink" href="#native-ownership" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lmcache.v1.config</span></code> defines all 23 former plugin fields once.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lmcache.v1.cache_engine.LMCacheEngine</span></code> and
+<code class="docutils literal notranslate"><span class="pre">lmcache.integration.vllm.vllm_v1_adapter.LMCacheConnectorV1Impl</span></code>
+incorporate the effective Ascend methods. Explicit <code class="docutils literal notranslate"><span class="pre">_common_*</span></code> delegation
+retains shared checkpoint, key/group, async-store and cleanup behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lmcache.v1.device_connector.DeviceConnectorInterface</span></code> is the neutral
+transfer contract. Native NPU classes implement it directly, not through
+GPU connector inheritance. Existing transfer method and layout-tag names
+remain unchanged for protocol compatibility.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lmcache.c_ops</span></code> owns Ascend kernels and registered host memory. HCCL/HIXL
+extensions and libraries are installed alongside it in <code class="docutils literal notranslate"><span class="pre">lmcache</span></code>.</p></li>
+<li><p>Storage factories, PD/P2P, token hashing, lookup normalization, NUMA discovery,
+RPC naming and <code class="docutils literal notranslate"><span class="pre">NPUIPCWrapper</span></code> no longer require import-time patches.</p></li>
+</ul>
+<p>The original plugin and GPU connector sources are reference-only under
+<code class="docutils literal notranslate"><span class="pre">ascend/legacy-p3</span></code> and excluded from distributions. There is no importable
+<code class="docutils literal notranslate"><span class="pre">lmcache_ascend</span></code> compatibility shell. Importing the native runtime does not
+use <code class="docutils literal notranslate"><span class="pre">transfer_to_npu</span></code> or replace modules in <code class="docutils literal notranslate"><span class="pre">sys.modules</span></code>.</p>
+</section>
+<section id="build-and-development">
+<h2>Build and development<a class="headerlink" href="#build-and-development" title="Link to this heading">¶</a></h2>
+<p>Pair <code class="docutils literal notranslate"><span class="pre">lmcache==0.4.3+ascend.p3</span></code> with <code class="docutils literal notranslate"><span class="pre">vllm==0.18.0+ascend.p3</span></code> from the
+same delivery. The historical helper filename remains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">B</span> <span class="n">p1_dev</span><span class="o">.</span><span class="n">py</span> <span class="n">doctor</span> <span class="o">--</span><span class="n">output</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">new</span><span class="o">-</span><span class="n">doctor</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">B</span> <span class="n">p1_dev</span><span class="o">.</span><span class="n">py</span> <span class="n">editable</span> <span class="o">--</span><span class="n">isolated</span><span class="o">-</span><span class="n">env</span> <span class="o">--</span><span class="n">output</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">new</span><span class="o">-</span><span class="n">editable</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">B</span> <span class="n">p1_dev</span><span class="o">.</span><span class="n">py</span> <span class="n">verify</span> <span class="o">--</span><span class="n">mode</span> <span class="n">editable</span> <span class="o">--</span><span class="n">output</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">new</span><span class="o">-</span><span class="n">paths</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Use a dedicated prepared environment, not the retained P2 service environment.
+The isolation flag does not create an environment or waive conflicting
+distributions. First install compiles native artifacts. Restart processes
+after Python edits; reinstall after new/moved files, native code, dependencies
+or resources change. Preserve the source, strict link tree and retained native
+build directory. Ordinary wheels and independent sdist rebuilds remain
+required acceptance artifacts.</p>
+<p>Run installed checks outside source checkouts with no source PYTHONPATH:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">B</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">LMCache</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">p3_runtime_smoke</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">output</span> <span class="o">/</span><span class="n">new</span><span class="o">/</span><span class="n">report</span>
+</pre></div>
+</div>
+<p>This checks import orders, spawn, native identities and absence of global
+CUDA API/constructor replacement. Optional <code class="docutils literal notranslate"><span class="pre">--npu</span></code> tests a small registered
+host-memory copy on an explicitly selected idle test NPU, not model inference.</p>
+</section>
+<section id="serving-configuration-migration">
+<h2>Serving configuration migration<a class="headerlink" href="#serving-configuration-migration" title="Link to this heading">¶</a></h2>
+<p>The recommended vLLM entry is the built-in <code class="docutils literal notranslate"><span class="pre">LMCacheConnectorV1</span></code>; remove the
+old <code class="docutils literal notranslate"><span class="pre">kv_connector_module_path</span></code> pointing at the retired package. A custom
+loader can instead select <code class="docutils literal notranslate"><span class="pre">LMCacheConnectorV1Dynamic</span></code> from
+<code class="docutils literal notranslate"><span class="pre">lmcache.integration.vllm.lmcache_connector_v1</span></code>. Keep engine IDs, roles,
+transport, TP/DP, DSA/MTP and cache settings unchanged.</p>
+</section>
+<section id="validation-boundary">
+<h2>Validation boundary<a class="headerlink" href="#validation-boundary" title="Link to this heading">¶</a></h2>
+<p>The workspace <code class="docutils literal notranslate"><span class="pre">design/p3/intranet-validation.md</span></code> provides exact paired
+build/install commands and the joint P2/P3 matrix. Preserve CPU KV offload,
+cross-instance cache, destination sealing/first prepared load, checkpoint,
+RemoteFill cancellation/timeouts and paired restart. Old PD/P2P layerwise
+restrictions are unchanged.</p>
+<p>Host tests and normalized method comparisons do not establish ABI, IPC/NPU,
+GLM-5.2 2P2D or performance correctness. P4 broad device/model pruning remains
+separate. The previously unimplemented Ascend multiprocess GPU cache server
+and non-target CacheBlend models are not new supported entry points. Keep
+P2/P3 environments, reports and cache namespaces separate.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

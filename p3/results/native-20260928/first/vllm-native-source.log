@@ -1,0 +1,7 @@
+$ /usr/bin/python3 -B tools/check_npu_native.py
+{
+  "scope": "static_source_not_runtime_or_ABI",
+  "native_python_files": 355,
+  "errors": [],
+  "passed": true
+}

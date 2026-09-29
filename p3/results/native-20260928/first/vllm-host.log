@@ -1,0 +1,50 @@
+$ /usr/bin/python3 -B -m pytest --noconftest -p no:cacheprovider ascend/tests/standalone tests/standalone ascend/tests/ut/core/test_kv_connector_worker_metadata_patch.py --ignore=ascend/tests/standalone/test_cold_resume_native_metadata.py --ignore=ascend/tests/standalone/test_glm52_topk_ownership.py -k not production_draft_expansion_can_exceed_target_capacity -q --junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p3/results/native-20260928/first/vllm-host.xml
+........................................................................ [ 43%]
+.........................F........................................ [ 82%]
+.............................    [100%]
+=================================== FAILURES ===================================
+_____ test_failed_cold_receive_then_ascend_store_completion_does_not_crash _____
+
+    def test_failed_cold_receive_then_ascend_store_completion_does_not_crash():
+        scheduler, request, states, freed = fixture()
+        scheduler.finish_requests({"r"}, states.FINISHED_ERROR)
+        scheduler._update_from_kv_xfer_finished(completion(received={"r"}))
+    
+        # Ascend's actual store completion routine acknowledges a finished request
+        # even when it has no outstanding store job. This is a distinct send fence.
+        ns = {}
+>       load_methods(
+            ROOT.parent / "LMCache/ascend/lmcache_ascend/v1/cache_engine.py",
+            {"get_finished_stores"},
+            ns,
+        )
+
+tests/standalone/test_kv_transfer_lifetime.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/standalone/test_kv_transfer_lifetime.py:18: in load_methods
+    source = ast.parse(path.read_text(encoding="utf-8"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/ascend/lmcache_ascend/v1/cache_engine.py')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/ascend/lmcache_ascend/v1/cache_engine.py'
+
+/usr/lib/python3.12/pathlib.py:1015: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/standalone/test_kv_transfer_lifetime.py::test_failed_cold_receive_then_ascend_store_completion_does_not_crash
+1 failed, 166 passed, 1 deselected, 46 subtests passed in 2.86s

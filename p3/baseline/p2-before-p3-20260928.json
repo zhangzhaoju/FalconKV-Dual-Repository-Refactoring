@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-09-28",
+  "authorization": "user_requested_start_P3_from_P2_and_unified_intranet_validation",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "preserved_branch": "p2",
+      "p2_commit": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "p2_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "p1_and_main_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p3_branch": "p3",
+      "p3_created_from": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "clean_before_branch_creation": true
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "preserved_branch": "p2",
+      "p2_commit": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "p2_tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "p1_and_main_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p3_branch": "p3",
+      "p3_created_from": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "clean_before_branch_creation": true
+    }
+  },
+  "preserve_original_four_repositories": true,
+  "preserve_P2_deliveries_and_results": true,
+  "P2_acceptance": "pending_user_intranet_validation",
+  "P3_acceptance": "not_complete",
+  "native_build_or_install_on_source_workstation": false
+}
