@@ -1,0 +1,8 @@
+{
+  "scope": "static_source_not_build_ABI_or_NPU",
+  "python_files": 311,
+  "method_contracts": 663,
+  "merged_classes": 6,
+  "errors": [],
+  "passed": true
+}

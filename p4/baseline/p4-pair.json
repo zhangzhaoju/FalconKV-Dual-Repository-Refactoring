@@ -29,20 +29,21 @@
       "commit": "0879e419001f424700569936962631ca0360f5af",
       "tree": "2e358fee491756bd630fb2ca3ef65be505c9d57b",
       "version": "0.18.0+ascend.p4",
-      "p3_parent_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "p3_base_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
       "p3_tag_object": "ef6097322e31420a22333f039e47617f7bad363c"
     },
     "LMCache": {
       "path": "p1-repos/LMCache",
       "remote": "git@github.com:zhangzhaoju/LMCache-dual.git",
       "branch": "p4",
-      "commit": "1bedaf89564b3d4b2f0de67187111b03a037a716",
-      "tree": "942c678a75930c4ab007de6d58e964321236168e",
+      "commit": "1fc7439b96d091378b527819dc92902115eee58d",
+      "tree": "5b6236f18d28530656893308b6e65b1e35b22407",
       "version": "0.4.3+ascend.p4",
-      "p3_parent_commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "p3_base_commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "initial_p4_commit": "1bedaf89564b3d4b2f0de67187111b03a037a716",
       "p3_tag_object": "41c9ad7024b74f417b9440b15a39b4506e96b122"
     }
   },
-  "host_verification": "../results/handoff-20261003/verification.json",
+  "host_verification": "../results/lmcache-soc-case-20261003/verification.json",
   "remote_push": "not_performed"
 }
