@@ -3,12 +3,21 @@
 本轮已完成本地 P4 分支、源码裁剪、主机回归和交付材料；状态是**待内网验收的源码候选**。
 未执行 CANN 编译、NPU/模型推理或远端推送，未停止或覆盖已有服务。
 
+本报告下述提交、裁剪统计和测试数保留首次交付快照。
+2026-10-03 后续已修复 LMCache 的 SoC 大小写门槛，当前 LMCache 提交为
+`1fc7439b96d091378b527819dc92902115eee58d`，vLLM 保持 `0879e419001f424700569936962631ca0360f5af`。
+当前精确配对以 [p4-pair.json](baseline/p4-pair.json) 为准；
+修复后的 [主机报告](results/lmcache-soc-case-20261003/verification.json) 8/8 项通过，
+LMCache 增至 145 passed / 38 subtests，vLLM 测试数不变。
+新增 15 项真实 CMake script-mode 回归；CANN 编译、ABI 和功能验收仍待内网完成。
+原因与执行步骤见 [内网指南 §3.1](intranet-validation.md#lmcache-soc-retry)。本次修复未推送远端。
+
 ## 1. 冻结与配对版本
 
 两仓均以 `p3-frozen-20261003` 冻结 P3，然后创建 `p4`；P1/P2/P3/main 分支未前移。
 原四仓、模型权重和历史日志未删除。
 
-| 仓库 | 冻结 P3 | 本次 P4 | 包版本 |
+| 仓库 | 冻结 P3 | 首次 P4 交付 | 包版本 |
 | --- | --- | --- | --- |
 | vllm-dual | `8767fe1121a085e8cefed03eeaa1444b55227521` | `0879e419001f424700569936962631ca0360f5af` | `0.18.0+ascend.p4` |
 | LMCache-dual | `a4e2131e890727edadb6bb61cde369900f72c3fd` | `1bedaf89564b3d4b2f0de67187111b03a037a716` | `0.4.3+ascend.p4` |
@@ -47,7 +56,7 @@ IdentityReasoningParser 以最终提交为准。未删除用户权重、基线�
 
 ## 4. 已执行验证
 
-最终入口为 [handoff-20261003/verification.json](results/handoff-20261003/verification.json)，8/8 项通过。
+首次交付入口为 [handoff-20261003/verification.json](results/handoff-20261003/verification.json)，8/8 项通过。
 其他 `results/host-*` 目录是整改中间记录（包含曾发现并修复问题的失败报告），不能替代该交付报告。
 
 | 检查 | 本机结果与边界 |

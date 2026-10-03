@@ -56,8 +56,9 @@ git -C p1-repos/LMCache rev-parse HEAD
 
 ## 3. 构建与 strict editable 重装
 
-P4 删除 native LoRA 绑定并改变了模块集合，**必须重新编译并重装两仓**。
+从 P3 升级 P4 时，因删除 native LoRA 绑定并改变了模块集合，**必须重新编译并重装两仓**。
 `p1_dev.py` 仍是有效入口，名称未改；它已校验 P4 版本。
+已经完成 vLLM P4 安装、仅遇到本次 LMCache SoC 检查失败的容器，可使用 §3.1 的单仓重试步骤。
 
 ```bash
 export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
@@ -91,6 +92,84 @@ P4_RUN=$(mktemp -d "$P4_ROOT/p1-repos/p4-check/run.XXXXXXXX")
 若 doctor 报材料缺失，使用 `p1_dev.py materials --from-submodule <本机已审核子模块路径>`，
 固定提交分别为 `716fd7baa7fb7f6cac0488bb628fd1dd0e875641`、`9f18d2339bc58a43429f7d5bdaef1628c820eff5`；不得临时取最新版。
 无需手工创建 `_cann_ops_custom`，脚本负责隔离原生构建目录。
+
+<a id="lmcache-soc-retry"></a>
+
+### 3.1 LMCache SoC 大小写错误的修复与重试（2026-10-03）
+
+首次 P4 的 LMCache `1bedaf89` 在 CMake 配置阶段报
+`P4 supports only SOC_VERSION=ascend910b3`，但日志中实际传参为 `-DSOC_VERSION=Ascend910B3`。
+这是 P4 型号校验的大小写缺陷，不是硬件型号不支持：
+`p1_build.py` 使用标准拼写读取 CANN 的 `Ascend910B3.ini`，并把它传入大小写敏感的 CMake 检查。
+仅设置 `export SOC_VERSION=ascend910b3` 无法改变该构建参数。
+
+已在 LMCache `p4` 提交 `1fc7439b96d091378b527819dc92902115eee58d` 修复：
+校验时忽略大小写，下游统一使用 `Ascend910B3`；空值及 910B2/310P 等非目标型号仍阻断。
+vLLM 保持 `0879e419001f424700569936962631ca0360f5af` 不变，包版本仍为 `.p4`，所以必须按 SHA 核对。
+普通 wheel 与 editable 共用此构建路径，二者均需该修复；切换为普通安装不能绕过原缺陷。
+pip root、setuptools_scm/vcs-versioning、manifest 及本次 kineto 警告均不是这个终止点。
+不要通过升级 pip/setuptools/torch 或删除型号门槛处理它。
+
+源码管理人员先将本机 `p1-repos/LMCache` 的新 `p4` 提交发布，并重新上传包含新配对清单的 `design/p4`。
+本次没有自动推送；若已发布过 P4，只需追加推送 LMCache：
+
+```bash
+git -C p1-repos/LMCache push origin p4
+```
+
+以下在**每一个受影响的独立测试容器**执行。不在运行中的 editable 服务下切换代码。
+仅适用于 vLLM 已用上述精确 P4 提交编译并安装成功、LMCache 尚未安装成功的情况；
+否则按 §2～3 完整安装两仓。保留材料、失败日志和已有构建目录，脚本会自动建立新的 native staging。
+
+```bash
+set -euo pipefail
+P4_ROOT=/workspace/zzj
+P4_PY=/usr/local/python3.11.14/bin/python
+cd "$P4_ROOT"
+P4_VLLM_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["vllm"]["commit"])')
+P4_LMC_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["LMCache"]["commit"])')
+test "$P4_LMC_REF" = 1fc7439b96d091378b527819dc92902115eee58d
+test "$(git -C p1-repos/vllm rev-parse HEAD)" = "$P4_VLLM_REF"
+git -C p1-repos/vllm diff --quiet
+git -C p1-repos/vllm diff --cached --quiet
+git -C p1-repos/LMCache diff --quiet
+git -C p1-repos/LMCache diff --cached --quiet
+git -C p1-repos/LMCache fetch origin p4
+git -C p1-repos/LMCache switch --detach "$P4_LMC_REF"
+
+export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
+set +u
+source "$ASCEND_HOME_PATH/set_env.sh"
+set -u
+export SOC_VERSION=ascend910b3
+export VLLM_TARGET_DEVICE=ascend
+export USE_MINDSPORE=0
+export BUILD_WITH_HIP=0
+export VLLM_USE_PRECOMPILED=0
+export COMPILE_CUSTOM_KERNELS=1
+export PYTHONDONTWRITEBYTECODE=1
+export VLLM_PLUGINS=""
+export VLLM_NO_USAGE_STATS=1
+
+mkdir -p "$P4_ROOT/p1-repos/p4-check"
+P4_RUN=$(mktemp -d "$P4_ROOT/p1-repos/p4-check/soc-retry.XXXXXXXX")
+cd /tmp
+"$P4_PY" -B "$P4_ROOT/p1-repos/vllm/p1_dev.py" verify --mode editable --output "$P4_RUN/vllm-installed.json"
+"$P4_PY" -B "$P4_ROOT/design/p1/tools/check_pip_dependencies.py" --output "$P4_RUN/pip-before"
+"$P4_PY" -B "$P4_ROOT/p1-repos/LMCache/p1_dev.py" doctor --output "$P4_RUN/lmcache-doctor.json"
+"$P4_PY" -B "$P4_ROOT/p1-repos/LMCache/p1_dev.py" editable --isolated-env --output "$P4_RUN/lmcache-editable"
+"$P4_PY" -B "$P4_ROOT/p1-repos/LMCache/p1_dev.py" verify --mode editable --output "$P4_RUN/lmcache-installed.json"
+"$P4_PY" -B "$P4_ROOT/design/p1/tools/check_pip_dependencies.py" --output "$P4_RUN/pip-after"
+```
+
+`test`/Git/verify 任何一步失败都应停止核对：常见原因是仍使用旧配对清单、vLLM 未完成 P4 安装、
+存在未提交修改或修复提交尚未发布；不要忽略错误继续安装。安装成功后，在同一 shell
+保留 `P4_RUN`，从 §4 继续配对核对、冷导入及回归，并将所有容器的新报告归档。
+
+源码主机已用 CMake 3.28.3 的 script mode 复现旧检查错误，修复后新增的 15 项回归全部通过。
+两仓 [主机报告](results/lmcache-soc-case-20261003/verification.json) 8/8 项通过，
+LMCache 145 passed / 38 subtests；Sphinx `-E -W --keep-going` 构建通过并核对生成的 HTML。
+这些检查没有调用 CANN 编译器，不能替代内网 CMake 4.3.1 / Python 3.11 的编译、ABI 与 2P2D 验收。
 
 ## 4. 每节点配对与冷导入检查
 
