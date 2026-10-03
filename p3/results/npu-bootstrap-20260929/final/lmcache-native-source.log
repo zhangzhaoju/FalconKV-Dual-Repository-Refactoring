@@ -1,0 +1,9 @@
+$ /tmp/falconkv-p3-host.yIFSSF/bin/python -B tools/check_npu_native.py
+{
+  "scope": "static_source_not_build_ABI_or_NPU",
+  "python_files": 422,
+  "method_contracts": 694,
+  "merged_classes": 9,
+  "errors": [],
+  "passed": true
+}

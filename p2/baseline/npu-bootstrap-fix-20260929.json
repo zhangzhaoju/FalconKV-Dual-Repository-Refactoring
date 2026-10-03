@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "phase": "P2",
+  "batch": "native_npu_bootstrap_circular_import_fix",
+  "supersedes_for_retest": "p2-native-integration-20260927.json",
+  "source_status": "fix_committed_host_verified",
+  "runtime_acceptance": "pending_intranet_retest",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "fix/p2-npu-bootstrap",
+      "commit": "e6f962ea7777bf3c31906050f5610e8cb6f9e417",
+      "tree": "0e73314671bcf700997eee88a9524cdbbb683b84",
+      "version": "0.18.0+ascend.p2",
+      "retained_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "retained_P2_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "retained_P1_and_main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p2",
+      "commit": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "version": "0.4.3+ascend.p1",
+      "changed_in_this_fix": false,
+      "retained_P1_and_main": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+    }
+  },
+  "checks": {
+    "summary": "../results/npu-bootstrap-20260929/README.md",
+    "junit": "../results/npu-bootstrap-20260929/p2-paired-host.xml",
+    "vllm_host_passed": 175,
+    "vllm_host_subtests_passed": 43,
+    "new_regression_tests": 8,
+    "native_source_gate": "passed",
+    "python311_syntax": "passed_for_five_changed_python_files",
+    "selected_ruff_rules": "E4,E7,E9,F,I",
+    "non_import_function_method_AST_unchanged": {"platforms/npu.py": 31, "utils/ascend.py": 79},
+    "not_full_torch_or_NPU_tests": true
+  },
+  "instructions": "../npu-bootstrap-fix.md",
+  "P3_pair": "../../p3/baseline/npu-bootstrap-fix-20260929.json",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false
+}

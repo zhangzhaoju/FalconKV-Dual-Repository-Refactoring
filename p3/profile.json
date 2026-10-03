@@ -2,7 +2,7 @@
   "schema_version": 1,
   "phase": "P3",
   "batch": "P3-01-through-P3-05-native-source",
-  "source_status": "native_source_complete_pending_intranet_acceptance",
+  "source_status": "native_source_complete_bootstrap_and_KV_binding_fixes_host_verified_pending_intranet_acceptance",
   "build_status": "pending_intranet",
   "runtime_acceptance": "pending_P2_P3_unified_validation",
   "authorization": {
@@ -42,7 +42,8 @@
     "triton_ascend": "3.2.0.dev20260322"
   },
   "paired_packages": {"vllm": "0.18.0+ascend.p3", "lmcache": "0.4.3+ascend.p3"},
-  "paired_commits": "baseline/p3-native-20260928.json",
+  "paired_commits": "baseline/kv-cache-binding-fix-20260930.json",
+  "previous_paired_commits": "baseline/npu-bootstrap-fix-20260929.json",
   "validation_boundary": {
     "local_native_build_or_install": false,
     "intranet_proxy_allowed": true,

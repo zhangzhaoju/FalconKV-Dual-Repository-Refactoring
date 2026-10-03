@@ -266,7 +266,7 @@ def main() -> int:
         (
             vllm,
             "vllm-host",
-            176,
+            196,
             [
                 "ascend/tests/standalone",
                 "tests/standalone",

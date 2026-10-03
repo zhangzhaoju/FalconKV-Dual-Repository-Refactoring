@@ -1,6 +1,6 @@
 # P2 内网统一验证
 
-本次交付是完整 P2 源码候选。源码身份以 [配对提交清单](baseline/p2-native-integration-20260927.json) 为准，两仓均用 `p2`，不要使用保留的 `main`。本机检查记录见 [结果](results/native-integration-20260927/README.md)；本页命令未在本机执行构建或 NPU 验证。
+2026-09-30 更新：源码身份以 [DSA KV 绑定及导入修复清单](baseline/kv-cache-binding-fix-20260930.json) 为准，vLLM 使用 `fix/p2-npu-bootstrap`，LMCache 仍用冻结 `p2`；不要使用旧 vLLM `p2` 或保留的 `main`。先阅读 [修复及准确 SHA 同步步骤](npu-bootstrap-fix.md)。累计修复包含上一轮新增模块，按本页重装并核验；不能用旧六项 bootstrap 结果代替新增绑定检查。原 [2026-09-27 清单](baseline/p2-native-integration-20260927.json) 只保留为历史输入。本机只完成源码/host 检查，本页构建和 NPU 命令仍待内网执行。
 
 ## 1. 环境和源码
 
@@ -79,6 +79,14 @@ python -B "$P2_REPOS/LMCache/p1_dev.py" verify --mode editable --output "$P2_RUN
 正式制品补充：在各仓材料准备后的副本执行 `python -m build --sdist --no-isolation --outdir <新目录>`，分别将 sdist 解包到新目录，用 `python -m pip wheel --no-index --no-deps --no-build-isolation --no-cache-dir <解包目录> --wheel-dir <新目录>` 独立重建；检查资源清单、动态库依赖、ABI 和源码身份。两条命令均使用已准备环境，不安装依赖。保留 SHA256、`pip freeze`、完整和豁免后的 pip 检查结果；不要直接运行固定 P1 donor 字节/entry-point 假设的历史 source-audit 来验收 P2。
 
 ## 3. 真实导入、子进程和基本设备检查
+
+先从源码目录之外执行门禁。它检查四种新解释器导入顺序、真实 registry 子进程、原生 KV 绑定和不命中 model-info 缓存的 GLM 模型类检查，不加载权重；7 项必须全部通过。绑定检查仅用显式 CPU 张量，不执行 NPU 内核。失败时保留新报告目录，不通过预导入平台或删除缓存绕过：
+
+```bash
+cd "$P2_RUN"
+python -B "$P2_REPOS/vllm/tools/check_npu_bootstrap.py" \
+  --inspect-glm --output "$P2_RUN/bootstrap"
+```
 
 先在没有旧插件安装、可不安装 LMCache 的环境验证 vLLM。下列脚本会禁用可选插件，主动阻止 LMCache/旧插件导入，加载 v1/v2 Runner 和原生相关模块，检查继承链与来源。`--spawn` 在新的 spawn 子进程重复；`--torchair-abi` 检查安装的 TorchAir factory 接口。可执行一次不带设备操作的探测，再在空闲设备执行扩展和 stream/event/tensor smoke：
 

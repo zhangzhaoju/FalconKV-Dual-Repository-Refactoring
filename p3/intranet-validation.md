@@ -1,6 +1,6 @@
 # P3 内网构建、开发态安装与 P2/P3 联合验证
 
-本页适用于 **P3-01～05 原生源码交付**，取代首批仅配置迁移的安装说明。精确配对提交见 [交付清单](baseline/p3-native-20260928.json)；不要仅根据相同 `+ascend.p3` 后缀混用不同批次 wheel。源码/host 检查通过不代表 NPU 或推理验收通过。
+本页适用于 **P3-01～05 原生源码交付及截至 2026-09-30 的 NPU 导入和 DSA KV 绑定修复**，取代首批仅配置迁移的安装说明。精确配对提交见 [最新交付清单](baseline/kv-cache-binding-fix-20260930.json)；不要仅根据相同 `+ascend.p3` 后缀混用不同批次 wheel。累计修复含上一轮新增模块，按本页重装核验；见 [修复说明](../p2/npu-bootstrap-fix.md)。源码/host 检查通过不代表 NPU 或推理验收通过。
 
 ## 1. 交接源码并保留 P2
 
@@ -34,6 +34,8 @@ git -C "$P3_REPOS/vllm" status --short --branch
 git -C "$P3_REPOS/vllm" rev-parse HEAD
 git -C "$P3_REPOS/LMCache" status --short --branch
 git -C "$P3_REPOS/LMCache" rev-parse HEAD
+test "$(git -C "$P3_REPOS/vllm" rev-parse HEAD)" = 7854ce2158f42a725c58cd1026b388709f320b2b
+test "$(git -C "$P3_REPOS/LMCache" rev-parse HEAD)" = a4e2131e890727edadb6bb61cde369900f72c3fd
 git -C "$P3_REPOS/vllm" merge-base --is-ancestor f1be323571e3ca2aab53992234045dd064d1967f HEAD
 git -C "$P3_REPOS/LMCache" merge-base --is-ancestor cfe8a1754db743d41c8bb63f8d02ad7c3051948c HEAD
 ```
@@ -117,16 +119,20 @@ sha256sum "$P3_RUN"/sdist/*.tar.gz "$P3_RUN"/*/wheels/*.whl "$P3_RUN"/rebuilt-*/
 
 ## 5. 安装后导入、spawn 与 ABI
 
-从源码目录之外执行，并确保没有手工设置的源码 PYTHONPATH。下面两个脚本均不加载模型、不启动网络服务；第二个验证 LMCache 原生类和扩展来源，以及导入前后 torch CUDA API/构造函数未被全局替换。
+从源码目录之外执行，并确保没有手工设置的源码 PYTHONPATH。下面的检查不加载权重、不启动推理或网络服务；冷导入检查不使用已有 model-info 缓存，正常导入可加载原生库并生成既有 profiling 配置。`p3_runtime_smoke.py` 验证 LMCache 原生类和扩展来源，以及导入前后 torch CUDA API/构造函数未被全局替换。
 
 ```bash
 cd "$P3_RUN"
+python -B "$P3_REPOS/vllm/tools/check_npu_bootstrap.py" \
+  --inspect-glm --output "$P3_RUN/bootstrap"
 python -B "$P3_REPOS/vllm/tools/validate_npu_native.py" \
   --output "$P3_RUN/vllm-native-import.json" --spawn --torchair-abi
 python -B "$P3_REPOS/LMCache/tools/p3_runtime_smoke.py" \
   --output "$P3_RUN/lmcache-native-import"
 python -B "$P3_ROOT/design/p1/tools/check_pip_dependencies.py" --output "$P3_RUN/pip-check-after"
 ```
+
+`bootstrap` 七项必须全部通过，包含用显式 CPU 张量调用实际原生函数的 `kv_cache_bind` 检查；旧六项结果不能替代它。四个节点均核对修复制品和配对提交并执行安装后检查，再启动 2P2D；不要在暖进程提前导入平台来代替冷导入验收。
 
 只有确认空闲且分配给本批测试的设备，才设置相应 `ASCEND_RT_VISIBLE_DEVICES` 并追加 `--device-smoke`（vLLM）或 `--npu`（LMCache，4 KiB 注册 host/NPU 拷贝）；生成新的报告目录。不要直接使用仍承载基线服务的卡。IPC 真正跨进程共享、通信与内核数值仍需实际场景验收，导入/spawn 不等于通过它们。
 

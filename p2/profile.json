@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "phase": "P2",
-  "source_status": "source_complete_host_verified",
+  "source_status": "source_complete_bootstrap_and_KV_binding_fixes_host_verified_pending_intranet_retest",
   "build_status": "pending_intranet",
   "runtime_acceptance": "pending_user_unified_validation",
   "authorization": {
@@ -86,5 +86,7 @@
     "vllm": "0.18.0+ascend.p2",
     "lmcache": "0.4.3+ascend.p1"
   },
-  "paired_commits": "baseline/p2-native-integration-20260927.json"
+  "paired_commits": "baseline/kv-cache-binding-fix-20260930.json",
+  "previous_paired_commits": "baseline/npu-bootstrap-fix-20260929.json",
+  "frozen_source_commits": "baseline/p2-native-integration-20260927.json"
 }

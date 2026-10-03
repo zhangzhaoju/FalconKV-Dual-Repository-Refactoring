@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "phase": "P3",
+  "batch": "native_npu_bootstrap_circular_import_fix",
+  "supersedes_for_retest": "p3-native-20260928.json",
+  "source_status": "fix_committed_host_verified",
+  "runtime_acceptance": "pending_intranet_P2_P3_unified_validation",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "p3",
+      "commit": "eb2a33d809b5768d778c4c6d05f6e64b5921fee3",
+      "tree": "2ae2afb71154d6d3ff5845bcd58e518b8020a97a",
+      "version": "0.18.0+ascend.p3",
+      "previous_P3_commit": "4e2f7c0047b4bcb14888f1bfabe01d41f70293d4",
+      "cherry_picked_from": "e6f962ea7777bf3c31906050f5610e8cb6f9e417",
+      "retained_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "retained_P1_and_main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p3",
+      "commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "tree": "278d3e2a8506cf0d6acc0af44c32478c3bfc762e",
+      "version": "0.4.3+ascend.p3",
+      "changed_in_this_fix": false,
+      "retained_P2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "retained_P1_and_main": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+    }
+  },
+  "checks": {
+    "report": "../results/npu-bootstrap-20260929/final/verification.json",
+    "summary": "../results/npu-bootstrap-20260929/README.md",
+    "host_tests_passed": 397,
+    "vllm_host_tests": 184,
+    "lmcache_host_tests": 115,
+    "remote_fill_protocol_tests": 98,
+    "configuration_fields_type_default_converter_equal_to_P2": 23,
+    "normalized_method_AST_contracts": 694,
+    "frozen_P2_P1_main_refs_and_P2_trees_unchanged": true,
+    "not_full_torch_or_NPU_tests": true
+  },
+  "instructions": "../../p2/npu-bootstrap-fix.md",
+  "P2_repair_pair": "../../p2/baseline/npu-bootstrap-fix-20260929.json",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false
+}

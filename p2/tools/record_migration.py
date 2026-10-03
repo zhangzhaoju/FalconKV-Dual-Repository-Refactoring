@@ -28,6 +28,7 @@ INTEGRATED = {
     "worker/patch_logprobs.py": ["vllm/v1/sample/ops/logprobs.py"],
     "worker/patch_module.py": ["vllm/v1/attention/backends/gdn_attn.py"],
     "worker/patch_npugraph_ex_triton.py": ["vllm/compilation/ascend/torchair_backend.py", "vllm/compilation/ascend/compiler_interface.py"],
+    "worker/patch_qwen3_next_mtp.py": ["vllm/v1/worker/utils.py"],
     "worker/patch_rejection_sampler.py": ["vllm/v1/sample/rejection_sampler.py", "vllm/v1/sample/ascend/rejection_sampler.py"],
     "worker/patch_routed_experts_capturer.py": ["vllm/model_executor/layers/fused_moe/routed_experts_capturer.py"],
     "worker/patch_unquantized_gemm.py": ["vllm/model_executor/layers/utils.py"],
@@ -46,6 +47,7 @@ NOTES = {
     "platform/patch_torch_accelerator.py": "各使用方显式选 NPU memory API，不改 torch.accelerator。",
     "worker/patch_npugraph_ex_triton.py": "单个 compiler 的私有函数依赖绑定，不改已安装 TorchAir 模块/类；内网核验私有 API、字典元数据及图执行。",
     "worker/patch_module.py": "GDN 布尔排序直接转换 dtype，删除 torch wrapper。GDN 模型入口不增加到认证范围。",
+    "worker/patch_qwen3_next_mtp.py": "2026-09-30 更正：文件含 GLM DSA 通用 KV 绑定逻辑；精确 latent/indexer 兄弟对排序及原 NPU 绑定语义已合入原生函数，非 Qwen 模型支持恢复。",
 }
 
 

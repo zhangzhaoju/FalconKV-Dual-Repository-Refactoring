@@ -1,0 +1,4 @@
+$ /tmp/falconkv-p3-kvbind.gJDB8tGq/bin/python -B -m pytest --noconftest -p no:cacheprovider tests/standalone --ignore=tests/standalone/test_glm52_metadata.py ascend/tests/v1/test_cache_engine_close_cpu.py ascend/tests/v1/test_direct_store_plan.py ascend/tests/v1/test_remote_fill_config.py -q --junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p3/results/kv-cache-binding-20260930/final/lmcache-host.xml
+.......................................................................................................... [ 92%]
+.........                                                                [100%]
+115 passed, 38 subtests passed in 6.08s

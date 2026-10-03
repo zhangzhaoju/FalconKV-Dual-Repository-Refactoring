@@ -1,10 +1,14 @@
 # P2：vLLM 原生 Ascend 源码交付
 
+2026-09-30：已将 GLM DSA 双组 KV 绑定逻辑合入原生函数，修复同层 latent/indexer 在 NPU 初始化时的 `NotImplementedError`。沿用 `fix/p2-npu-bootstrap`，但必须使用 [最新配对提交](baseline/kv-cache-binding-fix-20260930.json)，不能停留在上一轮导入修复。P2 vLLM 187 项、311 个 subtest 通过；同一修复已同步 P3。内网工具新增 `kv_cache_bind`，带 `--inspect-glm` 时须 7 项通过。操作见 [最新复测指南](npu-bootstrap-fix.md)。
+
+2026-09-29：已修复 registry 子进程的 NPU 平台循环导入。**复测改用 vLLM `fix/p2-npu-bootstrap`，配对 LMCache 仍为冻结 `p2`；不能继续用旧 vLLM `p2` 作为修复输入。** 详见 [修复及内网重装步骤](npu-bootstrap-fix.md)、[新配对清单](baseline/npu-bootstrap-fix-20260929.json) 和 [175 项主机测试记录](results/npu-bootstrap-20260929/README.md)。同一修复已同步至 P3，冻结输入和历史结果不变；内网复测仍待执行。
+
 2026-09-28：已从本次完整 P2 配对提交创建 `p3`，`p2` 分支、输入清单及本目录既有结果保持不变。后续见 [P3 执行记录](../p3/README.md)；用户将统一进行 P2/P3 内网验证，不代表本阶段运行验收已通过。
 
 2026-09-27：已按用户要求完成 P2 阶段源码改造、可在本机执行的检查及内网验证交接。两仓工作分支均为 `p2`，原 `p1` 和 `main` 保留不动。**源码工作完成；构建、NPU/ABI、模型正确性和性能验收待用户在内网统一执行。** P1/基线复测及已知问题修复继续后置，P1 出口没有改为通过。
 
-优先阅读 [内网执行指南](intranet-validation.md)。配对提交见 [交付清单](baseline/p2-native-integration-20260927.json)，本机结果见 [验证记录](results/native-integration-20260927/README.md)，可转入内网的增量 Git 包、源码快照与校验值见 [源码交付包](deliveries/native-integration-20260927/README.md)。
+优先阅读 [内网执行指南](intranet-validation.md)，配对提交以 [最新修复清单](baseline/kv-cache-binding-fix-20260930.json) 为准。原 [2026-09-27 交付清单](baseline/p2-native-integration-20260927.json)、[验证记录](results/native-integration-20260927/README.md) 和 [源码交付包](deliveries/native-integration-20260927/README.md) 是初始历史输入，不含后续修复。
 
 ## 配对版本与保留基线
 
@@ -32,7 +36,7 @@ LMCache 原生化属于 P3；本次仅同步安装配对约束，以及诊断桥
 
 本次迁移盘点覆盖原命名空间的 355 个文件：305 个位于原生归属，49 个插件/补丁文件保留为非运行归档，1 个只含 CUDA wrapper 的文件删除；另外记录了 42 项 Runner/组件提取来源。完整文件、哈希、前缀映射和继承方法清单分别见 [最终迁移清单](baseline/native-integration-migration.json)、[原始搬迁记录](baseline/namespace-migration.json)、[Runner 提取记录](baseline/runner-extraction.json)。
 
-[补丁处置表](patch-migration.md) 逐个覆盖全部 49 个归档文件：27 项有效行为合入，6 个聚合/插件入口退出，16 项非目标模型补丁停用并待 P4 裁剪。参考归档不进入 wheel/sdist；不存在空的 `vllm_ascend` 兼容壳。迁移脚本是一次性变更过程记录，**不要对最终工作树重新执行**；`record_migration.py` 和结果目录的 `verify.py` 可重复运行。
+[补丁处置表](patch-migration.md) 逐个覆盖全部 49 个归档文件。9 月 30 日纠正通用 KV 绑定的误分类后，当前为 28 项有效行为合入、6 个聚合/插件入口退出、15 项非目标补丁停用待 P4。原历史 JSON 保留当时的 27/6/16，增量更正见最新修复清单。参考归档不进入 wheel/sdist；不存在空的 `vllm_ascend` 兼容壳。初始迁移/测试搬迁脚本不要重跑；`record_migration.py` 会覆盖历史输出，本次仅纠正其归属映射，没有执行生成。历史结果目录中的 verifier 也不是最新修复分支的验收入口。
 
 ## 保留的边界
 

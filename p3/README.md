@@ -1,5 +1,9 @@
 # P3：LMCache 原生 Ascend 源码交付
 
+2026-09-30：已同步 NPU DSA KV 绑定修复，保留普通/MTP 层的 latent → indexer 顺序与对象引用。最新 [配对清单](baseline/kv-cache-binding-fix-20260930.json)、[复测指南](../p2/npu-bootstrap-fix.md) 和 [409 项主机检查报告](results/kv-cache-binding-20260930/final/verification.json) 优先于旧交付；LMCache 提交不变。真实安装、NPU 与 2P2D 复测仍待内网执行。
+
+2026-09-29：已同步 P2 registry 子进程的 NPU 平台循环导入修复。最新 [配对清单](baseline/npu-bootstrap-fix-20260929.json)、[修复说明与重装要求](../p2/npu-bootstrap-fix.md)、[397 项主机测试记录](results/npu-bootstrap-20260929/README.md) 优先于下方历史交付；LMCache 提交不变。真实 GLM 冷导入与 2P2D 复测待内网执行。
+
 P3-01～05 的源码工作已完成，进入内网构建和 P2/P3 联合验证。两个产品仓继续位于 `p1-repos/`，当前均为 `p3`，包含完整 P2 历史；`p2`、`p1`、`main` 与原四仓保持不动。
 
 **源码完成不代表阶段运行验收通过。** 本机没有安装 torch/CANN、构建框架或执行 NPU；真实 wheel/sdist/editable、ABI、GLM-5.2 推理及性能验收待内网执行。P1/基线已知问题仍按用户决定后置，P4 大规模裁剪未启动。
@@ -25,9 +29,11 @@ P3-01～05 的源码工作已完成，进入内网构建和 P2/P3 联合验证�
 | vLLM | `f1be323571e3ca2aab53992234045dd064d1967f` | `0.18.0+ascend.p3`，安装 namespace `vllm` |
 | LMCache | `cfe8a1754db743d41c8bb63f8d02ad7c3051948c` | `0.4.3+ascend.p3`，安装 namespace `lmcache` |
 
-- [完整配对交付清单](baseline/p3-native-20260928.json)：精确提交和保留分支。
+- [最新配对交付清单](baseline/kv-cache-binding-fix-20260930.json)：累计含循环导入和 KV 绑定修复的精确提交和保留分支。
 - [内网操作指导](intranet-validation.md)：同步、构建、editable、导入/spawn、启动参数迁移和验收。
-- [源码与 host 结果](results/native-20260928/README.md)：实际执行范围、结果与未执行项。
+- [最新源码与 host 结果](results/kv-cache-binding-20260930/final/verification.json)：409 项通过，含准确命令、实际范围及未执行项。
+- [9 月 29 日导入修复结果](results/npu-bootstrap-20260929/README.md)：397 项的历史记录，不含本次绑定回归。
+- [2026-09-28 原交付清单](baseline/p3-native-20260928.json) 和 [原检查结果](results/native-20260928/README.md)：历史输入，不覆盖为修复后的结果。
 - [P3-01 历史清单](baseline/p3-01-config-20260928.json)：保留历史，不覆盖为本批结果。
 
 重跑本机检查：

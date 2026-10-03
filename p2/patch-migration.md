@@ -2,6 +2,8 @@
 
 覆盖 47 个旧 patch 文件及 2 个插件入口，全部保留原始字节和版权到 `ascend/legacy_*`，但不安装进 wheel/sdist，也不执行。完整哈希与文件映射见 [迁移清单](baseline/native-integration-migration.json)。
 
+2026-09-30 更正：`patch_qwen3_next_mtp.py` 虽带 Qwen 名称，却提供 GLM DSA 需要的通用 KV 绑定行为，原 `inactive_non_target` 分类错误。该行为现已合入 `vllm/v1/worker/utils.py` 的 NPU 分支，对应回归位于 `tests/standalone/test_npu_kv_cache_binding.py`。当前处置计数为 integrated 28、inactive_non_target 15、retired_loader 6；上方 JSON 保留 2026-09-27 交付时的历史记录，最新更正见 [修复清单](baseline/kv-cache-binding-fix-20260930.json)。不要重新运行初始测试搬迁脚本将新回归归档。
+
 `integrated` 表示源码已合入，运行等价仍待内网；`inactive_non_target` 表示按 P2 计划停用范围外模型补丁，后续 P4 再删源文件；`retired_loader` 表示旧入口已退出。
 
 | 原相对路径 | 处置 | 原生位置 | 说明 |
@@ -41,7 +43,7 @@
 | `patch/worker/patch_npugraph_ex_triton.py` | integrated | `vllm/compilation/ascend/torchair_backend.py`<br>`vllm/compilation/ascend/compiler_interface.py` | 单个 compiler 的私有函数依赖绑定，不改已安装 TorchAir 模块/类；内网核验私有 API、字典元数据及图执行。 |
 | `patch/worker/patch_qwen3_5.py` | inactive_non_target | — | 非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。 |
 | `patch/worker/patch_qwen3_next.py` | inactive_non_target | — | 非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。 |
-| `patch/worker/patch_qwen3_next_mtp.py` | inactive_non_target | — | 非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。 |
+| `patch/worker/patch_qwen3_next_mtp.py` | integrated | `vllm/v1/worker/utils.py` | 2026-09-30 更正：GLM DSA 精确 latent/indexer 兄弟对及 MTP 的 NPU KV 绑定逻辑合入原生函数，保留对象引用及原单缓存/其他重复层名语义；不恢复 Qwen 模型支持或全局补丁。 |
 | `patch/worker/patch_rejection_sampler.py` | integrated | `vllm/v1/sample/rejection_sampler.py`<br>`vllm/v1/sample/ascend/rejection_sampler.py` | 行为合入正式定义或显式 NPU 分发，不再执行导入时替换。 |
 | `patch/worker/patch_routed_experts_capturer.py` | integrated | `vllm/model_executor/layers/fused_moe/routed_experts_capturer.py` | 行为合入正式定义或显式 NPU 分发，不再执行导入时替换。 |
 | `patch/worker/patch_triton.py` | inactive_non_target | — | 非 GLM-5.2 文本/MTP 依赖，移出加载清单，源码保留待 P4 裁剪；不声称该模型仍获认证。 |

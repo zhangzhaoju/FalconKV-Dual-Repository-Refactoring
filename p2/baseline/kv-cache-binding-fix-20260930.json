@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-30",
+  "phase": "P2",
+  "batch": "native_NPU_DSA_KV_cache_binding_fix",
+  "supersedes_for_retest": "npu-bootstrap-fix-20260929.json",
+  "source_status": "fix_committed_host_verified",
+  "runtime_acceptance": "pending_intranet_retest",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "fix/p2-npu-bootstrap",
+      "commit": "e1b35d4f12fdc0cd975b8e990e146507c459d094",
+      "tree": "e5e68478a1d12725647b9d79ee58507af5ee0745",
+      "previous_commit": "e6f962ea7777bf3c31906050f5610e8cb6f9e417",
+      "version": "0.18.0+ascend.p2",
+      "retained_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "retained_P2_tree": "560c7ac4822390e43aa71ad8314f86728e4ec49d",
+      "retained_P1_and_main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p2",
+      "commit": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "tree": "bd03b240d53db501782854d73ba6843ba1318d72",
+      "version": "0.4.3+ascend.p1",
+      "changed_in_this_fix": false,
+      "retained_P1_and_main": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+    }
+  },
+  "migration_correction": {
+    "source": "ascend/legacy_patches/worker/patch_qwen3_next_mtp.py",
+    "old_disposition": "inactive_non_target",
+    "corrected_disposition": "integrated",
+    "native_owner": "vllm/v1/worker/utils.py:bind_kv_cache",
+    "reason": "filename hid the GLM DSA shared NPU binding contract",
+    "archived_source_unchanged": true,
+    "legacy_monkey_patch_reenabled": false,
+    "current_patch_counts": {"integrated": 28, "inactive_non_target": 15, "retired_loader": 6},
+    "historical_inventory_preserved": "native-integration-migration.json"
+  },
+  "checks": {
+    "scope": "production_function_bodies_with_host_fixtures_not_NPU_tensor_validation",
+    "log": "../results/kv-cache-binding-20260930/p2-final-host.log",
+    "junit": "../results/kv-cache-binding-20260930/p2-final-host.xml",
+    "red_test": "../results/kv-cache-binding-20260930/before-fix.log",
+    "vllm_host_passed": 187,
+    "vllm_host_subtests_passed": 311,
+    "new_regression_tests": 12,
+    "unchanged_torch_dependent_exclusions": true,
+    "python311_syntax": "passed_AST_check_host_runtime_is_3.12.3",
+    "selected_ruff_rules": "E4,E7,E9,F,I",
+    "native_source_gate": "passed"
+  },
+  "intranet_check": {
+    "command": "python -B tools/check_npu_bootstrap.py --inspect-glm --output NEW_DIRECTORY",
+    "expected_passing_checks": 7,
+    "new_check": "kv_cache_bind",
+    "binding_scenarios": 6,
+    "binding_tensor_device": "cpu",
+    "executed_against_real_installed_framework_locally": false
+  },
+  "instructions": "../npu-bootstrap-fix.md",
+  "P3_pair": "../../p3/baseline/kv-cache-binding-fix-20260930.json",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false
+}
