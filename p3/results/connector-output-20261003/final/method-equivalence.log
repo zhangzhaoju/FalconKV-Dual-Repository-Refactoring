@@ -1,0 +1,11 @@
+$ /tmp/falconkv-p3-connector.OdpMbfrQ/bin/python -B design/p3/tools/check_method_equivalence.py
+{
+  "scope": "normalized_method_AST_not_runtime",
+  "input": "470fd4dc6c566bc7b878ba425bc181a155e945ec",
+  "checked": 694,
+  "reviewed_explicit_device_change": [
+    "NPUIPCWrapper.to_tensor"
+  ],
+  "unexpected_changes": [],
+  "passed": true
+}

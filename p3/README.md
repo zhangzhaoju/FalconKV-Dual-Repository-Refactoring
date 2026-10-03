@@ -1,5 +1,9 @@
 # P3：LMCache 原生 Ascend 源码交付
 
+2026-10-03（后续修复）：已补齐正式 Connector 向 LMCache adapter 转发 Worker 完成通知的链路，修复关闭 KV events 时冷加载名额不释放、稀疏恢复标记未生效的问题；对应失败日志为 `p3_logs/logs_all_RunReq_less/`。最新 [配对清单](baseline/connector-output-fix-20261003.json)、[复测指南](intranet-validation.md#62-decode-并发与稀疏恢复修复本次复测入口) 和 [446 项主机检查报告](results/connector-output-20261003/final/verification.json) 优先于以下历史交付。vLLM P3 提交 `8767fe1121a085e8cefed03eeaa1444b55227521`，LMCache 不变；已有正确 P3 strict editable 无需原生重编译。配对安装态检查增至八项，**实际并发、输出正确性和 MTP 接收率仍待内网复测**，未推送或操作内网服务。
+
+2026-10-03（此前配置修复）：已修复沿用 P1/P2 旧 LMCache 动态启动入口导致的 `No module named 'lmcache_ascend'`。已知旧配置在加载模型前告警并转换为 P3 原生入口，不恢复旧插件包，不更改其他 KV 参数。历史 [配对清单](baseline/connector-config-fix-20261003.json) 和 [432 项主机检查报告](results/connector-config-20261003/final/verification.json) 保留，不包含后续完成通知修复。P2 升级 P3 仍须重装两包；内网运行验收待完成。
+
 2026-09-30：已同步 NPU DSA KV 绑定修复，保留普通/MTP 层的 latent → indexer 顺序与对象引用。最新 [配对清单](baseline/kv-cache-binding-fix-20260930.json)、[复测指南](../p2/npu-bootstrap-fix.md) 和 [409 项主机检查报告](results/kv-cache-binding-20260930/final/verification.json) 优先于旧交付；LMCache 提交不变。真实安装、NPU 与 2P2D 复测仍待内网执行。
 
 2026-09-29：已同步 P2 registry 子进程的 NPU 平台循环导入修复。最新 [配对清单](baseline/npu-bootstrap-fix-20260929.json)、[修复说明与重装要求](../p2/npu-bootstrap-fix.md)、[397 项主机测试记录](results/npu-bootstrap-20260929/README.md) 优先于下方历史交付；LMCache 提交不变。真实 GLM 冷导入与 2P2D 复测待内网执行。
@@ -29,9 +33,11 @@ P3-01～05 的源码工作已完成，进入内网构建和 P2/P3 联合验证�
 | vLLM | `f1be323571e3ca2aab53992234045dd064d1967f` | `0.18.0+ascend.p3`，安装 namespace `vllm` |
 | LMCache | `cfe8a1754db743d41c8bb63f8d02ad7c3051948c` | `0.4.3+ascend.p3`，安装 namespace `lmcache` |
 
-- [最新配对交付清单](baseline/kv-cache-binding-fix-20260930.json)：累计含循环导入和 KV 绑定修复的精确提交和保留分支。
-- [内网操作指导](intranet-validation.md)：同步、构建、editable、导入/spawn、启动参数迁移和验收。
-- [最新源码与 host 结果](results/kv-cache-binding-20260930/final/verification.json)：409 项通过，含准确命令、实际范围及未执行项。
+- [最新配对交付清单](baseline/connector-output-fix-20261003.json)：累计含循环导入、KV 绑定、旧启动入口迁移和 Worker 完成通知修复的精确提交和保留分支。
+- [内网操作指导](intranet-validation.md)：同步、构建、editable、导入/spawn、启动参数迁移、完成通知检查与并发/数值复测。
+- [最新源码与 host 结果](results/connector-output-20261003/final/verification.json)：446 项通过（vLLM 227、LMCache 115、RemoteFill 98、两仓完成通知联动 6），含准确命令、实际范围及未执行项。
+- [10 月 3 日旧入口配置修复清单](baseline/connector-config-fix-20261003.json) 和 [432 项检查报告](results/connector-config-20261003/final/verification.json)：历史交付，不含后续完成通知修复。
+- [9 月 30 日 KV 绑定修复清单](baseline/kv-cache-binding-fix-20260930.json) 和 [409 项检查报告](results/kv-cache-binding-20260930/final/verification.json)：历史交付，不含本次配置迁移修复。
 - [9 月 29 日导入修复结果](results/npu-bootstrap-20260929/README.md)：397 项的历史记录，不含本次绑定回归。
 - [2026-09-28 原交付清单](baseline/p3-native-20260928.json) 和 [原检查结果](results/native-20260928/README.md)：历史输入，不覆盖为修复后的结果。
 - [P3-01 历史清单](baseline/p3-01-config-20260928.json)：保留历史，不覆盖为本批结果。
@@ -42,7 +48,7 @@ P3-01～05 的源码工作已完成，进入内网构建和 P2/P3 联合验证�
 python3 -B design/p3/tools/verify.py --output design/p3/results/your-new-run
 ```
 
-需要 pytest、setuptools、packaging、yaml、msgspec、pyzmq；不需要 torch/CANN。工具返回非零时不能称为通过。配置检查、源码门禁和 host 用例不能替代内网真实导入检查。
+需要 pytest、setuptools、packaging、yaml、msgspec、pyzmq、Pydantic 2（本次实测 2.12.5）；不需要 torch/CANN。缺少 Pydantic 时其用例会跳过，达不到完整通过计数。工具返回非零时不能称为通过。配置检查、源码门禁和 host 用例不能替代内网真实导入检查。
 
 ## 边界
 

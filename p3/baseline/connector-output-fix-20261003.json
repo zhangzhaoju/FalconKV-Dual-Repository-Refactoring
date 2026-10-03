@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "phase": "P3",
+  "batch": "formal_LMCache_worker_completion_delegation",
+  "supersedes_for_retest": "connector-config-fix-20261003.json",
+  "source_status": "fix_committed_host_verified",
+  "runtime_acceptance": "pending_intranet_P3_2P2D_concurrency_correctness_and_MTP_retest",
+  "failure_evidence": {
+    "directory": "p3_logs/logs_all_RunReq_less",
+    "root_cause": "Formal connector aggregated optional KV events without forwarding worker outputs to the paired adapter; cold-load admission remained occupied and sparse-resume completion was not recorded",
+    "decode_dp0_idle_with_backlog_line": {"7.150.1.218_D_dp0_port7920.log": 6184},
+    "decode_dp1_single_running_with_backlog_line": {"7.150.3.14_D_dp1_port7920.log": 6308},
+    "missing_sparse_resume_route_line": {"7.150.3.14_D_dp1_port7920.log": 5280},
+    "independent_request_length_error_line": {"7.150.3.14_D_dp1_port7920.log": 6144},
+    "line_number_convention": "LF-delimited lines, not progress-bar carriage returns",
+    "MTP_acceptance_recovery_not_yet_proven": true
+  },
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "p3",
+      "commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "tree": "25a81a2e83b2429a548f49c111606eccad314141",
+      "version": "0.18.0+ascend.p3",
+      "previous_P3_commit": "fba6408fe77920e535fe423108af40944afa6e61",
+      "retained_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "retained_P1_and_main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p3",
+      "commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "tree": "278d3e2a8506cf0d6acc0af44c32478c3bfc762e",
+      "version": "0.4.3+ascend.p3",
+      "changed_in_this_fix": false,
+      "retained_P2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "retained_P1_and_main": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+    }
+  },
+  "repair_contract": {
+    "whole_worker_output_forwarded_once_before_KV_event_branch": true,
+    "KV_event_aggregation_retained": true,
+    "adapter_errors_propagated": true,
+    "disabled_KV_events_do_not_drop_control_updates": true,
+    "cold_load_slot_release_and_validated_sparse_resume_host_verified": true,
+    "paired_adapter_and_scheduler_algorithms_changed": false,
+    "parallelism_memory_MTP_and_event_settings_changed": false,
+    "old_package_or_import_patch_restored": false,
+    "installed_probe": "tools/check_npu_bootstrap.py --inspect-glm --check-lmcache --output <fresh-directory>",
+    "installed_probe_default_LMCache_dependency": false,
+    "installed_formal_connector_source_identity_check": true,
+    "already_P3_strict_editable_native_rebuild_required": false,
+    "P2_to_P3_requires_both_packages_reinstalled": true,
+    "ordinary_wheel_requires_updated_vllm_wheel": true
+  },
+  "checks": {
+    "report": "../results/connector-output-20261003/final/verification.json",
+    "host_tests_passed": 446,
+    "vllm_host_tests": 227,
+    "lmcache_host_tests": 115,
+    "remote_fill_protocol_tests": 98,
+    "paired_connector_completion_tests": 6,
+    "new_regression_tests": 14,
+    "before_fix_targeted_run": {"passed": 32, "failed": 8},
+    "after_fix_targeted_run": {"passed": 40, "failed": 0},
+    "configuration_fields_type_default_converter_equal_to_P2": 23,
+    "normalized_method_AST_contracts": 694,
+    "frozen_P2_P1_main_refs_and_P2_trees_unchanged": true,
+    "both_product_worktrees_clean": true,
+    "not_full_torch_or_NPU_tests": true,
+    "host_environment": {
+      "path": "/tmp/falconkv-p3-connector.OdpMbfrQ",
+      "python": "3.12.3",
+      "system_site_packages": true,
+      "framework_packages_installed": false
+    },
+    "ruff": {
+      "changed_tests_tools_and_workspace_gate": "passed",
+      "connector": "passed_with_preexisting_UP045_excluded",
+      "unchanged_UP045_findings_compared_to_previous_HEAD": 5,
+      "changed_product_Python_and_new_paired_test_format": "passed"
+    },
+    "python311_product_syntax": "passed"
+  },
+  "instructions": "../intranet-validation.md",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false
+}

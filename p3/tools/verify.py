@@ -266,7 +266,7 @@ def main() -> int:
         (
             vllm,
             "vllm-host",
-            196,
+            227,
             [
                 "ascend/tests/standalone",
                 "tests/standalone",
@@ -288,6 +288,12 @@ def main() -> int:
                 "ascend/tests/v1/test_direct_store_plan.py",
                 "ascend/tests/v1/test_remote_fill_config.py",
             ],
+        ),
+        (
+            WORKSPACE,
+            "paired-connector-completion",
+            6,
+            ["design/p3/tools/test_connector_completion.py"],
         ),
     ]
     for repo, name, count, files in suites:

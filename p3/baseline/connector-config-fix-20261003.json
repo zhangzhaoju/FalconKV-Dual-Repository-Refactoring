@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "phase": "P3",
+  "batch": "retired_LMCache_launch_configuration_migration",
+  "supersedes_for_retest": "kv-cache-binding-fix-20260930.json",
+  "source_status": "fix_committed_host_verified",
+  "runtime_acceptance": "pending_intranet_P3_2P2D_retest",
+  "failure_evidence": {
+    "directory": "p3_logs/logs_no_lmcache_asend",
+    "config_line_all_four_service_logs": 7,
+    "first_missing_module_line": {
+      "7.150.7.133_P_dp0_port7910.log": 614,
+      "7.150.5.207_P_dp1_port7910.log": 421,
+      "7.150.1.218_D_dp0_port7920.log": 3945,
+      "7.150.3.14_D_dp1_port7920.log": 3752
+    },
+    "root_cause": "P3 vLLM launched with retired P1/P2 LMCache class and module path; not proof of a missing native lmcache installation"
+  },
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "p3",
+      "commit": "fba6408fe77920e535fe423108af40944afa6e61",
+      "tree": "4a43b4b089e1104278a68b7f9dfb7043b7742e0e",
+      "version": "0.18.0+ascend.p3",
+      "previous_P3_commit": "7854ce2158f42a725c58cd1026b388709f320b2b",
+      "retained_P2": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "retained_P1_and_main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p3",
+      "commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "tree": "278d3e2a8506cf0d6acc0af44c32478c3bfc762e",
+      "version": "0.4.3+ascend.p3",
+      "changed_in_this_fix": false,
+      "retained_P2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "retained_P1_and_main": "547ae7c10b0e510b864c8d0f5233d6f54f279359"
+    }
+  },
+  "repair_contract": {
+    "legacy_connector": "LMCacheAscendConnectorV1Dynamic",
+    "accepted_legacy_module_paths": [null, "lmcache_ascend.integration.vllm.lmcache_ascend_connector_v1"],
+    "native_connector": "LMCacheConnectorV1",
+    "native_module_path": null,
+    "other_KV_fields_preserved": true,
+    "explicit_custom_module_not_redirected_by_legacy_class_name": true,
+    "unknown_retired_modules_rejected_before_model_load": true,
+    "old_package_or_import_patch_restored": false,
+    "installed_bootstrap_config_migration_and_source_identity_check": true,
+    "already_P3_strict_editable_native_rebuild_required": false,
+    "P2_to_P3_requires_both_packages_reinstalled": true
+  },
+  "checks": {
+    "report": "../results/connector-config-20261003/final/verification.json",
+    "host_tests_passed": 432,
+    "vllm_host_tests": 219,
+    "lmcache_host_tests": 115,
+    "remote_fill_protocol_tests": 98,
+    "new_regression_tests": 23,
+    "real_Pydantic_configuration_serialization_test": true,
+    "configuration_fields_type_default_converter_equal_to_P2": 23,
+    "normalized_method_AST_contracts": 694,
+    "frozen_P2_P1_main_refs_and_P2_trees_unchanged": true,
+    "not_full_torch_or_NPU_tests": true,
+    "host_environment": {
+      "path": "/tmp/falconkv-p3-connector.OdpMbfrQ",
+      "python": "3.12.3",
+      "system_site_packages": true,
+      "isolated_host_test_dependencies": {"msgspec": "0.20.0", "pyzmq": "27.1.0", "pydantic": "2.12.5"},
+      "framework_packages_installed": false
+    },
+    "ruff_check_and_format": "passed",
+    "python311_syntax": "passed"
+  },
+  "instructions": "../intranet-validation.md",
+  "native_build_or_install": false,
+  "NPU_or_ABI_validation": false,
+  "remote_push": false,
+  "existing_services_changed": false
+}
