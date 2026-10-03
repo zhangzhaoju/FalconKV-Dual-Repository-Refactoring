@@ -1,0 +1,695 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "docs/design/l2_adapters/l2_eviction.md",
+      "reason": "removed multiprocess GPU L2 adapter documentation",
+      "sha256": "aee3a4078f28055c8c47cdd2fcb283edd59974670e2fba1549a81470603230d2",
+      "binary": false
+    },
+    {
+      "path": "docs/design/l2_adapters/nixl_store.md",
+      "reason": "removed multiprocess GPU L2 adapter documentation",
+      "sha256": "5607dc4e32a89f9f5c8a06b4e12f4fc51a309162122198df935b0fd29f9c3dd7",
+      "binary": false
+    },
+    {
+      "path": "docs/design/l2_adapters/overall.md",
+      "reason": "removed multiprocess GPU L2 adapter documentation",
+      "sha256": "40c01ca500d3cd62ea840a4d4a321488a16f6d28fce3db38ec800ee44eb261a3",
+      "binary": false
+    },
+    {
+      "path": "docs/design/l2_adapters/plugin.md",
+      "reason": "removed multiprocess GPU L2 adapter documentation",
+      "sha256": "9671c0c2ee3f40f6800abf710f6ca1d121682522ca885c117852b92df3ea380b",
+      "binary": false
+    },
+    {
+      "path": "docs/source/.nojekyll",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_templates/custom.html",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_templates/versioning.html",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "7a887319b4d098c3c73bb6ca17db0d0b8068d57f68c8f35cdec225fddcb63e1f",
+      "binary": false
+    },
+    {
+      "path": "docs/source/api_reference/configurations.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "91abe37e2a075fb0c43e309b6d62b9a5fbf3e9d59f4d806f85b24368736de256",
+      "binary": false
+    },
+    {
+      "path": "docs/source/api_reference/dynamic_connector.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "103766f603aa7d76b69c5e7c85eb2592c449d74eeb7495dacfdad3b939023986",
+      "binary": false
+    },
+    {
+      "path": "docs/source/api_reference/multimodality.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "23f0436d25e65c4b5a6ec4b3d419a3fc5ab34ca82d5f5b1383bedb9ce5358d47",
+      "binary": false
+    },
+    {
+      "path": "docs/source/api_reference/storage_backends.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "41733a3cfa0c0814db7ef05781cd6a4b661685670e33e84e4d62a7da31f4e98a",
+      "binary": false
+    },
+    {
+      "path": "docs/source/assets/InfiniStore-usage.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e8908afb1a455f4011de412cc58943c76af56d3f8cc7e07ae8eda704fee955bf",
+      "binary": true
+    },
+    {
+      "path": "docs/source/assets/lmcache-controller.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "be97d18393c1dc641905c655589e791ec800a4329639b85a5b68cf77027184af",
+      "binary": true
+    },
+    {
+      "path": "docs/source/assets/lmcache-logo.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8103423e67cb95e3d168d6ba7413ccc3d2b4c8f15ee30ad00d75efadbe47120d",
+      "binary": true
+    },
+    {
+      "path": "docs/source/assets/lmcache-logo_crop.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "799a576775cc58cce8dbb7e3a944ab487d123a3f2b24a62c71da6345a7e69f2f",
+      "binary": true
+    },
+    {
+      "path": "docs/source/assets/maru-kvcache.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "84101da3a4db189eac1b5eebe4b4a842ff99f1d28de601701231718e806ec5df",
+      "binary": true
+    },
+    {
+      "path": "docs/source/assets/mooncake-store-preview.png",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "a54417db79b2a6b53fe82f2f85c008b93a2580afe64f4fddd270fc43e79de14a",
+      "binary": true
+    },
+    {
+      "path": "docs/source/cli/bench.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "4a049669845e43496b3694071c054e1b654009c3833b34a211e034df87163299",
+      "binary": false
+    },
+    {
+      "path": "docs/source/cli/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "667b29341e3d7a8683338a86299a8ef702653f00ea3340c1eb17036aef188a0e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/cli/kvcache.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "4fd5762aa1134c75aa6f2c7a69595ea19350ee4c80e63924af74d5805cbbfb97",
+      "binary": false
+    },
+    {
+      "path": "docs/source/community/blogs.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "26df2940c87b4a8a9cbe2c068868278173b078939f8396762860768a8d0ee830",
+      "binary": false
+    },
+    {
+      "path": "docs/source/community/meetings.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "1f083e9c0a5b16fb45f5aa6d27262371da905c990b0441d2653e48587dd03b63",
+      "binary": false
+    },
+    {
+      "path": "docs/source/controller/freeze_mode.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "2a490d1f655ca391d2b9da4a0209b8cca60aab4d14ef6f7ca130c7a127b04bde",
+      "binary": false
+    },
+    {
+      "path": "docs/source/controller/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "f03e492aaf6d3ff664d45fd78910ab7d17bc972b0d61625cb467a4812266805d",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/architecture.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "c1f4f21f88e38455175d57c7aa1376ec2f02c924f68f03c6daf806cfbef69755",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/cli.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "d7e649be3f494cd3802fb0b1b451f81bcc349c526efc25403aaee238e09f5752",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/contributing.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "157cbcd1e996ab798cb8517d8af8a2980e3baf5e9186b4187bb743bef62cf426",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/docker_file.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "5c54236bdc9df39dfc79795cdbd3a83864593062a1773a151473c7cb44063706",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/extending_lmcache/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "6283a9dd45b53b02b29548ec11c9a2147c8d7f8b370147a163bc42cfb15e5c85",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/extending_lmcache/native_connectors.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "59a6cd7e0ad1778eca4cc46875fe6dbf972c2cabd202d8abaa93958ffb188496",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/extending_lmcache/remote_storage_plugins.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8e0415addcda3f0a60153538630ece877fccebb3e633a27a3746dea5097a4a8b",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/extending_lmcache/runtime_plugins.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "6832fb1685a40560475d92f88a49d9325b81943fbf77540cbeda65c75c6179c2",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/extending_lmcache/storage_plugins.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "66e1e6cc85d3e94bf953436a4d102cd853f152525c25156e8d4ffd8fee6a37fa",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/integration.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "120ac2e8b62cccaccc6958bd5f391f2865e894c116c86c4638a7ba25e365a148",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/usage/basic_check.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "2b1197399add8d8c0bb91beaffa51edd3b906492555a7865049ced7fa003364e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/usage/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "19bd9156b2cec45a414fbe87c123721bfba1240212baed9d619e94159a31c708",
+      "binary": false
+    },
+    {
+      "path": "docs/source/developer_guide/usage/usage_stats_collection.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "6a5a042bcb71991083a254beb759a194fe685e72cce91482db0b201cf32ba9d5",
+      "binary": false
+    },
+    {
+      "path": "docs/source/disaggregated_prefill/nixl/1p1d.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e37f84cd15206914e0bf6abe2551fcf810cd68442d17a825ee1cfe4c3fc2a765",
+      "binary": false
+    },
+    {
+      "path": "docs/source/disaggregated_prefill/nixl/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "1fbf7ab2e25f9fb2c594518b30f9ba74fdd58971738369b493adb3b2f2e97109",
+      "binary": false
+    },
+    {
+      "path": "docs/source/disaggregated_prefill/nixl/xpyd.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "a3189a7582b8cc66c9533f68f2b8dd686ecb814da36eb296bf3503e6167fdc3e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/disaggregated_prefill/shared_storage.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "61d776eda0197d4710444a7f07e4fa2f07efa6cfa4d10f9800024f5fe4d5b356",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/Installation_compatibility_matrix.csv",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "9b40e94a3eb1d03f97766cb3f860f50d2877a56efad40a3847b05edd3e7048a0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/benchmarking.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "83a180067a07dde1ff5ccbb6e2dcccb422070ef46f1c8c1dfc857e16c0e61ad1",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/cli.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "cf0351e1d04a29162ecfc85e496baec79cef1556c27fba3cd03fc3f7bc6c3e09",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/faq.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "2d9ce765580fee8f2eb4c9b962a9fee3f8b0b617431da6d6c178a49527f8cdaf",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/installation.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "472dcb7787d1c87f0cf56b6252354a5b1574b471129438b5b609ff4692fe1c51",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/kv_cache_calculator.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "0cb510abea179d50f71f1dffd6f833bce95f2213402a5b8ab75343c4f58649c4",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "d7be8a7a1616456d606dafeaf81b531ab530b559aaaa2349328ce6aca62c4ef1",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/disaggregated_prefill.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "215206dec2fa905a6ec2a6405553c9293b2ef329a1c3548641553ad2b71813a8",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "24cd30b5309225ac2e1023c3584006db4e57850e7291dca3dc9dc6cd8db49fc9",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/multimodality.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "3700614c8afdd4b4967946f97ebf69aa7df7783b31f01ed947e29668f1e44f2d",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/offload_kv_cache.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "9db62584b0a513d5b9fe85430a904e3f28a6a48516dbe6e18d011676c0e5d8b1",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/share_kv_cache.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8518ab24b324c1d7c3a1d311b42c9c028d55a2d9b8800b739dfa585f4b2916b6",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/quickstart/standalone_starter.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "283539814c9c7e0916173819cf61c9ca78a59a20f5bdb363246daa92835d0108",
+      "binary": false
+    },
+    {
+      "path": "docs/source/getting_started/troubleshoot.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "0536ebd337c254b57c9324a07f42a81a6b9983126439025e10dbd3f116007521",
+      "binary": false
+    },
+    {
+      "path": "docs/source/internal_api_server/common_apis.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "1a549da333d22e26aff95709cd0680f076f77ece292b3926348cf980bdaa35db",
+      "binary": false
+    },
+    {
+      "path": "docs/source/internal_api_server/controller_apis.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "fa769b30d773e50fe66adc18b76b5ad4b8c3447504a206e0d3f7fef4aa1df496",
+      "binary": false
+    },
+    {
+      "path": "docs/source/internal_api_server/dynamic_backend_management.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "d627c00681891875a23bfd5ae92cfd9397cba9fd1ff00b2b432304e03690d93c",
+      "binary": false
+    },
+    {
+      "path": "docs/source/internal_api_server/internal_api_server.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "f1304926851779a3c7de90acf3553b88da095ce2eac710f4274cb1cfc53ac70e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/internal_api_server/vllm_apis.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8b4fc1dc4b9ae63573bb11f4af7c7820c92f833ea79df0e62b273d63d203bb9b",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/async_loading.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "db71b9f234d1dacd03cce3801b2ec48fcfaf540052394b1309f9176483dde4a0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/caching_policies.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "dd7a559caafd77e81847cee746600e25f264461fad55f0cc7a1f4c88d9fee07e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/multiprocess_mode.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "f398a2cf0c19b95696e007894f96d160f80a26fb8c7ed37d4c9a86957cc6a0e2",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/p2p_sharing.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "9ce6d7d4544bedd2265e6a1ce5f2b610a19f252cacd1173142ab8d173363023d",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/cpu_ram.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "598b8fabd24ddc6008f7da614d8fb5b9fd1160ee2136c281c88fcbb5387fdb8b",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/custom_backend.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "ec3091ae944bf2974c43acb7aafc79ee0978bfeee4b640eddfe97cf11ccb4224",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/dax.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "afe58fff1e01bb1fc9379e9825e617ffabe8d567aa2da505bf66b1a00df25a1e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/eic.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "87b7bee20b0da74f0a3b9c427450649b1893e7824de79b3ddf82ac6b10bbf950",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/gds.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "ba2a10d906d85b8ce9d22e33ccebe5d8740d98f8dd3f3a29ba0a0cc93a6bd341",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "bf22d4e78b455dc93e354e52ff9883f82f73194a7496c8e1f86abb7746c46660",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/infinistore.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "1d6fd7c9dd745735c4c6db25ff92d23d28636eb68db1cf0313c4dddfac25c93f",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/local_storage.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "351fc54b8634682091a40e2d1c03c1edb1fa6f08b1e4519573be11bd10853380",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/maru.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "6e61b3902effec390aeac3edc5127eb1eabbd41b0224937847df11b86de9e3a0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/mock.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "90d8f438f14958eec9011fa5e8fd259c0ee351e8666d0c283e6d39f4bf280f4f",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/mooncake.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "3126c20712cc1dd0513d58e8d1a93e92a6f9da3af368d55667224014011ecc20",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/nixl.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "d4bcbe21cc80ca60307f447eb004e7ebbca9233552c10486cbcdb472d5aa5764",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/redis.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "dc96b642bfdd4e84a129d466717b653c4965805201a7f2b375de5c9a51e05445",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/resp.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "dfae385295534b47a8399964deeac16222c93afcc5e7d56a8386ea02248c014c",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/s3.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "99e4577cfd4abc89029149e3aba191dbf12f6df71c73c25fca1f78a9654201ca",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/sagemaker_hyperpod.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "3a74c7b921d57d43cc6015b5aa687b073391a588dc0c7eae5708d012e088b9ed",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/valkey.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "cc19c804dc85b0449e20b06cf47cf8d300de07ae77609271526219d112326bbd",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache/storage_backends/weka.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "9d3fd82d64baa9e85ad433b8fc5f1830eb490e50a80bd90c8071d25472549ab5",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/check_finish.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "55ed52e6c16310982e048b654f00cd7be37f82019ad6d5800b7ee1a848cb1a58",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/clear.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "0318d9399a834b7635c9e1f9a93d6615d13c2cbae5ab95fa718b284890475752",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/compress.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "5a7c66ebecd0378447f337189001203c8927abe18fc3ab2d9018342e2947f38e",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/health.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "4660dbc824a31a1c1398aee66a33046c50f8953ddaa3874c56ba660bb553ad13",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "fe09c0a7d7ff656063d5daa585f20b01de0f3861266af79e74bd6d8580fa8c59",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/lookup.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "43f993359a83b8686769cc949d441946f48cc4db53fb29eab2bea327d4a016c9",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/move.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "b76c0a70aad601d4db9877c2d406b29061a95831759dabd50ec17de003b3a25c",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/pin.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "887c9f55b948d9fafd1e6dbbf47f4696903a0daab8c6d48be536e2e4dc0ba100",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_management/query_worker_info.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "77f1ecee23d1019eaef486ce80bf68e1ee89acf4928963096c1f39f4819c9025",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_optimizations/blending.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "c9796412955ee61f51b44d7558db5fe5a723db1f5c1d89efb486f276cc10633d",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_optimizations/compression/cachegen.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "9aa24077b92cfe95305ad97eec8cac55f9e1695e887d623933d2bba33a846143",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_optimizations/compression/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e083a7a52aa35ff79a78d149d0c57728c232dc47b6e142517a51c05eb1f9fc7a",
+      "binary": false
+    },
+    {
+      "path": "docs/source/kv_cache_optimizations/layerwise.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e1219b09e19a17bf6c040f53033e106802ba4acee5618a88ca99d71242bcefc0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/architecture.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "adafcee15b6ad3f660012888c7bea866080ba0b2cf269b14a1f790ec421ec4a6",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/configuration.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "a73370753bd00f4229d1f0bfba7ff3b184a1dcb4e0d50eeeb5dee9878aee2f71",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/deployment.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "a54297d4a91764c20d9ebb25e0729e27aba6fed00cbe1be68ddf6d8ab2c0ce82",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "aa2d4bef550d9a5770b1983b646f2660da3c203c370f0a386a94a39ecf0d29f1",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/l2_storage.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "f1662e01cd85e5a46ec3fab33f1748c4c7c4d6bc02ff79aaab269bba6f977051",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/observability.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "e4d7533ba0ff87656a9e278329f10878038bc97413af08a4fbc9a0d8300019bc",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/operator.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8c88dbfa220c4c22351d2dd71b2a507b3ea3a2db195a18bdca2844b8bc51d813",
+      "binary": false
+    },
+    {
+      "path": "docs/source/mp/quickstart.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "3a699afd36bfaf76baf89f75d5b64ec6c649d58530826ddc698ed0a03e3148b2",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/docker_deployment.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "aec5e76e655f939909480e505784723c3f41c570e592cde406d6a0a0916faff6",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/kubernetes_deployment.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "cb1024cc6df53fda29a70401f663292f651946908640ac99ebbc4987f9cba262",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/kv_cache_events.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "4bfb6bf953dde146871c8fed56bf724d1ae7d6ce073378a1595a67937f8fa7c2",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/chunk_statistics.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "c8405e93702eb7ae59e0389b385ffad8e8e3a2927f412e8428a39d30b00f9575",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/frontend.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "8b363b3689813331e2759d9849474b38224b49d5b00543bc4cb0ff58489af597",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/health_monitor.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "279fee6425b7804af6d0686b00b48c83752f5c467468a9d50649b6551371d0b0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/index.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "ef76920c447f411f7769e977108902e73d369e382605cb595a499121f06f5cff",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/internal_api_server.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "a8291efaa36aabe118e49bafc29bc92ff14e67d0dd56998ce9d931f5412c0d45",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/metrics.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "c050b52216fa9405393bf7b7aba6c0f669f3890aaa1c437a8ea3b0f3c844f6d0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/periodic_thread_api.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "34640eedb44c56dade0f7f7006ef8329c00314b90e2b801266e1f3cebe3dacf2",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/observability/vllm_endpoint.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "b140f802d6eda5e2f78bb6bb7dddbb103858bb2292b9bd7adf68581117f8b5db",
+      "binary": false
+    },
+    {
+      "path": "docs/source/production/performance_tuning.rst",
+      "reason": "upstream multi-provider documentation; replaced by P4 native guide",
+      "sha256": "1e64267abbcc4c62fef8421e0028587463a87f77d7721d3b72c5c6af974075b8",
+      "binary": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/distributed/ec_transfer/__init__.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "4df29c1c2549dbb729600c6f54c172ac165ee34a897f1117e8679674239c2287",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/ec_transfer/ec_connector/__init__.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/ec_transfer/ec_connector/base.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "371ff31f4da748b1e04a27110f1d04e31f670e3221d961e938d631bedd168d87",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/ec_transfer/ec_connector/example_connector.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "0b2e76600298cc329b3d93ab42182667747800881f1d0a752d4dfdef21f6b7a4",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/ec_transfer/ec_connector/factory.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "2d1a3e99273afe69b96bd5a37074f1cd23bb2ddb3b1eb2c760b7640a959f98ab",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/ec_transfer/ec_transfer_state.py",
+      "reason": "removed multimodal encoder transfer",
+      "sha256": "eb422ef8de2a5678d26b69176b2b0034f6bbec75fe718a263d3bbb19193912fc",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/core/encoder_cache_manager.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "c86d3e5ae0c018bd258e862dc597db5b5ba5c9a63dde4d19ebccbc9b61cfe432",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/ec_connector_model_runner_mixin.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "8fd616197b38b6ec45ac327e48b39c74f6d327aeb6ddc239a6d6c37900a9cd3b",
+      "binary": false
+    }
+  ]
+}

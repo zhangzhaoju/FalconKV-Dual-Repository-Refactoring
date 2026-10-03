@@ -1,0 +1,3 @@
+# Preserve raw pytest diagnostics and JUnit text, including their whitespace.
+results/**/*.log -whitespace
+results/**/*.xml -whitespace

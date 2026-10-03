@@ -1,0 +1,11 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/_xpu_ops.py",
+      "reason": "off-profile device, gated linear-attention or multimodal rotary kernels",
+      "sha256": "9698dca340f279de7e9f8371bd6a14d6bd3ff6bc83dfa882a4154f1e8a0aff18",
+      "binary": false
+    }
+  ]
+}

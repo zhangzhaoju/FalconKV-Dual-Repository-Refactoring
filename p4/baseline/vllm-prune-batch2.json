@@ -1,0 +1,773 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/config/weight_transfer.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "89919f07674c039bdd2f83a15a831e5b2b81a06271c94bb9253c6b23107d9f2f",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/__init__.py",
+      "reason": "training weight transfer",
+      "sha256": "04dca5bcd9ca5f084697e9814b044ab80762d2c197a59cda4119380c79f55d92",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/base.py",
+      "reason": "training weight transfer",
+      "sha256": "f43980b6e2d3c56258d9a45d1db656bd8fb9f4fff522ed4493a906fd63888fe1",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/factory.py",
+      "reason": "training weight transfer",
+      "sha256": "382ca9f6b7984f330c2472dea878ac7fd67fe8bf7c05e8c426aefdce175d1aaa",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/ipc_engine.py",
+      "reason": "training weight transfer",
+      "sha256": "9f7a6c1870ef6a144173b008a9d7ccccd7a9a371be86c4c1f3ff3fccbf9de85c",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/nccl_engine.py",
+      "reason": "training weight transfer",
+      "sha256": "23daeb1ccddd1f492b1fdf184d96167eb00303d6565f1b0a813a496d6e43cde6",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/weight_transfer/packed_tensor.py",
+      "reason": "training weight transfer",
+      "sha256": "4a5dbc013cc95008d0c77d28fd0119172ab241bed1fd4dbe8e93860819245ff2",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/run_batch.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "f0285835cdd46db09511bb69fed4db811df6fe356add644980ed51cc684ff322",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/run_batch.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "33876ba58390555dce41a951adfd28fdbc16c6a71560e2810468bdd6fd510d14",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/sagemaker/__init__.py",
+      "reason": "off-profile deployment and pooling routes",
+      "sha256": "161ef5b3d3a281a836eb1569e36c53ec9080aff76f0d11a78e8461115d7c7309",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/sagemaker/api_router.py",
+      "reason": "off-profile deployment and pooling routes",
+      "sha256": "6778ddfe7ebab139bef5fa094b493935f8c1c0dec86d7344d10aa6617b383bb1",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/serve/lora/__init__.py",
+      "reason": "LoRA management API",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/serve/lora/api_router.py",
+      "reason": "LoRA management API",
+      "sha256": "7137370d75da0383f93c357941f17033f32febe9a34f3a29ac1638536acb21ed",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/serve/lora/protocol.py",
+      "reason": "LoRA management API",
+      "sha256": "a120da5d67a760e94df41b5e009eafe957a18cbd9dfdf7b2f01c734e4da51aa3",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ascend/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ascend/lora_ops.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "eac7cabb8b295fccaa3f0574e5ee5044caf17b7f5dc6704aa6c274448778c0d2",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ascend/punica_npu.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "b1c9d35e5d74e82bec3264316a6021e7ac6bf2c80d8f58c71c816e269e0a8d93",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ascend/utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "c58efe0064bc1a4592282cf9ef4e94e1f1f736bea9a70fed962d860344668cbc",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "5e42a4d23ac0d55736aba336fb5634331ff2003d42b156be47f645538ececd5c",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/base.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "49c2c390a57feda206b691183ea0cc5e73bf29f4e9ac1a99f47c3734ce0a6bce",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/base_linear.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "8b1433278a205a0c884ca8ef50509beef654d51ba5fbde3deaf85578badb2a41",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/column_parallel_linear.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "469dec4931b80251bf376140ed0c26126bdad3aab147383498b160f1dcffec23",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/fused_moe.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "64fe71df5340bdd694816f4257746389751d640ef07964d0e1e360b2affb2564",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/logits_processor.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "eae518a38dc710befeb1faa90fb51d75b8e7196235368083459a7c06e5ec0948",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/replicated_linear.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "a2cc096e97a5addd529a2cf5015f7394b45c65beb65d6ef4d2ea68ac39620091",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/row_parallel_linear.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "d0328957ea230b6451b3d8f5835aa98eb4385a2a6e90ef9ec31c4e423aad8905",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "3c68480e3bc89935fa86d7b9b7e3edbb0055f4418f075c9979328212afee442e",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/layers/vocal_parallel_embedding.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "2dbc4a594110a5ecc6cd2f6426733a5857330d165705466aa5e2c6f324022afd",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/lora_model.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "5b8da6cd6dc5c63d2974ff2eec7157db6c8657d0aa21a93755c8345e03674a0d",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/lora_weights.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "885dcf1f38d5bad2b362e94640da0e626b8bb0950c0df2e3537fba538bbb1268",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/model_manager.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "2b6bd9f079b716078c986e242d87a13b8880ca660ae9a7b18bd24addd890ec9c",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/torch_ops/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "4fc288e14cba8f60093a38df7bff476199ae48ef71a741bf19309dbc7c8988d1",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/torch_ops/lora_ops.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "33bc2aca729ebc379e1725c3c1ca870e70aa3b278f0ad3d2a621e6ec8ee99c20",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/README_TUNING.md",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "4dc46776fdb310d5573389f67e47b610d065cbf85465729ce6ff01c18720f896",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "2f72d6e0aa9fe7baba78f1c5f8a4e97c781e6c14ba16798f4b5347dcd2b370ee",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/fp8_kernel_utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "de0f5af924df0e1224fb26254ec57892e74695a8bac5b3e5a9db3a64afe7b4cd",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/fused_moe_lora_fp8_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "64f6d36051b662fa655eee58e414ffd10d029959e4df58abcde0206919cbdaf3",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/fused_moe_lora_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "c7838d536f70a817f10fcb5374b2e85669f9fe27c6d1fd59246d458e9c02c443",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/kernel_utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "62213517bb288cf145174e90b1549e683375f45a68e17d4c8454a85f817c1170",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/lora_expand_fp8_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "f3cb5f6bf2882654bb101d507d993e836479de9427cd150ebd1be6fc6734d6d1",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/lora_expand_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "576fc99e3f8bab934cce6ee8a554d3ba2a5643cea1813a45a73480f56ae851ae",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/lora_kernel_metadata.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "7669eeeb491e89df7ef4ff050a79d3934ce7a63b146fe93239f081d176c68881",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/lora_shrink_fp8_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "57029489521e3af8a14f983219647487d85a674b6fa0af37b3ea59101221bd05",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/lora_shrink_op.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "015ad5b7bb80a6b3fde07a5911f8b88599fcfa31b667af9f1d589a20d8a587be",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/triton_ops/utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "c61f36463ccda03742660f4ba8457455def5f827d10a60f5340fbef1d7468429",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/xpu_ops/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "ee1d1e48d004f4c5aa00fbe328209939a3504ac5e4802c4ffab05c26b11faab2",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/ops/xpu_ops/lora_ops.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "300c8733cead4505b3ec46a9b79ebefa5aa3bef9f6b4d65449d777fa4581b313",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/peft_helper.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "acb6c22e3f94b235c50f6c170f5f21380b733ffdfcf45c1ca68cde22dce046f9",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/__init__.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "0397032667423d104ddb79302df7a6465588e1803eb7feea2317a87a2982913f",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/punica_base.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "821d19bd5ffa6dd86706193921b3a83fbe0707e45b43de2c4a10c3736b416cee",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/punica_cpu.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "a892deb68cb868fc906b356a6c4ab4a4e3abf38f28c7f857bcedc03881f85d1e",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/punica_gpu.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "8e897b3376e7569ce120a4a4e7c337ede7ee1123191dc2e9802d02ad3b94e971",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/punica_selector.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "f88c87a8bbd33ece689ca51769c3aa4bd274de8b657da4fc27bca3e220ff611b",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/punica_xpu.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "623b0852c455fdc88baae4d93bb1a90be1b08ebec4be869e6c9d109f017aef2b",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/punica_wrapper/utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "a269baf381f6f6f00e5eb0b89f2d7d926285464d3ffa920031347cec2991317c",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/resolver.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "4af3404c076e624548b85039f50e693d3b8f8e62d00a0f881feff7e6eda69fdf",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/utils.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "372712d5cb04bd22cdc5f21ace47565f9420c59921360a4a80bad7d8125e148a",
+      "binary": false
+    },
+    {
+      "path": "vllm/lora/worker_manager.py",
+      "reason": "LoRA implementation (wire DTO retained only to reject legacy requests)",
+      "sha256": "e7bd07a10fb1d1f4eea0d51850ec64dcb80996c58977ccca88ca41a05e7e8482",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/awq.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e0dcab1b6fb1c00546bbd6394d10dd8e4da17044502575028c30cc2500a9ac60",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/awq_marlin.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "82a38f4dd52cd393f3992f5ccadc77c80d1427a66d56ec6a3e63b0c6e50208f8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/awq_triton.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "7d11fdad7e630d2a90b5d99cad7c31b4fb501222b14d474f900266b6f5bfce78",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/bitsandbytes.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "f42e77c670b33cbed7a732db72871a31b69a93774ab08b3016fd2cb7782ed6b1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "4ece972883cdea8aacf07279865ad54c0c710764c55f35ae89c3e9c57c51e486",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "bfd29772d97550faede418f28d8f6ad46125fed1717a6b0df9ce54950295d066",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/__init__.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "f4c808726be0fed6e3edcbcad55d9bd9635db28bb812d6fbc52b4576f9d9f57f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_24.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "4fd4346ba5298451cf875cc3d1253654516e8a94bb225d2002622c3d3eb0c974",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_scheme.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "51f1c6ddd0b1cab663cdda9d80392695cb1491b296ab0984cd0af058601fabf7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a16_mxfp4.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a59d629f2deef9c3161c7ea69a5a8e5cf13af8df76cea493a38aed09c31ce8cb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a16_nvfp4.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "8dbcf8e28c95e24f2b86d18d2b779e0aa309761a637e0e813ded20c7f6ed8b28",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a4_nvfp4.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "02d183b951b410801c51e76720603248102e9643711022db9a5415c932e0ec8a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a8_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "9db55ba3d57f86d566585166f3c0b1e9b7f874e563e7efcbe612774ace8c63a6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w4a8_int.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "730a3dd7c93e33c514a9fd28eec37922db6682703efa65ae7702e99596f01fc3",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a16_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "217f8c4655772849d269178c4b9a0fe1c9f3603daa30e8f388f876035bf7a658",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "dbde2a7d8d6702b48430674d4e5e9ea74df4b055aae696b5fdc59d74d86f9eb6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_w8a8_int8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a4806079457e068b0616b9c83f6883489e4c16a23c74225143af86278d00a0de",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_wNa16.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a549e5c085842c3c527cac8e52721a1752cac9d08d8695bb71d1334e4e183465",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/__init__.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/linear.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e7eec6f283ea1ea29407eacfc4beb3265e33c4306aa7fe3615e449a706dccc63",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/module.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "27542b5c4f1ce28ac0f940b7961cfc73d423f39253d7e25fb08dd8f507e7eda0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/schemes/__init__.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/schemes/linear_qutlass_nvfp4.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "2de49a8583b87708b97e42c4faafbafa5678530ee3f30e29cc469ed2e5291546",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/transform/utils.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "cceb7e3b402c67defc7a7b4fa0ab80aa0da0cc480c54ae45996d7819504b7eca",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "4e4414e7a556b902fd9b3bec9140e7eb9c2a086a368c30df1e5dcef964a788af",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/cpu_wna16.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "34c7e25cf37215a300775f0552bfa6e47d69d0654ca9cdced13c5a5c14cd6c5d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/experts_int8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "b8439cffa1db03144793890656b55729763e3439ac66128fccecfc7fd3bb13ef",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/fbgemm_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e1660b0f50c409835d2b5be557d24d9b9c50cf4b40f905b93d92eec22aaa4f53",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a078f473dcc17c1c175f7b449ba41f9cd7769a3a8053d6e03ce70510e43a5f30",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/fp_quant.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "fbf63aeeeaa15989c5dfe5607a512279863225d1c614d1d053b3741194644b7d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/gguf.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "bcdcc8934d633c771fc9b1b50e95bce122f66520a7191c0e8c23cb159d254898",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/gptq.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "8e08411169fad27985d729aadaf1538bdd736cad5ba90d243b06e9e6e9ca9702",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/gptq_marlin.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "2bc5dbba0040a5677224b86fdf48b29929100da5c0a830b968b9b7db9d952302",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/inc.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "2710b3a3debad5bff0b744c7814e99c9e28095d9f1f93463600d54f48a895f48",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/modelopt.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "d544cdd0e45bde55eb27d8540f63bf8763a98bd00b7425ca60dec53e0c72e0b3",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/moe_wna16.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "90343efa62785ec0a9f79c91fedc441086466413f43da863fd1a5310a402d157",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/mxfp4.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "40e59e5e7c5ed45aff8327c9232aa04a95a984fb9dfafefb6677fe4982f40822",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/petit.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "d5721409c292c524972a01c06f94ad13d7fa51fd0389273ab9cad2b70583b4a5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/ptpc_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "ab5e7774f4bfb2324bc7aedb975089a2703b5c4026f675322000633136c83c53",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/__init__.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/quark.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "4ef2dfcd80cff42e3be54fa6c4c43dbf24c66f3ed51efa5143c5c8803afdb674",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/quark_moe.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a0e366c24dc52086b53494089a3f86f02325baad2249e38ebc064331a2a31bee",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/__init__.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "a51ae2c19042e56fe24464912f9dd02d4074b1de5cf25ef4b8a747d4fa21f54c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/quark_ocp_mx.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "657fa80447f3d824c18c2d67915fc949fa08647b4aee6b22efe8ea9a6978bf2e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/quark_scheme.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "54c3cd509010e8fa869469950f4c14c776b636cb53a76682e43c7ac396531e7d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/quark_w4a8_mxfp4_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "17285e202891a5f9dd8b964f2e7cd57c25e299f09d5ef6cd4b390de4a9474b59",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/quark_w8a8_fp8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "54a23517559f47b6d79ec32902f8a947f3e02e8063199b2734152b27341bae67",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/schemes/quark_w8a8_int8.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "e7c876c5d3a0a7ad05e48f23b8a47991fb3443fb422761e754ab1f0f82c5c51b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/quark/utils.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "cf8a237189be12a03f325d9e5145473a3d8c94cac7b4019fdec33033e9f21c04",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/qutlass_utils.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "7c4d0eaed5e5f993c4b1cfa65eabd7fe1358fe9cc6595bab52b0d212ac3482cb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/schema.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "6ce1dcff4282913611e018698061ba49cd60d257a01610f2b7c4bd1e38c522dc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/torchao.py",
+      "reason": "non-Ascend quantization provider",
+      "sha256": "54505fc8a6fe19e6878d9e758fc587b59988d48ed657649acf8c0a3720c512fe",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/model_loader/bitsandbytes_loader.py",
+      "reason": "off-profile model/weight loader",
+      "sha256": "903421c9888947ce45e16021696ba32598017ed4bf6ccebeaf4659087cd4eb61",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/model_loader/gguf_loader.py",
+      "reason": "off-profile model/weight loader",
+      "sha256": "703648cd9d7c9da66086e2b54a2e9dea0c5ef86c89c2f1dd429039b2363ea812",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/model_loader/runai_streamer_loader.py",
+      "reason": "off-profile model/weight loader",
+      "sha256": "0d72ae955e42b8d2ca8d4c1e3e96d96fa82304cf8d5b0a23ef57ebaf1ac045c1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/model_loader/tensorizer.py",
+      "reason": "off-profile model/weight loader",
+      "sha256": "a7c374575a6f04adf118e11fd69f1986d2e18ec60933e2764215d8587fd5e248",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/model_loader/tensorizer_loader.py",
+      "reason": "off-profile model/weight loader",
+      "sha256": "1aaee9615b6b3abf1e9e049259b5bdc75aada28b391ee692f99af35901ef478d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/models/adapters.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "96b6eff718fdf4c48b81124bd69673584dfb895fea8fd5534890bf76a9f8c169",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/warmup/__init__.py",
+      "reason": "GPU kernel warmup (no NPU callers)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/warmup/deep_gemm_warmup.py",
+      "reason": "GPU kernel warmup (no NPU callers)",
+      "sha256": "ccd1917610efab61907779755d7323252a374484493d4af591277e6b333c6b6d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/warmup/kernel_warmup.py",
+      "reason": "GPU kernel warmup (no NPU callers)",
+      "sha256": "5522f410819c639f4d42381e7d8338bb951b82a4b7c739abd65675498c28d9fa",
+      "binary": false
+    },
+    {
+      "path": "vllm/plugins/lora_resolvers/__init__.py",
+      "reason": "LoRA adapter resolution",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/plugins/lora_resolvers/filesystem_resolver.py",
+      "reason": "LoRA adapter resolution",
+      "sha256": "cace09ca52c521cc733bc99a6480f738928cfd96cffc0ec9461df09aa36cdbf3",
+      "binary": false
+    },
+    {
+      "path": "vllm/plugins/lora_resolvers/hf_hub_resolver.py",
+      "reason": "LoRA adapter resolution",
+      "sha256": "76c5cce5595bd9854d8584de50a685fa0af3c7e9e7378238d6d511e8cec59514",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/lora_model_runner_mixin.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "a033de85b3fdb032465152dd650276fe0aed70eb406b450a73281ce34613e19e",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/lora_utils.py",
+      "reason": "removed training/LoRA/pooling/batch multipurpose entry",
+      "sha256": "5c5f363f124d140e0047a054936932aa680a1dd7c5f68ead90b89b1042db30cd",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/pool/__init__.py",
+      "reason": "pooling worker implementation",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/pool/late_interaction_runner.py",
+      "reason": "pooling worker implementation",
+      "sha256": "e45c92414fc6803cc9aa4da2c2bef6c525ca35441dca705c75d45e8dfd9b4c47",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/pool/pooling_runner.py",
+      "reason": "pooling worker implementation",
+      "sha256": "300569a38f84a67dc28575e3e1e8689a6f7ecf3fdca397177399cfa2cfad197d",
+      "binary": false
+    }
+  ]
+}

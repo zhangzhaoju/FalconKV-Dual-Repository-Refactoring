@@ -1,0 +1,89 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/tools/install_flash_infer_attention_score_ops_a3.sh",
+      "reason": "other-hardware/multimodal helper",
+      "sha256": "838d982638eac99e84fdc4771fce4bc133e00dd6e7349b21aaf403649ae491f4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tools/send_mm_request.py",
+      "reason": "other-hardware/multimodal helper",
+      "sha256": "f908c2d2183f3de7595037e7b085756de474a3dc6847eff437ed1572b5c534d6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/dual_chunk_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "983b90bb01318392526da7331ef30269b508b9a46411b15be4cae9d35f07c605",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/dynamic_ntk_alpha_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "8240ff3a622a76ec4852f060a84a85bb6d9d5439b8cf33a6b49e528114093807",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/dynamic_ntk_scaling_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "ea5650023d6ffa7bd16d990b211f7fe1af67cc0733af4f58072385ec85c3aff5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/ernie45_vl_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "2500515ca120b31379baaf3707193cb5292dab3aaf7181feb5225bba1eb49308",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/fope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "46a4508fcb0c49acd13981998c5f5fdd5ed8264467ebe4a1fb5c3a646de4637a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/llama3_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "10c787cf9b41e212835ebe9c7b81857c5a6df31d371ca62599e7705d4803707c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/llama4_vision_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "2a7dc58d4157efd768db9407ea9b71a11b5fbf0c3f48eb76c64ad0be2631ee8b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/mrope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "5598a169ffcd044f068de14b8a0e25af0ea96ece597c321222ed67cac3fa1ef8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/mrope_interleaved.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "53cdca1c4b7417cb4ce238e00e0a726d7616e3b03772c69f845393d6a5db7601",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/ntk_scaling_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "2b345f86af1f44ea959b912ee844e6419caf73c2d98c82b375ed1919cafc3e47",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/phi3_long_rope_scaled_rope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "013f3d8660460a6194b57d61a32e1a80a65f61d1ddf7c7899c4d5f1a5ce44150",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/rotary_embedding/xdrope.py",
+      "reason": "non-GLM rotary variants and multimodal positional encodings",
+      "sha256": "96212c4e5dd2391041777a80a447330e5d4bd9f748bba59ffc0c3c3e292800a4",
+      "binary": false
+    }
+  ]
+}

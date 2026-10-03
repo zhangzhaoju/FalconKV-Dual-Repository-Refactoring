@@ -1,0 +1,3005 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "tests/entrypoints/pooling/embed/test_cohere_openai_parity.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7656060631c36a3a18b7efcb98457f6298310ee24f9a54e6e9042e31491c1b73",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_correctness_mteb.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9721039a0dca5ae51dc30ed48b51639e64c695bc6b3ad96a136025e9ab551547",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_io_processor.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ab79ba02fb5778f42388a803edb74e5894bb362bbf3aa7ff837c61cc38b372aa",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_offline.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "472769cd2a687632289b39747ff97ba6b700686355151ba784ff2697e1987e85",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_online.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "daad8f27f8ef5a4adcdba2cca944c354de23892fdb2bdda3c760264f4dd57c2c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_online_dimensions.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "87ebf0d262a671aea6cd3b7e67e8d2c352216c5f37b51ebc59e39bf7c1f31fc8",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_online_long_text.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "565d8d8f0a38fee54916c6ea24d1d34e504f442530f530b6ab79f51870a13cfe",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_online_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bc1abdabdb94d0f381c8b2e8283a742aa69d8ac670f7c96772a7c07c803cc03d",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_protocol.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "afd9852d14bc72cd893169129b0a72b62617082402182b98a42692ab02f4aa01",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/pooling/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/pooling/test_online.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "33cef7e3103ac74e20235cadcc2a4145a5d807ac6dd30e74652170cf78ffed34",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/reward/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/reward/test_offline.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "adc807e586095f1c6fee4d05ed5cc3e5468f5fd6785ae994d2ee70c8f91919ee",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_correctness_mteb.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2805003a8a604e7914b7cec25050b2d00f3d9e3637c43efc90a2fe3d73c9fe5c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_offline.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9516d07ae905a0791dd137579b33b7ea41b26a0546ecb4da7c6143318d83fa8b",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_online_colbert.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a05e40b84fcbc76e5cc05ab7adddd7206972af985512f90710e2ac7a9d06bd9f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_online_rerank.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f0c1d375fef7ece78ba293868328530e57235d63f6d46484fd20cc931fa42dbd",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_online_score.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "289bafe7745a2bce952d7dcedf283dc2211def0541803ad9d731a5f653a88f35",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_online_score_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cfc1976bef2a5325356e597b09dbf4d9a920b27680ea0ce223da39dc0306c6c6",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/score/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3709d63d519b473ea9894f6364c3a14c47d4341bf5fefd6effa63a0ccfcde9a7",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/rpc/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/rpc/test_collective_rpc.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "697ac3cace7e9689f67bb6448aa341adc712cb506a9758d078cfff1a5a545aff",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a5dc0f16f7561d124d33a491181e1affb91f1f1ae4d80e42f43ebc4524e0c1f2",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/test_sagemaker_handler_overrides.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3f6c16c05c48b5ff5430dac4a16721057810ca848f5bc5f17dd82107c728f35c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/test_sagemaker_lora_adapters.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "157d372bf5f994e298e87fbe6a09e624ff3afa546e085ed492cad3e3d0234932",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/test_sagemaker_middleware_integration.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "786d9eb82fdf0154e8fa34e2c54d40ffd1e280c7765fd0d18eda8c6fa03268be",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/sagemaker/test_sagemaker_stateful_sessions.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d60f9d4de5a94002c50294b83bce0f26a826dcc3c32a2373e4c656081c80229e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_api_server_process_manager.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "020e2bda1953313525865a25653bfa4b39e64a9f45120c6a59b4c8e35fcffe06",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_chat_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9226291fe3501313145a2c019f618e02c8b3ad967b197f7f96e0c95480c2da9a",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_context.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ea56cd995c1e11069363238dd180945581ebce02f8545ce0244ad0e1750c7292",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_launch_cli.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "116482f2f3639351938a05967bf6618b0a715cf13c7fce2de20893155da08187",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_responses_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "09ca428f78275b918d296eebb12ae1343d8c4d5df4fe381b158e03ba412ed8bd",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_ssl_cert_refresher.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6649ba2a8d7e31550abf014c6695cee8e82d547a9bb6cd1b7fa39efd4f386a36",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f7964af3e39f8abf4e9f7c7b4655786788fc926fe04d421ce546313ce7ff8eda",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/weight_transfer/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3d12f25c52d8936e9e1f763947f1ed2529b3fde2b9170ec2fb5962baf325cf72",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/weight_transfer/test_weight_transfer_llm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "60e2e4ee78c7789fa537123731835e8e90c19f16de6ebf75519e25387ab97a8e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/README.md",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "92ef0ceca9d3603f8ff1d89a40003dfb1e37762482aaeaad3a20b98c493c60e1",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-baseline.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1722d8418edd469c015dc21a584f55089f2c9b9791d4d40fe86088943b259b5d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-flashinfer-mxfp4-bf16.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d7b4b1f9578a00f8740c20faf0b1bc2a22ae40ae4311aafce37d07c47673e76d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-flashinfer-mxfp4-mxfp8-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5bee0fb1a6fbba3eea0f35231cd33ff65f629c8b02485165d74a3431f00797ab",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d4dfd3eb4d244e3e7cd084867cffe14d15e38493116993045de32a56fdfff706",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-rocm-baseline.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d70c2371aa6da52a1a22a7f2450b5b2368082ef7964f0c4a5dbb82365491c434",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/gpt-oss-20b-sm100-fi-mxfp4-mxfp8-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "de08436fdac2206db8de0bab5b82d02b594b69663bc645344fb78cbe4b083823",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/models-b200.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fe42c176e54f32fe32e2e7e6ff69151832fdb833cd77d63e1b43ef4371fa13de",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/models-gfx942.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b7cf43d03ff842248ce0898e57fa8fa7a680a82468e759de8f6dc556aad54f7e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/models-gfx950.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cb1fa264f388c03d77eda30afa0c6e84db25676db1398d5252b001910cceae4d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/configs/models-h100.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bc4c970bcdaffd3c023356ce6a0f9a23c74b8e8d573f7f6383d6842aad44e270",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1517b14d255d15c85a9fecfc37c3860fed6e4dee2658c25ade6e4d9fb28a9551",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gpt_oss/test_gpqa_correctness.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "714c59f0f3ca80fa6d8b5d0a8fb2febf95ea8034ac3710d305ca7efbfbe5b904",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/README.md",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "68b153c21751cc018dc13bd1c24ee26f7fe7f05892bf1363625f535ab3fc27ec",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/DeepSeek-R1-DP.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ccb09a7bd0688ef26fdf83fac8b20c37cf4876053a6cf8423062fca6b075c282",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/DeepSeek-R1-TP.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4c3667aefc2a9a64f75ef4b2c91ca3d0839df8c676f78f045f9b642359ce098e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/DeepSeek-V2-Lite-Instruct-FP8.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "70ac3ab96b7bdfbb371ca92ebea1ff6572147b4a3e95e049845316030a36c876",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/DeepSeek-V3.2-DP.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "567fa5b5c427c3cf5149d5ed2156cc1c4a2304d1e31f66f3e672a6df801d4b6f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/DeepSeek-V3.2-TP.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "070099fd60a4029e2bf1140a10ddd26f97488f0469878140d63771c2f5336fe1",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Llama-3-8B-Instruct-nonuniform-CT.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "52e72e21d741bdd61c1402f385e16a1cefa04bf8daa6325a7d334a0e2d7b19a6",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Llama-3.2-1B-Instruct-INT8-CT.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "daf64f35dab444c601cff152fae0ca6d387d241dc30d755ab675b0a99e984b16",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen1.5-MoE-W4A16-CT.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b502acfaf5ab4d2f0af985296f9c3c7593bdce5274e7f8555054feebb310be36",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen2.5-VL-3B-Instruct-FP8-dynamic.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "28bf1a412a65c16b51ce731e8130629cc682131db14cf1aa48a35b9f4d1473ca",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-0.6B-FP8.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "dc7edb2651c53e701a3cf09e373663e1c5f5d7d5c69b03edd447974f0f24ff5f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-30B-A3B-MXFP4A16.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "95a7fcb5222afbae347129911130f74380d28001729a71b8e6059173eab37088",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-30B-A3B-NVFP4.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8b65c35c04b9eb0b5f3e8f412c6fa0fbe6632172da09679fc267ab41ec95f77f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-Next-80B-A3B-NVFP4-EP2.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d88b9f281d0fa3f9c3c2f7ad8659b2d147da5f26a63a241b005c628f1c7dd65e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-Next-FP8-EP2.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fd94933fee0f531ec8cc946fb678626754192ed40e0a16770d0a23ae1ba03504",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/Qwen3-Next-FP8-EP2_MI355.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6b865e638b7ac6774d3b796cf07abb2ca10eb478311a368f238f130d2b0507f8",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/models-blackwell.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5870ecf37e4a78d5b31380dbbfb465ed35a1baa65e22c33729fb46e3681046f2",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/models-h200.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8fad0f0d5809c6a0ec7552a1be068a2903620f2e862fd6e09c150adc5e04df98",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/models-mi355.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9ba82695e08d1a5360712300a8a594b5472e5b3c133827dbde2ea9cbbc5ab614",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/models-small.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5f0f558cb40abb5b6a71d02313b1d9dbe15defa9017eb6eca2e919b3a12a8fda",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Llama-4-Scout-Fp8-ModelOpt-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "92e4298c96895f4117648109286f8c922df2160a5a7ecc461b58fa755efc3eb8",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-BF16-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b9ed90e955eeed2fca7967482897748daa770fb5301c0f73a80e9f70110ea4f9",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-AutoFp8-deepgemm-deepep-ht.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "07e2434c0cd4ad08e1fd3d05b4b7ae172f8539d771346f8ed67e5beebcbd8567",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-AutoFp8-deepgemm-deepep-ll.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "49f19d70ea00dc792b8389e5fb17c07077397eca95055360a6cd4e1c52ce666c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-AutoFp8-deepgemm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a88eb1df41fa4d69e5333a1ad4597d78ef2aa3ddfbde2219a475374704c9eaca",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-CT-Block-deepgemm-deepep-ht.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "438792bd805347c33cc6d3b8a0d8337129d75cf35b13341b72406a1925c70e8e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-CT-Block-deepgemm-deepep-ll.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1252224ea991818b1fcf49fbd28bd38ad63d227aaef7383a930119dc052863f3",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-Fp8-CT-Block-deepgemm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7c3556073a8aefba3d5c883dc026b10c91a960bf232e308e780c890c267f7bee",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-NvFp4-CT-fi-cutedsl-deepep-ll.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9c6f991e58a68cd521e25a2ea0612e4dce4bc1350b849c9d0a3f7632d1f5b151",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-NvFp4-CT-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0566c86bab231788078a3415013b7bc99310484fb6a955564089172c6c4bed4c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-NvFp4-ModelOpt-fi-cutedsl-deepep-ll.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fd2e1a1410123f556d634a2dade7f5efa4a91bcceb9fa512b95dcee33a680cfb",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-NvFp4-ModelOpt-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3af080859acf5cef3952b41d3bbc81cce2a052b84f097d23c76c3e5d337b5b2f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/Qwen3-30B-A3B-NvFp4-ModelOpt-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "13b76444c8cef092606aefa33ddb3eccf4b222a0c45f103541da16e6ff1f43f2",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor-dp-ep/config-b200.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "549b7578292c7bcbb373526b5685c7811916380b6e78998acf114ef0466c69ca",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-BF16-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ba23cab7338b4433cd68f8f6bf9c1b15ef75d8be8b3e0821c4e8166916dc51f0",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-BF16-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "02b28b9508b0c67646714da50195cfe6496eddc207bfe774554fde3fb5b02562",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-Fp8-CT-vllm-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8cc557ce57b38946da5ae682770e711546202bb27ff0a0b42b988e9f79433613",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-Fp8-ModelOpt-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1e54a5f09a7f0a7eeba5c50fae462791454e4543e6921b54a3b2a1c89ef6f0d2",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-Fp8-ModelOpt-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4ce672de05cb9a8891946124be855db6b954c3e3603b06aa5b74b9532f210c27",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-Fp8-ModelOpt-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "884dc8bb8f3881702dd62dd8643c665a83b99ef2e8750aada62097208e1d231c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Llama-4-Scout-Fp8-ModelOpt-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9275a463d8f09f971fd59bed7c0851b79ed63b8fba73d0f4b9ef6f8c26f901a0",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Mixtral-8x7B-BF16-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "77030a3d07be1500c798e38f19f49d8b6c02fee8a5cba3ed4b3cd717f21e9dbb",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Mixtral-8x7B-BF16-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "54a808f2f8074f9f44fcd558db095f6760816acf57f4a70d5a800e7d621f3ce2",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Mixtral-8x7B-Fp8-AutoFp8-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ebe54f30b0ac83f6f46860c4d7f81b93fb96db68254f72795b1b367b7733154d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Mixtral-8x7B-Fp8-AutoFp8-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d42cd8a122dccfdaefc824ad999de0b15f6e11b56121b643a05ed5629cfae240",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Nemotron-Nano-30B-Fp8-ModelOpt-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b0358a88a273cda5a785ddf791978f37b8a6c7c5b0508d5c4e63678c3343d7a6",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Nemotron-Nano-30B-NvFp4-ModelOpt-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "84e4b15fdb7195552190a8e62ceaddcffee35988e52ca1d6e2574faa3531742c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-BF16-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "508f9eca3ec5bc3ed6a9ee9eaed95336bb9435ef41cfd1b549885d4799a63d1f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-BF16-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a4d63af93293850e21b1671ccf127bb5bcb3191eff8464f6e61747ecd9c886b8",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-AutoFp8-deepgemm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "73dec56e124d92df589b50ccc992a57fdb8572441540f72d34975d092733d266",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-AutoFp8-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d88242e540fae2907c3053916770f4f93995315f5ee48ec8a2c4dcb98b64ab30",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-AutoFp8-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "60172d3e20c1434be5b174bd257f544b5b3169578cff0cfe42ef08412adea715",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-AutoFp8-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "df9d5df545b9a1a46717183279e87c676ca63a4c121f0099b06d89d31d3d04ca",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-AutoFp8-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "43476df2bae8dcd710a18511ac793540a758f66999f5072391edf77a5301ca5b",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Block-deepgemm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "757f0b2b18abce5f191add7cd77e3cf9841b25a0180125c569d6bfd0b0e5e242",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Block-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "eef199045cbe618ac82fb714ad50c375c1b7734f71301f0c14b820babfcabe4e",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Block-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4d73796fc7dc4cf11ec9b656ec0ddb5e7c6d7c684cfdbfabfc654d370d5f8296",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Block-triton.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bb3f7ad9bbd413b42674c5b3439731a7d7cc37931dfa017a23c3faa6766ee352",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Channel-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "34d6cffae41aac7568d7277e7105bb95ef20fe9564682463b4592d9f24b2aa6f",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-Fp8-CT-Channel-vllm-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0450088388b15bd7db5d306b6b9a55928c225bc23b31f932c1e85edfea262b18",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-CT-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e2cbb656708d5173869cfe70a445994b6d774e05ab90d20be534fef077b0ef97",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-CT-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5a87b3f0d447fb962544478e1e61b14eb647ac4e97f03de1d908c4ef1271953d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-CT-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2499f36973a888c729d8b4432409962479f59cd2c98e67dfd49f3bc89e9574c3",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-CT-vllm-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "83686d292cc24984b78fe57e65090158460b40d702d4609d11c0c2516893582b",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-ModelOpt-fi-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4d3807dc91983d498f7b31347c8adf05826327886b8a494bf987b1fbd656cf5c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-ModelOpt-fi-trtllm.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "37faab64b2cae41ed55ef2e6ed1000558743d58704e6f69f45354b832013a9a1",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-ModelOpt-marlin.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a9c523942b0e7b2396c93469c4ceca8eab6bb8ea04b8bbf39769d1d2295c04f9",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/Qwen3-30B-A3B-NvFp4-ModelOpt-vllm-cutlass.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5211a6e654485b08ff7b7f3b83cf1fb46134734a48192632d1dd77bcf33e0024",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/config-b200.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "669e122ff89bfda3e9ebbe1cced991a720f4c6ab7b768533f1f7032aa956e3cd",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/config-h100.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c5b21bb20563edf636396a3f8fa482482e1a0b29c235e08b01914de990f59a5d",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/configs/moe-refactor/config-test.txt",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2310872d69d13b03585e0baa9c97d0ad55cfb2992cb74c3e221a023f2562264c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d1dd3452c0826c0aec377f2b99e073953d36933084e3f517dae648ee7373d1dd",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/gsm8k_eval.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b8748a89daea59dd6f801fb3c9d3b33469c5b33a1e294d11ea498a713072223c",
+      "binary": false
+    },
+    {
+      "path": "tests/evals/gsm8k/test_gsm8k_correctness.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8d4b259a7b132b9b6c7d7d64ab247cc5800a4e64ea53b20e764ec57a8ce3083b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/allclose_default.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "81bc751e3ff8241643323c33c5e3a955a431ef7a3889ccd89328bdabc3f90788",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d4a82c6446f9dcdcc80a10ff52c38a2a9ee02c53ab5b3721c42f9ec57486c35f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_aiter_flash_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1884889f854d54f11179ac356da4c90082db641f0e979af9327fe7e05e6a160a",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5577bd776f466879d5f719be9615bc7c6842fee2463cf9fcaef484f1eafdb219",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_attention_selector.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0fdc7a4fe99bf68ada2022c8b2ca2bd7a72bbfcef7003bac64d82dbdbd74091a",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_cache.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7244f1612d6f71ad6ac1442d54826c82a54c3d7d89887addee111897e84f4dbe",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_cascade_flash_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "24d1e3d81978f1b73953a52e35d8b798ec5eb04ac904f1125270a99d3bd51a90",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_cpu_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "18d75b2f71fb42ca09777b02954fd09bc40673c41aa25c26e1277e744ba85270",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_cutlass_mla_decode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3b10a6bd15cdf149e206a4f6df466fbeef22931cbaeee4d0534499511605d3bc",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_deepgemm_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "708dedc582b56eee3607d25247fa1a535cbca0d74302015f0dcffb508bf6520b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flash_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "698c7fe756d6e5ff2666ae3272b1b4829ae4a83fd1ef1262b65fa6d90c626dd9",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flashinfer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1b44330920416ebc3bbbdcd1a0d2fbbb41cb5f639a8a103aa1e5d1f98641a911",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flashinfer_mla_decode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5d45cc93eec4ae63dbacb7c678dc52aa87d864d1f5e419fe60d55f610f19f5ed",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flashinfer_trtllm_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f35ac7a506b55b2b4d4ce649d18722f60690d85f32407720b593c4a1d76f29e1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flashmla.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f2e0c590877858f0ad97be60bc739d44bbae8e668514d1845efa278bb9a542de",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_flashmla_sparse.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3b537b0686344460d5352c77610c3581a8aec8025c3dc64223bde922eaa2cca2",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_lightning_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e7c1836bc5f69229fff6e86dbcbf5799f6543f1144d76e01110eb3d62871f9d4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_merge_attn_states.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c3881c7cd4003c28016239552aca33259004c54f4c7a3989e5b61757204739d6",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_mha_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "caaac9683334ab91bff1f278c55f78731b9201ac66e460e02e24f354d6f2c5a9",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_mla_decode_cpu.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b0d0514df85788656c8f0ff993a3ddc6cb2304a9a97864e57303f2f6a263517a",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_pack_unpack_triton.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4a3fc60985a349adbbfc2c17ffee7210fa1bef318f9df2c0449704b30267daeb",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_prefix_prefill.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f9b4e86cc225abde33655ddddcb52328988a7fbc981b644a0af385a706fedad7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_rocm_attention_selector.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e25eff11d72fa967bcd07a898fb1dade94a54fc4eb752c8b1f7c84ca419b615f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_triton_decode_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8c397f452ba7e4cebc34144a4a76fe226aa3409faff1f16e3e71c76b553f2aa8",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_triton_prefill_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "11505b48857b9a793ce6d8af6fb08aebdddc931c16dcff079189cb652ca47536",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_triton_unified_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c54c49b0a83275073b90ceccad1c9e90e53293edcfded1b03de639a248e6d062",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_use_trtllm_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "898d0ba1ea5dbc80100397f42981bc05c5d5165bf73b68a7ee9e4345d38a0f83",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/attention/test_xpu_mla_sparse.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "53285cad061a174ed801cf11b6e4890baf0bab7933e173966a88ba9d9eebe1a8",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_activation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6f317a72a2f33a57508f69c098fa5532a253fa16aeb9ab5569be7001f7e9c87d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_apply_rotary_emb.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c2e1f090cfdd1efcbe68cca82f800aefcc1febd1a9f27adbf7694002e343185f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_fused_qk_norm_rope.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "69f329c47b9287e2eaea8ae36bb1777ed0fd983d75d0bc15bc0000b9eb2c6b71",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_fused_quant_layernorm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f793e7cdd3aa5224eec8097d8be05abdeb7bfc573cb7e0fc2ab0995a740f39f4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_fused_rms_norm_gated.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2fd2eb3cb42c8d5068a71a75275db07830e0cac92d97553ab828be2bb5b05fe3",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_layernorm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "be9a14a81e7b746a06dbce7412553c21b662a18c573d12c75e80bbae76095f21",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_mrope.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "74c53610cc2bdfdc00bb02c1de79f3eb691826dea052d4711a8f61b5b6ec698f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_opcheck.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a78cfc09d047abf833179f7d2839d383165c1bb27b38cd1de13731c6f73f9cae",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_permute_cols.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "36d821fdcb0201e116c1c99f54d9586c71f6d1d170cefa7d8442461b3d726bf7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_pos_encoding.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b321234af714c54b2c50fdbfc7808daafacb25b3a918ce5709c3d7fb2887b752",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_rotary_embedding.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9003301bc44e89aa5f7fad6d5e1fab8ba62ec40da6db2abd39b3608dcc7fdfc5",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_rotary_embedding_mla_cache_fused.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1717843120761c36937453ae74679e354157d77feb439cde02fd0cebffb019f6",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/core/test_uva.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c3340e4c3d61831ca087cbd729e4963e34a43659564967596679e3b87b0a5ccb",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_config_manager.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "99d983ac625000cd2048dc7af09e2e205f27b434df837907fb539aed93b13953",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_helion_available.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cee7cd1f46d9d943b3f4d76afff56827c707a124db81b752df940e5da87d765c",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_pattern_matching.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4ad49fe84d4d96ad406c0e808740390a37d8e3750d34fa72a7c5cc3c62213049",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_register.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ca407051c3e5db8ceed812bb39be5c77dc545b21ab44ba8e1c1f443749299f9f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_silu_mul_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "55e14fb1c9ce00ff117860b4f521d495c60aa26fc71268cba37e9c677e44ded6",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/helion/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "32c3cc8f475d22def5c9e550dfbcfd1d8b468069519679e3c6168d4cabfe2049",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/mamba/test_causal_conv1d.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3a3a4723a930951061e3582e9e8ae80d1517fc09b529f799dfeee4c2de8d91b3",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/mamba/test_mamba_mixer2.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "19482af2c7eee0e42fc4463f5012305d80329b0e73c46ab7eb5617a7036f387d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/mamba/test_mamba_ssm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c97100818c8b25ff76aecd85b6661aa7ad4beeba0a626cd93c09d4210241c8e1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/mamba/test_mamba_ssm_ssd.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "06b9b056f63f1395777056ba95167f4f202f0a5c9113bd56c564f2d8886927ed",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/cli_args.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "02a777e4a443c0857fb3107727932b1a57b70e5f7bb11e04fcf4f41e3039c00f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/common.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9cbc7b1948bcbe6f171e8520f5a4ba8fcc5eaeefa1fbe06bcc7ac4998d5d93c2",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/make_feature_matrix.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "684230a3a3cc78c4d8acd4a97891cc3912515a30af7f556f0cb6f072a8762120",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/mk_objects.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1468363534b094561febedd42df4ab7f5e76a8185d41f3a4902bb9a2373478ae",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/parallel_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9b09f670acfc04caff9ef560c4972b887fb108dc53138ce4beff2d815f430586",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/modular_kernel_tools/profile_modular_kernel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "87ffdd610dd521378c4f0c513c99834b71bcf7df993c1895ae1d67d3dd089b0b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/parallel_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c2fa4ae62497475c2095d6e5ee797e4a7c6fa6d246dc494f7a927adf5d53470c",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_batched_deepgemm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bc3e81a71811f926b0af55dbd02d8f20be4a984dd20740af1aa0b706dc4f3689",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_batched_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "63009c24dd830af32e8ed1ddf9c4e593c26a7c32218fcf4206722f83764199a0",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_block_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e4ab0b328177b4ce00dc8193ec53c000c1238fa959d231a35d85d0a3ab9d1dd7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_block_int8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bde10420e98b1befdbd73e4a1c0924c3c2ae1f21a66b9082c36dc779be371e37",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_count_expert_num_tokens.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "853df8afe9c38c5c66261a35f91fb933c655be2d326b7f41a751f0b26c5dbfc2",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_cpu_fused_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "39d84147237805202c0c7255e2faab5901b6f71c31660c9c4aec395a9c85be76",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_cutedsl_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e999a4c790e02c32b5a912582b6e140e9af193b327654ed6bb3d56d8800ae9a7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_cutlass_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e044b4d9dcf8472f5c59f43ecb1af0dd5bcc8384e8efd2cafd7081d5a771bad7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_cutlass_mxfp8_grouped_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5b5ac1b544050ebd0df69d66dad8f3495bd94728491ac0e97a1a125057d24151",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_deepep_deepgemm_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "61694c1c6794e50977c117b41616bf0fee27a9fe8075a9ef8d470ec9c70654c4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_deepep_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "81021c6f8602232a5c8fb49f6934b63dc631d9070f8a40493c76c0cc70ba03e3",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_deepgemm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4139ae9915c71a45983641647cb59893412c73d1dfc137ab07d54d4655f6477f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_flashinfer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a2fe59d8b7f230909f92f7cce23d901b200ae7191ab322834a5fc05be4435a6b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_flashinfer_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "76eae92ca5e11a4338414006214d641ff410050707d38f792372701ef0ebfe48",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_fused_topk.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "524f308d6f8d0284ecb9ae54d056bc8bc23af359038318656987b43b69c8e7d1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_gpt_oss_triton_kernels.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5cd77071aa40efb0a746066b09525aa8f56b2624656e0ff135291c02d9d4a71b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_grouped_topk.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "df9491550f61c99291d9a46a89a6abb8469edf5549c38cc9c275610276701cde",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_marlin_vs_trtllm_mxint4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "becca1f4b866d5df03101b0b02aab6b9167282889ec8333dd9fa4b162fc80c0e",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_modular_kernel_combinations.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0ad8c4df87ce8e9f503739d578b6d90e443a6a380ed78952a55bd5ae02d406e8",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_modular_oai_triton_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e5160ba10777993a6b0ae4b5dff0233562bbf74d8b07a18a5f424f904bb27096",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bcedc411c737bc1f402c946ec27b0083b46ae2f34a5e1b816bbf2f2d5cd8e06e",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_moe_align_block_size.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7457fcb30ad2cddd63953a95b0934207f545de60ab2e5cd25a5d27b86a6569b1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_moe_permute_unpermute.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e5a87347588b90dc1acdfc8e32ab6115a5b2872a0b4541a0ed158940b47090dd",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_nvfp4_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "faeba42d8c502553c7c750a8295db6d53693c6bb7f76474d64998629bc818c41",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_ocp_mx_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "21cedb82ca2e524b05e03eb7cfd8aff87ec7d40d7abae71eef25be47d71f87e5",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_rocm_aiter_topk.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ef853e3dfecffc969a1579fc04a287e760228f8a182e0fae0e5c8a0416444e75",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_routing.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "99d08937110c64e532d05c56f59659b63dd05c8c2fe0d1cc918a62aafeacc23f",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_routing_simulator.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fcee2b2fc388c1fffe3b32a299f8c88545cfce73da533a6eb48524be1b5900e4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_shared_fused_moe_routed_transform.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0ba0232a82a490a68a4e4c152ba1559cbe83ba673c948572fbbbfc1e756f517b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_silu_mul_fp8_quant_deep_gemm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a8bd6073f7d3675c746ce1988ec2c20c8e35583217abbd6ec3d1070a564b1082",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_silu_mul_per_token_group_quant_fp8_colmajor.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9ad176c6ab3c3511f98bd4ff3e663809d43e41fd08e340d6fc80a99b9c846c4d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_triton_moe_no_act_mul.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d54e4c3378057de0c8622f658370f2343d8c30456895223d84e7ac5f229de52b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_triton_moe_ptpc_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "569f6fd38c2a0d1125b7f048f5105a7afc5b768b88212e45c9f090b6cdf99dfd",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/test_unquantized_backend_selection.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b08d2f99cf59b1fa3ea13481fa2ba51d53284dd0a9f39e4a29f44085f55e53b5",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/moe/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1edf1ea042da80a5bfa9d5a19129d4451df0bce82b902568eed589791a5d2920",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quant_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1004aa3e5f7328bd8462ade9bde6d3f71769bc3f8ae5d1cbcc753ec8441c31de",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/nvfp4_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2b119d4bc2cea7621a70fd8394017a4b5c86507726a912bdc96a4df7887d0ebd",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_allspark_gemm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "046ed867de39735e02c6cf0e1b53c26cd4bc08ba128e4c6bff0381dbb87aedcd",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_awq.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "df5d562f2e82334db9593ff1f69133a1c9018f2fcad2fbe53d226e84027820a5",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_awq_triton.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "853fe46f882732539ed8b4dffc3dcba287e2d421b10641dbd022b59de3dc8583",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_block_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bd503721374ded8e91ec7f9a213f7a63a62ffed2b4939bb75ed3fe11b13d1ada",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_block_int8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a45661701fe4668499a302994c03f3fb77d8c973ac3c5a70d233bb566e2eb869",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_cutlass_2of4_sparse.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3294c0dff4fed202a486da0371d92c5613ff95a88b78a2bd738d908ad8467658",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_cutlass_scaled_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d25bdd4593076e41f9d42f667bf7a9da2be5070bd5640276a2a584681fb806f4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_cutlass_w4a8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "46d3fe479d96838a85824bfe4eff590cffadfa9d98b000ee72cb561667665e22",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_cutlass_w4a8_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8f1a3bf01544504707841ce2e1a8212714743bc1edcd3f379f4e81028d97e18d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_flashinfer_nvfp4_scaled_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1b243cb414dd69711d9e91f564daf7a9ff37bdba105e2aa7108c1a71b64df786",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_flashinfer_scaled_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "feb6d8e9afac34c6f98699d2a595b378254d91c34c6bb43e054786e3b1480af4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_fp8_min_max_helper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "faf1388706b31680bad90e992d11f21834d97f9ea706f208429f0e186b4f5dab",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_fp8_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fefcb843c72766ebef567401f02c438a5556c8c4806f2e0e0afcdf11044f7c82",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_fp8_quant_group.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "506dcb4c189b440be4aadf9ee862a51dcdc718a67e74b567618b7b1da42a3ba7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_ggml.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "afdc30a03439298b7b9ff82890cc3d9a9f7aa25584fd2338fc3edcde8aa76f69",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_gguf.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "52e4588041f65fa366f59ead7df0afd6c7fd3ead3821c338b12a057b1eac2cc1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_gptq.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "497733a1276bb887fdaaf978b4198d388d182f987ac73ec4ec45d3e1dc5f3d65",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_hadacore.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "66774a27a32f4259a1aedc95b57faf4340a81b8e7f3ca72baf6b80038869c57b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_int8_kernel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "98b4a00a11dba18a45e08c0d6f458ab36d199ec17ee72adbc982917e6db3c223",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_int8_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "eb7f9bab4bebee2bc21c225dcf7e01e308e4347b98c12bb768c583bbcefd355a",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_machete_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "555d2f300e15387cc77dd230f2b9025b2b9086e08a40334f58e6bb8dd95178f1",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_marlin_gemm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "af783998305d362c1a2a8a280482baeb8cfbded69d1d7319a11d5a2e5883fde6",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_mxfp4_qutlass.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "61a2f31f9ea31f10dcab2a76f861462cb68a10b3706b378a4a17ba779c2a63cd",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_mxfp4_triton_ep.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1f44bcd10017dc6dfb224bb919ed139dd90ad79e3052d51549a40ef4403ff0d7",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_nvfp4_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8b74dc7ce5c2a14434dbd1be1a44826c6a5993d6e70db8e73fd8e403969a6074",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_nvfp4_qutlass.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b7e503ed641510b75b53766d0547e6356fd73cfbdeb0accb06c317d5bcb49ecb",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_nvfp4_scaled_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "95a6a8a264cb599783ec3beb0a9d88f3c4c64086fb12c001a257015ef85ae268",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_per_token_group_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d4a3a0f6839a659df3b0efb5ca48a82b9402f877aa5f74af53d0e00c88d9cb50",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_rocm_skinny_gemms.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9722ceef2a699088aff81e1b3ea479da3304d2750ef30b9da44b78ed0f531568",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_scaled_mm_kernel_selection.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9e5159f437bd18f035f4a9858e0112bb74c1c47abb7376120383e78b097ad6a0",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_silu_mul_nvfp4_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "838e13e61d8496bbec2da2ac1f5e5e3c5492267c8bcbfb78c4c29702836b9c9d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/quantization/test_triton_scaled_mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9873a21121fef30e493ef1cffd9810ac20c0355dd605cd6dc498b88de0609d4b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_apply_repetition_penalties.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ba7496e2b82fb6c41c22cd6c8d0008dc4d9d424414deb4f11b64c580794ce56c",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_cache_kernels.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b60fb72a92c0a66a7018d433f52a5c24e728b2d9c06a7083cc27c63357ede3e4",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_concat_mla_q.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "71a4f5c0688151f6fff915d70ba85378b0b4b67aec176050f9f3eb096cdeea8d",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_cp_gather_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5ecc1ab94a8272d1815e090bab51ca58aa35ff4e92a825a6748182b3da19706c",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_fla_layernorm_guard.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d518e350a713a7a8908b05bae7c192fb849b0b3d35c35b8daf9cbdb38976a024",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_flex_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "291d96af3781d0e33415229ce035049d5a42b2fa8a20d8cdd4206e97310aacdc",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_fused_quant_activation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d6b904459a853b42553972cf15c1f7ed2298914afd4dbee0b74767933dec84a6",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_fused_recurrent_packed_decode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "333a91772a1dbda78729af08fa84e0e0dc069b4c7ade5e32133b6fdd03b21839",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_fused_sigmoid_gating_delta_rule.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d37de005309f0fb8b8212f07f973227ab50f7ce02f8645be0a8535c642b7336b",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_onednn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a5159d4cd8d6a5509db16626b8425d513f5dcb4ab0f69c5a13f0ea0433df6336",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_shuffle_rows.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "89fcd1722540522b51ff4bcf7be068954aabbb56de619f9d5fb40c80ddda657a",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/test_top_k_per_row.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6472a564c76bf9f831e495ef96de08277d0d449499ee7eaa4ad0b050639de6f5",
+      "binary": false
+    },
+    {
+      "path": "tests/kernels/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7bdb9a9b63dab69ebb58dcdbc3db7df69d75b10e907bf8f66f3fc38cb3682a26",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "37420ffbf08a7cdd20b9d0af1360ec9d993daf5b5186930c3fa2c8455815a9c4",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_add_lora.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "86bf5995d52af7c89181529cbdc9624574ddff541a1ba5073daba902098862e6",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_chatglm3_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c567af5a619ae7639c557234677181c7e5da42408d8df3f169f4250f7e782e5f",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_deepseekv2_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f7b31e29e791b3ace5591f6c41ce5929b6961d63253a5fe62c313c4c29f842f5",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_default_mm_loras.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b04e27cd04635230e10e1df730f46efa079c78e055149e69fdaa6ce47b45a75d",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_fused_moe_lora_kernel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6206c0fbd4ca66baf05aaac9160b941ed9f83f6e8607f10a16c96436147b8cad",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_gptoss_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d551fd9939a1d7bacadb22791c00b293af3f9263d563d604f9f0d2fc3e4409cb",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_layers.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b1a28a02301f8aecf700763fbfc7b4a6a58aef0bfd66f7a408b3d3ce735aec23",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_llama_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fae7032d26df0ada7eed2ca66bc55309a9d7967062af3c6703cbfbb6eadfb127",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_llm_with_multi_loras.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9a4fb201cd277aa2df7cdb0954ccf19a969992b9f8e09b7dc22c8b2cc9397455",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_lora_checkpoints.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "09ee0721809a46c5dab96bcf6168e3b3ebf51c24ace316dce65d1efc51d77a55",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_lora_functions.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "846ba39e9a8790e26b71cb5fe5da9658c43ffb4527f5721165f8e07a3a8a57e3",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_lora_huggingface.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "db13d244c6244fab306870014111558151c1a6a34275a7babae5cfc45fa60edf",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_lora_manager.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "30fd2a5c8ea60f30a19a86046317ed952dac3e1a973ad9936ea22b41ef877d3e",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_minicpmv_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8384459ad9738c7399a561efaaf1a3f26cbab63b64289c4d4a001357ad03a6b1",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_mixtral.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3d974e3842e61a82a291dd7340746e3d23e97a53ac1b02aa7a177ad7156a61ae",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_moe_lora_align_sum.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4bf2ebffde9f2161eb73e2db53cee2b94975b9b2b140affcb16b2186d9d71f29",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_olmoe_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "94d4c72e867b233d74a06772deb1458a5d362d5e7c77116a09c826cb444aa5b3",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_peft_helper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "09361d21f3f34efc356b3aec6aaa6bd44e6d21cec4e5344974deee6ac7f833fb",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_punica_ops.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "23247cc6299d6d4fa6eba04eb37c77c6a2b4348e3fa2df0cd8794ebbb2bdc265",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_punica_ops_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a140c87cb560bc34cf9a11093d3e981d848ba00cd82cc296e2e7e0576d10701a",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_punica_xpu_ops.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a330a62fe7fb7ef34201b631ca81bf649028677e921a679ad61992c5a13e7365",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_quant_model.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "79e842b7cf1bdf8926ed507a53dbad69734405554aa100048b3f220611696c7a",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_qwen3_unembed.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "77e4fb97d357650b1f9878f8a804a8a5b7cb2f86258f8ee3244e1be67f776118",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_qwen3moe_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1c295c5a22c01709287f508f604adba8c242065d2ac42f694cffbd32dd4ed117",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_qwenvl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "11889bf3478caefe741c9e2c9bfe0561604b74ca7f6d7746812e941b7d729608",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_resolver.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0b03770c97f3da049433664e5d49b063c9f50da87a9fdb6388512d68e3044377",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_transformers_model.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "95ca76ee3acd28037b11c1b495e34db48e6a480c0ba65c12e36310a088ef27f1",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5a02b2e56c938caf80c544a02ce4fcd79df712803f8ab0106f2e24f2c95a612f",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_whisper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f67486991a420317ee7c5fef6739c2c5ecdd94300ee0d80c9b1070d83e7838d8",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/test_worker.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3d458904062c03ede23de5c6245dc11db889088d7dc58e58aee855ace23ab00b",
+      "binary": false
+    },
+    {
+      "path": "tests/lora/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9234e5d2faa2355b45c5087f7a13fcba2069deab59e638434dd77b53dc518467",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/fastsafetensors_loader/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/fastsafetensors_loader/test_fastsafetensors_loader.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "66af3a3dc78d96133c4dfdbcf4b7f5ca26e0c34beabe991374f8ff7b588b2fa3",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/fastsafetensors_loader/test_weight_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7b3b74e583b817adf1921bfd6a2e3082534af8aa5e43ec88c4219a4842bb205e",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/instanttensor_loader/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/instanttensor_loader/test_instanttensor_loader.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3b59988efcce4b2548fc5fcc8a98ebaa1d2f995a05875ca0e5ffc8c09057a4b5",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/instanttensor_loader/test_weight_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d38eb5c5735b44049184abd36941eea96f708f1bdd80f41a99f8b5207dc572cc",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3b2c4ba5f524b1f62e5ad2a83b694b6aea1c7b67794319e803195db05b456931",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/test_runai_model_streamer_loader.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1de78b2a84197c3a5db4680e2c8c6604fb15a02475df3ed48339f6cb688f8632",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/test_runai_model_streamer_s3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "43cd7d1b72bbcc6e3196d06b9e35b66a7e2ae6bbe0e10eb68c198a066797834a",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/test_runai_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "38554370f5abc9ca252b39048fbfc1fd88cc2993cbcb2db093848679de41ae4d",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/runai_streamer_loader/test_weight_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "123bf56ee20efba42961d540d2dd277c47f9e9ffbbd3c4e1be122e27de78121c",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/tensorizer_loader/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/tensorizer_loader/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f949f6eed6f2cbf17216fe59224703d66677413b8175af15710741e26ccd886c",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/tensorizer_loader/test_tensorizer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4075864a02441643e9136a9eee4baa9f5947c9231465aa9efd7864baddbc7e0c",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/test_ep_weight_filter.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e7592bdea099803cf5fe4799ef3a57e0cfd009dfe63b6c5017bd78c321d603e4",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/test_registry.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9ff22754cb918a5a2d526c64ca9a42f471b634d968ab08ae7bd615a9a7409e37",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/test_reload.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "93f33f9ef195e3a4253b153baaf4b0fbb0517b069e3cd96dfa5f7b9182696b64",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/model_loader/test_sharded_state_loader.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b14b0dd015b492212844d2f7f1e9f053168e16c0f784c78a8baa05fdc7205d2c",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_cpu_unquantized_gemm_dispatch.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b14835ce56557aedbb70ba34b205ce95c855ed6e2e4731c9e673f8781f7b2c40",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_eagle_quantization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d74de533d94f35e0b972e58955a6e7ae3601521a79678e9a3041b7d1fb376dbc",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_enabled_custom_ops.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ebc874ce4c320cb96845acd7bc02916fefd5f875b4bf506d15fa014f1766097b",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_glm52_shared_indexer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4f49c8ddda92aad980027566a0880aa95d7ea43b98b3052c281781f4dfa5ab55",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_model_load_with_params.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7d8d02b6d068e6c3f595f2de358599385c71f65bdafd13755d2ff49963da007e",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_oink_integration.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ff8baecd25cf9e3dad988b61ade19246d188c46641119195c7275099bc4d20c1",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_qwen3_omni.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b8e5160ad9b1e07f7cc86edef29da6fd8af3e24f5a97e09c3c0b75727a143292",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_qwen3_vl_mrope.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "271b6079e9af1ce028e98a70d92df9d265f348fea9e25db6bbb05c44b8ca0544",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_routed_experts_capture.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "670a561307f9e1c3c1323011587becb95dc4012460465c136a8deb970172f37e",
+      "binary": false
+    },
+    {
+      "path": "tests/model_executor/test_weight_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a25c4533d7cb61e17954d6abfb6735f5b36f7e5cfdb09f297ec6160371f72bbc",
+      "binary": false
+    },
+    {
+      "path": "tests/models/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/fixtures/audioflamingo3/expected_results_batched.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "59fa7ed51e1909d475bdbbc6e9f9b0c395544da9d4ce421d4cb69010c4471762",
+      "binary": false
+    },
+    {
+      "path": "tests/models/fixtures/audioflamingo3/expected_results_single.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8582cb38a995b648cb10a8621d1f7d56f3f7d3d15718d25febbab3b3a4688cfe",
+      "binary": false
+    },
+    {
+      "path": "tests/models/fixtures/mistral_small_3_chat.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "223218a6d025b3ec31b41eea03bfbe1470ff01aa308e915168fbc673c19fe89c",
+      "binary": false
+    },
+    {
+      "path": "tests/models/fixtures/pixtral_chat.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "25d07b6f9cc20b97db05bd1aff8328ae6010555c9c402b781e7b530bc000864c",
+      "binary": false
+    },
+    {
+      "path": "tests/models/fixtures/qwen2_5_math_prm_reward_step.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8ed68eb1313028c408ce02c4ad38c01672a05d035cc0e41287a4ff7ee6f450e8",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f2baca036cc0c2fceef66a623dd591f487a649ecd9fb67bc08d0024b37334770",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_common.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3016a7be78f37484175abc0e11a358421a02966b1ed383fe208f53b3d4fd4b8a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_gemma.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d01e673d66f9908c7a5dd2c1b4007c1622ecf9c776b4aec1a58c705acf992396",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_granite.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d9a65c1f12999d03216e01609159701f47b282beba3437f4b742d2b2dd7f7dac",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_grok.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9794a0863f8299c5402f52636580e02670b13d30fb9f4b23271863f871ba173b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_hybrid.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c64c34f091ebf1b5699193b0c1017019dd982ca35db79e4163b3ff6e16f949fd",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_mistral.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "38b294f01c42af639a6afab887b8a7357f383f321fb186de59f8976c2a935e1e",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation/test_phimoe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "48edb6a1959d77793ef74f7531dd7e5e46458342c904492054cbf87d45bbac9e",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation_ppl_test/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation_ppl_test/ppl_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "de52ceacfd6f3d547c65690032d3564b0cc837e1d01cdc31d113fbd3ce4915ee",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation_ppl_test/test_gemma.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "28b0fd696abdce29a98f7c7be2d4743866ec10bb151ca5706d72d7c852bd389f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation_ppl_test/test_gpt.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "26310ad9cc57a4585f5c0f140e7b8c0439c098a47f8f682dcca5e4833e7be63a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/generation_ppl_test/test_qwen.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5be55c7eef24dc84a3ec81025483c34fae84216c4e94efa423289becc65488d4",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "791f3b4a1c376be5e3be07d11ab36ce9bcbc829adbaa8d7fc62eceb6a94b4c04",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/embed_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "105092bd87b107621e8eae973fc982b78535567975c1ce2d032b3e4bba037567",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_all_pooling_plus_chunked_prefill.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a315702453f901604bb40006333c56f40c153831575dbc077068135805cc0921",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_auto_prefix_cache_support.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "16f9e3325cceeb44c521c206326c1b0bb8e9e9898e74aeebf2162a6b0be11697",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_bge_m3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3b2bc745b56332edbc9b9c16f644a6061bb5826775a62cf43a27dba68bb6c08d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_classification.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "436592a5bd398b972aaa02db71b0bc04ecee1ef6eeafff59fa33ab645606ba14",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_colbert.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8db38b120f59d4904495d624225a1abcddd31c74ee2b15059d89071c6fe20e49",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_embedding.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "76ac7199f2d83818597c679ab419278e5fb67c11b532c8cf8e7b80c2cf5d791f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_extract_hidden_states.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1a5893c9878b5494b2a6f9d4efd64c554f71b4bd813e7940eef52f6d4ea79ba6",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_gritlm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2a0c6a7dee5c9b8b452d8cbae098a95d11174fbd79bd370c32111a63c5da1218",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_head_dtype.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2e7fd1716eaea1ec22303284cd2f8152af7702a5a81ea7abe4ce6d5296e119fe",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_mm_classifier_conversion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b90a23f82a6a950dd66ad2596b2d1c3dead14c773c64a84ef9166a0abfdb00ae",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_multi_vector_retrieval.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f9db68b40b96f1306f966592243af4331f43f4bfd5ccb94ed37ea14c4067432c",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_multilabel_classification_support.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8c07b8a3992a22888cac21f49812bada597f465494d6c4a7a6a8ac14a4da9e10",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_nomic_max_model_len.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "be15fd978979b007d857395e9b3e653e18dff05aa2c0ae8a497516bd2da8823d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_pooler_config_init_behaviour.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0dbe80539ddcf9a6cfa1d77902709f7c9c43cdfa551f6a6ee0b3a4f3122f819d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_reward.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a09be049f99e602c3bad255d7ff61513574b093b0701546924532a84d8a793b9",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_scoring.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f447c86b2c26f0350df8068cb0a298afc964dc86d37cd7355d797034e75ab1ef",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_splade_sparse_pooler.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b3810813a678e29bcfd4381d7b6a0d37ccc479a296c278f9f65fca1e88c1eeba",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_token_classification.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "395fa586cb696a186cb1dd1b35a5f13060510208833b241226b83afce67a3424",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling/test_truncation_control.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0a2d6556e1cc85d9378e1b52424821b8fe9f0a53436300250b915e2908c8d0c5",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/mteb_embed_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c04f56e668fba04acc801c8b357b78386b0b51824ff1bce8fc0b56aa13041b5b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/mteb_score_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3752542ebf9d70f90ba6fdf441a9e1b4347dba50bddbe3a73b6460f6e313491a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_baai.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d7d3ceb88ce31dc0213dfc2ab0529bbed852580a8e8e0e9654075b311c164a16",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_bge_reranker_v2_gemma.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ed3d4eb278f1756203da3b55dada63a4a005ee34fc7a148cfa7fc2fe18f6d532",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_cross_encoder.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "66465497a518a24b2bd32b3b4aadf973d4ee2dc09d05a48236345fef30fff42b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_ernie.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "885da51b07765cef7fb883f833cce05d27559e6329e928f270921eacea355f93",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_gte.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ece0467ddef3170b96e3d97cc20b7f9d56c38fed387b96dd6eaa87a7053cd136",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_intfloat.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "535df349f4ab8c0511b27c836628bcf25ad21c388f915f56d1bf9622f6556d24",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_jina.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "faf8ade2a630d5600912831e5ad6242efe3807bc71d2a0e052aabcdd9a6734aa",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_mxbai_rerank.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a94d6a334c201190b32589efbea1d9e4ad5f574c4caab309a22282eb2c94de02",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_nemotron.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "94c01c4ab415e4cd7ab334de5722bf593d4475e8f900dfb1355c3d840d592cbf",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_nomic.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "86b76b54e8c125dc7e1305fba428006f60a109a340976ff6f51c165b93be9aad",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_qwen3_reranker.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8131538551c09bbd64a2292fd2d7b3ea24b838439a5f9e7d4281be7fc8aa8364",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_snowflake_arctic_embed.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f7eeeb50314539b479971cc37c642159ff4e466d94a398592280ea83b6da667b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_st_projector.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f8cee5eba9b2c3380c3409c965968b0131a539239b706b4e0218042934d0c7a0",
+      "binary": false
+    },
+    {
+      "path": "tests/models/language/pooling_mteb_test/test_voyage.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "76a3d2462694ca181a35f89ad6f4a54f852aee7c425611ce841f25581218cec5",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a705ca587c64916fcdf8b06f8e72c32284165a0d011647a6cad5b178b7628890",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_audioflamingo3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2cadde755e25add5350e112f52d8158845d6b59687aacfdb4969a519fdc194d6",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_common.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "241bd315f896689355513340e686c7d305593124a5e217b9ac72fd13578a521c",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_granite_speech.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "93e2e6272267aa6d070d9f35a01c339328c0ee58829e7619002a0a50f87f7b6b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_interleaved.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7b899e099c524fe19cdcd66a2bec73762240b6879449a20100f4b5dd7b38fcd2",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_keye.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "de0de7e119e84e865c4a287c7cdee9c3f0beacc8ccc43d8d194e9d2cc2a85c7b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_maverick.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6e930b0b2b19fb805c9c94cf337dfb118b3386cc8b30a3163403d3625d1639ea",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_multimodal_gguf.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0859f63db4bef1bf5bf61f79f4152f28a100e9e0de6c9e745743075055048b48",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_nemotron_parse.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "def2edfa17b5cc66eec28180c9424249e8479d1fd9ec57199d5e6a9de82d5b5d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_phi4mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "362bcc61371963bfd7396fe07c8484243e1ee81d09d19bdac7f05c828e5508de",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_pixtral.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "68814c6ef460ce85b2e11e08bd6b3a2fcfb92835e7908fd8845d9ee5e53dd198",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_qwen2_5_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2a7d214204cff53edcc3529c3dd162799b9675d4285e5f1d7b8f046bbc976d31",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_qwen2_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f52d6885d9d5627b98f3a15783815a162ac53a19e00a2973b398c086d6949011",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_ultravox.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e66009b2498d69d81276969759414c91e421aba96b632667f67c8f52b8d7869f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_vit_backend_functionality.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "200aad8550877fcc7d1545bdbed7d92da8e68afcf2de589000b4cae8c4eae976",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_voxtral.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0c40a2e90e7be63ed3708c2b49dcda16a6347b03c2961aaf18d5d26dd1ba4498",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_voxtral_realtime.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "dcda1a7e354db3c9ee6b83ac3c4e66ac02b1e160bf22ecaa28a924eb5c37a567",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/test_whisper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "33e1281c5d02715ed101e35901e8554962b23749472aca2db5d460fefa214e3a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/builders.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8e53bb6cdf54b8d5844ba0d22a3230fa2faa8272ebd122120988cbdb23c83ddb",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/case_filtering.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7dee17343481a46cbdce7fe1d7c6d9994c27d79f6391bfef3bb0299635ed4787",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/core.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a20cd26d371d3f43286abe969dd17b3e90c952a8d9187cae93fe27f265d9c785",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/custom_inputs.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8b46fe4d66686cb8166f037f64daacee958cd0f289c748e94e4d0a3491d63aac",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/model_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7139b8362604d199b9097984ca434b47d44f78a93ce143a95d5e366b82c33230",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/runners.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5f04e7fc89db9c52c9992eefdd75f32caf7ab882e1862570af690197b62b60c5",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/generation/vlm_utils/types.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c4195ec687059fe7d18ceb584c75d243ec2aa4a37fb736205fc1f4ef53785b24",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2fea9f8d5908c608d25165cb8405b45a819a058c3af8165ba6c0137907173d07",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_clip.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "53dc34ba7db9ecca47e6a13e911a6dffcf2efdfc45382d08acb7ab26fd7b35a2",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_colmodernvbert.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c1f8a6b70aed51ee61f5b6f25233acef9d12a817aafab0c3a3c8e0ed01a27163",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_colpali.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d9a794f3e2a7d2ee53917e0a350783fe96ec6e7557c59b909c8eb65b6233fc9e",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_colqwen3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "50c75af0dbdfa8188d5ed5dddc8d99eb1bfc8b736974c12bb51b56d43e372547",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_dse_qwen2_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f878f7974032c7592cad050d63a09168f2c2f583d0f6412c69291fdb230b000a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_intern_vit.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "043543b4edd766b0c9ab475d1d5e70d0acb983fa2831eb03eb444375633a3766",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_jinavl_reranker.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cf1ffcab2fa095262b2a17375f358bbb060cd6af661447147f58e1dd23ad4dca",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_llama_nemotron_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0e41895b1c1aa7b74124ae7ee86d33dbdb2ec57c9376533f6735da2e999a703b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_llava_next.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e6ed1f31172fb8b1f99a3ad8a3642e541a3b17dafebe75b6c5ad94893616fb1f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_phi3v.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1417496f47af8a4e40a59dfc841b0a3ca848049d4b8bab7c1403fe40b9040b09",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_prithvi_mae.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5241cf26298a87f30fda3a9497f3a07d64febd360ab1e828f378f845c61c69a8",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_radio.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d10f7b4660a38d26405e6d964df6601db16e20858512dabe2f01c83ccad83f2f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/pooling/test_siglip.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3728e926b24c7a8cd1be86ec2052fbed238b4ea1c63a8f4bb964aa64c3e3926a",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_audio_in_video.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8db391bf1659a4cdcb524a2e54dea7bc5906408afb5f71e35814933786f0df88",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_audioflamingo3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d1bbf460227c4424d1020104594ef12f473779c3f611148d981343c465f4ffca",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_common.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "feb72f8488cf0f9050aa5a94cbab0933db247bb1e93e2317ab8a6d6e7bffd2bc",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_deepseek_ocr.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1f688d6194f3ed66fc386e5e9318cec74a1a1d43ff4ea4a8da2f76b9630c2a0d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_gemma3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c9bae64c2f72a97bef938ae95bb4892c8d85e2b4375e1b4a38ea3aa6ec8d6935",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_glm4_1v.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4cd2644d4af7b6a46a7d8c806a071ebd6bc02564cae77e0b78e239f8dc8e2271",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_h2ovl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4dc0bcb7ec25e7d9610d87ce19febb8b74dd600f631d78be556987b841b3c98b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_idefics3.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "072c7070e615f5666e59d3caf3e8615270d24dcd9b65116851118dfcf640c3ff",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_internvl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7123b78a725d4fb1f3fd3da490684980c0d94d80dca8f85c2516907c0c1eecf6",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_llama4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2f35cf42868922923839e3474e5c20dc44b4812c1ea906f85ffda8f7df8f2ca8",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_llava_next.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e556f47950213a5838de167134f2bec333171a78620c71a9cb0a7d5fa7b1e3d3",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_llava_onevision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6aa2c3759a2837c634820ca55041baf9ebf687314eb3e97e6e8930f1e858792e",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_minimax_vl_01.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3892cf73b112aaef5a0ec12bcb00154ca1ba3545ed915d1d836c9c627034c63b",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_mllama4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2c7c7bf288d3878a7bce93c2d0300508f71c6802d6770adf8b204cd34ed44edc",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_nemotron_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2031f15e67de2a5c88440a2f14df49692dd17d113398189f4d17f59154c3be1f",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_phi3v.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8648572b942e18342b34e335e6da99a2dc565e1a92565293feeeddea235876a7",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_phi4mm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1ff00d86521ebe57888e5205e218da1f707c8d657eb1f0d244e4da4e00d4708d",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_qwen2_5_omni_embed.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3930ceadf8e21eca6d8fa49026214cfd9fd5e83a00a1d6a141857d0ccb687593",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_qwen2_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d72dfc78378fb574fce232a224fe9495a4f3721606eb3651d02cc0412c08cc53",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_qwen3_omni.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6c4e742aa6edeaafd7ee026e6ec81e5f7f3cf177baa912e730ceacf6f5441a23",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_qwen3_vl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9fcc7086b5163317633411b3fa915882039382c3163a04f7b66446733f3bd480",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_smolvlm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e133a98a64f547b483d9f0fa1da04efc108789b2b99412869aadf7d878abb725",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_tensor_schema.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a8defdc73153977e9ad4ce25e4e452862d3d8c53271b3ad5b845c2f96f873de9",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/processing/test_transformers.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "649c0882a08b5848d156ffe2641920dd59dbd56a400fcbf12eb1a91bfbd82529",
+      "binary": false
+    },
+    {
+      "path": "tests/models/multimodal/test_mapping.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2b2c192d2360e8fedcce43176780a2b387992664ab4036a7b86496a7943027f8",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_awq.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c8191cfb7701352ac0bfa25e6545c5056e8e9df4a963c23992cf39dc8a6e8ca3",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_bitsandbytes.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "740efe5e3bcfaa453a12850e0ef1fbbbb7c5037a37b18924d1e7220d5c134e56",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_fp8.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b423868da6b43e7aeccdf06fc6533ca85dff13d22bfd82cd2879a2580fe9aea1",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_gguf.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9e9934154b1a2cb10ea9bbe745577e9d205444018f88fe39a5a1ab12f23db2cf",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_gpt_oss.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "53012ce6863adf252889ed184ff9f9040ca4cc22b4f949b5e17c08efcfa3b8ef",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_gptq_marlin.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1f171daf5065fc8855751313d73c985a86b636cbddb74603ce0f911b0b8cc043",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_modelopt.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b2069b8f9f8c8d89f2f5a60cb93d5505a5551d13baf9cc7c625ad0e70a3d0220",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_mxfp4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3f552ef3af112ec996b5d2ba4677dd350738e62934dc1256f07a24a755239a5e",
+      "binary": false
+    },
+    {
+      "path": "tests/models/quantization/test_nvfp4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b80284c642e31d918592e0001eda8514845477044a01789081c5d2305201cb46",
+      "binary": false
+    },
+    {
+      "path": "tests/models/registry.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6bcf6c6310368836ff07d946bdfaa06c6297981b8aa024a9d9ae4600b01f74f6",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_gguf_download.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "66ed7f239819345c0f2e16d62d533e913292df5ab0abb0dd6821eac08c794773",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_initialization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "53b082238c44fb02a8a2f0eb7fcbe22e0fcd895d1dd8ecdca92b60984c9a1175",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_oot_registration.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "90737730ecc93f0f5ef6488c9d185a932e302de3153432ad6afea5ec31db4c43",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_registry.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e5e864ecb3dd27cdc5dc0ab1cfd3929922b560f585b167c5b8861f8cc223fed6",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_terratorch.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e7d75bf9582587690a660b2794dcacef642689f03f778a054bd6e0d70bda41f0",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_transformers.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1a21cd1603e548ea90ac11ef32a75f7254cd23caef34741795aaa1f4e3a74aaa",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3d794bc80c81634f31018ef74e157072486e7a0fb073067fdc8ceeedbee2077",
+      "binary": false
+    },
+    {
+      "path": "tests/models/test_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2eefcb83c0f2001a3eab71b2633871f4ca4a309935856ecc74cc53f872fa5271",
+      "binary": false
+    },
+    {
+      "path": "tests/models/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e4a2ab8e182234b13c89feac6aab4541eea732f46d12cffc4e7c7f9b04ec2e6d",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/assets/corrupted.mp4",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "07527d4856da5508647e7d404bf514d955cf64d2c5a824f745fb21b4d942398e",
+      "binary": true
+    },
+    {
+      "path": "tests/multimodal/assets/image1.png",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ddcd6a796c20cd64c833c1a1c07a39d466cdc2c82faa4f87d8322d1d2d82c79e",
+      "binary": true
+    },
+    {
+      "path": "tests/multimodal/assets/image2.png",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "42818bbbad68287bb1ef8ef66cba436c2fb334e98dcc3caebd01592567096ee4",
+      "binary": true
+    },
+    {
+      "path": "tests/multimodal/assets/rgba.png",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c4e870d358d64ce677e958c156d0e3fba466993d8e915fc81c5dc64937a9b696",
+      "binary": true
+    },
+    {
+      "path": "tests/multimodal/media/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/media/test_audio.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9169130c0940e2fb60114e2c4c3268a8b3d6ec51d456a0325ab41b448f695443",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/media/test_base.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f915bd981968395580fcbd55c8eb55821db325315b696270062ecb703c6c61f2",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/media/test_connector.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a5f6680ce333b4c362e19e5f9324fafdc4e01f97c577971c2c99930eef6723a9",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/media/test_image.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "79755c1079d1efaa50bf5102c203a4070e66515f3cdeec874e411ac3da55905a",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/media/test_video.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4506fe2a473d5880fa200aec1a7034c711b0b67758ca3d56496ec69a7ef0cb35",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_audio.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d823c252e279f5ef166b94bd6c52b21d41e405d37f9096abe5e8693143908d1b",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_cache.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "03c72c8c891d42a4245e45557db5c73add54ee5f02b3a445608ebd92728a676e",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_embedding_shape_validation_unit.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a9484c035cbceafb7a5e87363f92cb6981eea45a65cbaa845128badd0b7ccb7f",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_hasher.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6160ef1f88aadab86937d3c44836ccec650897e7847eb6fb0debe8cca29aa508",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_image.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "465b7bc85c5a3b8cfed6f178e82129265e50a604dc4c834b3321630ff691acd0",
+      "binary": false
+    },
+    {
+      "path": "tests/multimodal/test_inputs.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fdadcf9c8a130b600823aacbdddca57d54b32ea348fbd262a68f562efc7d9d81",
+      "binary": false
+    }
+  ]
+}

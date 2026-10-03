@@ -1,0 +1,77 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/compilation/passes/pass_manager.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "7ebb79f5c1f854e2571c759d4754efaa998f2d4c418dc168b4baafe4d748e476",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/__init__.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/fix_functionalization.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "6941e13cda66ed3de32d9e3dc4bae77f1236ba8873ab7429bd802c8e92526b66",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/noop_elimination.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "e487e49de153142fef2b7eed8064a7ac0c2f5a1e03009f6b80c7aa8031fc03e9",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/post_cleanup.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "1c38b14fc209165cbcf8ca763a17ac4e528b97f59b573e5d52df2cce7d758de3",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/scatter_split_replace.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "138402cc3097768a32e9e5b8d1a054b6176e494bddc8684e23ca2dc5fdc3fdda",
+      "binary": false
+    },
+    {
+      "path": "vllm/compilation/passes/utility/split_coalescing.py",
+      "reason": "GPU-only functionalization passes; native Ascend passes retained",
+      "sha256": "0b02acd9e1ad43d7b3e128b914e969b9580773f2818078846dfbf163a8bd0871",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/lightning_attn.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "ca49c955a77d8a5cd118574586f8e4a1eff11227df369fcaa2952c777d90cdff",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/offloader/prefetch.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "1a71fc6b1aa538bd80263694168f58481240a1cf115e67160d73e2df96b67dde",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/offloader/prefetch_ops.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "0c1d662ab43dd4b04ee2910847023afe910e75a9825f7867daf1ebad1dd5bf12",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/offloader/uva.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "35a597cce28dbacdf3360aa92ff726341e794a74f4d5575d88a406b3291f137e",
+      "binary": false
+    },
+    {
+      "path": "vllm/utils/nvtx_pytorch_hooks.py",
+      "reason": "unused other-device execution/profiling/weight-offload provider",
+      "sha256": "e9711444f33242ce1864d6a32d051bbf0ba0b37b5f17965de6e5dbba0c0c75ff",
+      "binary": false
+    }
+  ]
+}

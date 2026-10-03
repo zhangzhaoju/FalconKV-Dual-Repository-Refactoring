@@ -1,0 +1,611 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/benchmarks/README.md",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "c3d1fbe75d4ff2af3ef853267e791615edcac5a106f249d48a0d3f84e5c8a01f",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/requirements-bench.txt",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "ace14131b63bd22ab36510b6912bd3628d3698ad552165b6dd11dfbe9bf254c6",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/scripts/convert_json_to_markdown.py",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "23fac8f5a646fbf3dcbc758b7ff0881384f458a11f7d446d637dffe133b9432a",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/scripts/perf_result_template.md",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "6d62373eca4ca81327d23e651cc663a5f22e996453af31674c8ae87878866c3b",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/scripts/run-performance-benchmarks.sh",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "fa40f8b2ae62860c6653133e437690794901e7155df26fec69cf7c8853175c37",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/tests/latency-tests.json",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "933ae90c77b38ae8ebf4f6ed79d27785e0c5ec2ceaec83bc55a3c2c009bcc2b9",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/tests/serving-tests.json",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "e7bc21123a37f06d2d2f97f655ed5685a937b5f98afa4b2126702e3d48c58ca2",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmarks/tests/throughput-tests.json",
+      "reason": "upstream multi-model benchmark launcher; native sparse-cache operator benchmarks retained",
+      "sha256": "7de1e12efbca8aef6bcd6ffdebe6a3ad22df368d2092adddd8f474d14abe43c7",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/common.sh",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "0496a3b3eb6bf035995a683708e97ec719b5b943e850dd7b43948c75c18520f3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/doctests/001-quickstart-test.sh",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "a698a94cba749f3a5c506a7da3ddd84224b2c0aef7b5e20d011e9f7ab2ab6abc",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/doctests/002-pip-binary-installation-test.sh",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "6b73945752bfcb0c35f87cdc52eb422a1557153fd5641d3083acc00c804015c4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/model_utils.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "2c4e505346d221a277bae65204488c056619481d638c50e057018e5b6c6a043d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/InternVL3_5-8B-hf.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "2bcae7a71e00b2daa007933c47e210f673548aa3d9a8cb6e0b02c874af5bbc14",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Llama-3.2-3B-Instruct.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "8ffc3e2fc8682e4cb521f4b5993c108f7dafc536687ece82e64053fad0968e42",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Molmo-7B-D-0924.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ef6624790e9e4e87dd3ad11100faf0a1ee9a8521048153ad70be450e9ff49d97",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/accuracy.txt",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "d744d867e370788c87781bec3dfd6f7c1576204cdc17889fd2f4dfc968e260a1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/gemma-3-4b-it.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "09a70660c831de7720e9a17d64a416ecebdbb8dcd7bc989bbb276e44a8eb20cf",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/internlm3-8b-instruct.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "92e534fcc4e8026486b2118c88b7f08451953e211b399b119e59e01944658090",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/conftest.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "fa54ee08a9e040cd60da7dbd1b4b40b537b9fc7ed7f8fba7730fc4cb388a7ae3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/report_template.md",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "5a9c1af9f6e5b64eb777c55f2dbe0b1c364a7d375e124c41116129e0b270d353",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/test_lm_eval_correctness.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "72017bf073cf04fac3174f5c10d6c3038a42142f4589abf46466bc4c1cab75ec",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/spec_decode/test_quarot_eagle.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "475b99af83a8aae1e050809f0bc86dac523ff17161248c4595fc1d3b85d450e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/spec_decode/test_spec_decode.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ba0727968c6b7da866441596ea64aeb402be2529f123e7c7bf2b8fe58c9bcf4e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_aclgraph_capture_replay.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "da7282ed34eaddf42d031c5c1b91139886d31b5728fe87cd215ba4112df185f6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_data_parallel.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "6a35c081fc1649e1cfbfa936e7a120024bfe32731d66958462079e7e47284bfa",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_disaggregated_encoder.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ebf42fc3450a192ff82bedc7b70a786ad90b9361ca0913a01ef4ab9bb9d774b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_expert_parallel.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3b835df789d0a00987298aaeb2cb3b02b125393e57c5a1c34e2faf50fbc7992b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_external_launcher.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "63b0fe44e02aa4664e264e3d5188a2598a12b5d8628aeddc5b6655f230fd3f93",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_full_graph_mode.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "07c429196f407737f0abbbd3a5a846cd9d364a66c6a36988dd4709f08899ce52",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_offline_inference_distributed.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "5eecd7b5729bf06a9e03dab7885a0f0bf26ae992f4f8b557f499cd4a979b7ee4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_offline_weight_load.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "8f1172af3b862c93ff956f34ffc79168fe188278ca7eb1bd6f418c7716990888",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_prefix_caching.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "570d30903f06b7c6f03fa91a8e269e0fa307bf5530dd155480b09e721c7fe17c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_quantization.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e4b4cbf2b6ad492febabac0cfcac1cf374cc39a7280909e35f72deb30da9002f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_sequence_parallelism_moe.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3158b06d3978bd60f0acece1a49acf2b0e7c152e659fb4e5eeb0d0b2168a44bb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_shared_expert_dp.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3bc1eec313b56cd0b4e3ad166f8e64a37a02c6da92897d35608716e403c82c0b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_single_request_aclgraph.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "507ebaa03e1d7f5d4bfdd716406fd4dbb231efe2a1891cd756256f09bf20d38c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_sp_pass.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3d1fd5de51ab4826ca7f3abcd03d0eda96613192853583095d8a22903c97770d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/long_sequence/test_accuracy.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3d2aa7208211a9d03e2c7ca3c6a891535b43da028e964eacbc091c0bbe5fcb86",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/long_sequence/test_basic.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "bf1f608d7dec4e50a6e4fe19a5967f74bf367eaa0943ce999497c6e6bf29678a",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/long_sequence/test_chunked_prefill_cp.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "26bb18e372cec9459604a25850ff4c0cdd487a978883e9e6811999321feaab53",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/long_sequence/test_mtp.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "75a0ca59d0e1788bd4e163a266d987369e5188e9244068e947c88e0fbb018420",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/long_sequence/test_prefix_caching_cp.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "a6cc2509e924e2bb5e4b954ef9d83e7c8d6fd6caa12c71e46ab923ff2aea00b4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/test_data_parallel_tp2.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "72901ae07f386e6eee1e664514e9aa5ffc8639a8d3965976a4aa219eacf2470e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/test_kimi_k2.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "985d11a44649ecca0e8eb2da17a7516b049eaac2f39ac11c281b7baa2ea1e3b5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/test_pipeline_parallel.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "5831e3fcb263e87db4087a3adf5f5109ce4fe0d2e1a26ff053585782d03e5a2f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/__init__.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-R1-W8A8-A2.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ab5cb728bdf3f62a7e32b3305922654dd95a78cbe432e82dc8f017ff706749b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-R1-W8A8-EPLB.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "2d20cb0c2a4cc34ef03097a0359b6988d6cc0ad6266821ce8fe476be6725032e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-R1-W8A8-longseq.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "9fd018863c15cef2d6e47c649f2fd34896afa3871713a2a2405818cc7c5ef16d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-R1-W8A8.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e92ec24d98252012974c35e6d242fdb092e379d07e7cfcbc03a5c0bee36e8a7d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-V3.1-BF16.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "30a5e574c3c586b34dc662a91720767cb24046115fefc2fed344f2f680a0c02e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-V3.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "65a9c92e2e886444c4ad608090e0c7186d677250b9d52914653106b0e95abce5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-V3_2-W8A8-EP.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3d6caea416a4f79753d6c56e1239df1f58d0b0454f554efa38fef594b633a583",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Kimi-K2-Instruct-W8A8.yaml",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "edf5e90e473b9658e87e2542a7f3114170bd765eae1dee8ff98d485754d7de8c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/__init__.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/lws-a2.yaml.jinja2",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e6b4d7d0878086e17014393db5327edbf86c364811a306f43bdd245221b03043",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/lws.yaml.jinja2",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "bb314e4d1a5c30da392e4a6dddc6d8acb47dd97934ef281539ceb79c0a3c3a77",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/multi_node_config.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "706942ee26231adaf654d5be8906d8ba74a50e37fb9bb6fe44be033589a1badc",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/run.sh",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "4e5f520987ab55700cf3a8b85cda05f45a093a02697044ba4664dea91401549e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/test_multi_node.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ca434932b859cb0cfd6646b05ca12c0578b28e516ea5df0e8852a5e42eee8ed9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/scripts/utils.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "97d9528664ac42e46d5dba1622ea2ecdd98bda296f5f96ecb3c36f6b1c0bf549",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_fused_qkvzba_split_reshape_cat.py",
+      "reason": "tests of removed Qwen linear-attention implementations",
+      "sha256": "f28c7dc9ee28776a0ad03ecd854474b6723925adb0cfc6adc33ed4e4c93ec6c4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_fused_sigmoid_gating_delta_rule.py",
+      "reason": "tests of removed Qwen linear-attention implementations",
+      "sha256": "88c6239df8505f07f645040ded59395ed5c1fba53b8ab9104f66b05791ee877b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_l2norm.py",
+      "reason": "tests of removed Qwen linear-attention implementations",
+      "sha256": "b1704b797cfbaa155260669b43dad880200701e1a24611c112fc879b954be564",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/prompts/example.txt",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "7ade3c209f841f63d7d185658f771e17a9a29074c357ffee59f342767ffd6ff1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/prompts/long_prompt.txt",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "d0839f39199d32dd4e96fab6928182862ac5831622751975f03561e2d57ce027",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/run_doctests.sh",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "b2bb7e2aefcc4d0b55a61bf4f7363d938b233a26e52b0646f120ffb7dc23ab31",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/model_runner_v2/__init__.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/model_runner_v2/test_basic.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "875bb5a5384397bc39eb212a260cacb2463285b1cfe09395107f33c58f022dfa",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/__init__.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/test_classification.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "96060c1c7718e66dc952edd56d70179600ec4a7ae41459d8f8870806aed633cb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/test_embedding.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "fe880277e98a81142deea5ba53b16b2592db78cc50e440c322f6f6c043c4790c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/test_scoring.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "3bcab4d25ac731cfe33ef08794666ba2731f6d50eb99b4482fae9a10b6307b6f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/spec_decode/__init__.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/spec_decode/test_mtp_eagle_correctness.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "66b2bd3f46fcabe60cb80269507498d03f2fe1de9a50e4190669109243a0dba6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/spec_decode/test_v1_spec_decode.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "7073855fb821808f296401db448dcb11c286a9bbdb0e1d981ef11c48f37fddda",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_aclgraph_accuracy.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "0c64489fb6c7f2fa9ebdd02857ededa91549c94bdce70f0c62990b86555833c2",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_aclgraph_batch_invariant.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "0a51f1668af57bbc6723610622412b4b01c3489300f0406ae6d83cdfeb09ba41",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_aclgraph_mem.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "b8bca40d5193434e9204730b72074d7d7b03568638bb377fefc08120496ed25d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_async_scheduling.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "de7f93478f2404dc5bddacacd9c1fe612d8c64b2fc811d52f03e211575744bc9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_auto_fit_max_mode_len.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ce5582a8ff1415e89387e7598f5ce0373f6c6bc62ca0cd583431d0c9c727b752",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_batch_invariant.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "425c2f28adda788a201061f16a5be6aa5ad723922ef12055eb8cd75f74c7e657",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_camem.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "504f1642f96c493acbd9d3d077209391d5664234980136db37e25fce1edc0555",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_completion_with_prompt_embeds.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "92810679b1fb21313e4b76b10b813e93292dfe492e1e268c05227fb56213703b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_cpu_offloading.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "dafb140b07cfcd6a5856f2c4a639141bb93292af0c08720774769b52fc391e28",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_eager_mode_acc.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "268c687bc35ab53ce1e24eddae2f7ccc07986f1c39826fc242941464833a78fc",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_guided_decoding.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "260e3ed24ceb86f4d9388e72a8bef38a24a5166f4068f8f75be0f3762d42b9f5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_models.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "ecca2d7e05c6a5f0b8553232b32d999885427182c0983fc89a038522c380b5a0",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_multi_instance.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "702c0a630d12c8bf47b827a8c11081444421fee0d8f31aef59563f3669047e9e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_multistream_overlap_shared_expert.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "9f589c5534b867d3aec7a4b4f6a8f780515e8b457eeacce0e37e2a1c3e41f251",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_quantization.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "08d9e90eefd8c41948e9dc1a2c271d6571e86bb6007f378715a0aa332a86450c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_sampler.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "247b996486875c21e9eb1a1ae60858c7c050bc25d90e2ce6c3755bf8cccc8dae",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_vlm.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "d169a6e31b92495591d3fe035de9ee86e7a94d060128335e47cfc3f355d67399",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_xlite.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "93cc71b2e26193a044388aeafec5079b5bdb83daf3153fb3d197260d10fcd0cb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/utils.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "bb707c112f459383783b2f6d27ee88f7e9f7ae8fc391396e392b36902dc92d6a",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/utils.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "93bf8a89844750cb698df4519d2587eb630cd646d8b1ea2de80a1693965cf4b4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/vllm_interface/singlecard/test_sampler.py",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "5927643392054cd59009801ca3d4e7b4cfc7d29e4863be63f39166eeca2f4618",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/vllm_interface/vllm_test.cfg",
+      "reason": "off-profile model launchers/fixtures; native operator and SFA handoff tests retained",
+      "sha256": "b50d045037808ac5814a1af668cbea4b8ee543cf3a29a650f01f45d99d48a3a8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fused_gdn_gating.py",
+      "reason": "off-profile gated linear-attention or multimodal rotary kernels",
+      "sha256": "f85605c385a807e4d63b8b8f15c71130255b899bec314b81b9961e42bc29ffaf",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/layernorm_gated.py",
+      "reason": "off-profile gated linear-attention or multimodal rotary kernels",
+      "sha256": "efa327d71b18267e9c33fa40cb58168aaa37abaed49c6780c9b19779d5977780",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/linearnorm/split_qkv_rmsnorm_mrope.py",
+      "reason": "off-profile gated linear-attention or multimodal rotary kernels",
+      "sha256": "a921fbd369cdb4d602b4e45128aca82d40b736508a93c64db059684e5a1f1619",
+      "binary": false
+    }
+  ]
+}

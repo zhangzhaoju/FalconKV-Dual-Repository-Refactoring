@@ -1,0 +1,1787 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/_aiter_ops.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "90aecf0c7799c36a6479a770139adf63d958f6f984dd2cee79e9198d8a6ee28d",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/kv_transfer/ascend/ascend_multi_connector.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "2462b8080d418fdd26474148191129c9b90e430d26cdd465aaf2ed5a4091bf8e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/attention/static_sink_attention.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "754846b2f926d918be8acca84c711fc523e58cb825a1ea1c2924dbd707075b76",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/__init__.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "5dbbfa3fc286edb2e970e175ef33cee4f6181c89b0784f5a8986201b2312f54e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/__init__.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "ea5b20efc293aca2e467445ef67d86988266573ab22f3cf25b14b88b12344737",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/chunk.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "6162bd72c2d4357cc4c4b2e31a2d9031cf8ea1c0540b3a0b219cddc6e7207f0c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/chunk_delta_h.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "486687d496490782aa6bf1b6817c70412183d1e5f6bc138a63a843814c70f53d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/chunk_o.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "dd381813c3df6a0459a281a30fbbc22369b9b95f9a84e9627c35a74b54ecf881",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/chunk_scaled_dot_kkt.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "fe2ecc3063bae8c8c3d51610143a8da5af721a49cfc8704e4c40f00a173d845c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/cumsum.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "aa14bf2e7cbeae888408c103bed5811364698856032a3a96c7040e35174bda00",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/fused_recurrent.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "b03b034fa42c4831f5a6d792acb5cf27691e2d17a4f0c6b0fc27af1531377042",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/fused_sigmoid_gating.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "21ad2e188137db3bf41c9cc03784f4f1dbae270da235dd5943e4c142966832b5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/index.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "720d885794e7edcbc3ccfc3c7d3748f7ab08605cbceed93deb46f49cf2455d21",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/kda.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "e5fa14f5df48ed374eee83e8bcaee72a9ad4b33b9b4b79fc338276bd0a3cd998",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/l2norm.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "520f4513ef4fc97e6b88dc07877cca8e29da0d34e44673fe989e3af002d86381",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/layernorm_guard.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "d6a2f6545a71b6e1a9eddd83783b1489cc79de18fac6db09192980ad83179995",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/op.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "6ad9192acc939815136baf069d193455f1157ca01b991a052d8b5095ff3f2413",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/solve_tril.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "0117db52028e1e577665bab75658233f4edb8dccc54820907343112e6001715f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/utils.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "b4bdf9e1498e6cb141a7d3ec08666e992c70a3d102b1b578b1dcfbcc34037fda",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fla/ops/wy_fast.py",
+      "reason": "off-profile linear attention models",
+      "sha256": "4eac9908352b014a3464576d1cf458e27b54c5abf1b18b001868f49b6de8ca22",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/kda.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "7abedef35ac8e3a28a856be5028496a7a90bb62043d3f874b4b5a1eccdcc14ed",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/linear_attn.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "426f5b0c3ccdda8e49ac2fd2944b1968792dcb9f280d279af5f8afdcc2555d73",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/mamba_mixer.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "1ffddff796fe6710fc7a35bbbd41db6b047f8bb7c8eb92c0de3bd0f5bd4934d9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/mamba_mixer2.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "5056899a2231acbaaf8df8df6555089c21bbb9f5e7c9a9aa69eb321b5ceae5bf",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/causal_conv1d.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "6e2fd26aad7149fccbe5c233abb001a7137214233b244c3b9d60a6d5af76a5cf",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/layernorm_gated.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "3433f2e3b87c2b2ccf8e9794ce40762c86a6da38a94ecee001f439ea0d0373dd",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/mamba_ssm.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "8bb1db720c2809eca4177542a98f9294734c3ebcd9229b845ea62b8ee06d9d7e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/ssd_bmm.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "6dd733f6c6a70a8c4a75c756f404000ab955ca743d6a33ddf2e464e741440607",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/ssd_chunk_scan.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "3acebda25134732ae4d377d1864699b00a300712034581d2e05aa22e35c044a1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/ssd_chunk_state.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "82ea2958adac0079713d7718776f9d001375818fbb3dac0dde55922fb04d960c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/ssd_combined.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "668fa866b3ee251b32610a8d25b79b776352549c763591b2bb24255a7cf3bb75",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/ssd_state_passing.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "36b8c8edba437916a5b789717c61fc22077de01e77892cb96dbff3b00a57410e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/ops/triton_helpers.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "a8795532f22c37a93e82c9d8e3fadcb5f4da98673d7b321fe8481305eaafad30",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/mamba/short_conv.py",
+      "reason": "off-profile Mamba model implementations",
+      "sha256": "5d801bdb2e9682213e0fd261e3c0b28d8054ff539c5b26f39f1d6257649e22bb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/activations.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "396fefdbdd0027e6c45b830f42f8c8bf51725dc1230cdb1cbbadaba159b3b7c0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/seqwise/__init__.py",
+      "reason": "sequence pooling implementations",
+      "sha256": "34e38d6bde67726a9f08dcc13f32f086483b1d641492c4453daaf87833550770",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/seqwise/heads.py",
+      "reason": "sequence pooling implementations",
+      "sha256": "e87f7a16eb01a41517de38707b92fcebad0e97d671aceb5fc2176c6a4b28b5c4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/seqwise/methods.py",
+      "reason": "sequence pooling implementations",
+      "sha256": "bddca3cc441c6c7f737bc7d734f24c598ed6515f29125eee4a89e09ec67e7a4f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/seqwise/poolers.py",
+      "reason": "sequence pooling implementations",
+      "sha256": "1d1e75a8961d878b9a89182a0c926a3643ce69cab5dd28d67dfc9cc6e44d6958",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/special.py",
+      "reason": "off-profile backend or operator implementation",
+      "sha256": "cbbd88167faea411e481d5dd3b2e72bfc0bfe798f2b06898d4e27cf277bef091",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/tokwise/__init__.py",
+      "reason": "token pooling implementations",
+      "sha256": "c7ab1e1a73c3cfc9b3f0cbcc6dd140eef86fda4733bfeaae577ff69f9021c209",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/tokwise/heads.py",
+      "reason": "token pooling implementations",
+      "sha256": "082c0b4f33c867fb37e3825208fa1958d817ea23bebd6974dee07b01b0454cba",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/tokwise/methods.py",
+      "reason": "token pooling implementations",
+      "sha256": "2d6fdb20f0ec8ea5c2dcf0cee84cca58b0ef4cc502ef2a7de8c80e5d2910eb2b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/tokwise/poolers.py",
+      "reason": "token pooling implementations",
+      "sha256": "054e86c2352f795eccc7a692b9575df47043c0563c30430726aade082f508691",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/allspark_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f954699716994ece764c944da53b698e6d29a7d7f9d7f4b5b759ae0fbeafd9b9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1024,K=2048,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1fae041e2ce353f023920c1d2bd7de1a278ca75cb08bf285c139f9c881cea454",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=10240,K=5120,device_name=NVIDIA_L40S,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ca2ee300ace91fe96c0e0f78d403d5e055e8620b2c8fba81161bdb5a5d22597b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=12288,K=2048,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "20da3e4aa724280f20dd2d0716c171a4ecd1f69f0399aa3b42d8e04799303ce1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=12288,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4b38355b6c47ee1e54f94387f2f1db0d5ff1b35c4edc033fc084c76c9b484e05",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=12288,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4daf178166ff695849c2a279f62d73cd8e393610866b327be7084352639fc95c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b7c4da3837cc17636ad2a83a28e73c3524ecee6f7425cbba221dc15d4bc56f4e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "08d23e23d9dca8727bba4a73832c5d26dcf46dddbdbec802dfcb6f30ce935755",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "08d23e23d9dca8727bba4a73832c5d26dcf46dddbdbec802dfcb6f30ce935755",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fa3ed7ca4e3115a8800fdd05787e00a914a74bcd9fe28c0a4463076ce6ebac74",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b16fd3f8174b6e326816a96bf81e5ff5e985f04d0874a7f2ff5c14488122e798",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b642e3c0b0bf6955e1ceebe8fb64079288d765ab8f26c7f78cd1c59f54bbb910",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6a40cd023519dc45c1ce717dc3aa947295f168b5aaee85e75f98f2f91f5c95e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=1536,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "240c9c97b11a519b660a85cc8eae09c0a5c2797c59e92e13b3f0eb89c454c3fa",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ab9299ca2f53fa5d3b3f7af5bbd8baf83a70f3d5298f0d60a53a777f50a5b84a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4539d33c540d8392542db3cb5890d344d4591c8ec5b2b4f1a920e465f49b9b3c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4539d33c540d8392542db3cb5890d344d4591c8ec5b2b4f1a920e465f49b9b3c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0cb09f5b9b50f64ef8006676c844757ad3fe1e05068253e9ff0a0989a3eec604",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f2ff667563ecd5e5dcce8de2c05acd9d1a362c5f703d4e12726fabf5b2fb173f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4288fdacb2d10db28ce08281097bcdf11731cd298d3ddd1341488cec25c3a872",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ece1426c1aaa100eef435a22ca07d6fbb4eaab1f0e2404da2ee8ed710220c935",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e03dcabb8cbb042544273b9e2af402fcabce474dbac3738d5acc5fb00fd8ac47",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "88967fb40ce860652683d96d8a5e1ef2fcca94a8bdf34c939acc04316a95d49c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=1536,K=7168,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7c3a2603bb8140a5fc91b3bfe0c15ca01c0784847feec3a49e040fbfa710ab86",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=4096,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "5e5300e11f8a3e4827de9e598306a812be9a22e21f627bd23a4a65ce184d9c06",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b9cad904837f8af9a67cc02f913e34c50a47f3b2dd40adfc9596de2d63325783",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "cc39d5a81aa04fe9cb933fc2a2ef8a4cfb0d21587e61b4c19e8f4bd8c81d4533",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "cc39d5a81aa04fe9cb933fc2a2ef8a4cfb0d21587e61b4c19e8f4bd8c81d4533",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "cdde5c318af143a3c3d232a9777605e93853f5119daa01109c25ba1785beaf81",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0a33ba761feab75893bb991846cf7cb532cbf96e853b32cee00112314147cf9b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "eefe2da7445a4f8bf1178bab481ae42b9151ff98a478543586d1770f00e5d659",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "339179c334a61689049b45fcfffa202ef744d50542e845bc6adaaafa4a77ad50",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d09d8c16068b92ffa67d5139c77eb796054a614ea688b1bfc513b7b495206bf3",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2048,K=512,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f7cdf27c579ea3e04294bfc7d60fa8c17c1b03ab7497e911122cbb90b51150cc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2112,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "473ae763fc4aa37f706789cef33528acba758af4c569b07c650385471e4970c7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2112,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7fbba97fa91a1d2e7fdc4a90603c6d4ac6e06f80f5893be30a20b86aecdbc774",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0b678cf11b9d98ffaa5c47ff02983ea9c0799f6520c5ff3eeee1bc8500d2b758",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "96523a3d69520e041ffa8b930d790560ea12cfdbb76f3925c01b59618fdf5953",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "96523a3d69520e041ffa8b930d790560ea12cfdbb76f3925c01b59618fdf5953",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "abd1d47282f471d64239667c30a6dca51f0d4b2e6234406ae8d3d36872e0441d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b89bba1afe1ef34bf156b0f2068f3fcb8eed395d37466595b0c21643e6db5ba4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e2e6db8704855ff5db79f44b1242e85b126471eb4558fcecb333eed17dff5abc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7ae88abe16f70d792f3cf4092ea344ff13767afb133a86675488aabb23760a6e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "161ca78864f1e50782b95ac14954d0caceaad393ebe653c470fca4a405fb232a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=2304,K=7168,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "a4b42f31a56f95eb7f25e9c4cf6e66c71a6501a1cd8ac97a4854d267b9583f6c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=1536,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8ab41404b77728735df09357f1e15ed9f041dd9677ccc977680176daec49eb94",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=1536,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "824943e79881be0e3cf3e3de72fb5c132a700836769428bc739a3d6ea80411e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b806be6509804b096a65baf597508ce85c8923d8ab35d2c1cdcd54e47772c351",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "46737b95fbb5e4213ee32c0c8c06c4cfcc1657be3700ffb516ae54fe3f0441e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "46737b95fbb5e4213ee32c0c8c06c4cfcc1657be3700ffb516ae54fe3f0441e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "704dc1b1c4bfcc4b45fe6fe3af9d483dfa5a6598081288e68531ecadbf630013",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "492732a3ea18081c4947d0bb6482aefe92493625dda53d779187b6eab75dbcf4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d2fd7bbfbf291135efe92d99a226de9313958624e60a6f34ec3606e0338d51c9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "00eba8bd4b0f007a9995baf81b7fc29c2344fff7e0c42cfa46e3a13b10b05afe",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ba5bce10014ef1cf9439adf814466b8ce90247aa2f84995f1450e199a2880625",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "062668c2a1316ef5dfb6e137ed261c85e39db585fb6790445f2ca427a19b6129",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "5bec5dd1cdb3882e586c2f7a4d795cd31923d9c99b7dc7577255b8e773ec2e92",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ee8934ba8a138a1bd149c91930d77a8c89d1be1b7fc640b9a68b073bae9e8ea7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=24576,K=7168,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "87f67ac0129d486044a3905f40a6b1b85971cedae76db651d2991c60abfddac9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "93add58278b2377465ffe875858993feaf5066d485a9099706a8445c9424c6a1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "89cb30a91614b1476840caefe1822a3b8e861bd0737a99812669d3adef7e5635",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "89cb30a91614b1476840caefe1822a3b8e861bd0737a99812669d3adef7e5635",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b0bd04e336736f4d60e861da4c25e5b60db4b926ed8571d224543449ac59ecf5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "319709cfb063c153871c7c6f62a1ab5b0efb5a7c6c9588705bcd1b670fa348a4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1ac2e8624699da9e10bb40a88fe5fdd2cec95b27d904e9682073e5c8d29221eb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e3efbb6169c96142b85e6436cd9e0cd5961d2af524113d1590d808067eb168e0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=256,K=7168,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "363100d908ce557c8e69548c3dc879a9ad43ab78a06d6ecc984f7cebeeed696d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "db506e8766a21931e3a56e39466f93c190fc312680cbc34c52b2b997f8464f99",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3fca7e75966dfc3eb51ba9373e051eb45d35c734d19820c9027a8222c4835bc2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3fca7e75966dfc3eb51ba9373e051eb45d35c734d19820c9027a8222c4835bc2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f33b8984575de9a5d11298aa3c58482841560399602d51ab1b4f9af545dc06a9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ff8d9b0d95f854e0c4ac8e8e2fe36b5a36b7ea23470b80f3805d65e4c93aefe7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "667d53be10283cebf4cd00581ce661c1d0f0de8ab2c66d3321aec82644c21e9a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=1536,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1fdc0e3445345d74b13897e4c795244bc4acdc0d900a9f46d17368244a84f674",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d93d93619857802f7bb251fdd8743c1af652dcab94b756620b746db9d3d510f0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6fafdb854b90ac8f4762fbf0980bd4621e2fd4667cc34b230293a6c2e8ffb7c6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6fafdb854b90ac8f4762fbf0980bd4621e2fd4667cc34b230293a6c2e8ffb7c6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "caa8ceef330bec4b1e049c3a067e4c4f21de022b643ec97576775778be919fa0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fa740884a00e54242bc4b57a1c395c0f457c1cc5afaabbfebf288e45553baa5b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "28a982bcd8794ffa9f0fcbfb2628cca97c50e4bebe8115fba1ce9ce6b7ba105d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3379f0a59776fb4c36eb7cb066df606b0e77cfb30debbdd3e6d978b5ce3736d9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=3072,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1fdc0e3445345d74b13897e4c795244bc4acdc0d900a9f46d17368244a84f674",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "2a612027bccfd92affec6b007cbfb5dbf8364b66b6c15a67c600a217974588b2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "278497c29b22a0145d4d739a8f63a3add36b12e5b5345e3770b76ceb9516cc26",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "278497c29b22a0145d4d739a8f63a3add36b12e5b5345e3770b76ceb9516cc26",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "52304e995a98ca7047ddd255b8c2578ca9ee67a2ecb28873cc40692c11b8fc6e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f0126c8dcd94518768b6b22ac32ce2b23aead307325b88e74e8fccf09dea6300",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "bcba15dc932dbc738aa51e43d4178240f32e625594025ad7bb9e20072364c0a6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0665d366f5a4ee4a617c19869ae488ba89402bedea08676670f843e0570a7778",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3749023c7bf26cd2be1ef30ed84a8d0cb923ee6ed6ac74e5fb7003df62c10f89",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "9a387e02024dfc8a1601cd6ec21522075944dee7c03c37fe28f3fabd44eb0cac",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "874ab3fa93650bd64635bc9e16c11215da3014f7d34cadeb87c48ae0d1f60acb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "99c175d9e413b46c6872b54803723df0d1ddd4d2ddd3ef04c9f5eda8382fd0f3",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=32768,K=512,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0138686bb15470674d5d807fbfd88ca418765fc0b488b7dcef2f82d31cb67116",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=36864,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "309808bd91dfd358eef0858454eeafc8c79dcb93936710e9cefe80efff16f938",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=36864,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "013db2acca13be6a22ce2e2cc702ed8942d9e7b3f508184a1a0f7ee86c67b9ce",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=36864,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "013db2acca13be6a22ce2e2cc702ed8942d9e7b3f508184a1a0f7ee86c67b9ce",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=36864,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4fad022ad33d62120466cf05f4b963addaaa73845e96847b5e5f4862c7dec7e1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=36864,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "924f16a8d0869a387cfad38c1c13fcb2fff97d6f355e477375ff3ed960e6d114",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "70fb6bd5426afc1f9d4ea80cad59bca6d8985c0eaa3b2fc5f2bb367fb963b842",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7286edfd9851dddb760b24abd766c63d5c27d684bdf18bc62dd221f47f010d0d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7286edfd9851dddb760b24abd766c63d5c27d684bdf18bc62dd221f47f010d0d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e99ee421ad7846356adde93f0b5e6ae6652ed48ad8dabd0e3fc4befe99be3185",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "afadd2664509255f3b074d21017d3be3fb9a0bbc3041776eae526c0758d40342",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "84bddda17ef3cf195ddd4712f29f4009269d0da13ab77c57958c0ced7dc639e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c4187174215fdf069352c2f1271039e11f74cce0db0bf0ca2375d70552a3291c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=512,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "da4b3b4d05142c00fe667e62ebd607a3fda1a66b26c65a1c75898971c4a1d8da",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ce6d9eaa55653d694ffb9a3de3840be34382ccca541c690f27076ecbc1ce57c0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4096,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "61f8381838972182f2ccbfb7df8622aef0db702873f84a7f6ad0a08446529ed5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7a223c5f67c53649c99a24f4b876f349a10a430c199396f19faefa80dbdcca0d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7d040324c94b758b18e42a2c8391e4473beb2786ac8d099cd161a0a03e1b0b6d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7d040324c94b758b18e42a2c8391e4473beb2786ac8d099cd161a0a03e1b0b6d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3bf495dafa3fa1a0017d3e8cc6a726a35da99e12ad7d7e139d77ded3639c1c99",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "835d9792eadab7ba144bb2dd4bda472ca165babe3f15a30688606f76afa2042b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1162f16d69dcc062722fe755e843beb3c924db9c1f62b1126b44938c29f30fae",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b4576b6399c00e65d495285d37cc3c273931ba3fd13cb5c245c797f45850df91",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=4608,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "33e7b01076e01cb04b60b8b51e0cf93e9e24ca99d4882468d2eb76b1c367bc3c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "cd3ccb6dd7dfd3d1f032e5a55a9a00220419e8d123b055d2174639cf805eec88",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "75c3c76d811bcfc4fd48ce7e6b9b0ffcafe7a439211fbbb428cf5a88b9fd7ac1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "75c3c76d811bcfc4fd48ce7e6b9b0ffcafe7a439211fbbb428cf5a88b9fd7ac1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4cedaa4469a9dfbbf9dd9aaef09a1eabf0526edc0cfe6a55a28cc6ca8360d3ea",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "42a8a39a02ea228054c513e7b94406b2840049115132c09540a4e312319e715a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d31aae7f4d1f81fac3383a5ac72aded150dc8ea7f3a84c63f77f6bcde27ca4ca",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=512,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8a983c88af30db24917b5674f182545801d7e37aef92b5e947ab2fc518529c51",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=5120,K=25600,device_name=NVIDIA_L40S,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "45f289e7bf93beaed6a207d24413f2b39ddf2d77c8afbe26d589255edcc5800f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=5120,K=8192,device_name=NVIDIA_L40S,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8ac4630feb70093cd34655e5a031f032f8d46734ce8592fcfaa9cbe28a8df88d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=51200,K=5120,device_name=NVIDIA_L40S,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "a4814f3e14ca053ee578af9348c0a6cb52d66620dcebfe6be33a0fd22edb5fdf",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fb0bb374d5dfdcad237c540607c9c54b2a1267805f02f224635d24e857639cb6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fa8f50aaa410fbd911542b83394181b8a5c74537746ac193ceb0dc1c619824b4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fa8f50aaa410fbd911542b83394181b8a5c74537746ac193ceb0dc1c619824b4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0db7a6490768da1e6f1a348d07a168be79fe68019f8ed8b4e01a7ee4ac4b00b9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ea0956a658ed7e2baca49bff12c83f2d60830d0e7b7761c44ec388bf4cebd847",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "a86eafde7dea17a2c4d837464fe98321779c6756bbbe0ee9dd0a97602317f399",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "97ef6bda4d6070a07c5179415d5bb39286b52432e02554c143f39a40af34cfe9",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e3efbb6169c96142b85e6436cd9e0cd5961d2af524113d1590d808067eb168e0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "65f3cf971d2a72e4785a3685004f96d5066048f00c7f737219ca6f408bf214cb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f70fac89c57deef490c6445c10a9c52858e4cc13b1f9538796b87a6f58614358",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4204a50c08650765b86f34ddd8ef7c50bf82fc829f266fdc566433f05aac2c5d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=576,K=7168,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8b7c32fc204eec14105612917910b61743da44840374df45e6527b903d317b52",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "42992aa499f28ee1c7f19a3853841981e854176176b900d915bf1f7618b15d62",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c2fe468c6000f8dc89e354987581b7b4f020c1fe892bb65fe9269600b4397376",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c2fe468c6000f8dc89e354987581b7b4f020c1fe892bb65fe9269600b4397376",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "45130d78cfea887be55133807aac20b3bba44a80194a52bc5cde33f218169749",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6eb074f8516bf92bf66ddaf3e03409fcd6858444dcb5fd60e18cf08ff15c7337",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6cf416b6f689af338e22023e47e308c6cfdfe320bf1686e40f276edce90e16d8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4582e1f948a6f54dbf7632e4170c29574acd4078a4d2d647cde72e8f5fe13cbc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "651822b876764850babbe595e431b06aee24d5188f2c8ebb78434ed1efb96258",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1024,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e04cdb9cb587570ae3c8a60f31c0f16f1336a3e92b8e54f4617bccf283c7e428",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "38580eb519141f0c8e4fb1e4fc141fb7f5b3b993b06e13122cfeb915baf88280",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "00ebb4e5d6b62d96c2cc3f522acae09f31fe8a1dc2757b1121d25cff8275969b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "00ebb4e5d6b62d96c2cc3f522acae09f31fe8a1dc2757b1121d25cff8275969b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ab39859b6a6ac69862af52c1af2703669e4903822df0e750790e624eb4f02cd1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d94c8e31131d6ef1ede9695974e2802e6dceaf478c0b1eefbf080b882632a0eb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fa13ff3fc34cd0ad38986cd39a91813626d0e71c61e603f3e56b68317868cf51",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "bc4538fd838c9cb75815fd4190111d15b191306f0a2e1b0efedd20bfbbda3b86",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "141e4b7b8a1bbcfa028054a70bfdfe521e7d9fe32de11a25f2c69755c2b744fc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=1152,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "935af3a609bd9b5f401dffc73d070d0ae481b40c0580c78f5180758d9785c986",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f486f34f02d181309f14b4af8c458a89a8c28c6f3547ec13963215db3518500f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "078b84c2e7edbda8fd80719da03067561c5b3519b352dceee0b1f4bbe3bbbe80",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "078b84c2e7edbda8fd80719da03067561c5b3519b352dceee0b1f4bbe3bbbe80",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6533d6b490372412f68e1cbb0bad1176c9ed28237ca10f830c82f5ee893b381e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "9a89025a85dd2a2f29e262d8aa09638f00d12562b9236a05ebf309b8e6e2e6c5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "90bbe21af56782980eb9e95f2adbeff48b3b31643cf6b1b196898c44feadd087",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6c8551b5a6874e1a331f9e1522d7b4364d2c38657aecae2cd9865413a416c76b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=128,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fd85f343a3774291773aed45cbee756322fe2778b980e0550a048ce36bce4fd2",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "72c6b3ec06950d3bc2bb36a9b4df9ef0ad4f36e230666f4ec273d227274723dd",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b1c7cedff9dc0adcaba9c6129c8a0065331fbc1ce3078a3fd3f6dd8a2552361e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b1c7cedff9dc0adcaba9c6129c8a0065331fbc1ce3078a3fd3f6dd8a2552361e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "084d7044bc8538da38fe270a3bc7dc4d35fee6088a349f7fd45fb69abfa51905",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "25d51a2e23267fca046f0ba13c73089dcbd6cd74b64b138481f33cd198ccee5d",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "be5cacd198bf09a694e3538719b59206d6d5825162f7c6e0a84c9204c73d49d8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "facaa232418633386bb3559d8447f088d65ddabf8d9a112c7ef2717332d927e8",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "198f5504f8b6d4aeaf26517534e1330b2a8c4bb2d7df1ab9751c6b2b48ef2079",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "f0b585e7964f8eb398fec11d446a9fd5e2dc4cdc928148a258d5ac378106c4b6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c4437da963e29177f89e3b98c8a409556d1233970345e8def9eba859bafae161",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fc273412a53397a77ddcec562515986d8a44693229d2094985d7d5f864808b93",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=16384,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6521ef7670b6bce5c8d873d6d62348f477628682dc3589512cc17ce69aa35991",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4a4c8c2eca311a81dd3b89204deae28689deede122d2798796bbd9508d48fd5e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e89a36870da0429ca2368091669188b6ee0c064632b73756f958205940b87cf1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e89a36870da0429ca2368091669188b6ee0c064632b73756f958205940b87cf1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_A100-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c5b0df5182e9855b59589a2365638397118c0a88888319f82ec9c3f607b7afd0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_A800-SXM4-80GB,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "86a87c4d0c37b7984f33dbbbae61cfb9a323c20c6643e66ddf97d24e0392d074",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1a0cb885e8e47168e2c39062fb01b348fe492d5baf3a38a9feb6e35c504965bb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "47392b53347f9f3c670f82f68c5d3ff1a0d7fa789d9fa0238555e524ae745726",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "a8a1bd8666b137feed081ff4e8bd5d87472cc6cdd319ec9af41f97e96fad3618",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8dbeef1a2d5125e7c89a44f705953ff623a4882ba571de680e3c69552b7b6e28",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6add3f45c734fa54b323d3058fe4e39e3c83b741dc902658019d7dabeee9e732",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fc273412a53397a77ddcec562515986d8a44693229d2094985d7d5f864808b93",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=18432,device_name=NVIDIA_L20Y,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "4d6a73b38f23d10c00a40b015adde2225bba72a478e8c7ac972a7de8c38035c7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8b96f9d80d4e7bc90274facf2c11ae77b38c1e6f3befd243d2b0687183bf968e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "536d10e09c06eb7914fba71cdb8d551c67697adb4259b057449f4467e7db92a0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "536d10e09c06eb7914fba71cdb8d551c67697adb4259b057449f4467e7db92a0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e2e5a240c87771963f12d2c0d1adcf53c675542ba71763e9a254cf61e3fd463a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3a05ce56f44aaac833949c231cdc4d0ac27fa373ce0458a0c02a9a7db87f68a7",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "b681f30a9aead0a7ad408d3ef48acb602226d5b4349d278fd605c0ad4d06a202",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ff457a0847d8801b1a5271790f03565ac7a8f0dd4f87f47495afd737c1f372e3",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2048,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "a466598ff8199acd53f59823b38b5b226f742e16c4cb551492482bb68f633edb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "7ea9e36429f481b63b7cef49c193873182491def2071e5a158264e14f4549583",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "39366ddde965d0e67b0a0e4bd7b2b634f5385306b20244e2855e478d4994880c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "39366ddde965d0e67b0a0e4bd7b2b634f5385306b20244e2855e478d4994880c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "2ddb4ec97b00f6bd7c1a21649833a48918a7b03499059f0d61aa4be7d119e223",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=NVIDIA_H100_80GB_HBM3,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d3b19aac11e68a2624caa9feab112dac07200844ee51baa6e87aa56c7f72262f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c4c371b4b2fff2dca0e13592b7f965cff209daa971736344c21533855d55b06f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "904baf0ac5b760d07217e0c02d8a8f6695b74cbf196ed43981436aefef18bd9e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=2304,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e2e36a07bd5ae9cb59f9ce2d177afaeaf3ac1c5aea711dbc83f516cb437c881a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "424adf67af63c56fe6c1e8a0b472f94744affd6712069ef08c55fbe46f646c7c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c4c1a6a0dd994e32900594be93be661533e90046cf477932330a9956d81b1223",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c4c1a6a0dd994e32900594be93be661533e90046cf477932330a9956d81b1223",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=NVIDIA_B200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "3c3e002580a41dfcb68afbfd6da328b855f3053cb478a32e99b01fc5f9bdd472",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=NVIDIA_H20,dtype=int8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8aef0cdf9611f910e92966e35d2473934dac5bd9ebfddb5b85a95f2d236dc4db",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=NVIDIA_H200,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1450634969692973317c0514614a976ce2bf1ddeea05e06c7db71a6bdb81e2a6",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=256,device_name=NVIDIA_L20,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "e359b46efb24154cd5b65affca9a41af83d9d1c564a87bf2f47adce695025326",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=8192,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "d95c4c19f5adc53cd7705d1b3f7779b3badcd5c29be53341027f968822809e0c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=8192,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "56d4063b77c48b285b286e2c974edcb9573a89dd84b4a795d39a332e637f10d4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=7168,K=8192,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "56d4063b77c48b285b286e2c974edcb9573a89dd84b4a795d39a332e637f10d4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=8192,K=1536,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "5b771816d7852192eee5cd4ae3570e878ffe599cc553afa31a7668703ce629a0",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=8192,K=1536,device_name=AMD_Instinct_MI325X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1c8a1649480039c35a2b6923d98c038c36b6dcfcd05534f60b678f5bdf393afc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=8192,K=1536,device_name=AMD_Instinct_MI325_OAM,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "1c8a1649480039c35a2b6923d98c038c36b6dcfcd05534f60b678f5bdf393afc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/N=9216,K=2048,device_name=AMD_Instinct_MI300X,dtype=fp8_w8a8,block_shape=[128,128].json",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8190aa36b594d01f2feb12f55608b38b52bb7cee600a114c971a7651b364399e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/configs/README.md",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "91f8e3bab102c1dfb11f81038eeb9e4b45dece2f3a73fa58bb6c842e08b0f04c",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/flashinfer_fp4_moe.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "bb8d37d50533adf13ea97e5ea480cfe5e15cc21fbce3528928c64ca27a1b4641",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/flashinfer_mxint4_moe.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "eb26b32f1e86eee77ef1df38155038386dd8bad5af41ab81053ad914cb104ebe",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/flashinfer_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "75290785dd6e826c22764aff61e868aa30a552f6fb4ea1e88a12cba2a5c4cea1",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/fp8_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "aef35087bfbd59889e8816b0bf1264cd7080563f024d2cc97afaacc6bc289dbb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/int8_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "091d9154cbf5ad3aa39e1311c5d87e33f95cb8ed444284909a257cc26f9023eb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/machete_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "bcc1b04b5103967ccdac920ec0e2cf2cf12f02416bb38214db1eba153aff6d3f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/marlin_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "c1e5ec35cf70173a3d3b58617e1eed1d06392a74dc35215dceabf611d6f46e96",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/marlin_utils_fp4.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0343ffcb0df149c996107daa7a6f1f29c0476fa4ebab68e013c413f16388e513",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/marlin_utils_fp8.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "53b35ef28411ab25783ce64a8745f020d97051c755ed5e28b4d14f6a8d1eb437",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/marlin_utils_test.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "0fc734fa86dbd60f6a41500ca6d0534c5ff64b31f35d1e6c215f5a9edd7ffb53",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/mxfp4_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "572c6c0cdf8ba07b12d9e041c874a4ebdb261611ebdb5c85139ab43eada1353e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/mxfp6_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ddc710d009a3883315b48c99f86e5667befc40329ba5b46a8eff2f7cd13dbb92",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/mxfp8_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "6a877ff249f85122c2755a2348080f22ffe912f2378107a8a47037ea11f98ff5",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/nvfp4_emulation_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "ac5a5858d980d430f8239dfa6f45341608c1e330550d2a4de9ca5e95d8ecb2fc",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/nvfp4_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "fd737fc43a9fb5c279471d17b3789865ca9af87d3db2e1559dc06f5e86e5db8f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/petit_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8cab82ff07d17f80f9e73f48803b122500bcc9cb012364a304e78f47cab10f2e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/w8a8_utils.py",
+      "reason": "GPU quantization kernels; shared weight/shape helpers retained",
+      "sha256": "8e6997c1f654d6d4432797ea793ef1532592d082f88bed131c71fd85e7646768",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/__init__.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/chunked_prefill_paged_decode.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "40938b740ac24976088535fab3e1e855b61add8a25ea8477ccb3a634d0c406b0",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/common.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "27f8348a22241e8ab06b18157bc2064d1365ba57687ab88345183a7262d803db",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/dcp_alltoall.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "2f81b70d9996f440c6ea1796bca8258df96ef41f58ea043b30ae8318c601fd47",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/flashmla.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "bb6c8bc3fea19b0a6c4c86e840ead1f99c0f0fff3b42ee0fa0336d356f73dea3",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/merge_attn_states.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "5c7083682255ef339bc16bade846c8ce207b7dda714c5b8d0f39b38a8723d2cb",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/paged_attn.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "f22fc674ac25991526b064f4604f9bc009ad30dc16475a68fa95196730396860",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/prefix_prefill.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "0f70c8ce1b5498b369035af4600f1a6343ba732eb0088e6921140575edfaa28e",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/rocm_aiter_mla_sparse.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "fad5c11b4f6f5deb0365c808b7b2960adeb928d4772fac8744a3fc3987d86348",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/triton_decode_attention.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "d43c13056f5bea1d73832aaa39f54d3ee54d07bad2a8c4265995b1d0a8e46374",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/triton_merge_attn_states.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "e1f393d8f63a02872686fc0062de59bb53c5210f6558076a0b159ddb860c5ba7",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/triton_prefill_attention.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "16c3918a2c2c1dad52ee5535d427b101de3397044602da3728f94b52c12e29ee",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/triton_reshape_and_cache_flash.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "9708fc537cec09d692eac748645b84a2c122f8aa726c38800e4af20fb985d542",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/triton_unified_attention.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "8e8d393c4d551547de397859462ad7c3750230841458e658d73381dbf3f59005",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/vit_attn_wrappers.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "121b971f2e698d4ed66822611da20ea1454c60f0484fd2210e5f85e5c686b645",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/ops/xpu_mla_sparse.py",
+      "reason": "GPU attention execution; native Ascend attention retained",
+      "sha256": "b103951fa34092703ea866de0406cd1a5ef2c0a522dedfe395e2102e22abfcf2",
+      "binary": false
+    }
+  ]
+}

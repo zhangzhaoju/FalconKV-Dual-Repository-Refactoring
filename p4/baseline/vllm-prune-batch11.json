@@ -1,0 +1,3005 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": ".github/workflows/add_label_automerge.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "0e85529ba982a68a35109bdc6912d47f62db601c88825ed17ffbf26dac1e96ee",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/cleanup_pr_body.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "7c68d75f1e19f03fa591233a7de02a0839fd4c7a6a7e089b2ea9d000aece5c3e",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/issue_autolabel.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "4937a623be5c863a7c1dbd81fbd6949a5af03efd47c063e14f55f8ab344689cb",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/macos-smoke-test.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "7692475c523e8451ac0c76171a124150f1240463ea87630861790355dd06509f",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/matchers/actionlint.json",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "5ec0c56e3947f155d8a9df6361653d97be7969d0bcb10f8c95f6be99b4888f0d",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/matchers/markdownlint.json",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "505bbbfea88f08d21078a4eaa8acd7b65f50f45caf326d8d13d3548994147090",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/matchers/mypy.json",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "d2985deab2402a1ff502999e6a3ebeca02ca3fc84556dc5d717958bc6e6b4a54",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/pre-commit.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "f545974d67b487f68a3c45155ccc1fab4a3581df2647698b81bb3543d8fcfaf7",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/reminder_comment.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "bfc220f97252bf4872d20fc2c3fa050b855c418d9546dc013ec931ac14ba7f3b",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scripts/build.sh",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "ed919110edc85ad8fde99f09955aaa12786a40b763cefcea0f73428b524b2c96",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scripts/create_release.js",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "beb48e3bd7b4bf5f2c160166bf11387a8296d14e730703423a389f82a3b8ebf2",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scripts/cuda-install.sh",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "11cac99dca3de2a3998f821ff0e06e30b58e44c52484e9062ba2e25313083ff1",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scripts/env.sh",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "0867a9a921163a8bb26d7c8d24664284b43cdf6f1071b2200bb9d7d73ac6fa41",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scripts/pytorch-install.sh",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "4daf91755bd9edd5dd916272926ea4e1a78076afaca126648e099ed251fa074b",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/stale.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "42c42f5f6b3d7b4492891e6b517b77205a988739e57c07ec48a3aede728063d9",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "0ab06938dfb9746641c5b0c19f597c4135888a0825c4959c2abcf0699c48f66b",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile.310p",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "f178d29e8d4b035f8b370710e97c3652d677837578486c814b1cff170b67f82f",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile.310p.openEuler",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "8ab60916173f8083210dbb15c2820b3f855b2f1ebb2f6e014c16897c814e054c",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile.a3",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "c1167296bb68ec6917b1fd238024809b6f3580ec3bbfef0fe1c80ce25fb57eff",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile.a3.openEuler",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "0cf4987cc0563efc859817dbef5ec249733b7c977fe2f09accbdaeef504357f2",
+      "binary": false
+    },
+    {
+      "path": "ascend/Dockerfile.openEuler",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "aa5f5ef6a9a0d734782a1e9e8e69b49c8905ec8eb9fc92ac1d3c420d48f264c3",
+      "binary": false
+    },
+    {
+      "path": "ascend/collect_env.py",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "ec0d2c91bbfe8707137433a8fbd5636c8dceb0a68599c9327628333898296c7b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/_templates/sections/header.html",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "c1185e7e36b20e0c2d6ba465af1d37e97c5f0b98d01b9b329bdba09ba58a6b9f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/assets/ci_log_summary.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "7d536cf341e5fa302cc85adeb56f93b249a2d87e6d48f2bd41234eecb01e7637",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/blocktable.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5240389cecd2e1e4eb3c91fee819cc3a384126ea33e5613233b47ee0815c8265",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/chunkedprefill.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "cb9f6e335cc079acb14b43265374e4f858ce0537bc14172cd125eacda9a9b58b",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/dcp-decode.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4f87a71228f98a0c119b9d2b8aa0d8dc3ac745ddf747c2ed591aa5310f300fe3",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/dcp-prefill.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9afb1baa987728ab180809d1bb99b9e9ec9ee4c2b6a98d44f70f00ea98e5a99f",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/device_world.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "22183359ab90e116e3d475a6922e96cb9b501f62a420b0b060b3198004259d4d",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/head-tail-style.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "fa8f63094cc2e2a844308cd85731a4ba79b2c283d846c55cb6ae8b311e8b2df0",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/overview.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ed8e9ffff357b13fecd8f8c595955fa8949fa5af1f39396617a33752a7abeba1",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/pcp-decode.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a9525c8119ca417094b378d393fb083b5b246a6214c61078bf5afd22b49943db",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/cp/pcp-prefill.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f7f124d84afd15ea83f320ecf7866b94cd6dea493a0a5569c755bd58d8509095",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/deployment.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8b85841b20f7cfe79744f3fc4bfaa38693a2846fe4dc4e5a3296cdbaf554d8f1",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/disaggregated_prefill_pull.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3bef67bb214a905f1f4c35c14fb69e2a6702304c1e79e104aabcfddd788d8a28",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/disaggregated_prefill_push.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "bca50e3c612f00a45f598d5051bbea8d8d151d6a3a6a9ffb757941afc1d09a84",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/eplb.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "0f9f890640e620e28975ca5c66ae4d1edc1e20335f3208ad1aa4189deaff2058",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/multi_node_dp_deepseek.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f42b8f89055156c960288d8ef1fc906c7e68264fa807be0af5ef703925df6db3",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/multi_node_dp_kimi.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e3d0ff0fdfa6782395758bbe8bd54f9baec3787187b136e36666173ec3aca0a3",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/quantization/get_quant_method.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "143c5d335155f752185671a51bc94ee1a2c4268db86f0f884c0dafb17d227c25",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/quantization/quant_algorithm_overview.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "cf516526d0f46e6ea0bf8de22ac0a650215980f2dc233107fc34bb18fd8527fd",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/quantization/quant_method_base_class.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "27c2b31d10d49e217932570a9f314964f45403e2cd75e69b88fcad99fbd801d5",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/quantization/quant_method_call_flow.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1eabfe359703e86703890787aa1dee08ebdc764e59eb59ae6e1b174faa211d1d",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/quantization/quant_methods_overview.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "31686ac7bf8877a278073e5e2be43d71977882a78488caee64d6b87768e262b4",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/sp_moe.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "60cc74bc871055e7125a68dfef7c0bacdb3b09aaab03f51ced276a3e7e9af5bb",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/assets/workflow.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5a50ec1bac9424c7eb640f22a153aacea8fb20fbe3278bd20483836db3236ad8",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/community/contributors.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "67d7fb1fb52d907d25003f2ee66b856cdb8460478a954ff26e312639aefa7c3c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/community/governance.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "243da0d738a9fc7c50261ebc3ff82f3e252b17bb038b8d8bad4a4cf1eb553b2c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/community/user_stories/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8a2b7ad5e1c62e7537eec957c484bc6fb7269880da48a87f248a4e3d0f5a5729",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/community/user_stories/llamafactory.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4440c4e9f5c5845faf6c9f6e6f0463608aa8484fa8ae66be4ac1501cdbe7f1f8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/community/versioning_policy.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "c3c8a8c19e15ea9c30a94dc778e611b462ea8e651899e2c5e7b092736fd3de8c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/conf.py",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3a9dc693e92e45234b0fd0e3fcdf4fd509f8d6544304958f7e9314966ae94572",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/contribution/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "06a96ac1d7e9d8e552f02ecebde43e21491b6e4715fa224a692e600963f1958e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/contribution/multi_node_test.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "7933c615023e7e40029aa0ea2449dca3fb20024d51206c5e4f9d85930446ad9f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/contribution/testing.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "cf6affbde49cbae2e633b7b9af44ee250dfc8b9bd24c3731e20c00778e39deae",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/evaluation/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b3c358df6858fb0c1e99e15480f513dd101241fa22ac3f70e6a00930240fe317",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/evaluation/using_ais_bench.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "bc8b57f566743771add0d8a5df4b5327675a2d053fd4515f15f962e10b825f9e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/evaluation/using_evalscope.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d86fbc190ed4c8631f00f8109dd62daa52af3d0d92b7d21a72052e851e06d1ab",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/evaluation/using_lm_eval.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "21f768835d0583ee1d5aa5e6949cc560d6a5f4f5ed187921afe6bf4931ed3cd3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/evaluation/using_opencompass.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "13a4b8c035e3c6734516df1983f7421e20901936788c5d74de7eb1e8bf653d93",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/ACL_Graph.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "965b3f3ed356ff4a2788a236e43290fd65abc21fe95a30036c528d81364ac48d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/KV_Cache_Pool_Guide.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4b33fd406e991ad8bae2a99ec21d54e138f9cee6d1ca28d02c66b4f88db4ab54",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/ModelRunner_prepare_inputs.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "543df9c7bccf7a19cb337758333a910c195bdbd948bdacee59081fd440a09b28",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/add_custom_aclnn_op.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "76a78755280e5adf0479640c2ed6beec767d077585fa9a4a392c85a980d3f477",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/context_parallel.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "33dfb4fdf0992eedb5696c9eb7e4d18394dc987d0852ff41b9fc7ccfab54c991",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/cpu_binding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1da33506450810ea57946331047fcdfd179eb26586ed04df2746b9c78c71025c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/disaggregated_prefill.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ba157fdb4aa03bbf35fa9e3f44c0c41c05ce75cfd56cfeed0e473e6b88be314b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/eplb_swift_balancer.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5ef5b81a748cd5a5e53802aa3edeca3593206d537eb50e9b2b28800c78c2ab09",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "af3a1a6f1df52a9d039247e08455690f0f977d30cce8140b7481ac5a317234a2",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/npugraph_ex.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d5c2ce8abc7d6e8da7810760f81eab3d38ac6341f88a2d50de1a761cd20816f3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/patch.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4f35cb9d71fb3fd680e6c9358f7f265a7e6b9b0c0e4b932854e8cf739b7aef0d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/feature_guide/quantization.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1040e9ee31188656ceb70876d0c6060b2df2e9a9d74e8b85502fd7ae53280423",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/performance_and_debug/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "efd81e6ed8229b73e079064fde4c0629875bfeb91ea209fbb60e4f609f5b25e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/performance_and_debug/msprobe_guide.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "450d4fc1769cf9cf7aaf5fd9510048b9aee1495b0b95dde531ee1ab8d9672a3e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/performance_and_debug/optimization_and_tuning.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "09c65e0528903d6de020789de8ac7f66fb28685855f01410383496d91c0411bf",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/performance_and_debug/performance_benchmark.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "bc728e960eb91c9ce76cfb014d5848ae6bc0bb844be45340cb184beeec785c39",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/developer_guide/performance_and_debug/service_profiling_guide.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "db6c9e6f0e46b1e59a00dbd5bc996b699a786b82c4eb8257e35cfeab7523fc76",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/faqs.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9abb1e97102f667b1e4eb7314826ad279b688decffcc7fe243ad5a72c9b149a9",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f5c0d521db81d6e729d51c18bf438420113dfdc31abf326f7462bb99351009a8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/installation.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "abccdd87e195d14369d542fb97b501065949fe5b0307347b6628324e2df55af0",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/llms.txt",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "07d2d0d15f70fd4f47a450e606cd46f7e3fde463efa299564625773fb3dfdcdd",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/community/contributors.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4f2c9de74d65bd480ccb4c026f34c74ef2437e66cfb8aee7fb7a652c493ce627",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/community/governance.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8d5f871ebac6ac636f764e584329713e9375312c866178d7dc97ec3b0ca08719",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/community/user_stories/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ed44630edc7f15499592306969b7918b7a128a23f59167e6c47ed6d9df55b207",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/community/user_stories/llamafactory.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b516cef9b2c4f08c293a7d4d4dbbed7f77f207dc2ef43d83b1a7a60db2a14c0d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/community/versioning_policy.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "0bfd48a817cb4b56f3dacb142d819a1c97b1f24f612ea10ff387c6e6f0aecf1d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/contribution/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "30d46ad282daa15925706aeb884824309d053fdd94355ad033a77a518ce84d7d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/contribution/testing.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "2ad3b88b0108c26482f1b380a5d8c9f7cc1d0acf88c20488f28110e37ee15051",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/evaluation/accuracy_report/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "34f7bf05b79173f420ec17460ea2c840eab373a5821893f3574db94f3f31fec3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/evaluation/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "abb05a3a77fc1aea1a611e20d4637248fb2aa37f59801ec259077415d1cef0dc",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/evaluation/using_evalscope.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a78fdff51deefff64d89eb3023e79f920c06bfb8dae80f8c83dc5a25ab8dddbb",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/evaluation/using_lm_eval.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "c6355046557a561744e78a6d57040d76db59cd109bd28403f1d698c150a4ca69",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/evaluation/using_opencompass.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5b7a95d15b9a9e0c9b77a6ae1d65fd96b6a7d960df833baf823e55cc15678a56",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/feature_guide/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f7661c389f848fe2bd7563d6aab905a502427bdc7f7432849837c584ed12fc18",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/feature_guide/patch.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6f1ae472fdef1e496d44eeefe5b5a3e691f0f27322c74626e8a366ddafae4bb8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/modeling/adding_a_new_model.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6ab6b03daa0e758c82811cbeac89065181a16836a3e4cdd9e74bdddbd6b67bcc",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/modeling/adding_a_new_multimodal_model.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1f3d501655a498306948e8b426eb7666d4e9a3ed61a2c4101c785bc932c5a38b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/modeling/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "2acc0cee4879cfd7cb07098c6c6f26fcdca16c1431062c481e270a041c6a25f3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/performance_and_debug/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "32c3112c5a56227c7704ea91c1efca56aef10183d4c437d72eb70ef4c259e86e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/performance_and_debug/msprobe_guide.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "495e627850f29a9a5c10ea355b985415d9b0fbe1d9b1d39fdf87924c1a908f24",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/performance_and_debug/performance_benchmark.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "48f03359e4a2ef5be15b0a7df62a095050396b72f6f41451b27753f0dd73919a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/performance_and_debug/profile_execute_duration.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "0ff4f409a54274c14fb24cb3379b4f2d116b706deda9a2ac8e924e272b6f501c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/developer_guide/performance_and_debug/service_profiling_guide.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "572ac0d736d568ac5ebd2e700f34f9c3b1391751b0b4e78d6fcc2101d9ab9640",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/faqs.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "71964b5d72e36052a9a22f393a4848a154f7a9010830b6531fc487db026ef814",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3f44520c57c5958136167b7d857ffad4d80edfd74634fa3c30780bd203b4e238",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/installation.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "cbd56f26108a4f3b6551f37b8c5510a3e8cfe0cb8ddd1e2206bbfef271c5d285",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/quick_start.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f2fe4ac993ae26d83943c640a9787a7897a435e865c5c23c1fa0a684d5f83003",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9dbe6b1ac499078d283c0b13aef3c0f0f752d6dd7fb5d26d0eebe3540aeef942",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/multi_node.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d31160af5dadbf602aae6cd251af6fe59abe4665d83d6dd21bd1fe14700cafcd",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/multi_npu.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ce12401a444b8f96d57720980e7cc0e833c4fd329d61576ae9ca9650364c930b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/multi_npu_moge.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9f3263cfdac5327f5c7eedfb1718177382f24ad30317bf48a95e0d2933251ae8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/multi_npu_quantization.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b0231277d98524ad427a2a6ab314329ce0f1c110026a32fdb4c9576b7bdb1b8f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/multi_npu_qwen3_moe.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6bd1b3cbe9ad954bd0e17b083a4cb716499c5cd346d1b0ccc96a78235bb0b08a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/single_node_300i.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "bb8992e71ada6cc5341a6bee379e4886f67f717c28cc9d4113ae7c0bbec91840",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/single_npu.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "da8b5eba15225db228d99d14aa5e6fc03781bbd1f59fd8c0d0bdd5456c7404eb",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/single_npu_audio.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "63271d59cf00ebb89aac27fc49e06b347c2954f4cdc8ddd9da9f4538ea4bc032",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/single_npu_multimodal.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "851cb256f3b5ee862b808443da756d0e38f48a5fd224e0e0e28c08ac57d4d5df",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/tutorials/single_npu_qwen3_embedding.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b96b7411bfbad4d10609fd6946a88539bffa8fb22af5b0fd89a4cacc788b05fc",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/configuration/additional_config.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "fa73b6f8f21ce5994add6558d449a0d98c4be20a2d512c2912364b886b3f022b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/configuration/env_vars.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "7d5d1878450a48cfc0f01b21411e3c22950706609c42f934f7944d2251309d13",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/configuration/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "787f26fa46a6c29f9ef8b0c1f0055ac4b327107d5c7d441e9e8103665cd3b98d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/graph_mode.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "875ecbe2550f1497303877b1034f88d6692cb1a56708682b490d9d3e7ec6e1ec",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "865f14f0469ed84fd01c30c1ebe8b26a439216dba1268e80a3be4e6577b22e9d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/lora.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6a238ba957862c152fd5748030bda0e973e55606e5fcdfc1af3f376d5a1102b9",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/quantization.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6f74441fbbddad4e03c7c9aff8dbdc2d8246ef64d2caa1afedca9f35aa08393d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/sleep_mode.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "201eba27cd57efdccee9396bba037db9c13c6a3a351acec20669b63f0e73f887",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/feature_guide/structured_output.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ff5439326b3ab280be1351eef2fd153e6a1eda6417ece17737d687c637bae0ee",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/release_notes.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "2b7aa83fe0639320ba0b87a2e2c670a99f222965ba7e2a79ae89a465ddd462bd",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/support_matrix/index.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "662f0709b97c541545a0457c7ae199ff6f1b667106f649e0cc68c99402a1745d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/support_matrix/supported_features.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "496b5f2a29640dbf4eb780fb76b410d4c29dceb9c2ad8e40abf94900653855fc",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/locale/zh_CN/LC_MESSAGES/user_guide/support_matrix/supported_models.po",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9a5555861fe170a7c63ed57607c981c832b6d430707162a7be544ff7d872d1ac",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/logos/vllm-ascend-logo-text-dark.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "70a2789b08e3d24f14734eaa39034a12b0813cc0c713eabb1459e33ee68e0988",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/logos/vllm-ascend-logo-text-light.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4593e8c75bbff7e64b5ff60daf385a453d317f09c5d4b55994070bf2b3efc3bd",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/quick_start.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a630ff49d7d765ef9769877df94865351789ea7bf282b77e36169a88f4be0136",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "88c072452bfdd3e3c7faad2a1b4494079f63b23906fcaf0bd2527fded22e321f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/long_sequence_context_parallel_multi_node.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "107e913e26ae551c12f044970f5bccb248eda75dcf946882a7121765b94a721b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/long_sequence_context_parallel_single_node.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6bc7a80955a8da5ea7522e75781793b5289180297d1204c5c8e94e23469f31e8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/pd_colocated_mooncake_multi_instance.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "85109c3aeec16ed70dfc0f7e86d81b3d6e8be585330d7ce5aa7720d84cd6327b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/pd_disaggregation_mooncake_multi_node.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ef2bf3f0bea3d45b0ac5fef5817eda4485f01fe33c5bc64b44c9f0c8a44615b8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/pd_disaggregation_mooncake_single_node.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8d2fbf4970dca80413ef8454610d2c0bbc0bbfffd07449f640eb583ecf8aefc8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/ray.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f061300c5e5d4d0c55dac4ee279161a387b77ef18c012c58b7965a5e3f2cb7de",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/features/suffix_speculative_decoding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f16b5d50ec8d7da8be7264b62805acb5465bbb48f8c5d55ef180d6d08da0e7e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/hardwares/310p.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "be9dad35c75a56e36c9812fb7cfb2b1903316f1dd7f3badb90c2a880ba9c3e92",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/hardwares/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "0b27b9340212f9f53809da79aa794dd63a7f991ab07a1c58c2ebf66b8d4f0097",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/DeepSeek-R1.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d36c86e9b42ced3cb24ef107bd52fa7c65b08f3799d8915adc1a1aa8984b6ab0",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/DeepSeek-V3.1.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "573bb8e4e8510d05eda9294eddd2d7d31e59e42cda91ca6d4bf0685c1fda034c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/DeepSeek-V3.2.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "261edceb3ac7ec277296afcccf231aaf1de08e702aa549e007dc748317a27f22",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/GLM4.x.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a60560c44b8310493fb8bf649531b98cf88e1d65af34337445297cf36a1c1e9e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/GLM5.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b844584f61fed49d53e6232aa71e82b746e02d510bde40a8bbe3ac4504c9a3d3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Kimi-K2-Thinking.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ce1ca1b6b33c8d97408d79561cc86dcffc4aca1bffdab89ccd2e29dbe357387a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Kimi-K2.5.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "24bf794a38002daaf026b0adc30b1e4306ce4d2608f7e2a95a9de4575e501d04",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/MiniMax-M2.5.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8597256fd701e7a7cb7d534e1118e6f23ba4097b6cafe5b26bc25a68d936c182",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/PaddleOCR-VL.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9832afd7cc5014260e008558b0eb9ca7fe5f47480f7be7a94198fbc2b946a912",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen-VL-Dense.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "77802455d6f62d237b7e9720f242b25835b967b8b3de4e9717b721291b6147a9",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen2.5-7B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e3b7a9c533c88d078d5dfb08cdd94ee3f80d9e24ea0a50f94b2eecf9aaf31c20",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen2.5-Omni.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "601fb42d41f7f2ad6eaa934f6587198ea6fbf7eab7045fbce2110f8f13d0a0a0",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-235B-A22B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f87bef0e4d65fb14a40009c50d7e1ccfca886209ff64f8921e7a912fc64d1381",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-30B-A3B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "217e57507c29cb1457f2dce14ab190f36a9c1e22725e59f8810778bd562d99bf",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-32B-W4A4.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3ae423667f130e1d788bb56fa9c2fbd9ff949f63ea9d98408b95edc1e930c7bb",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-8B-W4A8.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "6676fd29d8f85a65289429d5cf9db7d6cf7ec395f3b83ccb4423589bed078fbf",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-Coder-30B-A3B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ad945f47b6506efbb031211e7433d38680a1680f44a822493ba9009ca2251385",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-Dense.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5b9ccd8f208ffbdf3e8e3b969371182962014d2bee0e8b9569a3cd30807e47bc",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-Next.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "62264a9b5fdf7d7612a0d9ba382e9c56c93b0137ff16a5cb5e74ac4ba0ba4626",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-Omni-30B-A3B-Thinking.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e8e15c9ce16418a309efeff540bedae1f5ebd5c8ae276aea1f51e103eb739a8a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-VL-235B-A22B-Instruct.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "93a7e152cd23e0090c2578314070ae7aed7f957507337435e9e13a6fa91f666f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-VL-30B-A3B-Instruct.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e49ecf452e950fc4ccae356cd8c62616c0a4232bc3e81de4da8e3cf42deaa4c7",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-VL-Embedding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "bc8b12af64ac7e493b5436896a00330f9ccd1d38dde3f8d56d24e2e7afc90fe0",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3-VL-Reranker.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a11db6dc3f1e08a6ae5cd9a9c5098aee7d9c6fe98cc180e66df26e20d013c123",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3.5-27B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "91fa71d036b6ae9ae9b3f4c705e2150baec89f9d305ff2181285a3aaf105302a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3.5-397B-A17B.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "08724ccab8d68dc256df1bbe5bfb4d6a212f1c78da02e1956d73aa84dee0dfa2",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3_embedding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1971048519f61ff6b8d5164d1ebf267c03c7819c5cd53e0472c983cd734d5d23",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/Qwen3_reranker.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4689c320809337700f09bedc57069a77a552d8692c1bb9cc9ea0aceac9a4aa3f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/tutorials/models/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "986b419a8512f9033c8b761f74f7a0ca5eb0e883538b2b396b97fdc3ea71c6db",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/configuration/additional_config.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a0df1bfc11756a60eb4ac4aa67ce7f5ad0f44047cb767acc0e9b2fc3e309bfac",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/configuration/env_vars.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e15a987c2824b24b57df76851f18e7f0d54376d921628f120697a5befdae239e",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/configuration/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "7be52d70aaf0b5dcd5a13e657a6e098d38410ba16bd3753673fbe6c2310ed190",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/deployment_guide/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "17ad3bddd40535b658d8ec263e246433af42f4e09649ec953741a0f07bc144b8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/deployment_guide/using_volcano_kthena.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9285ee8a856c0ca534fd6de6f9b744474e12e77ef4028fa8aec86c69bbb11477",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/Fine_grained_TP.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "45e786b9074387d94d3d70dd6ff5a8652079958018b98ca4948fb5bfc43422fb",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/Multi_Token_Prediction.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "fd8249ae712d5a17b9ec9a772cae55d698c56f62a4e1f05dc8baa4558f50f515",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/batch_invariance.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "e8d7b3b540a387b2a6e07b09d4bb6d60ff6d713f436654649ee7b2bd44fbb5e2",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/context_parallel.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8e5a5161c1315bfc451d8f5d21d4e9c032ee8faafc5c93a802fcb49c0887c4a4",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/cpu_binding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3fa614f09263ea9fee1a9d9a03d300019455ee505370928324f44a0b2d15867d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/dynamic_batch.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "47abbe5c908ff5e056981b152d760ccba80e7e25bc5b4fa1d342c667f57d959c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/epd_disaggregation.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "1c1ee054fb4043e51044353da1b0fd8acad456300aa6683d70951cfc7c6db3c1",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/eplb_swift_balancer.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "19fbf9108d81df4496e8da51914ce76b5c74bfb8a2216c3b5036e34fe47d57eb",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/external_dp.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "626b816c83905d5c5bc7fd0fd542915961745f454768ec11136586a645001329",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/graph_mode.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "c4eae041e4deb0d444a272e456176ca0aab0189a73001041d255255e85280698",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/epd_disaggregation.jpg",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "cc3d2fe3acc2fe62210ddadca72f0173145e8985c1e7c0247ebd27e313065b5a",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/eplb_img.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5dfed76749da1749bb93c7771c2cca69e19a89a2080d5f36c14d835f96e7e0a4",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/layer_sharding.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b8293d831839b42bacb67f24ea7d0a7e28b90d2248c692ae6dd21b0278ed8ad0",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/netloader_flowchart.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "fc123742905cc3e5fd1f3f11d0bd43b0c7e7ef928f9a23fcf767c26f800937dc",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/netloader_timing_diagram.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "632d62e24daae01f38f26c46057587f8bc875bc75d459943c295256fcdcf7787",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/rfork_flowchart.jpg",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8f5da7d7d28c63b21961d9e0ce6b0f7767466792d155731bb918d63ce4ebc8d5",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/images/structured_output_1.png",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "58c4285875c6f08e692eaed132142caad66446d1227da17d6c6942975e1717a5",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "ef1c71d4c384f933a59b24169e3af82eeec331ee2b2dedd81e0f2cdfe7c7c54f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/kv_pool.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "b364a29fd5af77ce63d1873afcde50bd986977df5ad8f7125ad33caef521772c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/large_scale_ep.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3306d5cda54de31f836f0adf102c5786f6bbb4f980617a76e8d6d66ec220e51a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/layer_sharding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9958e15a3934120da305d108d503145d079ec0f195d7c3700e482b12b9fa61b8",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/lmcache_ascend_deployment.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "06bba88e536bca219d3ce1aa1d37bd6c0bb4226d0fd57e5b1f020027bc5a938f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/lora.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "5c022a6c1c3d0ee82b3962364e6880b91d32fb7663f467666aa35eb3f4025374",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/netloader.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "a56157dc327c46ce90471388743e9d6fab6fa2732d422318e8cbec67533cac06",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/npugraph_ex.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d057c4f3d34bf7f7a143024e647ef02de6af0d67f40718810a860f3be32b9365",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/quantization.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "4a72a8d345f677a4006cafca21907e01fc00eb19dd1a1a3344348b1ea115aa9f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/rfork.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9f25638bb67fd93a33618bde5717be19b0110cc56278bed13b70b6cb49b7866a",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/sequence_parallelism.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "c1eea920cf1c87a89425e5162beb99a7ee221195ff2dc8c182f5c5689c6d9cc6",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/sleep_mode.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "3d9d0405c5ef0b53059b5e45780d58705a223bb8cccd7c48a8c727adef79e27c",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/speculative_decoding.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "688ca8085167e3d96558dbd8890467e7ab733a24826aa0e22280e755c639ece3",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/structured_output.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "2554736b28f029e233ff70dd7f7db1c16a4a59536e5795dc2aec32ca2e64d446",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/ucm_deployment.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "0cbd1191cf1e84f2a699f106def8159bf418fa8923cffd0908e457b514808521",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/feature_guide/weight_prefetch.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "85c21fba3646c139f26732423e39f84671956a5090c1a591c9a0255cd6eb736f",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/release_notes.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "8d760124a1b4a8ee0dac6073df262e9aa08e01e1d30e91d8e23b4f29f4b0a5ac",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/support_matrix/index.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "9540903eedc8e5df10e8b8a525fe759ad86101caffca49d79c4ca20cc3d4e6e6",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/support_matrix/supported_features.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "d3ecf78ee7faf1fa6de9c630aaca0dc9309587463d1d6705130823c4e180c2c6",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/source/user_guide/support_matrix/supported_models.md",
+      "reason": "standalone donor multi-model/device documentation",
+      "sha256": "f863f2c8a9af5772d336df423b4e1700694b110751d4200dfd459a9f7f9a5d5c",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/chat_templates/template_qwen2_audio.jinja",
+      "reason": "other-model/device donor examples",
+      "sha256": "756a51d004f950dfcbd7a02be99af3c6ab4ff08b614373bb4b209997cb00f9cd",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/disaggregated_encoder/disagg_1e1pd_example.sh",
+      "reason": "other-model/device donor examples",
+      "sha256": "855a4a6f4149dffcb49341222532f086899a7f79d1c6c9f7f584a78efb03e0bd",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/disaggregated_encoder/disagg_epd_proxy.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "0307858dd113f9955bd2980858518596e3927aa2e72ad9c144af90da59c74ac7",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/epd_disaggregated/epd_disaggregated_guide.md",
+      "reason": "other-model/device donor examples",
+      "sha256": "cc3aba4d5c6cd031bb75e96d4155dbbc420ad56897b73aedd6342abe7b5c931f",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/epd_disaggregated/epd_load_balance_proxy_layerwise_server_example.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "0d5194fd9e6a3a9f310aaa94dba7bd39a7f11f612edea38cb50aec6b4ce3cac8",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/eplb/eplb_deepseek.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "10ee76314c95aa602d6f6b59485968108dd176b57d8a863875c97fb9578908e8",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/eplb/eplb_strategy.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "298d0335e3e7e62e7e5c14d3ef8f9dae84d7d82170632f9611638e89c586a201",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/external_online_dp/README.md",
+      "reason": "other-model/device donor examples",
+      "sha256": "7c850cfc1f0798ccb39edfc6d4cfdac95ed3fcd87778b14c3268312c71b6a903",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/external_online_dp/dp_load_balance_proxy_server.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "93fb086c508946f72daaae7867826d917bda0e2c066dfc1e1792148b7596fd68",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/external_online_dp/launch_online_dp.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "b9fbac3519f84c374a62103c10835910b11c06b2175e4d4f632291322681315f",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/external_online_dp/run_dp_template.sh",
+      "reason": "other-model/device donor examples",
+      "sha256": "89f33b87794cd7869a28e225e60065359f06717cc9de05e2571c396899ca1f34",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_data_parallel.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "107896780de6a7a41c62d971e458b783e2b2a280dfc518badfb52d350d76fbec",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_disaggregated_prefill_npu.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "1b5da284a1c4752f95ce1ac8939ea867cfa8c53560cb2a0f250d9f909e0dd4d8",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_embed.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "5dac355d3c8e355b26faf6834bda041a757b210747166bccb794e186339d3c4c",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_external_launcher.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "8799e07b2e666fc76804cc08b5f1340eade205aab94308050356db8d9ffdf4de",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_audio_language.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "20152a3f065ad09b3fe0837fc86e0bd47225016eb3c2c9df4511e3612881cf00",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_metrics.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "d499a459cb4ee5b39998729a7857823f5ac74b5f316392b499f536c565add6aa",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_npu.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "4aa6c847cc3f6258ecfaadd2d4566f76255c81a4a90f24add4748f3c8038ca9a",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_npu_long_seq.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "7a031377001ccf2c4a63ad9a810dc37d3194d03463354145445a975d487f6a2d",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_npu_tp2.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "e73626de970e1377ae39cb8248a76f26f6c5e17629bb91fc0edd776d297f318c",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_inference_sleep_mode_npu.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "794c2452321c9de0ec09f4a1e3a06131eff41bdd621f2597d27873c60ade19cd",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offline_weight_load.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "fa072006343f03620a8666d8aec9a087971eb95cd6d85323623cb81cadb8d580",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/prompt_embed_inference.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "35235d02b3b8266de5df943f7f30f3f7a383351b47e71629004f653450f13356",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/prompt_embedding_inference.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "9f23ba6d563a9f7da19366fe61c7c20bc4e2a244ea5da599fbdda29e0f2cdd2d",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/quantization/llm-compressor/w4a8_dynamic_moe.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "f029fae7cd832135abdc0aa28d0a9635962e87fb5706fb63d8d0ca61d3ff6f73",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/quantization/llm-compressor/w8a8_int8.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "65e3cf065190f8cd87cc7756c68eea07580ac39ab46c436893d31d3506f4f881",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/quantization/llm-compressor/w8a8_int8_dynamic.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "ca589e8b1380ac5492f90f1727bdcdd66a73dd4d91ffd410b50df239e1953dc3",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/quantization/llm-compressor/w8a8_int8_dynamic_moe.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "151c0165eb74a0395cbb5db537085e1fc56720823ba111457499590fa1f7504b",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/rfork/rfork_planner.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "9862f37bb5d3f843712547af521342e3573f6a3b63b87336cd6e5cb2e0f69743",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/run_dp_server.sh",
+      "reason": "other-model/device donor examples",
+      "sha256": "ec4ed9bf952441031a7186a089728a8dcbf8610aa78f6a13d598fd2e13e2f4e6",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/save_sharded_state_310.py",
+      "reason": "other-model/device donor examples",
+      "sha256": "18e50a1dbf50d62c8d53ac6ec93de9fb86d63a7da10ee4616be1d51577e1cceb",
+      "binary": false
+    },
+    {
+      "path": "ascend/requirements.txt",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "7168afe35598f655a7a2b70fc882344dae2ea47bec684f0e4781a27c93c8dd9d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/data/qwen.png",
+      "reason": "removed model/device operator tests",
+      "sha256": "a736d8386d4c08a36a9802308100843cd3395e0eb4bfb1e14380a2a118ede9ef",
+      "binary": true
+    },
+    {
+      "path": "ascend/tests/e2e/310p/multicard/test_dense_model_multicard.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "92f590e2d73d9bcb721af1ef40dd05d84e07ef20731522918c44b07d4919b76a",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/multicard/test_moe_model_multicard.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "79511c8c0bfa817707cb7528a6ce0a01010531023df051d2ec3d0dcc5ad40ffe",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/multicard/test_vl_model_multicard.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "d69b814c54e8c893535a2785ac516ab36a0c4ad5bb446744be792837f2add4e6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/singlecard/test_dense_model_singlecard.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "cb6f57aab328e2a7cbca2d77d9b12caff40824b392df2b98c8b05d7c7d8977cb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/singlecard/test_vl_model_singlecard.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "64d7e38c5bf2898f1503f657a827fea63c5145bbb413ce0c04996ce0be4b9f52",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/310p/test_utils.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "3ecdb2a8ff58547e95c601b623d117fb433a17bd477a3897db779e3972b4f85d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/ERNIE-4.5-21B-A3B-PT.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "931f1b4c065d395d139792cd2f1494212a50a5f18dec526064402b6ca1e06f58",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen2-Audio-7B-Instruct.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "f8745a6bf4c9ef65faad9504beda3bc08e1321f968445bede0d0d6a2460d9c45",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen2.5-Omni-7B.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "ec7e0886ea6c96060253cfea8083651c9d1d5dfaee3ad07731c070d7b3c07f2f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-30B-A3B-W8A8.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "c18880b4857ccf3ba1cd88c5d056ff1942c89d47ad5b9dc0b1f73635e81bc509",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-30B-A3B.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "a3c77fdeff1caf8a85d3de688ba1704a9984efba891242d263cdece42556a0af",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-8B-W8A8.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "ec27fb64077be51aa0ff017b248ac2f32ec43a80480b980c6d80e6407f4dd649",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-8B.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "15d78d9712bf6b4740d546d628587288297ba18018ccc32ab84a3b1ca0cb7193",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-Next-80B-A3B-Instruct.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "23557b2e2b0502e6c883413e0ec9e1056e9c930083cebbe7092277b967ba6261",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-Omni-30B-A3B-Instruct.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "adf4b4c0ed5aff8d4761006d8ff78724d68f46beccc7bda935ff6f68b64f3056",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-VL-30B-A3B-Instruct.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "75b39b1d4eb5a9840cff34a5c4fba81111214737c14057fcbb4797568d0891a7",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-VL-8B-Instruct-W8A8.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "3fc5f4c73dca52304a00b9f42ab0870468de274d929e7a18c99e839bfff484f7",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/Qwen3-VL-8B-Instruct.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "8eed4b63144661ece19cd5c6cbcfb1bbfaaebf050be1b7ed4a6021f80ad6c327",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/models/configs/llava-onevision-qwen2-0.5b-ov-hf.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "5466148e96e37c9f608fc1a1d6cb91d4ebc026b22eb67536654c82b319a772c1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_ilama_lora_tp2.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "30bd4b9b6674ccc9a32c99c7368726d2c277e04f911ba1b99fc247aff8c904a6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_llama32_lora_tp2.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "b464de61e6bb4a27365e6e7ff9291e2f3f25eb19f9e4cdd9d132d6da1e8a1c9d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_qwen3_moe.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "2a1f86c7f3e1110607c21f050c20ff0ac55373c7e8105e3702643c32c349f1d9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_qwen3_moe_routing_replay.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "4e832ae7b7023cca4d0bc35a34d0d8e509359eaed1d493c58e0080366176d92b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/2-cards/test_qwen3_performance.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "d97740774c80f0e8db9c05e063089c5ce2846b7f456dcb44a2b2b513967ed40e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/spec_decode/test_mtp_qwen3_next.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "2f75f2be4add4a0847c7806eefada2e50957346b7f92146bd00ba92143a27562",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/test_qwen3_5.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "574e24d29c9eb5e64a5726c9d7985aac342587ea2e009a039b4c77ca568d13cf",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/multicard/4-cards/test_qwen3_next.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "57eae9c9e809ffa099378312316aaae4f79d753d5f6772efde6f0e8df43580e6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/DeepSeek-V3_2-W8A8-A3-dual-nodes.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "c657565c12d0b167d991837c615d59a4b2c0a2aa93fc845f6452549cc0990c3d",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-A22B-A2.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "bdf0eb9a0720fe1befcf33f736cd0d203d0295ac21740c98cb8593231c28bc69",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-A22B-Mooncake-Layerwise.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "9c8162a3f9147c19607d7d16d58be9252489cb9fa7f8a083feaabffb63d41292",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-A22B.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "f762408710e30d73dfb37ba3c8c0a1812e1bc01b68699c12b8b223faf7de3b53",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-W8A8-EPLB.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "0b4e8ed4a2aa125b58680f2332eb88b70df6ebcfac2eadfac4cc8b9c38fd15a5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-W8A8-longseq.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "1b382ec305cb41c8e7bed86b232a72e0c879752293c1ac2fea733f27c54609ba",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-W8A8.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "4ba81adc82c2b2203a8461eb41623c308131b025533be8a83faa813dcb9bd896",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-235B-disagg-pd.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "4e0010bcbe51886f28cf00909d52b227843153e0dfd2b01e7f1c21eed1c0ed89",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/multi_node/config/Qwen3-VL-235B-disagg-pd.yaml",
+      "reason": "removed model/device operator tests",
+      "sha256": "d3d7f010a241d88b5964f714cf4cdcf88f774b80a6700200c24d49d3d1ab80c5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/DeepSeek-R1-0528-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "0c68f5a3a565322731d557a86850d1c8133caf89d829ddfecb3b48894d9a5913",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/DeepSeek-R1-W8A8-HBM.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "204e52d8d9a69b3dcab1b0883713024054ab2fe1a903509609c54618b04086a6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/DeepSeek-V3.2-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "f47ac4dc681441803b00d432557384a350515994807c05e132e2dcbb0df83e24",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/GLM-4.5.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "2d1438ad32a36936da271c9079cdfa397e4830865322ce6ac03c6a49ecb303ca",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/GLM-4.7.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "f16f3023b1bc477506ddac07f80b4fd995bffa3422b0abf94c570ace2be35dec",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/GLM-5.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "69108f3e3cd68d41b2f245b2467fcee112d82dea419fb663661c608693a180b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Kimi-K2-Thinking.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "c706db963018c9860c25821aa85d2178306a827b21365a34aa1c812c50972861",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Kimi-K2.5.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "7b4b5c4939d47506912fe3c78aec0e0ab6c9d7f75c681303ae9f0275aa10040c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/MTPX-DeepSeek-R1-0528-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "4c389e7d031b0036b6612ca7219ba72d2c7547e951902eb4c63a9a8802f28fe9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/MiniMax-M2.5-A3.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "989b14af3c61aca2afee488f715fa0898cefcc9ae637c3bad4de7326158688f9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Prefix-Cache-DeepSeek-R1-0528-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "afa92bd7dfb633bc9326deec169b35e4583e0f5e6649d84fd7c209093b6910b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Prefix-Cache-Qwen3-32B-Int8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "e3ccac57dc34f601172b613be1e722df868f89efc4aa08a7b45405d182a68caa",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/QwQ-32B.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "490ba321de74d7e326146786577ce338c49e02510534f92b179b8f59f0d473e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen2.5-VL-32B-Instruct.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "8bd28a1da99b859fdd61724c4d35a302f883306571778fe11a7fbe5cd12314da",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen2.5-VL-7B-Instruct-EPD.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "8063c6d9e831ed2fd54a22be7ad658e5832bb915459d6d7c396ae68acc0692d9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen2.5-VL-7B-Instruct.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "66e5bc8696389abd95fa1b5331bc7780e50f49482e2ad3ce11da99c75a6c6a67",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-235B-A22B-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "84339c8b4032ed9ab09699407f8f8a8213826c454ebb9982f11af21cf133239c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-30B-A3B-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "5683ba99920b1efb92afa86ed88463e910a4dc91e9e4e9ca040eecffa0d386bc",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-32B-Int8-A2.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "dac98791aea0671b7f9514cd2f76bb72445173a21111e3afed4e4a718d707231",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-32B-Int8-A3-Feature-Stack3.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "2f7fbeafac350e43500489c8d44cad07bde5eb7201c51e6f37eab48e0ca529e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-32B-Int8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "d8da890c9ab21714a781968f22f7f37bc46135a355f015adfe7d5ee60db4da82",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-32B.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "66a3ddf81459ce595369dc0960b03be7c1f487c8cd2159172d9afedc7b6bc725",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-Next-80B-A3B-Instruct-A2.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "f3651babb6bc67da194b9a2c09421f99a6c7ca2ff8a4ef0a61b4cb8aef4c3116",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-Next-80B-A3B-Instruct-W8A8.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "700729a259e98ee4570833f25ff63dbf035b7185b3d75d1cedad46a8fa58d309",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/configs/Qwen3-Next-80B-A3B-Instruct.yaml",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "5bd61fad6f90e7a773c061335a706f383f8a9d6a556e5db78e6b1fcb09bb19db",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/scripts/GUIDE_AND_TEMPLATE.md",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "5394325488a8c297c8a1b037ceff57037527cd30b9a3b36cbea735ae6f6afc22",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/scripts/__init__.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "7d7fe75f131bd3be81ab822fcd6aee3839a9e04c84f2a7863d5a799f6543dc68",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/scripts/single_node_config.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "9e20cad94d27a073c1d0f01d360170a75bea1d9aa61e3ffebb8d34a31f526a37",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/models/scripts/test_single_node.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "3b4233f2d2ebfef9e4bef069cd5abfcef94370f4b1ecc2a081734ccdcaf9d755",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/multicard_ops_a3/__init__.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/multicard_ops_a3/test_dispatch_ffn_combine.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "654c6caf825c22cf1f94abaab5d3f117ba4d28e086bf2df1f263019a222f6665",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/multicard_ops_a3/test_dispatch_ffn_combine_bf16.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "74379f873f0e97c43e52754f35ed02dd8289db2b4b2f7dfdcc35a4dace2cea9b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/multicard_ops_a3/test_dispatch_gmm_combine_decode.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "4cba925af4ebf0294fd7ea573a56b33c056f0eae78e189520663940e4fdd0038",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/test_bgmv_expand.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "668a5d0bdfa9d6e0f558437e5fcddd9f9be4ea4795a04a6503dba3aae2698361",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/test_bgmv_shrink.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "edce120ab7007c57b4d7c2c12f385c1c3450b56c68dae11942e9aafb7be02738",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_causal_conv1d.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "69da8771d6546fd06287a408af712fdfc3222209ddc9467211a291c422c8195a",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_chunk_gated_delta_rule.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "1c43ed6910768d02ea066757a9083191222d170b4df2076287cf15502496a6f4",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_fused_gdn_gating.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "a4bb034f29f53d165abfeeafe188205b1ace69a6ac0db1c323660449ef7405f9",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_fused_recurrent_gated_delta_rule.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "3aa14315c27511a2e6d5409e5ce6241b7188cd050bd70ed79bcf5cff14799cd3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_mrope.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "9b98ace94f31de0e609bf2f97b4b67b34ba9cb0164d8c2dd243116e51f9b42b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_split_qkv_rmsnorm_mrope.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "e5d7949017ffbe5e5116504abe768bd3d9589c78638a1f8c3b4a2b285ad3ab77",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/template/qwen3_reranker.jinja",
+      "reason": "removed model/device operator tests",
+      "sha256": "a21228c7adb94dc5222d338e00e320b877ba3f5ad98a16c09989f70f1c600d9f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/pooling/test_qwen3_reranker_lora.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "4afacaf6b80dc8edb3f8b9bd897d6618c9a801b5c324c61fd3b604e37c4fb690",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_ilama_lora.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "021cfbe36e16ac948f10d6979baac83aa275e3455dee23dd658a1810bc5d35cb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_llama32_lora.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "840f4b31e99fa169f5df3e7e3f3bca911398960b164722ef48dac16b67c9f4c6",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/singlecard/test_qwen3_multi_loras.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "03e210984d609e1cc9f217ca9bb38f3f059e468cd1d8bc6a86d4ac51abeb2c9e",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/e2e/weekly/single_node/models/test_qwen3_30b_acc.py",
+      "reason": "removed model/device operator tests",
+      "sha256": "e8a2761200f027404a73d2d51c9a23376048d00d2fe01b3ed4aa8ce72f5d1372",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/attention/test_attention_mask_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "a7968d88e274d39ebaac41f452b79618a939fc2b0ab4e7d5e9f854657ac97050",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/attention/test_attention_v1_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "6c9c705de14345d589eba82a141efdc1f353f903a65a00db627f2add7c5337a1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/fused_moe/test_experts_selector_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "ef4d926b95c0ddfabda75b66e9e92e18de5637a2badf3633b40d6f430280627b",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/fused_moe/test_moe_mlp_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "aac4985e894bcc772d09fcce0e65f58ef9af0655a34f6fbccd2b9d5f0c900bc3",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/ops/test_chunk_gated_delta_rule_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "e296c88bd0c4c652306b042be32ffb142b009c7af5a9a10daf52dbfea71d3409",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/ops/test_layernorm_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "abc9f566b1f9b78e9b5e8ef5a9cc1186ea200b888b410687b68937aad820132c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/ops/test_mm_encoder_attention_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "4b097fbd91c49dad7fc4e5a9625ea0510f9fb5f0aad3dfdfcf79f93da398270a",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/quantization/test_modelslim_config_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "01f0fcbf1f9ff38d7bda57737ca2349ad39aca87c3047facbaf819ba0432b4aa",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/quantization/test_w8a8_dynamic_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "484d59d29119320f6d205381ea7f6405153e9216e8cd5f5623765a58e2954641",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/quantization/test_w8a8_static_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "4fcb30e468de1d03fddc77099137c12d0f422519909cdd4179efbde21d5432d2",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/quantization/test_w8a8s_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "285a29fb8c440902f1f2ade37a4ec7ca69df2dea3215491b70f9a8f472713d41",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/quantization/test_w8a8sc_310.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "75b494df682536f90089b5aa10f4c303cfa700665584153fc79d070f7c378c68",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/_310p/test_sharded_state_loader_310p.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "1ee1c986caf1663b3c821bafd720a60dfcf84e554caf0a78c44d23fbfa505cc5",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/patch/platform/test_patch_glm_tool_call_parser.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "6116866e5ed99a80b924db7ec05d22e7a9d9f4a2efc3a1ffa66ac93eb897417c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/patch/platform/test_patch_minimax_usage_accounting.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "24a42c84f3be8c3bf829ebb808c693b0c57b909142d02cfe9a175fecd70396f8",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/patch/worker/patch_common/test_patch_distributed.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "71122df570de9a3fdd6ef194e62b5aee0325f35b81d39222a6c987b386c4d48c",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/patch/worker/patch_common/test_patch_logprobs.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "1de918b548d7d0b35d7e6bea744a607ed8842b25b4495a52020fcad8ed3a6777",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/ut/patch/worker/patch_common/test_patch_routed_experts_capturer.py",
+      "reason": "tests of deleted donor patch/model/hardware/LoRA implementations",
+      "sha256": "31056ca429155c74cd0e648c739dfa5101f91384f99b8aa3ef63d1a366917ab6",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "99700771ddb4628923387240f3ce0ac365c87f5697ee766bcb0af670782eee6d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "685242abbc9cd14c435b794837c01af56f3a39307a7eed5384d266ab7a0f15c4",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/__init__.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "c668259829f6f45b6c2f08fbdf6d389807f44c7c48e41b6119a1d8091c2c4b85",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/batch_spec.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "da9af651cacec685402d1da5c22bca099166d262fc416b71cbdb451980c078ce",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/benchmark.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "168a486ccda86027ddf7ea2fc5dd44bb8a194bde33bc408b3731172038f80824",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/common.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f3f7a6616c388751d862293ea75fe5f7475d85fe889ad0efe47935a27e2216c8",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/mla_decode.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "45e960585e91e36878701fb17941c6164c9ffdd8d939daf289d6d3f5d0a94e4a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/mla_mixed_batch.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ddcd6e4e4961f1bb8d0d3946574f70089b2f3924b2e9ae3ebebc16f1c5a6c3a5",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/mla_prefill.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f34df387ed065be71bc04381a93fbeb0e08830932f3350a9862f0f7bf8037ec0",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/mla_sparse_prefill.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a2eb64faebb765971183be39662d7bf01955a101a18e62ab4b63ba73ec501bb7",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/reorder_threshold.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ac8a7f637efb05f0a88b428e75f5b719f447f4206099f87049b245a27585f585",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/speculative_decode.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "d620c52253fe216221c20d6f075814120138772ed04a50ed8b3ca37255fcb341",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/configs/standard_attention.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "de31923c96db4878e349cf05adedf5fed912e9fc19aff22274c0a43d3cb8324c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/mla_runner.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a3ca65870af1993c70a95956e9dce2bd39715e0b3bfb966a7adb5aade4e7534d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/attention_benchmarks/runner.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "38c0e3030d91d75074d2b6074c945a27d4b604c5c74ac9d79c00086cb1216ac9",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/auto_tune/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "64a5775a58f92fe6282d217997b6d4499438cfd975e87a3b8e440dc9c8fc7e65",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/auto_tune/auto_tune.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f55cb750fd07218bed63f6e641b80d8b25b470f8e2556499a74f3f1f52844101",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/auto_tune/batch_auto_tune.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ca866cdad7c18bfe691ba1cf8c19c0ec215426c78fad6fe1e052b207d13c798c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/backend_request_func.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "81076cc75a79a314c004a2023df5454eb16385876d09f8d827332907e2af9a9f",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_batch_invariance.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "2253aad341055774cea73e82f328ebc4ad6062fc1a1604c5a2ac6e977c386902",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_block_pool.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a71c9a56973cd9ed53afdc4db98019f9a8a6ffb3b2b5d63c71aa4de3bca1c8d0",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_hash.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "250c9dc9f7ea4699f68fe05aeb680bcfc1f2fa2c1ad95610520f487853551784",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_latency.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "eb533830d26465bb8382a8d83cf05609f033ce027bba456a6f1d1971cf15ab49",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_long_document_qa_throughput.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e3e900a00ffc658b02d7ae8224bbf62361de1b897f87f0e8fd73d193812f9e75",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_ngram_proposer.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "24a05d856aeeb771f8f83f90cf9f0b52493c7b732f5527f6ba5e9f9462ca494a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_prefix_block_hash.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "86888785655b85b0041921a57c33637e363f732cc46e33b78dc1959b4c7b09e0",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_prefix_caching.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "61c02d1f2734978020697502cae69858d5f78707f99b74707592bc4de0f774f8",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_prioritization.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "d1aa4c1288500a59374e6cde9be7d62a505afef60894a798cf7ff53f7f9f61e9",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_serving.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "6067516f17dcb543d266f46e3cee2104cb8f86a8685985612bb208d5631bda32",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_serving_structured_output.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a9f852e02c3d21172a935aa971f487ca665eac890f8fbb8dd5c9976b40550eee",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_throughput.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "9cfa29bc44de5af6f6df5fc5cfbe47e2523f2437400f6e9abd7f22eb90906690",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_topk_topp.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "93b866391925037936e38657098774878872b5cd46bed328eced565a0e98bf03",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/benchmark_utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "54cd064642d686544d8d5cd194debd753fb516e5c39a7d95181a37a204085605",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/cutlass_benchmarks/sparse_benchmarks.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "1c84e8d4523c1bf0f6d9fa4b2722ba7ec7fba3735381eec822703a866b9988cd",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/cutlass_benchmarks/utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "33f065515a00b4172bb05db7e9ad5ee8db57a062e41c3660a2e93510e8dc2b83",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/cutlass_benchmarks/w8a8_benchmarks.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "65d8114ffaec953e7f4455c59f524dcf12d201480c329001569309790e491121",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/cutlass_benchmarks/weight_shapes.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f671681f0b46da3dd1ae91ba2c1402087ac685ed80fbede32a90130e0e59864b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/disagg_benchmarks/disagg_overhead_benchmark.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "cde03e0d402cec881d4659e37b057100a6bab74e1eba4426d4ff011cd4ee2ac3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/disagg_benchmarks/disagg_performance_benchmark.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "004b70731a63f381c4da042df8a6a603598673476c50ff425c8b5d793e37ceb1",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/disagg_benchmarks/disagg_prefill_proxy_server.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "c71f14447b4728f8128b485e10d9450313a07c9bf8f6e688a208dbadf313e752",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/disagg_benchmarks/round_robin_proxy.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f0e9b732b1e4a59bf6ddd6894bbfc0de9449688a989870185819df5e059b4c97",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/disagg_benchmarks/visualize_benchmark_results.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "cb463c4bcd69632e0bfd6dc49f24a41bbe14d4e9c07e6fff810a608a0c7287ba",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/fused_kernels/layernorm_rms_benchmarks.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "0d5afb788f691a10d40dfa0c5359e257f4815df08c7291fb1dd2a7179390bb90",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/bench_concat_mla_q.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a145888a61e1dd8877d773c9b7554f8b2b2c74c9ffe46d876353391c918d7868",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/bench_cp_gather_fp8.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "5312e39b39f53a16d5055b52d8309720613379fb88e634c2bcf06812ad98aef3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_2d_silu_mul_fp8_quant.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a487150bec47a76aa4734d32de156b4590b450f03b55de3b361e3bd7be5f6ee8",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_activation.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ce2ee11e363d087628138402c24d98a8a3a53e9e275f03056dbdd7069329f438",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_block_fp8_gemm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "fd898e68c2dfdeacef3c4a12f979d92e7055cca4c8eb307e114adc9a90af931b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_cutlass_moe_fp8.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "106020e33b144588c211d49fb62a295e1cad5b90b05b65d1be4adc6ca8fbec69",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_cutlass_moe_nvfp4.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "120888469b62439b41004921351e3d39462716071e10cd51e3f66f18f08e5384",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_device_communicators.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "aef8b6245d7151ac217911d5325a94b92fdacdbd4b00484ead56d9b7f1e9f5ce",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_fp8_gemm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a2f013c3c171899f27aa506a3f1b0b2e98b95be6f2a8ec95b3d5d7fd45cf703c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_fused_collective.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "bbd1fb9ba7b3b97eef29c53198e879ee237a3063290075d9c04cd4e389a4b92b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_fused_topk.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "d3cae9bf51f58e06b3f8f78452a901f7e978f0933ecf9af6be79b7c50887095e",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_grouped_gemm_cutlass.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "306af39902f9c52b95340edc6386907a15e4503a28527d292c966e809154bcb3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_int8_gemm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "69566b5a48ab0853bc6ffea3480491085a6e227718b4f090bbaa7a98f421e1e5",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_layernorm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "01bcf4402cd54db7f2ace2542e47d61cb467b519d85481fc7712fcb660f0655e",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_lora.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a3b53d8e71323bf1307c22f24de4371d5616fb126f63dde9aa6e5c428f48dd9c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_machete.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ed13bd52237251587a58c19a93fe863b804073ca39cd5268d4f6e39ba162ba91",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_marlin.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "16465df765ef24acc750af640701b080ed25e2d09508dae3fca35283a3cd89da",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_mla_k_concat.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f0a944e67b5c949760319446091412bfb0fe615ea1115f8d22f30560d5b6049f",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_moe.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e82a223fad999a656171850cab3397af36b9885b0cb7d956e5d74118b6257af2",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_moe_align_block_size.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "75fddeee5622b42f25fd8e8f6490bd5039c9061a0d5b586fc851bd632f2665d7",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_moe_defaults.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "19892c8826375242e51dc1777ea3528ca3c6a425ecdaa69bbf4342d542f54323",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_moe_permute_unpermute.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "cd8726496f0e622aa9888f4294666edad66a9162d149b1c086033e8f70f167b5",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_mrope.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "5a390c189397c52096f55fdc200d3a9979c62109167f9df32d8621673fd509f0",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_mxfp4_qutlass.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "918f76f06cb07816632201497e03b54306b6b2fd7eefd53b462e321be57e513a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_nvfp4_gemm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "667f935dceac3acba4bfd808b8c02ac7bcf5d525f2c044ee78cd291da5b1b80d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_nvfp4_quant.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b6ef56121fc01d6e9ef3c52f7b541d0122f93587b7b075103fc15ddf3a12edd5",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_nvfp4_qutlass.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "056b5d15d8b860890fff8bdab85284821f17d005f885023d80c73d51b968551b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_paged_attention.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "869cd66cbe692cae5108aea451b0313e3f1a628fd702bc7f996154cc8806bd53",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_per_token_group_quant.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "fa449dd994466c9719180c10ed6249bfa7b14a6ed798dfc70f3f2eec9009d89b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_per_token_quant_fp8.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "3fd2b5160dc4407617fe8870e1aecbf19e38de196ff2d247d4a69cf248eb1d4d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_quant.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "1172043bf15674d8ca14fcc80a8f723a929aa9acd20edf518c8ed5ff8fd36e19",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_reshape_and_cache.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "dff795461cb104d110e9b1ba1ec6226e35490e4566fcf829ebd28cf702cf83d3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_reshape_and_cache_flash.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "0d406d7c0dd176ffeb9756d6c27e76b76ebee34bd07122dbf7b3d47c6bc709bc",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_rmsnorm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "c75c49e7946cd833731b341dbe7ecdd3e33f946d82ee9009d617c641e5736e22",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_rope.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e544f7b08687552c3fcf49d2c85b1ed14eceba9fe3ad8e7592a150b67e12714d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_shapes.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "720a8ea75f7a9523ce6548d408ec8b2f1cd50d726798c09e12e96a626d0aed09",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_silu_mul_fp8_quant.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "73a7f660dce067e70a2cfda29a6981c37986bb0f6f7fcaabbe25a5de48da54d8",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_trtllm_decode_attention.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f47ba52e599baa5640d538ba329ac8b4cda66aa7d6cc28fd60c25f10054fbfe9",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_trtllm_prefill_attention.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "86dc3160baf059357327be403c3dd17bc227559a07ef224eb47ee9dad1b659a1",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/benchmark_w8a8_block_fp8.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "1158f7bd7fbab8282b4f1a2a6379ee69878e6a35d439a057076f4c502e67249a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/cpu/benchmark_cpu_attn.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ab46f9a49a0b64409af11c470114508a7cfa0389385952e0b64beb3b4cb8adb6",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/cpu/benchmark_cpu_fused_moe.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "915aac1f992aca39c422bff9eccd366b913699e55b38a8790db113f51aedc423",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/deepgemm/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "51b97048f63df574a35e15c7b8beab82ddff05406885116eaa8a814297683c3a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/deepgemm/benchmark_fp8_block_dense_gemm.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "3af0cc7e372d9f00d07eca2520d4905ac4c6c2478ca05e7fa6b46bb4265e6f6f",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/graph_machete_bench.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "aea346f2c26727cca9e1e4975ab30a2c860097ce5321a34c45659dbc6dc815ed",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/requirements.txt",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ae4863bdae026314d5994730ad24730434f256c274d8431c53ed537393992be6",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "75ee5e7c16cf737ac34bdb72fb8c99514f48a75c0c6e7de517768c532e701b6f",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/kernels/weight_shapes.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "8bbffb893e5a8bed0e2d25ff5fc5463a45aeba8c2987ed38526f28db20a65cec",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a7d0fa406d76d0f6c6d19ff5823c096cf7972bffdfe21f60440b284fe077c22c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/bench_dataset.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e34b3d602a0f096d580da1dc0cf3103ec0d112717c6c4a403d656cf4d5facf0a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/bench_utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b968e44ef6260fd1cea8410b3bf4cab751d9d4ad14bdc43f6268d113ad81a548",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/benchmark_serving_multi_turn.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "788a23aa33ce04c61d2869309b19dcc3fb7053ec4fa68946069d37e9b38396a2",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/convert_sharegpt_to_openai.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "fa95b7aa5b18368fb144a8617b154f23b128073a50d1c3bb91c17c2ff4e18353",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/generate_multi_turn.json",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "01354996dff57e1b1638c63d66cd07b299af6b932dd7e7f7d23bf2d72795b1ee",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_turn/requirements.txt",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "ca7dd4710b6eeb69a13bcff6475bd6fa39eb50a48986f4135c8c82bcac04eb1e",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/overheads/benchmark_hashing.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "3528029480de3ff15ac726fadb78fda619fb9cba92348dcea015b16d123a25b9",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/run_structured_output_benchmark.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "aedf0e48f6b3e5f96e671658baa32e57c49d5bf4e82de406bedb7b6cb9de0a87",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/sonnet.txt",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "d58663195ba6780da5f029b920c7ac00cad1e435ee1df7e03bf9ec2470f8dea4",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/structured_schemas/structured_schema_1.json",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "43b28900770b1f66e86639c9d10181aaf38b3478208c0d85ae63e7aa73883f0e",
+      "binary": false
+    },
+    {
+      "path": "docs/.nav.yml",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5550f23a8e56e0c6f9d16b2dd88e915becd4ebb41a43b6043edda25b16237a6d",
+      "binary": false
+    },
+    {
+      "path": "docs/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "679f4cbb573f3e1a811ada0dc5fe0b33abdb6e1e59102bd66b50bb172c94555c",
+      "binary": false
+    },
+    {
+      "path": "docs/api/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a19add465154be357ac32f1b497eb71563a319ba50543a21d0fc0497f5cc2ba0",
+      "binary": false
+    },
+    {
+      "path": "docs/api/vllm/.meta.yml",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a804d4b9c01d95dd032a510f859dca36122cf4838521e92c8578f36bd5ef9a0e",
+      "binary": false
+    },
+    {
+      "path": "docs/assets/contributing/dockerfile-stages-dependency.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "15afa660365952ad277ef73ba548d30ec95d36a7e2695a4276cf3265a3b44b8b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/contributing/load-pattern-examples.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "eae87f476b2c0d080e7916f7abc3adab52f7a839a5c40be2342308f480c2833a",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/anything-llm-chat-with-doc.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "748c807e15f49b720cc0530f6c4052ed16f0de11b18d58645a2481b053363757",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/anything-llm-chat-without-doc.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d6bdd28b43575afca18e4e1d160a875d9a59c63cade9c550759eba035da4c959",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/anything-llm-provider.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f8cb31dafd22d11e1ec1722a4fa76bbe34033dd3647e8ae7cc071cfaee17e531",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/anything-llm-upload-doc.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "62de7089f5ae4ddd43a7eddcf096bef2fec4bcdc25dd80d4e6513a1c8bd721ee",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/architecture_helm_deployment.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0fabdb59b7231d08140917a5a6b01d1868c9b949a54ff16ab341e0d703134322",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/chatbox-chat.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0d50c62a63513bf45d207a1186c72bda7597a186d9e65b5ed2f128fc30a716e4",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/chatbox-settings.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5b1be9937d9487a3a06794f6868ecccd7e99704372db785cc4ad47b067a62da0",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/claude-code-example.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0f39b6b174a9ee4ccab84f736af48bf4620cc856f9817fa2d9ad0035aba28478",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/dify-chat.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c8ed9127191d214787b2ebf5be2350e151573dcdb17e7099e49cca78f3f063ca",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/dify-create-chatbot.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b57a31b7371efa19941b5657ad018149c2a5ca0363e910fdc28f1d9ee78985c2",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/dify-settings.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e4ad7f31e7dd06bed65a05ee2b02d4802b6a772a58c2d65b44f821dd7a823fef",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/dp_external_lb.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "63cadcc22b4b3398598ad13ba586d3ecb92a06907807ff9b42fbc10c62bb5d34",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/dp_internal_lb.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6eeefc46039fb9b3e0eaeba3298e9ba0bf57c89fc439207f2608c6f3b6a6d93b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-catalog.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ae9ca13916727e53eb89fd65102aec8f9022ac0c9583c90d841978885c92fd34",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-choose-infra.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "91e630d2cab22a4c3639a883cb48de428481a5ee58b32248e3f7cf65477f82e2",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-click-deploy-button.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d637efe85a8d8b8a1ca91537cd3108d42e5a20690e73d0f7389b6f5fb9cd21a9",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-configure-container.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8c6da993ac3ca4f9dd038bab6e738a68b75a3237da7e46af8f54223ef311e7d9",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-create-endpoint.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "182d0d8bf98e0879412464f7c57da716a4b94992f7f3916869a7bf7bc6e2558b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-locate-deploy-button.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "cfecf9e560c4cacc1b0658f482a3184e8173994c4f03827d3b49280c5c7166fc",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-new-endpoint.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b65fa4714b29f30c37f0a6175f16bcd7a93c1d3cc444f3e704243aac0f04a4e4",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-select-hardware.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "30647ef622bdb6ea95897d7fe086f3f68d19ceb8ebde5d501e78851b8aae9eee",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/hf-inference-endpoints-select-model.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "99c2e1bad6c8c78477e5871130beba29d24e99d872cd29134cd8c678cbf8d0d5",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/open_webui.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "63b67576048c54cc6908ac0dc5065f708c23b56dc3aac15301982fbde63c405d",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/deployment/streamlit-chat.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "fcd59e3f36eb27a381ebc071c315d6484388e91de47607af785a34d498afd81b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/arch_overview/entrypoints.excalidraw.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "68e7d23745a616072d1e203add608d07534aaa68adfe0e43e9e943d33497402a",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/arch_overview/llm_engine.excalidraw.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "bf641ddd64c294e72fdd50243603ca15e8d19827104add4a71c77cb93dc2d73b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/arch_overview/v1_process_architecture_tp2_dp4.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5c79b2b2ce38b6b2f1737a1b5c5fe8d3acd0cbf0d1f6ed542fd4d85c28f8c46b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/arch_overview/v1_process_architecture_tp4.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8602fecbabf3b5fb4ceeb831f608dc178d14ec4a686e2f2cff58b1af78f8951d",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/cuda_graphs/current_design.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "37343723605680c1a30de180496516535e653c4faa6beca57ff6ffb3c6e6eb6c",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/cuda_graphs/executor_runtime.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "aca1829256700d9a7990fe36d8c201612ab54d36db62d4f1a76f38ba1bea5db6",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/cuda_graphs/previous_design.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "aaaafaa63a34c3c2d95abf4354a8bbb6045d3f230d463870e0ec2c1cf10d4b10",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/cuda_graphs/wrapper_flow.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d749f9c53734db4f63de2eb7e8a0980851fa755823f1bc000f27eb4af8d52425",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/debug_vllm_compile/design_diagram.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7d17436ee4ff11033acd166f3187694e54941fe5f07bcf11c478f167d0d5e564",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/debug_vllm_compile/dynamic_shapes.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4ed22b783af43a373757b058c7edd937821b2921c6b86a11d81f7449273f7ed6",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/debug_vllm_compile/tlparse_inductor.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6d910564cb549390dc4cd96fe3806bc0d5feecdf28178be833dfd382d26137f8",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/fused_moe_modular_kernel/fused_experts_blocks.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4cc88c7ce885883b5f2295c2f2bf33f30a3e833621dad1c04088dbeb9cefbfc1",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/fused_moe_modular_kernel/fused_moe_batched.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0418db52982dfe47925248190d686552ce8bcacc35398479d58280d6ef1cb64f",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/fused_moe_modular_kernel/fused_moe_non_batched.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "314519ffe67e5aa5231160eb998219e429f93a0d8d9a910a00cc4b1f53156130",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/fused_moe_modular_kernel/prepare_and_finalize_blocks.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "3f523124fd41fc703896ddffd86d27d992ef66aa71a0ec5687392ae8f5647488",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/hierarchy.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d9891b5d6cae099b9e0245adba0b6fa0dde2b7e17b19276f948a843a569e0fa7",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/hybrid_kv_cache_manager/basic_grouping_example.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "874d2d6fe136b570c5d265fc6c40ab7b213fe9dc4613654c1545a8f067d36f28",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/hybrid_kv_cache_manager/full_attn.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b25a8aa72c72274f7516039c7b43f48500c0eb5148b4344df4d5d9de0770f265",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/hybrid_kv_cache_manager/memory_layout.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d176ee336612d7c97c130ad84509fe96424bf02ebbe2a8022c4f03470105892f",
+      "binary": true
+    }
+  ]
+}

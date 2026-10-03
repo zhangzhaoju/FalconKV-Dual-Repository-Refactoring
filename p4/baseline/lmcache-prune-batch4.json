@@ -1,0 +1,797 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": ".github/workflows/actionlint.dockerfile",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "3f3ae421aa36e6081f46c4bf902f10e18cfd42184166eb8c1103902084abe953",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/actionlint.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "d121c07697b25f0f9433496b68111d1bfdc252ca49da2521d2a1444a357230e0",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/automerge-labeler.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "486b047feb194ee4a9fba005e1a0ccd2eec6beb7f80a388fbe81023463addd61",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/build_doc.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "5e33c815c454e5d595428eaf090818dcb8cbb6c25dab96234756d93da9e69f81",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/code_quality_checks.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "f7a494f1ef33823a3803aaeaf72092fbbbed1ac3b577114ed3242e7b5f6e4bb9",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "15befaab3ca90e523ba816ba4daf5ddb92ec5633eba4689672614999df8331d6",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/matchers/actionlint.json",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "5ec0c56e3947f155d8a9df6361653d97be7969d0bcb10f8c95f6be99b4888f0d",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/matchers/mypy.json",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "d2985deab2402a1ff502999e6a3ebeca02ca3fc84556dc5d717958bc6e6b4a54",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/nightly_build.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "2c29532e76c117c25fa87cfeab5fc551b68e84d59843670ff67c50b770c794fb",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/operator_ci.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "33cf36a73ea1d9b424d3134d44db6ff4c29e9d725e33f8e1eaa7008c6a63ceea",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/operator_nightly.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "d2d54861727cdb64bbab2919bc013005033c952e00a6eb46a35a02594c521444",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/operator_release.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "4ab6d9504a87778b6aa77f02bb62504cd7752a3237ebbdd55b61a1ca7a1c7967",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/operator_test_e2e.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "cd6d6178b10f617b9149f5322ae56e4e29116e04f9ea63ba92a1c0043983b4a0",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/publish.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "1b391d69c349364879d60aaaf76c2400aff41115a99ee365b75ccb2ceb7eb151",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "b282966bae0b662958a59694596cc365ee63867825b34eed9cc61393382ca7e8",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/stale_bot.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "9ec8040178c7af2d60e6548147d549a0c3dee693d25c851bd630fad358a4815f",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/sync_torch_version.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "07ac0dff399a631c14d835e0480035edb807f9bdbc723f58d15a236da7e28311",
+      "binary": false
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "reason": "upstream CI/build/publish pipelines; replaced by source-only P4 gate",
+      "sha256": "40d71353231b93a8011063e86c091d0d6455ee5528d057838d4a60464eb6a5a7",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/benchmark_count_aware_sparse_retrieve.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "40666baa21b38f5c92b4c2086e1eb12da5a1b59fa1392bc9c7f5ad4fd4c30f5d",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/benchmark_direct_vs_staging_load.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "40d695dff2b0d4f676bf3360f2fdd383581aab9f3d3fa859d1441f83e3f8e235",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/benchmark_lmcache_retrieve.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "374caa65eafae4589d9c31544907914095faeeb6a82cb5caef6718096b5cf749",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/benchmark_sparse_cold_bootstrap.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "fa964044fdd8d5b3d80031c627af79e708b7cede0431a3aca2f68eadf6f6bc3a",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/benchmark_sparse_locality.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "11116794048e4ae6e51fc5423324be7c3f8325e8e293a6f4bb4774b4ad53c1bc",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/kv_cache_fixtures.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "1ad2c1c1e0411414ba15f345166b5be4ad52670609b11d61b006f27cdea9925e",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/load_benchmark_utils.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "233354d72f6534766873c7e2b602ec4d7e60fcfce1d40641e60b90fa68b53609",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_c1.example.json",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "13b7e727ceddc377886467c991ea5d032757ffededc6e3bf37c0311bd64222f9",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_c1.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "669990d94a49af3a7beecce9866eb5a153710bb36b5aecf93f0ec7e0e5dfcbcc",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_campaign.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "cdca0d94ba8833dd769609bdfbc5ad03117e8fb8f94bcbc584835c6cc9daf9d1",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_compare.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "6c723250486afde86fc4e6c8c35fe742dba251da7a1a2e375aba2eab0fe0ab93",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_evidence.example.json",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "8c8cff78c438d93a733a236d5812d10c73b4f376d7bcf895a77d2289add15a1b",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_h0.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "a85ba47e53cdd76b274451b58f70950b622ae7dc87bd80bb173656fb1aa00ce9",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_inventory.example.json",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "b82e132c62292f6ee5ca779cfbc45ced3672fcc75e618957cf24632b1849e831",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_p1.example.json",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "cf233829f3a40791ebaea181c5760da7542524a0c60eede3fa22886d12bfd0c9",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_qualification.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "42d82193999f3dc705d34a80e4de8794340f683f77840491113e6362ed04a2b6",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_trace.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "577b4caa08b2424571442d81afcb6b6fdb111dd8a4e12d4aded3e78b00dae727",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/kv_transfer/remote_fill_workload.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "11c69cb63f67afd0d04c7e353e19421c1421617d0f28f687542b5e8ced599a84",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/README.md",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "23ec41be35547293a673fed2340b1f168b593e853bab8961dcb6d43333898e71",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/analysis.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "59c69470c0ce519d0851201e8403706792b2ce5b553701272b1b8b1c762bfbe5",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/config/lmcache.yaml",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "cf7c1f7c2a71309afe559271268d71b1b1446313142a7c88b4a8aab3528c524e",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/config/lmcache_blend.yaml",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "125bba019911652a1a41352de1afdb037d1deae918c7726ac39803176a20f713",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/offline.sh",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "68b0c830e8d957db175545e0fa36b3bbca5ac88fc90dc755d40beee5475f64fe",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/online.sh",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "9a92c65b341524bada87086830c6b054268b1db200291b2db92282f8ad5029dd",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/rag.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "c2206b50aaa1ff149d659b2514e1fa14cc9071b4cfc7ef45a1e68082da08096f",
+      "binary": false
+    },
+    {
+      "path": "ascend/benchmark/v1/rag/utils.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "06a727713125cb9330ce840138e203ef8e879d460c9de12e81219ce72f348984",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/cachegen/Cachegen.md",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "ccdee019e5387a8b10f258b7ac8ab7502b4c1e4505772a9e0d6ba358f51eed85",
+      "binary": false
+    },
+    {
+      "path": "ascend/docs/cachegen/enc_profile.png",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "e1e9c69d8b7352b4a2944c82f9257b428c226507d825eba552c0f59145c32a1b",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/cachegen/perf1.png",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "984847988d9cdfd67e3e26180ca219191bca4474de2d3ee2a491cf635c1c288f",
+      "binary": true
+    },
+    {
+      "path": "ascend/docs/cachegen/perf2.png",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "fc3ea4b84eedc9c334965d028208af40f2402649c5463c3b84e37b59c389fda3",
+      "binary": true
+    },
+    {
+      "path": "ascend/examples/blending/README.md",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "b8d6846ef1edecaf3bdfe0bda46ed30fefb31e0a9b0509bc9759c963cc41846c",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/blending/script.py",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "aebf8f99418eace2903411b5e10ca8ced25e976e769bbe1d1c079b7820d6194a",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/disagg_prefill/1p1d/README.md",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "c3c79e4c4941261a178e126cbb728f887bf2ac220dd25b46f7d77a22322eb254",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/disagg_prefill/1p1d/configs/lmcache-decoder-config.yaml",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "1a06913a60a7b475ae2df3fe2f23fba10999e96df6dd1bcab2ec6187a29d8439",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/disagg_prefill/1p1d/configs/lmcache-prefiller-config.yaml",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "868f325913c4b8f7217d967042dfdad6ea669aad7444ea1335e8fa2480ec4566",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/kv_cache_reuse/share_across_instances/p2p_sharing/README.md",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "154fc25a870e8a9270315fcbd508242d566c8670065ebf754713d075a8c4b4a2",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/kv_cache_reuse/share_across_instances/p2p_sharing/example1.yaml",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "d59bd72fb93a6506e98e7c0fbc7edc6ffaf3f62a802e176a26dde0eaeee411ca",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/kv_cache_reuse/share_across_instances/p2p_sharing/example2.yaml",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "b71847ad54ce0e18cb839b852a9e63aeeda7b6f2b37670ae69f0d41b26b2481f",
+      "binary": false
+    },
+    {
+      "path": "ascend/examples/offload.py",
+      "reason": "legacy donor deployment examples; formal paired P4 instructions replace them",
+      "sha256": "3d58644d1e76c75652e7afef218ac7cacabab1b7baea0774479231e48c2cadf4",
+      "binary": false
+    },
+    {
+      "path": "ascend/requirement.txt",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "8034d75f069ef6cd70c99b9bd79418be62974ff4842ab34f00c9907c658e8ba0",
+      "binary": false
+    },
+    {
+      "path": "ascend/requirement_ms.txt",
+      "reason": "superseded donor install/device environment instructions",
+      "sha256": "29d8034f41989177fb6080090d54d2792f5acbc7d0376d51c176da78bfd91a6f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/v1/blend/test_blend.py",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "21eb42f67dc4cc09f577e092992731ed7bbdc10bc5bd5289dbe0df3f40b27f2b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/long_doc_qa/long_doc_qa.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "a998c801937023d804d2293da314e39fc71e6b68ecedccde5e3b11adeb251d6c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/long_doc_qa/long_doc_qa_recommender.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "22f4e90579ae439c335f5a861061d9e00b811b8e8187f97e5e4e8453813ef202",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/microbenchmark/sparse_bootstrap_allocator_benchmark.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b13107461ea973a0ae4ef3e6ffa02bfe017aaaaf43d285629a795eea78b29599",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/microbenchmark/ttl_lock_benchmark.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "bdf83e07ca01b04a09a884fadb0dd959f542c862ec843a9ff952319e4e6bd37a",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_doc_qa/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "c4c8ec76a1d583e56771778546eeabbb67e811b9a6f20e7df8d958fc7f61fc56",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_doc_qa/lmcache.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "868173f12588e658f60eba504fac85636e450e435d4d894181da0fb7f289d14d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_doc_qa/lmcache_blend.yaml",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b6ad547ee880a7e0789b6c8fd722c4d44a7b6f9bfa864d8b54ed7b384db7d5f3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_doc_qa/multi_doc_qa.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "341a35c3e0c2431d04e63183f7b71c520253bc09796efd884f5e26954c14ff2b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_doc_qa/shuffle_doc_qa.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "1c18b721e83e4a0554077c500c325ccafbcd82fea34b6e851644919881628b02",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "9bb7cf784483c9638e196629716c7030d90086e2fb92d264740f533ce6a7af63",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/data_preprocessing.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "197652b49b434ee9075c4cefae26c57056bb6daf83dc0972d1cbdd64cbb4fd9d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/multi-round-qa.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "0fe58875078384438dbd46bc20c3a45e75c90bd374a896764e8ced7f322072ec",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/prepare_sharegpt_data.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b31725dbfa2d207c47650cb32ce345e6bc9c320d647cd849f2a297cbbe74bc63",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/requirements.txt",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "83f5804ddfe778e270d6153a7045a1028f52ca7daef6f8345fbfd2e16a6602ce",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/multi_round_qa/utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "be209d28278f2f7d108c9a01b09e015c3de27093b5e7e09d3376c31f24cf54b8",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "993e2f985c970db6545b8a33cebd6c8250cc69c6fa0463cef0726d4470a320d0",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/launch_lmcache.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e6f977fa3ea4ce2f0d3655cbccb3329a7e7a69a245f20abbb0b32737fd3f19a6",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/launch_vllm.sh",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "6dc122cc8a494fcc5941e1e4933b56be137f0066d6a0674c23cf2136e91db24d",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/precompute.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "609b54681b0fc6aea068df918c28acdbd88be51f252eb81437d40a76db00a4bc",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/rag.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "74412bb906659f96e23f5dc2dcca7817837d79e97a835f5456c952ca27eb1b68",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/requirements.txt",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "b695baa861a74f7f7421213cd762c724a96d43edae4dd14766d95512da59f942",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/rag/utils.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "3ac59381d173138e0539a0057d9012c005bd298032f3cbdf82690df29702edf2",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/storage_backend_io/README.md",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "f6c24cee9fc150936f996d35fd237fa2ca217e2cfedc0fa4f85e03a29417885c",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/storage_backend_io/mooncake_key_lookup.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "35dd64f2ab82707b201b7dbede55eefd3c4021a40fc1a01c0da0ec865648e5b3",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/storage_backend_io/mooncake_page_lookup_repro.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "1ac224d787eafce6f2253ba4aba0d3cef3f507807b5a99686fddf235afd32152",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/storage_backend_io/storage_backend_io_benchmark.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "e8454c97f1640a7920f9246a030bf62b5af1409cdafeddf063ae2a151ca2ec4b",
+      "binary": false
+    },
+    {
+      "path": "benchmarks/ttft-estimator/llama-h100-example.png",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "3449a93063ce980634a84ff8c3460e5e0280404a164bdffa5b069f314adad800",
+      "binary": true
+    },
+    {
+      "path": "benchmarks/ttft-estimator/ttft-estimator.py",
+      "reason": "upstream multi-model/device benchmarks; paired GLM client retained",
+      "sha256": "d25561e27453ec6bae18eccaa04965ace910978e62c5334e4b59014d349bc1ae",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/basic_codepath.svg",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "ba9684ca9acdbff10c1c91f93083b4b86f29344c171522157c5497ab79684055",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/bench_interactive_demo.gif",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "466906501a1ddc58e064874074c914c6857dc86de947b32f0de4f8d9b1f938f0",
+      "binary": true
+    },
+    {
+      "path": "docs/source/_static/custom.css",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "6f3c7323dc95b33e73a5013250ca2c354b2aeaf12bdee3fe287146bd640656e7",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/custom.js",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "a2288b1f16d275badcba100902d12247cf1742425ed75bebd068c5f8a00d85b0",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/full_layerwise_diagram.svg",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "36f657a591126f342c611c4ed847acc84b06150f379a30f9240fce6cd6fdc314",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/kv_cache_calculator.html",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "e5acc535f236827768641c4255e986c5581bb9e57bff113ddd25006249f4ba84",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/modelconfig.json",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "f6e2191ab28c3d537e9672d24210f6b1067ba8b51c657e47b8d22469f1a02877",
+      "binary": false
+    },
+    {
+      "path": "docs/source/_static/scroll.css",
+      "reason": "removed plugin/CacheBlend/cachegen documentation or benchmark assets",
+      "sha256": "f256558a63c6fcb8e8de033cd4aa7683d876d6a9e5a71a088a8c588615d2a39e",
+      "binary": false
+    },
+    {
+      "path": "requirements/bench.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "52fcdd2080be59a4d614272b12d42f577d0402dee96e84bba6b1117d79c22801",
+      "binary": false
+    },
+    {
+      "path": "requirements/common.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "539a401d7a41b360e679a95a3889cead1138b2964ee24ddd7e5ddb1aaff83cdc",
+      "binary": false
+    },
+    {
+      "path": "requirements/cuda.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "f69c54c6f65c1f4bf22578e41ca9ec0e456cb52ba6ad351a09e79dcd224d6673",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/__init__.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/conftest.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "9165015c12adac151fce5e3268ade1abf9a9050074632b56ced2e129851ac811",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_distributed_storage_manager.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "7d7e520bf7384c968078967bfa34d0c7699378896c4417a745da9644e12f2516",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_l1_manager.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "2b551148cdf3f50eaf618efc5158dd07ee17719c84eb8a2ff23b27eff4ea2f7e",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_l1_memory_manager.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "597fcf76247f786e8cbef135f30f6531fd35445068a58357688912295b88bbb6",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_l2_adapter_factory.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "4d600efdd268f7946629a127a1f58ce353ea619738bd639a517ad9d22974e62a",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_lru_eviction_policy.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "4a74cbab32475b591cde75d2c0d6dc094e78f120ef7a356e06943cef9be772e8",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_mock_l2_adapter.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "4609c18945743fcd34008e517d9973e07b0e6182fab1aeae4505ead97760f2e8",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_mooncake_store_l2_adapter.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "386befe67d4801a55324bafe3ee01be75e173375550031da01996575cb9a15ba",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_native_connector_l2_adapter.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "c64f5b0b29e87879726bd8e05daf0e8f26bad2356fa5ce6f79c84ba42776fb35",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_nixl_store_l2_adapter.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "d107ea6b0d768a6586f0342ffd90d10e4d9d29853219b0f2f52e16cfc720845e",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_object_key_parallel.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "1d129f289b03b82aee8edae51baf7b3867d610ed1cfa30f12d3d97ba6bc2859f",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_prefetch_controller.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "fb2363cccc61cddd0f68e7be6007c1ca83ac6657d99475215639274572cec4df",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_prefetch_policy.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "6212a766975027726d53aec26736cb79f229f46a36d2a5b4aa62966d95acc724",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_report_status.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "b580410ec25708e6a569a3365338095b999309a5b9eb7ba30c76828db0d24561",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_resp_env_vars.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "d890f126c436846e296f8fa577756eb211024f4661b46a1fd98ae813d35c6e00",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_resp_l2_adapter_integration.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "7c2e1ae8ea7d4bec350d7af02af51c2093188d97c930582acfa0508ec522f8e1",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_store_controller.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "20428b33bfcc3a896efd1cc43b3ce0cb4331e59050ed379be13be9621fcdeed5",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/distributed/test_store_policy.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "dff5dc569edb0e61081b78659d324d2e0d6159efc9d513c78e9174ea36d42ed7",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/__init__.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "741515b5c268b60fb2d52919c220149b46e7aef8927851f2df4a017777862abc",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_affinity_pool.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "51d4c1b117fe30641ade83b1b72d35cefee186ab9a454ebdf2ff8636330c4019",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_blend_server_v2.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "5371c137cfda790e2b86a846f68ef6499ad89248cca565695579b3d6de25b4ba",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_cache_server.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "114fd8858def9df070ebd22a362709488b85da57a50df5e40b1a57405fc552ea",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_custom_types.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "44818603a856326e30b4642d053c79f21d54f2f29da2e9b8df28c331abd79e4f",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_free_locks.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "4fbe4e56ad6fcf042bdf6672cf331a99c2c7e01f73923402be61fe9c9ee12f6b",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_futures.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "968eaf1b41ac9ab895ad08aa42e3a2985f1d2957ec2b8a94ad738229f9aa4764",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_gpu_context.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "bd70a90bd7a61af42e35cb3872bbea5f76c834993cd8617f33386d2ac980636b",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_mq.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "879adf56b6a9e7bf548ce12fa5dfcb9a2b3e0c8447d35a2fe55d5ab171429eaf",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_mq_handler_helpers.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "843a051fd9a4e7c35e40019ae1c4902847fb9b1c0c24cce9cc2adbef75b76ce5",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_query_lookup_hits.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "ee81793e453a14373d0ddc7b1780e816eb696d1a1fe28a6ccc92f190b009c4c0",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_session.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "277366d73968012c15e9a02cb38de51ef6dc48e471273c4ce38d5f35a6ceb78d",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_skip_first_n_tokens.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "5d2b94e98dd85d1bb83c85145828a801582807c7c9caf289a33d0a09905cf6cb",
+      "binary": false
+    },
+    {
+      "path": "tests/v1/multiprocess/test_token_hasher.py",
+      "reason": "tests of retired GPU multiprocess/CacheBlend/legacy server",
+      "sha256": "22753c156e240b300e49587c6dd92bc3cfd16c73d94f060608d8634bb9c153be",
+      "binary": false
+    }
+  ]
+}

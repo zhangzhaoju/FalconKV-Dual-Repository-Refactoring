@@ -1,0 +1,40 @@
+{
+  "scope": "P4_static_source_not_build_ABI_or_runtime",
+  "errors": [],
+  "dynamic_or_native": [
+    {
+      "file": "lmcache/utils.py",
+      "line": 228,
+      "import": "lmcache._version"
+    },
+    {
+      "file": "lmcache/v1/system_detection.py",
+      "line": 16,
+      "module": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "line": 13404,
+      "import": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/resp_client.py",
+      "line": 21,
+      "module": "lmcache.lmcache_redis"
+    },
+    {
+      "file": "lmcache/v1/npu_connector/npu_connectors.py",
+      "line": 373,
+      "import": "lmcache._build_info"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/native_clients/resp_client.py",
+      "line": 11,
+      "module": "lmcache.lmcache_redis"
+    }
+  ],
+  "passed": true,
+  "package": "lmcache",
+  "python_files": 311,
+  "version": "0.4.3+ascend.p4"
+}
