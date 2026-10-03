@@ -1,0 +1,653 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/csrc/kernels/bgmv_expand.cpp",
+      "reason": "LoRA native kernels (bindings also removed)",
+      "sha256": "783a07cb922fc4f5e9f862670a3cffd2ffb8bc2f205d49c2352bf1675b7dd294",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/kernels/bgmv_shrink.cpp",
+      "reason": "LoRA native kernels (bindings also removed)",
+      "sha256": "bd85a14f246ce40547a35796be9710d11f5cb8aeec2bf558a792ec2b8e2db777",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/kernels/sgmv_expand.cpp",
+      "reason": "LoRA native kernels (bindings also removed)",
+      "sha256": "4ba99fd1fa925d783fd84a42d94dfc1e86a5af17e61d32734466ad56a36967db",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/kernels/sgmv_shrink.cpp",
+      "reason": "LoRA native kernels (bindings also removed)",
+      "sha256": "37ffb10e1d437ba01352b4fe95d822e91a554ada3f1eff9526648c36873cd8b0",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/__init__.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/datasets.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "249d85d90db2f778e21a7459d1092c9dc653610cddefb1f423365694ab94c314",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/latency.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "4be2c05d5bcd39d7d1251563e0ab57d1655121dc83ebe97b04e9f309f901ff52",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/lib/__init__.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "0656cdaefee06b42d761e1cb28a89ecb6c288868793245b7ea0ed01ba2fa04dd",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/lib/endpoint_request_func.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "975466ab46fba8c7a12a9c9bdf80c89df3ec705ef299ee7d22ee6b5749ccc7f5",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/lib/ready_checker.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "1ed87d5c1e0166c95e57fbecd0688a0716fb6dcfb6824d01278751d78ac7b4c0",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/lib/utils.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "419e396985cf49ba9afd5f96636b4e8ddd5bdcab04a3c5fb68e33aa925cd00f9",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/mm_processor.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "82a21ae6122861c050ed8839d2075ad1cdb84c8846c922a1284c3963601b407f",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/plot.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "51917aea9ee3a7e3761f9de7c0a4067a84f33bcd3ce4bca3bcc01911759198e6",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/serve.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "1c4fddeef7114371dfded0a1ba8287c2c644f06697cc00b0275a91cc26a024a9",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/startup.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "2fbc912804f05f80942f50ea96e80d0a2cac14484b03773b05569ae01a7c95d5",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/__init__.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/cli.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "e79456af936b967f3aec73d1cf92ccbfb80274eaa2fe622767f8c81e590e15bc",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/param_sweep.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "edf3a5627ae99d973a90cc5f016db4dc01470034ae813fb0951dda8da46e5a5b",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/plot.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "5a1834b05202ceabbe8f66311aff5eca56b061cb229423e45b449b34576ef480",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/plot_pareto.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "35b0f22fadc1e57c05f778a78f1cc63459bdb57ea7d083c44d21f2e4800eed54",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/serve.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "58b31547717a28cdd8ecdc76bf2eb905bb909b8d5b2368822f0827210c88b0fc",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/serve_workload.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "af0df7f5d8cf8a3b5b74b239953ab81e5fd560eae57d08aeca3466086163663d",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/server.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "441527a14f39b7f6b8c8c4c56d985dcfbec88492e141b8392a4990b01b224d21",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/startup.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "8021c5e09342cfcd30029409bcdbe32927553d228d2a6821fde249a5f619781a",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/sweep/utils.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "633862a84e2398437b4f3527cd05e7966f132c446436382843f485ea327c841e",
+      "binary": false
+    },
+    {
+      "path": "vllm/benchmarks/throughput.py",
+      "reason": "upstream multipurpose benchmark suite; use frozen paired text client",
+      "sha256": "57e458541b63065133c7c59a999486a878c19686355d4554a698b8df4319be74",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/__init__.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/base.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "dca54291f74df55b0d84fe119e21aa262d36a732045b820c224b4c160c14d58e",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/latency.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "aee52fb10c56ff3bf5f4dc597b87617554639819761a2a5aee8d1a1a9dd537e2",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/main.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "c26363c6d85ec055ffe5a1ad50f1e006b83ccd86b9231ee3f2bab012d194238d",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/mm_processor.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "6a2bed1ebc43788247101f8a650439ac896511a98853a8e7865e5c362860a145",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/serve.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "bfbdf95a9aa394613ce3a2af0aa025adbe9e01dcac8a184d64d5f94832f64da7",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/startup.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "1fcbfd8523e19c4da62678c4d117608cb0e9ca074dbe33860ad92fbd95f31312",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/sweep.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "907702b01b06430342fdb76121d2acf729096b02db442ad917e1d3e0d1428e41",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/cli/benchmark/throughput.py",
+      "reason": "off-profile benchmark CLI",
+      "sha256": "49bef776f5c202cfcfeeb937b189046ca21ece503c70217ba62317d4703ec447",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/__init__.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "8f242a2e497bf5347eed6c6aded194711e02fe88943186b804feea5245f9ff84",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk_delta_h.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "f3bb25b8c103c87e7126078ce6ad0a57dcc0ebd934b446352152570dc458082f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk_delta_hupdate.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "087d0185e5ed61ef62fcecd8237174306a47e0aa9cdab91a90fbf02eb7452efb",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk_o.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "8367572573d155b418225442c36fefb1823aa241c4a5a29f53ec80d4626e2dca",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk_o_update.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "cca0879f12245a4ccf47d8a0898d23a1963f045efd9d2752e8792d13f216192e",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/chunk_scaled_dot_kkt.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "6194a3130fdec220d8d12993d416fbc143b768229d2d89c3a910a82e58581261",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/cumsum.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "1d80c3a7cd3dc0d7bd40fc854f054bab9de9023c1d05290233dca8638abc3f96",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/fused_qkvzba_split_reshape.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "249561937df72962e0a6f32e5bae5f849053b463d126eac6ce34c720a62fefb4",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/l2norm.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "9d303fd5a1e8bbcd70e12808bc988982530161c8eacc51a7b677661b498915ff",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/layernorm_guard.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "e3dd0966a547a0c267a3a4a27e0ab8aa1e127d1e46a375debfa8ab66a9bb7172",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/sigmoid_gating.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "7b56ce9e65af9b0f9195e5571d4fb8faf16fd666ee3872e3d4cda2f7173070ee",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/solve_tril.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "1aa381fffd2c6408ea07fb1216ddb0a6e02d86c724e6ea3fcc92234685343c6f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/utils.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "dfad8852c2df4df1352218e9bae63378efab599ff63dabc7797dbbc3eca4591a",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/fla/wy_fast.py",
+      "reason": "non-GLM linear attention implementation",
+      "sha256": "4548e031e9898ef8ce936110972daf3094c864b817275a1d6cb94abcb69db4ec",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/mamba/__init__.py",
+      "reason": "non-GLM Mamba implementation",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/ascend/triton/mamba/causal_conv1d.py",
+      "reason": "non-GLM Mamba implementation",
+      "sha256": "f677ce8fd06dd8be215b8eda5857addd1e31c6784a2e28c172c2008e00701901",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/__init__.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "b67031367bb5915484062cc06ce4d25d0db3a511ef73f667cb13918cb8e61817",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/audio.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "b12e407989c7d3585d3364d1ce00071cb81d3eb4cbd9bdc8f47e45b1f4f13027",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/cache.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "b99bac86a81351347817e9bffc216e545447dbf042fec17e8f6557d2816ed419",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/encoder_budget.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "76aaf25bb8755f7232c5f89cd15173a2bb08d8cdaaaa10797199a49448a5b49b",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/evs.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "72cd59bdd4b1eebdd0a500d98c30d090cbcba8b76ffcb9830789b312f7b401d9",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/hasher.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "0044f8a464de956f685661c82861a54a8fda60cbfd23971b43d7e341cc66668b",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/image.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "57b12ff4f319b7832a37a6d779f5423937b5fd17593e5ca576d92cb7337e5c7d",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/inputs.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "cdc261522a9a88b5772803404602d12b6bb6504a4f8fa2cdd2a6fc21747e0f59",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/__init__.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "cecf1ccf8f9ae6e47a1f83c7fa3394f155579ae134149c87c7a1da72fdeea11c",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/audio.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "512a6f1fe1b770b67531c655da286b54af460d66584735c34c34da098f39daca",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/base.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "b4c63716199afec62fe9115175c7e6ccf2a9076f7f04a6f50280b06ede8be5ec",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/connector.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "c4deaec38c1f00e4fbde183d375e3edee189b80f0cba49be5e0ae84328da94af",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/image.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "39ccbe083ea311200aa4c18f3cddeeb5af46a2236d3b7e9b141a44bd88ef9a53",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/media/video.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "2d23edac3f222bb126c9ac50a1988bc0f0a6051ed3364ea291d15bfe882d4d87",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/parse.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "102c9dd9900fed814e7b31ae802b5ecfff7a7ad854bcbbe8434efd7091430d81",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/processing/__init__.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "505b5949ec75057485925bb3695c466d001e6c1f07a1cfdee233ae44a823f8c0",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/processing/context.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "355537de15bf1ddc6f6a7dcf05d667ffe850e5a491ef5eb5569107213c09316f",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/processing/dummy_inputs.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "0bbc20a17f609abb56b2eaf810f141f85bb3942ffdcff66bea1ea91d09977505",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/processing/inputs.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "24231dc26083ff0e1736fba974f4921429310f1b82fbf00e53ef88394f593b6e",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/processing/processor.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "900283f4fabd65449ac76b8a08d3d8e546321d4c88d046c3d510cfc5fabde1bf",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/registry.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "85ae6b7d0adbc14e8261e795aff1993b14df0e7389c54c7eb6d057e5676f4544",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/utils.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "ba133e996d9995d441d8e64a3fe9cc4040c1dc5744f5e707336f21eb5cea1ccb",
+      "binary": false
+    },
+    {
+      "path": "vllm/multimodal/video.py",
+      "reason": "removed media registry, processors, encoders and serializers",
+      "sha256": "b5aca8ea57f127baa23dd78b85d6e9a4c4da1a9081f219ae9a68e09839a43abc",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/deepseek_v32.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "d27cb31d5793e11fe055cf2245b4803a39c4039a76697068cfd4148f33f1dec3",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/embed_utils.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "a9b67385e1c28fd468c69886146e67d147c1a141b6b9eb6ce45ac45993422b9a",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/grok2.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "5f3be4203851d5650d81e7a9cc7e0d673614c5756ee336c7d96c098f0e39ac16",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/kimi_audio.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "ac78f825945748a4442bff08c4c9175cd540d43aa6125a77a583877254f743ab",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/mistral.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "97b778953088eba6c1101f5f195253a40b3d87744306a7c4656dc3a0ce0db030",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/qwen_vl.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "b4051f130d117f07214b4df175f9c89c1d289965b0b6acd1887994f4b95a89b3",
+      "binary": false
+    },
+    {
+      "path": "vllm/renderers/terratorch.py",
+      "reason": "non-GLM text renderer or embedding input implementation",
+      "sha256": "a3de95ea2b768a05b090135d1f7c90995b3d4902ca7458a8fa11dd76f381999a",
+      "binary": false
+    },
+    {
+      "path": "vllm/tokenizers/deepseek_v32.py",
+      "reason": "non-GLM tokenizer implementation",
+      "sha256": "b70400ec8f59d88f01f0807baf313ee13706885bc729cf04663326524566dbf8",
+      "binary": false
+    },
+    {
+      "path": "vllm/tokenizers/grok2.py",
+      "reason": "non-GLM tokenizer implementation",
+      "sha256": "3c2ac95b8fd38c292f76cea52341ddf8dba4a390caa17b76a154df9a7c233bd8",
+      "binary": false
+    },
+    {
+      "path": "vllm/tokenizers/kimi_audio.py",
+      "reason": "non-GLM tokenizer implementation",
+      "sha256": "ab3a8063ab50b97ed5ed95f2428baf39a6ab3bf0215eaf618612c002d9655996",
+      "binary": false
+    },
+    {
+      "path": "vllm/tokenizers/mistral.py",
+      "reason": "non-GLM tokenizer implementation",
+      "sha256": "607ad07415c8ea7d29581a8bd5ffef749a2ee8bb98689f03e05263abb0fcbadd",
+      "binary": false
+    },
+    {
+      "path": "vllm/tokenizers/qwen_vl.py",
+      "reason": "non-GLM tokenizer implementation",
+      "sha256": "7038ef2e48e47cd81f9018ccd926c54269caf964fb676b79cb1b47d4c32edae7",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/__init__.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "f563a77f3c3e7f8e2a50adf8418902c828bc79751aabf522f8b68ab586fbaf44",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/bagel.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "26f636257915ae0f87396f8173866ed91c4ef16c6818572bb9a919f692e5a0c5",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/deepseek_ocr.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "c7404313e1e1cd0bfb5c2689d7dcce2b4c038e47e4f8cf5f99feaed3d957f387",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/deepseek_vl2.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "e5e7c8396281f9f77e53b586a4ef6362756fbff20366e8a2b89dbace3e40315b",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/fireredasr2.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "9c2da8452898d543ff860a2f9b560a4b11db8cccee851fa57db89e481b7d34b8",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/funasr.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "3e32ef7da1d2a453bde25ff50dc2274d17a59f8db1c1983878952e9f407adb3c",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/glm4v.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "edf950f398ecf99975ccc63e326f66b7fc6722d22239ceb14eb94fa9c141cbc0",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/hunyuan_vl.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "1ed14d791f566eb214d3272501fb0af2ae38235b8b5b8e2b49ba01cf8d076907",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/hunyuan_vl_image.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "29e6ae01308447545d79daae3a1f1bbd73ca93d193e9e4001bc6af491a92773f",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/kimi_audio.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "adae99c6b44b3f71281c3d984cacbd60c906f964a7a4d706abb4ae11ab9edd3c",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/ovis.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "7858ea7af80ae8af215110f16607916258fabc43460cab27d3af5927ff61465f",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/ovis2_5.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "6dd6fb2a00ec6a891bd96a5b069a3d6b6860a78af87fab9d309206d501b87667",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/pixtral.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "657a6e62464f19fea36bc0b6694cbc3d78e58413c6cfb02321983549fde9a799",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/qwen3_asr.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "f676fc249482fac2918cc1893b39a80f6ec6d497f2aa58a46ab92854b112f4ee",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/qwen_vl.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "9155d541c40064fe77244dd5d6fd5736376c59e3fc74baaf401829413a0c8ef4",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processors/voxtral.py",
+      "reason": "multimodal checkpoint processors",
+      "sha256": "91cf25f7dba4b37c331920dfcf4249bf53078a955f708256bf052cf0d471b3f0",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/mm/__init__.py",
+      "reason": "multimodal encoder execution",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/mm/encoder_cache.py",
+      "reason": "multimodal encoder execution",
+      "sha256": "0799df34d8e0a2c5903cabd66c95dc69c06ce18c60f1918bf1f74a968ae10889",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/mm/encoder_runner.py",
+      "reason": "multimodal encoder execution",
+      "sha256": "0335a94bf717ec1d304f060cc9c81e68a8cb43e5aa7d3b01cd6552ff8e40dff4",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/mm/rope.py",
+      "reason": "multimodal encoder execution",
+      "sha256": "7e4bd66ca8fc1d7a66f1baa23601c07ccd6909e6bad7a55a20ea329097e77c82",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/npu/v2/common/model_states/whisper.py",
+      "reason": "Whisper multimodal model state",
+      "sha256": "ab25aba7501880460a272507e106257053493ad7d7e850bb5ce6692c4cdbc905",
+      "binary": false
+    }
+  ]
+}

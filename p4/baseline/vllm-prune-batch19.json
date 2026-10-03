@@ -1,0 +1,125 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/CMakeLists.txt",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "9fe2861fc89a5bc8a0a11a4d45ea79d32111dee890afd526a205d7f9380d6c91",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/causal_conv1d_def.cpp",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "42f66fefbf31da51c50cd873eef66e712a1bea27a7bf70a98a9044d614b87ba2",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/causal_conv1d_infershape.cpp",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "87ab6d594c52e87cc0407b4b62f98434a72131e491501f6a7a510deff027c2ac",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/causal_conv1d_tiling.cpp",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "68e2a90d25ccc027c6f5ba916b74ce55107454064b64dd51e649f3ba789c37f6",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/error_log.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "7cf5ff9b6eac72291a9794bc4fb754a52124ce2ffc423f5decdc6a009a5a9a7b",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/math_util.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "2f9c3a84572fc81b8ab447395d2cd9dc1b514116522176274207e68e74df7d7e",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_host/tiling_util.cpp",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "fb4ad8c90c8fd1e92160616c3c384d2d519b19fb6f4209ce64cef5e69872910b",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_kernel/causal_conv1d.cpp",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "5079496caa4b153e5588a4c773d4d563ad60f42e5de508c4da613a2bddcef602",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_kernel/causal_conv1d.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "b3be31d43afd64bfb7070571177cc819299b6e786cc2307adbe80d438d5b109b",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_kernel/causal_conv1d_common.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "280cf801f8e108e5669d9240cac61316a79cc3101a7d1b78359a4bcd2dd324ee",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_kernel/causal_conv1d_tiling_data.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "786c1c10de3108e951bc091a282f616e4b41b9981eecaf7bb644e08f7a0863c6",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/op_kernel/causal_conv1d_tiling_key.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "5244490812c57a6812988c559a89c0d9ceeef2b106a89690841bc329e45cc66f",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/data_copy_transpose_tiling.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "f31c95afba9b4fd7d36cacc43ae41cc7907cd944451275a21f955f6c7c8d8839",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/data_copy_transpose_tiling_def.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "90f704724a5eec39e0c263593926ea7956218bd7b0b7813d0ef588ca839233ad",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/error_log.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "ab0b3cf26fd94fef799ec1c435e83bf9ef6bb0aadab7fd01ababf9c0e248a146",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/tiling_base.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "76540082501375c4ba472d24cb4179150756c57e5e4395ef77403306c8670e9d",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/tiling_key.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "ba83d030bb462d7a6163a086069cbe5bb797c9bc3ad059635b000f15eccae5cd",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/tiling_templates_registry.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "bfcdfd3f9242e0d6195b4e2bff1a74e8ca96d7a923d986b93a683fe35d45d120",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/tiling_type.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "e07afa376d27d8c86ab7d95ad93f34490c93c5710f80b21342b7b50aa691f703",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/causal_conv1d/tiling_base/tiling_util.h",
+      "reason": "off-profile Mamba/GDN native operator; no GLM callers",
+      "sha256": "cde883bcf772b5056af6f67c0e4ba29d7ffd93d9218a094598fef124bd8e7d4e",
+      "binary": false
+    }
+  ]
+}

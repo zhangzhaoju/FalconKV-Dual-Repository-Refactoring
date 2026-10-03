@@ -1,0 +1,3005 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "docs/assets/design/hybrid_kv_cache_manager/overview.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "265954a1a086a3e95a41fbacd5c1c31598e3fce0e77f673045683378dcda5b8e",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/hybrid_kv_cache_manager/sw_attn.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "cea63bdf7374e13ec0166835e73c0ae0d1f67b72b98b1fbde6c79433f70c5dfd",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/metrics/intervals-1.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "afd64b68c815749145f7d9500bf19d694e31ba17d5acae5c8e502e235da71275",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/metrics/intervals-2.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "84114cc040592415dcb970838b03379f00e1d758d80490cd12ad840ab4b8354a",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/metrics/intervals-3.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "3759b0de4fc0b32836fe9ddffb04b78706e6a3e55e6c2d9507b0e9e31d3af4af",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/model_runner_v2/async_no_race_condition.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2e6abf3ad671f24896ed87c67aa872cad0d75ae32fd105fee7c5fe45fe952a8a",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/model_runner_v2/async_race_condition.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "77dda4f1075c2c63a1d57af81f4bff382fa0fe9379db5b8f3fd24b40d96503fb",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/model_runner_v2/async_sched.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4a95db845bf8a2d294fbb447a3e29e806b69cc0fe5031e2af7a1dea2afdb3d96",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/model_runner_v2/persistent_batch_mrv2.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "79a42dbaa622098371b2179b5dda0595580a14603d2b19fb9c7f8d86b3ba7292",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/model_runner_v2/persistent_batch_v1.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0aceba5e9bdedfb763403b63a3910d68f97d9171d9f5578cbd6f6309dd036166",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/k_vecs.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ce2fbaee78d0a39fd31c2ecbbaf6d53ba738f12d8a104de23023993e94f481b2",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/key.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c58f08f76f3f32f6a3e844465ec93536be3565d7885f898bbaa7938efb70f715",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/logits_vec.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0437f03f1c5a182f5f38444b7f52cca5887803074a53aadebccbd69e88f36bc0",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/q_vecs.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "fef8b3df3dd33735b12da2ff27df99ac7c03b84970d49ddfb45467db331251c9",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/query.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "64e66ec3b26a6636574f61ebdd29667cbbd04c5e7f5f4487708cf4615c60a3bb",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/v_vec.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b084517a29d7ffd132ad9b288589525a5b31d050538bb1dcdad41303069f0d78",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/paged_attention/value.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9c71153989685dd250066e919958a73c13579347345fff3252cbdfb6e3d38f37",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-1.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "fac1f9299c12b0385efcaf8732bea88d97c7f3a5515a0f510f4be63429f18e69",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-3.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "870cb026ec0864d22a7068be6432ed65d8f441cb298162d017e6b2c9990d3ded",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-4.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c31dd52231e4cccf6c7353a9971f61554018fea02f72b974e495de41189b3ddb",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-5.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "12043b8bd2b1bf7a03d6b5a2723c66276f6e18ae45aa29b3d7824e31c7a8035e",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-6.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "24df26ca3f89bb9cd5612eaf391c6bfe25b1556f93adf79ad0159c37cd785881",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/example-time-7.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "61785539a5e739251af3e59c17e1eb8f091a92abe46982f8cb876350957bf846",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/free.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "89c0e92c5e1036c8508241f16ff201a075f542781645bfdcda736047bc207bf9",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/prefix_caching/overview.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "44f3000fcd73ec08ad66183ca8b3e0901e4b52044cf501f19fa8839391ac4e6a",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/design/tpu/most_model_len.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "061ea8a090272c06abf4d281e97bc3aa99134ad1e1bf581869e6048b72f621a2",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/disagg_encoder/disagg_encoder_flow.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "305f6557e9c70b02c5a3c4a875e8027f23d153e363002e6a07570896dcf9ee59",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/disagg_prefill/abstraction.jpg",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "de45e027f0ec63b2980fcc6acf96b706131f6916a7ee99f2561a4b1f3f4d7642",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/disagg_prefill/high_level_design.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "182afc095dc619e553089f69306dd5ebb96f5239d5894edf8382ee80613eb9b8",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/disagg_prefill/overview.jpg",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "76166b03f23d48d6fbf3d93cea8829b46103b14673eb4a93403301daf2c89e2b",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/disagg_prefill/workflow.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8585dbd2a983c6255cb5f0d4e934a4efc104f6168baad04a4c66339b841e72ca",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/features/speculative_decoding/speculators-user-flow-dark.svg",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9fc79df4bf4d8bb55c38e27ea3446358ec577a1380881c820566731c824694de",
+      "binary": false
+    },
+    {
+      "path": "docs/assets/features/speculative_decoding/speculators-user-flow-light.svg",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1590975a3481f6389b26e43209e0c9f03209205e69e696b78d431f9d2eda6948",
+      "binary": false
+    },
+    {
+      "path": "docs/assets/logos/vllm-logo-only-light.ico",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6f5b682c4408852eafa045077f6501a8152c97f7cee717b67c3e069e62e03023",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/logos/vllm-logo-only-light.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9135010db4ef942650e6877b97fddb771039540b6c2d0419281904de42d12e70",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/logos/vllm-logo-text-dark.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e16534e2f9dde5d770111d98a7072bbb99311fb4aa1cb5b9179714c5b0ab49f3",
+      "binary": true
+    },
+    {
+      "path": "docs/assets/logos/vllm-logo-text-light.png",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9c2b6739a43f617990c7245cd574be9f785557364cd948d1afca11a8700fcba9",
+      "binary": true
+    },
+    {
+      "path": "docs/benchmarking/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ed089f4555bbb97fa762397e7f28dd2e56cb8a40b95f0b0931d6485a3f5defb0",
+      "binary": false
+    },
+    {
+      "path": "docs/benchmarking/cli.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "63a8e9c1dd6db1267e9d68bd8323eca8df5de6e36abf0cd2739543f8d32e71d7",
+      "binary": false
+    },
+    {
+      "path": "docs/benchmarking/dashboard.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1c2dd9f036dc66d1a0658321166ce88bc73fbd23016746ccd43ab004b091bee7",
+      "binary": false
+    },
+    {
+      "path": "docs/benchmarking/sweeps.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4342cc2a183802d9e1943cfed64e63568657a8db42f9459f461d82157b987915",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/.meta.yml",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "783a69d1cb2049bdf98395cadb578d69792157a94dbace995e480cd204c263f1",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/.nav.yml",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dcdfbcdf72ef8203908f7d5a58b7b24725a802073cdd77f5d0e1ad51e84b6f8a",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0812ef28f6c31b3e2b091f8d4e1a1bde1cf964d29e6216c23d960f1f352097d4",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/latency.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4a9076859ae874040aa4cda0a14faf97aeb819db71fff663c37586bb7fd05688",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/mm_processor.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "519eb3bab3171ac9d31833acd7583377861ef5e0a57223d43b458fb29e93be8a",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/serve.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "143c6e8347871b414a51139a3c9a8857c1ea97165734cb841c67f2cf258b15f5",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/sweep/plot.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4294fbc448cd91d244c70205d5d4dff6510ea0099f1cfa77f6c33f903a3de54d",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/sweep/plot_pareto.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "784cbd0fafd2ca1afa2376923c88b60dc55b707c7b43e33c6cc072988b5d9a4e",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/sweep/serve.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b1c15c9921933f0f3463d0fc39885b0da6f32524ba6cc35424093bc973eb8015",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/sweep/serve_workload.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "eea798b02217417edd4c5afbbcd83d823a70eb6063f02c2eeff89aed58dc77eb",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/bench/throughput.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f3689e3f8f49a7986d52e05a220c630cb999623b41da5e4980b83df329234070",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/chat.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "3fa7e79da91da6c86dcd28e49241e4c410959ac24a2da43ccda250830e9eb827",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/complete.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d9ede99a7f15453b22a87dadb7a328f6b8fb7f1747a3eae97b2dfa24460c3dfa",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/json_tip.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dcd9e0230d756184d705b7d50951f2df24aff213880c6877ccdbf4b0c7714012",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/run-batch.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8f31db9e48d05da6d4f9ed6a3c31ecd6e72c4aa9defe86a8df4ae15a24c4a699",
+      "binary": false
+    },
+    {
+      "path": "docs/cli/serve.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a98a678ea21acd4e114ff802ea8da2981c78d01f011fefa150c6459a98cda552",
+      "binary": false
+    },
+    {
+      "path": "docs/community/contact_us.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6abc6f474ee858e17db446a4ccd323c945352c8ec914019fa3305199919455b6",
+      "binary": false
+    },
+    {
+      "path": "docs/community/meetups.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7d4ecff5912a4afc0cf7411f5ff4a39d263d528ce7272daa380055b8620a4fff",
+      "binary": false
+    },
+    {
+      "path": "docs/community/sponsors.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d88f4f471fb8bab63e78d41108aa6c804bbc274dd1d54b5acc747275e393fad4",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "33ab880b84b3ae0df1d999fb2c3f3195b4619bb578e006fd8c579c1d1dd195e9",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/conserving_memory.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "38dfd6cfb30b99e57f8bebda1606d7eec922e2a1dfafa1883e4c6ea7b6396b6c",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/engine_args.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a8f31d69fed84bb4615bb5d3bceb5b74f4d623a11769f0e7cc7deca2406a64b0",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/env_vars.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "cf2572f4ef507e0b20f0683de7282d90bea900a0fdba312cbd34a89282bd1ca5",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/model_resolution.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5e455f909942a3d0e18a9c752e6bdb47a84f269fd79ef2e1bf027676fd49ece2",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/optimization.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4a357033ffafe98e10fe223c039fc314b3d4cd9a3cf9180851fcd3b15ec2d951",
+      "binary": false
+    },
+    {
+      "path": "docs/configuration/serve_args.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "fcfa8185d671493c1a1fce8cee1338e0e7d925c7e5341e5ad12a6280c14bc117",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ef0e179efe5438439d186737f796790cc9cfcbaacf93e0432de6fdb441c1f5f1",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/ci/failures.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a468eefd22a4d229d2de452a8b19d1fe610c0dc3d6ba3452ef004ed00d160ddd",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/ci/nightly_builds.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e6c8cc0b71bb6abafc2d8cd4f7860f5364c1700b2449d076bee1dee03bf695cd",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/ci/update_pytorch_version.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ad86d34f7a31535167609603ec70d564356d9cfe89c80011861ccf54d3f4c78f",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/deprecation_policy.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9d5902603fa780883297750e11a600180746fe8e786287febfc3d4aac56dd8c4",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/dockerfile/dockerfile.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "736222b63a7ecb34e5d9e6c300800070becfb4e0748498aead502f81692d4690",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/incremental_build.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "15832e0cb846ecb4cdd312349f42f75824266e588f82973e9a9df0c3d4486d44",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8c5645c1355e6f3db52fbd1c2e2410383906aab31cb57d903ee289739dfea701",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/basic.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7c0c5823a7bbc1bdea3e261fd090ef46bfc12f6c030391c5c0efc2c0156369e1",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/multimodal.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ba5a2a5c69f380896594434198d86b42e32b007394ee4a413aee30dad72ba8df",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/registration.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8f44d34b939009d39936905a41d1c2d2db7c930a4294a1ed01d9af470f40cba6",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/tests.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "73c79b8db0c8ba9956ae1234bd7f0ba33d3cae76b123cc0bd655b3a9da332260",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/model/transcription.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "432741439976c15a7a5e0bbd7acbcdf1bfe8fe00e04bcbf6643e668c3588787d",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/profiling.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "33ff85980c328c8ffd3521882dec2b87cb9b2098fc20a9be7ee508bbccf5b6cf",
+      "binary": false
+    },
+    {
+      "path": "docs/contributing/vulnerability_management.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8fdd302ecd394ebd2e3977fd027dbf544a64e4826e34581c3b4415705673ee42",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/docker.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8af7cce18e954c320a8b88b54db618c3fbe9318eb56da5826d12088a12fdf506",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/anyscale.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6e0cdaf75e415b6b4041bcfcb6e72415a8e83f8c5a89a65c6aca1db7cdc9a124",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/anything-llm.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6bd5ad7857b5abb0be93b0952440da2ce5517ee8550a5dace45c95dac38cb760",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/autogen.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "49813b49c1d038d957b7f21ae04768148ee3594b44d556ef75056a28e926c665",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/bentoml.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8bdf5836a8a43933437d9de5a50fca15aea28b106f7439aa3441c6492be08903",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/cerebrium.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "385b1642a4f39e2b0e0f9addc85d9aa43b9e3a2a5a4d9ea9614bc0ade83c42f7",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/chatbox.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8b7c7fe3ba65975209f51586e3ceecc68967e038fc8d04de4fe541f4276cddc0",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/dify.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "48574b9d7337ee13cdcb14a3ec5173654829d79fe1e78403e8d292cedb47af92",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/dstack.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7b387d508e12b18f3fe552999b2d8f43377f6f09b55c2c8d96d2f4b0a47d6eb5",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/haystack.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "3cb6a2237f4e6bf5d3564746847900680448928ef317fda85f90e6709d6404fa",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/helm.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "61de3962fff0ddc6b9a424ada354a6c4a0e9adcf5650afd886fb1d3d3db77b00",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/hf_inference_endpoints.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d4250da49a6afc743c0e0cf46006c69aca2c9b9e9f177b34ccd9d817811aa54a",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/litellm.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "190fe68e89115d781e1f37b3db19a12710c24c1cc50f4fbb79a86738e2ad1d78",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/lobe-chat.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a4374ba6d17ae3d5c1bf959acd481da5d94adb179c277877fe141a9fd0a08ba5",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/lws.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d80b1c3afbf0db3a6e77627f13cc7a9a76b3dac399a68d064d47a0dee3b91cd1",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/modal.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7e8110637f03454a658e06658d2b244e57013ab090b968e12d38254acfe9c60f",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/open-webui.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dc13605f120129b89e00dda70dbeb16cfbd890c644f19cadaaa710b867a6a876",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/retrieval_augmented_generation.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b33b1153663db39b9c8836c228f1bbe4445ca423c718c0162cd677228697f649",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/runpod.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9fcc68bad3f2d246b6e805854a0513970cffc9458592313bdb5c9858cc89dcf1",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/skypilot.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "64be3696e9ef19ac34e7a5be9d92d4f62f247c15b3846c52694ff159036f64b4",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/streamlit.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "694d52639acec93982cecfc20c0460fe4cc033967341067e22c10db529d8c8f3",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/frameworks/triton.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2c71e09226a35eab7bfb486507601bd6e4d180b47709dd41a6a117a57128142a",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/aibrix.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4b36288f0f22055c3ffe9e6c828b90489b452ce58c5a48fb714fdfb6fee5ce69",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/dynamo.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e8f3ddd59dde1d8f73b6b03a9a82925dda3733fc0f5041a9adfb9878b630b6ee",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/kaito.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d1fc3bd06df7bc973916cb4ad22b2c34b0ea84cbc21d57bd706365b513253a12",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/kserve.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1463b8d943c31b3b991bdd8a55de3d3917b037cca04bf5313c571bd139a03e0e",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/kthena.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "22c6f8a461afe4a74c37678413edf4818a941445e0bde5e2a4aebe619f760132",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/kubeai.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "af71bf2657a8397f9a87d3b5988739e15d57cbe4365aa831f76779ec4af857cb",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/kuberay.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ca814f2da14c1eeb51cf896a5adf39f4d297b24fec486942741f136d30a3f884",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/llamastack.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8cef86a10bc71994ae0786c81ffcd233f0e038c783c93df0ef2debadec6d48b6",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/llm-d.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6e6e6e7b77a275ea12b299612d3ffc880288b75162a481ddb2aa0aaf4677e166",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/llmaz.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7fd1dabaef71f75d536e42060af978004e97bf9dbd87bc8bb48d6ee5fa2eec76",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/integrations/production-stack.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "19f1c5bf19269d513566ee0220fe90464cc37b6a34489a4adeae92fd691a018b",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/k8s.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ea41b609114a7a5b05adc14a8cd863687f948a3fc3f8d373ee7cd48a9aad816f",
+      "binary": false
+    },
+    {
+      "path": "docs/deployment/nginx.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "213b7c7c4455a23541f9bf5d9f25a237ac504e23c3bb497ec82e610776a0a632",
+      "binary": false
+    },
+    {
+      "path": "docs/design/arch_overview.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7ae5fd4a1927d8801b76a5c762a324a9cf4f15375ac71f9987560fb3616180b4",
+      "binary": false
+    },
+    {
+      "path": "docs/design/attention_backends.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dd9f3cc3c7c889a64fb91cd440648c8c953144985eb6ddfb1e0609e5ea2f112a",
+      "binary": false
+    },
+    {
+      "path": "docs/design/cuda_graphs.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "639d65b7d4c5902ac6776e1ff6d926b53788ab09b5b6e89146742c762c4a9d59",
+      "binary": false
+    },
+    {
+      "path": "docs/design/custom_op.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ab3f43b5afffff484ddad96f74786bbc03213027f989d56626c3382160f43f3c",
+      "binary": false
+    },
+    {
+      "path": "docs/design/dbo.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0f293ff4351197f3757a9171bd46b75ded39d5b83afe3f63a14aa1e6fed94df2",
+      "binary": false
+    },
+    {
+      "path": "docs/design/debug_vllm_compile.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "904fd40c44ef1f304343bf189cc334acf131d97816dd03b69d08457c0a381646",
+      "binary": false
+    },
+    {
+      "path": "docs/design/fused_moe_modular_kernel.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c848cbcbc0670dd7c2de1b40b275295662b39d5514c0ee8b26756c89d16d12dc",
+      "binary": false
+    },
+    {
+      "path": "docs/design/fusions.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "eddd39f6aa6ba223620f2887aaf140e5aaf5eeda32a2e00d9b17d01b6bad2520",
+      "binary": false
+    },
+    {
+      "path": "docs/design/huggingface_integration.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4dd064788b1b5fb6a7e54073721d9ade5390dd6b8b649d2bc16479ffa50069da",
+      "binary": false
+    },
+    {
+      "path": "docs/design/hybrid_kv_cache_manager.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "35faec34edb69e98bc7b1162d7051c7a50e128f41f6ce44beae5ca115b2d41b8",
+      "binary": false
+    },
+    {
+      "path": "docs/design/io_processor_plugins.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1e8bb70115d4a28c8bcfcbc1df31fbb4f6e374116e219694670d44bf4804a4dd",
+      "binary": false
+    },
+    {
+      "path": "docs/design/logits_processors.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4d55b77d8fd25b750c9d0ada2a280e91ddbd07dbf226ddbadedf0cd89c0a6b2c",
+      "binary": false
+    },
+    {
+      "path": "docs/design/lora_resolver_plugins.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9a911be95c76ff01505478ecd6acf2b9243dfae25e5ec8d292029c9413512f23",
+      "binary": false
+    },
+    {
+      "path": "docs/design/metrics.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0244dc72ca2d5419099e204fc058b89187ec36e58878903406744dc4cbd89e5c",
+      "binary": false
+    },
+    {
+      "path": "docs/design/mm_processing.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2be6b62e473b6df3b894b36539e14b7a849369cf20ef6a47bb6c420d78b58197",
+      "binary": false
+    },
+    {
+      "path": "docs/design/model_runner_v2.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1ef00c68fcc82b5d43093283052cc85282337a8eba5717fbca1066d2be2ddbec",
+      "binary": false
+    },
+    {
+      "path": "docs/design/moe_kernel_features.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1ac331b0c43c8b1696a61ee93903b47c0893f8d498e8aabb8b19c4b5388dc075",
+      "binary": false
+    },
+    {
+      "path": "docs/design/multiprocessing.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1959cb563a5decf9b99186069e6b1d6a724b895ff1fd9c84fa1d382ed3a84d8f",
+      "binary": false
+    },
+    {
+      "path": "docs/design/optimization_levels.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "426e513200d3c35468f928a890da72bc0ddb1a791c1c693da198faff4538c990",
+      "binary": false
+    },
+    {
+      "path": "docs/design/p2p_nccl_connector.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "20c344fc6ce3379d16c7157d806875854f0e68d355a68ae8110de49f5be6ae6b",
+      "binary": false
+    },
+    {
+      "path": "docs/design/paged_attention.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "aaa9a174015a2c404d79f12f26ef27ca2e1e9fa5bc04a6671e9ac9e08a21eeab",
+      "binary": false
+    },
+    {
+      "path": "docs/design/plugin_system.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d5d3a82ef836ca2a136076073395156418ba89a0e990c887541c017bfb6d6759",
+      "binary": false
+    },
+    {
+      "path": "docs/design/prefix_caching.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "cc7f363d88e2d22dafe09c9cb5926068b7441ac382ec568171d781666b9c3202",
+      "binary": false
+    },
+    {
+      "path": "docs/design/torch_compile.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "45cb6b8664e9926172541a79cd2be2f6686ae0c7f585ec65f9de64796c88aa2b",
+      "binary": false
+    },
+    {
+      "path": "docs/design/torch_compile_multimodal.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "af0bc988eb045a853134bca7e44a00aacd4b517fee624f68b40ad83321bd1e80",
+      "binary": false
+    },
+    {
+      "path": "docs/examples/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8510e8bbbc75b267da83e9c82d987382dda74c8189554597f6f04297fd9d5091",
+      "binary": false
+    },
+    {
+      "path": "docs/features/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c70d65ea6debcd64e4df5704e12a81137a0179bb4201590b452be8130a4be423",
+      "binary": false
+    },
+    {
+      "path": "docs/features/automatic_prefix_caching.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e511fb61bd4d7a8025ae84dc7fb28c2bb46bf1a13f561e32cffbf34a9f5ccbb9",
+      "binary": false
+    },
+    {
+      "path": "docs/features/batch_invariance.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c2425c9020d9790283e96a233c6e1f5bc41e2fa72f37fb05cc357d3fa4c88099",
+      "binary": false
+    },
+    {
+      "path": "docs/features/custom_arguments.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a42d402b98104f3c61ad1a2162b51135395c811c7b8597d734d6e17d3c4997a3",
+      "binary": false
+    },
+    {
+      "path": "docs/features/custom_logitsprocs.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f6a8e87ade51aaf489eca1aa7e6f714946821cab5e518c9ff7074624dd32afb9",
+      "binary": false
+    },
+    {
+      "path": "docs/features/disagg_encoder.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ba19cb08df9a3ba2850051d28aac6174469eee17928f267c14fbd3751d4b8054",
+      "binary": false
+    },
+    {
+      "path": "docs/features/disagg_prefill.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b74a71ebe957cf979e4ed184a3b26ba00ce1cbc8d02f1b77d42cbe9b0d259f1d",
+      "binary": false
+    },
+    {
+      "path": "docs/features/interleaved_thinking.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "592f52ddb9dd73f3ba236991392bd09b14376da1bdfb7c3e65d4284b88fc09cf",
+      "binary": false
+    },
+    {
+      "path": "docs/features/lora.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2db7e4859ea761045826d66d9864b2feb0a4e573b31ac41cd4c9073a28884d03",
+      "binary": false
+    },
+    {
+      "path": "docs/features/mooncake_connector_usage.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f030b587e60a4c979d8ab56b7f158b1c78f731d416611cd3f02493c6a0ddc7a3",
+      "binary": false
+    },
+    {
+      "path": "docs/features/multimodal_inputs.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8b757bc54a1b61ede75335bd4bb089219603fd0b03f7c32900ffbe2f79f5d332",
+      "binary": false
+    },
+    {
+      "path": "docs/features/nixl_connector_usage.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e99a0d2d1f2102b55728a4e1fa559dced3019a137ce60482ed5916fb52e89814",
+      "binary": false
+    },
+    {
+      "path": "docs/features/prompt_embeds.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "63558a2d5eb4b315b9f338ca7f0cfe5327e9a26a55217e6102c6344353e6d5fe",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0aa533f568e88656afdf841469ae9d76a8d96ebde3540f11c5ade744cd6c8b93",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/auto_awq.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "980326181102bfe329cb820628cd5703362455f691020ac6fd271f0383e70373",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/bnb.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "88001a41a119f1780deb38365fea426c1e9374a27aadb1acdba6f41a4f826bf2",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/fp8.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c89b6472ec4b8d97b23771c90bda9e77b400f64f2150137b2e8cc7898b124565",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/gguf.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4b06e5f42184892b1233767051874a225e23ac58fac59bad8f9d90ae47da73a1",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/gptqmodel.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9615e9cac9ac678d8eb7e29caef227db17b20e1afcfa47dc1b551bbe70e9c252",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5953b791cd56b98155cd05c6fe52656428be99515851d3c63f46bb561dedd715",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/int4.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9c3f8898f4f162bfd996628e16ff3c096a8a2202ccef6f061b5a8cf672f8362e",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/int8.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dbb82d222b14a423a11a290517ab05af4f952493490ad1ac9ca509191f19555b",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/llm_compressor.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "404672c2a77ff6e2aaa3ded4185757c21db4a5b28291fd21e33ccab445f55cf9",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/modelopt.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0dd98d206c17c81a9a394bb9e966928e85ade8b21e138fb936d729115d7b323a",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/quantized_kvcache.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b809174626da234c87fceb71d7c7224df93cc8b3854843c4022d7ac01db5f0a8",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/quark.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "31cc99b97d85f4ada62dd9a72a07ec293aeb4890ccb5694faf15c4fb4bd9d700",
+      "binary": false
+    },
+    {
+      "path": "docs/features/quantization/torchao.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "be37c7fed4937392d3bf9efb890a6ed32f9bd02f7cf12c439813626c2497cb5f",
+      "binary": false
+    },
+    {
+      "path": "docs/features/reasoning_outputs.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a42c30a53803f2505eb922e29a826dcc686493ac49965b166246831a03fb59b1",
+      "binary": false
+    },
+    {
+      "path": "docs/features/sleep_mode.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1b74c99de4e82896d1122b6d40af65190b31de52f35cb01ed12dbd8f7c91f8c6",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "bae877aff3e1e57dc45a7903ab05162feff7fdced9a7e1aabb3e5555cfaa90ec",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/draft_model.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "de0d0ecf8ef69cfa2d173da1895268c86fed78d4602c4ce86961789195142dcf",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/eagle.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e6efa81084a6052f4b73fea716e2a81c562d9dff690a2a9bc16c81bf5d895250",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/mlp.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4ae425ff87d9bb317babc84691440b624ee7f9b72b63bb9e27fdc566fd416eef",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/mtp.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "65ac943e6ac731be70c3431ee3613f722b64114a98d52226596730c26f1354f6",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/n_gram.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "343bc9cfb17011f683998b256acd384fc429a8490b7560aa8906f306f761d6eb",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/parallel_draft_model.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2d40ab9356e30f7189e31f79c077eba4e453eca5ce39078140ce100cdba3286e",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/speculators.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "42a498ee9c4b9f81e12921195a642ce2f97673d8ea6e62a57e969958258ddba7",
+      "binary": false
+    },
+    {
+      "path": "docs/features/speculative_decoding/suffix.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "6585dc99d3a6b9a129c80f67a0c4f674c7d6e159d158827bf26804666f99b6d6",
+      "binary": false
+    },
+    {
+      "path": "docs/features/structured_outputs.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "a81d05076e376f6cc25160a0a849fb42dd937fb4a919a7a1510068d0cb46fb08",
+      "binary": false
+    },
+    {
+      "path": "docs/features/tool_calling.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ba289f1e86353f6eff262713706cbd48fffc17885a685bc6cf485e790b268885",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/.nav.yml",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c7745122d5354d45148184648c289215610df25946c4f55a2b83d8cc46ebf5ed",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1ca160d37baab7734ed379473ce2e41ff6b133e48f9d32974c720591070915fc",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/ascend_p1.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "99b1b10752fda5ae1b78cd3f90b7eb0268eecd9d1d988d48528192fcbf25190c",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/cpu.apple.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7cfd0171d49e031ee806dbfe5626850fc5e52b9721d9b9fa9d4860ee20d5fd6a",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/cpu.arm.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "2363d0ec5e67e8cc6e89cdbabaa6985f76dbaed2d538c04a3be08b5c5dc7d8ef",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/cpu.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "56b3d8c1cf33045382f23c9281f4870f151a72d9e346aa09052bb7782db856e6",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/cpu.s390x.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7be9d53dd0768590074d6a8068ab2713ff87f1b18e104ae2cb28ca634334c0ba",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/cpu.x86.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "cdacc61421063ddf8bddb7c6cff0360696461b15b1351378dd9964ca8d40996f",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/device.template.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "301343419ebb3c63aaf321c7fdafa55e6287064d86b66901e0d590252b137aab",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/gpu.cuda.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5a172dad659d0324767790e66ac36f6cac0160d405c3a4d358fd8a426daae014",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/gpu.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d49a5f47c4c6fa57ed9d022e20bb09a359a71553b6a2276383eeb2a0b226f0a5",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/gpu.rocm.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "1cc963e016ca047c2eec16b487778002764342f420722e5d04775312bc4831c8",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/gpu.xpu.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "09bcbfb89e0f79e918a62e71c110f81c3a931cbf029ef1663db4e4af70fc0257",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/installation/python_env_setup.inc.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5af31b3643a72b6e5e285242222af51e11cad89d8e9c52862737e9d0caa7b7af",
+      "binary": false
+    },
+    {
+      "path": "docs/getting_started/quickstart.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "efde0e7eabd676a1c5d25ef9da1e7a10643c0ec50f8807497db1e49ec2d79294",
+      "binary": false
+    },
+    {
+      "path": "docs/governance/collaboration.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "36f23109a3c53cdc488d0d80daa94bf8d57e8c51fa080acc2ce5d2c18552dbf6",
+      "binary": false
+    },
+    {
+      "path": "docs/governance/committers.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7ef1b18777f1a84e08613f1b191062b2ab66234f729ac9367f5db1d089fc18fa",
+      "binary": false
+    },
+    {
+      "path": "docs/governance/process.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "304b81305ba6e324394f0243672ecbcb627ed1f5485e67023687a288945b300d",
+      "binary": false
+    },
+    {
+      "path": "docs/maybe_skip_pr_build.sh",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "80a971563fcce432a8bfbc731b66edf2c6849f7bb29ef94d63a7cc70813eddad",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/hooks/generate_argparse.py",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9ec40546a3ad26997817f86cfa11b04397efb72eb0ff857a017f00c74ccb29c6",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/hooks/generate_examples.py",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "7d5b3d58a13424877bbab9a3bf4ea3c3fa85c9c9619839e8ba39129d9fa76234",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/hooks/generate_metrics.py",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "eeb407c193a3ce731e2c6d04bf32fe5154fc5bbe4004f4ca5604c1a71522f784",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/hooks/remove_announcement.py",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "691c9453896b3229a0d651c687aaea8878d6800945e139450096fea3693cefb0",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/hooks/url_schemes.py",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "8a0bc2376c487d66f91dd124d32d84b6716f85a030c9949b599507cf4dbb170f",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/javascript/edit_and_feedback.js",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b2a0f98b66c418013ce265af25c9594d2ec28572a836b4e2a09086c9a5ebbc18",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/javascript/mathjax.js",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "afe553abf59bff009d49da50ba31ace2c62796a771174febccad6bfb010fa36b",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/javascript/run_llm_widget.js",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "df4c052e7da69784e9b4eb62cbec1e8356be2bc54ad0c35d16c0f569a33f5c90",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/javascript/slack_and_forum.js",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "321a6af52299cf31e716359bdcc57ca323db9bf8d3ba1972ddc0811a7c340976",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/overrides/main.html",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "0de6935aa43347eb8544d381c669a24b487f5ce0394310939fc65b4666c4212e",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/overrides/partials/toc-item.html",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d80558c56264d63923dfe77ab1b413e1c3c35485590aa2f78f17596da3b35356",
+      "binary": false
+    },
+    {
+      "path": "docs/mkdocs/stylesheets/extra.css",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "194833b062b78d7e086f54092ad0c2fdfc3527d848a3f371d48f6dbd3aa08aaf",
+      "binary": false
+    },
+    {
+      "path": "docs/models/extensions/fastsafetensor.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "08c9412ad070064b714029a2d9e003e14711a51d0e091bc43a7982620c973bfb",
+      "binary": false
+    },
+    {
+      "path": "docs/models/extensions/instanttensor.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "fcff94d6512d632e09ead322df06a808284903a99d6e0410bac83c0e334239b8",
+      "binary": false
+    },
+    {
+      "path": "docs/models/extensions/runai_model_streamer.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "149ec97c1a8f09cc18f7193b8be8142fb520403ce8cf2a241c5f8a24c3202fad",
+      "binary": false
+    },
+    {
+      "path": "docs/models/extensions/tensorizer.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ce6cd72ea733a4acbc1458f8a232a6599a1b54719cc1abf36eda2f414b80d2a5",
+      "binary": false
+    },
+    {
+      "path": "docs/models/generative_models.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "5c8e44abc30e9329989f4d013e7cf9792b71a7ac93380a77055bc1d7f764265a",
+      "binary": false
+    },
+    {
+      "path": "docs/models/hardware_supported_models/cpu.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "71cbda8d04f8370dcd421f119bbec8ff78d5c4be18a3fa1b663837766aeda06f",
+      "binary": false
+    },
+    {
+      "path": "docs/models/hardware_supported_models/xpu.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "9740996de7dfafda14694d9cc15e4ec9eaf83380b217fa364f6a2faaf5148fac",
+      "binary": false
+    },
+    {
+      "path": "docs/models/pooling_models.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ac3bf03c72a52dc3d507d9e792bc3392cb3cc10dd24a257cc1fa9241f747f1bb",
+      "binary": false
+    },
+    {
+      "path": "docs/models/supported_models.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f5f0518595436fb207080c20ed0b36091d6b78769dce214da8409e620ee5bc7b",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/context_parallel_deployment.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f549e37f350f4f48a95a51f84e07af66d4a73eef232ef70fa7ea56c492284690",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/data_parallel_deployment.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "24eecb8e13d89f13e9b2a233b88163f9f5878647abf859acd676ff7258a7efec",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/distributed_troubleshooting.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e925dff3c9a19a5510e11a980a092b408565f90feb469a6201b9f864187129d3",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/expert_parallel_deployment.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "b7d34314e735941bf96fce0022da5a0d717d48d351863016f160488a6392da5b",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/integrations/claude_code.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "4d588123f97a3474e3e4e68456bbe3cc2fc7324ad7955384c3d536738be2438f",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/integrations/langchain.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "440f1449e592825537fdef110a4d5e2e4486b4534a341d91b22ae574fe4b1e83",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/integrations/llamaindex.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "632469927696f101a9f4c4b91cce938b5981ef1f0c48c451d1d2e7a2f6bdb749",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/offline_inference.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "837514950db3796d0fb48e93de650c78e8c231f41aa03e5089e70026de8cab66",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/openai_compatible_server.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "ec9ecadca56476fc3a2cadc75c2f1221680a99e76d2803be9e0f374f12909496",
+      "binary": false
+    },
+    {
+      "path": "docs/serving/parallelism_scaling.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "136c13bb49c79a7ef397b40527d93fe819b47811dbd3e5a500807b002bab9088",
+      "binary": false
+    },
+    {
+      "path": "docs/training/rlhf.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "e6954995491fe23a70415064a92d8d857f73f48c151341463ae262e9ed267ab8",
+      "binary": false
+    },
+    {
+      "path": "docs/training/trl.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "c94c0e00640498428817c5bc38c8f680ae1d626a44d90c424b214c9d99982e93",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/README.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "f4f6abcb8f46cf1fc390096b9dbfa360c9b472b05649e72c6274dc8ac3ccafc8",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/faq.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "dc0fe41b0861fbf3a00906d8011272310bee22dc77575abbf5999d77782586ab",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/metrics.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "11b6f6609ecb9f7820755c7e8bdf5389e6117a75f47362377f91434d0408e33e",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/reproducibility.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "d51e2cdd621832f0e9b382c9831ddd1a2729b5eff4db2c6d5bd6fb2c956cd679",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/security.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "37fff9c03700847aea8309dd7afb2f035627ee8cec1f622d2af5acb864b8612b",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/troubleshooting.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "966b8aa6fde411af0eb60fae04fde61b54fad2841af72ef38e6407a37b9c6594",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/usage_stats.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "64abf26ed4a35f83d9b9a1ced66169806fcdc6f9c3834d7000ebb9cc8f6ab855",
+      "binary": false
+    },
+    {
+      "path": "docs/usage/v1_guide.md",
+      "reason": "upstream multi-device/model documentation; phase history retained, P4 guide replaces it",
+      "sha256": "178fbb9f27a88d3c38f8087cf1fdde25046c2ac1a508b62a35cc9a20092eb0bc",
+      "binary": false
+    },
+    {
+      "path": "requirements/common.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "92e5066bfdfff3769714ffec01bc356d28ed5f8f1bb8cbb2e75e2b81d422de13",
+      "binary": false
+    },
+    {
+      "path": "requirements/cpu-build.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "ee537183bab11704a85f34244811c3bd505dba5ea77663438a06c6ddb9299e8c",
+      "binary": false
+    },
+    {
+      "path": "requirements/cpu.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "0333cb1d6ef936cfc4e9ee6ab77f3bfa75ef38048f0696e88e1068fe8141b194",
+      "binary": false
+    },
+    {
+      "path": "requirements/cuda.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "fda1200db91cf6628a7c95fde4fd57e33ae1743ce8aa70585b5fe310d3a7d3e8",
+      "binary": false
+    },
+    {
+      "path": "requirements/dev.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "81c17048f60574ec307094f800baa8f067e39d25c5fc9de39bf2ff613b0beae7",
+      "binary": false
+    },
+    {
+      "path": "requirements/kv_connectors.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "a707760bd7e3848b75cc7e278c3e2e9d8cda41d223b0f45b3603f44c21001578",
+      "binary": false
+    },
+    {
+      "path": "requirements/kv_connectors_rocm.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "3826d6f4a882519fd07d4179952fea98dc6f6d361ab70ed5eb78bf6cbfc3a9be",
+      "binary": false
+    },
+    {
+      "path": "requirements/nightly_torch_test.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "43d06de8894d88b054bed43bb1a5d5904216e5a2ebf4f67d0247ed24f6d1aaf3",
+      "binary": false
+    },
+    {
+      "path": "requirements/rocm-build.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "50338768850cea9af3d38f3c14f37ac53b5372675ddf0e54306d5b738385f8e8",
+      "binary": false
+    },
+    {
+      "path": "requirements/rocm-test.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "b31cc508192cdefb641fa1cc293b724544df2ba68b111f3fefb9571a1d9fcc0c",
+      "binary": false
+    },
+    {
+      "path": "requirements/rocm.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "f318a3629f88f7965d9ce1d26627f2975353a479fc052ac08e0b9c16899cbef7",
+      "binary": false
+    },
+    {
+      "path": "requirements/test.in",
+      "reason": "off-profile dependency install entry",
+      "sha256": "2a9f02117f525b7b9e4747e7a38646c93e391ccb4dfcb6de9fb1280c286a819a",
+      "binary": false
+    },
+    {
+      "path": "requirements/tpu.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "d02f64ce9f264f364ce0370e2ea4f2011cb3322a4e7563b7f25a06035e89623f",
+      "binary": false
+    },
+    {
+      "path": "requirements/xpu.txt",
+      "reason": "off-profile dependency install entry",
+      "sha256": "a71975492032b25a6f914f2fa0c7c95f99340f2dad58ee9f3b6ee11a35735322",
+      "binary": false
+    },
+    {
+      "path": "tests/basic_correctness/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/basic_correctness/test_basic_correctness.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b139e9bc5a388f9d44f94377cb5810eb67c2637d59f5479f11ed5683f1a529af",
+      "binary": false
+    },
+    {
+      "path": "tests/basic_correctness/test_cpu_offload.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7a3cfae59a1aa8d58f0f88bfe5924c9405a9cc70c87cdd101383a55a524a426b",
+      "binary": false
+    },
+    {
+      "path": "tests/basic_correctness/test_cumem.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6c9c7be938c649a147419c049250a468aa18a6ef2c25ac5419463fc089fd0894",
+      "binary": false
+    },
+    {
+      "path": "tests/basic_correctness/test_prefetch_offload.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "513e6579cf2469f69f92bda9146bd904156d2f6b78ccc674ede93cf7ad6d5407",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/sweep/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/sweep/test_param_sweep.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2885d30f59a84e6c8f3bac0f58c6a3c42de2a06fc409548e55555ac76fa51732",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_bench_startup.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0c06a33d9e0805cf3aa9a960c6b2c0e3a9c9b34cfeff00c02f80c24a26f431b5",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_latency_cli.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ef73f906e07ddc4c300512768e46fe0bb069fb1a1b5b8235939e276452499ce4",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_plot_filters.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "83b0ef4485d22ad1cb5a23a512717f6d376a800878cd31767c3724e18143c11c",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_random_dataset.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f9c3fdb80e67a8711038ec1996310e96186063f9f31d8fa8df29723bf4a4d68d",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_random_multimodal_dataset_video.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4856c721038707fc7ff9b43addeb9cdefbfd8dd40607e1e41df9b1580084f3c4",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_serve_cli.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "afa36cf1a82cd82508eee7f762c65283df2755314d631b7a1558bb4c040baadc",
+      "binary": false
+    },
+    {
+      "path": "tests/benchmarks/test_throughput_cli.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5a64c6dc75bbd070aaa9447243765cad90f328551eb928c3bfdd230464dc542c",
+      "binary": false
+    },
+    {
+      "path": "tests/ci_envs.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "91dd126df400b5aeabe436851d6a7d86e386e4576f28fca37d5f58b8dd00e29d",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/README.md",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e45c5762fc477aea020e730a7b49729dc8e1cdb0199b49b0b8cb36f6aab1c923",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/backend.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b35b14e0f20c5a045e40a4d55f9470376e786dde97c2647e32dbda63781d2f38",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3102ef65ebcf0070f45ab57f83d96c5f4182af85e01f1aecdfdd6ce1a079651",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/correctness_e2e/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/correctness_e2e/test_async_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f8683dfd4035efe205901e3d27a7e8f487d6c35ea9be3fed39c1aeecdfaf6b3d",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/correctness_e2e/test_sequence_parallel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "595d280e4389b42023546bf245f564234725100118d3187c0095140c8ca96c44",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_basic_correctness.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9f783854f01958e7efdf01bebb3c7b6ff3239c94e78ed677c66a422f721a559d",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_full_cudagraph.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2d1fc710d4be5c16ced6af41b78b04dc1341d21903505a018949dc016931c45a",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_full_graph.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "79cfc29cbd020c7a75415f17b6d3370476c0f5a9e1f1783240999b69ce1838a0",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_multimodal_compile.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9e0bb2dce23c44b1eb0d015fd5502936b487543e3d572a6c19033c80d0fa3e85",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_multiple_graphs.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4d85b2c18dc88233c80b8d030d64d57fa11582af2e99b90815c59e546c9b9d59",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_simple.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6c8324adea644dbe986ad9612e2261ef8c2a0680d61360c10cbc4a998002a9fa",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fullgraph/test_toy_llama.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9bfa6ef6f3cb51179d27a1e316e48ecf5f3237e84d5d40b009c7292f9c2fa4b9",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/common.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1aa752f98db012909963e379fcc93712328bd878de5f23f89c20ed017f81fa44",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "705c96cbfb56a2ea2b775058b0273196ae433fc81071a9b8040e27127d396a8a",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/models.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3fb3a897236d4bee6b8c9639b0b94680789bb41546109f5a3f68ca2bdb8476cb",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/test_tp1_quant.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "92bca41b9832fec023df1b85ae6454edbc115489a60dc44a16b40bf798502c03",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/test_tp2_ar_rms.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9d7b313ecf5e6c013badc4000649d30d5da6729bfbd5a95662c7dfd77fef3fc6",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/fusions_e2e/test_tp2_async_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "85e95a8021ed99f364d688f83c986a0d40c9c56e0e27a1250b73e525a3c03d28",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/distributed/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/distributed/test_async_tp.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bc4874090d791958f12993be05be720d64dbd6ccae67e89f9771b5bd5dc2df1e",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/distributed/test_fusion_all_reduce.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "689586df8239e17df6133f758d38005ab7dea651c8a8560383da018e2304e77d",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/distributed/test_sequence_parallelism.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "10349acbf05281c4c2c15ef073faa27029f2a5d99bb4255aee1e1ccf62ac1648",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_functionalization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a7f43ab93125a4a12b99d8dc5102cd76f656dc359211dbcafc422234c17cafdb",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_fuse_act_padding.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8039d0e3479629d4770c58d2d76b17f4b18bab43c242bbc7cb42235166054a83",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_fusion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0995c8e45dcc2c37a136905a0ffdb355a010f1db5633b8290e8ffc7cc86ca931",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_fusion_attn.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7c3a1473c8fd6db6d889a5a8606337dbd5a6156a737256868a24d0f36f9c4e7f",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_noop_elimination.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bdae50a2ac3e31f9e1f6405838cbd5d4a5e013b6215c5cf80a1a7ba61bd5c032",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_pass_manager.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7feeb67b96d70c592e8842f4e8fef7f4a9e02a22b06c11aee563763815838fad",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_qk_norm_rope_fusion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3e330811f51c64997c13cabef41b249125aa4707fab29547211c74b90795c0f1",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_rope_kvcache_fusion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ff5862ff28723cc31d1f661596732c0052f573a28d545a1238eee81c4ad8a01f",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_scatter_split_replace.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1043f4f43e863afe686188bfd9fc0f020ed1fcaf27fd9356f33a8de4a19573ed",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_silu_mul_quant_fusion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "807e6af56221fa02a10c2b22e2d046726e7e643b984fb02956ca25e97fe92a43",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/passes/test_split_coalescing.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c7fc665119f0600c7197af94319232e89bb236edf68f21acdd9ec5af314caae0",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/silly_attention.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "622d7755857896d516f5e889e45a94fa3075ecfb4c7088fad2d9b8110275e7eb",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_aot_compile.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bb0df1d56ca5976de7a704acf2151bf918514ab7d59f296c9de5b9aa3d5c56c7",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_compile_ranges.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7915e35af7d7be19d30edf6cd8533c0f20cd59db228159d9acf5b98fc26bf5ce",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_config.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d8a6e0db990d7553fe87f087fc4b6644976e2e6fc1ff310428b9cb36993764f3",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_decorator.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3275467f705350fa604417696fb796f1f38939b1b8e52edd5d15450a84414002",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_dynamic_shapes_compilation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5dd5b97d138de080d5af30c99e9e2752a0f1d4c3176f1382c3e3517ccd01b750",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_graph_partition.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "838a777fea71800e452727a256d74acc391a6a0fdd35aae17a99b8d752f93520",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_rotary_embedding_compile.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ea642e5d5414779fa538754e76323de601d7e7308766bb73654f304b73bf9454",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_sequence_parallelism_threshold.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6262571b4a425c97358df29685f25880090e061ceb004c69a48b4b47642825e3",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_startup.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f83f3e59f49e15e7e3aa1064f47ff5757369c4be60bd5aef6a8bf4a6d26dd516",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_structured_logging.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "417353010cd04c79725c04a6c694b56fb4efed5266a7a0fe3884ed67a933d2ad",
+      "binary": false
+    },
+    {
+      "path": "tests/compile/test_wrapper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4ebbeeaaa5b59f6664e37b57e5c0d3325591ca42bd24b1b7501922e9500d4ece",
+      "binary": false
+    },
+    {
+      "path": "tests/config/base_model_arch_groundtruth.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8e412953d565156d710f2a7101f38a397cd267054ed7e59955f9a0a4e834d426",
+      "binary": false
+    },
+    {
+      "path": "tests/config/draft_model_arch_groundtruth.json",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4fe5494fb3e10f82d5e1024e0353dda03e61382bf813fb3711b66532bcc053d0",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_config.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "163d4cf06e144ecc72c724a9cadf959635546158a64d120c457bca04f82e6cb6",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_config_generation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2e41bec4177fbffe5c9aa097a04174342c4524821b7e85e28ce636db2f403f59",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_config_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c1dbf9ba240b9ed688328b92d00a8804a04944f0faf2c26bf95afd9a5738d2df",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_config_with_model.yaml",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8f9075568991d948f61a19497f3b998e8b3069190bc6fd7f352642da8664157e",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_model_arch_config.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "52bd574441e5e225763b8b60c5962635a162e935f755720861e67151251a673f",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_mp_reducer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6b0b8bda78ac189d539ff4e49e82cb4dbdbf1170443eb3df103b2314e3d75896",
+      "binary": false
+    },
+    {
+      "path": "tests/config/test_multimodal_config.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2ab129edad632dd7902aa1a1636ec0fb34249cfde9af6e31e437b338ca87efee",
+      "binary": false
+    },
+    {
+      "path": "tests/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b79210deae3ede4d3b0c6f9440c15f741da3cc24d3b30a4b936de8e16bce0a68",
+      "binary": false
+    },
+    {
+      "path": "tests/cuda/scripts/check_device_count_respects_env.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "154a3258e96a5355edf0d0315f21d716d748d02de6287811276538da1135de36",
+      "binary": false
+    },
+    {
+      "path": "tests/cuda/scripts/check_platform_no_cuda_init.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "91067e90cbeba820d58022ef38aa3fac665a5e236da112994ae4f7c13b233141",
+      "binary": false
+    },
+    {
+      "path": "tests/cuda/test_cuda_compatibility_path.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a7422c4eb3b43fab28cb35af28017f074968dcf0333327cf070ef80044b63b7b",
+      "binary": false
+    },
+    {
+      "path": "tests/cuda/test_cuda_context.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0a786c2f71aba34f7c6aba49fec34c5689f9185f6658a69c8ed7610dbd193021",
+      "binary": false
+    },
+    {
+      "path": "tests/cuda/test_platform_no_cuda_init.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6df4abe843c173723ea17e1aaf2edde205b5d41dece7848a28c37fa41121008d",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/test_disable_detokenization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "bf593e7271a798f7721e282c4ba3d5167ba93db25409d2c1a9e3040b0cf08ad9",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/test_min_tokens.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6f1e06b89f5eb3f96ef8e40bf4b1c6aa2ff23a756dc2367264325f99e1e7ea05",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/test_stop_reason.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2e2aff3059fb8b7fa1d3cf44083c1862fd74c39bb7fd486a3a204bfe00901102",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/test_stop_string_while_stop_model_terminates.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8167e097ab5a023e445804055d99cc4867fbd7c395b4261e665bdcb8041ff104",
+      "binary": false
+    },
+    {
+      "path": "tests/detokenizer/test_stop_strings.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "97d84347a63488682e8f4c27c35ac3039cf67636eabf0afbec19980b9028409b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c0388804cfec8355439b5032d966679926a2fa7b5b8a03b29c2b71a4b98142df",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/eplb_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "71daff0bd545f7f03192856c78847fe000450c0a3495a0157c5490736724d856",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_ca_buffer_sharing.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "214370551cee2267184b18739d1e4e142f9ffbfaa86244a9f4e63c0da5669cb2",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_comm_ops.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f59b2393834ad65a00383fd1399b21ab504bb5ed9198842fbbea346e1463d324",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_context_parallel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f0444af9229bcf1c57dff9e06d65f6ceb7f7ac11bd20b1a9c06e6af4fe7b4948",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_custom_all_reduce.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cbdce6ca9e9eddad78b5d7938341978f8d3a8490ebf303992a57cef42efe5af9",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_dcp_a2a.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3ea79f281457a058e4a9388fb96ef92b54a8f605dd349b6ded8d5f67011d7e29",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_distributed_oot.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2c8739048776cb5387adb724efcd18f7647e5e2e0b56d3d972c92e05b9d42c1b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_elastic_ep.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4d7dd1be0abf2e20aecd1814d91b9a3ef66945f146c80579ed3411609094252a",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_eplb_algo.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2610dbfd01a1695ed828fb37a7ec930f0adf494ae23902505b9c31200e62de2b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_eplb_execute.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e126f5078b7d6b3f49e780accfdfa9dcd246fffecb485c81b40541ceba6d826d",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_eplb_fused_moe_layer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "10b0d1de6ba8e15572d3e5f4662ca64568a44d4103f370f9353d98259a63c724",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_eplb_fused_moe_layer_dep_nvfp4.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ab45d87a44199815aa9b3f43aa343af43335e4261da6e3623aaab0d6d2a69506",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_eplb_spec_decode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "21cc9881e5c27d1dbdaddca4e586a664eb23baf993832f562b73cdd61c183e5f",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_events.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "06f8568979cddb2fd667989ce0ef2f46df692f39b2eae838c75d2d5c40d26624",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_expert_parallel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "baed736c8f8c58fc349e0f2a9448029e07b30ef7eca9c7d797e9fb0c186f367b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_expert_placement.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a6c1a23567767fbd99daa095b7a1bf9a56a111cc6f089cce8e8bbc5b1bc52939",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_kvlayout.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9b6205c071b891f12e3a89d8b04a6db33763703d4b5d8a73e6a09958ed441531",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_mq_connect_ip.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e12233d8fd4efd1f86fd5171cde7cd823f5ed0500a8c7253a83584995b385815",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_multi_node_assignment.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5d4c476208d0cbf0fbd47967f4d9444107bb4ee8e0452fcdc8339ab7e1e7cb6d",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_multiproc_executor.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7712d1e5734e898fd938c1bb52b2283a3dd2752c8d4929fffe552c3fff2f76b4",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_nccl_symm_mem_allreduce.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b035b5c5f921479e5ec39c92e8f5e370296dfcde8ddb075a7d032fbd4699915b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_node_count.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2c40124109dab81cc343277381b645556f58625a51b85f71b9b619953beac8b1",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_packed_tensor.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b9b23808c16529d2e9c1c50cc7ae74d7a25b20ad6c3c35a3cfd9940bcdaa9fb1",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_pipeline_parallel.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "67d055f536539d2c6e0272e52cff175987f03f25a8be6578a614c525de88b686",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_pipeline_partition.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0142bd12cbf5c75dbec33d11c2c34c7b1504a5efc1925f52432afd1ea7f7feb7",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_pp_cudagraph.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7fd8324954756c65b4c99d3558414ce259975358de83f7ad79729acac6580237",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_pynccl.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d5418e9f3e4b1ef024e35ed1914825e39867e929a5b3e81b0895a2e0b8083753",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_quick_all_reduce.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7a491fe1c56bab3fd3009a175baaa344644b5d44fafb95a742021a9ac468fbb7",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_same_node.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "9bc0e1e821bdb23cb9903d0b783dfe9f823177443e702a728cfd66b1184327d1",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_shm_broadcast.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "16340d96e3f04c3dc01721c476679cdc4e15e8cb66f615390d6f323ef37e9720",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_shm_buffer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "357d2fa14b826828244f54c9ff6dd5a5ca34e5717d67fb258dd846d40fc3647b",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_shm_storage.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "00fd6bd28494ad4c9cb880eb500d621bec8c5408037fed5a015c59c2544b317c",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_symm_mem_allreduce.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cbf71a888ad74fc6501808927ec0904b62387821632ebdcccd6255b1eebcee46",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_torchrun_example.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c84d603bf33af815bbff6c6e1969d6e83234d84e09810fe235cb84bacb6f9fda",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_torchrun_example_moe.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "818eb1b29953a63b8df2637e2c753dd30a23f3c1f08105c35f5acd288a009fb8",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "93ca0fa996fb45a11592bbb9e7f1e206b170fe879363ff7351b3d03395d9d5e8",
+      "binary": false
+    },
+    {
+      "path": "tests/distributed/test_weight_transfer.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "df041cf40feb94fd9bdb16e382829912556acb9838cb5f5fdc0d7c32a49b0701",
+      "binary": false
+    },
+    {
+      "path": "tests/engine/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/engine/test_arg_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "78c3991052b20c05644a45854b8257ad6893e8a936c36c7684749571037636ab",
+      "binary": false
+    },
+    {
+      "path": "tests/engine/test_short_mm_context.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fa22ccb5666b1b7aad49b6c64009068378353390e436ce37c5fced1194e1e874",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/anthropic/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/anthropic/test_anthropic_messages_conversion.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "13905f4bb044788f9c5945d472d70206226edad24895ba0d70860463593dfec8",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6eaf86cbc304ad814ea056576406eacb691ac47f1227c3210467c5fe83712afc",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/test_basic.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e5db38a65fcbb903a603b4def8036da84090f8c29ba9543c5db0cad3873bbba5",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/test_metrics.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "823d5ef76d19470421e411b050bd8a0fdb7216074ae771c99e808821d984a7d6",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/test_optional_middleware.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5d46ba261785471bd280cea3e732836f13dff99dc272e05649f2e84a2e30120e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/test_orca_metrics.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a5d304baf6ddd49dcd6d12d437407e84a51b765fadca486ef783e1aad0442b43",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/instrumentator/test_sleep.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2719d6f1d407018ce57a21743ae32096e1b858ceca4663b5e22564ce8e147d3b",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_accuracy.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8b49e7ba01be65c57ca1570a56932b73e72beb24a0d9b0c61575f6e096841cfb",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_chat.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0af07d4f7e633cd3c8e42bf5283e82868271a2a37086aaf33540110c682aa481",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_collective_rpc.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c2a8e6c2878564bf687be5a1516341056dace7f0927cc5f282271ef2f3c23541",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_generate.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "558d5124e08c7e6d7535405b808eabfa964a71767af06a1c23a335bf710ccf98",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_gpu_utilization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4f2f1c4be8af7c840126fae3711b89f52b0fc78c43aa378b04a3798d7b394b5a",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_mm_cache_stats.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ade876d5cde02e1ad12929e93718f31158a1313c7d0d259756c3d544fdc2f0c9",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_mm_embeds_only.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d1f6e1fca3c5ce4f46de585b2cc8e0470a7053888ff3bbe794ca7da5e1506dd3",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/llm/test_prompt_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "845872e1548792091d255bfddf1be3e2c25993bd3b595b0943efd4a044f795d9",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/offline_mode/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/offline_mode/test_offline_mode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f83dcd260a25620f7ccd321af6e6ee46ae252bfa59a360637b3fa00dc101a206",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_chat.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b37f18ccd13376cf5968b24f21cca1e58a94ca21d48d291e75b40e89b38aaaf5",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_chat_echo.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0adc47fa7bd0d79b1b061864bed3e9aad53a18f0389c5e65585fa23139598a0c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_chat_error.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4e87e242cb5ee725b2fcc39d842338a4f2e5abc31c17d4ab92c7b83b67704976",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_chat_logit_bias_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6229b04e29ab236d4304ee1e51bc3ff999603252c7042a1838ad39a34bcb2503",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_chat_with_tool_reasoning.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "84bdff96db25f8fceb740d660e1e4e249f0f91efd670c4b652f4e1a87429076f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_completion_with_function_calling.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5f6cf4c283ecf113db1c883f026ddc775b2921a3e6b4198377c8d25c54b0ace5",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_enable_force_include_usage.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c0b3e445dc2157d0028bef3e24a1fa5f1a9cfaf17d6e7e9119497abd09584ced",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_serving_chat.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a27ab71b9198323d8e6af4a344f2216deaf980fdec48c6bd4996055d5c6f046e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/chat_completion/test_serving_chat_stream_harmony.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "63cdac3fe68e400a38a6a612d0dfa79926b69844f0f68cf879947e5ffb94c2ff",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "64f053c2a851dcfe14ceb33a2b9941769460ec9a5e4d91e7263b990d0f1edaab",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/correctness/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/correctness/test_lmeval.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "514a610e495df5494756ed43043d68ff3c012d7f371780bf61331dbe0737b676",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/correctness/test_transcription_api_correctness.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "203bbaf76d5267c977eef27b71b40f78099bcaf22eeffeaba35372f8b9c3025d",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/cpu/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/cpu/test_render.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "944cd6117c072629d6f09c12aa5e0011cd89befd51e6db06b476aa780ef6dcd1",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/cpu/test_render_multimodal.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "497785a56fb7727106f514187ea7d7775159e6e6ca28becf9bd999e5956986ad",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/parser/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/parser/test_harmony_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e76007e2bf116a1444827b4334c0613eaefd6ad6c11783915af0c5173905579e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "30127b32eed262de58fcf540bd9c12084e143edbbaad29fd81be09a1b690a8ee",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_errors.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0857fa1033f8219dbb0fc3b893221dfd7673c7d1c85a83f18a681b66c2081d53",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_function_call_parsing.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6e12529f153a6609c02acae70c003d565976dbadc2294904224cab8427f2f5b7",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_harmony.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "52a2a2d06c672e5f5c642b91669f8da547f674cef38ca01dfb13fa4af0fd5a1e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_harmony_utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e0fa7410ca69b016c54af82f3558a370fe2241b378b8f3c04ea6cb3da9c20c24",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_mcp_tools.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c65d00ed77e475476e76fdd289b2203949a0a12ad1bc4a7504588f603d55bf2b",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_parsable_context.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "600e1f9024efbb64c4dc8e61fe3317484be64837a550139f685ba0291593f6f5",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_sampling_params.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b45eaedd06eb8b6c02515573813ef62df3998dd506d60bcc9f41074e99cf5355",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/responses/test_simple.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2372b42e79fd2d37cbe44fb0886303c75d48a760c6e87d08edcad41812f14b5f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_async_tokenization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "202206abd69aa69a89fc72a5b31059daab6b3b13ef4f95805e09aaa33ab13ef9",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_audio.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fe60b072b4f2ac45fba43920c91943bb17e38a1b83fda25c46609014d81aa524",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_audio_in_video.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ddc2debddef8f06f60eaf35c6c928c568ea03fa0d3a70f8a8ae4dea65a758fe4",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_chunked_prompt.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2ec940664063096beeafb3187cd5f9cd9426e344229ae9e2772bd10c4f63e173",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_cli_args.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "55aeace8afa89daab8e09c3fc19a42aeed571d18eae296a7d86fe4ac649d5b4d",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_completion_error.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "2d8f6d5edbe84b005689ed17ff838a1ef242e3d1315e3c1df097ed0f90b58a0f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_completion_with_prompt_embeds.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1825a81a49d4828e8f4fec2b0ea3ab9cbd20be8ed6f708956c84234e8af4e11b",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_default_mm_loras.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "b224d6fc4e8189e6016e8d370a72f8d6b8ecb1c5605e1242c5afe2368c44c072",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_embedding_shape_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "1fcbef88661ea7a927300d985c0b1a91bcd727a65226b68d1a00aea4a62eeed5",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_launch_render.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ed6320f7d016618b8d67b2caf45db5799848cc329f65f5b98e28a3ee11f972dc",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_lora_adapters.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "f40f0cfa621864103c35018793ffc0d255aaedccb752830bedde97c8b078f96c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_lora_resolvers.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0810b0e5c186b0a39a67ded8b747b40b2c24ead68b71cb72311067de6a9d69f7",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_messages.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "032e6f7d8f5335ec0ccc960c5df8c903ccc880cab89cbc744657ffac8684f838",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_models.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7c89c8f5463aece517ce4b12608dae1c1313a4cc8328d0da0b9664d3ae383253",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_oot_registration.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "75ca19d688da1448513e375308c993900d5a3c651401569e0ae2adb7611914f1",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_openai_schema.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6b822aa44a5c0dd4d85018eb3f61a2a72bd048df011aff8e6dabf566eef7a140",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_prompt_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c5dbbb1f5ac27ef5f94ed6b290d63c266d333f9aa9de6c5dec4afe172dac3cd2",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_protocol.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "4ebc8600144146534fdf3ae0ab83108e53fd2655725e0f4ad5016e19d55aa644",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_realtime_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "58627addecaf44adfae8630ebc0acec6cf0bc84ced24291bf318aad9af2e2229",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_return_token_ids.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "83bfdac107fe213fc0c7a630bb66edbf19d14919eebdacfa06cd427bbe73ae1a",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_return_tokens_as_ids.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "dfd996d62964221a9694d4b0af780fc82e66d47ed15c792473a1fd414e45d56e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_root_path.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7150c8d27dc512caebae9bed6834f91b97f39a7a1a6755d50b489480fbf67995",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_run_batch.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "00e9893f45365d5c206d57c848b93e2cbaae6367f385b720dede30763c40dedd",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_serving_models.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "70b9235d6c7f537f2d9bd72164cc257de1b510441d4e0c9ed32bb905506644df",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_serving_responses.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "d8fb17ab8beebb24fd220c6d51a0b0add13d8408370ff82b8e3344a3862d8b8d",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_serving_tokens.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "67d2a0e95cd071fae7e3b720bbfd13a63247c68a9b6bfa33281c23ae5520ed02",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_shutdown.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c845924facd235916f29850dc95fde27d0a185cadba73e30272a0cafbdce8f13",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_tensorizer_entrypoint.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "0f47a61d94470d863a0592387dd435ef1776b38348ca0e903793e53b7e245d77",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_token_in_token_out.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "7e1d77a0948ab50bea6b5b1883a51308e0e26c52a49ea505fea597ad4036eea6",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_tokenization.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "fdeb316227c38d47672907f6217315c7f6b60266ec2f04d4bc602a00ab67441c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_tokenization_vlm.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3874d363a78648795b7a64e2b6827fb8726f41df12c5aa672155d3fead2d4fdd",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_transcription_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "cd217c8f2262d4240bd2d6d14c4d19b128172456531076ec99accf4cf477a826",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_transcription_validation_whisper.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e9120d21a105b29a2d7c51b520d8374e4881c0de425ec90e46bfc3a76333610e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_translation_validation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3428db6f1dfaaad8cb0633bce1e421440262c7dfbc52e7f09cf066b11b9996cb",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_uds.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "ee546a107253d0dc5d52dfa0e1b0bd2958ccad519cc4ad90e2ced113287c2f7f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_video.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a9b6c2a21f4a5f11a7862d84ac1689a2be2fb866fec1b90668cc7a96944bfd77",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c4ce684b28b444d32ab7308272ccfbb5c306f360fed1eaab28feade0e70213a8",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/test_vision_embeds.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "27b9e31940533750415ca2cbd53ad0d3baf481b86e355a823b1ecd2419f8d049",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "23d9f5445ca20398c23c32da4b9283d79af7e59fe42d7336a188ae4bc9fe740b",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_gigachat3_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "abab1a05268743cfc449caa9e12fea4ab23a06f8c313cc2d51adf344342d8b78",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_granite4_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "447572a413dd920ede06b8acb6146e9b4e8020cde88b9abf6b026559dc35a1f8",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_hermes_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "3132c8eafc65358ef7010af6c1629e0ee5a1b18d8d7b397fe11fe284cfc99157",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_hunyuan_a13b_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a3681bb92b9428fa95f35a7bde1347cf39a274890508e2aa3b9461baa3818c9f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_llama3_json_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8c5c2e71ceb8a1c184337f285597c5a681bd2cace3d96d56e5a2b953f8d02afb",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_llama4_pythonic_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "47a3e6e95319b0d24ad5548fbc0a83383780e29a41cb3d114d832c806f242d1f",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_olmo3_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c15be9ffce8653c672bc9a7ff364ed723c8ce910d21241d8e5f35b5144ade3a8",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_openai_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "5ddf522223d821b9b150610d0c42b8ddaa4be2ff2d2bc142398f32d2d2d572aa",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/test_pythonic_tool_parser.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "37da74799c005bf20b27097e1167abf124b6552ff03ef72e45451fd553ac603e",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/tool_parsers/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "dd836c750effb567db43b3dfd45a66cbc03438d3501c40559ecbfdfd24a0a085",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/openai/utils.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6dc30f1ab832a0bb11a36656779ef4d82cd2868fdfccdac00f699bc4c0a27610",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/basic/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/basic/test_encode.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "91793867ce4421cfe4ca488310b2206f16aec3cb59dac2a718b9ce1c26ce38c9",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/basic/test_truncation.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e382d28274625ae733e586716a330e883a85a82e07c49f578455c01c7dffb06d",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/classify/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/classify/test_offline.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "c87eaebb47ae383665267d5920b790b1fb41f766b54ab962740ff5702f46ed71",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/classify/test_online.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8d68cbea53828352609b1b8ece64e012d1bbdc825982b2bd650e84681f635362",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/classify/test_online_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "6d626d825e57b5892fad668a4c0b167de76fa613eb374bb56d6077932a9bb567",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/__init__.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/conftest.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "77ccb6c4eee9ff00459bf0130718e894f7d811889fbadbf491288428a60c7194",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_cohere_online.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "8d865fddaeb92e68ad20ce2c2a48b3aea99615d5c8c4eb4335f579b7c5ed1b1c",
+      "binary": false
+    },
+    {
+      "path": "tests/entrypoints/pooling/embed/test_cohere_online_vision.py",
+      "reason": "upstream non-profile test suite; native Ascend and paired standalone regressions retained",
+      "sha256": "a9b7923e174aaa98d30d948172c0c09e4af24e9d3a527adf4b809e104be0fa29",
+      "binary": false
+    }
+  ]
+}

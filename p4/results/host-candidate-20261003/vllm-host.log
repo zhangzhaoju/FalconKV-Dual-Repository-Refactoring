@@ -1,0 +1,20 @@
+.................................................................................................................................... [ 50%]
+...............................F........................................ [ 77%]
+..........................................................               [100%]
+=================================== FAILURES ===================================
+____________ test_removed_cli_groups_and_native_bindings_are_absent ____________
+tests/standalone/test_p4_profile.py:205: in test_removed_cli_groups_and_native_bindings_are_absent
+    assert symbol not in content
+E   AssertionError: assert 'bgmv_expand' not in '#include <t...ta);\n}\n}\n'
+E     
+E     'bgmv_expand' is contained here:
+E       t::Tensor bgmv_expand_meta(at::Tensor &x, at::Tensor &weight, at::Tensor &indices, at::Tensor &y,
+E     ?           +++++++++++
+E                              int64_t slice_offset, int64_t slice_size) {
+E           at::Tensor y_out = at::empty_like(y);
+E           return y_out;...
+E     
+E     ...Full output truncated (590 lines hidden), use '-vv' to show
+=========================== short test summary info ============================
+FAILED tests/standalone/test_p4_profile.py::test_removed_cli_groups_and_native_bindings_are_absent
+1 failed, 261 passed, 1 deselected, 300 subtests passed in 4.70s

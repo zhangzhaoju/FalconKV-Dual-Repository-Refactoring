@@ -1,0 +1,149 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/_oink_ops.py",
+      "reason": "removed GPU provider or unsupported checkpoint format",
+      "sha256": "01cbce1aff98afee0c53d024514dc6f41da44ecd9cfd30076462939684827e03",
+      "binary": false
+    },
+    {
+      "path": "vllm/assets/audio.py",
+      "reason": "multimodal test asset loaders",
+      "sha256": "80312c85e5771431085fd539c46765970318075a85e7f418a54f058f7eb390fe",
+      "binary": false
+    },
+    {
+      "path": "vllm/assets/image.py",
+      "reason": "multimodal test asset loaders",
+      "sha256": "fa21b5d429a9d7610eb1428de304eb9079b9b074288cc40edc283d4689737d3d",
+      "binary": false
+    },
+    {
+      "path": "vllm/assets/video.py",
+      "reason": "multimodal test asset loaders",
+      "sha256": "eee95aa5bde3ab632a2b1115ae1ccf5a021b72ff820c47e360c03571258f6b81",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_basic.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "0cc1f4d79e94300edea097a55ca50c103cc1f928a08dbc82381c48bbd3b21491",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_blip2.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "96d31b8c574aed3e0751c37f390697e218f6af43c6952d4427dce14a59d3cf57",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_chatml.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "08ac4259ffca7a633f0e7b55ef41dfd3758d903bf1ce7a25c96fb4dd2249c39e",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_deepseek_ocr.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "b0dd2aaa35ea1265ac4c169f5adaef5db62749a78239381f0e3ce6c2f9383639",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_deepseek_vl2.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "597df6b8e67b87cff1aab5af9ac23947ee8db3c65c5d59fbe02281ec524e89f0",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_fuyu.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "87376c3e079431a6677792f6dd03e2cf6a02ebfc0c072e56819917315b370e0a",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_kimi_audio.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "229947bf4db913a304ec95268773ff1d79e70bb67a2d6c6bf8d9b40421bd4902",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/chat_templates/template_minicpmv45.jinja",
+      "reason": "other-model fallback templates; use the GLM checkpoint template",
+      "sha256": "b4dbc981fed2d237b51aa1713d443eab99d21b05e820d76a5b7f9538535e921f",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/gguf_utils.py",
+      "reason": "removed GPU provider or unsupported checkpoint format",
+      "sha256": "0c7c590077a7474899030c5168ad8abb38544995c2809fb0800c3b485f4e82d2",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ascend/draft_proposer.py",
+      "reason": "non-MTP Ascend speculative decoding implementations",
+      "sha256": "9f038b84cada8dbbec319134b8fd566c9a32b81cfbc8d4b4168051e4577da918",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ascend/medusa_proposer.py",
+      "reason": "non-MTP Ascend speculative decoding implementations",
+      "sha256": "fda795afeb1ffe4cfb6d9709e857abc59cfb924bfdd29d77335078b12c4b2e22",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ascend/ngram_device_proposer.py",
+      "reason": "non-MTP Ascend speculative decoding implementations",
+      "sha256": "bb2d4969cb8168517de54f4e5748c796f37c2aded70c6c8a8b84eb70f138d174",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ascend/ngram_proposer.py",
+      "reason": "non-MTP Ascend speculative decoding implementations",
+      "sha256": "1345619838f7fab0c098524356f327dbcc70b9c89663bf352123d2d5b49e7bed",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ascend/suffix_proposer.py",
+      "reason": "non-MTP Ascend speculative decoding implementations",
+      "sha256": "3b3cd502903b9110516f1808d0f77ce31ee338bf1547ca4b2fd28328723e117c",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/draft_model.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "99cbf85587e2f6a720fc8508c29615f363573d4a09a8783f903abd6f21544a8f",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/extract_hidden_states.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "f493ff5c45e882b33eabc0aac3a6dca7502d88f498736c747efe55cdeafb8dd4",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/medusa.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "f0c948e835d764bc7a7596c67aef8f90a52e5a64545b47a0f539c21fab64fd5e",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ngram_proposer.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "4d34bfdd9ffbd9ad54e698134c9628ad881b93c70518eac2d48f0e501f9c6763",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/ngram_proposer_gpu.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "d48523bc3ab100a3875d5ffce3990362e3a0da0a9127c227808672a382e4840f",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/spec_decode/suffix_decoding.py",
+      "reason": "non-MTP speculative decoding implementations",
+      "sha256": "c59d43021474ca82b4149be2f847c3ae127f4ed9d7c02402941543eb4e9dd42d",
+      "binary": false
+    }
+  ]
+}

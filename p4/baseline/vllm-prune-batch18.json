@@ -1,0 +1,23 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/model_executor/layers/mamba/abstract.py",
+      "reason": "retired Mamba model provider interface",
+      "sha256": "f07207c5b135b61f0f51b2f6ac87e133cd67f5685a9f2530bcf7b369b1eec6c7",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/pool/late_interaction.py",
+      "reason": "retired pooling routing and MaxSim execution",
+      "sha256": "a0c54118f42a1997db2f7f0505570c05622f7ba06c8e59bdf45060d370603b91",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/worker/mamba_utils.py",
+      "reason": "retired recurrent-state execution; GLM DSA/MTP retained",
+      "sha256": "a8db87311c1da161b77e59c3ca32b70e486ffe565e94410a731fd14a2df58155",
+      "binary": false
+    }
+  ]
+}

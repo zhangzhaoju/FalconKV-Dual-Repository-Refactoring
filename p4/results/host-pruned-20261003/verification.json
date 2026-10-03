@@ -1,0 +1,120 @@
+{
+  "scope": "host_only_not_build_ABI_NPU_or_inference",
+  "checks": [
+    {
+      "repository": "vllm",
+      "check": "source",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "tools/check_p4_profile.py"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "vllm",
+      "check": "native",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "tools/check_npu_native.py"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "vllm",
+      "check": "diff",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "vllm",
+      "check": "host",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--noconftest",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "tests/standalone",
+        "ascend/tests/standalone",
+        "--ignore=ascend/tests/standalone/test_cold_resume_native_metadata.py",
+        "--ignore=ascend/tests/standalone/test_glm52_topk_ownership.py",
+        "-k",
+        "not production_draft_expansion_can_exceed_target_capacity",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p4/results/host-pruned-20261003/vllm-host.xml"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "LMCache",
+      "check": "source",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "tools/check_p4_profile.py"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "LMCache",
+      "check": "native",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "tools/check_npu_native.py"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "LMCache",
+      "check": "diff",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "repository": "LMCache",
+      "check": "host",
+      "argv": [
+        "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--noconftest",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short",
+        "tests/standalone",
+        "ascend/tests/v1/test_cache_engine_close_cpu.py",
+        "ascend/tests/v1/test_direct_store_plan.py",
+        "ascend/tests/v1/test_remote_fill_config.py",
+        "--ignore=tests/standalone/test_glm52_metadata.py",
+        "--junitxml=/home/zhangzhaoju/Learn/code/falconkv/design/p4/results/host-pruned-20261003/LMCache-host.xml"
+      ],
+      "returncode": 0,
+      "passed": true
+    }
+  ],
+  "torch_tests_included": false,
+  "passed": true
+}

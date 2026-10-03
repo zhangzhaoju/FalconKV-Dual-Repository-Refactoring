@@ -1,0 +1,563 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "vllm/_custom_ops.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "3b9d8956ec13a8749b0f356febe4dd0a76041d5346a52b3a85857173ad2aeae3",
+      "binary": false
+    },
+    {
+      "path": "vllm/device_allocator/cumem.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "e3301b98d8d9c6438584afffc8a2ea2d4b8233894c191ab10c3c25799d618512",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/all_reduce_utils.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "b4a33a51a6af89a6f186903eb781067259b6dd9118c4b1dfc686fa5f7f2792d0",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/cpu_communicator.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "0fdb841b6c2db1132005987cc98381c63b14323109e0b35ff65bb78a10befe62",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/cuda_communicator.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "d81607a00b0f74dddc2d1c1691ed5b51beaf4165a31439eaea8a49b295c86382",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/cuda_wrapper.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "0f82b1ce47ed5a907ffad897f9ba19470ced72e078350e7fb01146034cda9e2d",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/custom_all_reduce.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "67bf4e84d5592b76c5a25bed750b0ba86f763489a9111324e774899e062473ce",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/flashinfer_all_reduce.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "7720c40796763e86f29618ef7800fdb6bfc578780c3fb8d136f38c7521f765bc",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/mnnvl_compat.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "72ee1e6f9571b4c8ecbd9f60cd469d1b565cb79cab519a688a93f290906a2615",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/pynccl.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "5bb39abceff54af554af0ba2bab9fe97a563f0bba8ff4c67792fc84eb1d0c4d1",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/pynccl_allocator.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "6cd9acd7e76327c53dae7f81855a8a4139b022bfff4357a5ac9bda8b0debe5c3",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/pynccl_wrapper.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "72b64bfe1890fef342d1d984b609a2271d5423c6e4f057250b3130d6fe6223d1",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/quick_all_reduce.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "fd8fd1d6e329415f06c40bdb0b9433dafc73a69a1e1c8fb424af96676b06f8c0",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/symm_mem.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "eebf58b3a300a580324f494b6dcca0b5908464ac9a80d3e4cce1aee561ed8fc7",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/xpu_communicator.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "37d982455e5165ed60d3501a421b4635b09daeee422bc56b481cd81499db8eec",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/chat_completion/stream_harmony.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "75ed5c2a675511f25f91854a3cba47fd1d951010be65e7e1e31f337c792f8962",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/parser/__init__.py",
+      "reason": "GPT-OSS Harmony protocol",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/parser/harmony_utils.py",
+      "reason": "GPT-OSS Harmony protocol",
+      "sha256": "8a715693ad76874903775bb74c414f6e3a03d10d3bc22525b3f312e83251fd3d",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/parser/responses_parser.py",
+      "reason": "GPT-OSS Harmony protocol",
+      "sha256": "796ec84aced8f24a2f83b035e869419a0925f9d3a7582087d71aeb92d2881ed0",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/__init__.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/api_router.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "79924da249179b6de9e20a56ae2d9bf092281120ceae25028169e4c0e7e28b58",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/context.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "97b2573a09e0741a9df382ee2565139544f4aaeb26df8af06c79c72410e9fc63",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/harmony.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "2fdd6333374926f7473449b1013252a7ce3ee796f0d656c6ad20f0a72af44c69",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/protocol.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "e0ea60fe8f1b102a0388a66aa420b00904a574a977576dfe5be04fffc6032048",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/serving.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "02eb707b1fc216c886a31afb53ebd8d703d7c7e5dd8730cdff6efdb194c044ee",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/streaming_events.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "ca754dc2805de31dfc7f49fd48d4c2432ca6cee167fd5ded9cfe86867242bee4",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/openai/responses/utils.py",
+      "reason": "multipurpose agent/media Responses API; text chat/completions retained",
+      "sha256": "b9313d3e8955765ef94c3cfa2b9b773f94d208f7e2a132cf145060dbad0b4a8b",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/__init__.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "7ffa4eadac30d51036db7024067d1f1f053f72f41f43da2233195cb15bd20f32",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/config_manager.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "740806a507e5a4637eafb5c1f24f44397907af3a799556491a29b2dfced87140",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/configs/silu_mul_fp8/nvidia_h100.json",
+      "reason": "GPU Helion kernels",
+      "sha256": "3eeaa1fc9b197b79f9ed91222f667114533109e7d0679d252fda06c544c5efa2",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/configs/silu_mul_fp8/nvidia_h200.json",
+      "reason": "GPU Helion kernels",
+      "sha256": "3eeaa1fc9b197b79f9ed91222f667114533109e7d0679d252fda06c544c5efa2",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/ops/__init__.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "bdd853a50bcc62cf510e14b800f8e24a1d12f1d99e50c2c1bf5695d6cfa5de8a",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/ops/silu_mul_fp8.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "50c19e6d336ac50f87b4c4f18b490dd72b70adbc381b1c3b022f3777e0d6d4cc",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/register.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "9c9c350ead7812d5a813198445b729a186903468c3ca20c5e1e45fd375bc47a3",
+      "binary": false
+    },
+    {
+      "path": "vllm/kernels/helion/utils.py",
+      "reason": "GPU Helion kernels",
+      "sha256": "725c3ad5291896bf9f370766f43c21528c0f828a03844a3272a1406acb1bf08f",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/fused_moe/moe_align_block_size.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "c3f7fc2087836f0160a32ab99ceb1d8f6e87c793679da34dd672e225cb7fa31b",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/__init__.py",
+      "reason": "pooling execution (retired request slots reject payloads)",
+      "sha256": "94f9f34ee55e50331d718fb887b42a9558d2e2620671e4d8975533f481feceda",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/abstract.py",
+      "reason": "pooling execution (retired request slots reject payloads)",
+      "sha256": "36359c72c5a2df93e6d9430572d9c904e424935a5706abb5e977ce828a0a5699",
+      "binary": false
+    },
+    {
+      "path": "vllm/model_executor/layers/pooler/common.py",
+      "reason": "pooling execution (retired request slots reject payloads)",
+      "sha256": "38206e4aed07ee4242f0dbcf598208237cd02a331c848facde2022a200c1b90a",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/ernie45_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "a58923c15dcad884cb0230353adc41d5b8a5af279f1e791451e964173a8bbaa1",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/gptoss_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "1ec6c922189134960dac8ac68237d1d358f16aea7c33a57659159b7bc9365de6",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/granite_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "496e26361001d6a7107a90aefed40899446ec5313f74937664548a5c051f30b1",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/hunyuan_a13b_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "24f14ff43a2557401a6f3345d8eee33da1532029165edd6817676b7ede3e681a",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/identity_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "d4db6e1a4d88d7aad24ecd7d88d89f1b9b1a733916f70a6791c33a62c9d15691",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/kimi_k2_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "73255d969e24cb40001de4edc2ca681f548ac9818c2c5c50b41febff526d826a",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/minimax_m2_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "39503b63b76388bdd54d20044efdd5ce18f0a393a96109774ca65aab7b438cde",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/mistral_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "48bfabac6d3109aad6696d672bb1078db5d58e7a9da2126b651e8245d46c276e",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/nemotron_v3_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "db020214bbdd1621f483b78222619422f7947f0a27f410d5f602022f199d67cc",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/olmo3_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "e533471af6948eefda26ff87aaf17bd938836f1934233811b894d9c02da3b385",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/qwen3_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "077a859a235fd16fb17530990f24074e92cc02b66f65d69b3cc88d6a3c8635ca",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/seedoss_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "3b3e334a0afab1e62db2c4b20cab058bb27e6fd913cbe21cb82d351cd264bff7",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/step3_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "6f7979306fc225df8dc5d0c2608f32305edd13f166837eedce08067b8871a3c7",
+      "binary": false
+    },
+    {
+      "path": "vllm/reasoning/step3p5_reasoning_parser.py",
+      "reason": "non-GLM reasoning parser; glm45 shared implementation retained",
+      "sha256": "e00171f44262ac5bf8b0c77d1291b0131804aa383aac92323374e162610d25e1",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/deepseekv31_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "ad5cf89f22b4630618057338467baed7037d9d96fbb00d4eae3c435fbb78758e",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/deepseekv32_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "18b2bad7132465ab166fc54fef2cc886be0b7b60b6bb9c1c79fd5fd457e2c5de",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/deepseekv3_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "6b5ae5bc6904f3fbe1c63816b9e6ad67368129a7cadb446bdbb04dfd06ebc5eb",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/ernie45_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "4b852d857662a1650b22003b799f9b2cd016a9f4fe08d27f997e5422eecffb8c",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/functiongemma_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "8f4c80421dcc45364f7df6d978ddd5f9d0743a905b493cd3a618df64689c2cd7",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/gigachat3_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "0f6a4f794f99b43afb1cd9f9a4e5880b052608d7979c8dd77fa0ba08bc58b7d6",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/granite4_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "d59dc1042ed351db09262f71edc864d8c8c20fc6e1c26caba54bace6f3301e23",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/granite_20b_fc_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "ee1d16dd2a56c1316b8cc74f90045562f6ef58b6ce745a7133cef7749c823482",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/granite_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "f61b9af289e3a3c851cede5810f120298971fbeb82618befa3168dc8530ac1bf",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/hermes_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "7f5469d9962fef673cabefe5a31828af7db559c038ccb67850c20ab64fa13074",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/hunyuan_a13b_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "fed47a43223cdeb1af2c13226b6b6954a20fabfd41d3c524f6d1cfc64f395540",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/internlm2_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "9ad5772ca6c72985b93f84c9b475cd965d0992333764c98906e64e8424d7ebcc",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/jamba_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "64a889aae9b3cd7762b4fef466377ba090ba169bacacf07898a16253f71e54a4",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/kimi_k2_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "e27d725ca095f50ea5a790e2354362876f568ce8112424822765b12490428602",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/llama4_pythonic_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "ecca9d59ac55eddff49f9456d9eaa7e5f1e41c8745f074b7e9cc3ee7ef1f1ef1",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/llama_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "4260d2ec41676c5411de8b42b83c8db993dc155ab572f0a4db91ae4678ba3fda",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/longcat_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "e67930062eb21a50002f0bd3dc0d73c7519b9c5786b1900cdf0a8494e9cc6aa7",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/minimax_m2_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "f02a5457b033add24a7cd97862272f47690ab16eaa4631d7b8f5fd1272d301dd",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/minimax_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "c19defa49f05c96846dbe7846586e7d716bf901d8a0d106ad8f97adc6598bc74",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/mistral_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "f3ed1b0a5757f6ef328bd719cfbbe55a488a6145623ce3a0f86c38e96c3fa665",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/olmo3_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "3a97f5b5207f9f0d849aa7145100a6196e985a601e8a672b1e77c4f288ef0f92",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/openai_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "3673b5ffa2309c08266ec3e21d9d3e12ddded445be5b22ab068442fceaf92bf3",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/phi4mini_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "e50142cdf46bc29506bb019a5eb39a90e870a6c16abd07725d017eabf53df41a",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/pythonic_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "ae38769d664e127cb1ccdbf40e14ed644dac6ebed44848e5ced7fdcacbb7bdea",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/qwen3coder_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "2b1d8cff6e697cf71fbd0d9c3c34a88953b22cfb33c0d15b5f49b80c8215f056",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/qwen3xml_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "d1c467b2ca457e48bb7cfc2b1850fc443d7001f4f29747d6b6e2be2553180fc0",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/seed_oss_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "80441b931dee639e0505c5cae75dddf6458fbab92e18814f50c9e939c4c73baf",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/step3_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "c1a919deeb8f716f083857b4b46dd238d62d7c4179e4b4ca872dc303fcbad3df",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/step3p5_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "86a637b2cdb980ccaf158f7faead8df03171fb75fc10230f3c39615c45ecc7a8",
+      "binary": false
+    },
+    {
+      "path": "vllm/tool_parsers/xlam_tool_parser.py",
+      "reason": "non-GLM tool parser",
+      "sha256": "d713ae675211becbdb853c0bc765977a3236ca57e216b0d840bcbb37e4806878",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/processor.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "7a5053446b5a98eb3490100d6c1d408067b4748f18e7cf9dddace64dc935f237",
+      "binary": false
+    },
+    {
+      "path": "vllm/utils/deep_gemm.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "aa147034ae5e1c378851d7a28905a71a7b93b98684d1d14348a2c45e3cae3df8",
+      "binary": false
+    },
+    {
+      "path": "vllm/utils/flashinfer.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "da3a6f80db22dce637ff3b2f107ab2909f43446a2cbec4794d86c0c49fb05db1",
+      "binary": false
+    },
+    {
+      "path": "vllm/utils/mistral.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "6840444212c85dc824bfc45a0c48ba992aee32af7fe7eb207e58294cfe1d434e",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/attention/backends/fa_utils.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "19e328a7b8721c9e78a299bdf0e34190e501ffd97641f0b202e8e5560bc9035f",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/kv_offload/cpu.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "28547fdd7cc00c34e3a9f6bd114ba46cf7a517bb72522203465d5c203999bd4e",
+      "binary": false
+    },
+    {
+      "path": "vllm/v1/kv_offload/worker/cpu_gpu.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "ffd3bf61fb7c6575d5a94984557d753ca55cc71ad1cb5bcffd286eeb8f47ef73",
+      "binary": false
+    },
+    {
+      "path": "vllm/vllm_flash_attn/.gitkeep",
+      "reason": "CUDA FlashAttention extension interfaces",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "vllm/vllm_flash_attn/__init__.py",
+      "reason": "CUDA FlashAttention extension interfaces",
+      "sha256": "a953d579d2ccb718b8d84fccf73eff67c9cdb503e1ba7390e9121a2b34dc8eae",
+      "binary": false
+    },
+    {
+      "path": "vllm/vllm_flash_attn/flash_attn_interface.py",
+      "reason": "CUDA FlashAttention extension interfaces",
+      "sha256": "55c94708dc15472c2dbe71ce56494386405c9b57dd9c818bbd0973f21e05582b",
+      "binary": false
+    }
+  ]
+}

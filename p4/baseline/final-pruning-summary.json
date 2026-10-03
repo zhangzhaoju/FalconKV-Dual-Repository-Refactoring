@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scope": "exact_committed_P3_to_P4_diff_no_rename_detection",
+  "recovery_tag": "p3-frozen-20261003",
+  "path_hash_encoding": "sorted UTF-8 paths, one newline per path",
+  "repositories": {
+    "vllm": {
+      "from": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "to": "0879e419001f424700569936962631ca0360f5af",
+      "status_counts": {
+        "D": 4382,
+        "A": 9,
+        "M": 232
+      },
+      "tracked_paths_before": 5907,
+      "tracked_paths_after": 1534,
+      "deleted_paths_sha256": "3666cf3d9c9bdfe70318a3a29886d3757c7b80d5558a7725a6ebae233249b17e",
+      "deleted_by_top_level": {
+        ".buildkite": 149,
+        ".github": 15,
+        "ascend": 584,
+        "benchmarks": 102,
+        "cmake": 7,
+        "csrc": 262,
+        "docker": 11,
+        "docs": 292,
+        "examples": 248,
+        "requirements": 14,
+        "tests": 1126,
+        "tools": 14,
+        "vllm": 1558
+      },
+      "reproduce": [
+        "git",
+        "diff",
+        "--name-status",
+        "--no-renames",
+        "p3-frozen-20261003",
+        "0879e419001f424700569936962631ca0360f5af"
+      ]
+    },
+    "LMCache": {
+      "from": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "to": "1bedaf89564b3d4b2f0de67187111b03a037a716",
+      "status_counts": {
+        "D": 730,
+        "A": 8,
+        "M": 38
+      },
+      "tracked_paths_before": 1548,
+      "tracked_paths_after": 826,
+      "deleted_paths_sha256": "c4f663acd39976c716bedeafe0d7fa926230edb4462b362fff89c6604ce0aa8c",
+      "deleted_by_top_level": {
+        ".buildkite": 103,
+        ".github": 18,
+        "ascend": 159,
+        "benchmarks": 28,
+        "csrc": 17,
+        "docker": 6,
+        "docs": 123,
+        "examples": 126,
+        "lmcache": 113,
+        "requirements": 3,
+        "tests": 33,
+        "tools": 1
+      },
+      "reproduce": [
+        "git",
+        "diff",
+        "--name-status",
+        "--no-renames",
+        "p3-frozen-20261003",
+        "1bedaf89564b3d4b2f0de67187111b03a037a716"
+      ]
+    }
+  }
+}

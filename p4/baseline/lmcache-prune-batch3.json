@@ -1,0 +1,17 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "lmcache/v1/multiprocess/protocols/__init__.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "903d8ebf5b212b4dd16381ca72df5048330f950f877b9b9b9960662455e74e50",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/connector/eic_adapter.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "889c80ad2380939797229be3d7968c5de16efb76a018d755e6f71f4324412b1c",
+      "binary": false
+    }
+  ]
+}

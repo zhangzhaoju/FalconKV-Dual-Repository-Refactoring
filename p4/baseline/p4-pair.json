@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "phase": "P4",
+  "status": "source_candidate_pending_intranet_build_ABI_NPU_and_functional_acceptance",
+  "frozen_input_tag": "p3-frozen-20261003",
+  "profile": {
+    "hardware": [
+      "Ascend910B3"
+    ],
+    "model": "GLM-5.2 native text generation",
+    "retained": [
+      "offline generation",
+      "online text serving",
+      "same-checkpoint MTP",
+      "DSA dual groups",
+      "CPU KV offload and sharing",
+      "cross-instance cache",
+      "P/D",
+      "RemoteFill",
+      "checkpoint/recovery"
+    ],
+    "cache_c8": false
+  },
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "remote": "git@github.com:zhangzhaoju/vllm-dual.git",
+      "branch": "p4",
+      "commit": "0879e419001f424700569936962631ca0360f5af",
+      "tree": "2e358fee491756bd630fb2ca3ef65be505c9d57b",
+      "version": "0.18.0+ascend.p4",
+      "p3_parent_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "p3_tag_object": "ef6097322e31420a22333f039e47617f7bad363c"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "remote": "git@github.com:zhangzhaoju/LMCache-dual.git",
+      "branch": "p4",
+      "commit": "1bedaf89564b3d4b2f0de67187111b03a037a716",
+      "tree": "942c678a75930c4ab007de6d58e964321236168e",
+      "version": "0.4.3+ascend.p4",
+      "p3_parent_commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "p3_tag_object": "41c9ad7024b74f417b9440b15a39b4506e96b122"
+    }
+  },
+  "host_verification": "../results/handoff-20261003/verification.json",
+  "remote_push": "not_performed"
+}

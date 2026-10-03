@@ -1,0 +1,539 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/csrc/mindspore/CMakeLists.txt",
+      "reason": "MindSpore native integration",
+      "sha256": "047d59fbc6ab5d8d3e11dde6bd7579ea4eac6062d1f5b302b5a10908f72d2ba1",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/mindspore/framework_hal.cpp",
+      "reason": "MindSpore native integration",
+      "sha256": "66aa312ea9bed2585dd517ec21ea93b4eb1902bb2a1495fc54dad93f2ae1e492",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/mindspore/mem_kernels.cpp",
+      "reason": "MindSpore native integration",
+      "sha256": "698b1939d2938685c1028c26c2397d8192ca0e361bb1bb6159cadca4af033d89",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/mindspore/mem_kernels.h",
+      "reason": "MindSpore native integration",
+      "sha256": "c6fb43a5953a9638e44796847625d1d08a373ffe80b8a3543ee9b68a01b7251e",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/mindspore/pybind.cpp",
+      "reason": "MindSpore native integration",
+      "sha256": "1789a6684d0dc2c0d96f0b6970a03c6ec009e6d5f64d5750710cce3578e9a3eb",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/mindspore/conftest.py",
+      "reason": "MindSpore tests",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/mindspore/pytest.ini",
+      "reason": "MindSpore tests",
+      "sha256": "92f22b281db5a20fbe95bf5f0040bee35c58f396cb8c63436a0f96c484edf901",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/mindspore/v1/test_mem_kernels.py",
+      "reason": "MindSpore tests",
+      "sha256": "47e6ca8ae35b57ace484c86322d72314662ce07c9e08a824f4e3654b778d683f",
+      "binary": false
+    },
+    {
+      "path": "ascend/tests/mindspore/v1/utils.py",
+      "reason": "MindSpore tests",
+      "sha256": "fefec1b1066c06234fd9c3470f6ee2d62828d92e66a7fe6dd84ac6f0fe02f2e2",
+      "binary": false
+    },
+    {
+      "path": "lmcache/cli/commands/server.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "601c1ad75bf26fe3b819c2ddca5d38ec43cd75397e5f5d18f2021db1cffd2229",
+      "binary": false
+    },
+    {
+      "path": "lmcache/integration/vllm/vllm_multi_process_adapter.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "756e59cb84b8f70940d9069e969fced8119194e2e3a51f6838d3d506e73ab95d",
+      "binary": false
+    },
+    {
+      "path": "lmcache/server/__init__.py",
+      "reason": "legacy v0 server; native v1 server retained",
+      "sha256": "741515b5c268b60fb2d52919c220149b46e7aef8927851f2df4a017777862abc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/server/__main__.py",
+      "reason": "legacy v0 server; native v1 server retained",
+      "sha256": "01b47a7d248d8e4d57f353924138d6aa1e69f83f582425eb70b673cb61fe0496",
+      "binary": false
+    },
+    {
+      "path": "lmcache/server/server_storage_backend/__init__.py",
+      "reason": "legacy v0 server; native v1 server retained",
+      "sha256": "467b707070e2b816a42a8219fb06c080ed541c6699c12af1dfd16b4ed28e57ec",
+      "binary": false
+    },
+    {
+      "path": "lmcache/server/server_storage_backend/abstract_backend.py",
+      "reason": "legacy v0 server; native v1 server retained",
+      "sha256": "9b686c2cf92dffee2be84123e9f2a952a2cb5be6a4e26a56462489a7eaef1aea",
+      "binary": false
+    },
+    {
+      "path": "lmcache/server/server_storage_backend/local_backend.py",
+      "reason": "legacy v0 server; native v1 server retained",
+      "sha256": "127c852838ae6c65c65fb39c5214e379b43591f5313cad91337ed86c4f51cb47",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/evictor/__init__.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "817b9ad9e53a03deec3b842234305b72ea0272bdb18ad42a856ea31e5c42115d",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/evictor/base_evictor.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "bdd8acdb4c02f26fa485529bcf9fb5d02d172577387d8b7cac25b2d6e6cdc29b",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/evictor/lru_evictor.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "6ee3543c17532901638ff3ba3f12323ea4428cce58a43fc2d0dd52092579f0fc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/__init__.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/cachegen_basics.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "d7a2de11fa7fc5bfa7736fc09644133b825e54bae14039c224224067ca74b5f5",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/cachegen_decoder.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "2a6f4c00ab458cffb4f974cf6bdaffb15352fcf6767a41e66b50f5a05b375716",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/cachegen_encoder.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "56948b93655717bcc83200672f8a70c41dc002d34047d3819d17f89af2af45f8",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/fast_serde.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "7795329502243f40f2c365bb399b7f8cc230f40c7d3c192eae009fbe969f63a7",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/safe_serde.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "84e0e92c29a9356fc93a1c0264f4f7bc3cf5684acd42e4fd61710186fa23ca82",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/serde.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "7efbab330922b1fadbc0efae1b2c6a0bf6f3bc05ff6348981b53797d6f4c6193",
+      "binary": false
+    },
+    {
+      "path": "lmcache/storage_backend/serde/torch_serde.py",
+      "reason": "legacy CUDA CacheGen/serde; native v1 storage retained",
+      "sha256": "289f375969b01b3cac2a1f024eee20d165831b28495ad1d54c5a78be8b02cc0e",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/check/check_mode_test_l2_adapter.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "7c0da6b585ab1307d9c50b5d0facd03d27f2dfbde30b267d8afbd82ee74ab936",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/api.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "138c28fd39160681d5189a867333a32934ea0c864191e4afed829b0c4e5c820c",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/config.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "84fde281353a6a41d6714c9032eefac6cabb2caa74924322791e7912f4c76696",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/error.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "c584807acfd42e72e7b6146aaa12d36af9059edc23b3cd685fb91d9bc0d11c71",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/eviction.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "3c63e1d4fdb92c895d485780e5bef3f112ab20fe865dd673193976ad3fa82fcc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/eviction_policy/__init__.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "ff5d291293c1de6adbf8e8d7b8814fdc84e24dc62534783422e5820a3ec9ca44",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/eviction_policy/factory.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "5c1beedb6a9afc3a10ba09ba1a2bde555388a31b65561aaa6c6883dc80f52193",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/eviction_policy/lru.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "94dc36e4287ec8d0e1c85bf6f30014e96317ced3e4772ed9df5e524d8de7742e",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/eviction_policy/noop.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "2bcc543537a9a9584172b3d09839487fc37e31c4dde7f7727c07d32877dc6ebf",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/internal_api.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "487c3d71114b0fc1d7aaf9b9856b4b0150e5d96f9cb1c0dcd035a7f7467bf8a0",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l1_manager.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "326484be3846a1724a12d467d33c010278c6ba98e76d535b1b025af1df9d4c3a",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/__init__.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "81fd8de9c2cd18c37ae82ad69627785cc75f502045f5b6bb908596c588047a77",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/base.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "33ed587bf9faaa1ed542db1c55114aae8740349ba2e6a2db64c532a49d2233f3",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/config.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "1ea1e815ea056d9eee1ea323700b217dbbac4b19b75cbf84240661dac65e20c5",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/factory.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "7244341565fc703d0654960a2a47f3906b26a8d0c4c732bfde289bc79efd84d9",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/fs_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "d02dd8c143728b1353b993f171d7eecac9b1d9f8ea07e018ea3046e0b9686c7e",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/fs_native_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "978ba294566a79da0769ee3a391ed52151ffc7e3205be139aae41937e95e9400",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/mock_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "3014c9d5ca4320b15a6ea3100f7bcf12adcf29993b25b09b07a0573f0b991271",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/mooncake_store_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "9f239a9ae106466a29e96887c2fa5a0bcd2b32b109effcceb691a15d526a5205",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/native_connector_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "51ce015e0f9a9dbc4267f0b6edbb41f5303c292572ed3b107144f1d564645083",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/native_plugin_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "0786e8c0071d51d55b8010fb9d7604321796ca4f5ad46e533a2a72d5260d7053",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/nixl_store_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "6a5237a15158eed8b820304a1ca552a0c3c105e845122b1ee678a48e16e3933d",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/plugin_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "d16f59ac01809ceeeab15e5f5899064ce0efaf6b8ccd7aabca9b374f8f1ea5ed",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/resp_l2_adapter.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "2d39068619ef9370b800e163221b8c1ee7f277af991428cdf6b7675a6f319a75",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/memory_manager.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "005f4d8effa5f660ec651beea92d7e789531a40bce2a875faee788499f8b068a",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controller.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "e7268aee0561b4198bb26e02f1fde76ae5bd2018810c3cbc740842b70da337df",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/__init__.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "ec9a39be38fd25a62465723e0c88eba95ef7ec05f7b430c9af76d09ee859d12f",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/eviction_controller.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "91ce10d6e89052084ffa49e15e10ea4fe33b2a3161fa5fde26e2dc679654686f",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/prefetch_controller.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "96f5351c0049470b7a0f7654cddc19f539c29f0c9a545ec9e7165b571994336c",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/prefetch_policy.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "0ea157bac177d9a32dfd78d2f06073703fa2f74001c2278720b81cc99ef92c30",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/store_controller.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "d62953303fef026c902966c0c9d81e661a71489edfb403ecdcc72dfb0ba15f09",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_controllers/store_policy.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "4caf038366ec299ede7dd7aedd29164a433e51e0165631e6a803da53ce6bd26b",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/distributed/storage_manager.py",
+      "reason": "separate GPU multiprocess server storage stack; native remote-fill/controller retained",
+      "sha256": "ef0e71bf98b882c116db60a68f0770924bfbebab54c91ac69de267e3db7f05da",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/lazy_memory_allocator.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "28350f87cda3a1101f002211b3ea5814729fd11c5d6f74b58116344597deaa7a",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/affinity_pool.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "5b1085dfd97108fbc04a031dc916b59c7f3a49a9d0542e5c0c85e74d759d89a7",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/blend_server_v2.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "2da3b38170b81a5ed7bce59d9c323f5e1c28833f142d57846ccfb859dfcfe4f6",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/config.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "c8d204c4279f9a983c16e6a825a7277f7d65472d027cd0eaf112545a042d5835",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/futures.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "1be4c237575ab77f97f4863b944d9a923b18b756d9688c616699768e54778f0f",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/gpu_context.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "7b12782d082fad4e872e8e33d3eb948471ac3a97aa2ddc8b5f48bda464efa80c",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/http_server.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "b3b14fd749a956fad48c0bde291c22162b7118f1f5d363bd62f04ef234a459dd",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/mq.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "a7ca3e17adc21bc36268ce61e5a9bb6673a339b0b70681cc134702dd8c641723",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocol.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "098b3dbba274220e89fdf5de5d2b947cfd0f29825027d3b9be4c54998bdf4f85",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/README.md",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "44338d4b00a416cbab9a2ff332f06c2f821c8af1c672bc54347e22ed40876367",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/base.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "ceea3e697fa22fe9a67d42448749cd3ce089f29af933229b6c428e8bf522fa14",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/blend.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "64af62deb86d22ebd666b3639481f7d14054bac16da7d1334800bf64528dc627",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/blend_v2.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "e3b2948ab0df13459609164b2fd5bef2f0d65c7725bca4c91911b8979ec4fce0",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/controller.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "d26108d51cb39b8752766c75a0db1cc11d8482d15f6e86d6e6e3823156a7fe64",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/debug.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "fdd9bc0f4eb690ab267b6fa267302be42cfbf54fd93e0a6f65369cc322b7e0e1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/engine.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "113192c725ab682a4cbbe31a877d48ec17a3404fa12d8ed178ffdf6a90c1399b",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/protocols/observability.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "7f932cb0211539756105a01d6af7d4fe687bd51fa910067934406b2e2d42a42e",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/server.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "ce27e5aff8d841566f3fe1b38eaf5b26f847f9fc83942788c3802600e1fc58ae",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/session.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "a5e1b1bc8eeb581c58d961fa8646ce4c5f471a554dc235eef9ecb612de67a0f4",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/multiprocess/token_hasher.py",
+      "reason": "GPU multiprocess/CacheBlend server; NPU IPC ownership contract retained",
+      "sha256": "09eec8049cc9bb142d1e3b28b17bfa2cf7833f23132a4bf7c35fdb5faef60896",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/connector/eic_connector.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "79ea0c519e1b5202316912bd25f0cdd13c2f7fd454eb6373d5f9da601389efa3",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/gds_backend.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "41a5c73f564266a541473b0482793ce21b359d37a7f9fea2c42d4c65bfea67b3",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/maru_backend.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "c2a27ebd7cd206d11a0730deb90eab6d1dd5cbfd515fc6f15703a82a7000c8f5",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/naive_serde/cachegen_basics.py",
+      "reason": "non-profile cache quantization providers; naive serialization retained",
+      "sha256": "042248c1c7b032b129774aec4bfd08b3cc87e4a1591a2120853bb372156ebb15",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/naive_serde/cachegen_decoder.py",
+      "reason": "non-profile cache quantization providers; naive serialization retained",
+      "sha256": "f4526530a603f91d9fc466effb362aa572c3afe22da690e7ea1c3dff53ea26e6",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/naive_serde/cachegen_encoder.py",
+      "reason": "non-profile cache quantization providers; naive serialization retained",
+      "sha256": "4463bfd45ec9a845e026521790fe5e4e67ab664a42b4da44ae3eefc1c0cd8c44",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/naive_serde/kivi_serde.py",
+      "reason": "non-profile cache quantization providers; naive serialization retained",
+      "sha256": "75d2f0e738ec21288fdb5c7def797ff8b88531ef5eca3077b3d9f78bd9f5e987",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/storage_backend/nixl_storage_backend.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "83849fe10756c989e9c14887f53e87f729d98bbda20f08b34273e14de51afeee",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/transfer_channel/nixl_channel.py",
+      "reason": "CUDA/HIP provider not used by native Ascend storage/transport",
+      "sha256": "472b9a267978214936d7c5f8dd6a9d8f4e6ec0f64b63a2e520febde5f937b3ce",
+      "binary": false
+    }
+  ]
+}

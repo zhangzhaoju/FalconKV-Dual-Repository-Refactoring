@@ -1,0 +1,329 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": "ascend/csrc/moe_gating_top_k/op_host/moe_gating_top_k_tiling_arch35.cpp",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "090f35440e9f96a2daa247a60dae066bd3a602d30d6e80f1672fca3454673163",
+      "binary": false
+    },
+    {
+      "path": "ascend/csrc/moe_gating_top_k/op_kernel/moe_gating_top_k_apt.cpp",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "e6a0eca768f1d3c162bd71e65036532ff9cd183fab4c30f568978addcb6e8d26",
+      "binary": false
+    },
+    {
+      "path": "vllm/distributed/device_communicators/shm_object_storage.py",
+      "reason": "other-device collective implementation; HCCL and host IPC retained",
+      "sha256": "383244558e6a39f855b9aed0c0c2fb92413d3f24ee43f8cad69d83b666cf396e",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/mcp/__init__.py",
+      "reason": "removed server-executed Harmony/MCP tools; GLM tool-call text protocol retained",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/mcp/tool.py",
+      "reason": "removed server-executed Harmony/MCP tools; GLM tool-call text protocol retained",
+      "sha256": "4cc2c2ee901721aa7dd013d7ddd0aadbdf59312ed4f804a63058b4bbc988c624",
+      "binary": false
+    },
+    {
+      "path": "vllm/entrypoints/mcp/tool_server.py",
+      "reason": "removed server-executed Harmony/MCP tools; GLM tool-call text protocol retained",
+      "sha256": "1f83be24ffc9bc5037f90b5901786cad185ffb0c0e3b0b49fdaf59f9632c1ccd",
+      "binary": false
+    },
+    {
+      "path": "vllm/parser/minimax_m2_parser.py",
+      "reason": "non-NPU operator/provider path",
+      "sha256": "ec84caf4be7b896eb4cb5f07d8b2f126e09e9b614bddfbdf961a207a8fa0b335",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/AXK1.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "eca2fa2bcf53ba704daf27bb4cab4d1fbead6de4faee6e25bcff7bc10b6da85d",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/__init__.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "4d2951cf954a0c515331ae2c1faa713a0186ed0f11d99004d4721ccfc157bbbf",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/afmoe.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "6900740d13b7c456cfaf71e160df10bbf9fe0fae52a6325c75c741551cda5edb",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/arctic.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "8f2fbdb7757dc6ac6b3edc204c3ab71e60745b5b73a357a1c606d46d043fb337",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/bagel.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "1ff66f99354c6ec96f4698ab6ec10ba0168f73cd1db1ee397c8c6d51f77d6cbf",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/chatglm.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "d0bc3fbc26c1a5bb1639288b406eaaf4ba607969a06d3008249c251d86cc58f9",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/colmodernvbert.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "777c5f8620d5969e692aec750ca80fdad8b0ffbb5841e60762e6993ca1bf4d5b",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/colpali.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "30c5e7ab62e51d92c120370e1a1f55bf76e52b9b1af8684a2a8e3be36d520e6e",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/colqwen3.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "2147244a320deeac662950c4b6dc972bdd633feea2a8f403a1e11fff8317c48a",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/deepseek_vl2.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "23819ee3702a6b0d5c4b533b829b3dbadacced7c265e3fe4b5bc5170701ea0a2",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/dotsocr.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "fe6c6e03ac43a4ee8ddbe143e11e5756a2c33fbf43f22d0e01970fbea50249d5",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/eagle.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "1ea7e59b427fee77d13a06f8ce022417a899eab99120465638476ee513caaf00",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/extract_hidden_states.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "49607879ed2cda31162eddebd5daedd53cd050e1505d1fb2f0cd68d829525474",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/falcon.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "5cdae0db1d3c503667819aadbf94f40a210566aeea86824f59d1189c8eb87bf4",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/flex_olmo.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "3489f3293ee93b9c3a08ac7169a1005d6fd89cde9fd52bf78435906213cbee4a",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/funaudiochat.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "9f0a18f9d3504dc49dfbe636107e9fcb39db51dbffc90bb1b1864060fcfb2d92",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/hunyuan_vl.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "12b5106d1d3c728feee0cb78975bb2088dfce9f4d52b6223c0313b11aa55991c",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/hyperclovax.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "f6bd4cd100e5d369a0d685647424ebf5e287a1aa3e3f08f62770b2b557f69165",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/isaac.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "5519fe5de66fc006030c4a83b93030ad372a74dc9b1ef1daa1b1f5c3e6680c80",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/jais.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "d261cc142ec6ced1322117fc209185e842e1cf25650aa3e72693841415292116",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/kimi_k25.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "c7b79b5b0369ba3f4f756fede58c552cbc452a8447322c927405638af1fbc984",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/kimi_linear.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "350a4b75ba941106063ac694aefa8c6cf16052ff02dee0c10afe57f1d3d9de51",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/kimi_vl.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "c06576e0d6b9d5e9b3c6d30fe846d0da97ab7973028e42103e8d40da981c499b",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/lfm2_moe.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "5944cad44eaa380f113a4de40b368fd5fc492e365c857caf7779c3de7664e06f",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/medusa.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "12bca1b7acf246c41274e6247649ddb7ddcc1090cba72d6b45a66feee7587f05",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/midashenglm.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "146fe114d8f125a0265d5e4b21e3c45d671866ab3a21195295efbd6b001e53f7",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/mistral.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "af0c091416575bab29574cfe963354aec5cba92a5362072a4a7b2a0f3a4b4507",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/mlp_speculator.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "69334bedda49c45ea989813a132b14881d75b0100e170ff196694338512811af",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/moonvit.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "c0434861b6a872ba3b71696971cdb2ac86964b2ce42e9001553109f8943b01a9",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/nemotron.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "100617d1bc97c20ce229f69ce272f6705b5a6ad3f20d06f958c8120728ec3b83",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/nemotron_h.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "7cbf03b9d0c1b8734074101d9178cfd5785b1a9191148396f7ca971f7cc709d7",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/olmo3.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "a678e38a7d89847c3b940d09ce9b15691885e25dfe8c3c23e7f0ebae81045535",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/olmo_hybrid.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "0e3fdb9fbcb279df1b720b38efc5f305488fb359b959546cac1fc4120410a42a",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/ovis.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "ce37f3cfcf9bb4f6ae1212b0426f5d46a9ac67c8da9126950aaa99dab259bf68",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/parakeet.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "0766f3533456a54aa88d0871e3f64af5b06bca6a176b09d36dfb9ef623f28528",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/qwen3_5.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "778370a2e0e28691620a43865863f1abfe6b3e35a14f80bf2de519f529c9896e",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/qwen3_5_moe.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "b7ce572ba0654e785ebd50e252be79c65af7a088745f4ff401597bf04c1c2fd4",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/qwen3_asr.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "56fd1f1ea939dff47533b052962d294375e85482ed310e48ccad402cf5699818",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/qwen3_next.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "cd45c1a443337465655c81ff10b4f251675423fe257a900bc99edf8579904b49",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/radio.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "17f94de17d4778e01aa9d34057d6eafa3d1e21574673d38fb7e5f35c4a86bb9a",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/speculators/__init__.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/speculators/algos.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "054288f3bb19e7cf1b9485f8d88006ca23887cd6af4b8caed2cc25e039ad5957",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/speculators/base.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "5d02d3a49b079de7439ce9f588cd16131eb2f6c9fb98f766933f219e3db94bee",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/step3_vl.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "e2a7824e86858f2f795d196f00dd541f2610a73f3d555777de254e11d381f31e",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/step3p5.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "019a43ee43fc3c821cf28333e593e093fa0a25976dd1b615ed53a27fdb5056f7",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/tarsier2.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "c9d893f533d261b48be7c4075fccb62b0b5ba10d20b618408d3f1e30bf20c63f",
+      "binary": false
+    },
+    {
+      "path": "vllm/transformers_utils/configs/ultravox.py",
+      "reason": "other-model custom checkpoint configurations",
+      "sha256": "e03c2b788cb22b14b0ca27ba6afe36509a1fe707a34077832d6b5c0398c13ced",
+      "binary": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "phase": "P4",
+  "frozen_tag": "p3-frozen-20261003",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "p3_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "p3_tree": "25a81a2e83b2429a548f49c111606eccad314141",
+      "p1_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "main_commit": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+      "p2_commit": "f1be323571e3ca2aab53992234045dd064d1967f",
+      "p4_branch": "p4"
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "p3_commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+      "p3_tree": "278d3e2a8506cf0d6acc0af44c32478c3bfc762e",
+      "p1_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "main_commit": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+      "p2_commit": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+      "p4_branch": "p4"
+    }
+  },
+  "runtime_evidence": {
+    "source_runtime_SHA_linkage": "user_reports_P3_fix_success_log_version_not_exact_commit",
+    "sha256": {
+      "p3_logs/logs_all_success/7.150.1.218_D_dp0_port7920.log": "2cb8efaa291a1a3a81737ab53f6faaa829ceff95ae154f5d0a3a3ad24fdd485d",
+      "p3_logs/logs_all_success/7.150.7.133_logs_00000": "5fc7455ef557a612d07f1cf87b6e6f9a54a7cc70cde66673d5edac804dfd5343",
+      "p3_logs/logs_all_success/7.150.7.133_P_dp0_port7910.log": "e2800db096197d8e25c7886c8e883f172b1e5afa210708092d780bd23524ca2b",
+      "p3_logs/logs_all_success/7.150.5.207_P_dp1_port7910.log": "b1886e3ea1cfbeef43a749b4d3156b5c3d22538b99f70739bdcfe9c88d058751",
+      "p3_logs/logs_all_success/7.150.3.14_benchmark_20261003_151741.json": "752d1d2b34312989f189f0777782dcda968dd468685282254fd7fbecc990fb64",
+      "p3_logs/logs_all_success/7.150.3.14_D_dp1_port7920.log": "6de26d95e388d30bf734954a541daa500b065901dfd60f63c0b699ca25fec81d",
+      "p3_logs/logs_all_success/7.150.7.133_proxy_tp8_dp2.log": "ff009341305b4f88f853e42e0b7e42384992c81786274c596bf4b619b07755be",
+      "p3_logs/logs_all_success/7.150.3.14_ansible_test_tp8_dp2_20261003_150005.log": "46f1cef538a1294c463505c02736dd0d918a4a993c5cbf8c381178571ee32d39"
+    },
+    "confirmed": "TP8/DP2 2P2D, DSA staged path, MTP; decode max running 12/14; aggregate MTP acceptance 86.29%",
+    "not_full_acceptance": [
+      "TP4/DP4",
+      "offline/no-LMCache",
+      "ordinary wheel/sdist",
+      "fault recovery/long run",
+      "exact runtime commits",
+      "benchmark counts/wall-time correction"
+    ],
+    "benchmark_caveats": "179 rows include 3 zero-output overlength HTTP400; reported duration sums latencies, not concurrency wall time."
+  },
+  "scope_confirmations": {
+    "LoRA_pooling_SGLang_MindSpore_CacheBlend": "remove_user_confirmed_20261003",
+    "hardware": "910B3_only_user_confirmed_20261003"
+  },
+  "remote_push": "not_performed"
+}

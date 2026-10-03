@@ -1,0 +1,2351 @@
+{
+  "recovery_tag": "p3-frozen-20261003",
+  "files": [
+    {
+      "path": ".buildkite/README.md",
+      "reason": "upstream other-device CI",
+      "sha256": "9eac94624021ac03ac70d9fde2bf17c632005147992db7871f01fc528b077c4a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/cases/comprehensive-cases.txt",
+      "reason": "upstream other-device CI",
+      "sha256": "824d0a3d6079a8092cbed92d9ba873670e982f9d5a773fb367441bfb51e756f7",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/cases/integration-cases.txt",
+      "reason": "upstream other-device CI",
+      "sha256": "aca4cd2d0504705fbc4966187772b503237d2d650abfe8c957a2a9066c944a3a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/async.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "772b4c87a432164697cf5717d45584c4cd75ba6edc60536c187e3d6f0b014065",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/dummy.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "1eac5d456a8d0cef73a0fa7d94b25013e456648b1cb720e6a1466bfdc14c74fc",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/layerwise.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "c225be5c19148b7b09590161c8bb46032b897ca7c5da1df1f79662c09857be47",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/lmcache_configs/local_cpu_mla.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "2253042ed5ea3e2ced0416f3771188e9027ed4a15c1604f58b61d47adc37b6ad",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/local_cpu.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "ffe452455d043ad66be39265743580352046185aedad0cd7d9cfb8e510e4848b",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/local_cpu_mla.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "4ae53216115cd3b4eecfb273a79ead4f8c7e45e7fbe9368e27687cd764e5c512",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/local_cpu_with_v3.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "5e164cf6e3cc3711dcba9fd9c923f3b6df89f4c60e1a8e5a087bd38a912d5a32",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/local_disk.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "064b0c1ff61f58dd7775c41ed3ab07c6d8ffecf9141216bd3c1a805d92484a1a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/local_disk_with_v3.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "55be9850a7d72f54d5c139e3b6449d7bd8db1cd1549e1af81423180a0768e922",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/multi_device.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "a47653223570436a1759ad54ff108d52c8a332c13f9972db5e1bc0bf8f1c3bc0",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/p2p.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "e152868e44a97fe6e79dbaabad14bb555b3a77c2e0830f414f78935d68c6d63c",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/p2p_with_v3.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "51ca53f7b7a79ff0749b623d51fa0ba0fc866cd712133fd618dab11e7c19548d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/configs/pd.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "10d771ad9da639f513201fcb2b1f4f7d710c20fcc54685801b6e0850db1e3650",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/README.md",
+      "reason": "upstream other-device CI",
+      "sha256": "234afe6d161e383e977b03544cc1b72849e9ec1363da5b93634dd7ca00ed32d6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/async_request.py",
+      "reason": "upstream other-device CI",
+      "sha256": "881cbda2c31cda0fa20962760bf0e1389c0fbf335fd497d2648d503cc27d2894",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/compare_files.py",
+      "reason": "upstream other-device CI",
+      "sha256": "16de60ae7ad5051124609b30eb60a704e21e7917a360cb7ecb0a236cc4b2836e",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/mmlu-test.py",
+      "reason": "upstream other-device CI",
+      "sha256": "50f2940969dfb5b42c61737f00c66c3e82d55c4001340658afc4561a39865e58",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/pipeline.correctness.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "6e86245c60e38325b1189f6c03b838332d311bf80c685f6da7c45b26b79a9f26",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/pipeline.mmlu.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "7ea7b95bd0153b3ddf44e2812cbbaf825958431872bd99502afe5fe338da5b17",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/setup.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "9d965e4ec9805ae225a5114dabb6b8082b944964f6926e7d228ecf9b101024de",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/sharegpt2openai.py",
+      "reason": "upstream other-device CI",
+      "sha256": "28241e00e34e0d28dc3385cd98c3b28b26d06123adf02b094f5fb47ebcf7afd6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/correctness/summarize-results.py",
+      "reason": "upstream other-device CI",
+      "sha256": "3f96fcb02a784b5ce32c6e2d8e302ea25af96b02ab7d522e7ca2535fe470972d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/ARCHITECTURE.md",
+      "reason": "upstream other-device CI",
+      "sha256": "a0bdae00457805daf145012e7b671b600f1145ad60026091a758301a64490db6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/README.md",
+      "reason": "upstream other-device CI",
+      "sha256": "b3b53ac012cf828314adf0fe2713bcb839b0bd0b2052fb97cdfff17b71c77b56",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/ci-base.Dockerfile",
+      "reason": "upstream other-device CI",
+      "sha256": "0f962ed91c46d5cf0d374357831933dd6cb5c155c8e5151ac3695894392a22de",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/gpu-monitor.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "04492ad0d4ea361cdf0a93fffcd0893b54286a35d2a2dd8ccdb4bfd0b5264ae4",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/install-agent-stack.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "9df8a90a91c1e82149d164b2baf66e13847e26a6d9271f558ffaae5d68cd731c",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/setup-blend-env.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "6ed66c05871abb0b34d75e4c3218b1d2c5ad0c92d7dbdd753b2c7b2a294a9a81",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/setup-cluster.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "a128f30992fdb8c10001bb857b910f219118ba4e71528d674fbf784732329b2c",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/setup-env.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "ed37850a9cb7dd0ca1bbc64b7d9d0118688b4d96101372b753b5359a67e82a51",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/setup-gpu-monitor.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "47cc8b1ac34851b4b65a28863df3b149f98d6be0cdc9b4e9c7984eba66423cc7",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/smoke-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "1fff906e5899c2821435c6e3b263305f9821ca158b519cbb3d255b0ab9a9cc83",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/teardown.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "981c1d8437129383907270f47c7a3ecfb109ce988f5bb05311cb1f99bd7a9ae8",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_harness/values.yaml",
+      "reason": "upstream other-device CI",
+      "sha256": "cf3f6e0d96cf877887df53b087106dae7bcf10c95c853e72aeb2f657ae5a3db4",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/README.md",
+      "reason": "upstream other-device CI",
+      "sha256": "f6fb319c17dc1e9551d1e726114c7b3d5d71362bddc1395910982ebf15828c31",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/BK_WEB_SETUP.md",
+      "reason": "upstream other-device CI",
+      "sha256": "2a1020f06b69317714339a3b0c9c7a282cf21b0c5a626f1e2f33ac8abd9cedf6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/buildkite-pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "65a0ae9a1822b55b52368ba46e61423d2fd32b05c42241d27ac7d68fcf57f9b4",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "2304dc9ed066762a355ef10b4d8db36119b9c14efb8ce9e0930f629da93e0152",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/run.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "1d1cd57a9ced0d0ebe16016ea669dd22a01d86a3b8122736bef43e21e5f07f38",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/scripts/proxy.py",
+      "reason": "upstream other-device CI",
+      "sha256": "9a61e32d41a2239dcaaab0609bb2c159d0887db956909d91431f979a227a0b58",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/blend/scripts/run-blend-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "c0d4b1a352b93b545c14575ff5d57cb43ef9eeb57f144e75fd59feb1e0c5a0d5",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/common_scripts/helpers.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "3680a7fa0c18ef11295587b29c7c22ca77a37d2b9e85d79236893e12b17a0a8c",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/BK_WEB_SETUP.md",
+      "reason": "upstream other-device CI",
+      "sha256": "8c0baaa6b7ce559945422c049db38b48ac5f7527b69c863008789e6ea8180c2d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/buildkite-pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "2e5b34b059e0f5f5a69604a06a130d385966a7cb3d3a28f40b58d32a611cf574",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "5530e79cf7444dc3fb07cd5b31e2f847fdfd8f7b4cb7e9942fa038039def9e81",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/run.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "0a487879724706c6b60803d0b8679027f41e8c92a2b39b21a8f8049f50c7f2b4",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/scripts/run-single-config.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "d08f4e900fb39d8d0a9c9fe05d761e9ba4d378d5c8c730f36930120d43a47963",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/comprehensive/scripts/upload-baselines.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "ce6ab9a0e0434280e8f12288b251bc2b4e4d0c39eb5fde63eb5422e157b5a280",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/correctness/BK_WEB_SETUP.md",
+      "reason": "upstream other-device CI",
+      "sha256": "af14f98bfe67d64f19e0dddf70af5d9fda1fde778846ddcd80efbf0f6d981e7e",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/correctness/buildkite-pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "c648024631237b50a37af5e355c36aa25b062c378022eba7fd97c7b4eadb48f6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/correctness/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "b9e73a14764ca96b97043f0a1853427d7bcbfab63c689a8754db66dad36b45c5",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/correctness/run.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "a1df55a38df334591825c86743aa5645e7224edc4e1a756ea9560a7a6db60be7",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/correctness/scripts/run-correctness.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "2913cbc979f701728201c80f60bf0ae5f57bc67dba09b0fc472050decb993af6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/integration/BK_WEB_SETUP.md",
+      "reason": "upstream other-device CI",
+      "sha256": "268fec75fd5c3c2e73b9fcac5ecbea18b7f886c64e8e9ba4a7d731e61065d900",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/integration/buildkite-pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "14cca7647a4dc1d2d4da800dc2232122247e3c7e3dc316af6376d1dd860c8763",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/integration/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "4e225f34686ca21e307c57abb5d5c1456308f5179740b78697895ee5698785e9",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/integration/run.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "576603ce9a1fd26833ddbfa437d2ad6874532c20439f00181e16134090893bd8",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/integration/scripts/run-integration.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "624b9842d0c486c3945cdd83b71accb6a699a996bddd94ccd4b2d70fcf5a86b0",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/BK_WEB_SETUP.md",
+      "reason": "upstream other-device CI",
+      "sha256": "fc131f1ce23951a920395d659b7e3b27dbca685e38fba2f3295a3ba807d6d09d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/buildkite-pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "82c7267da896a7be25b02bde94459e04b689ac6ce6a6084fe2536498614aed41",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "97d225998118ba044321c09b6de15a151b460510d51196e9cdb806e3ba676968",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/run.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "bd31f8cdde21d86a325e1f0fe3c87297b554801b8443546523b1624dce4c290a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/cleanup.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "01d84d567b67cca3ae2564ca6083559381ac20f0d4b262393f8b686bf8b2bf5f",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/launch-processes.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "e9f533daa676213fe6a2fc2195012b0335554569913f9d3bd3c4fcf480ed347d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-fault-tolerance.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "55c84a699e08d96666ffa4e386c0cd87baf9c33667568c7f273685b23f38a722",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-lm-eval.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "c208964cd6c55c5d3bd01d4d1b96f62db78e0f624f348dbdaf7ad7a8941355c6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-long-doc-qa-l2.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "31378e295f9141848b073ed85109f65b3c45129631c1af18f31aa6349e79be29",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-long-doc-qa.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "a7f9328e5d5b23ca36d76bacf112111f65ae6889b4b7fe0503d7f8b90e7fdfd4",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-mp-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "861146484a7f6050a303389c2a8d78622f9f36c482505c562da10e84190c803d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-single-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "32e5a9c09638a5e439f234fa3813c1b29b4a7ae163483dac85e26a6d893ec234",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/run-vllm-bench.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "4fff20a5b80970a9b5336d5d34089b128a61a09e095c55b2470ffb1ec9740a7c",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/k3_tests/multiprocess/scripts/wait-for-servers.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "49f6eb2aaa75991a57cd66c1518ada506c1826682e05352bd61e3d7494550085",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/pipeline.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "8d227b5e5cc91fed53b8f7c6df07ccfc278466a4db1051a59ae9f2f0240a5a22",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/pipelines/clean.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "d4263af076fa6ce3407bf5ad323998af05ca3775e12bb8299ee5f6ccf94478db",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/pipelines/comprehensive-tests.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "bf200b11a389c3d3ba0244039bd4af680057419049acfa12606cf67f5de055a6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/pipelines/end-to-end-tests.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "1cb0003832442ea530782161446c5bc7188a654996e78e0777bdccb13605179e",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/pipelines/multiprocessing-test.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "4bb307acd385b5d7c411a67673e69b8f8db0272d67af3b50f7fe39b3f0e0ed6f",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/bare-machine-cleanup.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "897b7a0e8b8a2d6e8ba6c00b74791f75e01f65ccf22ee8786c0f962ee60df007",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/clean.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "2e7134d20856e62e30251195102eabc4120342bc4987d1d080b01cce4f1e7bb6",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/end-to-end-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "70a3cbf3146ec113e0782fe61a4d26e070f917e895ffc87ae1d4234164e62f68",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/gpu_zombie_killer.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "dff63fcc98de9819d621291126e853b401a750778593afaf23b0562b546b8a26",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multi-round-qa.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "c3b04150a96b55d848a478c26ce8deb5dae7d7861e91f25688b8f7a4169f92b2",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/README.md",
+      "reason": "upstream other-device CI",
+      "sha256": "d1ecf8fff8aca8bdfb5f35bd9123b317b8ec5bf301ec9eabe184b9d34e901880",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/build-mp-docker-image.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "fa8a572cac11ac9d2e6658d7e93d3c05fe527e8b9d1d745bcc1111902c1e2e25",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/cleanup.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "64fdd8806903985e4dbabd104754e127e0f7df5d85183337abc85a320ae2637d",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/common.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "448ecfcb3aca785cfe0c2df530b4e60d1650aa423a56c4e6e9e2a0bbd777db56",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/launch-containers.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "14a78ff8dc33741ee1682acd05a253506f5bedcfeb357f5b06ae2f432337635f",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/run-fault-tolerance.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "31971cdc6fac66ac56d9064b8aaaf342032c77f0297bc1d08855d18bd3dcebf9",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/run-lm-eval.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "021ff195c7781d858d2886cd29e676328f43f1aa1535f1c7a7bee6259b0ff83a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/run-long-doc-qa.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "f719db42f0ea53fcc3254e5ae65c0686f4c3fb99cdb64d5dfdd006cca10eed66",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/run-mp-test.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "47686566670082259eea0807f0c4d0d409c1803323b7a60ecaa441cea109dd7f",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/run-vllm-bench.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "55fa0ca760e4fde30592ed161f2e3879c4221b6e10ed466e510e6a4bf3c2e575",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/test-launch.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "0453d9273030fc9c1391b32a1e7f80a2653c4d5b0d500a32b1a70fabdd90725a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/multiprocessing-test/wait-for-vllm.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "ea1414a81461ba380c46589bde9c5a97a5c2f6cb485baf66e2bd21de376da678",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/pick-free-gpu-amd.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "fb7ead68d388c6ef8624e5c93503b006ae2475a25fe45bf2b8dc084afc377893",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/pick-free-gpu.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "bb23ae7455d064ad7b6f967f44a9482051f5864383d425784e505add3c376857",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/should-run-comprehensive.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "a923b179c1b7e97ab00dba6137873161ad3a8ae2d326f4f8b7fe8d2c200349c9",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/vllm-correctness.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "6775107e495cea75fcb8d2fd4317dd0d1a70d6538d2c1f9a1148cee3be504449",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/scripts/vllm-integration-tests.sh",
+      "reason": "upstream other-device CI",
+      "sha256": "aa6db792fb8fac9b05ec1e4047991834e1a5c81247f6d3700806cf1e3795023a",
+      "binary": false
+    },
+    {
+      "path": ".buildkite/vllm-integration-tests.yml",
+      "reason": "upstream other-device CI",
+      "sha256": "69c2f61d4fa6b15799b82b58c1e0ace90f2b4bfd5ec970dad636b00e6bc02172",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/CODEOWNERS",
+      "reason": "standalone donor CI",
+      "sha256": "247b67b1a5fde5099e6e3d6beed9caf47cd34327298d4b384cb711213d923c8f",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/ISSUE_TEMPLATE/bug_report.md",
+      "reason": "standalone donor CI",
+      "sha256": "086efa57b3ef2a00808b2eb23097e3da14092d00275f6865f1a68b1893e3a9bc",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/ISSUE_TEMPLATE/feature_request.md",
+      "reason": "standalone donor CI",
+      "sha256": "2dfe018927ca1753a02bd0b4f31d0cb52f71997930205b0cce72f6924b1d5293",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/actions/junit-summary/action.yml",
+      "reason": "standalone donor CI",
+      "sha256": "9bcea48e0eddf5ee1f073531bb8bce53589fa90780bd7af131b81746de63c7a2",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/workflows/build-and-test.yml",
+      "reason": "standalone donor CI",
+      "sha256": "2b153582149b810e6083b7e3316da4404c6fce9bc4b412797acbc7d6a1dca6ab",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/workflows/code-quality.yml",
+      "reason": "standalone donor CI",
+      "sha256": "85720c1fd3c5a7efce12c3313f0376e406c8dd4b410a1454e75c95a9164a2abc",
+      "binary": false
+    },
+    {
+      "path": "ascend/.github/workflows/report-test-results.yml",
+      "reason": "standalone donor CI",
+      "sha256": "952ec6e8ef78a774a80c8b04eb8b7ea919445874f244e08ec865a9118c4a64ce",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/Dockerfile.310p.openEuler",
+      "reason": "standalone donor images",
+      "sha256": "583f50f94291a91d7c9211772c99d8495a2df7827f375ea53bbb8b7c1834bfa2",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/Dockerfile.a2.openEuler",
+      "reason": "standalone donor images",
+      "sha256": "c9aa13666da75763779efceac38aed15166c85bdf84b8c90fa086667eb13c399",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/Dockerfile.a3",
+      "reason": "standalone donor images",
+      "sha256": "fff41413540d4125b9302743905fe67bd38bcab8d2e4667b65df1deb85010b46",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/Dockerfile.a3.openEuler",
+      "reason": "standalone donor images",
+      "sha256": "d00870feb2317c71b2f678a5e14229840937cf73eff0e107e376055c2aa49f46",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/build-ci.sh",
+      "reason": "standalone donor images",
+      "sha256": "58f4aeb6723659dec29b1dbc6363be535dc3f13db2b4bd15f469202698a19aca",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/kv-connector-v1.diff",
+      "reason": "standalone donor images",
+      "sha256": "1fadcdde4e80b0cd41c7b423402c7bf5d7503d7e3133e116927137d263348c4b",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/lmcache-controller.diff",
+      "reason": "standalone donor images",
+      "sha256": "ad2084f932d4f9f6383ce592632a0e55f1623f6f67c2f6cdbab27e4933c7e560",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/mindspore/Dockerfile.310p.openEuler",
+      "reason": "standalone donor images",
+      "sha256": "3450856ef8717d5413a34fa32650475e43c64087ec0171f8209dac00df2f1f16",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/mindspore/Dockerfile.a2.openEuler",
+      "reason": "standalone donor images",
+      "sha256": "1a1df8f5852bf364787e034ef5ab4c5573e1aaf3aa70e25c6dd476a0e6f0295d",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/vllm-sched.diff",
+      "reason": "standalone donor images",
+      "sha256": "b30b3cc141e9d3e56f22b98c754c815f998b95d6296905b25262643a786f16fd",
+      "binary": false
+    },
+    {
+      "path": "ascend/docker/vllm-utils.diff",
+      "reason": "standalone donor images",
+      "sha256": "3f6e8a82ee0dc0816819bf9efbe9a636e8ba2a0e55ee2df05f72f355c464c18d",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "cbd2d53bddf5284567cf4e99b933848e6c7e356289229f7925424a4a5cd7d6d1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/gpu_connectors.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "23e68c24ffe26f187d2b5e0ba64c8a5ef35fadc11a9bbc4ad50603aa44a6d623",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/gpu_ops.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "9f99c84314e3898452b3f6fe5cf4fdced3b8a6cbe5346ac20b2dbcfa07754b22",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/hpu_connector.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b1d11e709d61be89895799c7aa2a848077ec85eb297a43f0b5b1329ada826c0a",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/mock_gpu_connector.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "bc508fa189a83cd887e79d0b9c6ded085e6bce78d392bc46c473f93b40c7e197",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/sparse.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "acbb5da7f7f38e344331712dd312fb20ed8a168c65aa8cdd270b6ea93c6eff18",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "f853288fed97d1eb273555d76f58fa5b01c102140d3a94eb3b9c90752e733610",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/gpu_connector/xpu_connectors.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "1d74320aa121203d9c4671f2b905524e62bc366949b618b6e66af69310c137f8",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "d0e58b9f9e5e3d7946a8d8945394a4802c4babceb57c8a2399468613ff25c2f2",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/apply_patch.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ed33483b66dead512fc079f1bde9f9efedff1b273dd339e197dc535fccd19a4e",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/base_patcher.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "9a645b374b9a7b6e18c0bf03fcf02da0b175aa3ec4132cee9fb160eecc4dad8a",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/sglang/sglang_patch.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "bf384f688ad45dc3f24f866473caa9324a59470df212c0acbf7c7d4623277985",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/vllm/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/vllm/cacheblend_patch.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ccbbe94df5b0d6c6a93126c54f246188079a5d8fe5472b6112782d87ec57ed74",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/patch/vllm/vllm_ascend_310p_adapt_patch.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "76db89eeca5ab14fbda16c76bbd791b6af170e0f5962cab47ff280de667a3df8",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/sglang/sglang_adapter.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "0aff93c35d1c43e3905b3a27ca408aa359894d3696a06c9601de95f5265ab51d",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/vllm/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/vllm/lmcache_ascend_connector_v1.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "85247d60098ea270e5b2b40cf5ecd28e3966165588941af5f3adde1211529352",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/vllm/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "20e68bd9c6733af68ae5e730281036200367a9f7663e91ee1b636dd133f3d9a6",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/integration/vllm/vllm_v1_adapter.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "fc284b7bd1d69439816135e3b006de2b0a8ca662f2f248e7fbc8b0e3ae01af90",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "645a9ced94c1035397b8132d8e8f305f284c3675e7ae4594b9a9fc77784a56a6",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "23b5ffa22f2de755229d3601a0be4f7b99c552f2e67a094651b07880d5b784ca",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/_tensor.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ca9dfa3350a7ffd76557438bd63a39ad1c728fc41b2b4e49f2a272f43162e61e",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/memory_management.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "eefabd22d2981f5aef12af71de0aa21303a54cc4d4dcc472a1afd9c814da478f",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/npu_connector.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "0c6d081794be79ae7fa9dfcc060ea0e16bdca508fa2bc311e1b0d3dba3720977",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/storage_backend/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "23b5ffa22f2de755229d3601a0be4f7b99c552f2e67a094651b07880d5b784ca",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/storage_backend/abstract_backend.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "0c90aef1ac55589c3cd879c80a5486dd740569965c286a00bbff080715ca2b39",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/storage_backend/connector/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/storage_backend/connector/mooncakestore_connector.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "41b20e0204d883ce789b74bc01f33521e377f0c348a72dab05831f68c991bb84",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/storage_backend/storage_manager.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "eeab59e59b9313d2fef4580005011c461e4fc3415fc48eb8d6b319315a1f71ae",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/mindspore/v1/system_detection.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "e8bd8089fc16376c9c07dc78a93bb8940976cf3376b75c34b8048bf2adfc1821",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/attention/attention.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "2e7bc4fa713e291bd92b1543c7f4007932dc66abb4b39dcd52e560db656fe9b3",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/blender.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "9d18d3e5b58e01937dd9a7d30e2c5a74d01b40c8c73a0c6e3c38fe27846c06c0",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/models/llama.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "67ee26415190c74f3a188afb82cc49a276184088e9100987629d2a1c1da164b2",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/models/models.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "988fbd023e8dc641df5c78b25cd72bcf56eb15223f6dc8747d803b42729f3305",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/models/qwen3.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "16e1c58b0c03f4254fe690053dd44ac95111696c3ad9674aebf3d75c32b73036",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/models/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "4bbfec2d55571ee82a7418854eff30ffc7e712279ee9a5b23c102f18509ec792",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/positional_encoding.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "85f85d52011f4a966201cfb9ca2a6a636b43c32cfccbfb185b686ff449fbce02",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/blend/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "69c7c655dc3f8144fb92aab6740953421c7eb995eb38d05a1817c6768b676bea",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/cache_engine.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "61e0389ecec7930389d8961a2d0242736c2aec2ae20f96635561e8a6fec572ba",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/content_diagnostics.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "5560e59930a4b3ea79e8e8405468d3f6793172a463d7bcd7f2860b0145d04e86",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/direct_store_plan.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "2756847019f75d1cbe806fa4a82c0b3e705663e170945dbe28109e75ceccb923",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/kv_format.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "6dfaa60231b1c340be98e6d23838d767384e18babda48865dc08825f4eef161a",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/kv_layer_groups.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "0d7de89a905747db43889700d8b6c7698b2c05aa341756227853dba1c3a2bdf5",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/local_checkpoint.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "9642f97c9d03fad9fb878401db7e2d2810611a03e7f0bee64652f0caed00dab1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/lookup_client/lmcache_lookup_client.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "26d808910a71c003273dd6cc347e634ad66e0ecf2c830c88c1ae0b295e4253b7",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/memory_management.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "8f34fd712d1002eec2c5601f60d4dee3bff4cfb82eb2d167298eb3895f96516d",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/multiprocess/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/multiprocess/custom_types.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ea28a3f19e4af5ad5b7e9b995c37fbea124e5eb2ff14a027d89c82b7f05901c4",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/multiprocess/server.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "af5997f9a51043efad981ef2876b267058ab10b1e4578b2efef34efceb185033",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/npu_connector/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "7a2bfd2d2fc3c7d01ea6b5ca157150b0a55f696889904547fe777e949234182d",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/npu_connector/npu_connectors.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "a03f3b2771937ce457978b15479637512fd98cde904089cd57bff25c579a8902",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/npu_connector/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ebce17508d635a6c63de997d1b8856880d76d1a42003d66bce00fb6a0cbdf817",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/preemption_checkpoint.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b0e8b77afd22d3b67c4ba37461951ef7465d70e251871ad0bbaee79f96953722",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/proxy_memory_obj.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "dcb366ed982843e0e4354a7f3d4d5a5d2864b4b1c633c57e89126ebeed8b1cab",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/remote_fill.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "8fef7fc700c0bbcf694dec7e24cd24d27ff19426a503e304ac1f7b8ac499825a",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/remote_fill_coordinator.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "95fa4c034f587acd81972568b905e0563d5b4e804d86127b88ecda88a25852bc",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/remote_fill_producer.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "237ddb345ad4dfac3ccde234937ad2054f9599b5926477466a35f62474748dff",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/rpc_utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "960b26febaa33d9d47172d00ffe220cf237a20bdddfc7ec2dedd7bcedc1076b5",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b8188d092d23c73f778da89bbe76b9c4b52eae8f3a42674b160eec4ea4a2a748",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/connector/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/p2p_backend.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "01fc3ac58d1f66ccdade303be43c413b0d4ec35fa2fe0716d4c88b48bf4f8195",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/pd/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "ff2419c70ec7b7b83779885905c5d5a424421dda863abde0151e2bd135bc0613",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/pd/backend.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "cb4867712539fa5deb2d6544e5de4bc2048bacfd89b792eaef5fe878be4a3947",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/pd/messages.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b5415bf30c0eb3dd228b90496b8f2f44df286431048daa5970c2e4cc8f95bab7",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/pd/receiver_mixin.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "c33ac7d6ae57516dc890d467fa811b2cdc6070e04a6f0028a86be913beab48e7",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/pd/sender_mixin.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "83768489cd6019dbdbd05a355903f48ced05c0c5469093af36ed6aa5366a0902",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/storage_backend/utils.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "a3310f97f156ee0835022a707270a0922199716032e5640b34019c33a1486fd8",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/system_detection.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "c70293ff722223076bf12b2c319b12a5cd728780d984c952d22223fdd6efc757",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/token_database.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "8aee0324b7171afeef81698e9dce26ee86646423661e5b1050f76167dab60081",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/tokens_hash.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "8cf884781610980f3de1dc3c8d6216cf5dc459b3ac9e7f312971be3486fece43",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/__init__.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "600ba16de80df4f3493f2cb16801900d50f9d8bf5d97c0daff01f0396c19ff7f",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/base_channel.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "12bc476aae02937c326781a2aeb8d2a4dbee3f9e5afc60adcaa53231750176e3",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/buffer_config.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "d4d503de719b66be6fd910a7f7419cfc6b1fb76ab5708b1eb2e02f19d159b3e1",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hccl_agent.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "a8d6dafeb7df05396e4d2751e1632d2114ed710a3e3b2e9187e0b81f7b19c0b0",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hccl_channel.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "00c527d2869827f5b635c42cd429a645402d9dce4eacad3eb2ff502a56c78b8a",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hcomm_onesided_channel.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b6352862e88d549ba5e25f01a701c300312b066654aaa1249d434ca8b18568e5",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hcomm_onesided_protocol.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "129c8746c987ec86844e5cceddf15ab68a1fe50106b5cdeafb240a723a40a124",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hcomm_onesided_runtime.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "e4f3980e8ec45e15e683fb3f1edb0092c75a14f7614f26e11411df70b7334784",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hixl_channel.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "104abea0552c57ce0a92b6bd7e3a06828403922013d5e1f1a46ca4e3a2268e18",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hixl_engine.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "2d0324cabefeff6a531b5d1ddded3c91518e105eb5729a583b07bdeb8aea2262",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/hixl_protocol.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "de4016e5d321ebbbceb18f0c91b8767b37eba2fc132426c931e270697c5dad05",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_channel/transfer_spec.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "c4af38156759861b5a830b06d057706925b8214df06c9367e687ef6e447653ab",
+      "binary": false
+    },
+    {
+      "path": "ascend/legacy-p3/lmcache_ascend/v1/transfer_context.py",
+      "reason": "P3 plugin reference archive (frozen in Git)",
+      "sha256": "b7e80b3e38fec62b67f726b46cc9fd31b574921541b042398a8f59d9462e00cc",
+      "binary": false
+    },
+    {
+      "path": "ascend/upstream-build/.gitmodules.txt",
+      "reason": "superseded standalone build entries",
+      "sha256": "6cd9c9778f81f4098ec8c673e45228de049a12835e80c67a2ceee52bed42c9d9",
+      "binary": false
+    },
+    {
+      "path": "ascend/upstream-build/base-setup.py.txt",
+      "reason": "superseded standalone build entries",
+      "sha256": "17b720d87c7439ea5b4a84632acf922a59f6251794e3a5741d78c7910c353d5b",
+      "binary": false
+    },
+    {
+      "path": "ascend/upstream-build/pyproject.toml.txt",
+      "reason": "superseded standalone build entries",
+      "sha256": "f2eeb7dc826e2be0e03e4f9048d236a7a2a6429ba705d8a295182a4b7358a7f9",
+      "binary": false
+    },
+    {
+      "path": "ascend/upstream-build/setup.py.txt",
+      "reason": "superseded standalone build entries",
+      "sha256": "389cd8577974ba95833f56ca2774589b6b54f0d0456e033264fdfc2fb671de56",
+      "binary": false
+    },
+    {
+      "path": "csrc/ac_dec.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "b57373d43ca5f21f304b18387b6698b98a39ad04a5ef4e47d577e52141fcc78c",
+      "binary": false
+    },
+    {
+      "path": "csrc/ac_enc.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "101f397a418da6dfd092a641f0df5498c38a6f9d3b76f1073381ab42c2cb7a29",
+      "binary": false
+    },
+    {
+      "path": "csrc/cachegen_kernels.cuh",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "709057527c63afd7d5dc2d95694d46f951a7344683e70d2dc910dc1720a10e37",
+      "binary": false
+    },
+    {
+      "path": "csrc/cal_cdf.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "ef07756d583081d930d362722c5903deb52ceb277cc9bab1cbd50f180f83d900",
+      "binary": false
+    },
+    {
+      "path": "csrc/cuda_compat.h",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "939fa7fd77573e67224bba178909dca34e47503a5b5d43e54907fc3461f24f54",
+      "binary": false
+    },
+    {
+      "path": "csrc/dispatch_utils.h",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "fb1ae138d0a4985018b1ee8452eac5de290a40177eaf3286217b9759a0888d7d",
+      "binary": false
+    },
+    {
+      "path": "csrc/mem_alloc.cpp",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "04c67fda2f5869e4adf1306866ade440aac80383887e750540c94e9f29f5c1d1",
+      "binary": false
+    },
+    {
+      "path": "csrc/mem_alloc.h",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "893cf04976d5dae26da848f20b4950d13c663cb6e8f8146a6e4d7f675745da45",
+      "binary": false
+    },
+    {
+      "path": "csrc/mem_kernels.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "59e17af13eca08cf98a7a2de1ae142426bd4ace12dad55ab0b78460ff8f15f70",
+      "binary": false
+    },
+    {
+      "path": "csrc/mem_kernels.cuh",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "fe23941a465c00e5de5a53ec780b2322039b57520e92ab003b875d044ae27011",
+      "binary": false
+    },
+    {
+      "path": "csrc/mp_mem_kernels.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "b496bf788c833135de433ef5515166668fa029f984785c55b058060bc3bd6937",
+      "binary": false
+    },
+    {
+      "path": "csrc/mp_mem_kernels.cuh",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "816410631d1fdbf9d44eb022b249a08c9bebd6bebc05337cfad766a324387dd0",
+      "binary": false
+    },
+    {
+      "path": "csrc/pos_kernels.cu",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "bfb37d4a66bd8f1165a3599b27660bff3f8d71a7a36120360b2a8234ae31cf61",
+      "binary": false
+    },
+    {
+      "path": "csrc/pos_kernels.cuh",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "64ebb57bfc4046be9979adb8d1f655f76de9f1108a8396c12e894f8279056f76",
+      "binary": false
+    },
+    {
+      "path": "csrc/pybind.cpp",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "8c406b87de737907f10ff0b6a7ed426217d22b5ea11a77990dddd5df24879bce",
+      "binary": false
+    },
+    {
+      "path": "csrc/utils.cpp",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "dac04bed9a583b695744fe3b96deba4cda9521aa963d0bd5b7c8a00c517d401c",
+      "binary": false
+    },
+    {
+      "path": "csrc/utils.h",
+      "reason": "unused upstream CUDA compute/allocator; host storage retained",
+      "sha256": "f62e5ef2321c735584c20ed4bb752c7f8bb6b8b96211aefaa9caaa7b6dd6c02b",
+      "binary": false
+    },
+    {
+      "path": "docker/Dockerfile",
+      "reason": "upstream other-device images",
+      "sha256": "576f7e75d39f400bf8035e3285e9b1e67e9459c5d116643ec694519558aa0719",
+      "binary": false
+    },
+    {
+      "path": "docker/Dockerfile.lightweight",
+      "reason": "upstream other-device images",
+      "sha256": "44c28e6aa42e946c1c8078010c75802528bdcb5bc6c8e22f245d019acfa843c4",
+      "binary": false
+    },
+    {
+      "path": "docker/Dockerfile.standalone",
+      "reason": "upstream other-device images",
+      "sha256": "8f3189d1b156f978f3b7de93870ad04ae489cb5e0b10219a8ad77573ee020b75",
+      "binary": false
+    },
+    {
+      "path": "docker/README.md",
+      "reason": "upstream other-device images",
+      "sha256": "f444bf812864acd0da40d9825091f5b8613b32ffe7593bf91de88caa8ed080c7",
+      "binary": false
+    },
+    {
+      "path": "docker/example_build.sh",
+      "reason": "upstream other-device images",
+      "sha256": "1280af12fb53ac1c84a70da4c3452ec3230a087934d9df825f779d58f7673d59",
+      "binary": false
+    },
+    {
+      "path": "docker/example_run.sh",
+      "reason": "upstream other-device images",
+      "sha256": "27a6166215cc6cd20bbbf6d06095a82254898877801fb0f0c0b41fdcb035066d",
+      "binary": false
+    },
+    {
+      "path": "examples/agents/prefix_analysis.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "d9f5d9c8da5cf52668920f12034f93621b8ea65ab86740ab34e35e97c8b0e5b0",
+      "binary": false
+    },
+    {
+      "path": "examples/agents/requirements.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "9ba6decf1d070664650f7087bd9081384c23af01a34959a22cfdb8f2c8eb4fe9",
+      "binary": false
+    },
+    {
+      "path": "examples/basic_check/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "743cd6b8c201b342aaa4a81f582b8947eecdde76e9970fe615dbe9c15c4f7c04",
+      "binary": false
+    },
+    {
+      "path": "examples/basic_check/example_config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "4856e6a6758c2a20b5fbb2460ffd2d8cc62c6e8d11979e251d76dc628a5266a6",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "139747a0e77276086b2fc9d6e0303109b3157d3526ac64abe67d979f2b5f6ffd",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/batched_kv.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "b64a021e8769868f99574203510343a8c78dd63bb90986499aee6494bdd7029e",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/batched_tp_kv.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "89b73bda098f23bd0ba14430ca056ecf550986055aa7dc1024ab916805665019",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/blend_kv.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "06aefd9679dcfbbaf2208c63f9b825d687623146da0ed61b8af5f25d6fd8cb80",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/chunk1.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "aec66fd84e6f4b70e51c69e59738b3f35fddb7a7154ffcfcdf29d76faf45efd2",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/chunk2.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "5d33b03ad1c620db4b197e3608821604b91bc7fa67017cb09a7f1e9a84d1ae5d",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/example_blending.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "8ec1b48731fe36129a67f60d92bc6514c1e005a16ec3a70a310869b29ea47e44",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/online_kv.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "10b26123c2051505d553af21551aa3a3f0d3d94f35d1cd053f0c947497ce07b0",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv/tp_kv.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "419248d15932339ebcb8fec5077923c34b0ff8c3a95cfa46152f1ceac09fe0a1",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv_v1/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2c0a57494ac872049d34bff775190bf6ca865dd7a16153378c48b43a837ae6e8",
+      "binary": false
+    },
+    {
+      "path": "examples/blend_kv_v1/blend.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "08a500d53ff5210e7701092c77f210daa6aa44806e8ae6eb500c93be40a86cf4",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "181f4cb434263e407199e607d4f28014c7d4890a7b5a9e23df14e5f0a648e7ed",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/clear/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "31bc83d5d1d153c7413ef229c3f95af8e159245ce2c89ab96b4e3416d3d58bb2",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/clear/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "69388080b524b4b70a426de11fffb2f6cd5130305ca8f2ae99c26860ad3cfaf8",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/compress/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "6b0c45a09a6a21070f07dd0de2f06984e516a8f07c3c7e84e1ce681506969ef8",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/compress/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "7049c866cda5efa7cd71cd69c2e66dde36ae818886e358c3006f38aee5ef3847",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/health/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "352d809d1324b7701f307f87d60a263c330c2b1601d208b17a213e9590452f5b",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/health/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "69388080b524b4b70a426de11fffb2f6cd5130305ca8f2ae99c26860ad3cfaf8",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/lookup/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3963ec701bca7398a9fe2adc8abe710f5d0c25afd2c293203392fd411247b0a2",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/lookup/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "69388080b524b4b70a426de11fffb2f6cd5130305ca8f2ae99c26860ad3cfaf8",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/move/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2168fb358416041476c9fdbef24c6bc63ed1005fca31abf83595e7d650ce17ba",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/move/instance1.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "b057c9aa14bf5b9eaa05b78d982129db695bbc5a1863c74853ab8b270783c272",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/move/instance2.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "d6fc6a1083a5f1915ae50ca749a38c84c3253b4d7bf67b8829c0161c2afca9eb",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/pin/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "53373d8db11c77256e5219820f4d51f11e521aac30c6aec1b4ad876a6b6b254f",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_controller/pin/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "7049c866cda5efa7cd71cd69c2e66dde36ae818886e358c3006f38aee5ef3847",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_interface/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3d945f0c4806bf049937cfdbd4f6e88b53c5d7284be96631363497d56c3e045a",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_interface/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "36c1381d17f423e971a5c9bf0d09171d21e8580a2b0e99b2770ff4a392bd4aa9",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_with_configs/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "d2547101c364fda4f6dab5893535f9e5d4441e921cec88379ab9c53077440bbd",
+      "binary": false
+    },
+    {
+      "path": "examples/cache_with_configs/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f4408a52c709d84d604a2d64f128c7e62c8201bf316fc8cdeedc25bf29792313",
+      "binary": false
+    },
+    {
+      "path": "examples/chunk_statistics/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "9d352a4380db91cb6392d2816bc0d9e8f48bf596f4fc4fdb804ac0facc8832b4",
+      "binary": false
+    },
+    {
+      "path": "examples/chunk_statistics/analyze_chunk_hashes.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "03854b0a093d11efbd8d34b16d9121f528792bb03037a11339722ee55d85f576",
+      "binary": false
+    },
+    {
+      "path": "examples/chunk_statistics/auto_stop.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "73b104876b50a230ec0767d95d0231eb9cf28ed38967fb0f5f395235948b89a7",
+      "binary": false
+    },
+    {
+      "path": "examples/chunk_statistics/file_hash.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "55b4f24573d87d1da046b103dad56454ca6801b9dced03e72a5b23117f5808eb",
+      "binary": false
+    },
+    {
+      "path": "examples/chunk_statistics/memory_bloom_filter.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "6382d01c1eef69dedbabd58cd0697e48a1f2b5ae60584eb3c0e2f23a7aea5952",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "df91adcd6f2301208a9101e87aeb11d51dd0b304b5d47bf3879c7c3c697bdf38",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/configs/lmcache-decoder-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "1019570255102b2dc722e0ea4cdbd95b4e605f0cae1eb52c39c0858d5ed38f71",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/configs/lmcache-decoder-pd-with-remote-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "922424205044a2b7b046bfdc1ebfb745093c7b6296f0406479b9882cdbfbd93d",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/configs/lmcache-prefiller-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2afb12da15bbbcba8cc323e95e430e759a64307b6548bb78a0dc2a100ec6b3b6",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/configs/lmcache-prefiller-pd-with-remote-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "0edddcbaf7daa83c4b9732dd233f95a154284409361bb4648b25535d7d871194",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/disagg_example_1p1d.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "990daf7784bfa534ab4af54c0bd278cd770caf9310ca28bde369d0e34829fcaa",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/1p1d/disagg_vllm_launcher.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "d85f585931b7641a101a3238a703e259e60db15826e8d7bf5e81c0998c0aed51",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "5ddf72ac88c51008a7a2b84f3bc3b66b913b6b81f5d7c07c8cd4a3b0fb52bb68",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/disagg_proxy_server.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f4a72ff0d78f9cddb896209de0dee57b76139c09904443e93e7ab9bcdcfb18b3",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "0e090147705ff6b71644d2c13876ff8fd46927a948a541cf3ccbda29e37cdf4a",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-decoder-1-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "c6561ce4cfea8ad16022c83674266b85c57c5f0179fb8ba8242464966dd3b520",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-decoder-1-pd-with-remote-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "fc880e50655070164ecc33c071b16cd505a86be5e0c581d4f1bfc21685cee97f",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-decoder-2-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f301ea139afd0802c416e91779275c3cbca1f6b5dd8530d12cc8a626e65bfb88",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-decoder-2-pd-with-remote-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "e1b01bc4313ee0fdf0eaa71dcc71691e4a83e11f04b56cb437c051fdc68607bf",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-prefiller-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "ca504d347cce3e9670133e9c536e444ea9131bef446381ef3f5912e8c363b8cd",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/configs/lmcache-prefiller-pd-with-remote-config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "0edddcbaf7daa83c4b9732dd233f95a154284409361bb4648b25535d7d871194",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/disagg_example_xpyd.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "467fdd57efa7bca9b80c10dd2c9da65f02bd22f3cbc5b0f391b3273b1cd11fdc",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill/xpyd/disagg_vllm_launcher.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "8fe8531ad79904f92f41149b33b727b3c2950bb66adfc54a13f945c3d7e98c32",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill_mp/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "7e745dbb2ec99b221ea8cf782ac73e67ff758dfa1c5809e4a03037073f640414",
+      "binary": false
+    },
+    {
+      "path": "examples/disagg_prefill_mp/architecture.png",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3639e30c7f3ce33dae5a7e56ccdc706d635aef4c1a8f5abd8339b4787fb58eba",
+      "binary": true
+    },
+    {
+      "path": "examples/disagg_prefill_mp/disagg_proxy_server.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "5f7243e44405a0e8535ff756dbb3658b89e468f49232d279fee4d780733697b8",
+      "binary": false
+    },
+    {
+      "path": "examples/frontend/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3f90203d611e761b34e4540403c7ac2969461caec607652c4c36e092100abdbe",
+      "binary": false
+    },
+    {
+      "path": "examples/frontend/chat_session.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "6f401ec355906a5801960365faee06097ef37553440b86c61bf38e9ae0127512",
+      "binary": false
+    },
+    {
+      "path": "examples/frontend/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "84f327a476091b14c5beb4a1a2462dfebd91593fae61bfa6d6f4be3851f77697",
+      "binary": false
+    },
+    {
+      "path": "examples/frontend/ffmpeg.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "129fa02f58a4dbae3faaadf5fb90bb255c758eed74124c53e2032346d2b70472",
+      "binary": false
+    },
+    {
+      "path": "examples/frontend/frontend.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "5476dfb9ce531f9cb8a5e553d0481f371a81d2f3be4cbf14495f54922119b38f",
+      "binary": false
+    },
+    {
+      "path": "examples/kubernetes/health_probe.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f7fc9b59f93786b085252e58c194269e2473b293b6f9a65f3be88ee01f6b4a4c",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_calculator/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2e015ec777400732b29bbbb1828e69b71b7d3d3327f2b7b6445b39ca0aaea0e6",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_calculator/generate_config.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "62e45d8d89b0e52596b11565d46b96a77f0e00c17db2c113d2aa7ec27004d564",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_calculator/kv_cache_calculator.html",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "40f17e7c443f7a473d721113798a70b770c331cfede4f5e8c88c1733470704db",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_calculator/modelconfig.json",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "aa1ddb8a5c20cac27510520918916e87ae5f3784d7ccafce35f3cebcc727c3c5",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_calculator/requirement.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "18b05a793a3f0927619c7bdbc50d24ce91077652ee03fdf77e822881a5b19ed2",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "b18fdcb24d84a1c43f361411e3d3c54efc736f617058f7a0d27473fdcfd9a16f",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/local_backends/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "20f26ed8f19357b4c331e0457f6a44475e1311be4f85642ff10571ca417664fc",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/local_backends/offload.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f4012ab9ee02b834c8f15f5329edb2d809e9b811ae1e00d2ebf11860807c172f",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "db8d8a23d592cfaddaad054e28b7a5ee98f1f9122f0a5cfba281e5f70770828a",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/external/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "8e025e515a572e849966edbd35ffdd75f9691ebbd7918383f141d14e1778ac1a",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/external/backend_type.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "b3e312738d0efbd412560903cfd18c43a364ea322a5538d27f497c5e9c15add7",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/fs/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "393beaa986704734327ad96d87ed7ea0585c159e74fd968107c2e70aa89c6efe",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/infinistore/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "b7eb991519fbfa37443f3906282a9dc75e18147c8f9e24e6bebd2dc23edf0ec9",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/infinistore/backend_type.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "4c29ca5a66b2634202b3be5255077236103a24536507cb0728b8d00eed38dd98",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/mock/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "158a8c095ec4f92fc879d1c46d7f0fcea292765143aeafb39812d2394a93ba97",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/mock/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "213acfbaf28c375cd096efa2c4aa0b6b0c51e3cee0cb367170c7a6e459fe8bfb",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/mooncakestore/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "50e1acf786a9a0801ed422d3728d4640b00152cfb28a82aa2fab754bea6ef15e",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/mooncakestore/mooncake.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "833d3c9faf158fb6c856216afd938db58d23537fb26b7050fd493773e7082c00",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/resp/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "f845269846be368553d94650719ceaefd9042b17a291ab306831ebf44c4e302a",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/resp/benchmark_resp_client.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "5a1e195b521982993cb9d0ccc6598a9b19e353a0045528af503fd768863452f7",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/resp/resp.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "e0078b4e1ebebb8ad6d53d270f3a160b18ab07fd697ed2ceaa4c4403bad91bfe",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/s3/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "d9c91df6131494cbc1aefcb0b7fb0a6097b1cb0db1620fac5ecb53c338d036f7",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/s3/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "49931e3b79ad93cb3cb082b323193063b5580514a50a29a1bc7b1a8fc3d4b05c",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/valkey/VALKEY_CONNECTOR_BENCHMARKING.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "77af6d58ac1307e5b544e8f1162ab693d61a2c13bd9583ef84bc6bcb10b58ce9",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/valkey/benchmark_l2.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a51f23db6adfbe5afc82944f5b1baa62a8705e9b81d1d6d112a63de8157bc62a",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/remote_backends/valkey/valkey.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2844c5a2e5cb005f16f02fe023d2621d650e4ce9e8e2b7dad9a370de49b65aa5",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "69b0a7f4843f75bd851ac39ed0919f4f84c75cb177dc6055c18a50c3b4957e03",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/centralized_sharing/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "482c621cff52257dc5ae5c9ef73ab268b64c71b9173762ade03b082ee10ffa02",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/centralized_sharing/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "84f327a476091b14c5beb4a1a2462dfebd91593fae61bfa6d6f4be3851f77697",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/p2p_sharing/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "e4a731f0d4f0da7f1b6b71153a3841c53863c4033111dfeaefc54e4cf4445e9f",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/p2p_sharing/example1.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "e9b7962ef9c590f566d47152fa3f6e8976bb1267cf116fbc7c5f3a0affbd3600",
+      "binary": false
+    },
+    {
+      "path": "examples/kv_cache_reuse/share_across_instances/p2p_sharing/example2.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "212c603b458c5ed6eadde544a0c3b3d6a6ebbec2432939e9dd06457a0ef13f95",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_l2_adapter/pyproject.toml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a751a3f898cdb167baa967f5776396cfcd9ebfb48c634dc1450c77c6c2f4c4fd",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_l2_adapter/scripts/install_and_test.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "333f3ca521251cacd27fb12dbd2841ea0b3823d2ed1ed0c3f20c97afca1c1fae",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_l2_adapter/src/lmc_external_l2_adapter/__init__.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2205f66df895b8240b9d914fc3324fb7a7a0d8e0312df8c4efabec5c4724c6a1",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_l2_adapter/src/lmc_external_l2_adapter/adapter.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "11f682bf880aca9efc1f7773d7641030c7b1a90fe787473a51ed0a27fb4e742f",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_l2_adapter/tests/test_plugin.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "258aa6864cd89fa45f39ee48a903c25a5188ff04cc8413d504bf4c7194828c91",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/csrc/connector.cpp",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a10c7456664b5505f6c2e7eff3dd227caf4fd5530e0978ddb344fc87b44c9fb6",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/csrc/connector.h",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "13a2d11049dee167fd3be57fa7ce86a5405aeb7c0f4c9ae0732b5d9b8f638f22",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/csrc/pybind.cpp",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a5dc880e3856f3b674ee14642dce7e417b5806fb4e793a142e982d781f89643c",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/pyproject.toml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3285a9281410b2addc3fea9d3dcc1720cc1a5aae1e86c6ece7ae799e736c6765",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/setup.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "658fe6b13a15dd1c3ff42961acaeed694279ebaad5e55984624e86574b531620",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/src/lmc_external_native_connector/__init__.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "851306b74032e1d2b050c7d69eb8ec2bcc39df7c49e1764dbc69bcb45187366b",
+      "binary": false
+    },
+    {
+      "path": "examples/lmc_external_native_connector/src/lmc_external_native_connector/connector.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "9baa6ad36e468ebcdb1390472fe1d9631d53ddf745252163fdac9b84ff7a014f",
+      "binary": false
+    },
+    {
+      "path": "examples/multi_process/lmcache-daemonset.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "77f972d788201a62a1176e41fe5272c78a51888977b529eda3c8e8b9584de43c",
+      "binary": false
+    },
+    {
+      "path": "examples/multi_process/vllm-deployment.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2633e8302236f4315479068a3cbfbb3d001519c821fa915fb15b4006c18f059e",
+      "binary": false
+    },
+    {
+      "path": "examples/online_session/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "23af62407b29d2350e39cb8b1452cd6a0f31afb9879ebe33fb93746588c82632",
+      "binary": false
+    },
+    {
+      "path": "examples/online_session/bench_ttft_sweep.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "3f811b40b31372840f71a70b6c458976100d0269ebe98d536542f3c549e03f99",
+      "binary": false
+    },
+    {
+      "path": "examples/online_session/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "abf5f4feca62f35200a3adf78dd52689c6ea07833ce2138bf2147ad8b8012203",
+      "binary": false
+    },
+    {
+      "path": "examples/online_session/ffmpeg.txt",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "129fa02f58a4dbae3faaadf5fb90bb255c758eed74124c53e2032346d2b70472",
+      "binary": false
+    },
+    {
+      "path": "examples/online_session/openai_chat_completion_client.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "e623985210ddc0a1f86d64339f41af462cf54eeaa9e670ffad6111a3bd19d5cc",
+      "binary": false
+    },
+    {
+      "path": "examples/redis_lookup/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "6b18aff6909bcd8cc8d10d44ae013a82406c772d9b7c1940ae506357f4e1a8f7",
+      "binary": false
+    },
+    {
+      "path": "examples/remote_config_server/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "74038229fda74de736bfcc2e52848856b1d55272de9b0c9153ed32f5f62ac531",
+      "binary": false
+    },
+    {
+      "path": "examples/remote_config_server/config_server.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "33f6b87a783a13be86f0d60cf41ee537ba2a204e64393a3ed8b32bddf032d1e7",
+      "binary": false
+    },
+    {
+      "path": "examples/remote_config_server/example.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "328b2b109bf92514846f88e77bca69811c87b270b90702852e433569fcea4647",
+      "binary": false
+    },
+    {
+      "path": "examples/runtime_plugins/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "34a98ab1b79b0f3d8b77309e969e752baba2084392aa8bfcc722ed19fcd62dad",
+      "binary": false
+    },
+    {
+      "path": "examples/runtime_plugins/all_plugin.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a3ea82f8e9fa29a8ae487bbaa1e315d02c0c3fd0a29aa61e920851f3693d6d7c",
+      "binary": false
+    },
+    {
+      "path": "examples/runtime_plugins/scheduler_foo_plugin.py",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "2a1c7a12a5af315c74794c132296bbe8f8620ad3ac2020b335fcd6574ec44dfa",
+      "binary": false
+    },
+    {
+      "path": "examples/runtime_plugins/worker_0_test.sh",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "a93b47cbe618c3e8e1937e07af4bac1284ec874aaf3f261dc13d698118b2415b",
+      "binary": false
+    },
+    {
+      "path": "examples/sgl_integration/README.md",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "20170d2e09fe7366ea1c195a7e84a5be67c852e072422cb7941e5c3d92201d9d",
+      "binary": false
+    },
+    {
+      "path": "examples/sgl_integration/lmcache_config.yaml",
+      "reason": "upstream off-profile examples; replaced by P4 recipe",
+      "sha256": "bd34b19bfaccb0cea963218b3680b08de92e1b295836ae1dc167c2466226bb49",
+      "binary": false
+    },
+    {
+      "path": "lmcache/integration/sglang/__init__.py",
+      "reason": "SGLang integration",
+      "sha256": "741515b5c268b60fb2d52919c220149b46e7aef8927851f2df4a017777862abc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/integration/sglang/sglang_adapter.py",
+      "reason": "SGLang integration",
+      "sha256": "3dac95de78709a81c59c1049e2391d96fb08c624fe329155783ed204d6d9ee51",
+      "binary": false
+    },
+    {
+      "path": "lmcache/integration/sglang/utils.py",
+      "reason": "SGLang integration",
+      "sha256": "8fa3215dfe71a186efd3f3dc916965f0cd1109743539454798d628711ebd7f23",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "741515b5c268b60fb2d52919c220149b46e7aef8927851f2df4a017777862abc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/abstract.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "5d5bda430487d336d1060963765ab63cfe92f5db7bddb8ac80d4f45c9bfd9a67",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/flash_attn.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "7997930e93aaec4ad781717d2c4455d10a3cad662d51971d8db78195cac5d88f",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/flash_infer_sparse.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "78865a560855d696632640733b1da7b089b58891cf69b19c93cfb645c9f074d5",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/metadata.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "de7ffa36d78688fd4f17100ec2bde0e3dae931581fdf644edaa076455e1559ce",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/attention/utils.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "e5ff46f27f128c8af1c6e5b3e06115b93f410e937e8bcf6efa543f4933575d83",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/blend/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "d4959f2f67170a95dc87cf97726cd8d4c49ea71839d935cb0b534db4d064da61",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/blend/blender.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "94bfd0051151cc71f31aca914b991acb069eef9d99781b7e1308c564f972e2a8",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/blend/metadata.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "ce9c01688d8da8aafc8d84fbb31dc2163a6bdb452fd186a157e52da88e246425",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/blend/utils.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "7c8f69da642f2464444771d08e659ab90000b12f29211a79d13f7a284dc5d366",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/models/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/models/base.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "86b38fc33e070ba50d88126babd017b6a4161163824c9a56acdcd527ca860b7b",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/models/llama.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "f8fb2fb93fb93d7d60d25f40bb66e3cc3827364cabca2d033d2723a408cbd720",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/models/qwen3.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "1f8547f3c632ebe2900f3cfd701ee70b1c861e8e39b2a5b3f78375654f2a1398",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/models/utils.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "7c1c35660bf16d2779b8e7d9f2ff16709daad87b94a36a0b38247296ecb5a138",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/attention/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/attention/attention.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "5cc409501848f6115d20d3b71bade16e54eaae99396123790a08786ed4966896",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/blender.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "b513f3dd5368982944467914662b27505b0a9ede6d9c22ebfe478b307d76fd5c",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/models/__init__.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/models/llama.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "0a715d652f5b3345588a5084b5c787c4ccea49f6090f6165b9dc58f5c7c7a558",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/models/models.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "b3079b0a925292da116c618389cd7480c084519be16014dc57347ee4a45778be",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/models/qwen3.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "f06ca021d88e30587716607027f95dcc5c8f0776faa998f93e7743d3c4331869",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/models/utils.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "7d86b02d548be8423a86308bbdf3325918a7db2f45db59354709bbf9d2dc1d7d",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/positional_encoding.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "85f85d52011f4a966201cfb9ca2a6a636b43c32cfccbfb185b686ff449fbce02",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/npu_blend/utils.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "78eb5a319b72d2ccad84562ad5259d79223397100e191a3b85a097159dd322fc",
+      "binary": false
+    },
+    {
+      "path": "lmcache/v1/compute/positional_encoding.py",
+      "reason": "CacheBlend compute/models/other-device attention",
+      "sha256": "2f549e001f57133c20b9fa685d750775e22a178aa5574d10f7e458c2d9020ae0",
+      "binary": false
+    }
+  ]
+}
