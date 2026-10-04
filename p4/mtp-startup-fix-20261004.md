@@ -1,5 +1,9 @@
 # P4 MTP 启动失败分析与修复（2026-10-04）
 
+本文件保留首轮 MTP 修复的历史配对与验证结果。后续 RoPE/缓存控制流修复已更新两仓，
+当前版本与结论见 [RoPE 报告](rope-startup-fix-20261004.md) 及
+[执行指南 §3.2](intranet-validation.md#mtp-startup-retry)，不要再按下述历史 SHA 复测。
+
 ## 结论
 
 本次失败是 P4 裁剪引入的 Runner 控制流回归，不是用户的 MTP 启动参数错误。
@@ -50,13 +54,14 @@ P3 的多方法选择由 `if/elif/.../else` 组成。P4 移除退休方法时，
 
 ## 交付配对与验证
 
-| 仓库 | 分支 | 当前精确提交 |
+| 仓库 | 分支 | 该轮精确提交 |
 | --- | --- | --- |
 | vLLM | `p4` | `275122e99093dafe9a7e7c759d6d30a7a5824fc4` |
 | LMCache（本次未改动） | `p4` | `1fc7439b96d091378b527819dc92902115eee58d` |
 
 包版本不变：`0.18.0+ascend.p4` / `0.4.3+ascend.p4`。
-[配对清单](baseline/p4-pair.json) 已刷新；P3 冻结标签及 P1/P2/P3/main 均不变，原始日志未改动。
+该轮配对曾写入 [配对清单](baseline/p4-pair.json)，清单现已随后续修复更新；
+P3 冻结标签及 P1/P2/P3/main 均不变，原始日志未改动。
 本次修复仅本地提交，未推送远端。
 
 [主机报告](results/mtp-startup-20261004/verification.json) 的 9/9 项通过：

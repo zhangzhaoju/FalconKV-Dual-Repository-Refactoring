@@ -18,9 +18,11 @@ P4 精确配对见 [p4-pair.json](baseline/p4-pair.json)，
 首次交付的提交、删除统计及测试结果见 [交付报告](handoff-report.md)。
 2026-10-03 追加 LMCache SoC 大小写修复 `1fc7439b`；
 原因与重试命令见 [内网执行指南 §3.1](intranet-validation.md#lmcache-soc-retry)。
-2026-10-04 追加 vLLM MTP 启动控制流修复 `275122e99`，LMCache 保持 `1fc7439b`；
-见 [分析与修复报告](mtp-startup-fix-20261004.md) 和 [复测指南 §3.2](intranet-validation.md#mtp-startup-retry)。
-本次 MTP 修复仅本地提交，未推送远端。
+2026-10-04 首轮 MTP 修复为 vLLM `275122e99` / LMCache `1fc7439b`，
+[MTP 报告](mtp-startup-fix-20261004.md) 保留为历史记录。
+随后根据 RoPE 启动失败补齐同源控制流修复，当前为 vLLM `8a5c71069` / LMCache `241166df`；
+见 [RoPE 分析与修复报告](rope-startup-fix-20261004.md) 和 [复测指南 §3.2](intranet-validation.md#mtp-startup-retry)。
+本轮两仓修复仅本地提交，未推送远端。
 
 ## 整改内容
 
@@ -57,11 +59,12 @@ Python 环境需已有 pytest、msgspec、pyzmq、pydantic、numpy、setuptools�
 `cmake` 需在 PATH 中，用于 SoC 检查的 script-mode 回归，不运行编译器。不会自动安装任何依赖。
 未安装 torch 时默认排除 CPU tensor 测试，报告会明确记录；内网使用 `--with-installed-torch` 补跑。
 动态导出和 native 扩展不能由 AST 审计证明，源码检查报告单列这些未验证项。
-MTP 修复后的 [当前主机报告](results/mtp-startup-20261004/verification.json) 9/9 项通过：
-vLLM 286 passed / 300 subtests（1 deselected），LMCache 145 passed / 38 subtests，
-裁剪工具 14 passed。新增用例执行完整 Runner 状态构造函数和草稿 setup/proposal 方法，
-但设备/模型依赖使用主机替身；仍不代表内网编译和运行验收。
-此前 [SoC 修复报告](results/lmcache-soc-case-20261003/verification.json) 保留为历史记录。
+RoPE 修复后的 [当前主机报告](results/rope-startup-20261004/verification.json) 9/9 项通过：
+vLLM 334 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，
+裁剪工具 25 passed。本轮增加 RoPE/权重加载/Ray 分支及最终 prefill 尾块保存回归；
+执行生产函数/方法，设备、模型及后端依赖使用主机替身，仍不代表内网编译和运行验收。
+此前 [MTP 报告](results/mtp-startup-20261004/verification.json) 和
+[SoC 报告](results/lmcache-soc-case-20261003/verification.json) 保留为历史记录。
 
 删除清单位于 `baseline/*-prune-batch*.json`，最终实际删除以 P3→P4 Git diff 为准：
 原生 MultiConnector 与 IdentityReasoningParser 在审计后恢复，不应按早期删除候选清单判断其缺失。

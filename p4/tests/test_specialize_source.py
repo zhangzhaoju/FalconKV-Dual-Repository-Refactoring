@@ -4,6 +4,7 @@
 import runpy
 import textwrap
 from pathlib import Path
+from types import GeneratorType
 from types import SimpleNamespace as NS
 
 import pytest
@@ -24,6 +25,8 @@ def compare(source: str, *arguments) -> str:
         events = []
         try:
             result = namespace["choose"](*arguments, events)
+            if isinstance(result, GeneratorType):
+                result = list(result)
         except ValueError as error:
             result = (type(error), str(error))
         results.append((result, events))
@@ -115,3 +118,62 @@ def test_else_containing_if_is_not_mistaken_for_elif(first, nested):
                 events.append("tail")
     """
     compare(source, first, nested, NS(method="mtp"))
+
+
+@pytest.mark.parametrize(
+    "kind",
+    ["default", "linear", "yarn", "deepseek_yarn", "deepseek_llama_scaling", "unknown"],
+)
+def test_rope_factory_keeps_one_dispatch_chain_and_reachable_cache(kind):
+    source = """
+        def choose(scaling_type, events):
+            if scaling_type == "default":
+                result = "default"
+            elif scaling_type == "llama3":
+                result = "retired"
+            elif scaling_type == "linear":
+                result = "linear"
+            elif scaling_type == "ntk":
+                result = "retired"
+            elif scaling_type == "yarn":
+                result = "yarn"
+            elif scaling_type in ("deepseek_yarn", "deepseek_llama_scaling"):
+                result = "deepseek"
+            elif scaling_type == "longrope":
+                result = "retired"
+            else:
+                raise ValueError("unknown rope")
+            events.append("cache")
+            return result
+    """
+    compare(source, kind)
+
+
+@pytest.mark.parametrize("strategy", ["eager", "lazy", "prefetch"])
+def test_weight_iterator_does_not_yield_twice(strategy):
+    source = """
+        def choose(safetensors_load_strategy, events):
+            if safetensors_load_strategy == "eager":
+                events.append("eager")
+                yield "weight"
+            elif safetensors_load_strategy == "torchao":
+                yield "retired"
+            else:
+                events.append("safe_open")
+                yield "weight"
+    """
+    compare(source, strategy)
+
+
+@pytest.mark.parametrize("last", [False, True])
+def test_final_prefill_does_not_fall_through_to_chunk_alignment(last):
+    source = """
+        def choose(last, config, events):
+            if last:
+                events.append("full prompt")
+            elif config.enable_blending:
+                events.append("retired")
+            else:
+                events.append("aligned prompt")
+    """
+    compare(source, last, NS(enable_blending=False))

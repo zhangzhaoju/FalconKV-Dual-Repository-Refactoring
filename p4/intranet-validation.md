@@ -59,7 +59,8 @@ git -C p1-repos/LMCache rev-parse HEAD
 从 P3 升级 P4 时，因删除 native LoRA 绑定并改变了模块集合，**必须重新编译并重装两仓**。
 `p1_dev.py` 仍是有效入口，名称未改；它已校验 P4 版本。
 已经完成 vLLM P4 安装、仅遇到本次 LMCache SoC 检查失败的容器，可使用 §3.1 的单仓重试步骤。
-两仓 P4 已安装成功、遇到 `Unknown speculative decoding method: mtp` 的容器使用 §3.2。
+两仓 P4 已安装成功、遇到 `Unknown speculative decoding method: mtp` 或
+`Unknown RoPE scaling type default` 的容器使用 §3.2。
 
 ```bash
 export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
@@ -106,14 +107,15 @@ P4_RUN=$(mktemp -d "$P4_ROOT/p1-repos/p4-check/run.XXXXXXXX")
 
 已在 LMCache `p4` 提交 `1fc7439b96d091378b527819dc92902115eee58d` 修复：
 校验时忽略大小写，下游统一使用 `Ascend910B3`；空值及 910B2/310P 等非目标型号仍阻断。
-当时 vLLM 为 `0879e419001f424700569936962631ca0360f5af`；后续 MTP 修复已更新 vLLM，见 §3.2。
+当时 vLLM 为 `0879e419001f424700569936962631ca0360f5af`；后续 Python 控制流修复已更新两仓，见 §3.2。
 包版本仍为 `.p4`，所以必须按最新配对清单的 SHA 核对，不能用包版本判断修复是否生效。
 普通 wheel 与 editable 共用此构建路径，二者均需该修复；切换为普通安装不能绕过原缺陷。
 pip root、setuptools_scm/vcs-versioning、manifest 及本次 kineto 警告均不是这个终止点。
 不要通过升级 pip/setuptools/torch 或删除型号门槛处理它。
 
 源码管理人员先将本机 `p1-repos/LMCache` 的新 `p4` 提交发布，并重新上传包含新配对清单的 `design/p4`。
-本次没有自动推送；若已发布过 P4，只需追加推送 LMCache：
+本次没有自动推送；仅补发该 SoC 修复且 vLLM 已符合最新配对时，只需追加推送 LMCache。
+本轮 RoPE/缓存修复则须按 §3.2 发布两仓。
 
 ```bash
 git -C p1-repos/LMCache push origin p4
@@ -130,13 +132,13 @@ P4_PY=/usr/local/python3.11.14/bin/python
 cd "$P4_ROOT"
 P4_VLLM_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["vllm"]["commit"])')
 P4_LMC_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["LMCache"]["commit"])')
-test "$P4_LMC_REF" = 1fc7439b96d091378b527819dc92902115eee58d
 test "$(git -C p1-repos/vllm rev-parse HEAD)" = "$P4_VLLM_REF"
 git -C p1-repos/vllm diff --quiet
 git -C p1-repos/vllm diff --cached --quiet
 git -C p1-repos/LMCache diff --quiet
 git -C p1-repos/LMCache diff --cached --quiet
 git -C p1-repos/LMCache fetch origin p4
+git -C p1-repos/LMCache merge-base --is-ancestor 1fc7439b96d091378b527819dc92902115eee58d "$P4_LMC_REF"
 git -C p1-repos/LMCache switch --detach "$P4_LMC_REF"
 
 export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
@@ -175,24 +177,28 @@ LMCache 145 passed / 38 subtests；Sphinx `-E -W --keep-going` 构建通过并�
 
 <a id="mtp-startup-retry"></a>
 
-### 3.2 MTP 启动控制流修复与复测（2026-10-04）
+### 3.2 P4 Python 控制流修复与复测（2026-10-04）
 
-四个 P/D 节点的 `Unknown speculative decoding method: mtp` 是 P4 Runner 裁剪回归，
-不是 `deepseek_mtp` 参数错误。别名已经正确归一化为 `mtp`，但原代码无条件执行了异常分支。
-修复提交是 vLLM `275122e99093dafe9a7e7c759d6d30a7a5824fc4`，
-配对 LMCache 仍为 `1fc7439b96d091378b527819dc92902115eee58d`。
-保留原 MTP、DSA 双组、TP8/DP2、`max_num_seqs=16` 和 C8 关闭设置，不通过关闭功能绕过错误。
-完整证据及验证边界见 [分析报告](mtp-startup-fix-20261004.md)。
+首轮 MTP 修复 `275122e99` 后，四节点在模型构造时报告 `Unknown RoPE scaling type default`。
+原因是裁剪时破坏了互斥分支：合法 `default` 已创建对象，却仍执行了兜底异常。
+本轮还恢复权重加载、Ray 初始化和 LMCache 最后一次 prefill 尾块保存的同源分支语义。
+当前配对为 vLLM `8a5c71069ab4d80c64c60e9375af04f8a7b4da9d` 与
+LMCache `241166dfde710e9a2cbe24ba0bd24b094b4bbe41`，包含此前 MTP/SoC 修复。
+保留 checkpoint 原 RoPE 配置、MTP、DSA 双组、TP8/DP2、`max_num_seqs=16` 和 C8 关闭设置；
+不通过调整模型配置或关闭功能绕过错误。
+完整证据及验证边界见 [RoPE 分析报告](rope-startup-fix-20261004.md)；
+[首轮 MTP 报告](mtp-startup-fix-20261004.md) 保留为历史记录，不再按其旧配对运行。
 
-本次仅修改已有 Python 执行文件，未改变包版本、模块集合、native 源码或 ABI。
+本次两仓均只修改已有 Python 执行文件，未改变包版本、运行模块集合、native 源码或 ABI。
 **若两仓已经成功安装 P4 strict editable，且下面安装源码身份检查通过，无需重新编译或重装。**
 必须先停止自己这轮 P4 测试的进程，再切换源码，并用新进程重启；不能在运行中热切换。
 不停止他人的服务，不修改 P3 基线。若尚未完成 P3→P4 升级，仍执行 §2～3 的完整重建。
 
-源码管理人员先发布本次 vLLM 修复，并重新上传当前 `design/p4`（包含配对清单、工具和测试）：
+源码管理人员先发布本次两仓修复，并重新上传当前 `design/p4`（包含配对清单、工具和测试）：
 
 ```bash
 git -C p1-repos/vllm push origin p4
+git -C p1-repos/LMCache push origin p4
 ```
 
 本次没有自动推送。以下在四个独立测试容器逐一执行；同镜像不能替代逐容器核对。
@@ -204,8 +210,8 @@ P4_PY=/usr/local/python3.11.14/bin/python
 cd "$P4_ROOT"
 P4_VLLM_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["vllm"]["commit"])')
 P4_LMC_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["LMCache"]["commit"])')
-test "$P4_VLLM_REF" = 275122e99093dafe9a7e7c759d6d30a7a5824fc4
-test "$P4_LMC_REF" = 1fc7439b96d091378b527819dc92902115eee58d
+test "$P4_VLLM_REF" = 8a5c71069ab4d80c64c60e9375af04f8a7b4da9d
+test "$P4_LMC_REF" = 241166dfde710e9a2cbe24ba0bd24b094b4bbe41
 for P4_REPO in vllm LMCache; do
   git -C "p1-repos/$P4_REPO" diff --quiet
   git -C "p1-repos/$P4_REPO" diff --cached --quiet
@@ -225,7 +231,7 @@ export VLLM_PLUGINS=""
 export VLLM_NO_USAGE_STATS=1
 export PYTHONDONTWRITEBYTECODE=1
 mkdir -p "$P4_ROOT/p1-repos/p4-check"
-P4_RUN=$(mktemp -d "$P4_ROOT/p1-repos/p4-check/mtp-retry.XXXXXXXX")
+P4_RUN=$(mktemp -d "$P4_ROOT/p1-repos/p4-check/python-retry.XXXXXXXX")
 cd /tmp
 "$P4_PY" -B "$P4_ROOT/p1-repos/vllm/p1_dev.py" verify --mode editable --output "$P4_RUN/vllm-installed.json"
 "$P4_PY" -B "$P4_ROOT/p1-repos/LMCache/p1_dev.py" verify --mode editable --output "$P4_RUN/lmcache-installed.json"
@@ -236,20 +242,27 @@ cd /tmp
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$P4_PY" -B -m pytest -q \
   --noconftest -p no:cacheprovider \
   "$P4_ROOT/p1-repos/vllm/tests/standalone/test_p4_mtp_runner.py" \
-  --junitxml="$P4_RUN/mtp-runner.xml" 2>&1 | tee "$P4_RUN/mtp-runner.log"
+  "$P4_ROOT/p1-repos/vllm/tests/standalone/test_p4_model_startup.py" \
+  --junitxml="$P4_RUN/vllm-startup.xml" 2>&1 | tee "$P4_RUN/vllm-startup.log"
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$P4_PY" -B -m pytest -q \
+  --noconftest -p no:cacheprovider \
+  "$P4_ROOT/p1-repos/LMCache/tests/standalone/test_p4_save_boundary.py" \
+  --junitxml="$P4_RUN/lmcache-save.xml" 2>&1 | tee "$P4_RUN/lmcache-save.log"
 "$P4_PY" -B "$P4_ROOT/p1-repos/vllm/tools/check_npu_bootstrap.py" \
   --inspect-glm --check-lmcache --output "$P4_RUN/prestart-bootstrap"
 ```
 
-22 项 MTP 主机回归及安装/配对/冷导入检查必须通过。新增源码身份核对包含
-`npu_runner_state.py`、`npu_model_runner.py`、`config/speculative.py` 和 Ascend 草稿选择器。
-`check_pair.py` 另核对全部已跟踪包内 Python 文件，防止旧 strict editable 硬链接或其他安装残留。
+70 项 vLLM MTP/模型启动和 19 项 LMCache 保存边界回归，以及安装/配对/冷导入检查必须通过。
+启动源码身份核对在既有 MTP 文件基础上增加 RoPE 工厂、默认权重加载器、权重迭代器及 Ray 初始化。
+`check_pair.py` 另核对全部已跟踪包内 Python 文件（包括 LMCache adapter），
+防止旧 strict editable 硬链接或其他安装残留。
 任何一步失败先停止处理；不要删除日志、强制 reset、设置临时 PYTHONPATH 或跳过配对检查。
 
-若源码正确但 editable 链接树仍旧，按 §3 仅重装受影响的 vLLM；安装脚本会执行原生重建，
-不要手工复制文件或混用 P3 产物。若使用普通 wheel，必须重建并安装新 vLLM wheel，
+若源码正确但 editable 链接树仍旧，按 §3 重装受影响的仓库；安装脚本会执行原生重建，
+不要手工复制文件或混用 P3 产物。若使用普通 wheel，必须重建并安装两仓新 wheel，
 随后用 `verify --mode wheel` 和 §4 的配对检查；仅 Git 切换不会更新 wheel。
-已安装且匹配 `1fc7439b` 的 LMCache 无需因本次 MTP 修复重装。
+LMCache 必须同步更新至 `241166df`，不能仍停留在 `1fc7439b`；
+仅在 P4 strict editable 安装身份检查通过时，才能复用既有安装和 native 制品。
 
 四容器均通过后，保留 `P4_RUN` 继续 §4 的检查（本节使用 `prestart-` 路径，不覆盖下节报告），
 并用原启动参数重新启动 2P2D。验收不仅是异常消失：须四实例完成权重加载、KV 初始化/预热，
@@ -303,7 +316,7 @@ DSA 双组/MTP 保持启用，C8 关闭（`enable_sparse_c8=false`）；不改�
 | 2P2D TP8/DP2 | 4×8 910B3，P/D 各实例成功、请求完成、Running 并发、DSA 两组缓存绑定 |
 | 2P2D TP4/DP4 | 固定拓扑和配置，与对应 P3 配对；不能以 TP8/DP2 结果代替 |
 | MTP | 草稿/接受 token 计数及每节点/汇总接受率；不能平均节点百分比 |
-| 缓存 | CPU KV 卸载/共享、重复前缀命中、跨实例 RemoteFill，输出/命中一致性 |
+| 缓存 | CPU KV 卸载/共享、重复前缀命中、跨实例 RemoteFill，输出/命中一致性；非逐层保存的最后一次 prefill 保留不足一个 chunk 的尾块 |
 | 抢占/恢复 | checkpoint 生成→回收→冷恢复，event handoff，完成通知、超时、重试/清理不挂起 |
 | 负向边界 | 非 910B3、其他模型、多模态/embeds、LoRA、pooling、CacheBlend、C8 明确失败，无静默降级 |
 | 故障与长稳 | 在专用环境按已有故障矩阵注入；检查无 token 丢失/卡死/泄漏/悬挂任务 |

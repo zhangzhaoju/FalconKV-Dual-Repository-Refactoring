@@ -26,8 +26,8 @@
       "path": "p1-repos/vllm",
       "remote": "git@github.com:zhangzhaoju/vllm-dual.git",
       "branch": "p4",
-      "commit": "275122e99093dafe9a7e7c759d6d30a7a5824fc4",
-      "tree": "5700c19b80d8c19a817dd2ea9bed74cfaf925f61",
+      "commit": "8a5c71069ab4d80c64c60e9375af04f8a7b4da9d",
+      "tree": "28a961e5308c1fb00310cbc476ecd5ee743c7fed",
       "version": "0.18.0+ascend.p4",
       "p3_base_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
       "initial_p4_commit": "0879e419001f424700569936962631ca0360f5af",
@@ -37,14 +37,14 @@
       "path": "p1-repos/LMCache",
       "remote": "git@github.com:zhangzhaoju/LMCache-dual.git",
       "branch": "p4",
-      "commit": "1fc7439b96d091378b527819dc92902115eee58d",
-      "tree": "5b6236f18d28530656893308b6e65b1e35b22407",
+      "commit": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+      "tree": "de9f03be149cc1e7f2ddd811c9a2d07e5f863b78",
       "version": "0.4.3+ascend.p4",
       "p3_base_commit": "a4e2131e890727edadb6bb61cde369900f72c3fd",
       "initial_p4_commit": "1bedaf89564b3d4b2f0de67187111b03a037a716",
       "p3_tag_object": "41c9ad7024b74f417b9440b15a39b4506e96b122"
     }
   },
-  "host_verification": "../results/mtp-startup-20261004/verification.json",
+  "host_verification": "../results/rope-startup-20261004/verification.json",
   "remote_push": "not_performed"
 }
