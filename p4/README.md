@@ -27,6 +27,17 @@ P4 精确配对见 [p4-pair.json](baseline/p4-pair.json)，
 见 [算子注册分析与修复报告](custom-opp-startup-fix-20261004.md) 和
 [复测指南 §3.2](intranet-validation.md#custom-opp-retry)。修复仅本地提交，未推送远端。
 
+2026-10-04 追加 [Prefill / Decode Waiting 复核](prefill-review-20261004.md)：
+P4 两个 D 节点仍有 Waiting；同早期窗口的 P 侧完成量接近，现有日志不足以确认明显性能回归。
+新增只读比较工具，排除混入的旧 benchmark 文件；本次未修改运行代码或推进配对版本。
+按 [性能采集指南 §5.1](intranet-validation.md#prefill-comparison) 补齐同冷热阶段的完整结果。
+
+当前两仓源码已按用户要求以配对附注标签 `p4-frozen-20261004` 本地冻结，未推送远端。
+见 [冻结记录](baseline/p4-frozen-20261004.json) 与
+[根 ascend 目录移除分析](ascend-layout-analysis-20261004.md)。本次仅完成冻结和分析，
+尚未搬迁或删除目录；后续布局整改应从冻结标签另开分支，不推进 P4。
+冻结不代表完整验收通过；新增运行证据及剩余压测统计问题记录在冻结清单中。
+
 ## 整改内容
 
 - 删除其他厂商后端、310P/A3/A5 专用实现、其他模型/蒸馏模型、多模态、训练、LoRA、pooling。

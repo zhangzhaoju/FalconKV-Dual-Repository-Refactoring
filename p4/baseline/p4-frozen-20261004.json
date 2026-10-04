@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "frozen_tag": "p4-frozen-20261004",
+  "status": "frozen_source_pair_before_layout_analysis_not_full_P4_acceptance",
+  "repositories": {
+    "vllm": {
+      "path": "p1-repos/vllm",
+      "branch": "p4",
+      "commit": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+      "tree": "03bf028f0c0b1d782e65e847de27fdc368aabffd",
+      "tag_object": "073f9ebf63d51689169bc7c9fcdbb854540a652e",
+      "tag_type": "annotated",
+      "version": "0.18.0+ascend.p4",
+      "submodules": [
+        {
+          "path": "ascend/csrc/third_party/catlass",
+          "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641"
+        }
+      ],
+      "refs_before_freeze": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "ba361feb8d13d2377698ec758cdf644fc00063be",
+        "refs/heads/backup/pre-p1-build-install-20260923": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "89a40e2a3e53465907763cfd8fa692723b45b2b0",
+        "refs/heads/fix/p2-npu-bootstrap": "e1b35d4f12fdc0cd975b8e990e146507c459d094",
+        "refs/heads/main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p1": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p2": "f1be323571e3ca2aab53992234045dd064d1967f",
+        "refs/heads/p3": "8767fe1121a085e8cefed03eeaa1444b55227521",
+        "refs/heads/p4": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+        "refs/tags/p3-frozen-20261003": "ef6097322e31420a22333f039e47617f7bad363c"
+      }
+    },
+    "LMCache": {
+      "path": "p1-repos/LMCache",
+      "branch": "p4",
+      "commit": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+      "tree": "de9f03be149cc1e7f2ddd811c9a2d07e5f863b78",
+      "tag_object": "364023530ad965aef7621a97ae53160f5c1e1423",
+      "tag_type": "annotated",
+      "version": "0.4.3+ascend.p4",
+      "submodules": [
+        {
+          "path": "ascend/third_party/kvcache-ops",
+          "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5"
+        }
+      ],
+      "refs_before_freeze": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+        "refs/heads/backup/pre-p1-build-install-20260923": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "5b09009c5264cb61d204b7660ae400b4392db46a",
+        "refs/heads/main": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p1": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+        "refs/heads/p3": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+        "refs/heads/p4": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+        "refs/tags/p3-frozen-20261003": "41c9ad7024b74f417b9440b15a39b4506e96b122"
+      }
+    }
+  },
+  "runtime_evidence": {
+    "directory": "p4_logs/logs_all_perf_logic_check",
+    "linkage": "user-reported current P4 run; exact per-container SHA and installed-source linkage not independently archived",
+    "confirmed_in_logs": [
+      "2P2D TP8/DP2",
+      "DSA staged routes",
+      "MTP aggregate acceptance 86.4265%",
+      "Decode maximum Running 15/12 and Waiting 22/22"
+    ],
+    "pending": [
+      "full P4 matrix including TP4/DP4, offline/no-LMCache, wheel/sdist rebuild, fault/recovery/long-run",
+      "exact runtime commits and installation provenance",
+      "complete benchmark: interrupted 194 records, 192 positive outputs; two overlength HTTP400 miscounted as success; duration sums request latencies"
+    ],
+    "files": {
+      "p4_logs/logs_all_perf_logic_check/7.150.1.218_D_dp0_port7920.log": {
+        "sha256": "f138e7066d230eb8f320f94a655c8f904b1b99e599705e736ffbfd2ab67eec0b",
+        "bytes": 33673420
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.3.14_D_dp1_port7920.log": {
+        "sha256": "688637af02f1ee5ec8c7c1fb80a32ecde6aaa88d85cbc9f76d7d2e2bef639222",
+        "bytes": 22582190
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.3.14_ansible_test_tp8_dp2_20261004_152813.log": {
+        "sha256": "6e8c2c6145921b22f13355c3c4eb74dbc5e7ccc7b7d8f49049c2b4397f38b50a",
+        "bytes": 48380
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.3.14_benchmark_20261004_154610.json": {
+        "sha256": "03bfc5f54b3613bce4654ddfe20d7ceefe33a98345777bfa3cfb036bba6c49bc",
+        "bytes": 295718
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.5.207_P_dp1_port7910.log": {
+        "sha256": "a212502e88d22bbc2e2bf76ea29b1754a230b3a300559aa87ee5e40f199afcc0",
+        "bytes": 15265281
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.7.133_P_dp0_port7910.log": {
+        "sha256": "ccd1033cad8264750386923f3fbdf7a4d2a0d77da3c0167fefa948a4fc2815bd",
+        "bytes": 16565876
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.7.133_logs_00000": {
+        "sha256": "adaec960d39367236321cde45196e057c4eacab6443cb2a7dd339195ce9983a6",
+        "bytes": 186464
+      },
+      "p4_logs/logs_all_perf_logic_check/7.150.7.133_proxy_tp8_dp2.log": {
+        "sha256": "b05321f5e055afd87de4f7160770ae94e92880ff2fbe7faed89fb66211ee8fa7",
+        "bytes": 134993
+      }
+    }
+  },
+  "scope": {
+    "repositories": "p1-repos/vllm and p1-repos/LMCache only",
+    "runtime_worktrees": "clean before tag creation; no source changes",
+    "design_worktree": "existing uncommitted documentation/tooling changes preserved; not included in runtime tags",
+    "submodules": "gitlink commits frozen; local payload/manifest and built wheels not guaranteed by a superproject tag",
+    "earlier_refs": "all pre-existing local branches and tags recorded below and preserved",
+    "next_step": "analysis only; implementation requires a new branch derived from frozen tags"
+  },
+  "remote_push": "not_performed",
+  "remote_branch_protection": "not_configured"
+}
+

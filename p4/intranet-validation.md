@@ -354,6 +354,47 @@ DSA 双组/MTP 保持启用，C8 关闭（`enable_sparse_c8=false`）；不改�
 P3 179 行中只有 176 行正输出，日志 duration 是请求延迟相加，不可拿它计算并发总吞吐。
 门槛尚未预设固定退化百分比时，记录逐项差异并审核，不能自行把大幅退化判为通过。
 
+<a id="prefill-comparison"></a>
+
+### 5.1 Prefill / Decode Waiting 的同阶段比较（2026-10-04）
+
+`logs_all_prefill_lower` 中 D 节点仍有 Waiting；P4 约 4 分钟的采集不能直接与
+P3 约 16 分钟、后段高缓存命中的日志比较。详见 [本轮分析](prefill-review-20261004.md)。
+本轮没有运行代码修复，不需因比较工具重装框架。不要把等待队列越大当成性能越好。
+
+复测保留既定 P4 配对和启动参数，并执行以下采集约束：
+
+1. 逐容器归档 §4 的精确 SHA/安装核对，记录实际命令、环境变量、LMCache YAML、模型标识。
+   P3 与 P4 使用各自配对的独立测试环境；不在运行中的 editable 服务下切分支。
+2. 固定同一份有效请求清单、请求顺序/seed、输入输出长度约束、采样参数、客户端线程数与
+   到达策略；单列超长 HTTP400、零输出、取消及失败。只写“60 文件/3000 请求”不代表已完成。
+3. 分别建立可比较的冷缓存与重复前缀热缓存窗口，并记录实际命中比例。使用专用缓存实例或
+   命名空间隔离，不能删除共用缓存/他人服务数据来制造冷态。为每阶段记录单独墙钟起止。
+4. 覆盖至少与原 P3 后段相当的时间和重复请求阶段；若继续使用 3000 请求计划，归档完成计数、
+   全部逐请求记录和真实墙钟时长，未完成则明确记为中断。不要因为 Waiting=0 提前终止采集。
+5. 四节点及 proxy、客户端同步持续采集；每轮使用新的结果目录，保留原始文件。
+   新 benchmark JSON 必须来自该轮，不复制旧 JSON 充当结果。计算完成请求/生成 token 的系统
+   吞吐时使用共同墙钟区间，不能使用请求 duration 的求和，也不能平均短周期峰值。
+
+以下是只读比较命令，可在上传日志后执行，不启动模型、不访问网络。每个目录应只有本轮
+四个匹配 `*_P_dp[01]_port*.log` / `*_D_dp[01]_port*.log` 的节点日志；不要混入重启前后多个会话。
+P 日志需保留当前已有的 `LMCACHE_COLD_PERF` lookup/terminal 事件，D 日志需有吞吐/队列采样。
+
+```bash
+cd /workspace/zzj || exit 1
+P4_COMPARE=$(mktemp -d /tmp/p4-prefill-review.XXXXXXXX)
+/usr/local/python3.11.14/bin/python -B design/p4/tools/analyze_prefill.py \
+  --baseline p3_logs/logs_all_success \
+  --candidate p4_logs/logs_all_prefill_lower \
+  --window-seconds 250 \
+  --output "$P4_COMPARE/analysis.json"
+```
+
+后续新轮次替换 `--candidate` 路径，比较不同窗口时输出到新文件。工具不覆盖旧输出，不把
+缺少后段采集当成后段零流量，不把 producer terminal 当纯模型计时，也不自动裁定性能验收。
+若同负载、同缓存阶段仍显著退化，补充关联请求的排队/执行/缓存保存/传输/D 调度时间；
+在内网专用容器按需采集短段 NPU profile，profile 运行与正式性能统计分开，避免采集开销混入结果。
+
 ## 6. 普通 wheel 与 sdist 重建门槛
 
 开发态测试成功仍不等于发行制品可用。在构建容器执行：

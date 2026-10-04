@@ -1,0 +1,923 @@
+{
+  "schema_version": 1,
+  "scope": "log_evidence_not_performance_acceptance",
+  "requested_window_seconds": 250,
+  "nodes": {
+    "P0": {
+      "matched_window_seconds": 250,
+      "baseline": {
+        "file": {
+          "path": "p3_logs/logs_all_success/7.150.7.133_P_dp0_port7910.log",
+          "bytes": 16060584,
+          "sha256": "e2800db096197d8e25c7886c8e883f172b1e5afa210708092d780bd23524ca2b"
+        },
+        "clock_domain": "7-133:bdfc3e54-24ec-4bc1-b4b7-9aa1610e78cf",
+        "anchor_lookup_line": 1089,
+        "coverage_seconds": 979.1113239998817,
+        "window_seconds": 250,
+        "terminal_transfers": 22,
+        "completed_prompt_tokens": 1303980,
+        "completed_uncached_tokens": 1178028,
+        "closed_request_token_rate_estimate": 4712.112,
+        "duplicate_terminal_events": 0,
+        "unmatched_terminals": 0,
+        "unsupported_terminals": 0,
+        "terminal_outcomes": {
+          "PERSISTENT_ONLY": 22
+        },
+        "early_lookup_cache": {
+          "lookup_events": 24,
+          "prompt_tokens": 1388154,
+          "lmcache_cached_tokens": 144384,
+          "event_weighted_hit_fraction": 0.10401151457259065
+        },
+        "later_lookup_cache": {
+          "lookup_events": 134,
+          "prompt_tokens": 7979857,
+          "lmcache_cached_tokens": 7234560,
+          "event_weighted_hit_fraction": 0.906602712304243
+        },
+        "completions": [
+          {
+            "req_id": "chatcmpl-7095e048-7322-4d8f-9b8c-75b8a27b8106-b3b15a1a",
+            "lookup_line": 1089,
+            "terminal_line": 1846,
+            "prompt_tokens": 46591,
+            "uncached_tokens": 46591
+          },
+          {
+            "req_id": "chatcmpl-4367bf15-74f7-47c6-bc02-b4eca1dbaf53-b71a1414",
+            "lookup_line": 1767,
+            "terminal_line": 2441,
+            "prompt_tokens": 84846,
+            "uncached_tokens": 84846
+          },
+          {
+            "req_id": "chatcmpl-9c2e45bb-f0fc-47fd-9625-720f650a407e-86fa2a5d",
+            "lookup_line": 2367,
+            "terminal_line": 2687,
+            "prompt_tokens": 35954,
+            "uncached_tokens": 35954
+          },
+          {
+            "req_id": "chatcmpl-e0c202e1-c88c-4f6b-90af-21861f3de431-a185f345",
+            "lookup_line": 2613,
+            "terminal_line": 2960,
+            "prompt_tokens": 20233,
+            "uncached_tokens": 20233
+          },
+          {
+            "req_id": "chatcmpl-33890866-9adc-43f1-94e7-27ba6cefe29d-a56e9734",
+            "lookup_line": 2781,
+            "terminal_line": 3347,
+            "prompt_tokens": 68084,
+            "uncached_tokens": 51700
+          },
+          {
+            "req_id": "chatcmpl-bd783366-ae4b-4576-98f1-8f8c71f04730-a384de20",
+            "lookup_line": 3267,
+            "terminal_line": 3808,
+            "prompt_tokens": 67809,
+            "uncached_tokens": 67809
+          },
+          {
+            "req_id": "chatcmpl-d9a2389d-7140-44e0-951d-ceefc457e83c-baa274e9",
+            "lookup_line": 3734,
+            "terminal_line": 4331,
+            "prompt_tokens": 57557,
+            "uncached_tokens": 57557
+          },
+          {
+            "req_id": "chatcmpl-91f5e6fe-23b7-42a3-b6a7-32993f592b7d-8cef877c",
+            "lookup_line": 4169,
+            "terminal_line": 4614,
+            "prompt_tokens": 55061,
+            "uncached_tokens": 42773
+          },
+          {
+            "req_id": "chatcmpl-96f661b4-48c7-47d6-ad8d-1bba34a5a774-941c80e9",
+            "lookup_line": 4543,
+            "terminal_line": 5192,
+            "prompt_tokens": 71548,
+            "uncached_tokens": 71548
+          },
+          {
+            "req_id": "chatcmpl-5af08ca5-2b8f-4bf3-ab3a-87f4ecc16fb3-a9b631cc",
+            "lookup_line": 5029,
+            "terminal_line": 5369,
+            "prompt_tokens": 51059,
+            "uncached_tokens": 24435
+          },
+          {
+            "req_id": "chatcmpl-a109d42b-4778-43c3-8404-3ca50d318e8b-aa32f54a",
+            "lookup_line": 5303,
+            "terminal_line": 5810,
+            "prompt_tokens": 60717,
+            "uncached_tokens": 60717
+          },
+          {
+            "req_id": "chatcmpl-bd359183-6719-4740-a7d1-843dcb8f96a5-8ca6bb95",
+            "lookup_line": 5731,
+            "terminal_line": 6001,
+            "prompt_tokens": 25109,
+            "uncached_tokens": 25109
+          },
+          {
+            "req_id": "chatcmpl-6eec1e6a-fd2e-461e-ba9e-c25ffcd10487-98b0827a",
+            "lookup_line": 5928,
+            "terminal_line": 6441,
+            "prompt_tokens": 59907,
+            "uncached_tokens": 59907
+          },
+          {
+            "req_id": "chatcmpl-67cc5c7a-f1b6-4d27-9e3f-40f39f66abb1-867ab711",
+            "lookup_line": 6363,
+            "terminal_line": 7160,
+            "prompt_tokens": 89896,
+            "uncached_tokens": 89896
+          },
+          {
+            "req_id": "chatcmpl-bcc18975-0825-4294-9ca9-88bb0841f1a2-967e9493",
+            "lookup_line": 6990,
+            "terminal_line": 8004,
+            "prompt_tokens": 126146,
+            "uncached_tokens": 106690
+          },
+          {
+            "req_id": "chatcmpl-93cd7bf1-04e3-43c9-9b4d-510ae663d490-a4d7c6ef",
+            "lookup_line": 7816,
+            "terminal_line": 8487,
+            "prompt_tokens": 94857,
+            "uncached_tokens": 73353
+          },
+          {
+            "req_id": "chatcmpl-bef876d8-c1c6-4e5a-a47a-250627df65bd-a4eb73e8",
+            "lookup_line": 8415,
+            "terminal_line": 8901,
+            "prompt_tokens": 46957,
+            "uncached_tokens": 46957
+          },
+          {
+            "req_id": "chatcmpl-e704c882-4ce1-441f-ab25-4995414346c5-bf692b5f",
+            "lookup_line": 8740,
+            "terminal_line": 9410,
+            "prompt_tokens": 67467,
+            "uncached_tokens": 65419
+          },
+          {
+            "req_id": "chatcmpl-9d94c8c3-9586-46cd-88fc-917471991eb4-83f9fc36",
+            "lookup_line": 9260,
+            "terminal_line": 9628,
+            "prompt_tokens": 49115,
+            "uncached_tokens": 28635
+          },
+          {
+            "req_id": "chatcmpl-750086ce-fd7b-489c-a63e-5fd4189e5c12-b6fed101",
+            "lookup_line": 9555,
+            "terminal_line": 9933,
+            "prompt_tokens": 39247,
+            "uncached_tokens": 39247
+          },
+          {
+            "req_id": "chatcmpl-49e27acc-ac78-4044-827c-0c30dfd6f8a5-a6d39a3b",
+            "lookup_line": 9854,
+            "terminal_line": 10238,
+            "prompt_tokens": 27638,
+            "uncached_tokens": 27638
+          },
+          {
+            "req_id": "chatcmpl-7234cb3f-4b54-4640-8348-085756bcb641-a37ba60f",
+            "lookup_line": 10078,
+            "terminal_line": 10597,
+            "prompt_tokens": 58182,
+            "uncached_tokens": 51014
+          }
+        ]
+      },
+      "candidate": {
+        "file": {
+          "path": "p4_logs/logs_all_prefill_lower/7.150.7.133_P_dp0_port7910.log",
+          "bytes": 5873555,
+          "sha256": "c363739776fee2d8320864f0578e1319f088a2fed1557c5b42181f0c0e59960f"
+        },
+        "clock_domain": "7-133:bdfc3e54-24ec-4bc1-b4b7-9aa1610e78cf",
+        "anchor_lookup_line": 1079,
+        "coverage_seconds": 259.8259369997978,
+        "window_seconds": 250,
+        "terminal_transfers": 19,
+        "completed_prompt_tokens": 1316662,
+        "completed_uncached_tokens": 1180470,
+        "closed_request_token_rate_estimate": 4721.88,
+        "duplicate_terminal_events": 0,
+        "unmatched_terminals": 0,
+        "unsupported_terminals": 0,
+        "terminal_outcomes": {
+          "PERSISTENT_ONLY": 19
+        },
+        "early_lookup_cache": {
+          "lookup_events": 20,
+          "prompt_tokens": 1374844,
+          "lmcache_cached_tokens": 143360,
+          "event_weighted_hit_fraction": 0.10427364850121178
+        },
+        "later_lookup_cache": {
+          "lookup_events": 2,
+          "prompt_tokens": 64381,
+          "lmcache_cached_tokens": 8192,
+          "event_weighted_hit_fraction": 0.12724250943601373
+        },
+        "completions": [
+          {
+            "req_id": "chatcmpl-27924a6c-98d7-4aab-a4eb-df5feb853320-aae1b8e6",
+            "lookup_line": 1079,
+            "terminal_line": 1982,
+            "prompt_tokens": 68084,
+            "uncached_tokens": 68084
+          },
+          {
+            "req_id": "chatcmpl-c549c210-0353-42ab-9ce6-24300db3d2fa-8dad5329",
+            "lookup_line": 1903,
+            "terminal_line": 2177,
+            "prompt_tokens": 22781,
+            "uncached_tokens": 22781
+          },
+          {
+            "req_id": "chatcmpl-1888d9fa-a176-4529-829d-504de0deb5f6-b7441412",
+            "lookup_line": 2100,
+            "terminal_line": 2589,
+            "prompt_tokens": 57557,
+            "uncached_tokens": 57557
+          },
+          {
+            "req_id": "chatcmpl-d0974f66-5e07-4911-8002-5ae8febe4870-8f0d6736",
+            "lookup_line": 2511,
+            "terminal_line": 3173,
+            "prompt_tokens": 71548,
+            "uncached_tokens": 71548
+          },
+          {
+            "req_id": "chatcmpl-8b093f13-037d-4bc0-86e7-f702688145cd-92b6a03a",
+            "lookup_line": 3005,
+            "terminal_line": 3558,
+            "prompt_tokens": 67809,
+            "uncached_tokens": 51425
+          },
+          {
+            "req_id": "chatcmpl-69e6ead4-2968-4b05-9c4d-ef753e6711a6-84f46120",
+            "lookup_line": 3479,
+            "terminal_line": 3833,
+            "prompt_tokens": 20233,
+            "uncached_tokens": 20233
+          },
+          {
+            "req_id": "chatcmpl-37a134fe-bb8f-472e-9d58-5b5d819cf995-b604c0f1",
+            "lookup_line": 3648,
+            "terminal_line": 4040,
+            "prompt_tokens": 46591,
+            "uncached_tokens": 30207
+          },
+          {
+            "req_id": "chatcmpl-b2fc77d3-067c-4041-bdfa-14e278cb037c-9db4fd06",
+            "lookup_line": 3967,
+            "terminal_line": 4848,
+            "prompt_tokens": 96977,
+            "uncached_tokens": 96977
+          },
+          {
+            "req_id": "chatcmpl-356c00dd-23c2-4c80-b0bb-1d66951ce7a5-a4415246",
+            "lookup_line": 4642,
+            "terminal_line": 5421,
+            "prompt_tokens": 117720,
+            "uncached_tokens": 71640
+          },
+          {
+            "req_id": "chatcmpl-dac072f9-5832-464a-aca0-8e386074ceb0-99234fc6",
+            "lookup_line": 5263,
+            "terminal_line": 5898,
+            "prompt_tokens": 75504,
+            "uncached_tokens": 74480
+          },
+          {
+            "req_id": "chatcmpl-e816cfbe-2604-45a8-b109-27d66e99a07c-808ddc6a",
+            "lookup_line": 5831,
+            "terminal_line": 6208,
+            "prompt_tokens": 28984,
+            "uncached_tokens": 28984
+          },
+          {
+            "req_id": "chatcmpl-2672d1a9-ecc3-4495-9bf7-2798619ce4be-8c810be5",
+            "lookup_line": 6043,
+            "terminal_line": 6457,
+            "prompt_tokens": 53004,
+            "uncached_tokens": 31500
+          },
+          {
+            "req_id": "chatcmpl-1208c7da-1613-4577-af45-25df14f92649-a1d59e90",
+            "lookup_line": 6380,
+            "terminal_line": 6652,
+            "prompt_tokens": 23149,
+            "uncached_tokens": 23149
+          },
+          {
+            "req_id": "chatcmpl-23ce9a36-a4de-486a-8ad7-37b00d82d3c7-8f733ab4",
+            "lookup_line": 6574,
+            "terminal_line": 7362,
+            "prompt_tokens": 89896,
+            "uncached_tokens": 89896
+          },
+          {
+            "req_id": "chatcmpl-6b329866-583a-4cd3-9add-b70264d87556-b1b7d981",
+            "lookup_line": 7202,
+            "terminal_line": 8377,
+            "prompt_tokens": 138309,
+            "uncached_tokens": 135237
+          },
+          {
+            "req_id": "chatcmpl-ef8d0777-9c34-4c43-8e3e-9eaa64112c0c-ad62cc89",
+            "lookup_line": 8210,
+            "terminal_line": 8937,
+            "prompt_tokens": 96414,
+            "uncached_tokens": 73886
+          },
+          {
+            "req_id": "chatcmpl-dd25055a-6508-4220-8b18-b5cb23621955-862e3594",
+            "lookup_line": 8788,
+            "terminal_line": 9491,
+            "prompt_tokens": 67467,
+            "uncached_tokens": 65419
+          },
+          {
+            "req_id": "chatcmpl-f3c85309-e379-4a90-a487-76840daca6e5-83ecab9b",
+            "lookup_line": 9325,
+            "terminal_line": 9771,
+            "prompt_tokens": 46957,
+            "uncached_tokens": 39789
+          },
+          {
+            "req_id": "chatcmpl-3aa9fd16-a5ce-4dda-9bba-c11f6b306f60-9c654255",
+            "lookup_line": 9702,
+            "terminal_line": 10731,
+            "prompt_tokens": 127678,
+            "uncached_tokens": 127678
+          }
+        ]
+      }
+    },
+    "P1": {
+      "matched_window_seconds": 250,
+      "baseline": {
+        "file": {
+          "path": "p3_logs/logs_all_success/7.150.5.207_P_dp1_port7910.log",
+          "bytes": 14710733,
+          "sha256": "b1886e3ea1cfbeef43a749b4d3156b5c3d22538b99f70739bdcfe9c88d058751"
+        },
+        "clock_domain": "node2:e4e13899-f1af-4694-a8d4-a2b0e180431f",
+        "anchor_lookup_line": 896,
+        "coverage_seconds": 943.1516420001983,
+        "window_seconds": 250,
+        "terminal_transfers": 20,
+        "completed_prompt_tokens": 1334290,
+        "completed_uncached_tokens": 1179666,
+        "closed_request_token_rate_estimate": 4718.664,
+        "duplicate_terminal_events": 0,
+        "unmatched_terminals": 0,
+        "unsupported_terminals": 0,
+        "terminal_outcomes": {
+          "PERSISTENT_ONLY": 20
+        },
+        "early_lookup_cache": {
+          "lookup_events": 21,
+          "prompt_tokens": 1375636,
+          "lmcache_cached_tokens": 161792,
+          "event_weighted_hit_fraction": 0.11761250795995452
+        },
+        "later_lookup_cache": {
+          "lookup_events": 100,
+          "prompt_tokens": 5702761,
+          "lmcache_cached_tokens": 4714211,
+          "event_weighted_hit_fraction": 0.8266541417394135
+        },
+        "completions": [
+          {
+            "req_id": "chatcmpl-0d8b4135-2a93-41f9-bdb2-3702fe0b96fd-8d07335c",
+            "lookup_line": 896,
+            "terminal_line": 1499,
+            "prompt_tokens": 23267,
+            "uncached_tokens": 23267
+          },
+          {
+            "req_id": "chatcmpl-6740c535-1f23-481f-b5a9-36335d95f888-be1b3704",
+            "lookup_line": 1421,
+            "terminal_line": 1695,
+            "prompt_tokens": 22781,
+            "uncached_tokens": 22781
+          },
+          {
+            "req_id": "chatcmpl-dec4e4f6-ba42-4294-8602-5b8e333d9209-81631753",
+            "lookup_line": 1616,
+            "terminal_line": 1891,
+            "prompt_tokens": 25168,
+            "uncached_tokens": 25168
+          },
+          {
+            "req_id": "chatcmpl-e9aa8292-6eb9-45b7-a59e-cdcd17f88f41-8d1e6f14",
+            "lookup_line": 1813,
+            "terminal_line": 2668,
+            "prompt_tokens": 96977,
+            "uncached_tokens": 96977
+          },
+          {
+            "req_id": "chatcmpl-ace38459-9106-4067-90f6-3c33e7ba5d32-90afd185",
+            "lookup_line": 2495,
+            "terminal_line": 3162,
+            "prompt_tokens": 117720,
+            "uncached_tokens": 71640
+          },
+          {
+            "req_id": "chatcmpl-35751bd0-c574-4096-99d4-57100969929b-add19496",
+            "lookup_line": 3083,
+            "terminal_line": 3484,
+            "prompt_tokens": 30536,
+            "uncached_tokens": 30536
+          },
+          {
+            "req_id": "chatcmpl-c2956e89-2676-48b4-96a2-8edeffe76687-a7d27877",
+            "lookup_line": 3333,
+            "terminal_line": 3597,
+            "prompt_tokens": 21594,
+            "uncached_tokens": 15450
+          },
+          {
+            "req_id": "chatcmpl-31816cde-336d-4f4e-9d7d-865dafcc36e7-9ace4833",
+            "lookup_line": 3521,
+            "terminal_line": 4262,
+            "prompt_tokens": 81693,
+            "uncached_tokens": 81693
+          },
+          {
+            "req_id": "chatcmpl-8a4114b6-4b88-4090-86a0-a10d42341912-a90be68e",
+            "lookup_line": 4092,
+            "terminal_line": 4700,
+            "prompt_tokens": 77827,
+            "uncached_tokens": 61443
+          },
+          {
+            "req_id": "chatcmpl-c73eafd0-e62a-47cc-bb47-b9424dab41ee-a100002c",
+            "lookup_line": 4622,
+            "terminal_line": 5487,
+            "prompt_tokens": 103368,
+            "uncached_tokens": 103368
+          },
+          {
+            "req_id": "chatcmpl-5c78d3ba-f6aa-4314-87a5-17c253dd5f07-81d14ed5",
+            "lookup_line": 5330,
+            "terminal_line": 5991,
+            "prompt_tokens": 75504,
+            "uncached_tokens": 74480
+          },
+          {
+            "req_id": "chatcmpl-cd6954d0-541f-478f-9b6d-cf7bfb04d200-983bd612",
+            "lookup_line": 5922,
+            "terminal_line": 6214,
+            "prompt_tokens": 28984,
+            "uncached_tokens": 28984
+          },
+          {
+            "req_id": "chatcmpl-1fb2cb74-54a7-4d45-a139-7abcbd4619e8-bc1d8ed4",
+            "lookup_line": 6135,
+            "terminal_line": 6471,
+            "prompt_tokens": 23149,
+            "uncached_tokens": 23149
+          },
+          {
+            "req_id": "chatcmpl-4654a2b1-dddf-4560-b8c0-a486842ee928-8cf8b981",
+            "lookup_line": 6306,
+            "terminal_line": 6808,
+            "prompt_tokens": 53004,
+            "uncached_tokens": 31500
+          },
+          {
+            "req_id": "chatcmpl-62f62e5a-fe5c-4abc-9e51-6f7848a88c32-b6f0115f",
+            "lookup_line": 6643,
+            "terminal_line": 7144,
+            "prompt_tokens": 52132,
+            "uncached_tokens": 36772
+          },
+          {
+            "req_id": "chatcmpl-f1853a61-ff7d-4894-847a-0e724a6d9468-863b99cb",
+            "lookup_line": 6994,
+            "terminal_line": 8160,
+            "prompt_tokens": 138309,
+            "uncached_tokens": 135237
+          },
+          {
+            "req_id": "chatcmpl-7ff92302-1054-409e-8cd1-f07b426699cb-91f53b96",
+            "lookup_line": 7992,
+            "terminal_line": 8722,
+            "prompt_tokens": 96414,
+            "uncached_tokens": 73886
+          },
+          {
+            "req_id": "chatcmpl-326fcb26-adac-4f4c-b7dc-caa02866af0d-b78dab16",
+            "lookup_line": 8569,
+            "terminal_line": 8980,
+            "prompt_tokens": 36081,
+            "uncached_tokens": 20721
+          },
+          {
+            "req_id": "chatcmpl-68c77b72-6f7d-4713-80e7-2261cc8ecf2e-89a1c293",
+            "lookup_line": 8814,
+            "terminal_line": 9582,
+            "prompt_tokens": 102104,
+            "uncached_tokens": 94936
+          },
+          {
+            "req_id": "chatcmpl-e48f7ce0-737d-4247-ad46-cb119e86dfbc-a0b23227",
+            "lookup_line": 9515,
+            "terminal_line": 10564,
+            "prompt_tokens": 127678,
+            "uncached_tokens": 127678
+          }
+        ]
+      },
+      "candidate": {
+        "file": {
+          "path": "p4_logs/logs_all_prefill_lower/7.150.5.207_P_dp1_port7910.log",
+          "bytes": 5777368,
+          "sha256": "d1b5107bb3bb4f3ea2859d8eed6a3813a7ccd3bcf7762ea13bfd152fc5613e71"
+        },
+        "clock_domain": "node2:e4e13899-f1af-4694-a8d4-a2b0e180431f",
+        "anchor_lookup_line": 885,
+        "coverage_seconds": 257.2116430001259,
+        "window_seconds": 250,
+        "terminal_transfers": 23,
+        "completed_prompt_tokens": 1304772,
+        "completed_uncached_tokens": 1160388,
+        "closed_request_token_rate_estimate": 4641.552,
+        "duplicate_terminal_events": 0,
+        "unmatched_terminals": 0,
+        "unsupported_terminals": 0,
+        "terminal_outcomes": {
+          "PERSISTENT_ONLY": 23
+        },
+        "early_lookup_cache": {
+          "lookup_events": 25,
+          "prompt_tokens": 1413984,
+          "lmcache_cached_tokens": 162816,
+          "event_weighted_hit_fraction": 0.1151469889333967
+        },
+        "later_lookup_cache": {
+          "lookup_events": 1,
+          "prompt_tokens": 24763,
+          "lmcache_cached_tokens": 0,
+          "event_weighted_hit_fraction": 0.0
+        },
+        "completions": [
+          {
+            "req_id": "chatcmpl-8f141e90-d6c1-4bd6-b1c5-eea5810d75b6-bef946fb",
+            "lookup_line": 885,
+            "terminal_line": 1481,
+            "prompt_tokens": 23267,
+            "uncached_tokens": 23267
+          },
+          {
+            "req_id": "chatcmpl-a232687d-11a7-48bc-8fa1-e29321858a5a-8eb5f4b4",
+            "lookup_line": 1403,
+            "terminal_line": 1726,
+            "prompt_tokens": 30536,
+            "uncached_tokens": 30536
+          },
+          {
+            "req_id": "chatcmpl-1ef106d7-f7a3-4fe7-a100-2409fdc10aaf-89c42eed",
+            "lookup_line": 1653,
+            "terminal_line": 1973,
+            "prompt_tokens": 35954,
+            "uncached_tokens": 35954
+          },
+          {
+            "req_id": "chatcmpl-aaaba2e9-be6b-4397-85ef-454a0f1e9463-a84e3d77",
+            "lookup_line": 1899,
+            "terminal_line": 2516,
+            "prompt_tokens": 77827,
+            "uncached_tokens": 77827
+          },
+          {
+            "req_id": "chatcmpl-4d6d30fc-8fdf-4bce-9d3f-6bca8124313f-828ff9c0",
+            "lookup_line": 2444,
+            "terminal_line": 3249,
+            "prompt_tokens": 103368,
+            "uncached_tokens": 103368
+          },
+          {
+            "req_id": "chatcmpl-dfc47146-8356-4ad9-81a2-15889b70ca36-9ffda88d",
+            "lookup_line": 3173,
+            "terminal_line": 3533,
+            "prompt_tokens": 25168,
+            "uncached_tokens": 25168
+          },
+          {
+            "req_id": "chatcmpl-3b9c02a7-d24c-4123-8cac-723b50d8beaa-b2adba7a",
+            "lookup_line": 3365,
+            "terminal_line": 3665,
+            "prompt_tokens": 21594,
+            "uncached_tokens": 15450
+          },
+          {
+            "req_id": "chatcmpl-3c375519-5d11-42c3-80c0-d9a6e155adb7-b3812e98",
+            "lookup_line": 3594,
+            "terminal_line": 4164,
+            "prompt_tokens": 55061,
+            "uncached_tokens": 55061
+          },
+          {
+            "req_id": "chatcmpl-ee1d7974-f1fa-4b13-bb7c-2f44a1f2dc3f-b5e6b756",
+            "lookup_line": 3973,
+            "terminal_line": 4346,
+            "prompt_tokens": 51059,
+            "uncached_tokens": 24435
+          },
+          {
+            "req_id": "chatcmpl-e57ee5e5-bc40-406c-9d84-b0e11839f85d-beb29181",
+            "lookup_line": 4275,
+            "terminal_line": 4944,
+            "prompt_tokens": 84846,
+            "uncached_tokens": 84846
+          },
+          {
+            "req_id": "chatcmpl-e4eaffdd-a378-45c0-9416-b2d803ef6e34-8062617a",
+            "lookup_line": 4870,
+            "terminal_line": 5140,
+            "prompt_tokens": 25109,
+            "uncached_tokens": 25109
+          },
+          {
+            "req_id": "chatcmpl-76e9807b-e6eb-4686-94e2-abc80a61d306-b90148fc",
+            "lookup_line": 5064,
+            "terminal_line": 5649,
+            "prompt_tokens": 59907,
+            "uncached_tokens": 59907
+          },
+          {
+            "req_id": "chatcmpl-8e575fe2-f35c-4c3a-86e0-0e6fdbcdfb31-bd1d9e0e",
+            "lookup_line": 5474,
+            "terminal_line": 6101,
+            "prompt_tokens": 81693,
+            "uncached_tokens": 69405
+          },
+          {
+            "req_id": "chatcmpl-170f2c53-148c-4e1f-ad77-b7a6eacaaef7-a55534bf",
+            "lookup_line": 6035,
+            "terminal_line": 6632,
+            "prompt_tokens": 60717,
+            "uncached_tokens": 60717
+          },
+          {
+            "req_id": "chatcmpl-d8a89dc4-7caa-4f3f-85ef-2e65d994d838-a8bf1b1a",
+            "lookup_line": 6462,
+            "terminal_line": 7452,
+            "prompt_tokens": 126146,
+            "uncached_tokens": 106690
+          },
+          {
+            "req_id": "chatcmpl-03776635-5e3c-4830-afd4-6f9f07f0bde4-a823eff6",
+            "lookup_line": 7289,
+            "terminal_line": 7813,
+            "prompt_tokens": 52132,
+            "uncached_tokens": 36772
+          },
+          {
+            "req_id": "chatcmpl-f5e34346-f602-4552-a19f-13d62147d701-930728d7",
+            "lookup_line": 7637,
+            "terminal_line": 8378,
+            "prompt_tokens": 94857,
+            "uncached_tokens": 73353
+          },
+          {
+            "req_id": "chatcmpl-8bb8c16f-1adc-4dfa-9b5e-02f69cc71ce4-a022266a",
+            "lookup_line": 8226,
+            "terminal_line": 8548,
+            "prompt_tokens": 36081,
+            "uncached_tokens": 20721
+          },
+          {
+            "req_id": "chatcmpl-5e02896f-4dca-4105-88fb-a3041d4a6189-a469c174",
+            "lookup_line": 8469,
+            "terminal_line": 8852,
+            "prompt_tokens": 39247,
+            "uncached_tokens": 39247
+          },
+          {
+            "req_id": "chatcmpl-445572ac-51a6-4d99-847b-a2954b20897c-9bbcc392",
+            "lookup_line": 8773,
+            "terminal_line": 9641,
+            "prompt_tokens": 102104,
+            "uncached_tokens": 102104
+          },
+          {
+            "req_id": "chatcmpl-4c7656c1-fbd1-4cdb-8dfc-4653b75cd07b-b58043e0",
+            "lookup_line": 9481,
+            "terminal_line": 9946,
+            "prompt_tokens": 49115,
+            "uncached_tokens": 28635
+          },
+          {
+            "req_id": "chatcmpl-57e3be92-d7f0-4fbd-9863-889089671b85-b47909d2",
+            "lookup_line": 9786,
+            "terminal_line": 10197,
+            "prompt_tokens": 41346,
+            "uncached_tokens": 34178
+          },
+          {
+            "req_id": "chatcmpl-5968b2a5-027a-473e-956d-e55406a02512-bba25c99",
+            "lookup_line": 10119,
+            "terminal_line": 10419,
+            "prompt_tokens": 27638,
+            "uncached_tokens": 27638
+          }
+        ]
+      }
+    },
+    "D0": {
+      "matched_window_seconds": 250,
+      "baseline": {
+        "file": {
+          "path": "p3_logs/logs_all_success/7.150.1.218_D_dp0_port7920.log",
+          "bytes": 25057804,
+          "sha256": "2cb8efaa291a1a3a81737ab53f6faaa829ceff95ae154f5d0a3a3ad24fdd485d"
+        },
+        "coverage_seconds": 999.0,
+        "full_capture": {
+          "samples": 998,
+          "first_time": "10-03 15:00:37",
+          "last_time": "10-03 15:17:16",
+          "max_running": 12,
+          "max_waiting": 16,
+          "positive_waiting_samples": 671,
+          "first_positive_waiting": {
+            "time": "10-03 15:00:46",
+            "seconds": 23900446.0,
+            "running": 2,
+            "waiting": 1,
+            "line": 6427
+          }
+        },
+        "matched_window": {
+          "samples": 249,
+          "first_time": "10-03 15:00:37",
+          "last_time": "10-03 15:04:46",
+          "max_running": 7,
+          "max_waiting": 1,
+          "positive_waiting_samples": 16,
+          "first_positive_waiting": {
+            "time": "10-03 15:00:46",
+            "seconds": 23900446.0,
+            "running": 2,
+            "waiting": 1,
+            "line": 6427
+          }
+        }
+      },
+      "candidate": {
+        "file": {
+          "path": "p4_logs/logs_all_prefill_lower/7.150.1.218_D_dp0_port7920.log",
+          "bytes": 5310194,
+          "sha256": "05ace6f829c2229c9c47d1e34e883c6b898fc389481abcd237be141991cb7a6f"
+        },
+        "coverage_seconds": 251.0,
+        "full_capture": {
+          "samples": 238,
+          "first_time": "10-04 15:28:44",
+          "last_time": "10-04 15:32:55",
+          "max_running": 7,
+          "max_waiting": 1,
+          "positive_waiting_samples": 18,
+          "first_positive_waiting": {
+            "time": "10-04 15:28:50",
+            "seconds": 23988530.0,
+            "running": 1,
+            "waiting": 1,
+            "line": 5738
+          }
+        },
+        "matched_window": {
+          "samples": 236,
+          "first_time": "10-04 15:28:44",
+          "last_time": "10-04 15:32:53",
+          "max_running": 7,
+          "max_waiting": 1,
+          "positive_waiting_samples": 17,
+          "first_positive_waiting": {
+            "time": "10-04 15:28:50",
+            "seconds": 23988530.0,
+            "running": 1,
+            "waiting": 1,
+            "line": 5738
+          }
+        }
+      }
+    },
+    "D1": {
+      "matched_window_seconds": 232.0,
+      "baseline": {
+        "file": {
+          "path": "p3_logs/logs_all_success/7.150.3.14_D_dp1_port7920.log",
+          "bytes": 26797528,
+          "sha256": "6de26d95e388d30bf734954a541daa500b065901dfd60f63c0b699ca25fec81d"
+        },
+        "coverage_seconds": 955.0,
+        "full_capture": {
+          "samples": 954,
+          "first_time": "10-03 15:01:48",
+          "last_time": "10-03 15:17:43",
+          "max_running": 14,
+          "max_waiting": 26,
+          "positive_waiting_samples": 704,
+          "first_positive_waiting": {
+            "time": "10-03 15:01:53",
+            "seconds": 23900513.0,
+            "running": 1,
+            "waiting": 1,
+            "line": 5481
+          }
+        },
+        "matched_window": {
+          "samples": 232,
+          "first_time": "10-03 15:01:48",
+          "last_time": "10-03 15:05:39",
+          "max_running": 9,
+          "max_waiting": 2,
+          "positive_waiting_samples": 22,
+          "first_positive_waiting": {
+            "time": "10-03 15:01:53",
+            "seconds": 23900513.0,
+            "running": 1,
+            "waiting": 1,
+            "line": 5481
+          }
+        }
+      },
+      "candidate": {
+        "file": {
+          "path": "p4_logs/logs_all_prefill_lower/7.150.3.14_D_dp1_port7920.log",
+          "bytes": 4727135,
+          "sha256": "47823f1f7df5e31572819fc680decf3882ec66335117bf08653941d319d7b479"
+        },
+        "coverage_seconds": 232.0,
+        "full_capture": {
+          "samples": 232,
+          "first_time": "10-04 15:29:16",
+          "last_time": "10-04 15:33:08",
+          "max_running": 8,
+          "max_waiting": 1,
+          "positive_waiting_samples": 13,
+          "first_positive_waiting": {
+            "time": "10-04 15:29:16",
+            "seconds": 23988556.0,
+            "running": 0,
+            "waiting": 1,
+            "line": 5294
+          }
+        },
+        "matched_window": {
+          "samples": 231,
+          "first_time": "10-04 15:29:16",
+          "last_time": "10-04 15:33:07",
+          "max_running": 8,
+          "max_waiting": 1,
+          "positive_waiting_samples": 13,
+          "first_positive_waiting": {
+            "time": "10-04 15:29:16",
+            "seconds": 23988556.0,
+            "running": 0,
+            "waiting": 1,
+            "line": 5294
+          }
+        }
+      }
+    }
+  },
+  "warnings": [
+    "D1: shortened common D window to 232.0s",
+    "Identical auxiliary artifacts cannot establish a new candidate run"
+  ],
+  "limits": [
+    "Windows start independently per node; no cross-host clock subtraction.",
+    "D samples are instantaneous and may have gaps; not queue duration.",
+    "P terminal is persistence completion, not pure model/kernel timing.",
+    "Closed-request estimates omit in-flight boundary work and may count retries.",
+    "Lookup hit ratios are event-weighted, not deduplicated request hit rates.",
+    "No performance PASS/FAIL or full workload completion is inferred."
+  ],
+  "identical_auxiliary_files_excluded": [
+    {
+      "path": "p4_logs/logs_all_prefill_lower/7.150.3.14_ansible_test_tp8_dp2_20261003_150005.log",
+      "bytes": 45551,
+      "sha256": "46f1cef538a1294c463505c02736dd0d918a4a993c5cbf8c381178571ee32d39"
+    },
+    {
+      "path": "p4_logs/logs_all_prefill_lower/7.150.3.14_benchmark_20261003_151741.json",
+      "bytes": 333190,
+      "sha256": "752d1d2b34312989f189f0777782dcda968dd468685282254fd7fbecc990fb64"
+    }
+  ]
+}
