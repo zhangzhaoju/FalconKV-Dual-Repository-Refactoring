@@ -1,0 +1,144 @@
+{
+  "scope": "selected_host_contracts_not_full_test_tree_or_NPU_acceptance",
+  "commands": [
+    [
+      "/usr/bin/python3.12",
+      "-B",
+      "tools/check_native_layout.py",
+      "--source-only"
+    ],
+    [
+      "/usr/bin/python3.12",
+      "-B",
+      "tools/check_p4_profile.py"
+    ],
+    [
+      "/usr/bin/python3.12",
+      "-B",
+      "tools/check_npu_native.py"
+    ],
+    [
+      "/usr/bin/python3.12",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-o",
+      "log_cli=false",
+      "--noconftest",
+      "-p",
+      "no:cacheprovider",
+      "tests/standalone",
+      "--ignore=tests/standalone/test_glm52_metadata.py",
+      "--ignore=tests/standalone/test_capture_submission.py",
+      "--ignore=tests/standalone/test_checkpoint_allocation_budget.py",
+      "--ignore=tests/standalone/test_checkpoint_miss_retry.py",
+      "--ignore=tests/standalone/test_checkpoint_page_keys.py",
+      "--ignore=tests/standalone/test_dense_checkpoint_partial_pages.py",
+      "--ignore=tests/standalone/test_local_checkpoint_restore.py",
+      "--ignore=tests/standalone/test_preemption_checkpoint.py",
+      "--ignore=tests/standalone/test_checkpoint_initialization.py",
+      "tests/v1/test_cache_engine_close_cpu.py",
+      "tests/v1/test_direct_store_plan.py",
+      "tests/v1/test_remote_fill_config.py"
+    ]
+  ],
+  "deferred_tensor_tests": [
+    "tests/standalone/test_glm52_metadata.py",
+    "tests/standalone/test_capture_submission.py",
+    "tests/standalone/test_checkpoint_allocation_budget.py",
+    "tests/standalone/test_checkpoint_miss_retry.py",
+    "tests/standalone/test_checkpoint_page_keys.py",
+    "tests/standalone/test_dense_checkpoint_partial_pages.py",
+    "tests/standalone/test_local_checkpoint_restore.py",
+    "tests/standalone/test_preemption_checkpoint.py",
+    "tests/standalone/test_checkpoint_initialization.py"
+  ],
+  "note": "Requires the paired repositories as sibling vllm/ and LMCache/ checkouts. Full tensor/NPU tests remain intranet work."
+}
+{
+  "scope": "source_layout_not_native_build_ABI_or_NPU",
+  "primary": "lmcache",
+  "version": "0.4.3+ascend.layout1",
+  "runtime_files_checked": 324,
+  "native_files_checked": 56,
+  "migration_entries": 149,
+  "missing_materials": [
+    "third_party/kvcache-ops"
+  ],
+  "errors": [],
+  "passed": true
+}
+{
+  "scope": "P4_static_source_not_build_ABI_or_runtime",
+  "errors": [],
+  "dynamic_or_native": [
+    {
+      "file": "lmcache/utils.py",
+      "line": 228,
+      "import": "lmcache._version"
+    },
+    {
+      "file": "lmcache/v1/system_detection.py",
+      "line": 16,
+      "module": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "line": 13405,
+      "import": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/resp_client.py",
+      "line": 21,
+      "module": "lmcache.lmcache_redis"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/native_clients/resp_client.py",
+      "line": 11,
+      "module": "lmcache.lmcache_redis"
+    }
+  ],
+  "passed": true,
+  "package": "lmcache",
+  "python_files": 311,
+  "version": "0.4.3+ascend.layout1"
+}
+{
+  "scope": "static_source_not_build_ABI_or_NPU",
+  "python_files": 311,
+  "method_contracts": 663,
+  "merged_classes": 6,
+  "errors": [],
+  "passed": true
+}
+
+==================================== ERRORS ====================================
+________________ ERROR collecting v1/test_direct_store_plan.py _________________
+ImportError while importing test module '/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tests/v1/test_direct_store_plan.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/v1/test_direct_store_plan.py:8: in <module>
+    from lmcache.v1.direct_store_plan import (
+lmcache/v1/direct_store_plan.py:15: in <module>
+    from lmcache.v1.remote_fill import ControlPage
+lmcache/v1/remote_fill/__init__.py:13: in <module>
+    from .codec import (
+lmcache/v1/remote_fill/codec.py:9: in <module>
+    import msgspec
+E   ModuleNotFoundError: No module named 'msgspec'
+=========================== short test summary info ============================
+ERROR tests/v1/test_direct_store_plan.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.41s
+Traceback (most recent call last):
+  File "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tools/run_layout_host_checks.py", line 98, in <module>
+    main()
+  File "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tools/run_layout_host_checks.py", line 94, in main
+    subprocess.run(command, cwd=ROOT, env=env, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3.12', '-B', '-m', 'pytest', '-q', '-o', 'log_cli=false', '--noconftest', '-p', 'no:cacheprovider', 'tests/standalone', '--ignore=tests/standalone/test_glm52_metadata.py', '--ignore=tests/standalone/test_capture_submission.py', '--ignore=tests/standalone/test_checkpoint_allocation_budget.py', '--ignore=tests/standalone/test_checkpoint_miss_retry.py', '--ignore=tests/standalone/test_checkpoint_page_keys.py', '--ignore=tests/standalone/test_dense_checkpoint_partial_pages.py', '--ignore=tests/standalone/test_local_checkpoint_restore.py', '--ignore=tests/standalone/test_preemption_checkpoint.py', '--ignore=tests/standalone/test_checkpoint_initialization.py', 'tests/v1/test_cache_engine_close_cpu.py', 'tests/v1/test_direct_store_plan.py', 'tests/v1/test_remote_fill_config.py']' returned non-zero exit status 2.

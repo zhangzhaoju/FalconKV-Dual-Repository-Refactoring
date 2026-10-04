@@ -1,0 +1,31 @@
+{
+  "scope": "generated_HTML_structure_navigation_examples_and_local_links_not_browser_screenshot",
+  "pages": {
+    "index.html": {
+      "headings": [
+        "LMCache Native Ascend Layout\u00b6",
+        "LMCache Native Ascend Layout",
+        "Navigation",
+        "Related Topics",
+        "Quick search"
+      ],
+      "code_blocks": 0
+    },
+    "getting_started/native_layout.html": {
+      "headings": [
+        "Native repository layout and installation\u00b6",
+        "Directory ownership\u00b6",
+        "Install in a dedicated intranet environment\u00b6",
+        "Validation and rollback\u00b6",
+        "LMCache Native Ascend Layout",
+        "Navigation",
+        "Related Topics",
+        "Quick search"
+      ],
+      "code_blocks": 1
+    }
+  },
+  "local_links_checked": 22,
+  "errors": [],
+  "passed": true
+}

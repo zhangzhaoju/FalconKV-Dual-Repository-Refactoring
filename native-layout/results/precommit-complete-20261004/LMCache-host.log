@@ -1,0 +1,216 @@
+{
+  "scope": "selected_host_contracts_not_full_test_tree_or_NPU_acceptance",
+  "commands": [
+    [
+      "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+      "-B",
+      "tools/check_native_layout.py",
+      "--source-only"
+    ],
+    [
+      "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+      "-B",
+      "tools/check_p4_profile.py"
+    ],
+    [
+      "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+      "-B",
+      "tools/check_npu_native.py"
+    ],
+    [
+      "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-o",
+      "log_cli=false",
+      "--noconftest",
+      "-p",
+      "no:cacheprovider",
+      "tests/standalone",
+      "--ignore=tests/standalone/test_glm52_metadata.py",
+      "--ignore=tests/standalone/test_capture_submission.py",
+      "--ignore=tests/standalone/test_checkpoint_allocation_budget.py",
+      "--ignore=tests/standalone/test_checkpoint_miss_retry.py",
+      "--ignore=tests/standalone/test_checkpoint_page_keys.py",
+      "--ignore=tests/standalone/test_dense_checkpoint_partial_pages.py",
+      "--ignore=tests/standalone/test_local_checkpoint_restore.py",
+      "--ignore=tests/standalone/test_preemption_checkpoint.py",
+      "--ignore=tests/standalone/test_checkpoint_initialization.py",
+      "tests/v1/test_cache_engine_close_cpu.py",
+      "tests/v1/test_direct_store_plan.py",
+      "tests/v1/test_remote_fill_config.py"
+    ]
+  ],
+  "deferred_tensor_tests": [
+    "tests/standalone/test_glm52_metadata.py",
+    "tests/standalone/test_capture_submission.py",
+    "tests/standalone/test_checkpoint_allocation_budget.py",
+    "tests/standalone/test_checkpoint_miss_retry.py",
+    "tests/standalone/test_checkpoint_page_keys.py",
+    "tests/standalone/test_dense_checkpoint_partial_pages.py",
+    "tests/standalone/test_local_checkpoint_restore.py",
+    "tests/standalone/test_preemption_checkpoint.py",
+    "tests/standalone/test_checkpoint_initialization.py"
+  ],
+  "note": "Requires the paired repositories as sibling vllm/ and LMCache/ checkouts. Full tensor/NPU tests remain intranet work."
+}
+{
+  "scope": "source_layout_not_native_build_ABI_or_NPU",
+  "primary": "lmcache",
+  "version": "0.4.3+ascend.layout1",
+  "runtime_files_checked": 324,
+  "native_files_checked": 56,
+  "migration_entries": 149,
+  "missing_materials": [
+    "third_party/kvcache-ops"
+  ],
+  "errors": [],
+  "passed": true
+}
+{
+  "scope": "P4_static_source_not_build_ABI_or_runtime",
+  "errors": [],
+  "dynamic_or_native": [
+    {
+      "file": "lmcache/utils.py",
+      "line": 228,
+      "import": "lmcache._version"
+    },
+    {
+      "file": "lmcache/v1/system_detection.py",
+      "line": 16,
+      "module": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/integration/vllm/vllm_v1_adapter.py",
+      "line": 13405,
+      "import": "lmcache.c_ops"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/resp_client.py",
+      "line": 21,
+      "module": "lmcache.lmcache_redis"
+    },
+    {
+      "file": "lmcache/v1/storage_backend/native_clients/resp_client.py",
+      "line": 11,
+      "module": "lmcache.lmcache_redis"
+    }
+  ],
+  "passed": true,
+  "package": "lmcache",
+  "python_files": 311,
+  "version": "0.4.3+ascend.layout1"
+}
+{
+  "scope": "static_source_not_build_ABI_or_NPU",
+  "python_files": 311,
+  "method_contracts": 663,
+  "merged_classes": 6,
+  "errors": [],
+  "passed": true
+}
+........................................................................ [ 35%]
+..F.................................. [ 53%]
+..................................................................... [ 88%]
+........................                                                 [100%]
+=================================== FAILURES ===================================
+_ test_sdist_manifest_keeps_native_inputs_but_not_old_tree_or_git_control[.git/config] _
+
+tmp_path = PosixPath('/tmp/pytest-of-zhangzhaoju/pytest-26/test_sdist_manifest_keeps_nati1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7766531e1a60>
+git_control = '.git/config'
+
+    @pytest.mark.parametrize("git_control", [".git", ".git/config"])
+    def test_sdist_manifest_keeps_native_inputs_but_not_old_tree_or_git_control(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch, git_control: str
+    ) -> None:
+        # Exercise the actual setuptools MANIFEST rules, without package builds.
+        candidates = (
+            "LICENSE",
+            "README.md",
+            "pyproject.toml",
+            "setup.py",
+            "p1_build.py",
+            "p1_dev.py",
+            "CMakeLists.txt",
+            ".gitmodules",
+            "csrc/kernel.cpp",
+            "cmake/npu_extensions.cmake",
+            "submodule-materials.json",
+            "csrc/third_party/catlass/include/header.h",
+            f"csrc/third_party/catlass/{git_control}",
+            "third_party/kvcache-ops/kernel.cpp",
+            f"third_party/kvcache-ops/{git_control}",
+            "docs/design/layout-migration.json",
+            "ascend/old.py",
+            "build/old.so",
+            "dist/old.whl",
+            "tests/test_example.py",
+            "csrc/build/generated.cpp",
+            "csrc/output/generated.cpp",
+        )
+        for name in candidates:
+            path = tmp_path / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("fixture")
+        monkeypatch.chdir(tmp_path)
+        files = FileList()
+        files.findall()
+        for line in (ROOT / "MANIFEST.in").read_text().splitlines():
+            if line.strip():
+                files.process_template_line(line)
+        names = set(files.files)
+        assert {
+            "csrc/kernel.cpp",
+            "cmake/npu_extensions.cmake",
+            "submodule-materials.json",
+            "docs/design/layout-migration.json",
+        } <= names
+        if ROOT.name == "LMCache":
+            assert "third_party/kvcache-ops/kernel.cpp" in names
+        else:
+            assert "csrc/third_party/catlass/include/header.h" in names
+>       assert not any(
+            name.startswith(
+                ("ascend/", "build/", "dist/", "tests/", "csrc/build/", "csrc/output/")
+            )
+            or name.endswith("/.git")
+            or "/.git/" in name
+            for name in names
+        )
+E       assert not True
+E        +  where True = any(<generator object test_sdist_manifest_keeps_native_inputs_but_not_old_tree_or_git_control.<locals>.<genexpr> at 0x776655522400>)
+
+/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tests/standalone/test_native_layout.py:197: AssertionError
+------------------------------ Captured log call -------------------------------
+WARNING  root:egg_info.py:407 warning: no files found matching 'requirements/ascend.txt'
+WARNING  root:egg_info.py:407 warning: no files found matching 'requirements/build.txt'
+WARNING  root:egg_info.py:407 warning: no files found matching 'docs/p3-native-migration.json'
+WARNING  root:egg_info.py:407 warning: no files found matching 'docs/p4-retired-native-owners.json'
+WARNING  root:egg_info.py:407 warning: no directories found matching 'lmcache'
+WARNING  root:egg_info.py:407 warning: no files found matching 'check_p4*.py' under directory 'tools'
+WARNING  root:egg_info.py:407 warning: no files found matching 'check_npu*.py' under directory 'tools'
+WARNING  root:egg_info.py:407 warning: no files found matching 'check_native_layout.py' under directory 'tools'
+WARNING  root:egg_info.py:407 warning: no files found matching 'p4_*.py' under directory 'tools'
+WARNING  root:egg_info.py:407 warning: no previously-included files matching '__pycache__' found anywhere in distribution
+WARNING  root:egg_info.py:407 warning: no previously-included files matching '*.pyc' found anywhere in distribution
+WARNING  root:egg_info.py:407 warning: no previously-included files matching '*.pyo' found anywhere in distribution
+WARNING  root:egg_info.py:407 warning: no previously-included files matching '.git' found anywhere in distribution
+WARNING  root:egg_info.py:407 no previously-included directories found matching 'build'
+WARNING  root:egg_info.py:407 no previously-included directories found matching 'dist'
+WARNING  root:egg_info.py:407 no previously-included directories found matching 'third_party/kvcache-ops/build'
+WARNING  root:egg_info.py:407 no previously-included directories found matching 'third_party/kvcache-ops/output'
+=========================== short test summary info ============================
+FAILED tests/standalone/test_native_layout.py::test_sdist_manifest_keeps_native_inputs_but_not_old_tree_or_git_control[.git/config]
+1 failed, 201 passed, 38 subtests passed in 13.45s
+Traceback (most recent call last):
+  File "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tools/run_layout_host_checks.py", line 101, in <module>
+    main()
+  File "/home/zhangzhaoju/Learn/code/falconkv/p1-repos/LMCache/tools/run_layout_host_checks.py", line 97, in main
+    subprocess.run(command, cwd=ROOT, env=env, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python', '-B', '-m', 'pytest', '-q', '-o', 'log_cli=false', '--noconftest', '-p', 'no:cacheprovider', 'tests/standalone', '--ignore=tests/standalone/test_glm52_metadata.py', '--ignore=tests/standalone/test_capture_submission.py', '--ignore=tests/standalone/test_checkpoint_allocation_budget.py', '--ignore=tests/standalone/test_checkpoint_miss_retry.py', '--ignore=tests/standalone/test_checkpoint_page_keys.py', '--ignore=tests/standalone/test_dense_checkpoint_partial_pages.py', '--ignore=tests/standalone/test_local_checkpoint_restore.py', '--ignore=tests/standalone/test_preemption_checkpoint.py', '--ignore=tests/standalone/test_checkpoint_initialization.py', 'tests/v1/test_cache_engine_close_cpu.py', 'tests/v1/test_direct_store_plan.py', 'tests/v1/test_remote_fill_config.py']' returned non-zero exit status 1.

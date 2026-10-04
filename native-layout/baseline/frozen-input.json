@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "immutable_source_refs_not_full_P4_runtime_acceptance",
+  "frozen_tag": "p4-frozen-20261004",
+  "repositories": {
+    "vllm": {
+      "commit": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+      "tree": "03bf028f0c0b1d782e65e847de27fdc368aabffd",
+      "tag_object": "073f9ebf63d51689169bc7c9fcdbb854540a652e",
+      "refs_before_freeze": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "ba361feb8d13d2377698ec758cdf644fc00063be",
+        "refs/heads/backup/pre-p1-build-install-20260923": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "89a40e2a3e53465907763cfd8fa692723b45b2b0",
+        "refs/heads/fix/p2-npu-bootstrap": "e1b35d4f12fdc0cd975b8e990e146507c459d094",
+        "refs/heads/main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p1": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p2": "f1be323571e3ca2aab53992234045dd064d1967f",
+        "refs/heads/p3": "8767fe1121a085e8cefed03eeaa1444b55227521",
+        "refs/heads/p4": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+        "refs/tags/p3-frozen-20261003": "ef6097322e31420a22333f039e47617f7bad363c"
+      }
+    },
+    "LMCache": {
+      "commit": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+      "tree": "de9f03be149cc1e7f2ddd811c9a2d07e5f863b78",
+      "tag_object": "364023530ad965aef7621a97ae53160f5c1e1423",
+      "refs_before_freeze": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+        "refs/heads/backup/pre-p1-build-install-20260923": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "5b09009c5264cb61d204b7660ae400b4392db46a",
+        "refs/heads/main": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p1": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+        "refs/heads/p3": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+        "refs/heads/p4": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+        "refs/tags/p3-frozen-20261003": "41c9ad7024b74f417b9440b15a39b4506e96b122"
+      }
+    }
+  }
+}

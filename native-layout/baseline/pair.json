@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "branch": "refactor/native-layout",
+  "frozen_input_tag": "p4-frozen-20261004",
+  "scope": "native_repository_layout_only",
+  "source_host_status": "passed_on_paired_commits_see_results/final-20261004/summary.json",
+  "native_build_ABI_and_2P2D": "pending_intranet",
+  "pushed_by_this_task": false,
+  "repositories": {
+    "vllm": {
+      "commit": "18fde02dc54a432f81ce5350c3358429a40f4bd3",
+      "tree": "ca6361f08d9fee1580fbdbeaf3aefcccd8f50a54",
+      "parent": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+      "version": "0.18.0+ascend.layout1",
+      "frozen_input_commit": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+      "migration_manifest_sha256": "b13c6f50e0d46385a15d7e455068cfcb063d794a105e3befe0265516db0c2ab2",
+      "migration_entries": 648,
+      "actions": {
+        "retired": 46,
+        "move": 597,
+        "deduplicated": 5
+      },
+      "unchanged_runtime_files": 786,
+      "unchanged_native_files": 423,
+      "pinned_materials": [
+        {
+          "path": "csrc/third_party/catlass",
+          "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641"
+        }
+      ]
+    },
+    "LMCache": {
+      "commit": "e8236d8e1c41cd10752204d8cb9ef3b6074f999e",
+      "tree": "7bc772ce562b15b4d94c640ce78e98538156eabb",
+      "parent": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+      "version": "0.4.3+ascend.layout1",
+      "frozen_input_commit": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+      "migration_manifest_sha256": "bc7385167575189f8b91d505a33018847e7dd1f911d04104060fc28211b4e065",
+      "migration_entries": 149,
+      "actions": {
+        "retired": 6,
+        "move": 134,
+        "deduplicated": 7,
+        "merged": 2
+      },
+      "unchanged_runtime_files": 324,
+      "unchanged_native_files": 56,
+      "pinned_materials": [
+        {
+          "path": "third_party/kvcache-ops",
+          "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "source_host_only_not_intranet_build_environment",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "executable": "/tmp/falconkv-p3-connector.OdpMbfrQ/bin/python",
+  "machine": "x86_64",
+  "packages": {
+    "pytest": "9.0.2",
+    "setuptools": "68.1.2",
+    "numpy": "2.4.6",
+    "pydantic": "2.12.5",
+    "msgspec": "0.20.0",
+    "pyzmq": "27.1.0"
+  },
+  "sphinx": "7.2.6",
+  "cmake": "cmake version 3.28.3"
+}
