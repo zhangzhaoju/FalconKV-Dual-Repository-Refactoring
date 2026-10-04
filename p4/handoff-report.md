@@ -20,14 +20,24 @@ vLLM 286 passed / 300 subtests（1 deselected），LMCache 145 passed / 38 subte
 
 2026-10-04 随后根据 `logs_all_no_rope` 修复 RoPE 工厂无条件异常，并扩大同源检查：
 修复默认权重格式选择、eager 重复权重迭代、Ray 重复初始化和 LMCache 最后一次 prefill 尾块截断。
-当前 vLLM 为 `8a5c71069ab4d80c64c60e9375af04f8a7b4da9d`，
+当时 vLLM 为 `8a5c71069ab4d80c64c60e9375af04f8a7b4da9d`，
 LMCache 为 `241166dfde710e9a2cbe24ba0bd24b094b4bbe41`；
 精确配对以 [p4-pair.json](baseline/p4-pair.json) 为准。
-[最新主机报告](results/rope-startup-20261004/verification.json) 9/9 项通过：
+[该轮主机报告](results/rope-startup-20261004/verification.json) 9/9 项通过：
 vLLM 334 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，裁剪工具 25 passed。
 本轮两仓均为 Python 修复，未修改 native 构建或恢复已删除功能；仅本地提交，未推送。
 NPU/2P2D 仍待内网复测，见 [RoPE 分析报告](rope-startup-fix-20261004.md)
 及 [配对更新步骤](intranet-validation.md#mtp-startup-retry)。
+
+2026-10-04 本轮根据 `logs_all_aclnnAddRmsNormBias` 修复正式启动链的自定义 OPP 注册遗漏。
+P4 删除 GPU `_custom_ops` 时丢失注册副作用，而诊断工具的手工补调曾掩盖这个问题。
+当前 vLLM 为 `137fd3bc144875075ae73be2782ec8b5abf5a002`，LMCache 保持 `241166df`。
+注册前移到原生组件入口，保留设备初始化惰性；缺少本包资源时明确失败，不借用其他安装的资源。
+[最新主机报告](results/custom-opp-20261004/verification.json) 9/9 项通过：
+vLLM 354 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，裁剪工具 25 passed。
+新增 20 项主机回归和显式设备算子探针；本机未执行 NPU 探针、CANN 编译或模型推理。
+仅本地提交，未推送；见 [分析报告](custom-opp-startup-fix-20261004.md) 和
+[逐容器复测步骤](intranet-validation.md#custom-opp-retry)。
 
 ## 1. 冻结与配对版本
 
@@ -101,7 +111,7 @@ IdentityReasoningParser 以最终提交为准。未删除用户权重、基线�
 按 [P4 内网执行指南](intranet-validation.md) 依次进行：发布源码及冻结标签、精确配对检出、
 四容器重新编译安装、源码/制品身份核对、冷导入与全部选定 CPU 回归，然后模型/缓存回归。
 上述重编译要求针对首次从 P3 升级 P4，不能复用 P3 的 `.so`；
-已成功安装 P4 后的 MTP/RoPE/缓存纯 Python 修复按 §3.2 核对是否可直接更新 editable 源码。
+已成功安装 P4 后的 MTP/RoPE/缓存/OPP 注册 Python 修复按 §3.2 核对是否可直接更新 editable 源码。
 
 必选验收仍包括 wheel/sdist 重建、离线生成、无缓存在线、2P2D TP8/DP2 与 TP4/DP4、
 DSA/MTP、CPU 共享缓存/跨实例 RemoteFill、抢占与冷恢复、故障与长稳、负向边界及性能对照。

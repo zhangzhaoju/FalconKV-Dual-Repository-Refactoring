@@ -26,8 +26,8 @@
       "path": "p1-repos/vllm",
       "remote": "git@github.com:zhangzhaoju/vllm-dual.git",
       "branch": "p4",
-      "commit": "8a5c71069ab4d80c64c60e9375af04f8a7b4da9d",
-      "tree": "28a961e5308c1fb00310cbc476ecd5ee743c7fed",
+      "commit": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+      "tree": "03bf028f0c0b1d782e65e847de27fdc368aabffd",
       "version": "0.18.0+ascend.p4",
       "p3_base_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
       "initial_p4_commit": "0879e419001f424700569936962631ca0360f5af",
@@ -45,6 +45,6 @@
       "p3_tag_object": "41c9ad7024b74f417b9440b15a39b4506e96b122"
     }
   },
-  "host_verification": "../results/rope-startup-20261004/verification.json",
+  "host_verification": "../results/custom-opp-20261004/verification.json",
   "remote_push": "not_performed"
 }

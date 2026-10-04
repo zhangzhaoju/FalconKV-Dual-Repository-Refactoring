@@ -1,5 +1,9 @@
 # P4 RoPE 启动失败分析与修复（2026-10-04）
 
+本报告保留 RoPE 修复这一轮的证据与配对。随后权重加载后的 `aclnnAddRmsNormBias` 失败
+已在 [算子注册报告](custom-opp-startup-fix-20261004.md) 单独分析；最新配对和执行步骤以
+[配对清单](baseline/p4-pair.json) 及 [复测指南](intranet-validation.md#custom-opp-retry) 为准。
+
 ## 结论
 
 本次直接阻断点是 P4 裁剪破坏了 `get_rope()` 的互斥分支，导致合法的
@@ -63,14 +67,14 @@ deepseek_llama_scaling 构造参数和缓存语义；多模态及不支持类型
 其中 Ray 非当前 multiprocess 启动路径，缓存修复不恢复 CacheBlend。
 此差分审计限定于上述文件和裁剪器差异，不是对所有裁剪缺陷、动态导入或硬件行为的完整证明。
 
-## 当前配对与验证
+## 该轮配对与验证
 
 | 仓库 | 分支 | 精确提交 | 包版本 |
 | --- | --- | --- | --- |
 | vLLM | `p4` | `8a5c71069ab4d80c64c60e9375af04f8a7b4da9d` | `0.18.0+ascend.p4` |
 | LMCache | `p4` | `241166dfde710e9a2cbe24ba0bd24b094b4bbe41` | `0.4.3+ascend.p4` |
 
-[配对清单](baseline/p4-pair.json) 已更新，包含此前 MTP 与 SoC 修复。
+该轮配对包含此前 MTP 与 SoC 修复；[配对清单](baseline/p4-pair.json) 随后已更新为最新修复。
 P3 冻结标签及 P1/P2/P3/main 均不变；未修改原始四仓、日志、模型或内网服务。
 本次未改变运行模块集合、native 源码或 ABI。启动身份检查增加四个 vLLM 修复文件；
 跨仓配对检查另覆盖全部已跟踪包内 Python 文件，包括 LMCache adapter。
@@ -95,7 +99,8 @@ LMCache 19 项回归从真实公共 `wait_for_save` 入口覆盖完整/不足 ch
 ## 内网下一步
 
 按 [执行指南 §3.2](intranet-validation.md#mtp-startup-retry) 发布两仓 `p4`、上传新 `design/p4`，
-并在四个测试容器逐一切换至本报告配对。只更新 vLLM 不足以应用本轮缓存修复。
+并在四个测试容器逐一切换至最新清单配对，不再按本报告旧 vLLM SHA 运行。
+LMCache 至少需要本报告的 `241166df` 缓存修复。
 已正确安装 P4 strict editable 且源码身份检查通过时，无需重编译原生扩展或重装；
 先停止本轮自己的测试进程，再更新源码并启动新进程，不能在运行服务下热切换。
 普通 wheel 必须重新打包安装两仓；首次从 P3 升级 P4 仍需完整原生重建。

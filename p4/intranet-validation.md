@@ -60,7 +60,8 @@ git -C p1-repos/LMCache rev-parse HEAD
 `p1_dev.py` 仍是有效入口，名称未改；它已校验 P4 版本。
 已经完成 vLLM P4 安装、仅遇到本次 LMCache SoC 检查失败的容器，可使用 §3.1 的单仓重试步骤。
 两仓 P4 已安装成功、遇到 `Unknown speculative decoding method: mtp` 或
-`Unknown RoPE scaling type default` 的容器使用 §3.2。
+`Unknown RoPE scaling type default`，或权重加载后遇到
+`aclnnAddRmsNormBias` / `Get regInfo failed` 的容器使用 §3.2。
 
 ```bash
 export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
@@ -115,7 +116,7 @@ pip root、setuptools_scm/vcs-versioning、manifest 及本次 kineto 警告均�
 
 源码管理人员先将本机 `p1-repos/LMCache` 的新 `p4` 提交发布，并重新上传包含新配对清单的 `design/p4`。
 本次没有自动推送；仅补发该 SoC 修复且 vLLM 已符合最新配对时，只需追加推送 LMCache。
-本轮 RoPE/缓存修复则须按 §3.2 发布两仓。
+后续 RoPE/缓存修复需发布两仓；最新 OPP 注册修复只更新 vLLM，配对见 §3.2。
 
 ```bash
 git -C p1-repos/LMCache push origin p4
@@ -176,25 +177,29 @@ LMCache 145 passed / 38 subtests；Sphinx `-E -W --keep-going` 构建通过并�
 这些检查没有调用 CANN 编译器，不能替代内网 CMake 4.3.1 / Python 3.11 的编译、ABI 与 2P2D 验收。
 
 <a id="mtp-startup-retry"></a>
+<a id="custom-opp-retry"></a>
 
-### 3.2 P4 Python 控制流修复与复测（2026-10-04）
+### 3.2 P4 Python 启动修复与复测（2026-10-04）
 
-首轮 MTP 修复 `275122e99` 后，四节点在模型构造时报告 `Unknown RoPE scaling type default`。
-原因是裁剪时破坏了互斥分支：合法 `default` 已创建对象，却仍执行了兜底异常。
-本轮还恢复权重加载、Ray 初始化和 LMCache 最后一次 prefill 尾块保存的同源分支语义。
-当前配对为 vLLM `8a5c71069ab4d80c64c60e9375af04f8a7b4da9d` 与
-LMCache `241166dfde710e9a2cbe24ba0bd24b094b4bbe41`，包含此前 MTP/SoC 修复。
+此前已修复 MTP、RoPE、权重加载、Ray 初始化和 LMCache 最后一次 prefill 尾块保存。
+最新日志已进入权重加载后的预热，但四节点均报告 `aclnnAddRmsNormBias` 的算子信息缺失。
+本轮补回 P4 裁剪时丢失的正式启动入口 `ASCEND_CUSTOM_OPP_PATH` 注册；
+不恢复已删除的 GPU 模块，不改变原生算子实现或 ABI。
+当前配对为 vLLM `137fd3bc144875075ae73be2782ec8b5abf5a002` 与
+LMCache `241166dfde710e9a2cbe24ba0bd24b094b4bbe41`，包含上述全部修复。
 保留 checkpoint 原 RoPE 配置、MTP、DSA 双组、TP8/DP2、`max_num_seqs=16` 和 C8 关闭设置；
 不通过调整模型配置或关闭功能绕过错误。
-完整证据及验证边界见 [RoPE 分析报告](rope-startup-fix-20261004.md)；
-[首轮 MTP 报告](mtp-startup-fix-20261004.md) 保留为历史记录，不再按其旧配对运行。
+证据及验证边界见 [算子注册分析报告](custom-opp-startup-fix-20261004.md)；
+[RoPE 报告](rope-startup-fix-20261004.md) 和 [MTP 报告](mtp-startup-fix-20261004.md)
+保留为历史记录，不再按其旧配对运行。
 
-本次两仓均只修改已有 Python 执行文件，未改变包版本、运行模块集合、native 源码或 ABI。
-**若两仓已经成功安装 P4 strict editable，且下面安装源码身份检查通过，无需重新编译或重装。**
+本次只修改 vLLM 的 Python 启动/检查代码，LMCache 保持上一轮提交；包版本和运行模块集合不变。
+**若两仓已成功安装 P4 strict editable，且下面源码身份与本包算子资源检查均通过，无需重新编译或重装。**
 必须先停止自己这轮 P4 测试的进程，再切换源码，并用新进程重启；不能在运行中热切换。
 不停止他人的服务，不修改 P3 基线。若尚未完成 P3→P4 升级，仍执行 §2～3 的完整重建。
 
-源码管理人员先发布本次两仓修复，并重新上传当前 `design/p4`（包含配对清单、工具和测试）：
+源码管理人员先发布 vLLM 修复，并重新上传当前 `design/p4`（包含配对清单、工具和测试）。
+LMCache `241166df` 若已发布无需再次更新；下面第二条推送只是补齐尚未发布的上一轮修复：
 
 ```bash
 git -C p1-repos/vllm push origin p4
@@ -210,7 +215,7 @@ P4_PY=/usr/local/python3.11.14/bin/python
 cd "$P4_ROOT"
 P4_VLLM_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["vllm"]["commit"])')
 P4_LMC_REF=$($P4_PY -B -c 'import json; print(json.load(open("design/p4/baseline/p4-pair.json"))["repositories"]["LMCache"]["commit"])')
-test "$P4_VLLM_REF" = 8a5c71069ab4d80c64c60e9375af04f8a7b4da9d
+test "$P4_VLLM_REF" = 137fd3bc144875075ae73be2782ec8b5abf5a002
 test "$P4_LMC_REF" = 241166dfde710e9a2cbe24ba0bd24b094b4bbe41
 for P4_REPO in vllm LMCache; do
   git -C "p1-repos/$P4_REPO" diff --quiet
@@ -243,6 +248,7 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$P4_PY" -B -m pytest -q \
   --noconftest -p no:cacheprovider \
   "$P4_ROOT/p1-repos/vllm/tests/standalone/test_p4_mtp_runner.py" \
   "$P4_ROOT/p1-repos/vllm/tests/standalone/test_p4_model_startup.py" \
+  "$P4_ROOT/p1-repos/vllm/tests/standalone/test_p4_custom_opp.py" \
   --junitxml="$P4_RUN/vllm-startup.xml" 2>&1 | tee "$P4_RUN/vllm-startup.log"
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$P4_PY" -B -m pytest -q \
   --noconftest -p no:cacheprovider \
@@ -252,17 +258,39 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$P4_PY" -B -m pytest -q \
   --inspect-glm --check-lmcache --output "$P4_RUN/prestart-bootstrap"
 ```
 
-70 项 vLLM MTP/模型启动和 19 项 LMCache 保存边界回归，以及安装/配对/冷导入检查必须通过。
-启动源码身份核对在既有 MTP 文件基础上增加 RoPE 工厂、默认权重加载器、权重迭代器及 Ray 初始化。
+90 项 vLLM MTP/模型启动/OPP 注册和 19 项 LMCache 保存边界回归，以及安装/配对/冷导入检查必须通过。
+启动源码身份核对包含 MTP、RoPE、权重加载、Ray 和本轮 native-ops 初始化文件。
 `check_pair.py` 另核对全部已跟踪包内 Python 文件（包括 LMCache adapter），
 防止旧 strict editable 硬链接或其他安装残留。
+`check_npu_bootstrap.py` 经正式启动入口检查 `ASCEND_CUSTOM_OPP_PATH` 首项为当前安装包的
+`_cann_ops_custom/vendors/vllm-ascend`，并检查/记录该目录下
+`op_impl/ai_core/tbe/kernel/config/ascend910b/binary_info_config.json` 的存在、JSON 可读性及哈希。
+这不是算子执行验证，也不校验该 JSON 的所有条目和其引用的全部二进制文件。
 任何一步失败先停止处理；不要删除日志、强制 reset、设置临时 PYTHONPATH 或跳过配对检查。
 
-若源码正确但 editable 链接树仍旧，按 §3 重装受影响的仓库；安装脚本会执行原生重建，
-不要手工复制文件或混用 P3 产物。若使用普通 wheel，必须重建并安装两仓新 wheel，
-随后用 `verify --mode wheel` 和 §4 的配对检查；仅 Git 切换不会更新 wheel。
+若源码正确但 editable 链接树仍旧，按 §3 重装受影响的仓库；若本包 vendor 目录或上述元数据缺失，
+按 §3 重建并重装 vLLM，保留失败日志与构建材料，安装脚本自动创建新的 native staging。
+不要手工复制其他安装的资源、设置其他版本的 OPP 路径、禁用 custom op 或混用 P3 产物。
+普通 wheel 需重建安装本轮 vLLM；LMCache wheel 已对应 `241166df` 时无需再重建，
+否则也更新到该提交。随后用 `verify --mode wheel` 和 §4 的配对检查；仅 Git 切换不会更新 wheel。
 LMCache 必须同步更新至 `241166df`，不能仍停留在 `1fc7439b`；
-仅在 P4 strict editable 安装身份检查通过时，才能复用既有安装和 native 制品。
+仅在 P4 strict editable 安装身份及资源检查通过时，才能复用既有安装和 native 制品。
+
+在四个测试容器完成上述检查后，建议先跑本次真实算子探针再启动模型。
+**须确认本轮测试服务已停止，且当前可见的逻辑 NPU 0 对应空闲测试卡**；
+必要时由操作者在启动这个新进程前按既有规则限定设备可见性，不能抢占他人服务的卡。
+本命令不加载模型，但会初始化 NPU 并分配少量张量，在主进程和 spawn 子进程分别执行
+float32/bfloat16 × 有/无 bias 共四个 `AddRmsNormBias` 用例，与内置 AddRmsNorm 加 bias 对照：
+
+```bash
+cd /tmp
+"$P4_PY" -B "$P4_ROOT/p1-repos/vllm/tools/validate_npu_native.py" \
+  --device-smoke --spawn --output "$P4_RUN/add-rmsnorm-bias-device.json"
+```
+
+要求两进程 `passed=true`、`device_smoke.add_rms_norm_bias` 中四项均通过。
+如果仍报 `Get regInfo failed`，归档这个新报告、上述元数据哈希及原生构建日志后继续排查制品，
+不要通过升级/降级 CANN、torch 或修改模型配置绕过；本机尚未执行该 NPU 探针。
 
 四容器均通过后，保留 `P4_RUN` 继续 §4 的检查（本节使用 `prestart-` 路径，不覆盖下节报告），
 并用原启动参数重新启动 2P2D。验收不仅是异常消失：须四实例完成权重加载、KV 初始化/预热，
@@ -290,8 +318,9 @@ cd /tmp
 "$P4_PY" -B -m vllm.entrypoints.cli.main serve --help
 ```
 
-可在空闲测试卡补跑 `validate_npu_native.py --device-smoke --spawn --output <新文件>`、
-`p4_runtime_smoke.py --npu --output <新目录>`。若设备 API 返回泛称 `Ascend910B` 而非具体 B3，
+可在空闲测试卡补跑 §3.2 的 `validate_npu_native.py --device-smoke --spawn`（包括四项真实算子用例）
+以及 `p4_runtime_smoke.py --npu --output <新目录>`。默认不带设备开关的检查不证明算子可执行。
+若设备 API 返回泛称 `Ascend910B` 而非具体 B3，
 归档输出与 npu-smi 型号后核对，不放宽检查冒充确认。
 
 内网 torch 已安装，补跑全部选定主机/CPU tensor 回归：

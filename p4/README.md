@@ -20,9 +20,12 @@ P4 精确配对见 [p4-pair.json](baseline/p4-pair.json)，
 原因与重试命令见 [内网执行指南 §3.1](intranet-validation.md#lmcache-soc-retry)。
 2026-10-04 首轮 MTP 修复为 vLLM `275122e99` / LMCache `1fc7439b`，
 [MTP 报告](mtp-startup-fix-20261004.md) 保留为历史记录。
-随后根据 RoPE 启动失败补齐同源控制流修复，当前为 vLLM `8a5c71069` / LMCache `241166df`；
-见 [RoPE 分析与修复报告](rope-startup-fix-20261004.md) 和 [复测指南 §3.2](intranet-validation.md#mtp-startup-retry)。
-本轮两仓修复仅本地提交，未推送远端。
+随后根据 RoPE 启动失败补齐同源控制流修复，当时为 vLLM `8a5c71069` / LMCache `241166df`；
+见 [RoPE 历史报告](rope-startup-fix-20261004.md)。
+本轮针对 `aclnnAddRmsNormBias` 失败恢复正式启动入口的 CANN 自定义算子路径注册，
+当前为 vLLM `137fd3bc1` / LMCache `241166df`；LMCache 本轮未修改。
+见 [算子注册分析与修复报告](custom-opp-startup-fix-20261004.md) 和
+[复测指南 §3.2](intranet-validation.md#custom-opp-retry)。修复仅本地提交，未推送远端。
 
 ## 整改内容
 
@@ -59,11 +62,13 @@ Python 环境需已有 pytest、msgspec、pyzmq、pydantic、numpy、setuptools�
 `cmake` 需在 PATH 中，用于 SoC 检查的 script-mode 回归，不运行编译器。不会自动安装任何依赖。
 未安装 torch 时默认排除 CPU tensor 测试，报告会明确记录；内网使用 `--with-installed-torch` 补跑。
 动态导出和 native 扩展不能由 AST 审计证明，源码检查报告单列这些未验证项。
-RoPE 修复后的 [当前主机报告](results/rope-startup-20261004/verification.json) 9/9 项通过：
-vLLM 334 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，
-裁剪工具 25 passed。本轮增加 RoPE/权重加载/Ray 分支及最终 prefill 尾块保存回归；
-执行生产函数/方法，设备、模型及后端依赖使用主机替身，仍不代表内网编译和运行验收。
-此前 [MTP 报告](results/mtp-startup-20261004/verification.json) 和
+算子注册修复后的 [当前主机报告](results/custom-opp-20261004/verification.json) 9/9 项通过：
+vLLM 354 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，
+裁剪工具 25 passed。本轮增加 20 项注册/资源路径/冷进程/探针回归；
+执行真实平台和初始化模块，设备依赖使用主机替身，仍不代表内网编译和运行验收。
+探针新增的真实 `AddRmsNormBias` 检查仅在显式 `--device-smoke` 时执行，本机未执行。
+此前 [RoPE 报告](results/rope-startup-20261004/verification.json)、
+[MTP 报告](results/mtp-startup-20261004/verification.json) 和
 [SoC 报告](results/lmcache-soc-case-20261003/verification.json) 保留为历史记录。
 
 删除清单位于 `baseline/*-prune-batch*.json`，最终实际删除以 P3→P4 Git diff 为准：
