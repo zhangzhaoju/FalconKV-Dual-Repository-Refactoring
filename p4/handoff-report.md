@@ -4,13 +4,21 @@
 未执行 CANN 编译、NPU/模型推理或远端推送，未停止或覆盖已有服务。
 
 本报告下述提交、裁剪统计和测试数保留首次交付快照。
-2026-10-03 后续已修复 LMCache 的 SoC 大小写门槛，当前 LMCache 提交为
-`1fc7439b96d091378b527819dc92902115eee58d`，vLLM 保持 `0879e419001f424700569936962631ca0360f5af`。
-当前精确配对以 [p4-pair.json](baseline/p4-pair.json) 为准；
+2026-10-03 后续已修复 LMCache 的 SoC 大小写门槛，当时 LMCache 提交为
+`1fc7439b96d091378b527819dc92902115eee58d`，vLLM 为 `0879e419001f424700569936962631ca0360f5af`。
 修复后的 [主机报告](results/lmcache-soc-case-20261003/verification.json) 8/8 项通过，
 LMCache 增至 145 passed / 38 subtests，vLLM 测试数不变。
 新增 15 项真实 CMake script-mode 回归；CANN 编译、ABI 和功能验收仍待内网完成。
-原因与执行步骤见 [内网指南 §3.1](intranet-validation.md#lmcache-soc-retry)。本次修复未推送远端。
+原因与执行步骤见 [内网指南 §3.1](intranet-validation.md#lmcache-soc-retry)。该次交付未自动推送远端。
+
+2026-10-04 根据四节点启动失败日志，修复 P4 裁剪造成的 MTP 无条件异常及无 drafter 分支穿透。
+vLLM 更新为 `275122e99093dafe9a7e7c759d6d30a7a5824fc4`，LMCache 保持 `1fc7439b`；
+当前精确配对以 [p4-pair.json](baseline/p4-pair.json) 为准。
+[新主机报告](results/mtp-startup-20261004/verification.json) 9/9 项通过：
+vLLM 286 passed / 300 subtests（1 deselected），LMCache 145 passed / 38 subtests，裁剪工具 14 passed。
+新增 22 项 vLLM 主机回归及 MTP 启动源码身份核对，未修改 native 构建或恢复已删除功能。
+本次仅本地提交，未推送；NPU/2P2D 仍待内网复测，见 [分析报告](mtp-startup-fix-20261004.md)
+及 [纯 Python 修复更新步骤](intranet-validation.md#mtp-startup-retry)。
 
 ## 1. 冻结与配对版本
 
@@ -83,7 +91,8 @@ IdentityReasoningParser 以最终提交为准。未删除用户权重、基线�
 
 按 [P4 内网执行指南](intranet-validation.md) 依次进行：发布源码及冻结标签、精确配对检出、
 四容器重新编译安装、源码/制品身份核对、冷导入与全部选定 CPU 回归，然后模型/缓存回归。
-需重新编译两仓，不能复用旧 `.so` 或仅切换 editable 指向的分支。
+上述重编译要求针对首次从 P3 升级 P4，不能复用 P3 的 `.so`；
+已成功安装 P4 后的 MTP 纯 Python 修复按 §3.2 核对是否可直接更新 editable 源码。
 
 必选验收仍包括 wheel/sdist 重建、离线生成、无缓存在线、2P2D TP8/DP2 与 TP4/DP4、
 DSA/MTP、CPU 共享缓存/跨实例 RemoteFill、抢占与冷恢复、故障与长稳、负向边界及性能对照。

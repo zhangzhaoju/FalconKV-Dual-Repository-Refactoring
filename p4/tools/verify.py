@@ -49,6 +49,15 @@ def main() -> int:
             results.append({"repository": repo, "check": name, "argv": command,
                             "returncode": process.returncode, "passed": process.returncode == 0})
             print(repo, name, "PASS" if process.returncode == 0 else "FAIL", flush=True)
+    command = [args.python, "-B", "-m", "pytest", "-q", "--noconftest",
+               "-p", "no:cacheprovider", "--tb=short", "p4/tests",
+               "--junitxml=" + str(output / "design-specializer.xml")]
+    process = subprocess.run(command, cwd=ROOT / "design", text=True,
+                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=180)
+    (output / "design-specializer.log").write_text(process.stdout)
+    results.append({"repository": "design", "check": "specializer", "argv": command,
+                    "returncode": process.returncode, "passed": process.returncode == 0})
+    print("design", "specializer", "PASS" if process.returncode == 0 else "FAIL", flush=True)
     result = {"scope": "host_only_not_build_ABI_NPU_or_inference", "checks": results,
               "torch_tests_included": args.with_installed_torch,
               "passed": all(r["passed"] for r in results)}

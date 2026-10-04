@@ -26,10 +26,11 @@
       "path": "p1-repos/vllm",
       "remote": "git@github.com:zhangzhaoju/vllm-dual.git",
       "branch": "p4",
-      "commit": "0879e419001f424700569936962631ca0360f5af",
-      "tree": "2e358fee491756bd630fb2ca3ef65be505c9d57b",
+      "commit": "275122e99093dafe9a7e7c759d6d30a7a5824fc4",
+      "tree": "5700c19b80d8c19a817dd2ea9bed74cfaf925f61",
       "version": "0.18.0+ascend.p4",
       "p3_base_commit": "8767fe1121a085e8cefed03eeaa1444b55227521",
+      "initial_p4_commit": "0879e419001f424700569936962631ca0360f5af",
       "p3_tag_object": "ef6097322e31420a22333f039e47617f7bad363c"
     },
     "LMCache": {
@@ -44,6 +45,6 @@
       "p3_tag_object": "41c9ad7024b74f417b9440b15a39b4506e96b122"
     }
   },
-  "host_verification": "../results/lmcache-soc-case-20261003/verification.json",
+  "host_verification": "../results/mtp-startup-20261004/verification.json",
   "remote_push": "not_performed"
 }

@@ -207,15 +207,31 @@ def specialize(source: str) -> str:
                 condition = value(node.test)
                 if condition is not UNKNOWN:
                     branch = node.body if condition else node.orelse
+                    # An AST represents `elif` as an If in its parent's orelse.
+                    # Its replacement must stay conditional on the preceding
+                    # branches, not become an independent statement.
+                    is_elif = lines[node.lineno - 1].lstrip().startswith("elif ")
                     if branch:
                         start = branch[0].lineno - 1
                         end = branch[-1].end_lineno
                         selected = "".join(lines[start:end])
-                        if selected.lstrip().startswith("elif "):
+                        next_elif = selected.lstrip().startswith("elif ")
+                        if next_elif and not is_elif:
                             selected = selected.replace("elif ", "if ", 1)
-                        new = textwrap.indent(textwrap.dedent(selected), " " * node.col_offset)
+                        if is_elif and not next_elif:
+                            # A true elif or the else body of a false elif must
+                            # remain the fallback of the preceding unknown if.
+                            new = " " * node.col_offset + "else:\n"
+                            new += textwrap.indent(
+                                textwrap.dedent(selected), " " * (node.col_offset + 4)
+                            )
+                        else:
+                            new = textwrap.indent(textwrap.dedent(selected), " " * node.col_offset)
                     else:
-                        new = " " * node.col_offset + "pass  # Unsupported P4 branch removed.\n"
+                        new = (
+                            "" if is_elif else
+                            " " * node.col_offset + "pass  # Unsupported P4 branch removed.\n"
+                        )
                     changes.append((node.lineno - 1, node.end_lineno, new))
                     return
             for child in ast.iter_child_nodes(node):
