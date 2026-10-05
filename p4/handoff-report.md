@@ -9,7 +9,7 @@
 修复后的 [主机报告](results/lmcache-soc-case-20261003/verification.json) 8/8 项通过，
 LMCache 增至 145 passed / 38 subtests，vLLM 测试数不变。
 新增 15 项真实 CMake script-mode 回归；CANN 编译、ABI 和功能验收仍待内网完成。
-原因与执行步骤见 [内网指南 §3.1](intranet-validation.md#lmcache-soc-retry)。该次交付未自动推送远端。
+原因与执行步骤见 [冻结 P4 指南 §3.1](intranet-validation-frozen-p4.md#lmcache-soc-retry)。该次交付未自动推送远端。
 
 2026-10-04 首轮根据四节点启动失败日志，修复 P4 裁剪造成的 MTP 无条件异常及无 drafter 分支穿透。
 当时 vLLM 更新为 `275122e99093dafe9a7e7c759d6d30a7a5824fc4`，LMCache 保持 `1fc7439b`。
@@ -27,7 +27,7 @@ LMCache 为 `241166dfde710e9a2cbe24ba0bd24b094b4bbe41`；
 vLLM 334 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，裁剪工具 25 passed。
 本轮两仓均为 Python 修复，未修改 native 构建或恢复已删除功能；仅本地提交，未推送。
 NPU/2P2D 仍待内网复测，见 [RoPE 分析报告](rope-startup-fix-20261004.md)
-及 [配对更新步骤](intranet-validation.md#mtp-startup-retry)。
+及 [历史配对更新步骤](intranet-validation-frozen-p4.md#mtp-startup-retry)。
 
 2026-10-04 本轮根据 `logs_all_aclnnAddRmsNormBias` 修复正式启动链的自定义 OPP 注册遗漏。
 P4 删除 GPU `_custom_ops` 时丢失注册副作用，而诊断工具的手工补调曾掩盖这个问题。
@@ -37,7 +37,7 @@ P4 删除 GPU `_custom_ops` 时丢失注册副作用，而诊断工具的手工�
 vLLM 354 passed / 300 subtests（1 deselected），LMCache 164 passed / 38 subtests，裁剪工具 25 passed。
 新增 20 项主机回归和显式设备算子探针；本机未执行 NPU 探针、CANN 编译或模型推理。
 仅本地提交，未推送；见 [分析报告](custom-opp-startup-fix-20261004.md) 和
-[逐容器复测步骤](intranet-validation.md#custom-opp-retry)。
+[历史逐容器复测步骤](intranet-validation-frozen-p4.md#custom-opp-retry)。
 
 ## 1. 冻结与配对版本
 
@@ -108,7 +108,7 @@ IdentityReasoningParser 以最终提交为准。未删除用户权重、基线�
 
 ## 5. 下一步
 
-按 [P4 内网执行指南](intranet-validation.md) 依次进行：发布源码及冻结标签、精确配对检出、
+本报告对应的冻结 P4 按 [历史内网执行指南](intranet-validation-frozen-p4.md) 依次进行：发布源码及冻结标签、精确配对检出、
 四容器重新编译安装、源码/制品身份核对、冷导入与全部选定 CPU 回归，然后模型/缓存回归。
 上述重编译要求针对首次从 P3 升级 P4，不能复用 P3 的 `.so`；
 已成功安装 P4 后的 MTP/RoPE/缓存/OPP 注册 Python 修复按 §3.2 核对是否可直接更新 editable 源码。

@@ -2,7 +2,7 @@
 
 本报告保留 RoPE 修复这一轮的证据与配对。随后权重加载后的 `aclnnAddRmsNormBias` 失败
 已在 [算子注册报告](custom-opp-startup-fix-20261004.md) 单独分析；最新配对和执行步骤以
-[配对清单](baseline/p4-pair.json) 及 [复测指南](intranet-validation.md#custom-opp-retry) 为准。
+[配对清单](baseline/p4-pair.json) 及 [冻结 P4 复测指南](intranet-validation-frozen-p4.md#custom-opp-retry) 为准。
 
 ## 结论
 
@@ -98,7 +98,7 @@ LMCache 19 项回归从真实公共 `wait_for_save` 入口覆盖完整/不足 ch
 
 ## 内网下一步
 
-按 [执行指南 §3.2](intranet-validation.md#mtp-startup-retry) 发布两仓 `p4`、上传新 `design/p4`，
+按 [冻结 P4 指南 §3.2](intranet-validation-frozen-p4.md#mtp-startup-retry) 发布两仓 `p4`、上传新 `design/p4`，
 并在四个测试容器逐一切换至最新清单配对，不再按本报告旧 vLLM SHA 运行。
 LMCache 至少需要本报告的 `241166df` 缓存修复。
 已正确安装 P4 strict editable 且源码身份检查通过时，无需重编译原生扩展或重装；

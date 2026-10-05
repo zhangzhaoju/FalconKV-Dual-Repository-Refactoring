@@ -117,7 +117,7 @@ P4_COMPARE=$(mktemp -d /tmp/p4-prefill-review.XXXXXXXX)
 见 [测试记录](results/prefill-review-20261004/design-tests.xml)。未执行 NPU 或实际压测，
 未修改冻结版本、旧日志、原始四仓及正在运行的服务，未推送远端。
 
-下一轮按 [内网指南 §5.1](intranet-validation.md#prefill-comparison) 配对复测：固定有效负载、
+下一轮按 [冻结 P4 指南 §5.1](intranet-validation-frozen-p4.md#prefill-comparison) 配对复测：固定有效负载、
 顺序、输入/输出长度、采样参数、到达并发和缓存初始状态；分别采集冷段、热段和完整请求结果。
 先补齐与 P3 后段可比的 P4 数据，不以是否出现 Waiting 作为继续运行/结束测试的条件。
 如果相同缓存状态、相同负载的长窗口仍有 TTFT/吞吐差异，再依据请求关联记录定位

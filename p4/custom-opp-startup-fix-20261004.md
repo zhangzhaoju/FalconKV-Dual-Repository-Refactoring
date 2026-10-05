@@ -103,7 +103,7 @@ AddRMSNormQuantFusionPass → AddRMSNormQuantPattern.register → make_fx` 进�
 
 ## 内网复测
 
-按 [执行指南 §3.2](intranet-validation.md#custom-opp-retry) 发布 vLLM 修复、上传新 `design/p4`，
+按 [冻结 P4 指南 §3.2](intranet-validation-frozen-p4.md#custom-opp-retry) 发布 vLLM 修复、上传新 `design/p4`，
 四个容器逐一更新、核对，并在空闲测试卡执行新探针，然后用原配置重新启动 2P2D。
 不能只更新一个容器，不能在运行中的 editable 服务下切源码；必须启动新进程。
 

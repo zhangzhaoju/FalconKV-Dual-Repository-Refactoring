@@ -4,9 +4,17 @@
 `0.4.3+ascend.layout1`。精确 SHA 以同目录 [baseline/pair.json](baseline/pair.json) 为准。
 该配对已完成本机源码和主机检查，原生构建、ABI 与 2P2D 留待本步骤验证。
 
+沿用 `/workspace/zzj/p1-repos` 的逐容器 strict editable 安装、旧包处理和完整安装后检查，
+优先按 [P4 editable 安装与内网验证指南](../p4/intranet-validation.md) 执行。
+本页保留新目录方案及 wheel/sdist 制品验证；两页变量名不同，切换前须重新初始化，
+或使用 P4 指南末尾提供的 §5 变量映射，不能直接交叉复制命令块。
+
+<a id="publish"></a>
+
 ## 1. 发布和准备独立环境
 
-本次只创建了本地提交，未推送。需要 GitHub 分发时，在本机工作区手动执行以下非强制推送：
+目录整改交付时只创建了本地提交，未自动推送。若配对版本尚未发布，
+由源码管理人员在本机工作区执行以下非强制推送；不要在内网重造提交：
 
 ```bash
 cd /home/zhangzhaoju/Learn/code/falconkv || exit 1
@@ -132,6 +140,8 @@ strict editable 的原生库可能链接到该目录，不能清理后继续运�
 上述 `verify` 只检验文件/安装路径，后续 import 检查也不能代替 NPU 模型验收。
 在已分配的空闲测试设备上，再分别加 `--device-smoke`、`--npu` 执行设备小样本；
 不要在有基线业务的卡上自动执行。每个新容器分别归档配对 SHA 与安装/导入检查结果。
+
+<a id="wheel-sdist"></a>
 
 ## 5. wheel 与 sdist 出口
 

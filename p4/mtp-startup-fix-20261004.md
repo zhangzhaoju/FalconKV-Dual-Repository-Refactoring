@@ -2,7 +2,7 @@
 
 本文件保留首轮 MTP 修复的历史配对与验证结果。后续 RoPE/缓存控制流修复已更新两仓，
 当前版本与结论见 [RoPE 报告](rope-startup-fix-20261004.md) 及
-[执行指南 §3.2](intranet-validation.md#mtp-startup-retry)，不要再按下述历史 SHA 复测。
+[冻结 P4 指南 §3.2](intranet-validation-frozen-p4.md#mtp-startup-retry)，不要再按下述历史 SHA 复测。
 
 ## 结论
 
@@ -82,7 +82,7 @@ prefill/decode × padded/unpadded proposal，以及 staged-SFA graph key 传递�
 
 ## 内网下一步
 
-按 [执行指南 §3.2](intranet-validation.md#mtp-startup-retry) 发布/同步精确 SHA，逐一核对四个容器。
+按 [冻结 P4 指南 §3.2](intranet-validation-frozen-p4.md#mtp-startup-retry) 发布/同步精确 SHA，逐一核对四个容器。
 这次只修改已有 Python 执行文件；已正确安装 P4 strict editable 且源码身份匹配时，
 无需重编译 CANN 或重装 LMCache，重启自己这轮测试的新进程即可。
 普通 wheel 需要重新构建/安装 vLLM wheel；尚未完成 P3→P4 升级时仍需两仓完整重建。

@@ -6,7 +6,9 @@
 
 配对提交见 [pair.json](baseline/pair.json)，最终检查见
 [主机验收记录](results/final-20261004/summary.json)。内网执行请使用
-[安装与回归指令](intranet-validation.md)。两仓源码已提交到本地新分支；本次未推送 GitHub。
+[P4 editable 逐容器安装指导](../p4/intranet-validation.md)；
+新目录及 wheel/sdist 验证见 [安装与回归指令](intranet-validation.md)。
+两仓源码已提交到本地新分支；目录整改交付时未自动推送 GitHub。
 
 ## 已实施内容
 
