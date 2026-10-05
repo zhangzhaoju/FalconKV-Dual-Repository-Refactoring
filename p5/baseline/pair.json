@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "candidate": "p5p6-rc1-20261005",
+  "branch": "p5",
+  "status": "source_preparation_only_validate_final_p6_pair",
+  "frozen_input_tag": "native-layout-frozen-20261005",
+  "repositories": {
+    "vllm": {
+      "commit": "a09d7ecca2f90ee6df14534a30747e3bb9069992",
+      "tree": "8271d58e6798a6f391df3dd877dc324545455658",
+      "version": "0.18.0+ascend.p5p6rc1"
+    },
+    "LMCache": {
+      "commit": "62740030fbf03d2b280333e71ecb26f071ab6966",
+      "tree": "055097916cbd056dccaf45f344a86ad9b8c74fc5",
+      "version": "0.4.3+ascend.p5p6rc1"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "candidate": "p5p6-rc1-20261005",
+  "status": "pending_joint_intranet_qualification",
+  "frozen_reference": "baseline/native-layout-frozen-20261005.json",
+  "candidate_pair": "../p6/baseline/pair.json",
+  "packages": {
+    "vllm": "0.18.0+ascend.p5p6rc1",
+    "lmcache": "0.4.3+ascend.p5p6rc1"
+  },
+  "environment": {
+    "machine": "aarch64",
+    "python": "3.11",
+    "soc": "Ascend910B3",
+    "cann": "8.5.1",
+    "torch": "2.9.0",
+    "torch_npu": "2.9.0.post2",
+    "transformers": "5.2.0",
+    "triton_ascend": "3.2.0.dev20260322"
+  },
+  "scope": {
+    "model": "GLM-5.2 native text",
+    "topologies": [
+      "TP8/DP2",
+      "TP4/DP4"
+    ],
+    "dsa_two_groups": true,
+    "mtp": true,
+    "c8": false,
+    "kv_connector": "LMCacheConnectorV1",
+    "capabilities": [
+      "offline",
+      "online",
+      "CPU KV",
+      "cross-instance cache",
+      "2P2D",
+      "RemoteFill",
+      "checkpoint",
+      "recovery"
+    ]
+  },
+  "native_interfaces": {
+    "vllm": [
+      "vllm._ascend_C",
+      "libvllm_ascend_kernels.so",
+      "_cann_ops_custom/vendors/vllm-ascend"
+    ],
+    "lmcache": [
+      "lmcache.c_ops",
+      "libcache_kernels.so",
+      "HIXL/HCOMM/HCCL and retained host extensions"
+    ]
+  },
+  "cache_compatibility": {
+    "observed_native_layout_schema": "lmcache-layer-page-v3",
+    "reusing_previous_namespace": "not_approved_until_model_layout_schema_round_trip_verified",
+    "default_policy": "isolate_baseline_and_candidate_namespaces"
+  },
+  "base_image_digest": null,
+  "driver_firmware_and_model_artifact": "must_be_recorded_in_intranet_evidence",
+  "network_policy": "intranet_materials_or_approved_proxy; no external AI connection or automatic log upload",
+  "qualification": {
+    "A01_A15": "pending",
+    "B01_B11": "pending",
+    "C01_C13": "pending",
+    "TP8_DP2": "pending_final_pair",
+    "TP4_DP4": "pending_final_pair",
+    "cold_warm_performance_three_repetitions": "pending",
+    "tail_latency_vs_pre_layout_P4": "unresolved_repeat_with_valid_workload",
+    "soak": "pending",
+    "image_and_recovery": "pending"
+  }
+}

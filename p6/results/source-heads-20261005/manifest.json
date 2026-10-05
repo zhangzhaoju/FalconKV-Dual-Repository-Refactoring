@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "scope": "committed_HEAD_history_and_present_submodules_only",
+  "requested_repositories": [
+    "vllm",
+    "vllm-ascend",
+    "LMCache",
+    "LMCache-Ascend"
+  ],
+  "entries": [
+    {
+      "label": "vllm",
+      "source": "/home/zhangzhaoju/Learn/code/falconkv/vllm",
+      "commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de",
+      "tree": "7ad06ea923f3c3204c4deb303dbfce0a91bbdfd6",
+      "bundle": "000.bundle",
+      "sha256": "6058379fce08d257c5754c9aa8bf22cfca6daa31913329f4893e1a1b764caa0a",
+      "ignored_paths_not_backed_up": 0,
+      "submodules": []
+    },
+    {
+      "label": "vllm-ascend",
+      "source": "/home/zhangzhaoju/Learn/code/falconkv/vllm-ascend",
+      "commit": "2e48d7a61d9fab3d40babbacaecf95a76cfb0e06",
+      "tree": "5bc349a140c9ed3327f5fbff9e7a19f7edc97094",
+      "bundle": "001.bundle",
+      "sha256": "60b92992ec377dc01a0a82f178d4e4e4fb4c4e57072bde359cd91f6ec050788a",
+      "ignored_paths_not_backed_up": 0,
+      "submodules": [
+        {
+          "path": "csrc/third_party/catlass",
+          "commit": "716fd7baa7fb7f6cac0488bb628fd1dd0e875641",
+          "label": "vllm-ascend/csrc/third_party/catlass"
+        }
+      ]
+    },
+    {
+      "label": "LMCache",
+      "source": "/home/zhangzhaoju/Learn/code/falconkv/LMCache",
+      "commit": "d24029eddf358bb139b66023ab21364ef4d438b4",
+      "tree": "52c0626cec724937708ef3586fa2feedde5db83b",
+      "bundle": "002.bundle",
+      "sha256": "8d90149a06541fdccf4d34de8cc7975537904a382315d88d172dd55ba58af26e",
+      "ignored_paths_not_backed_up": 0,
+      "submodules": []
+    },
+    {
+      "label": "LMCache-Ascend",
+      "source": "/home/zhangzhaoju/Learn/code/falconkv/LMCache-Ascend",
+      "commit": "3452df44e66ce8a217c4badfe32d73783e66bd2d",
+      "tree": "de871def1a66cc3ba3b8291427f4c2a015ccf681",
+      "bundle": "003.bundle",
+      "sha256": "9a4c98426497403f0e4f14a922285a2c2b535e11367dbac9d7762bb034066b06",
+      "ignored_paths_not_backed_up": 0,
+      "submodules": [
+        {
+          "path": "third_party/kvcache-ops",
+          "commit": "9f18d2339bc58a43429f7d5bdaef1628c820eff5",
+          "label": "LMCache-Ascend/third_party/kvcache-ops"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "vllm-ascend/csrc/third_party/catlass: Missing/uninitialized/mismatched pinned submodule",
+    "LMCache-Ascend/third_party/kvcache-ops: Missing/uninitialized/mismatched pinned submodule"
+  ],
+  "passed": false,
+  "old_checkouts_retired": false,
+  "not_backed_up": [
+    "ignored files",
+    "uncommitted changes",
+    "LFS object payloads",
+    "model weights",
+    "images/environments",
+    "built wheels",
+    "external config/data"
+  ]
+}

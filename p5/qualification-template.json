@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "pair_sha256": "4249ee568cd3629c8885213cdb101a50ea09b7194fad7efdd5f35ae5d889f0e4",
+  "candidate": "p5p6-rc1-20261005",
+  "reviewer": "",
+  "scope": "human_attested_intranet_evidence_not_automatic_test_execution",
+  "cases": {
+    "A01": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A02": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A03": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A04": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A05": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A06": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A07": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A08": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A09": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A10": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A11": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A12": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A13": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A14": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "A15": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B01": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B02": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B03": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B04": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B05": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B06": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B07": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B08": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B09": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B10": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "B11": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C01": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C02": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C03": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C04": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C05": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C06": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C07": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C08": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C09": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C10": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C11": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C12": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "C13": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "PERF-TP8": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "PERF-TP4": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "SOAK-TP8": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "SOAK-TP4": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "IMAGE": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    },
+    "RESTORE": {
+      "status": "pending",
+      "summary": "",
+      "evidence": []
+    }
+  }
+}

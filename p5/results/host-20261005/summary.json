@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "scope": "source_and_host_checks_only_not_native_or_intranet_acceptance",
+  "paired_commits": {
+    "vllm": "c7ea4cc85e5b60dec0520e71c962baeb61124806",
+    "LMCache": "63021c3202adc3f6a7e9dfeff4f21190d355b0b5"
+  },
+  "results": {
+    "vllm": {
+      "passed": 372,
+      "deselected": 1,
+      "subtests_passed": 300,
+      "log": "vllm.log"
+    },
+    "LMCache": {
+      "passed": 204,
+      "subtests_passed": 38,
+      "log": "lmcache.log"
+    },
+    "release_and_backup_tools": {
+      "passed": 26,
+      "log": "release-tools.log"
+    },
+    "sphinx": {
+      "passed": true,
+      "warnings": 0,
+      "log": "sphinx.log",
+      "preview": "generated HTML headings, paired versions and toctree links inspected"
+    },
+    "lint": {
+      "passed": true,
+      "scope": "E,F for new design tools/tests",
+      "log": "ruff.log"
+    },
+    "pair_source_identity": {
+      "passed": true,
+      "report": "source-pair.json"
+    },
+    "static_syntax_links_refs_and_runtime": {
+      "passed": true,
+      "report": "static-checks.json"
+    }
+  },
+  "preserved": {
+    "runtime_files": 1110,
+    "native_files": 479,
+    "p1_build_bytes": true,
+    "original_four_repositories_unchanged": true,
+    "frozen_and_earlier_refs_unchanged": true,
+    "p6_contains_p5": true
+  },
+  "source_backup_status": {
+    "four_HEAD_bundles_created": true,
+    "complete_recovery": false,
+    "missing_materials": [
+      "CATLASS 716fd7baa7fb7f6cac0488bb628fd1dd0e875641",
+      "kvcache-ops 9f18d2339bc58a43429f7d5bdaef1628c820eff5"
+    ],
+    "report": "../../../p6/results/source-heads-20261005/restore-report.json"
+  },
+  "not_executed": [
+    "native/sdist/wheel build",
+    "framework install",
+    "image build or push",
+    "NPU or 2P2D runtime",
+    "qualification performance/soak campaign",
+    "production cutover",
+    "original repository retirement",
+    "remote Git push"
+  ],
+  "status": "source_preparation_complete_joint_intranet_qualification_pending"
+}

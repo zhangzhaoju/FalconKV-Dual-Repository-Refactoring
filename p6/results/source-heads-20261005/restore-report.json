@@ -1,0 +1,28 @@
+{
+  "scope": "source_object_and_worktree_restore_not_model_or_environment_recovery",
+  "manifest_sha256": "2dd1eeddd17a090e31ce9630461c18df7617caeccb13ffecd897cff115acce4d",
+  "restored": [
+    {
+      "label": "vllm",
+      "commit": "09e8409be1274fa3b0a5e1d4a2d016a8f66115de",
+      "tree": "7ad06ea923f3c3204c4deb303dbfce0a91bbdfd6",
+      "path": "/home/zhangzhaoju/Learn/code/falconkv/p6-backups/restore-heads-20261005/repo-000"
+    },
+    {
+      "label": "LMCache",
+      "commit": "d24029eddf358bb139b66023ab21364ef4d438b4",
+      "tree": "52c0626cec724937708ef3586fa2feedde5db83b",
+      "path": "/home/zhangzhaoju/Learn/code/falconkv/p6-backups/restore-heads-20261005/repo-002"
+    }
+  ],
+  "errors": [
+    "vllm-ascend/csrc/third_party/catlass: Missing/uninitialized/mismatched pinned submodule",
+    "LMCache-Ascend/third_party/kvcache-ops: Missing/uninitialized/mismatched pinned submodule",
+    "Backup is incomplete or has an unknown schema",
+    "vllm-ascend: Missing/wrong submodule backup: vllm-ascend/csrc/third_party/catlass",
+    "LMCache-Ascend: Missing/wrong submodule backup: LMCache-Ascend/third_party/kvcache-ops"
+  ],
+  "passed": false,
+  "production_recovery_verified": false,
+  "old_checkouts_may_be_deleted": false
+}

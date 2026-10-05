@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "frozen_tag": "native-layout-frozen-20261005",
+  "status": "frozen_source_pair_not_complete_functionality_or_performance_qualification",
+  "repositories": {
+    "vllm": {
+      "commit": "18fde02dc54a432f81ce5350c3358429a40f4bd3",
+      "tree": "ca6361f08d9fee1580fbdbeaf3aefcccd8f50a54",
+      "version": "0.18.0+ascend.layout1",
+      "tag_object": "dff122b1f64dda680a4a5309716da3bc71e0865e",
+      "tag_type": "annotated",
+      "protected_refs": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "ba361feb8d13d2377698ec758cdf644fc00063be",
+        "refs/heads/backup/pre-p1-build-install-20260923": "3827b16205a3b748629e38ad739dfc55c6b04d49",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "89a40e2a3e53465907763cfd8fa692723b45b2b0",
+        "refs/heads/fix/p2-npu-bootstrap": "e1b35d4f12fdc0cd975b8e990e146507c459d094",
+        "refs/heads/main": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p1": "230fbc0218e656cb90f8a8c2261150345a1d8ee5",
+        "refs/heads/p2": "f1be323571e3ca2aab53992234045dd064d1967f",
+        "refs/heads/p3": "8767fe1121a085e8cefed03eeaa1444b55227521",
+        "refs/heads/p4": "137fd3bc144875075ae73be2782ec8b5abf5a002",
+        "refs/heads/refactor/native-layout": "18fde02dc54a432f81ce5350c3358429a40f4bd3",
+        "refs/tags/native-layout-frozen-20261005": "dff122b1f64dda680a4a5309716da3bc71e0865e",
+        "refs/tags/p3-frozen-20261003": "ef6097322e31420a22333f039e47617f7bad363c",
+        "refs/tags/p4-frozen-20261004": "073f9ebf63d51689169bc7c9fcdbb854540a652e"
+      }
+    },
+    "LMCache": {
+      "commit": "e8236d8e1c41cd10752204d8cb9ef3b6074f999e",
+      "tree": "7bc772ce562b15b4d94c640ce78e98538156eabb",
+      "version": "0.4.3+ascend.layout1",
+      "tag_object": "b57481fa66ba105840234c8f5c1432254410ea04",
+      "tag_type": "annotated",
+      "protected_refs": {
+        "refs/heads/backup/pre-intranet-candidates-20260923": "11f8ff086e75cf1fd4dcdd3d3807c4bca06d5fc3",
+        "refs/heads/backup/pre-p1-build-install-20260923": "b5a9db3577d28097f9051ea7b9f6ef68fb11b8eb",
+        "refs/heads/backup/pre-staged-sfa-event-handoff-20260923": "5b09009c5264cb61d204b7660ae400b4392db46a",
+        "refs/heads/main": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p1": "547ae7c10b0e510b864c8d0f5233d6f54f279359",
+        "refs/heads/p2": "cfe8a1754db743d41c8bb63f8d02ad7c3051948c",
+        "refs/heads/p3": "a4e2131e890727edadb6bb61cde369900f72c3fd",
+        "refs/heads/p4": "241166dfde710e9a2cbe24ba0bd24b094b4bbe41",
+        "refs/heads/refactor/native-layout": "e8236d8e1c41cd10752204d8cb9ef3b6074f999e",
+        "refs/tags/native-layout-frozen-20261005": "b57481fa66ba105840234c8f5c1432254410ea04",
+        "refs/tags/p3-frozen-20261003": "41c9ad7024b74f417b9440b15a39b4506e96b122",
+        "refs/tags/p4-frozen-20261004": "364023530ad965aef7621a97ae53160f5c1e1423"
+      }
+    }
+  },
+  "runtime_evidence": {
+    "directory": "p4_logs/logs_all_native_layout_suc",
+    "scope": "TP8_DP2_primary_path_observed_exact_container_SHAs_not_supplied",
+    "pending": [
+      "complete fixed-workload performance including p99 tails",
+      "TP4_DP4 and full offline_online_cache_recovery_soak matrix",
+      "clean image/wheel/sdist qualification and recovery rehearsal"
+    ],
+    "files": {
+      "7.150.1.218_D_dp0_port7920.log": {
+        "sha256": "cc250c11d9330debef253f4bfb2b3796d99303bbe1debec50b605c93956a4d55",
+        "bytes": 33014826
+      },
+      "7.150.3.14_D_dp1_port7920.log": {
+        "sha256": "dda144e24714c41d7a0dbcac54d2445195d7de35c5e3a1ff1a476160bce0ee5a",
+        "bytes": 23278196
+      },
+      "7.150.3.14_ansible_test_tp8_dp2_20261005_111502.log": {
+        "sha256": "ef152e1f955e7c7e0dc87ce1d0100aeab975f498ac3b69f42cbf8630d9e04399",
+        "bytes": 48031
+      },
+      "7.150.3.14_benchmark_20261005_113551.json": {
+        "sha256": "3edd737b2d82ee3a7fb80eed91ef015a48205b36346379a0e74b60510906302f",
+        "bytes": 336903
+      },
+      "7.150.5.207_P_dp1_port7910.log": {
+        "sha256": "db0f059ad05e5581a291102dcd78c2600286e3535d7e3d50777e4abe777d7496",
+        "bytes": 15867179
+      },
+      "7.150.7.133_P_dp0_port7910.log": {
+        "sha256": "1e0dba2b51555ab6e4b87ae2674a14596f857bb040329609280e7ae741c174ef",
+        "bytes": 15550569
+      },
+      "7.150.7.133_logs_00000": {
+        "sha256": "94e6a51739ed76e8a88aed9062fd0bebd2fb1007f8bbc0e7f214eb797fc5bf7f",
+        "bytes": 201535
+      },
+      "7.150.7.133_proxy_tp8_dp2.log": {
+        "sha256": "d768cddf7a3799d2a591a9f42e7ddeda9d0f2e98febb569ba3f5cf75967610b8",
+        "bytes": 135120
+      }
+    }
+  }
+}
