@@ -172,15 +172,17 @@ def review(campaign: dict, pair_path: Path, evidence_root: Path) -> dict:
     }
 
 
-def run(command: list[str], output: Path, name: str) -> None:
+def run(
+    command: list[str], output: Path, name: str, *, cwd: Path | None = None
+) -> None:
     """Execute a build/check with an immutable command, log and exit-status record."""
     with (output / f"{name}.log").open("x") as log:
         process = subprocess.run(
-            command, cwd=output, stdout=log, stderr=subprocess.STDOUT
+            command, cwd=cwd or output, stdout=log, stderr=subprocess.STDOUT
         )
     save(
         output / f"{name}.command.json",
-        {"argv": command, "returncode": process.returncode},
+        {"argv": command, "cwd": str(cwd or output), "returncode": process.returncode},
     )
     if process.returncode:
         raise RuntimeError(
@@ -227,7 +229,7 @@ def foundation() -> dict:
 def build(workspace: Path, pair_path: Path, output: Path) -> None:
     """Build two wheels/sdists and rebuild from sdists; intranet aarch64 only.
 
-    Uses existing p1_dev.py and the narrowly approved pip waiver checker. Does not
+    Uses standard setup.py commands and the narrowly approved pip waiver checker. Does not
     install frameworks, fetch dependencies, access a device or delete any files.
     """
     if sys.version_info[:2] != (3, 11) or platform.machine() != "aarch64":
@@ -254,36 +256,24 @@ def build(workspace: Path, pair_path: Path, output: Path) -> None:
     for name, expected in read(pair_path)["repositories"].items():
         source = workspace / name
         package = "lmcache" if name == "LMCache" else "vllm"
-        run(
-            [*command, str(source / "tools/check_native_layout.py")],
-            output,
-            f"materials-{name}",
-        )
-        run(
-            [
-                *command,
-                str(source / "p1_dev.py"),
-                "build",
-                "--output",
-                str(output / f"wheel-{name}"),
-            ],
-            output,
-            f"wheel-{name}",
-        )
         sdist_dir = output / f"sdist-{name}"
         run(
             [
                 *command,
-                "-m",
-                "build",
-                "--sdist",
-                "--no-isolation",
-                "--outdir",
+                "setup.py",
+                "sdist",
+                "--dist-dir",
                 str(sdist_dir),
-                str(source),
             ],
             output,
             f"sdist-{name}",
+            cwd=source,
+        )
+        # sdist registers local pinned Git materials; no preparation wrapper.
+        run(
+            [*command, str(source / "tools/check_native_layout.py")],
+            output,
+            f"materials-{name}",
         )
         stem = f"{package}-{expected['version']}"
         archive = sdist_dir / f"{stem}.tar.gz"
@@ -293,20 +283,32 @@ def build(workspace: Path, pair_path: Path, output: Path) -> None:
             output,
             f"sdist-materials-{name}",
         )
-        run(
-            [
-                *command,
-                str(unpacked / "p1_dev.py"),
-                "build",
-                "--output",
-                str(output / f"rebuild-{name}"),
-            ],
-            output,
-            f"rebuild-{name}",
-        )
         paths = [archive]
-        for directory in (f"wheel-{name}", f"rebuild-{name}"):
-            paths.append(Path(read(output / directory / "artifact.json")["wheel"]))
+        for directory, checkout in (
+            (f"wheel-{name}", source),
+            (f"rebuild-{name}", unpacked),
+        ):
+            wheel_dir = output / directory / "wheels"
+            run(
+                [*command, "setup.py", "bdist_wheel", "--dist-dir", str(wheel_dir)],
+                output,
+                directory,
+                cwd=checkout,
+            )
+            wheels = list(wheel_dir.glob("*.whl"))
+            if len(wheels) != 1:
+                raise ValueError(f"Expected exactly one wheel in {wheel_dir}")
+            run(
+                [
+                    *command,
+                    str(checkout / "tools/check_native_layout.py"),
+                    "--wheel",
+                    str(wheels[0]),
+                ],
+                output,
+                f"contents-{directory}",
+            )
+            paths.append(wheels[0])
         artifacts[name] = [
             {"path": str(path.relative_to(output)), "sha256": digest(path)}
             for path in paths

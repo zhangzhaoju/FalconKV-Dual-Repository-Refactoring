@@ -51,6 +51,77 @@ def test_new_matrix_never_claims_pass(pair: Path) -> None:
     assert not qualify.review(campaign, pair, pair.parent)["passed"]
 
 
+def test_build_uses_standard_setup_commands_and_checks_both_wheels(
+    tmp_path: Path, pair: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Mock compilation only; exercise the release command orchestration."""
+    workspace = tmp_path / "repos"
+    workspace.mkdir()
+    output = tmp_path / "evidence"
+    monkeypatch.setattr(qualify.sys, "version_info", (3, 11, 14))
+    monkeypatch.setattr(qualify.platform, "machine", lambda: "aarch64")
+    monkeypatch.setattr(qualify, "source_check", lambda *_: {"passed": True})
+    monkeypatch.setattr(qualify, "foundation", lambda: {"torch": "unchanged"})
+    calls = []
+    versions = {"vllm": "1+fixture", "LMCache": "2+fixture"}
+
+    def run(command, report_dir, name, *, cwd=None):
+        calls.append((command, name, cwd))
+        if "setup.py" not in command:
+            return
+        assert cwd is not None
+        assert command[command.index("setup.py") + 1] in ("sdist", "bdist_wheel")
+        destination = Path(command[command.index("--dist-dir") + 1])
+        destination.mkdir(parents=True)
+        repo = name.split("-", 1)[1]
+        stem = f"{repo.lower()}-{versions[repo]}"
+        if "sdist" in command:
+            with tarfile.open(destination / f"{stem}.tar.gz", "w:gz") as stream:
+                payload = b"# synthetic sdist, not a native build"
+                member = tarfile.TarInfo(stem + "/pyproject.toml")
+                member.size = len(payload)
+                stream.addfile(member, io.BytesIO(payload))
+        else:
+            (destination / f"{stem}-cp311-cp311-linux_aarch64.whl").write_bytes(
+                b"synthetic wheel; content verification mocked"
+            )
+
+    monkeypatch.setattr(qualify, "run", run)
+    qualify.build(workspace, pair, output)
+    assert sum("setup.py" in command for command, _, _ in calls) == 6
+    assert sum("--wheel" in command for command, _, _ in calls) == 4
+    assert not any("p1_dev" in " ".join(command) for command, _, _ in calls)
+    for repo in versions:
+        labels = [name for _, name, _ in calls]
+        assert labels.index(f"sdist-{repo}") < labels.index(f"materials-{repo}")
+        artifacts = qualify.read(output / "artifacts.json")["repositories"][repo]
+        assert len(artifacts) == 3
+        for artifact in artifacts:
+            assert qualify.digest(output / artifact["path"]) == artifact["sha256"]
+
+
+def test_run_records_source_cwd_and_failure_exit_status(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from types import SimpleNamespace
+
+    checkout = tmp_path / "source"
+    checkout.mkdir()
+    observed = []
+
+    def failed(command, **kwargs):
+        observed.append(kwargs["cwd"])
+        return SimpleNamespace(returncode=7)
+
+    monkeypatch.setattr(qualify.subprocess, "run", failed)
+    with pytest.raises(RuntimeError, match="failed.*7"):
+        qualify.run(["synthetic-build"], tmp_path, "failure", cwd=checkout)
+    assert observed == [checkout]
+    report = qualify.read(tmp_path / "failure.command.json")
+    assert report["returncode"] == 7
+    assert report["cwd"] == str(checkout)
+
+
 def test_review_requires_exact_pair_and_coverage_and_hashes(pair: Path) -> None:
     evidence = pair.parent / "fixture-evidence.txt"
     evidence.write_text("synthetic test fixture, not a real test result")

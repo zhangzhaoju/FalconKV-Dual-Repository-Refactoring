@@ -9,16 +9,18 @@
   "runtime_change": false,
   "repositories": {
     "vllm": {
-      "commit": "0a08c6029fecc204fa785c26b2c92a765016b7db",
-      "tree": "8af0963869c63a8c18fde1f1f66f40c37d622d4c",
+      "commit": "047dd2d4d78ff344a86b339d13638a686282cd09",
+      "tree": "7d344fc5fa952d6c5295612f419785ded7f034fb",
       "p5_parent": "a09d7ecca2f90ee6df14534a30747e3bb9069992",
       "version": "0.18.0+ascend.p5p6rc1"
     },
     "LMCache": {
-      "commit": "38f4b1bac48220b452bca9d1b4f66af6d3697dbf",
-      "tree": "3d85602bc83d0c62b7b4133bffba49c539727dc8",
+      "commit": "964eb0b8e213415480f7f7b228249e1ed9b26979",
+      "tree": "835eacbe297dd8a5ec25a947f1a4624e6c3beec8",
       "p5_parent": "62740030fbf03d2b280333e71ecb26f071ab6966",
       "version": "0.4.3+ascend.p5p6rc1"
     }
-  }
+  },
+  "packaging_entrypoints": "pip editable; setup.py bdist_wheel/sdist",
+  "packaging_change": true
 }

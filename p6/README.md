@@ -4,17 +4,26 @@
 [pair.json](baseline/pair.json)。P5/P6 只进行一轮联合内网资格验证，入口为
 [统一执行指导](../p5/intranet-validation.md)。本页的“准备完成”不代表生产已经切换。
 
-本轮补齐了两仓内部的基线一致安装指南，P6 当前文档配对为 vLLM
-`0a08c6029fecc204fa785c26b2c92a765016b7db`、LMCache
-`38f4b1bac48220b452bca9d1b4f66af6d3697dbf`。
-包版本仍为 `.p5p6rc1`，安装/构建脚本、依赖和运行实现未改变。
-继续使用原 strict editable 和 2P2D 启动命令进行对照；普通 wheel/镜像属于另行记录的发布证据。
-内网请同时更新两仓提交与本页的配对清单，避免身份检查使用旧 SHA。
-[此前配对](baseline/pair-before-install-docs-20261005.json)保留，旧主机报告仍绑定此前提交，
-不覆盖历史证据。冻结标签、P5 和 native-layout 分支保持不变。
-本轮补充检查为 78 项主机测试、16 个 subtests、两仓 8 组指令一致性和 Sphinx 无警告构建；
-详情见[文档检查记录](results/install-docs-20261005/summary.json)及
-[当前源码身份报告](results/install-docs-20261005/source-pair.json)，不是内网验证结果。
+按用户最新要求，P6 已恢复标准 `pip install -e .`、`python setup.py bdist_wheel`、
+`python setup.py sdist` 入口，删除两仓 `p1_build.py` 和 `p1_dev.py`，不再依赖阶段包装脚本。
+当前配对为 vLLM `047dd2d4d78ff344a86b339d13638a686282cd09`、
+LMCache `964eb0b8e213415480f7f7b228249e1ed9b26979`，版本仍为 `.p5p6rc1`。
+构建逻辑直接位于根 `setup.py`，本地固定材料在 sdist/编译时自动核验登记，不自动下载。
+vLLM 隔离构建声明补齐与运行时相同的 triton-ascend 固定版本；运行依赖、CMake、
+推理/缓存/native 实现和 ABI 未改变。内网安装参数与完整步骤见两仓内部安装指南。
+
+继续使用 strict editable 和原 2P2D 启动参数进行对照；普通 wheel/镜像属于单独发布证据。
+内网请同步两仓提交、本页配对清单及 P5/P6 指导，避免身份检查仍使用旧 SHA。
+[整改前配对](baseline/pair-before-standard-packaging-20261005.json)与
+[更早配对](baseline/pair-before-install-docs-20261005.json)保留，历史主机报告不覆盖。
+冻结标签、P5 和 native-layout 分支保持不变；本次只创建本地提交，未推送。
+
+两仓主机集通过 572 项测试，发布工具另通过 28 项；按 setuptools 79.0.1/packaging 26.0
+独立复验两仓打包/目录契约各 36 项，真实 setup.py 元数据入口也通过。
+原生编译在契约测试中使用模拟产物，不代表 CANN 编译或内网推理验证。
+两仓 9 组 Bash 指令一致且语法通过，Sphinx 构建无警告。
+详情见[标准打包检查记录](results/standard-packaging-20261005/summary.json)和
+[当前源码身份报告](results/standard-packaging-20261005/source-pair.json)。
 
 ## 已实施与未实施
 
@@ -73,4 +82,4 @@ P6_BACKUP=/workspace/zzj/p6-source-backup-01
 
 最终活动源码为 `p1-repos/vllm` 与 `p1-repos/LMCache`。目录名沿用历史约定，无需再迁目录。
 源代码备份、设计记录与日志属于归档，不是新增产品仓。活动工作区退出是验收后的独立动作，
-本次没有执行 `mv`、删除、生产切换或远端推送。
+本次没有移动或删除原四仓，也没有生产切换或远端推送；删除的阶段包装脚本可从 Git 恢复。

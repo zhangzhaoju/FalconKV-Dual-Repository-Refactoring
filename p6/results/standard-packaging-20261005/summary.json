@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "scope": "host_packaging_source_and_docs_not_CANN_ABI_NPU_or_2P2D",
+  "pair_sha256": "c63b0da2a514004fdc38205f5e481e8404ae3b1a43787e2e32f26c259e3777cf",
+  "commits": {
+    "vllm": "047dd2d4d78ff344a86b339d13638a686282cd09",
+    "LMCache": "964eb0b8e213415480f7f7b228249e1ed9b26979"
+  },
+  "standard_interfaces": [
+    "python -m pip install -e .",
+    "python setup.py bdist_wheel",
+    "python setup.py sdist"
+  ],
+  "deleted_entrypoints": [
+    "p1-repos/vllm/p1_build.py",
+    "p1-repos/vllm/p1_dev.py",
+    "p1-repos/LMCache/p1_build.py",
+    "p1-repos/LMCache/p1_dev.py"
+  ],
+  "tests": [
+    {
+      "command": "python -B tools/run_layout_host_checks.py",
+      "repo": "vllm",
+      "ordinary_passed": 370,
+      "subtests_passed": 297,
+      "deselected": 1,
+      "passed": true
+    },
+    {
+      "command": "python -B tools/run_layout_host_checks.py",
+      "repo": "LMCache",
+      "ordinary_passed": 202,
+      "subtests_passed": 35,
+      "passed": true
+    },
+    {
+      "command": "python -B -m pytest --noconftest -q -p no:cacheprovider p5/tests/test_release_tools.py",
+      "repo": "design",
+      "ordinary_passed": 28,
+      "passed": true
+    },
+    {
+      "command": "python -B -m pytest --noconftest -q -p no:cacheprovider tests/standalone/test_standard_packaging.py tests/standalone/test_native_layout.py",
+      "repos": [
+        "vllm",
+        "LMCache"
+      ],
+      "ordinary_passed_per_repo": 36,
+      "subtests_passed_per_repo": 5,
+      "setuptools": "79.0.1",
+      "packaging": "26.0",
+      "python": "3.12.3_host_test_only",
+      "passed": true
+    },
+    {
+      "command": "python -B setup.py --name --version",
+      "repos": [
+        "vllm",
+        "LMCache"
+      ],
+      "setuptools": "79.0.1",
+      "packaging": "26.0",
+      "passed": true
+    }
+  ],
+  "packaging_scope": "Real setuptools CLI/PEP660 backend in temporary synthetic source packages; CMake/ACLNN/native ELF replaced by test fixtures. No actual framework installation or CANN compilation on this host.",
+  "initial_host_tooling_issue": "System setuptools 68.1.2 and older packaging could not parse existing project license metadata. Retested with approved packaging tool versions in a new temporary venv; no change to existing environments or project license.",
+  "frozen_sources": {
+    "vllm": {
+      "runtime": 786,
+      "native": 423
+    },
+    "LMCache": {
+      "runtime": 324,
+      "native": 56
+    },
+    "all_unchanged": true
+  },
+  "build_ast_comparison": {
+    "check_environment": true,
+    "required_artifacts": true,
+    "write_build_metadata": true,
+    "build_py": true,
+    "build_ext": true,
+    "sdist": true,
+    "note": "Only class names normalized; verification/registration, setup wiring and editable error wording intentionally changed."
+  },
+  "docs": {
+    "paired_bash_blocks": 9,
+    "bash_syntax_passed": true,
+    "sphinx_warnings": 0,
+    "html_inspected": true
+  },
+  "ruff_passed": true,
+  "diff_check_passed": true,
+  "native_build_abi_runtime": "pending_intranet",
+  "qualification_matrix": "all_45_pending",
+  "frozen_refs_changed": false,
+  "external_push_performed": false
+}

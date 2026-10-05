@@ -58,19 +58,16 @@ git clone --branch p6 --single-branch git@github.com:zhangzhaoju/LMCache-dual.gi
 ```bash
 git -C "$P56_REPOS/vllm" submodule update --init -- csrc/third_party/catlass
 git -C "$P56_REPOS/LMCache" submodule update --init -- third_party/kvcache-ops
-"$P56_PY" -B "$P56_REPOS/vllm/p1_dev.py" materials \
-  --from-submodule "$P56_REPOS/vllm/csrc/third_party/catlass"
-"$P56_PY" -B "$P56_REPOS/LMCache/p1_dev.py" materials \
-  --from-submodule "$P56_REPOS/LMCache/third_party/kvcache-ops"
 export ASCEND_HOME_PATH=/usr/local/Ascend/cann-8.5.1
 set +u
 source "$ASCEND_HOME_PATH/set_env.sh"
 set -u
 export SOC_VERSION=ascend910b3
 for P56_NAME in vllm LMCache; do
+  (cd "$P56_REPOS/$P56_NAME" && \
+    "$P56_PY" -B setup.py sdist --dist-dir "$P56_REPORT/sdist-$P56_NAME") \
+    2>&1 | tee "$P56_REPORT/sdist-$P56_NAME.log"
   "$P56_PY" -B "$P56_REPOS/$P56_NAME/tools/check_native_layout.py"
-  "$P56_PY" -B "$P56_REPOS/$P56_NAME/p1_dev.py" doctor \
-    --output "$P56_REPORT/doctor-$P56_NAME.json"
 done
 "$P56_PY" -B "$P56_DESIGN/p1/tools/check_pip_dependencies.py" --output "$P56_REPORT/pip-before"
 ```
@@ -81,17 +78,24 @@ done
 基础环境固定 Python 3.11/aarch64、910B3、CANN 8.5.1、torch 2.9.0、torch-npu 2.9.0.post2、
 Transformers 5.2.0、triton-ascend 3.2.0.dev20260322。pip 检查仅豁免已批准的三个 stdlib 错报。
 
+材料由根 `setup.py` 在 sdist/编译时自动核验并登记，不下载材料、不覆盖漂移清单；
+已移除阶段构建/安装包装脚本。直接使用 `pip install -e .`、
+`python setup.py bdist_wheel` 和 `python setup.py sdist`。
+下方 pip 参数使内网沿用现有依赖；裸 pip 默认仍可能创建隔离环境并解析下载依赖。
+
 ## 开发态调测
 
 ```bash
 cd /tmp || exit 1
 for P56_NAME in vllm LMCache; do
-  "$P56_PY" -B "$P56_REPOS/$P56_NAME/p1_dev.py" editable --isolated-env \
-    --output "$P56_REPORT/editable-$P56_NAME"
+  (cd "$P56_REPOS/$P56_NAME" && \
+    "$P56_PY" -B -m pip install -e . \
+      --no-build-isolation --no-deps --no-index --force-reinstall) \
+    2>&1 | tee "$P56_REPORT/editable-$P56_NAME.log"
 done
 for P56_NAME in vllm LMCache; do
-  "$P56_PY" -B "$P56_REPOS/$P56_NAME/p1_dev.py" verify --mode editable \
-    --output "$P56_REPORT/installed-$P56_NAME.json"
+  "$P56_PY" -B "$P56_REPOS/$P56_NAME/tools/check_native_layout.py" --installed editable \
+    | tee "$P56_REPORT/installed-$P56_NAME.json"
 done
 "$P56_PY" -B "$P56_DESIGN/p4/tools/check_pair.py" --workspace "$P56_REPOS" \
   --pair "$P56_PAIR" --output "$P56_REPORT/installed-pair.json"
@@ -104,7 +108,7 @@ done
 ```
 
 两个版本都变化，因此必须重建/重装，不能沿用 layout1 链接树和 `.so`。
-`--isolated-env` 不会创建环境或卸载旧包，旧包冲突应另备干净容器。
+标准 pip 不会创建专用环境或清除旧插件，旧包冲突应另备干净容器。
 保留 `build/p1-native/run-*` 和 `build/__editable__.*`，不能清理正在使用的资源。
 在分配的空闲设备上另跑 `validate_npu_native.py --spawn --device-smoke` 和
 `p4_runtime_smoke.py --npu`，均使用新的输出路径；未指定设备 smoke 的导入检查不是 NPU 通过。
@@ -122,7 +126,8 @@ done
   --workspace "$P56_REPOS" --pair "$P56_PAIR" --output "$P56_REPORT/release-build"
 ```
 
-这个命令依次核对源码、pip、材料，生成两仓 wheel/sdist，在新目录解包 sdist 再生成 wheel，
+该编排通过标准 `setup.py sdist`、`setup.py bdist_wheel` 完成打包，
+依次核对源码、pip、材料，生成两仓 wheel/sdist，在新目录解包 sdist 再生成 wheel，
 保存日志/命令/退出码/哈希。只支持内网 Python 3.11/aarch64；不会安装框架或隐式下载。
 基础依赖前后只读记录版本和路径，原生 ABI 由后续设备检查证明，不混为同一种证据。
 失败保留全部输出，修复后用新的输出目录；只有最后的 `artifacts.json` 表示本轮构建编排成功。
@@ -130,17 +135,15 @@ done
 需要普通 wheel 安装时，在干净测试容器中使用本次精确路径，四节点重复安装/检查：
 
 ```bash
-"$P56_PY" -B "$P56_REPOS/vllm/p1_dev.py" install --isolated-env \
-  --wheel "$P56_REPORT/release-build/wheel-vllm/wheels/vllm-0.18.0+ascend.p5p6rc1-cp311-cp311-linux_aarch64.whl" \
-  --output "$P56_REPORT/install-wheel-vllm"
-"$P56_PY" -B "$P56_REPOS/LMCache/p1_dev.py" install --isolated-env \
-  --wheel "$P56_REPORT/release-build/wheel-LMCache/wheels/lmcache-0.4.3+ascend.p5p6rc1-cp311-cp311-linux_aarch64.whl" \
-  --output "$P56_REPORT/install-wheel-lmcache"
+"$P56_PY" -B -m pip install --no-index --no-deps --force-reinstall \
+  "$P56_REPORT/release-build/wheel-vllm/wheels/vllm-0.18.0+ascend.p5p6rc1-cp311-cp311-linux_aarch64.whl" \
+  "$P56_REPORT/release-build/wheel-LMCache/wheels/lmcache-0.4.3+ascend.p5p6rc1-cp311-cp311-linux_aarch64.whl" \
+  2>&1 | tee "$P56_REPORT/install-wheels.log"
 ```
 
 跨容器复制 `release-build/` 时保留其结构并核对 `artifacts.json` 的相对路径/sha256；
-同时设置该容器的 `P56_REPORT` 指向包含此目录的位置。安装后重复上节 `verify`（改为
-`--mode wheel`）、check_pair、pip 与真实导入/设备检查，输出路径重新命名，不覆盖 editable 报告。
+同时设置该容器的 `P56_REPORT` 指向包含此目录的位置。安装后重复上节路径检查（改为
+`--installed wheel`）、check_pair、pip 与真实导入/设备检查，输出路径重新命名，不覆盖 editable 报告。
 
 镜像基础层由内网负责人提供固定 digest，必须已经预加载且无旧框架；不得用 `latest`。
 以下命令要求事先设置 `P56_BASE_IMAGE` 为真实的 `仓库名@sha256:64位摘要`：
