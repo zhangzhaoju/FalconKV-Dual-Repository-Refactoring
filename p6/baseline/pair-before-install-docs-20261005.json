@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "candidate": "p5p6-rc1-20261005",
+  "branch": "p6",
+  "status": "source_ready_joint_intranet_qualification_pending",
+  "frozen_input_tag": "native-layout-frozen-20261005",
+  "p5_pair": "../../p5/baseline/pair.json",
+  "runtime_change": false,
+  "repositories": {
+    "vllm": {
+      "commit": "c7ea4cc85e5b60dec0520e71c962baeb61124806",
+      "tree": "3e5879bf7004b505eda4baccf75ce214f065eb3c",
+      "p5_parent": "a09d7ecca2f90ee6df14534a30747e3bb9069992",
+      "version": "0.18.0+ascend.p5p6rc1"
+    },
+    "LMCache": {
+      "commit": "63021c3202adc3f6a7e9dfeff4f21190d355b0b5",
+      "tree": "79b52745938bd88d28bafcc60616114499af967d",
+      "p5_parent": "62740030fbf03d2b280333e71ecb26f071ab6966",
+      "version": "0.4.3+ascend.p5p6rc1"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "source_identity_not_build_or_runtime",
+  "repositories": {
+    "vllm": {
+      "commit": "0a08c6029fecc204fa785c26b2c92a765016b7db",
+      "tree": "8af0963869c63a8c18fde1f1f66f40c37d622d4c",
+      "version": "0.18.0+ascend.p5p6rc1"
+    },
+    "LMCache": {
+      "commit": "38f4b1bac48220b452bca9d1b4f66af6d3697dbf",
+      "tree": "3d85602bc83d0c62b7b4133bffba49c539727dc8",
+      "version": "0.4.3+ascend.p5p6rc1"
+    }
+  },
+  "pair_sha256": "cebce205f519973f062f377c3c7cd6bd046ac21b965c79c536533d0247601a6f",
+  "errors": [],
+  "passed": true
+}

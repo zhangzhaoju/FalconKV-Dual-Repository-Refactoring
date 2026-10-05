@@ -4,6 +4,18 @@
 [pair.json](baseline/pair.json)。P5/P6 只进行一轮联合内网资格验证，入口为
 [统一执行指导](../p5/intranet-validation.md)。本页的“准备完成”不代表生产已经切换。
 
+本轮补齐了两仓内部的基线一致安装指南，P6 当前文档配对为 vLLM
+`0a08c6029fecc204fa785c26b2c92a765016b7db`、LMCache
+`38f4b1bac48220b452bca9d1b4f66af6d3697dbf`。
+包版本仍为 `.p5p6rc1`，安装/构建脚本、依赖和运行实现未改变。
+继续使用原 strict editable 和 2P2D 启动命令进行对照；普通 wheel/镜像属于另行记录的发布证据。
+内网请同时更新两仓提交与本页的配对清单，避免身份检查使用旧 SHA。
+[此前配对](baseline/pair-before-install-docs-20261005.json)保留，旧主机报告仍绑定此前提交，
+不覆盖历史证据。冻结标签、P5 和 native-layout 分支保持不变。
+本轮补充检查为 78 项主机测试、16 个 subtests、两仓 8 组指令一致性和 Sphinx 无警告构建；
+详情见[文档检查记录](results/install-docs-20261005/summary.json)及
+[当前源码身份报告](results/install-docs-20261005/source-pair.json)，不是内网验证结果。
+
 ## 已实施与未实施
 
 已准备源代码备份/恢复检查工具、候选两仓操作手册和切换/回退清单。

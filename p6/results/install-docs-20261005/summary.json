@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "scope": "documentation_and_host_contracts_only_not_native_build_or_intranet_acceptance",
+  "paired_commits": {
+    "vllm": "0a08c6029fecc204fa785c26b2c92a765016b7db",
+    "LMCache": "38f4b1bac48220b452bca9d1b4f66af6d3697dbf"
+  },
+  "pair_sha256": "cebce205f519973f062f377c3c7cd6bd046ac21b965c79c536533d0247601a6f",
+  "changes": "Repository-local baseline-compatible installation/deployment guides; current entry points and historical warnings only. No source runtime, build script, dependency, version or ABI changes in these two commits.",
+  "checks": {
+    "paired_guide_bash_blocks": {
+      "passed": true,
+      "count": 8,
+      "identical": true,
+      "syntax": "bash -n; commands not executed"
+    },
+    "p1_dev_cli": {
+      "passed": true,
+      "scope": "help and dry-run for materials/doctor/verify/build/install/editable; no install"
+    },
+    "runtime_probe_cli": {
+      "passed": true,
+      "scope": "help only; no native imports or NPU execution"
+    },
+    "vllm_host_tests": {
+      "passed": 39,
+      "subtests_passed": 8
+    },
+    "lmcache_host_tests": {
+      "passed": 39,
+      "subtests_passed": 8
+    },
+    "test_modules": [
+      "tests/standalone/test_p1_development.py",
+      "tests/standalone/test_native_layout.py",
+      "tests/standalone/test_release_profile.py"
+    ],
+    "test_invocation": "python -B -m pytest -q --noconftest <three modules in each repository>",
+    "source_fingerprints": {
+      "passed": true,
+      "runtime_files": 1110,
+      "native_files": 479,
+      "scope": "check_native_layout.py --source-only; missing submodule payloads remain unapproved for native build"
+    },
+    "frozen_build_inputs": {
+      "passed": true,
+      "scope": "git diff frozen tag: p1_build.py, CMakeLists.txt, cmake, requirements, product Python, csrc, third_party unchanged"
+    },
+    "p6_inherits_p5": {
+      "passed": true
+    },
+    "sphinx": {
+      "passed": true,
+      "warnings": 0,
+      "command": "sphinx-build -E -W -b html p1-repos/LMCache/docs/source /tmp/falconkv-p6-baseline-docs-20261005-final",
+      "review": "HTML headings, eight rendered bash blocks, all local navigation links checked"
+    },
+    "markdown_current_links": {
+      "passed": true,
+      "count": 11
+    },
+    "source_pair": {
+      "passed": true,
+      "report": "source-pair.json"
+    },
+    "pending_template": {
+      "passed": true,
+      "case_count": 45,
+      "all_pending": true
+    },
+    "whitespace": {
+      "passed": true,
+      "command": "git diff --check in both repositories and design"
+    }
+  },
+  "preserved": {
+    "frozen_tags": true,
+    "p5_branches": true,
+    "native_layout_branches": true,
+    "historical_evidence": true
+  },
+  "not_executed": [
+    "native compilation",
+    "framework installation",
+    "NPU runtime",
+    "2P2D functionality or performance",
+    "image build",
+    "production cutover",
+    "remote push"
+  ],
+  "status": "documentation_ready_intranet_qualification_pending"
+}

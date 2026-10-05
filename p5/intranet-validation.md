@@ -5,6 +5,12 @@
 两包版本分别为 `0.18.0+ascend.p5p6rc1`、`0.4.3+ascend.p5p6rc1`。
 native-layout 冻结配对作为独立对照环境保留，不在其运行中的 editable checkout 切分支。
 
+本轮若沿用基线 strict editable 安装与原启动自动化，可直接执行两仓 README 指向的
+`vllm/docs/design/baseline-validation.md` 或
+`LMCache/docs/source/getting_started/baseline_validation.rst`。
+两份内部指南包含相同的成对安装命令，使用本页同一 P6 配对清单；
+不要求先切换 wheel/镜像才能开始功能性能对照。
+
 ## 发布与内网准备
 
 本轮只创建本地提交和标签，没有自动推送。需要发布时，在源码工作站非强制推送两仓：
@@ -105,8 +111,10 @@ done
 
 ## 双包发布与镜像
 
-正式功能/性能与长稳尽量在最终普通 wheel 镜像执行，避免先完整验收 editable 再重复全矩阵。
-editable 做安装/导入 smoke 即可，除非本轮调试需要重跑具体用例。
+基线对照可继续使用原 strict editable 环境及启动命令，先在同一安装方式下确认功能性能。
+下文属于正式发布制品验证，不是本轮对比的安装前置。editable 结果要记录安装模式，
+不能冒充 wheel/镜像证据；正式发布仍需验证最终 wheel/镜像和长稳，已完成的用例是否
+可复用由验收负责人按来源和安装模式差异审核，不因此省略制品相关检查。
 一台专用内网构建容器产出两仓制品，其余节点安装同一份制品，无需四台重复编译。
 
 ```bash

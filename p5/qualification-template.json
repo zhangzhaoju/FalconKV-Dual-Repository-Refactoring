@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "pair_sha256": "4249ee568cd3629c8885213cdb101a50ea09b7194fad7efdd5f35ae5d889f0e4",
+  "pair_sha256": "cebce205f519973f062f377c3c7cd6bd046ac21b965c79c536533d0247601a6f",
   "candidate": "p5p6-rc1-20261005",
   "reviewer": "",
   "scope": "human_attested_intranet_evidence_not_automatic_test_execution",

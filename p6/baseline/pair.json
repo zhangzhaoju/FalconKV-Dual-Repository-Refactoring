@@ -9,14 +9,14 @@
   "runtime_change": false,
   "repositories": {
     "vllm": {
-      "commit": "c7ea4cc85e5b60dec0520e71c962baeb61124806",
-      "tree": "3e5879bf7004b505eda4baccf75ce214f065eb3c",
+      "commit": "0a08c6029fecc204fa785c26b2c92a765016b7db",
+      "tree": "8af0963869c63a8c18fde1f1f66f40c37d622d4c",
       "p5_parent": "a09d7ecca2f90ee6df14534a30747e3bb9069992",
       "version": "0.18.0+ascend.p5p6rc1"
     },
     "LMCache": {
-      "commit": "63021c3202adc3f6a7e9dfeff4f21190d355b0b5",
-      "tree": "79b52745938bd88d28bafcc60616114499af967d",
+      "commit": "38f4b1bac48220b452bca9d1b4f66af6d3697dbf",
+      "tree": "3d85602bc83d0c62b7b4133bffba49c539727dc8",
       "p5_parent": "62740030fbf03d2b280333e71ecb26f071ab6966",
       "version": "0.4.3+ascend.p5p6rc1"
     }

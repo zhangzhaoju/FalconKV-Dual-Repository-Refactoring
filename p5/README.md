@@ -43,6 +43,8 @@ native-layout 日志文件哈希。[P5 配对](baseline/pair.json)仅供追溯�
 本机最终检查：vLLM 372 passed、1 deselected、300 subtests；LMCache 204 passed、38 subtests；
 新交付工具 26 passed。Sphinx 无警告，原生/运行时指纹与冻结输入一致。
 详情见[主机结果](results/host-20261005/summary.json)，不替代内网构建与模型结果。
+上述完整主机报告绑定文档更新前的 P6 配对；后续仅更新两仓说明文档，
+当前精确提交及补充检查见 [P6 文档更新记录](../p6/README.md)。不重写此前报告的提交身份。
 
 保留 [原验收矩阵](../03-baseline-and-validation.md) 的 A01 至 A15、B01 至 B11、C01 至 C13。
 另以 PERF-TP8、PERF-TP4、SOAK-TP8、SOAK-TP4、IMAGE、RESTORE 记录性能、长稳、镜像和
